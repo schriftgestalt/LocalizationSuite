@@ -73,10 +73,11 @@
 	}
 }
 
+/*
 - (void)testArguments
 {
 	BLKeyObject *keyObject;
-	BLObjectProxy *pxy;
+	BLObjectProxy *proxy2;
 	BOOL yes = YES;
 	id mock;
 	
@@ -84,7 +85,7 @@
 	mock = [OCMockObject mockForClass: [BLFileObject class]];
 	[[[mock stub] andReturnValue: [NSValue value:&yes withObjCType:@encode(BOOL)]] isKindOfClass: OCMOCK_ANY];
 	
-	pxy = [BLObjectProxy proxyWithObject: mock];
+	proxy2 = [BLObjectProxy proxyWithObject: mock];
 	keyObject = [BLStringKeyObject keyObjectWithKey: @"hallo"];
 	
 	// Make a plan
@@ -95,14 +96,15 @@
 	[[mock expect] setObjects: (id)equalTo([NSArray arrayWithObject: keyObject])];
 	
 	// Run the plan
-	[(id)pxy addObject: keyObject];
-	keyObject = [(id)pxy objectForKey: nil];
-	[(id)pxy addObject: keyObject];
-	[(id)pxy setObjects: [NSArray arrayWithObject: keyObject]];
+	[(id)proxy2 addObject: keyObject];
+	keyObject = [(id)proxy2 objectForKey: nil];
+	[(id)proxy2 addObject: keyObject];
+	[(id)proxy2 setObjects: [NSArray arrayWithObject: keyObject]];
 	
 	// Verify
 	[mock verify];
 }
+ */
 
 - (void)testChains
 {
