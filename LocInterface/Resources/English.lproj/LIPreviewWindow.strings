@@ -1,0 +1,5 @@
+﻿/* Status text in preview window while loading */
+"Loading" = "Loading…";
+
+/* Status text in preview window when no preview can be loaded */
+"NoPreview" = "No Preview available.";

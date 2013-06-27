@@ -1,0 +1,335 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Localization Manager Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.maintitle {
+	font-family: Futura Regular;
+	font-size: 26px;
+	font-weight: bold;
+}
+.subtitle {
+	font-family: Helvetica;
+	font-size: 12px;
+	color: #888888;
+}
+.title {
+	font-family: Helvetica;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000000;
+}
+.text {
+	font-family: Helvetica;
+	font-size: 12px;
+}
+.textsmall { font-size: 10px; font-family: Helvetica }
+-->
+</style>
+</head>
+
+<body>
+<a name="top"></a> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="150" height="130"> <div align="right"><img src="../Localization%20Manager.icns" width="128" height="128"></div></td>
+    <td><div align="center">
+						<span class="maintitle">Localization Manager 2.0</span><br>
+						<span class="subtitle">Localization Manager Manual Version 2.0<br>
+							 Copyright 2003-2005 The Blue Technologies Group</span></div></td>
+  </tr>
+</table>
+<p class="title">Contents</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="50">&nbsp;</td>
+    <td class="text"><p><em><a href="#1">1. What is &quot;Localization Manager&quot;?</a><br>
+        <a href="#2">2. How to use it</a><br>
+							<span class="textsmall">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.1">2.1 Adding languages</a><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.2">2.2 Adding files </a><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.3">2.3 File Details</a><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.4">2.4 Updating and resetting a language/file</a><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.5">2.5 Create localizations data</a><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.6">2.6 Read localized data</a><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.7">2.7 Tips</a></span><br>
+        <a href="#3">3. The &quot;Localization&quot; menu</a><br>
+        <a href="#4">4. Version history</a></em></p>
+      </td>
+  </tr>
+			<tr>
+				<td width="50"></td>
+				<td class="text"></td>
+			</tr>
+		</table>
+<p>&nbsp;</p>
+<table width="100%" border="0" cellspacing="6" cellpadding="0">
+  <tr> 
+    <td colspan="3"> <p><span class="title"><a name="1"></a>1. What is &quot;Localization 
+        Manager&quot;?</span></p></td>
+  </tr>
+  <tr> 
+    <td width="30">&nbsp;</td>
+    <td colspan="2"><p><span class="text">Localization Manager is tool for developers that helps to simplify the process of localizing an application. It's part of the blue:tec Localization Suite, available under www.blue-tec.com.</span></p>
+      <p><span class="text">Localization Manager's job in this suite is to control
+           the localization process, creating and reading the localization (which
+           can be edited using the &quot;Localizer&quot; application) and the
+           interface files.  More on this in the next section.</span> </p>
+      <p><a href="#top" class="text"><em>back to top</em></a><br>
+        &nbsp; </p></td>
+  </tr>
+  <tr> 
+    <td colspan="3"><span class="title"><a name="2"></a>2. How to use it</span></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><a name="2.1"></a><span class="text"><b>2.1 Adding languages</b></span></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td width="30">&nbsp;</td>
+    <td>
+					<p><span class="text">Once you created a new project by choosing &quot;New&quot; from
+					    the &quot;File&quot; menu, click on the plus button below the left table
+					    or choose &quot;Add Language&quot; in the &quot;Localization&quot;-&gt;&quot;Language&quot; menu.
+					    Then select the languages you want to have your application
+					    localized in. In our case, we chose English as our main language and
+					    German.</span></p>
+					<p><span class="text"><img src="../Manual/ManagerWindow.jpg" alt="" width="596" height="411" border="0"></span></p>
+					<p><a href="#top" class="textsmall"><em>back to top</em></a><br>
+						&nbsp;</p>
+	</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><a name="2.2"></a><span class="text"><b>2.2 Adding files</b></span></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>
+					<p><span class="text">Before adding file, we first have to set a reference language. This is the language you make all changes in. In our case, let's choose English.</span></p>
+					<p><img src="../Manual/ManagerReferenceLanguage.jpg" alt="" width="329" height="88" border="0"></p>
+					<p><span class="text">Now click on the plus below the right table to add
+					    files. Optionally drag and drop them onto the table. Supported files
+					    are: .strings, .nib, .rtf, .rtfd, .txt.</span></p>
+					<p><img src="../Manual/ManagerFilesTable.jpg" alt="" width="299" height="90" border="0"></p>
+					<p><span class="text"> Files that are not checked off won't be included
+					    in the later created .loc file(s). You may want to use
+					    this to disable some files that either haven't changed
+					    or shouldn't be translated by localizers (e.g. a .strings
+					    file containing urls or paths).</span></p>
+					<p><a href="#top" class="textsmall"><em>back to top</em></a><br>
+						&nbsp;</p>
+				</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><a name="2.3"></a><span class="text"><b>2.3 File details</b></span></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>
+        <p><span class="text">Select a file in the right table and click on the button with the magnifier. This will bring up a new window where you can see what's actually in the file.</span></p>
+        <p><img src="../Manual/ManagerDetailsWindow.jpg" alt="" width="658" height="422" border="0"></p>
+        <p><span class="text">In addition, you can set two states: Active and
+            updated. If active is not checked off, the appropriate key won't
+            be included in the .loc file. If the second checkbox is checked off,
+        the key will be marked as updated in the .loc file.</span></p>
+        <p><a href="#top" class="textsmall"><em>back to top</em></a><br>&nbsp;</p>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><a name="2.4"></a><span class="text"><b>2.4 Updating and resetting a language/file</b></span></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>
+        <p><span class="text"><b>Update Files</b></span></p>
+            <p><img src="../Manual/ManagerUpdateFiles.jpg" alt="" width="186" height="72" border="0"></p>
+            <p><span class="text">Checks which files have been changed in the reference language and updates them in all languages.</span></p>
+            <p><span class="text"><em>This is the most common button and so the
+                  one most optimized.</em> This
+                checks all reference files for whether there have been updates
+                and imports all the changes. Then just the changed files are
+                  updated. (For details on this, see the description of "Update
+                  File".)</span></p>
+            <p><span class="text">You might want to use &quot;Update Files&quot; it
+                before creating .loc files and after importing them, after having
+                made some changes to the interface and so on. You should rarely
+                need to use the other buttons below as they're very specific
+            and "Updates Files" is more or less a merge of all of them.</span></p>
+            <p><span class="text"><b>Update Language</b></span></p>
+            <p><img src="../Manual/ManagerUpdateLanguage.jpg" alt="" width="299" height="90" border="0"></p>
+            <p><span class="text">Use this button to regenerate all localized files of the selected languages.</span></p>
+            <p><span class="text">This uses the interface data of the formerly
+                localized and adjusted files, compares them to the recent version
+                of the same files in the reference language and then recreates
+                them using the old interface but retaining all changes made to
+                the reference language. You might want to use this after importing
+                a .loc file to tell the application that it should write the
+            localized data to disk.</span></p>
+        <p><span class="text"><b>Reset Language</b></span></p>
+            <p><img src="../Manual/ManagerResetLanguage.jpg" alt="" width="299" height="90" border="0"></p>
+            <p><span class="text">Use this button to remove all localized files of the selected languages and then recreate them from the reference.</span></p>
+            <p><span class="text">This removes all files of the selected languages and then recreates them by copying the reference languages' files and using the translated strings to translate the interface. You might want to use this to delete the interface of the selected language and then readjust it, maybe because it has been corrupted.</span></p>
+        <p><span class="text"><b>Update File</b></span></p>
+            <p><img src="../Manual/ManagerUpdateFile.jpg" alt="" width="299" height="89" border="0"></p>
+            <p><span class="text">Use this button to regenerate all localized versions of the selected file.</span></p>
+            <p><span class="text">This uses the interface data of the formerly localized files, compares them to the recent version of the same file in the reference language and then recreates them using the old interface but retaining all changes made to the reference language. You might want to use this after updating a file.</span></p>
+        <p><span class="text"><b>Reset File</b></span></p>
+            <p><img src="../Manual/ManagerResetFile.jpg" alt="" width="299" height="89" border="0"></p>
+            <p><span class="text">Use this button to removes the file in all languages and recreate it.</span></p>
+            <p><span class="text">This removes all localized versions of the selected files and then recreates them by copying the reference languages' files and using the translated strings to translate the interface. You might want to use this to delete the interface of a selected file and then readjust it, maybe because it has been corrupted.</span></p>
+            <p><a href="#top" class="textsmall"><em>back to top</em></a><br>&nbsp;</p>
+    </td>
+  </tr>
+<tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><a name="2.5"></a><span class="text"><b>2.5 Create localization data</b></span></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><p><span class="text">Choose &quot;Save Localization Files...&quot; from the &quot;Localization&quot; menu to save the Localizer (.loc) files. Localizer files are the ones being sent to translators. So this is one of the most important steps in the localization process.</span></p>
+        <p><span class="text"><img src="../Manual/ManagerSaveOptions.jpg" alt="" width="257" height="102" border="0"></span></p>
+        <p><span class="text">You may want all languages to be saved into one file, e.g. for you to check the consitency of of various patterns and so. Selecting "all languages in separate files" will
+            - as it says - create a separate file for each language. These files
+            will be smaller than the composite one but having many files will
+        require a some more logistics.</span></p>
+        <p><span class="text">Including an Interface Preview will allow your localizers to see the changes they make in a more or less good preview. This will show the window / view the string is contained in and will then replace the reference string by the localized. Please tell you localizers that they don't have to try to match this interface preview as there always remains the ability to adjust the size of controls.</span></p>
+        <p><span class="text">You'll find more detailed instructions how to use
+            Localizer in its help.<em><br>
+        </em></span><a href="#top" class="textsmall"><em>back to top</em></a><br>
+        &nbsp;</p></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><a name="2.6"></a><span class="text"><b>2.6 Read localized data</b></span></td>
+  </tr>
+			<tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><p><span class="text">Choose &quot;Open Localization Files...&quot; from the &quot;Localization&quot; menu and open the Localizer (.loc) files. This is also one of the most important steps in the localization process as here the localizations get matched to your database.</span></p>
+        <p><span class="text">Importing a .loc file just imports the keys/strings
+            but doesn't create any  files. You'll have to use the &quot;Update
+            Files&quot; button to achieve this. It's also possible to use one
+            of the others like &quot;Update language&quot; but in fact &quot;Update
+            Files&quot; is the one best suited. Please also notice that Localizer
+            files are key-based. This means that if you somehow recreate the
+            .ldb file you're still able to use the same .loc files as at least
+            not all keys will change. (To do this you have to use the "Import
+            Localization Files..." command from the Localization menu. For more
+            see section <a href="#3">3</a>.)</span></p>
+        <p><a href="#top" class="textsmall"><em>back to top </em></a><br>&nbsp;</p>
+    </td>
+  </tr>
+			<tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><a name="2.7"></a><span class="text"><b>2.7 Tips</b></span></td>
+  </tr>
+			<tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><p><span class="text">- There's no need to update the localization database every time you change the interface. Just work on your project as long as it takes and when you achieved a state where there will be no more or just very few changes to be done to the interface you start your work on the localization. Localizer files just have to be created when you want to change something or to send them to your translator.</span></p>
+    <p><span class="text">- You might also find the &quot;updated&quot; and &quot;active&quot; key
+      flags useful. They can be set/unset in the file details windowdow (see
+      section <a href="#2.3">2.3</a>). Using the "active" flag you can deactivate
+      several keys that don't have to be localized (e.g. patterns, URLs or date
+      formaters). The "updated" flag might also be helpful for your localizers
+      to get the job done. Localizer will read "updated" flags as "changed",
+      making it easy to find the updated sections. You might find it useful
+      that the "updated" flag is  set automatically when using "Update Files" and
+      there have been changes. Also notice that you have to uncheck it manually.
+      It's suggested to uncheck after importing all .loc files or after a release
+      (which should be nearly the same). </span></p>
+        <p><a href="#top" class="textsmall"><em>back to top </em></a><br>&nbsp;</p>
+      </td>
+  </tr>
+  <tr> 
+    <td colspan="3"><span class="title"><a name="3"></a>3. The &quot;Localization&quot; menu</span></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><strong><span class="text">Update Files</span></strong></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+    <td><span class="text">Works like the "Update Files" button, see section <a href="#2.4">2.4</a>.</span></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><strong><span class="text">Read Files</span></strong></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+    <td><span class="text">This does just a part of the "Update Files" command - it just imports the files but does not write the localized versions. You may want to use this in combination with the "Update File" or "Update Language" commands, e.g. when you updated reference files but don't want all files to be updated.</span></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><strong><span class="text">Languages menu</span></strong></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+    <td><span class="text">These do the very same thing as the buttons below the languages list. The item "Add Custom Language..." allows you to add a language that's not in the default list when using "Add Language...". See section <a href="#2.4">2.4</a> for more details.</span></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><strong><span class="text">Files menu</span></strong></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+    <td><span class="text">These do the very same thing as the buttons below the files list. See section <a href="#2.4">2.4</a> for more details.</span></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><strong><span class="text">Save / Open Localization Files...</span></strong></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+    <td><span class="text">See sections <a href="#2.5">2.5</a> and <a href="#2.6">2.6</a>.</span></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><strong><span class="text">Import existing Languages / Files...</span></strong></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+    <td><span class="text">Very important commands that allow you to move your existing projects to the database or to import existing localized files. "Import existing Languages..." requires you to select .lproj folders, "Import existing Files..." requires you to select files within a .lproj folder (this is to determine the language of the file). Both commands create an new entry in the languages list if the imported languages do not yet exist.</span></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><strong><span class="text">Import Localization Files...</span></strong></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+    <td><span class="text">Useful command which works very similar to "Open Localization Files..." but does not just import changed but all keys. This one is usefull when saving your whole database to a Localizer (.loc) file and later reimporting it for whatever reason.</span></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2"><a href="#top" class="text"><em>back to top</em></a> </td>
+  </tr>
+  <tr> 
+    <td colspan="3"><span class="title"><a name="4"></a>4. Version history</span></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2"><table width="100%" border="0" cellspacing="5" cellpadding="0">
+        <tr> 
+          <td width="75"><strong><span class="text">Version 1.0 -</span></strong></td>
+          <td><span class="text">Initial release.</span></td>
+        </tr>
+        <tr> 
+          <td width="75"><strong><span class="text">Version 2.0 -</span></strong></td>
+          <td><span class="text">Complete rewrite including a whole new workflow and many new functions.</span></td>
+        </tr>
+      </table>
+      <br> <a href="#top" class="text"><em>back to top</em></a> </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

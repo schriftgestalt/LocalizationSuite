@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'BlueLocalizationTest' target in the 'BlueLocalization Framework' project.
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+	#import <SenTestingKit/SenTestingKit.h>
+	#import <BlueLocalization/BlueLocalization.h>
+#endif

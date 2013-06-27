@@ -1,0 +1,135 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		506FE706119428E0009A67A8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Resources/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		506FE708119428E0009A67A8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Resources/English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		506FE70A119428E0009A67A8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		509735BF0FFD389E001DBF72 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		509735C00FFD38A4001DBF72 /* Localizable2.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable2.strings; path = Folder/Localizable2.strings; sourceTree = SOURCE_ROOT; };
+		509735C10FFD38AA001DBF72 /* Localizable3.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable3.strings; path = ../../Folder/Localizable3.strings; sourceTree = BUILT_PRODUCTS_DIR; };
+		509735C20FFD38C1001DBF72 /* Localizable4.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable4.strings; path = "../Users/max/Localization Suite/BlueLocalization/Resources/Test Data/Xcode/proj1/Folder/Localizable4.strings"; sourceTree = DEVELOPER_DIR; };
+		509735C30FFD38C7001DBF72 /* Localizable5.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable5.strings; path = "../../../Users/max/Localization Suite/BlueLocalization/Resources/Test Data/Xcode/proj1/Folder/Localizable5.strings"; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		29B97314FDCFA39411CA2CEA /* Testproject */ = {
+			isa = PBXGroup;
+			children = (
+				506FE700119428CF009A67A8 /* Resources */,
+				509735BA0FFD383A001DBF72 /* Folder */,
+			);
+			name = Testproject;
+			sourceTree = "<group>";
+		};
+		506FE700119428CF009A67A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				506FE705119428E0009A67A8 /* InfoPlist.strings */,
+				506FE707119428E0009A67A8 /* Localizable.strings */,
+				506FE709119428E0009A67A8 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		509735BA0FFD383A001DBF72 /* Folder */ = {
+			isa = PBXGroup;
+			children = (
+				509735BF0FFD389E001DBF72 /* Localizable.strings */,
+				509735C00FFD38A4001DBF72 /* Localizable2.strings */,
+				509735C10FFD38AA001DBF72 /* Localizable3.strings */,
+				509735C20FFD38C1001DBF72 /* Localizable4.strings */,
+				509735C30FFD38C7001DBF72 /* Localizable5.strings */,
+			);
+			path = Folder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "project2" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Testproject */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXVariantGroup section */
+		506FE705119428E0009A67A8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				506FE706119428E0009A67A8 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		506FE707119428E0009A67A8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				506FE708119428E0009A67A8 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		506FE709119428E0009A67A8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				506FE70A119428E0009A67A8 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "project2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,0 +1,7 @@
+*/!
+ @framework BlueLocalization
+ @abstract blah blub
+ */
+
+classAsComposite => true
+dateFormat => %d.%m.%Y

@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>BLProcessManager </title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style>
+</head>
+<body bgcolor="#ffffff">
+<a name="top"></a><a name="//apple_ref/doc/class/BLProcessManager" title="BLProcessManager "></a><hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="BLProcessManager">BLProcessManager </a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --> Manages all long duration processings.
+<!-- end abstract --></p>
+<p><b>Superclass:</b> <!-- a logicalPath="//apple_ref/occ/cl/NSObject" -->NSObject<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">BLProcessManager.h</a><br></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion --> Basically this is a wrapper around a processing queue for BLProcessStep objects.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<br><h2>Methods</h2>
+<a name="HeaderDoc_methods"></a><dl>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLProcessManager/completedSteps" target="doc">-completedSteps </a></tt></dt>
+<dd>Returns the number of steps completed in the current run.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLProcessManager/currentStep" target="doc">-currentStep </a></tt></dt>
+<dd>Returns any of the currently running steps.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLProcessManager/document" target="doc">-document </a></tt></dt>
+<dd>Returns the document the process manager belongs to.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLProcessManager/enqueueStep:" target="doc">-enqueueStep: </a></tt></dt>
+<dd>Enqueues a new step.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLProcessManager/enqueueStepGroup:" target="doc">-enqueueStepGroup: </a></tt></dt>
+<dd>Enqueues a new group steps.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLProcessManager/initWithDocument:" target="doc">-initWithDocument:</a></tt></dt>
+<dd>Designated initializer.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLProcessManager/isRunning" target="doc">-isRunning</a></tt></dt>
+<dd>Returns whether the queue is currently running.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLProcessManager/setDocument:" target="doc">-setDocument: </a></tt></dt>
+<dd>Set the document the process manager belongs to.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLProcessManager/start" target="doc">-start </a></tt></dt>
+<dd>Start the processing queue.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLProcessManager/steps" target="doc">-steps </a></tt></dt>
+<dd>Returns the number of steps in the current run.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLProcessManager/stop" target="doc">-stop </a></tt></dt>
+<dd>Stop the processing queue immediatelly.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLProcessManager/completedSteps;  name=BLProcessManager::completedSteps --><a name="//apple_ref/occ/instm/BLProcessManager/completedSteps"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="completedSteps">completedSteps </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns the number of steps completed in the current run.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSUInteger //apple_ref/occ/tdef/NSUInteger //apple_ref/occ/tag/NSUInteger //apple_ref/occ/econst/NSUInteger //apple_ref/occ/struct/NSUInteger //apple_ref/occ/clconst/NSUInteger //apple_ref/occ/intf/NSUInteger" --><span class="type">NSUInteger</span><!-- /a -->)<span class="var">completedSteps</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->Updates only happen on the main thread so it's save to bind to this property for interface updates.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLProcessManager/currentStep;  name=BLProcessManager::currentStep --><a name="//apple_ref/occ/instm/BLProcessManager/currentStep"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="currentStep">currentStep </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns any of the currently running steps.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<a href="../../../../Documentation/BLProcessStep/Classes/BLProcessStep_/index.html#//apple_ref/occ/cl/BLProcessStep" logicalPath="//apple_ref/occ/cl/BLProcessStep" target="_top"><span class="type">BLProcessStep</span></a> <span class="type">*</span>)<span class="var">currentStep</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->Can be used to display some interface status information or likewise.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLProcessManager/document;  name=BLProcessManager::document --><a name="//apple_ref/occ/instm/BLProcessManager/document"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="document">document </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns the document the process manager belongs to.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSDocument //apple_ref/occ/tdef/NSDocument //apple_ref/occ/tag/NSDocument //apple_ref/occ/econst/NSDocument //apple_ref/occ/struct/NSDocument //apple_ref/occ/clconst/NSDocument //apple_ref/occ/intf/NSDocument" --><span class="type">NSDocument</span><!-- /a --> &lt;<span class="param">BLDocumentProtocol</span>&gt; <span class="type">*</span>)<span class="var">document</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->Due to the importance of this method to most steps, this one throws if no document has been set beforehand!
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLProcessManager/enqueueStep:;  name=BLProcessManager::enqueueStep: --><a name="//apple_ref/occ/instm/BLProcessManager/enqueueStep:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="enqueueStep:">enqueueStep: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Enqueues a new step.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/enqueueStep //apple_ref/occ/clm/enqueueStep //apple_ref/occ/intfcm/enqueueStep //apple_ref/occ/intfm/enqueueStep //apple_ref/occ/func/enqueueStep //apple_ref/occ/ftmplt/enqueueStep //apple_ref/occ/defn/enqueueStep //apple_ref/occ/macro/enqueueStep" --><span class="function">enqueueStep</span><!-- /a -->:(<a href="../../../../Documentation/BLProcessStep/Classes/BLProcessStep_/index.html#//apple_ref/occ/cl/BLProcessStep" logicalPath="//apple_ref/occ/cl/BLProcessStep" target="_top"><span class="type">BLProcessStep</span></a> <span class="type">*</span>)<span class="var">step</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This method is thread-safe, as it just forwards to enqueueStepGroup:!
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLProcessManager/enqueueStepGroup:;  name=BLProcessManager::enqueueStepGroup: --><a name="//apple_ref/occ/instm/BLProcessManager/enqueueStepGroup:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="enqueueStepGroup:">enqueueStepGroup: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Enqueues a new group steps.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/enqueueStepGroup //apple_ref/occ/clm/enqueueStepGroup //apple_ref/occ/intfcm/enqueueStepGroup //apple_ref/occ/intfm/enqueueStepGroup //apple_ref/occ/func/enqueueStepGroup //apple_ref/occ/ftmplt/enqueueStepGroup //apple_ref/occ/defn/enqueueStepGroup //apple_ref/occ/macro/enqueueStepGroup" --><span class="function">enqueueStepGroup</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<span class="var">steps</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The steps must be independent, concurrent and thread-safe. They might and probably will be executed in parallel. However, groups are performed in the order they were added and are not concurrent. Steps in groups may also add new groups as the they are being performed!
+This method is thread-safe!
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLProcessManager/initWithDocument:;  name=BLProcessManager::initWithDocument: --><a name="//apple_ref/occ/instm/BLProcessManager/initWithDocument:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="initWithDocument:">initWithDocument:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Designated initializer.
+ <!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initWithDocument //apple_ref/occ/clm/initWithDocument //apple_ref/occ/intfcm/initWithDocument //apple_ref/occ/intfm/initWithDocument //apple_ref/occ/func/initWithDocument //apple_ref/occ/ftmplt/initWithDocument //apple_ref/occ/defn/initWithDocument //apple_ref/occ/macro/initWithDocument" --><span class="function">initWithDocument</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSDocument //apple_ref/occ/tdef/NSDocument //apple_ref/occ/tag/NSDocument //apple_ref/occ/econst/NSDocument //apple_ref/occ/struct/NSDocument //apple_ref/occ/clconst/NSDocument //apple_ref/occ/intf/NSDocument" --><span class="type">NSDocument</span><!-- /a --> &lt;<span class="param">BLDocumentProtocol</span>&gt; <span class="type">*</span>)<span class="var">document</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLProcessManager/isRunning;  name=BLProcessManager::isRunning --><a name="//apple_ref/occ/instm/BLProcessManager/isRunning"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="isRunning">isRunning</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns whether the queue is currently running.
+ <!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<span class="var">isRunning</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLProcessManager/setDocument:;  name=BLProcessManager::setDocument: --><a name="//apple_ref/occ/instm/BLProcessManager/setDocument:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="setDocument:">setDocument: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Set the document the process manager belongs to.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setDocument //apple_ref/occ/clm/setDocument //apple_ref/occ/intfcm/setDocument //apple_ref/occ/intfm/setDocument //apple_ref/occ/func/setDocument //apple_ref/occ/ftmplt/setDocument //apple_ref/occ/defn/setDocument //apple_ref/occ/macro/setDocument" --><span class="function">setDocument</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSDocument //apple_ref/occ/tdef/NSDocument //apple_ref/occ/tag/NSDocument //apple_ref/occ/econst/NSDocument //apple_ref/occ/struct/NSDocument //apple_ref/occ/clconst/NSDocument //apple_ref/occ/intf/NSDocument" --><span class="type">NSDocument</span><!-- /a --> &lt;<span class="param">BLDocumentProtocol</span>&gt; <span class="type">*</span>)<span class="var">aDocument</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This is essential for most steps to work at all.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLProcessManager/start;  name=BLProcessManager::start --><a name="//apple_ref/occ/instm/BLProcessManager/start"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="start">start </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Start the processing queue.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<span class="var">start</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The queue is automatically stopped when all actions have been processed. Resets the number of performed and pending steps.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLProcessManager/steps;  name=BLProcessManager::steps --><a name="//apple_ref/occ/instm/BLProcessManager/steps"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="steps">steps </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns the number of steps in the current run.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSUInteger //apple_ref/occ/tdef/NSUInteger //apple_ref/occ/tag/NSUInteger //apple_ref/occ/econst/NSUInteger //apple_ref/occ/struct/NSUInteger //apple_ref/occ/clconst/NSUInteger //apple_ref/occ/intf/NSUInteger" --><span class="type">NSUInteger</span><!-- /a -->)<span class="var">steps</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->Updates only happen on the main thread so it's save to bind to this property for interface updates.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLProcessManager/stop;  name=BLProcessManager::stop --><a name="//apple_ref/occ/instm/BLProcessManager/stop"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="stop">stop </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Stop the processing queue immediatelly.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<span class="var">stop</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->Running operations might be finsihed, however no pending operations will be started. This also clears the queue.
+ <!-- end discussion --></p>
+<p></p>
+<p>Last Updated: 08.05.2009
+</p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+// comment
+"key" = "value";
+
+/* comment2 */
+"key2" = "value2"; // another one
+
+/* and this
+			here
+		iz
+	amazing
+ga...
+*/

@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" 
+       xmlns:tek="http://www.tektronix.com"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2         
+       xliff-core-1.2-strict.xsd http://www.tektronix.com tek_code_trial.xsd" 
+       version="1.2">
+   <tek:header>The First Volume of Software Structures</tek:header>
+   <file original="String" source-language="en-us" datatype="plaintext" date="2001-12-17T09:30:47-05:00" xml:space="default" category="String" target-language="en-us" product-name="String" product-version="String" build-num="String">
+      <header>
+         <skl>
+            <internal-file form="String" crc="NMTOKEN">String</internal-file>
+         </skl>
+         <phase-group>
+            <phase phase-name="String" process-name="String" company-name="String" date="2001-12-17T09:30:47-05:00" job-id="String" contact-name="String" contact-email="String" contact-phone="String">
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+            </phase>
+            <phase phase-name="NMTOKEN" process-name="String" company-name="String" date="2001-12-17T09:30:47-05:00" job-id="String" contact-name="String" contact-email="String" contact-phone="String">
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+            </phase>
+         </phase-group>
+         <glossary>
+            <internal-file form="String" crc="NMTOKEN">String</internal-file>
+         </glossary>
+         <glossary>
+            <internal-file form="String" crc="NMTOKEN">String</internal-file>
+         </glossary>
+      </header>
+      <body>
+         <trans-unit id="_1_ski_041" approved="yes" translate="yes" reformat="coord font" xml:space="default" datatype="plaintext" phase-name="String" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN" size-unit="pixel" maxwidth="NMTOKEN" minwidth="NMTOKEN" maxheight="NMTOKEN" minheight="NMTOKEN" maxbytes="NMTOKEN" minbytes="NMTOKEN" charclass="String">
+            <source xml:lang="en-us">Text <g id="_1_ski_040">text</g>TEXT<bpt id="_1_ski_139">code<sub>Text</sub>
+               </bpt>TEXT<ept id="_1_ski_238">code</ept>TEXT<ph id="_1_ski_337"/>TEXT<it id="_1_ski_436" pos="open">code</it>TEXT<mrk mtype="x-test">text</mrk>
+               <x id="_1_ski_535"/>TEXT<bx id="_1_ski_634"/>TEXT<ex id="_1_ski_733"/>TEXT.</source>
+            <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text <g id="_1_ski_832">text</g>TEXT<bpt id="_1_ski_931">code</bpt>TEXT<ept id="_1_ski_1030">code</ept>TEXT<ph id="_1_ski_1129"/>TEXT<it id="_1_ski_1228" pos="open">code</it>TEXT<mrk mtype="x-test">text</mrk>
+               <x id="_1_ski_1327"/>TEXT<bx id="_1_ski_1426"/>TEXT<ex id="_1_ski_1525"/>TEXT.</target>
+            <context-group name="_ski_40119" crc="NMTOKEN" purpose="location x-test match x-abcdef">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <context-group crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <count-group name="_ski_42117">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+            <count-group name="_ski_43116">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->     
+ 
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <alt-trans match-quality="String" crc="NMTOKEN" xml:lang="en-us" origin="String" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">
+               <source xml:lang="en-us">Text <bpt id="_1_ski_1624">code<sub>Text<bpt id="_1_ski_1623">subcode</bpt>TEXT<ept id="_1_ski_1722">subcode</ept>TEXT.</sub>
+                  </bpt>TEXT<ept id="_1_ski_1921">code</ept>TEXT<ph id="_1_ski_2020">code</ph>TEXT.</source>
+               <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+   
+<!-- removed second target element, 
+     infinite allowed transitional xsd, only 1 in strict
+--> 
+               <context-group name="_ski_46113" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+               <context-group name="_ski_47112" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+            </alt-trans>
+            <alt-trans match-quality="String" crc="NMTOKEN" xml:lang="en-us" origin="String" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">
+               <source xml:lang="en-us">Text</source>
+               <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+<!-- removed second target element, 
+     infinite allowed transitional xsd, only 1 in strict
+--> 
+               <context-group name="_ski_410109" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+               <context-group name="_ski_411108" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+            </alt-trans>
+         </trans-unit>
+         <trans-unit id="_1_ski_2203">
+            <source>
+               <mrk mtype="protected">XLIFF
+               </mrk>stands for
+               <mrk mtype="protected">XML Localisation Interchange File Format
+               </mrk>.
+            </source>
+            <target>
+               <mrk mtype="protected">XLIFF
+               </mrk>in any language stands for
+               <mrk mtype="protected">XML Localisation Interchange File Format
+               </mrk>.
+            </target>
+         </trans-unit>
+         <trans-unit id="_1_ski_2219" approved="yes" translate="yes" reformat="yes" xml:space="default" datatype="plaintext" phase-name="String" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN" size-unit="pixel" maxwidth="NMTOKEN" minwidth="NMTOKEN" maxheight="NMTOKEN" minheight="NMTOKEN" maxbytes="NMTOKEN" minbytes="NMTOKEN" charclass="String">
+            <source xml:lang="en-us">Text</source>
+            <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+            <context-group name="_ski_414105" crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <context-group name="_ski_415104" crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <count-group name="_ski_416103">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+            <count-group name="_ski_417102">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->     
+
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <alt-trans match-quality="String" crc="NMTOKEN" xml:lang="en-us" origin="String" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">
+               <source xml:lang="en-us">Text</source>
+               <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+     
+<!-- removed second target element, 
+     infinite allowed transitional xsd, only 1 in strict
+--> 
+               <context-group name="_ski_42099" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+               <context-group name="_ski_42198" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+            </alt-trans>
+            <alt-trans match-quality="String" crc="NMTOKEN" xml:lang="en-us" origin="String" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">
+               <source xml:lang="en-us">Text</source>
+               <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+    
+<!-- removed second target element, 
+     infinite allowed transitional xsd, only 1 in strict
+--> 
+               <context-group name="_ski_42495" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+               <context-group name="_ski_42594" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+            </alt-trans>
+         </trans-unit>
+         <group id="_1_ski_2318" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN" translate="yes" reformat="yes" size-unit="pixel" maxwidth="NMTOKEN" minwidth="NMTOKEN" maxheight="NMTOKEN" minheight="NMTOKEN" maxbytes="NMTOKEN" minbytes="NMTOKEN" charclass="String">
+            <context-group name="_ski_42891" crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <context-group name="_ski_42990" crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <count-group name="_ski_43089">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+            <count-group name="_ski_43188">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->     
+ 
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+         </group>
+         <group id="_1_ski_2516" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN" translate="yes" reformat="yes" size-unit="pixel" maxwidth="NMTOKEN" minwidth="NMTOKEN" maxheight="NMTOKEN" minheight="NMTOKEN" maxbytes="NMTOKEN" minbytes="NMTOKEN" charclass="String">
+            <context-group name="_ski_43485" crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <context-group name="_ski_43584" crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <count-group name="_ski_43683">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+            <count-group name="_ski_43782">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->     
+     
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <trans-unit id="_1_ski_2515">
+               <source xml:lang="en">Text</source>
+            </trans-unit>
+         </group>
+         <bin-unit id="_1_ski_2714" mime-type="image" approved="yes" translate="yes" reformat="yes" restype="button" resname="String" phase-name="String">
+            <bin-source>
+               <internal-file form="String" crc="NMTOKEN">String</internal-file>
+            </bin-source>
+            <bin-target mime-type="image" state="needs-translation" phase-name="NMTOKEN" restype="button" resname="String">
+               <internal-file form="String" crc="NMTOKEN">String</internal-file>
+            </bin-target>
+            <context-group name="_ski_44079" crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <context-group name="_ski_44178" crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <count-group name="_ski_44277">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+            <count-group name="_ski_44376">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->     
+
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <trans-unit id="_1_ski_2713" approved="yes" translate="yes" reformat="yes" xml:space="default" datatype="plaintext" phase-name="String" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN" size-unit="pixel" maxwidth="NMTOKEN" minwidth="NMTOKEN" maxheight="NMTOKEN" minheight="NMTOKEN" maxbytes="NMTOKEN" minbytes="NMTOKEN" charclass="String">
+               <source xml:lang="en-us">Text</source>
+               <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+               <context-group name="_ski_44673" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+               <context-group name="_ski_44772" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+               <count-group name="_ski_44871">
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+               </count-group>
+               <count-group name="_ski_44970">
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+               </count-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->     
+
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <alt-trans match-quality="String" crc="NMTOKEN" xml:lang="en-us" origin="String" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">
+                  <source xml:lang="en-us">Text</source>
+                  <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+    
+<!-- removed second target element, 
+     infinite allowed transitional xsd, only 1 in strict
+--> 
+                  <context-group name="_ski_45267" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+                  <context-group name="_ski_45366" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->
+
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+               </alt-trans>
+               <alt-trans match-quality="String" crc="NMTOKEN" xml:lang="en-us" origin="String" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">
+                  <source xml:lang="en-us">Text</source>
+                  <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+    
+<!-- removed second target element, 
+     infinite allowed transitional xsd, only 1 in strict
+--> 
+
+                  <context-group name="_ski_45663" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+                  <context-group name="_ski_45762" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+               </alt-trans>
+            </trans-unit>
+            <trans-unit id="_1_ski_2812" approved="yes" translate="yes" reformat="yes" xml:space="default" datatype="plaintext" phase-name="String" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN" size-unit="pixel" maxwidth="NMTOKEN" minwidth="NMTOKEN" maxheight="NMTOKEN" minheight="NMTOKEN" maxbytes="NMTOKEN" minbytes="NMTOKEN" charclass="String">
+               <source xml:lang="en-us">Text</source>
+               <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+               <context-group name="_ski_46059" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+               <context-group name="_ski_46158" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+               <count-group name="_ski_46257">
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+               </count-group>
+               <count-group name="_ski_46356">
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+               </count-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->     
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <alt-trans match-quality="String" crc="NMTOKEN" xml:lang="en-us" origin="String" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">
+                  <source xml:lang="en-us">Text</source>
+                  <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+    
+<!-- removed second target element, 
+     infinite allowed transitional xsd, only 1 in strict
+--> 
+                  <context-group name="_ski_46653" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+                  <context-group name="_ski_46752" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->
+
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+               </alt-trans>
+               <alt-trans match-quality="String" crc="NMTOKEN" xml:lang="en-us" origin="String" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">
+                  <source xml:lang="en-us">Text</source>
+                  <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+
+    
+<!-- removed second target element, 
+     infinite allowed transitional xsd, only 1 in strict
+--> 
+                  <context-group name="_ski_47049" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+                  <context-group name="_ski_47148" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+               </alt-trans>
+            </trans-unit>
+         </bin-unit>
+         <bin-unit id="_1_ski_3011" mime-type="image" approved="yes" translate="yes" reformat="yes" restype="button" resname="String" phase-name="String">
+            <bin-source>
+               <internal-file form="String" crc="NMTOKEN">String</internal-file>
+            </bin-source>
+            <bin-target mime-type="image" state="needs-translation" phase-name="NMTOKEN" restype="button" resname="String">
+               <internal-file form="String" crc="NMTOKEN">String</internal-file>
+            </bin-target>
+            <context-group name="_ski_47445" crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <context-group name="_ski_47544" crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <count-group name="_ski_47643">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+            <count-group name="_ski_47742">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+ <!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->     
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <trans-unit id="_1_ski_3010" approved="yes" translate="yes" reformat="yes" xml:space="default" datatype="plaintext" phase-name="String" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN" size-unit="pixel" maxwidth="NMTOKEN" minwidth="NMTOKEN" maxheight="NMTOKEN" minheight="NMTOKEN" maxbytes="NMTOKEN" minbytes="NMTOKEN" charclass="String">
+               <source xml:lang="en-us">Text</source>
+               <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+               <context-group name="_ski_48039" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+               <context-group name="_ski_48138" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+               <count-group name="_ski_48237">
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+               </count-group>
+               <count-group name="_ski_48336">
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+               </count-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->     
+ 
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <alt-trans match-quality="String" crc="NMTOKEN" xml:lang="en-us" origin="String" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">
+                  <source xml:lang="en-us">Text</source>
+                  <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+    
+<!-- removed second target element, 
+     infinite allowed transitional xsd, only 1 in strict
+--> 
+                  <context-group name="_ski_48633" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+                  <context-group name="_ski_48732" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+               </alt-trans>
+               <alt-trans match-quality="String" crc="NMTOKEN" xml:lang="en-us" origin="String" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">
+                  <source xml:lang="en-us">Text</source>
+                  <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+    
+<!-- removed second target element, 
+     infinite allowed transitional xsd, only 1 in strict
+--> 
+                  <context-group name="_ski_49029" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+                  <context-group name="_ski_49128" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->     
+
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+               </alt-trans>
+            </trans-unit>
+            <trans-unit id="_1_ski_319" approved="yes" translate="yes" reformat="yes" xml:space="default" datatype="plaintext" phase-name="String" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN" size-unit="pixel" maxwidth="NMTOKEN" minwidth="NMTOKEN" maxheight="NMTOKEN" minheight="NMTOKEN" maxbytes="NMTOKEN" minbytes="NMTOKEN" charclass="String">
+               <source xml:lang="en-us">Text</source>
+               <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+               <context-group name="_ski_49425" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+               <context-group name="_ski_49524" crc="NMTOKEN" purpose="location">
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               </context-group>
+               <count-group name="_ski_49623">
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+               </count-group>
+               <count-group name="_ski_49722">
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+                  <count count-type="new" phase-name="String" unit="word">String</count>
+               </count-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->     
+       <note xml:lang="en-us" priority="1" from="String">String</note>
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <alt-trans match-quality="String" crc="NMTOKEN" xml:lang="en-us" origin="String" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">
+                  <source xml:lang="en-us">Text</source>
+                  <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+
+<!-- removed second target element, 
+     infinite allowed transitional xsd, only 1 in strict
+-->
+                  <context-group name="_ski_410019" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+                  <context-group name="_ski_410118" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->     
+
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+               </alt-trans>
+               <alt-trans match-quality="String" crc="NMTOKEN" xml:lang="en-us" origin="String" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">
+                  <source xml:lang="en-us">Text</source>
+                  <target state="needs-translation" phase-name="NMTOKEN" xml:lang="en-us" resname="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN">Text</target>
+
+<!-- removed second target element, 
+     infinite allowed transitional xsd, only 1 in strict
+-->
+                  <context-group name="_ski_410415" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+                  <context-group name="_ski_410514" crc="NMTOKEN" purpose="location">
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                     <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+                  </context-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->     
+ 
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+                  <note xml:lang="en-us" priority="1" from="String">String</note>
+               </alt-trans>
+            </trans-unit>
+         </bin-unit>
+      </body>
+   </file>
+   <file original="String" source-language="en-us" datatype="plaintext" date="2001-12-17T09:30:47-05:00" xml:space="default" category="String" target-language="en-us" product-name="String" product-version="String" build-num="String">
+      <header>
+         <skl>
+            <internal-file form="String" crc="NMTOKEN">String</internal-file>
+         </skl>
+         <phase-group>
+            <phase phase-name="String" process-name="String" company-name="String" date="2001-12-17T09:30:47-05:00" job-id="String" contact-name="String" contact-email="String" contact-phone="String">
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+            </phase>
+            <phase phase-name="_ski_4838" process-name="String" company-name="String" date="2001-12-17T09:30:47-05:00" job-id="String" contact-name="String" contact-email="String" contact-phone="String">
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+               <note xml:lang="en-us" priority="1" from="String">String</note>
+            </phase>
+         </phase-group>
+         <glossary>
+            <internal-file form="String" crc="NMTOKEN">String</internal-file>
+         </glossary>
+         <glossary>
+            <internal-file form="String" crc="NMTOKEN">String</internal-file>
+         </glossary>
+      </header>
+      <body>
+         <group id="_1_ski_338" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN" translate="yes" reformat="yes" size-unit="pixel" maxwidth="NMTOKEN" minwidth="NMTOKEN" maxheight="NMTOKEN" minheight="NMTOKEN" maxbytes="NMTOKEN" minbytes="NMTOKEN" charclass="String">
+            <context-group name="_ski_410811" crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <context-group name="_ski_410910" crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <count-group name="_ski_41109">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+            <count-group name="_ski_41118">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <trans-unit id="_1_ski_337">
+               <source xml:lang="en">Text</source>
+            </trans-unit>
+         </group>
+         <group id="_1_ski_356" datatype="plaintext" xml:space="default" restype="button" resname="String" extradata="String" help-id="NMTOKEN" menu="String" menu-option="String" menu-name="String" coord="-0;-0;-0;-0" font="String" css-style="String" style="NMTOKEN" exstyle="NMTOKEN" translate="yes" reformat="yes" size-unit="pixel" maxwidth="NMTOKEN" minwidth="NMTOKEN" maxheight="NMTOKEN" minheight="NMTOKEN" maxbytes="NMTOKEN" minbytes="NMTOKEN" charclass="String">
+            <context-group name="_ski_41145" crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <context-group name="_ski_41154" crc="NMTOKEN" purpose="location">
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+               <context context-type="database" match-mandatory="no" crc="NMTOKEN">String</context>
+            </context-group>
+            <count-group name="_ski_41163">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+            <count-group name="_ski_41172">
+               <count count-type="new" phase-name="String" unit="word">String</count>
+               <count count-type="new" phase-name="String" unit="word">String</count>
+            </count-group>
+<!-- removed 2 prop-group elements, 
+     allowed only in transitional xsd
+-->
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <note xml:lang="en-us" priority="1" from="String">String</note>
+            <trans-unit id="_1_ski_355">
+               <source xml:lang="en">First  sentence.Second sentence.</source>
+               <seg-source>
+                  <mrk mtype="seg" mid="1">First sentence.</mrk>
+                  <mrk mtype="seg" mid="2">Second  sentence.</mrk>
+               </seg-source>
+               <alt-trans mid="2" match-quality="75%">
+                  <source>The second  sentence.</source>
+                  <target>The translated second  sentence.</target>
+               </alt-trans>
+            </trans-unit>
+         </group>
+         <group merged-trans="yes">
+            <trans-unit id="_1_ski_374">
+               <source>The German acronym v.</source>
+               <target equiv-trans="no">Niemiecki skrót v. OT oznacza górną pozycję silnika.</target>
+            </trans-unit>
+            <trans-unit id="_1_ski_383">
+               <source>OT signifies the top dead center position for an engine.</source>
+               <target equiv-trans="no"/>
+            </trans-unit>
+         </group>
+         <group>
+            <trans-unit id="_1_ski_392">
+               <source>First sentence.  Second sentence.</source>
+               <alt-trans match-quality="100%">
+                  <source>The second  sentence.</source>
+                  <seg-source>
+                     <mrk mtype="seg" mid="1">First sentence.</mrk>
+                     <mrk mtype="seg" mid="2">Second  sentence.</mrk>
+                  </seg-source>
+                  <target>
+                     <mrk mtype="seg" mid="1">Translated first sentence.</mrk>
+                     <mrk mtype="seg" mid="2">Translated second  sentence.</mrk>
+                  </target>
+               </alt-trans>
+            </trans-unit>
+            <trans-unit id="_1_ski_401">
+               <source>First  sentence.Second sentence.</source>
+               <seg-source>
+                  <mrk mtype="seg" mid="1">First sentence.</mrk>
+                  <mrk mtype="seg" mid="2">Second  sentence.</mrk>
+               </seg-source>
+               <alt-trans mid="2" match-quality="75%">
+                  <source>The second  sentence.</source>
+                  <target>The translated second  sentence.</target>
+               </alt-trans>
+            </trans-unit>
+            <trans-unit id="_1_ski_410">
+               <source>First  sentence.Second sentence.</source>
+               <seg-source>
+                  <mrk mtype="seg" mid="1">First sentence.</mrk>
+                  <mrk mtype="seg" mid="2">Second  sentence.</mrk>
+               </seg-source>
+               <target>
+                  <mrk mtype="seg" mid="1">Translated first sentence.</mrk>
+                  <mrk mtype="seg" mid="2">Translated second  sentence.</mrk>
+               </target>
+            </trans-unit>
+         </group>
+      </body>
+   </file>
+</xliff>

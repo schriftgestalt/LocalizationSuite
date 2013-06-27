@@ -1,0 +1,18 @@
+
+/* Info string shown when count of placeholders is wrong */
+"Wrong placeholder count" = "Wrong number of placeholders: expected %d, found %d";
+
+/* Info string shown when a placeholder is wrong */
+"Wrong placeholder at index" = "Wrong placeholder (number %d): expected “%@“, found “%@“";
+
+/* Info string shown when the leading whitespace is wrong */
+"Mismatching leading whitespace" = "Possible mismatch of leading whitespace: expected “%@“, found “%@“";
+
+/* Info string shown when the trailing whitespace is wrong */
+"Mismatching trailing whitespace" = "Possible mismatch of trailing whitespace: expected “%@“, found “%@“";
+
+/* Info string shown when the string ending is wrong */
+"Mismatching string ending" = "Possible mismatch of string ending: expected “%@“, found “%@“";
+
+/* Info string shown when the quoting style is wrong */
+"Mismatching quoting style" = "Possibly inappropriate quoting style: expected %@%@, found %@%@";

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>BLFileInterpreter(FileInterpreterInternal)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style>
+</head>
+<body bgcolor="#ffffff">
+<a name="top"></a><a name="//apple_ref/doc/class/BLFileInterpreter(FileInterpreterInternal)" title="BLFileInterpreter(FileInterpreterInternal)"></a><hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="BLFileInterpreter(FileInterpreterInternal)">BLFileInterpreter(FileInterpreterInternal)</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --> Methods to be used or overridden by the subclasses of BLFileInterpreter but make no sense in public usages.
+ <!-- end abstract --></p>
+<p><b>Extends&nbsp;Class:</b> <a href="../../../../Documentation/BLFileInterpreter/Classes/BLFileInterpreter_/index.html#//apple_ref/occ/cl/BLFileInterpreter" logicalPath="//apple_ref/occ/cl/BLFileInterpreter" target="_top">BLFileInterpreter</a><br><b>Declared In:</b> <a href="../../index.html" target="_top">BLFileInterpreter.h</a><br></p>
+<p></p>
+<hr>
+<br><h2>Methods</h2>
+<a name="HeaderDoc_methods"></a><dl>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter(FileInterpreterInternal)/_emitKey:value:comment:" target="doc">-_emitKey:value:comment: </a></tt></dt>
+<dd>The primitive method to be used by subclasses to emit scanned values.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter(FileInterpreterInternal)/_interpreteFile:" target="doc">-_interpreteFile: </a></tt></dt>
+<dd>The actual file interpretation happens here.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter(FileInterpreterInternal)/_setForwardsToInterpreter:" target="doc">-_setForwardsToInterpreter: </a></tt></dt>
+<dd>Notify the interpreter that is should forward it's emitted keys
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter(FileInterpreterInternal)/_emitKey:value:comment:;  name=BLFileInterpreter(FileInterpreterInternal)::_emitKey:value:comment: --><a name="//apple_ref/occ/instm/BLFileInterpreter(FileInterpreterInternal)/_emitKey:value:comment:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="_emitKey:value:comment:">_emitKey:value:comment: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->The primitive method to be used by subclasses to emit scanned values.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/_emitKey //apple_ref/occ/clm/_emitKey //apple_ref/occ/intfcm/_emitKey //apple_ref/occ/intfm/_emitKey //apple_ref/occ/func/_emitKey //apple_ref/occ/ftmplt/_emitKey //apple_ref/occ/defn/_emitKey //apple_ref/occ/macro/_emitKey" --><span class="function">_emitKey</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/value //apple_ref/occ/clm/value //apple_ref/occ/intfcm/value //apple_ref/occ/intfm/value //apple_ref/occ/func/value //apple_ref/occ/ftmplt/value //apple_ref/occ/defn/value //apple_ref/occ/macro/value" --><span class="function">value</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<span class="param">value</span> <!-- a logicalPath="//apple_ref/occ/instm/comment //apple_ref/occ/clm/comment //apple_ref/occ/intfcm/comment //apple_ref/occ/intfm/comment //apple_ref/occ/func/comment //apple_ref/occ/ftmplt/comment //apple_ref/occ/defn/comment //apple_ref/occ/macro/comment" --><span class="function">comment</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">comment</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The order in which this method will be called and in which the keys are being returned is the order in the final file object.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter(FileInterpreterInternal)/_interpreteFile:;  name=BLFileInterpreter(FileInterpreterInternal)::_interpreteFile: --><a name="//apple_ref/occ/instm/BLFileInterpreter(FileInterpreterInternal)/_interpreteFile:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="_interpreteFile:">_interpreteFile: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->The actual file interpretation happens here.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/_interpreteFile //apple_ref/occ/clm/_interpreteFile //apple_ref/occ/intfcm/_interpreteFile //apple_ref/occ/intfm/_interpreteFile //apple_ref/occ/func/_interpreteFile //apple_ref/occ/ftmplt/_interpreteFile //apple_ref/occ/defn/_interpreteFile //apple_ref/occ/macro/_interpreteFile" --><span class="function">_interpreteFile</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">path</span>;</pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->YES on success, NO on error.
+ 
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This is the primary method to be overridden by subclasses. Whenever a key/value pair is found, _emitKey:value:comment: should be called. The default implementation just throws.
+<!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter(FileInterpreterInternal)/_setForwardsToInterpreter:;  name=BLFileInterpreter(FileInterpreterInternal)::_setForwardsToInterpreter: --><a name="//apple_ref/occ/instm/BLFileInterpreter(FileInterpreterInternal)/_setForwardsToInterpreter:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="_setForwardsToInterpreter:">_setForwardsToInterpreter: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Notify the interpreter that is should forward it's emitted keys
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/_setForwardsToInterpreter //apple_ref/occ/clm/_setForwardsToInterpreter //apple_ref/occ/intfcm/_setForwardsToInterpreter //apple_ref/occ/intfm/_setForwardsToInterpreter //apple_ref/occ/func/_setForwardsToInterpreter //apple_ref/occ/ftmplt/_setForwardsToInterpreter //apple_ref/occ/defn/_setForwardsToInterpreter //apple_ref/occ/macro/_setForwardsToInterpreter" --><span class="function">_setForwardsToInterpreter</span><!-- /a -->:(<a href="../../../../Documentation/BLFileInterpreter/Classes/BLFileInterpreter_/index.html#//apple_ref/occ/cl/BLFileInterpreter" logicalPath="//apple_ref/occ/cl/BLFileInterpreter" target="_top"><span class="type">BLFileInterpreter</span></a> <span class="type">*</span>)<span class="var">aInterpreter</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This is to be used out of an interpretation session only. See class description for details about interpreter forwarding. If aInterpreter is nil, it returns to the standard behaviour.
+ <!-- end discussion --></p>
+<p></p>
+<p>Last Updated: 08.05.2009
+</p>
+</body>
+</html>

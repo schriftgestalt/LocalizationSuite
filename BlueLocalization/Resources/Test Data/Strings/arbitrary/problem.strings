@@ -1,0 +1,4 @@
+"GrowlDescriptionGoodMessageCount" = "aa";
+"GrowlNameGoodMessage" = "Good Messages (Not in Address Book)aa";
+"RemovedScriptsMessage" = "The following AppleScript files are no longer needed and have been moved to the trash:\n\n%@";
+"ErrorDeleteWords" = "Couldn’t delete the Words file.";

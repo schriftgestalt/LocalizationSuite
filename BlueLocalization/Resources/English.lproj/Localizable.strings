@@ -1,0 +1,36 @@
+
+/* Change description for objects when the reference file has changed */
+"Reference" = "Reference";
+
+/* Error Description for Bundles */
+"BLBundleObjectErrorDescription" = "%d errors";
+
+/* Change Description for Bundles */
+"BLBundleObjectChangeDescription" = "%d files changed";
+
+/* Change Description for Bundles with just a single file */
+"BLBundleObjectChangeDescription1" = "1 file changed";
+
+/* File Format Description for a classic .strings file */
+"BLStringFileObjectFileFormatClassic" = "classic .strings file";
+
+/* File Format Description for a XML .strings file */
+"BLStringFileObjectFileFormatXML" = "XML .strings file";
+
+/* File Format Description for a nib interface file */
+"BLNibFileObjectFileFormatNib" = "Nib interface file";
+
+/* File Format Description for a xib interface file */
+"BLNibFileObjectFileFormatXib" = "Xib interface file";
+
+/* Label of default button in import option sheets */
+"Import" = "Import";
+
+/* Label of default button in export option sheets */
+"Export" = "Export";
+
+/* Title of panel asking which xcode projects to import */
+"BLXcodeImportText" = "Please select the Xcode project(s) you want to import!";
+
+/* Title of panel asking which xcode projects to export */
+"BLXcodeExportText" = "Please select the Xcode project(s) you want to export into!";

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>NSDictionary(BLStringsDictionary)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style>
+</head>
+<body bgcolor="#ffffff">
+<a name="top"></a><a name="//apple_ref/doc/class/NSDictionary(BLStringsDictionary)" title="NSDictionary(BLStringsDictionary)"></a><hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="NSDictionary(BLStringsDictionary)">NSDictionary(BLStringsDictionary)</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --> An extension to import and write strings files. This includes comments and is way less error prone manner than the default AppKit version.
+ <!-- end abstract --></p>
+<p><b>Extends&nbsp;Class:</b> <!-- a logicalPath="//apple_ref/occ/cl/NSDictionary" -->NSDictionary<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">BLStringsDictionary.h</a><br></p>
+<p></p>
+<hr>
+<br><h2>Methods</h2>
+<a name="HeaderDoc_methods"></a><dl>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/NSDictionary(BLStringsDictionary)/dictionaryWithStringsAtPath:" target="doc">+dictionaryWithStringsAtPath: </a></tt></dt>
+<dd>Scans the file at path as strings file and returns it as disctionary.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/NSDictionary(BLStringsDictionary)/dictionaryWithStringsAtPath:scannedComments:scannedKeyOrder:" target="doc">+dictionaryWithStringsAtPath:scannedComments:scannedKeyOrder: </a></tt></dt>
+<dd>Scans the file at path as strings file and returns it as disctionary, also scanning comments and the key order.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/NSDictionary(BLStringsDictionary)/writeAsStringsToPath:usingEncoding:" target="doc">-writeAsStringsToPath:usingEncoding: </a></tt></dt>
+<dd>Writes the dictionary of strings to path.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/NSDictionary(BLStringsDictionary)/writeAsStringsWithComments:toPath:usingEncoding:" target="doc">-writeAsStringsWithComments:toPath:usingEncoding: </a></tt></dt>
+<dd>Writes the dictionary of strings interspersed with comments to path.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/NSDictionary(BLStringsDictionary)/writeKeysAsStrings:withComments:toPath:usingEncoding:" target="doc">-writeKeysAsStrings:withComments:toPath:usingEncoding: </a></tt></dt>
+<dd>Writes the keys from the dictionary of strings interspersed with comments to path.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NSDictionary(BLStringsDictionary)/dictionaryWithStringsAtPath:;  name=NSDictionary(BLStringsDictionary)::dictionaryWithStringsAtPath: --><a name="//apple_ref/occ/clm/NSDictionary(BLStringsDictionary)/dictionaryWithStringsAtPath:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="dictionaryWithStringsAtPath:">dictionaryWithStringsAtPath: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Scans the file at path as strings file and returns it as disctionary.
+<!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/NSDictionary //apple_ref/occ/tdef/NSDictionary //apple_ref/occ/tag/NSDictionary //apple_ref/occ/econst/NSDictionary //apple_ref/occ/struct/NSDictionary //apple_ref/occ/clconst/NSDictionary //apple_ref/occ/intf/NSDictionary" --><span class="type">NSDictionary</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/dictionaryWithStringsAtPath //apple_ref/occ/clm/dictionaryWithStringsAtPath //apple_ref/occ/intfcm/dictionaryWithStringsAtPath //apple_ref/occ/intfm/dictionaryWithStringsAtPath //apple_ref/occ/func/dictionaryWithStringsAtPath //apple_ref/occ/ftmplt/dictionaryWithStringsAtPath //apple_ref/occ/defn/dictionaryWithStringsAtPath //apple_ref/occ/macro/dictionaryWithStringsAtPath" --><span class="function">dictionaryWithStringsAtPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">path</span>;</pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->The scanned dictionary, or nil on failure.
+ 
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This just calls -dictionaryWithStringsAtPath:scannedComments:scannedKeyOrder:, passing NULL as outComments and keyOrder. See there for more details.
+<!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NSDictionary(BLStringsDictionary)/dictionaryWithStringsAtPath:scannedComments:scannedKeyOrder:;  name=NSDictionary(BLStringsDictionary)::dictionaryWithStringsAtPath:scannedComments:scannedKeyOrder: --><a name="//apple_ref/occ/clm/NSDictionary(BLStringsDictionary)/dictionaryWithStringsAtPath:scannedComments:scannedKeyOrder:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="dictionaryWithStringsAtPath:scannedComments:scannedKeyOrder:">dictionaryWithStringsAtPath:scannedComments:scannedKeyOrder: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Scans the file at path as strings file and returns it as disctionary, also scanning comments and the key order.
+<!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/NSDictionary //apple_ref/occ/tdef/NSDictionary //apple_ref/occ/tag/NSDictionary //apple_ref/occ/econst/NSDictionary //apple_ref/occ/struct/NSDictionary //apple_ref/occ/clconst/NSDictionary //apple_ref/occ/intf/NSDictionary" --><span class="type">NSDictionary</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/dictionaryWithStringsAtPath //apple_ref/occ/clm/dictionaryWithStringsAtPath //apple_ref/occ/intfcm/dictionaryWithStringsAtPath //apple_ref/occ/intfm/dictionaryWithStringsAtPath //apple_ref/occ/func/dictionaryWithStringsAtPath //apple_ref/occ/ftmplt/dictionaryWithStringsAtPath //apple_ref/occ/defn/dictionaryWithStringsAtPath //apple_ref/occ/macro/dictionaryWithStringsAtPath" --><span class="function">dictionaryWithStringsAtPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">path</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/scannedComments //apple_ref/occ/clm/scannedComments //apple_ref/occ/intfcm/scannedComments //apple_ref/occ/intfm/scannedComments //apple_ref/occ/func/scannedComments //apple_ref/occ/ftmplt/scannedComments //apple_ref/occ/defn/scannedComments //apple_ref/occ/macro/scannedComments" --><span class="function">scannedComments</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSDictionary //apple_ref/occ/tdef/NSDictionary //apple_ref/occ/tag/NSDictionary //apple_ref/occ/econst/NSDictionary //apple_ref/occ/struct/NSDictionary //apple_ref/occ/clconst/NSDictionary //apple_ref/occ/intf/NSDictionary" --><span class="type">NSDictionary</span><!-- /a --> <span class="type">*</span><span class="type">*</span>)<span class="param">outComments</span> <!-- a logicalPath="//apple_ref/occ/instm/scannedKeyOrder //apple_ref/occ/clm/scannedKeyOrder //apple_ref/occ/intfcm/scannedKeyOrder //apple_ref/occ/intfm/scannedKeyOrder //apple_ref/occ/func/scannedKeyOrder //apple_ref/occ/ftmplt/scannedKeyOrder //apple_ref/occ/defn/scannedKeyOrder //apple_ref/occ/macro/scannedKeyOrder" --><span class="function">scannedKeyOrder</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span><span class="type">*</span>)<span class="var">keyOrder</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->The scanned dictionary, or nil on failure.
+ 
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->If outComments is not NULL, a Dictionary containing all found comments will be returned. If keyOrder is not NULL, a array containing the order of the scanned keys will be included.
+<!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NSDictionary(BLStringsDictionary)/writeAsStringsToPath:usingEncoding:;  name=NSDictionary(BLStringsDictionary)::writeAsStringsToPath:usingEncoding: --><a name="//apple_ref/occ/instm/NSDictionary(BLStringsDictionary)/writeAsStringsToPath:usingEncoding:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="writeAsStringsToPath:usingEncoding:">writeAsStringsToPath:usingEncoding: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Writes the dictionary of strings to path.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/writeAsStringsToPath //apple_ref/occ/clm/writeAsStringsToPath //apple_ref/occ/intfcm/writeAsStringsToPath //apple_ref/occ/intfm/writeAsStringsToPath //apple_ref/occ/func/writeAsStringsToPath //apple_ref/occ/ftmplt/writeAsStringsToPath //apple_ref/occ/defn/writeAsStringsToPath //apple_ref/occ/macro/writeAsStringsToPath" --><span class="function">writeAsStringsToPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">path</span> <!-- a logicalPath="//apple_ref/occ/instm/usingEncoding //apple_ref/occ/clm/usingEncoding //apple_ref/occ/intfcm/usingEncoding //apple_ref/occ/intfm/usingEncoding //apple_ref/occ/func/usingEncoding //apple_ref/occ/ftmplt/usingEncoding //apple_ref/occ/defn/usingEncoding //apple_ref/occ/macro/usingEncoding" --><span class="function">usingEncoding</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSStringEncoding //apple_ref/occ/tdef/NSStringEncoding //apple_ref/occ/tag/NSStringEncoding //apple_ref/occ/econst/NSStringEncoding //apple_ref/occ/struct/NSStringEncoding //apple_ref/occ/clconst/NSStringEncoding //apple_ref/occ/intf/NSStringEncoding" --><span class="type">NSStringEncoding</span><!-- /a -->)<span class="var">encoding</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->YES on success, NO otherwise.
+ 
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The dictionary should contain string values only. The resulting file is encoded using the given encosing. This method is just a forward to -writeAsStringsWithComments:toPath:usingEncoding:, which you will have to use anyways, if you want to include comments.
+<!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NSDictionary(BLStringsDictionary)/writeAsStringsWithComments:toPath:usingEncoding:;  name=NSDictionary(BLStringsDictionary)::writeAsStringsWithComments:toPath:usingEncoding: --><a name="//apple_ref/occ/instm/NSDictionary(BLStringsDictionary)/writeAsStringsWithComments:toPath:usingEncoding:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="writeAsStringsWithComments:toPath:usingEncoding:">writeAsStringsWithComments:toPath:usingEncoding: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Writes the dictionary of strings interspersed with comments to path.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/writeAsStringsWithComments //apple_ref/occ/clm/writeAsStringsWithComments //apple_ref/occ/intfcm/writeAsStringsWithComments //apple_ref/occ/intfm/writeAsStringsWithComments //apple_ref/occ/func/writeAsStringsWithComments //apple_ref/occ/ftmplt/writeAsStringsWithComments //apple_ref/occ/defn/writeAsStringsWithComments //apple_ref/occ/macro/writeAsStringsWithComments" --><span class="function">writeAsStringsWithComments</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSDictionary //apple_ref/occ/tdef/NSDictionary //apple_ref/occ/tag/NSDictionary //apple_ref/occ/econst/NSDictionary //apple_ref/occ/struct/NSDictionary //apple_ref/occ/clconst/NSDictionary //apple_ref/occ/intf/NSDictionary" --><span class="type">NSDictionary</span><!-- /a --> <span class="type">*</span>)<span class="param">comments</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/toPath //apple_ref/occ/clm/toPath //apple_ref/occ/intfcm/toPath //apple_ref/occ/intfm/toPath //apple_ref/occ/func/toPath //apple_ref/occ/ftmplt/toPath //apple_ref/occ/defn/toPath //apple_ref/occ/macro/toPath" --><span class="function">toPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">path</span> <!-- a logicalPath="//apple_ref/occ/instm/usingEncoding //apple_ref/occ/clm/usingEncoding //apple_ref/occ/intfcm/usingEncoding //apple_ref/occ/intfm/usingEncoding //apple_ref/occ/func/usingEncoding //apple_ref/occ/ftmplt/usingEncoding //apple_ref/occ/defn/usingEncoding //apple_ref/occ/macro/usingEncoding" --><span class="function">usingEncoding</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSStringEncoding //apple_ref/occ/tdef/NSStringEncoding //apple_ref/occ/tag/NSStringEncoding //apple_ref/occ/econst/NSStringEncoding //apple_ref/occ/struct/NSStringEncoding //apple_ref/occ/clconst/NSStringEncoding //apple_ref/occ/intf/NSStringEncoding" --><span class="type">NSStringEncoding</span><!-- /a -->)<span class="var">encoding</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->YES on success, NO otherwise.
+ 
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This just calls -writeKeysAsStrings:withComments:toPath:usingEncoding:, passing [self allKeys] alphabetically sorted as keys. See there for more details.
+<!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NSDictionary(BLStringsDictionary)/writeKeysAsStrings:withComments:toPath:usingEncoding:;  name=NSDictionary(BLStringsDictionary)::writeKeysAsStrings:withComments:toPath:usingEncoding: --><a name="//apple_ref/occ/instm/NSDictionary(BLStringsDictionary)/writeKeysAsStrings:withComments:toPath:usingEncoding:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="writeKeysAsStrings:withComments:toPath:usingEncoding:">writeKeysAsStrings:withComments:toPath:usingEncoding: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Writes the keys from the dictionary of strings interspersed with comments to path.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/writeKeysAsStrings //apple_ref/occ/clm/writeKeysAsStrings //apple_ref/occ/intfcm/writeKeysAsStrings //apple_ref/occ/intfm/writeKeysAsStrings //apple_ref/occ/func/writeKeysAsStrings //apple_ref/occ/ftmplt/writeKeysAsStrings //apple_ref/occ/defn/writeKeysAsStrings //apple_ref/occ/macro/writeKeysAsStrings" --><span class="function">writeKeysAsStrings</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<span class="param">keys</span> <!-- a logicalPath="//apple_ref/occ/instm/withComments //apple_ref/occ/clm/withComments //apple_ref/occ/intfcm/withComments //apple_ref/occ/intfm/withComments //apple_ref/occ/func/withComments //apple_ref/occ/ftmplt/withComments //apple_ref/occ/defn/withComments //apple_ref/occ/macro/withComments" --><span class="function">withComments</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSDictionary //apple_ref/occ/tdef/NSDictionary //apple_ref/occ/tag/NSDictionary //apple_ref/occ/econst/NSDictionary //apple_ref/occ/struct/NSDictionary //apple_ref/occ/clconst/NSDictionary //apple_ref/occ/intf/NSDictionary" --><span class="type">NSDictionary</span><!-- /a --> <span class="type">*</span>)<span class="param">comments</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/toPath //apple_ref/occ/clm/toPath //apple_ref/occ/intfcm/toPath //apple_ref/occ/intfm/toPath //apple_ref/occ/func/toPath //apple_ref/occ/ftmplt/toPath //apple_ref/occ/defn/toPath //apple_ref/occ/macro/toPath" --><span class="function">toPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">path</span> <!-- a logicalPath="//apple_ref/occ/instm/usingEncoding //apple_ref/occ/clm/usingEncoding //apple_ref/occ/intfcm/usingEncoding //apple_ref/occ/intfm/usingEncoding //apple_ref/occ/func/usingEncoding //apple_ref/occ/ftmplt/usingEncoding //apple_ref/occ/defn/usingEncoding //apple_ref/occ/macro/usingEncoding" --><span class="function">usingEncoding</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSStringEncoding //apple_ref/occ/tdef/NSStringEncoding //apple_ref/occ/tag/NSStringEncoding //apple_ref/occ/econst/NSStringEncoding //apple_ref/occ/struct/NSStringEncoding //apple_ref/occ/clconst/NSStringEncoding //apple_ref/occ/intf/NSStringEncoding" --><span class="type">NSStringEncoding</span><!-- /a -->)<span class="var">encoding</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->YES on success, NO otherwise.
+ 
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The dictionary should contain string values only. Only keys given in keys will be written, in the order of the keys. Duplicates will not be checked. However, this can be used to retain a speciffic key order via multiple scans and reads.
+Comments are written in the standard multiline format (/\* *\/) in front of each key. The comments dictionary must have the same keys as the value dictionary, in order to assing comments to the right string.
+Various characters in both keys and values will be escaped using BLStandardStringReplacements. See there for more details.
+BLStringsFileCreator uses these methods to write a dictionary as strings file. The difference between this implementation and the one of NSString is that this one doesn't convert UniCode characters to be a hex number prefixed by \U and that comments can be added.
+If path contains directories that do not yet exist, they will be created and the file will be written inside these folders.
+<!-- end discussion --></p>
+<p></p>
+<p>Last Updated: 08.05.2009
+</p>
+</body>
+</html>

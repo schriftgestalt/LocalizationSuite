@@ -1,0 +1,391 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>BLFileInterpreter </title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style>
+</head>
+<body bgcolor="#ffffff">
+<a name="top"></a><a name="//apple_ref/doc/class/BLFileInterpreter" title="BLFileInterpreter "></a><hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="BLFileInterpreter">BLFileInterpreter </a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --> The primitive abstract superclass for all file interpretations.
+<!-- end abstract --></p>
+<p><b>Superclass:</b> <!-- a logicalPath="//apple_ref/occ/cl/NSObject" -->NSObject<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">BLFileInterpreter.h</a><br></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion --> Basically, a file interpreter is a one-shot object. You have it created, set it up and use it - afterwards it is gone. Subclasses should override the _interpreteFile: method to actually do the heavy lifting.
+<br><br>
+A technique sometimes needed is <b>interpreter forwarding</b>: If an interpreter needs to use a different one, it can just instantiate it and have it's contents forwarded. A reason for this might be that the data has only been converted to a different format, which is then to be interpreted. The procedure is simple as follows: In the overridden _interpreteFile: you should instantiate the different interpreter of the needed type and then send it a _setForwardsToInterpreter: message with self as argument. After that the others _interpreteFile: should be called directly.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<br><h2>Methods</h2>
+<a name="HeaderDoc_methods"></a><dl>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/activateOptions:" target="doc">-activateOptions: </a></tt></dt>
+<dd>Activates a set of options.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/actualPathForHashValueGeneration:" target="doc">-actualPathForHashValueGeneration: </a></tt></dt>
+<dd>Return the subpath of a path to be used for hash generation.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/autotranslateKeyObject:usingObjects:forLanguage:" target="doc">-autotranslateKeyObject:usingObjects:forLanguage: </a></tt></dt>
+<dd>Autotranslate the given key object.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/deactivateOptions:" target="doc">-deactivateOptions: </a></tt></dt>
+<dd>Deactivates a set of options.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLFileInterpreter/defaultOptions" target="doc">+defaultOptions </a></tt></dt>
+<dd>The default options for a new interpreter instance.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLFileInterpreter/filePathsFromPaths:" target="doc">+filePathsFromPaths:</a></tt></dt>
+<dd>Returns all importable file paths from the given array of paths.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/hashValueForFile:" target="doc">-hashValueForFile: </a></tt></dt>
+<dd>Calculates the hash for a given file path.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/init" target="doc">-init </a></tt></dt>
+<dd>Designated initializer for subclasses.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/interpreteFile:" target="doc">-interpreteFile: </a></tt></dt>
+<dd>Interpretes a file into a newly created file object.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/interpreteFile:intoObject:" target="doc">-interpreteFile:intoObject: </a></tt></dt>
+<dd>Interpretes a file at the given path into the given file object.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/interpreteFile:intoObject:withLanguage:" target="doc">-interpreteFile:intoObject:withLanguage: </a></tt></dt>
+<dd>Interpretes a file for a given language into a given file object.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/interpreteFileObject:inDocument:withLanguage:" target="doc">-interpreteFileObject:inDocument:withLanguage: </a></tt></dt>
+<dd>In an document context, this importes a localized version of a file object.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLFileInterpreter/interpreterForFileObject:" target="doc">+interpreterForFileObject:</a></tt></dt>
+<dd>Initializes and returns an autoreleased interpreter for interpretaion into the given file object.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLFileInterpreter/interpreterForFileType:" target="doc">+interpreterForFileType:</a></tt></dt>
+<dd>Initializes and returns an autoreleased interpreter for the given file type.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/optionIsActive:" target="doc">-optionIsActive:</a></tt></dt>
+<dd>Returns whether a given option flag is set or not.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/options" target="doc">-options </a></tt></dt>
+<dd>The options currently set for the interpreter.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLFileInterpreter/registerInterpreterClass:forFileType:" target="doc">+registerInterpreterClass:forFileType: </a></tt></dt>
+<dd>Register a subclass for a specific file type.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/setOptions:" target="doc">-setOptions:</a></tt></dt>
+<dd>Set the active options.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/willInterpreteFile:intoObject:" target="doc">-willInterpreteFile:intoObject: </a></tt></dt>
+<dd>Determines whether an import is needed or not.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileInterpreter/willInterpreteFileObject:inDocument:withLanguage:" target="doc">-willInterpreteFileObject:inDocument:withLanguage: </a></tt></dt>
+<dd>Determines whether an import is needed or not.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/activateOptions:;  name=BLFileInterpreter::activateOptions: --><a name="//apple_ref/occ/instm/BLFileInterpreter/activateOptions:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="activateOptions:">activateOptions: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Activates a set of options.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/activateOptions //apple_ref/occ/clm/activateOptions //apple_ref/occ/intfcm/activateOptions //apple_ref/occ/intfm/activateOptions //apple_ref/occ/func/activateOptions //apple_ref/occ/ftmplt/activateOptions //apple_ref/occ/defn/activateOptions //apple_ref/occ/macro/activateOptions" --><span class="function">activateOptions</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSUInteger //apple_ref/occ/tdef/NSUInteger //apple_ref/occ/tag/NSUInteger //apple_ref/occ/econst/NSUInteger //apple_ref/occ/struct/NSUInteger //apple_ref/occ/clconst/NSUInteger //apple_ref/occ/intf/NSUInteger" --><span class="type">NSUInteger</span><!-- /a -->)<span class="var">options</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This is the preferred way for users to set specific settings without overwriting the classes' default values. The options available are defined above under BLFileInterpreter options.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/actualPathForHashValueGeneration:;  name=BLFileInterpreter::actualPathForHashValueGeneration: --><a name="//apple_ref/occ/instm/BLFileInterpreter/actualPathForHashValueGeneration:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="actualPathForHashValueGeneration:">actualPathForHashValueGeneration: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Return the subpath of a path to be used for hash generation.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/actualPathForHashValueGeneration //apple_ref/occ/clm/actualPathForHashValueGeneration //apple_ref/occ/intfcm/actualPathForHashValueGeneration //apple_ref/occ/intfm/actualPathForHashValueGeneration //apple_ref/occ/func/actualPathForHashValueGeneration //apple_ref/occ/ftmplt/actualPathForHashValueGeneration //apple_ref/occ/defn/actualPathForHashValueGeneration //apple_ref/occ/macro/actualPathForHashValueGeneration" --><span class="function">actualPathForHashValueGeneration</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">path</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This allows subclasses to specify a different path for hash generation. This is especially needed if the file path is a bundle, because hash values can only be calsulated for files. The default implementation returns the given path, which should be fine for most implementations.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/autotranslateKeyObject:usingObjects:forLanguage:;  name=BLFileInterpreter::autotranslateKeyObject:usingObjects:forLanguage: --><a name="//apple_ref/occ/instm/BLFileInterpreter/autotranslateKeyObject:usingObjects:forLanguage:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="autotranslateKeyObject:usingObjects:forLanguage:">autotranslateKeyObject:usingObjects:forLanguage: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Autotranslate the given key object.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/autotranslateKeyObject //apple_ref/occ/clm/autotranslateKeyObject //apple_ref/occ/intfcm/autotranslateKeyObject //apple_ref/occ/intfm/autotranslateKeyObject //apple_ref/occ/func/autotranslateKeyObject //apple_ref/occ/ftmplt/autotranslateKeyObject //apple_ref/occ/defn/autotranslateKeyObject //apple_ref/occ/macro/autotranslateKeyObject" --><span class="function">autotranslateKeyObject</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/BLKeyObject //apple_ref/occ/tdef/BLKeyObject //apple_ref/occ/tag/BLKeyObject //apple_ref/occ/econst/BLKeyObject //apple_ref/occ/struct/BLKeyObject //apple_ref/occ/clconst/BLKeyObject //apple_ref/occ/intf/BLKeyObject" --><span class="type">BLKeyObject</span><!-- /a --> <span class="type">*</span>)<span class="param">keyObject</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/usingObjects //apple_ref/occ/clm/usingObjects //apple_ref/occ/intfcm/usingObjects //apple_ref/occ/intfm/usingObjects //apple_ref/occ/func/usingObjects //apple_ref/occ/ftmplt/usingObjects //apple_ref/occ/defn/usingObjects //apple_ref/occ/macro/usingObjects" --><span class="function">usingObjects</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<span class="param">objects</span> <!-- a logicalPath="//apple_ref/occ/instm/forLanguage //apple_ref/occ/clm/forLanguage //apple_ref/occ/intfcm/forLanguage //apple_ref/occ/intfm/forLanguage //apple_ref/occ/func/forLanguage //apple_ref/occ/ftmplt/forLanguage //apple_ref/occ/defn/forLanguage //apple_ref/occ/macro/forLanguage" --><span class="function">forLanguage</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">language</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->By running through the given objects, which must be an array of BLKeyObjects, the key's value for language is compared. If a exact match is found, all localized values that keyObject has not value for will be copied. The result might be a key object merged from multiple key objects. This method is mainly for internal use.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/deactivateOptions:;  name=BLFileInterpreter::deactivateOptions: --><a name="//apple_ref/occ/instm/BLFileInterpreter/deactivateOptions:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="deactivateOptions:">deactivateOptions: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Deactivates a set of options.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/deactivateOptions //apple_ref/occ/clm/deactivateOptions //apple_ref/occ/intfcm/deactivateOptions //apple_ref/occ/intfm/deactivateOptions //apple_ref/occ/func/deactivateOptions //apple_ref/occ/ftmplt/deactivateOptions //apple_ref/occ/defn/deactivateOptions //apple_ref/occ/macro/deactivateOptions" --><span class="function">deactivateOptions</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSUInteger //apple_ref/occ/tdef/NSUInteger //apple_ref/occ/tag/NSUInteger //apple_ref/occ/econst/NSUInteger //apple_ref/occ/struct/NSUInteger //apple_ref/occ/clconst/NSUInteger //apple_ref/occ/intf/NSUInteger" --><span class="type">NSUInteger</span><!-- /a -->)<span class="var">options</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This is the preferred way for users to set specific settings without overwriting the classes' default values. The options available are defined above under BLFileInterpreter options.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLFileInterpreter/defaultOptions;  name=BLFileInterpreter::defaultOptions --><a name="//apple_ref/occ/clm/BLFileInterpreter/defaultOptions"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="defaultOptions">defaultOptions </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->The default options for a new interpreter instance.
+<!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/NSUInteger //apple_ref/occ/tdef/NSUInteger //apple_ref/occ/tag/NSUInteger //apple_ref/occ/econst/NSUInteger //apple_ref/occ/struct/NSUInteger //apple_ref/occ/clconst/NSUInteger //apple_ref/occ/intf/NSUInteger" --><span class="type">NSUInteger</span><!-- /a -->)<span class="var">defaultOptions</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->Use this method to override the options for newly instanciated interpreters, which are by default BLFileInterpreterNoOptions.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLFileInterpreter/filePathsFromPaths:;  name=BLFileInterpreter::filePathsFromPaths: --><a name="//apple_ref/occ/clm/BLFileInterpreter/filePathsFromPaths:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="filePathsFromPaths:">filePathsFromPaths:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns all importable file paths from the given array of paths.
+ <!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/filePathsFromPaths //apple_ref/occ/clm/filePathsFromPaths //apple_ref/occ/intfcm/filePathsFromPaths //apple_ref/occ/intfm/filePathsFromPaths //apple_ref/occ/func/filePathsFromPaths //apple_ref/occ/ftmplt/filePathsFromPaths //apple_ref/occ/defn/filePathsFromPaths //apple_ref/occ/macro/filePathsFromPaths" --><span class="function">filePathsFromPaths</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<span class="var">paths</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/hashValueForFile:;  name=BLFileInterpreter::hashValueForFile: --><a name="//apple_ref/occ/instm/BLFileInterpreter/hashValueForFile:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="hashValueForFile:">hashValueForFile: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Calculates the hash for a given file path.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/hashValueForFile //apple_ref/occ/clm/hashValueForFile //apple_ref/occ/intfcm/hashValueForFile //apple_ref/occ/intfm/hashValueForFile //apple_ref/occ/func/hashValueForFile //apple_ref/occ/ftmplt/hashValueForFile //apple_ref/occ/defn/hashValueForFile //apple_ref/occ/macro/hashValueForFile" --><span class="function">hashValueForFile</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">path</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The result should be a string that always changes if the contents of a file change. The change date should be ignored, as only content changes should be relevant. Default uses the MD5 hash algorithm to generate the hash.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/init;  name=BLFileInterpreter::init --><a name="//apple_ref/occ/instm/BLFileInterpreter/init"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="init">init </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Designated initializer for subclasses.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<span class="var">init</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->Subclasses should override this if they need to make changes other than to the default set of options, e.g. if you need some internal structure.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/interpreteFile:;  name=BLFileInterpreter::interpreteFile: --><a name="//apple_ref/occ/instm/BLFileInterpreter/interpreteFile:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="interpreteFile:">interpreteFile: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Interpretes a file into a newly created file object.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<a href="../../../../Documentation/BLFileObject/Classes/BLFileObject_/index.html#//apple_ref/occ/cl/BLFileObject" logicalPath="//apple_ref/occ/cl/BLFileObject" target="_top"><span class="type">BLFileObject</span></a> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/interpreteFile //apple_ref/occ/clm/interpreteFile //apple_ref/occ/intfcm/interpreteFile //apple_ref/occ/intfm/interpreteFile //apple_ref/occ/func/interpreteFile //apple_ref/occ/ftmplt/interpreteFile //apple_ref/occ/defn/interpreteFile //apple_ref/occ/macro/interpreteFile" --><span class="function">interpreteFile</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">path</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->A file object of the right type with the scanned contents or nil, if an error occurred.
+ 
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->As most simple use, this method scans the file's path for a language folder, creates an according file object and scans the contents of the file to that file object, which is then returned.
+<!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/interpreteFile:intoObject:;  name=BLFileInterpreter::interpreteFile:intoObject: --><a name="//apple_ref/occ/instm/BLFileInterpreter/interpreteFile:intoObject:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="interpreteFile:intoObject:">interpreteFile:intoObject: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Interpretes a file at the given path into the given file object.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/interpreteFile //apple_ref/occ/clm/interpreteFile //apple_ref/occ/intfcm/interpreteFile //apple_ref/occ/intfm/interpreteFile //apple_ref/occ/func/interpreteFile //apple_ref/occ/ftmplt/interpreteFile //apple_ref/occ/defn/interpreteFile //apple_ref/occ/macro/interpreteFile" --><span class="function">interpreteFile</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">path</span> <!-- a logicalPath="//apple_ref/occ/instm/intoObject //apple_ref/occ/clm/intoObject //apple_ref/occ/intfcm/intoObject //apple_ref/occ/intfm/intoObject //apple_ref/occ/func/intoObject //apple_ref/occ/ftmplt/intoObject //apple_ref/occ/defn/intoObject //apple_ref/occ/macro/intoObject" --><span class="function">intoObject</span><!-- /a -->:(<a href="../../../../Documentation/BLFileObject/Classes/BLFileObject_/index.html#//apple_ref/occ/cl/BLFileObject" logicalPath="//apple_ref/occ/cl/BLFileObject" target="_top"><span class="type">BLFileObject</span></a> <span class="type">*</span>)<span class="var">object</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->YES if the file was imported, NO if no import is required or an error happened.
+ 
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The path is scanned for an .lproj folder and it's language is used for interpretation. However, if no lanuage is found nothing is imported.
+<!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/interpreteFile:intoObject:withLanguage:;  name=BLFileInterpreter::interpreteFile:intoObject:withLanguage: --><a name="//apple_ref/occ/instm/BLFileInterpreter/interpreteFile:intoObject:withLanguage:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="interpreteFile:intoObject:withLanguage:">interpreteFile:intoObject:withLanguage: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Interpretes a file for a given language into a given file object.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/interpreteFile //apple_ref/occ/clm/interpreteFile //apple_ref/occ/intfcm/interpreteFile //apple_ref/occ/intfm/interpreteFile //apple_ref/occ/func/interpreteFile //apple_ref/occ/ftmplt/interpreteFile //apple_ref/occ/defn/interpreteFile //apple_ref/occ/macro/interpreteFile" --><span class="function">interpreteFile</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">path</span> <!-- a logicalPath="//apple_ref/occ/instm/intoObject //apple_ref/occ/clm/intoObject //apple_ref/occ/intfcm/intoObject //apple_ref/occ/intfm/intoObject //apple_ref/occ/func/intoObject //apple_ref/occ/ftmplt/intoObject //apple_ref/occ/defn/intoObject //apple_ref/occ/macro/intoObject" --><span class="function">intoObject</span><!-- /a -->:(<a href="../../../../Documentation/BLFileObject/Classes/BLFileObject_/index.html#//apple_ref/occ/cl/BLFileObject" logicalPath="//apple_ref/occ/cl/BLFileObject" target="_top"><span class="type">BLFileObject</span></a> <span class="type">*</span>)<span class="param">object</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/withLanguage //apple_ref/occ/clm/withLanguage //apple_ref/occ/intfcm/withLanguage //apple_ref/occ/intfm/withLanguage //apple_ref/occ/func/withLanguage //apple_ref/occ/ftmplt/withLanguage //apple_ref/occ/defn/withLanguage //apple_ref/occ/macro/withLanguage" --><span class="function">withLanguage</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">language</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This method first checks whether the file will be imported and then sets up the import environment, calling _interpreteFile: in the subclass'es implementation. This is the central method that is called by the methods above and might be an major entry point for external callers. However, it should not be overridden by subclassers as a lot of setup and teardown happens here. _interpreteFile: is the way to do this. If you need to internally use a different interpreter, see the class description on how to do interpreter forwarding.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/interpreteFileObject:inDocument:withLanguage:;  name=BLFileInterpreter::interpreteFileObject:inDocument:withLanguage: --><a name="//apple_ref/occ/instm/BLFileInterpreter/interpreteFileObject:inDocument:withLanguage:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="interpreteFileObject:inDocument:withLanguage:">interpreteFileObject:inDocument:withLanguage: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->In an document context, this importes a localized version of a file object.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/interpreteFileObject //apple_ref/occ/clm/interpreteFileObject //apple_ref/occ/intfcm/interpreteFileObject //apple_ref/occ/intfm/interpreteFileObject //apple_ref/occ/func/interpreteFileObject //apple_ref/occ/ftmplt/interpreteFileObject //apple_ref/occ/defn/interpreteFileObject //apple_ref/occ/macro/interpreteFileObject" --><span class="function">interpreteFileObject</span><!-- /a -->:(<a href="../../../../Documentation/BLFileObject/Classes/BLFileObject_/index.html#//apple_ref/occ/cl/BLFileObject" logicalPath="//apple_ref/occ/cl/BLFileObject" target="_top"><span class="type">BLFileObject</span></a> <span class="type">*</span>)<span class="param">object</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/inDocument //apple_ref/occ/clm/inDocument //apple_ref/occ/intfcm/inDocument //apple_ref/occ/intfm/inDocument //apple_ref/occ/func/inDocument //apple_ref/occ/ftmplt/inDocument //apple_ref/occ/defn/inDocument //apple_ref/occ/macro/inDocument" --><span class="function">inDocument</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSDocument //apple_ref/occ/tdef/NSDocument //apple_ref/occ/tag/NSDocument //apple_ref/occ/econst/NSDocument //apple_ref/occ/struct/NSDocument //apple_ref/occ/clconst/NSDocument //apple_ref/occ/intf/NSDocument" --><span class="type">NSDocument</span><!-- /a --> &lt;<span class="param">BLDocumentProtocol</span>&gt; <span class="type">*</span>)<span class="param">document</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/withLanguage //apple_ref/occ/clm/withLanguage //apple_ref/occ/intfcm/withLanguage //apple_ref/occ/intfm/withLanguage //apple_ref/occ/func/withLanguage //apple_ref/occ/ftmplt/withLanguage //apple_ref/occ/defn/withLanguage //apple_ref/occ/macro/withLanguage" --><span class="function">withLanguage</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">language</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->YES if the file was imported, NO if no import is required or an error happened.
+ 
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The documents path creator is consulted for the full path of the given file object, then this method forwards to interpreteFile:intoObject:withLanguage:.
+<!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLFileInterpreter/interpreterForFileObject:;  name=BLFileInterpreter::interpreterForFileObject: --><a name="//apple_ref/occ/clm/BLFileInterpreter/interpreterForFileObject:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="interpreterForFileObject:">interpreterForFileObject:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Initializes and returns an autoreleased interpreter for interpretaion into the given file object.
+ <!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/interpreterForFileObject //apple_ref/occ/clm/interpreterForFileObject //apple_ref/occ/intfcm/interpreterForFileObject //apple_ref/occ/intfm/interpreterForFileObject //apple_ref/occ/func/interpreterForFileObject //apple_ref/occ/ftmplt/interpreterForFileObject //apple_ref/occ/defn/interpreterForFileObject //apple_ref/occ/macro/interpreterForFileObject" --><span class="function">interpreterForFileObject</span><!-- /a -->:(<a href="../../../../Documentation/BLFileObject/Classes/BLFileObject_/index.html#//apple_ref/occ/cl/BLFileObject" logicalPath="//apple_ref/occ/cl/BLFileObject" target="_top"><span class="type">BLFileObject</span></a> <span class="type">*</span>)<span class="var">object</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLFileInterpreter/interpreterForFileType:;  name=BLFileInterpreter::interpreterForFileType: --><a name="//apple_ref/occ/clm/BLFileInterpreter/interpreterForFileType:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="interpreterForFileType:">interpreterForFileType:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Initializes and returns an autoreleased interpreter for the given file type.
+ <!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/interpreterForFileType //apple_ref/occ/clm/interpreterForFileType //apple_ref/occ/intfcm/interpreterForFileType //apple_ref/occ/intfm/interpreterForFileType //apple_ref/occ/func/interpreterForFileType //apple_ref/occ/ftmplt/interpreterForFileType //apple_ref/occ/defn/interpreterForFileType //apple_ref/occ/macro/interpreterForFileType" --><span class="function">interpreterForFileType</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">extension</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/optionIsActive:;  name=BLFileInterpreter::optionIsActive: --><a name="//apple_ref/occ/instm/BLFileInterpreter/optionIsActive:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="optionIsActive:">optionIsActive:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns whether a given option flag is set or not.
+ <!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/optionIsActive //apple_ref/occ/clm/optionIsActive //apple_ref/occ/intfcm/optionIsActive //apple_ref/occ/intfm/optionIsActive //apple_ref/occ/func/optionIsActive //apple_ref/occ/ftmplt/optionIsActive //apple_ref/occ/defn/optionIsActive //apple_ref/occ/macro/optionIsActive" --><span class="function">optionIsActive</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSUInteger //apple_ref/occ/tdef/NSUInteger //apple_ref/occ/tag/NSUInteger //apple_ref/occ/econst/NSUInteger //apple_ref/occ/struct/NSUInteger //apple_ref/occ/clconst/NSUInteger //apple_ref/occ/intf/NSUInteger" --><span class="type">NSUInteger</span><!-- /a -->)<span class="var">option</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/options;  name=BLFileInterpreter::options --><a name="//apple_ref/occ/instm/BLFileInterpreter/options"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="options">options </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->The options currently set for the interpreter.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSUInteger //apple_ref/occ/tdef/NSUInteger //apple_ref/occ/tag/NSUInteger //apple_ref/occ/econst/NSUInteger //apple_ref/occ/struct/NSUInteger //apple_ref/occ/clconst/NSUInteger //apple_ref/occ/intf/NSUInteger" --><span class="type">NSUInteger</span><!-- /a -->)<span class="var">options</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This is an logical or of contants defined above under BLFileInterpreter options.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLFileInterpreter/registerInterpreterClass:forFileType:;  name=BLFileInterpreter::registerInterpreterClass:forFileType: --><a name="//apple_ref/occ/clm/BLFileInterpreter/registerInterpreterClass:forFileType:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="registerInterpreterClass:forFileType:">registerInterpreterClass:forFileType: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Register a subclass for a specific file type.
+<!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/registerInterpreterClass //apple_ref/occ/clm/registerInterpreterClass //apple_ref/occ/intfcm/registerInterpreterClass //apple_ref/occ/intfm/registerInterpreterClass //apple_ref/occ/func/registerInterpreterClass //apple_ref/occ/ftmplt/registerInterpreterClass //apple_ref/occ/defn/registerInterpreterClass //apple_ref/occ/macro/registerInterpreterClass" --><span class="function">registerInterpreterClass</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/Class //apple_ref/occ/tdef/Class //apple_ref/occ/tag/Class //apple_ref/occ/econst/Class //apple_ref/occ/struct/Class //apple_ref/occ/clconst/Class //apple_ref/occ/intf/Class" --><span class="type">Class</span><!-- /a -->)<span class="param">interpreterClass</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/forFileType //apple_ref/occ/clm/forFileType //apple_ref/occ/intfcm/forFileType //apple_ref/occ/intfm/forFileType //apple_ref/occ/func/forFileType //apple_ref/occ/ftmplt/forFileType //apple_ref/occ/defn/forFileType //apple_ref/occ/macro/forFileType" --><span class="function">forFileType</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">extension</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The given class must be a subclass of BLFileInterpreter, otherwise a exception will be thrown. If a extesion is to be registered twice, an exception is thrown as well.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/setOptions:;  name=BLFileInterpreter::setOptions: --><a name="//apple_ref/occ/instm/BLFileInterpreter/setOptions:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="setOptions:">setOptions:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Set the active options.
+ <!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setOptions //apple_ref/occ/clm/setOptions //apple_ref/occ/intfcm/setOptions //apple_ref/occ/intfm/setOptions //apple_ref/occ/func/setOptions //apple_ref/occ/ftmplt/setOptions //apple_ref/occ/defn/setOptions //apple_ref/occ/macro/setOptions" --><span class="function">setOptions</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSUInteger //apple_ref/occ/tdef/NSUInteger //apple_ref/occ/tag/NSUInteger //apple_ref/occ/econst/NSUInteger //apple_ref/occ/struct/NSUInteger //apple_ref/occ/clconst/NSUInteger //apple_ref/occ/intf/NSUInteger" --><span class="type">NSUInteger</span><!-- /a -->)<span class="var">options</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/willInterpreteFile:intoObject:;  name=BLFileInterpreter::willInterpreteFile:intoObject: --><a name="//apple_ref/occ/instm/BLFileInterpreter/willInterpreteFile:intoObject:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="willInterpreteFile:intoObject:">willInterpreteFile:intoObject: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Determines whether an import is needed or not.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/willInterpreteFile //apple_ref/occ/clm/willInterpreteFile //apple_ref/occ/intfcm/willInterpreteFile //apple_ref/occ/intfm/willInterpreteFile //apple_ref/occ/func/willInterpreteFile //apple_ref/occ/ftmplt/willInterpreteFile //apple_ref/occ/defn/willInterpreteFile //apple_ref/occ/macro/willInterpreteFile" --><span class="function">willInterpreteFile</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">path</span> <!-- a logicalPath="//apple_ref/occ/instm/intoObject //apple_ref/occ/clm/intoObject //apple_ref/occ/intfcm/intoObject //apple_ref/occ/intfm/intoObject //apple_ref/occ/func/intoObject //apple_ref/occ/ftmplt/intoObject //apple_ref/occ/defn/intoObject //apple_ref/occ/macro/intoObject" --><span class="function">intoObject</span><!-- /a -->:(<a href="../../../../Documentation/BLFileObject/Classes/BLFileObject_/index.html#//apple_ref/occ/cl/BLFileObject" logicalPath="//apple_ref/occ/cl/BLFileObject" target="_top"><span class="type">BLFileObject</span></a> <span class="type">*</span>)<span class="var">object</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->YES if the file will be imported, NO if an import call will have no change.
+ 
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The default implementation compares the change date with the last import and also checks whether the file hash, which is computed using hashValueForFile:, has changed. If a date and a hash change is detected, YES is returned, NO otherwise.
+<!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileInterpreter/willInterpreteFileObject:inDocument:withLanguage:;  name=BLFileInterpreter::willInterpreteFileObject:inDocument:withLanguage: --><a name="//apple_ref/occ/instm/BLFileInterpreter/willInterpreteFileObject:inDocument:withLanguage:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="willInterpreteFileObject:inDocument:withLanguage:">willInterpreteFileObject:inDocument:withLanguage: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Determines whether an import is needed or not.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/willInterpreteFileObject //apple_ref/occ/clm/willInterpreteFileObject //apple_ref/occ/intfcm/willInterpreteFileObject //apple_ref/occ/intfm/willInterpreteFileObject //apple_ref/occ/func/willInterpreteFileObject //apple_ref/occ/ftmplt/willInterpreteFileObject //apple_ref/occ/defn/willInterpreteFileObject //apple_ref/occ/macro/willInterpreteFileObject" --><span class="function">willInterpreteFileObject</span><!-- /a -->:(<a href="../../../../Documentation/BLFileObject/Classes/BLFileObject_/index.html#//apple_ref/occ/cl/BLFileObject" logicalPath="//apple_ref/occ/cl/BLFileObject" target="_top"><span class="type">BLFileObject</span></a> <span class="type">*</span>)<span class="param">object</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/inDocument //apple_ref/occ/clm/inDocument //apple_ref/occ/intfcm/inDocument //apple_ref/occ/intfm/inDocument //apple_ref/occ/func/inDocument //apple_ref/occ/ftmplt/inDocument //apple_ref/occ/defn/inDocument //apple_ref/occ/macro/inDocument" --><span class="function">inDocument</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSDocument //apple_ref/occ/tdef/NSDocument //apple_ref/occ/tag/NSDocument //apple_ref/occ/econst/NSDocument //apple_ref/occ/struct/NSDocument //apple_ref/occ/clconst/NSDocument //apple_ref/occ/intf/NSDocument" --><span class="type">NSDocument</span><!-- /a --> &lt;<span class="param">BLDocumentProtocol</span>&gt; <span class="type">*</span>)<span class="param">document</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/withLanguage //apple_ref/occ/clm/withLanguage //apple_ref/occ/intfcm/withLanguage //apple_ref/occ/intfm/withLanguage //apple_ref/occ/func/withLanguage //apple_ref/occ/ftmplt/withLanguage //apple_ref/occ/defn/withLanguage //apple_ref/occ/macro/withLanguage" --><span class="function">withLanguage</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">language</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->As a convenience method, this consults the document's path creator and then returns the result of willInterpreteFile:intoObject:. 
+ <!-- end discussion --></p>
+<p></p>
+<p>Last Updated: 08.05.2009
+</p>
+</body>
+</html>

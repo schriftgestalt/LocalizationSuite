@@ -1,0 +1,1951 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		500C5819140FB36600DD5F0E /* BLXcodeImportUpdateStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 500C5817140FB36600DD5F0E /* BLXcodeImportUpdateStep.h */; };
+		500C581A140FB36600DD5F0E /* BLXcodeImportUpdateStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C5818140FB36600DD5F0E /* BLXcodeImportUpdateStep.m */; };
+		5010B76B129C8D6E0044A488 /* BLXcodeExportUpdateStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 5010B769129C8D6E0044A488 /* BLXcodeExportUpdateStep.h */; };
+		5010B76C129C8D6E0044A488 /* BLXcodeExportUpdateStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 5010B76A129C8D6E0044A488 /* BLXcodeExportUpdateStep.m */; };
+		5014B9920FB3362200DC2EC3 /* BLObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5014B9900FB3362200DC2EC3 /* BLObjectProxy.m */; };
+		5014B9930FB3362200DC2EC3 /* BLObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 5014B9910FB3362200DC2EC3 /* BLObjectProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5015EA880FF1A21600239775 /* BLStringsExporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C247DA0F979F1B003B3522 /* BLStringsExporter.xib */; };
+		502148FF101605F900A8180B /* BLXcodeExporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 502148FD101605F900A8180B /* BLXcodeExporter.xib */; };
+		5024700D113002D3001DA94B /* BLDictionaryExporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5024700B113002D3001DA94B /* BLDictionaryExporter.xib */; };
+		5024701411300414001DA94B /* BLDictionaryExporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5024701211300414001DA94B /* BLDictionaryExporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5024701511300414001DA94B /* BLDictionaryExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5024701311300414001DA94B /* BLDictionaryExporter.m */; };
+		5024F8F40FBB160600E6097F /* BLStringComparison.h in Headers */ = {isa = PBXBuildFile; fileRef = 5024F8F20FBB160600E6097F /* BLStringComparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5024F8F50FBB160600E6097F /* BLStringComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 5024F8F30FBB160600E6097F /* BLStringComparison.m */; };
+		503F87D214068848000EA4AC /* BLDefaultPlaceholders.plist in Resources */ = {isa = PBXBuildFile; fileRef = 503F87D114068848000EA4AC /* BLDefaultPlaceholders.plist */; };
+		5048BF2D1279D3D0006FFAC2 /* BLDatabaseDocumentPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 5048BF2C1279D3D0006FFAC2 /* BLDatabaseDocumentPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5048BF65127A1D98006FFAC2 /* BLDocumentPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 5048BF63127A1D98006FFAC2 /* BLDocumentPreferences.h */; };
+		5048BF66127A1D98006FFAC2 /* BLDocumentPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5048BF64127A1D98006FFAC2 /* BLDocumentPreferences.m */; };
+		5054D2C91404D04900434EAC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5054D2C81404D04900434EAC /* SenTestingKit.framework */; };
+		5054D2CA1404D04900434EAC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		5054D2DE1404D1E100434EAC /* ObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247AB0F979D7D003B3522 /* ObjectTest.m */; };
+		5054D2E01404D1E100434EAC /* ObjectProxyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5014B98D0FB3360300DC2EC3 /* ObjectProxyTest.m */; };
+		5054D2E21404D1E100434EAC /* ObjectExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BB648810B5B62C00A1AD4C /* ObjectExtensionsTest.m */; };
+		5054D2E41404D1E100434EAC /* FileObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CC9B20115CE3D200AFC588 /* FileObjectTest.m */; };
+		5054D2E61404D1E100434EAC /* KeyObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5098629610D1743900614FFE /* KeyObjectTest.m */; };
+		5054D2E81404D1E100434EAC /* SegmentedKeyObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B64F73112C6A3A001CDB35 /* SegmentedKeyObjectTest.m */; };
+		5054D2EA1404D1E100434EAC /* DocumentPreferencesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5048BF91127A3323006FFAC2 /* DocumentPreferencesTest.m */; };
+		5054D2EC1404D1E100434EAC /* DocumentCompressionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5006929912804F3500470F3D /* DocumentCompressionTest.m */; };
+		5054D2EE1404D1E100434EAC /* FileTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EF0BD0114EB316002DBB02 /* FileTest.m */; };
+		5054D2F01404D1E100434EAC /* FileInterpreterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BF2D4A0F99438100942BC0 /* FileInterpreterTest.m */; };
+		5054D2F21404D1E100434EAC /* StringsFileInterpreterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247A70F979D7D003B3522 /* StringsFileInterpreterTest.m */; };
+		5054D2F41404D1E100434EAC /* NibFileInterpreterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F03A970FA5B73900FDB765 /* NibFileInterpreterTest.m */; };
+		5054D2F61404D1E100434EAC /* PlistFileInterpreterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F03B200FA5BF3700FDB765 /* PlistFileInterpreterTest.m */; };
+		5054D2F81404D1E100434EAC /* StringsFileCreatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50244FFB1095B911000AF365 /* StringsFileCreatorTest.m */; };
+		5054D2FA1404D1E100434EAC /* NibFileCreatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EF0E0F1150F4C7002DBB02 /* NibFileCreatorTest.m */; };
+		5054D2FC1404D1E100434EAC /* StringsImporterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 509860C510CFE56800614FFE /* StringsImporterTest.m */; };
+		5054D2FE1404D1E100434EAC /* LanguageTranslatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 506E80FF1057AAF2005BAB74 /* LanguageTranslatorTest.m */; };
+		5054D3001404D1E100434EAC /* ProcessLogTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5064FCCA0FC13EBE00DF3069 /* ProcessLogTest.m */; };
+		5054D3021404D1E100434EAC /* XcodeProjectParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BBBE400FFC06760000E48E /* XcodeProjectParserTest.m */; };
+		5054D3041404D1E100434EAC /* XcodeProjectModificationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 509736190FFE4960001DBF72 /* XcodeProjectModificationTest.m */; };
+		5054D3061404D1E100434EAC /* XcodeProjectLocalizationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C1D5CA1010EDC300C94293 /* XcodeProjectLocalizationTest.m */; };
+		5054D3081404D1E100434EAC /* TMXIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B1AA3111076DE100551CA7 /* TMXIntegrationTest.m */; };
+		5054D30A1404D1E100434EAC /* XLIFFIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B1AE8B1109DB6700551CA7 /* XLIFFIntegrationTest.m */; };
+		5054D30C1404D1E100434EAC /* AppleGlotIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 508C331D110DC29400EA6CAD /* AppleGlotIntegrationTest.m */; };
+		5054D30E1404D1E100434EAC /* StringsDictionaryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247C20F979DAB003B3522 /* StringsDictionaryTest.m */; };
+		5054D3101404D1E100434EAC /* StringSegmentationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B64E9D112C0E6D001CDB35 /* StringSegmentationTest.m */; };
+		5054D3111404D1F000434EAC /* Test Data in Resources */ = {isa = PBXBuildFile; fileRef = 50C2481D0F979F8C003B3522 /* Test Data */; };
+		5054D3121404D20A00434EAC /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5014BB0C0FB49C6600DC2EC3 /* OCMock.framework */; };
+		5054D3131404D20A00434EAC /* hamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5014BB5A0FB4A3CC00DC2EC3 /* hamcrest.framework */; };
+		5054D3141404D24D00434EAC /* BlueLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* BlueLocalization.framework */; };
+		5055576D0FB4E20F0008BE20 /* BLLocalizerExportStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 5055576B0FB4E20F0008BE20 /* BLLocalizerExportStep.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5055576E0FB4E20F0008BE20 /* BLLocalizerExportStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055576C0FB4E20F0008BE20 /* BLLocalizerExportStep.m */; };
+		505557790FB4F8B40008BE20 /* BLGenericProcessStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 505557770FB4F8B40008BE20 /* BLGenericProcessStep.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5055577A0FB4F8B40008BE20 /* BLGenericProcessStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 505557780FB4F8B40008BE20 /* BLGenericProcessStep.m */; };
+		505558EA0FB521910008BE20 /* BLLocalizerImportStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 505558E80FB521910008BE20 /* BLLocalizerImportStep.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		505558EB0FB521910008BE20 /* BLLocalizerImportStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 505558E90FB521910008BE20 /* BLLocalizerImportStep.m */; };
+		50597F5D0FCE91E0001275A5 /* BLLocalizerDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 50597F5B0FCE91E0001275A5 /* BLLocalizerDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50597F5E0FCE91E0001275A5 /* BLLocalizerDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 50597F5C0FCE91E0001275A5 /* BLLocalizerDocument.m */; };
+		5064FC140FBDA50100DF3069 /* BLProcessLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 5064FC120FBDA50100DF3069 /* BLProcessLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5064FC150FBDA50100DF3069 /* BLProcessLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5064FC130FBDA50100DF3069 /* BLProcessLog.m */; };
+		507378CE1406752E00CC54C4 /* TXTFileCreatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 507378CD1406752E00CC54C4 /* TXTFileCreatorTest.m */; };
+		507981F1110A105300CB5D70 /* BLXLIFFExporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 507981EF110A105300CB5D70 /* BLXLIFFExporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		507981F2110A105300CB5D70 /* BLXLIFFExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 507981F0110A105300CB5D70 /* BLXLIFFExporter.m */; };
+		507981F6110A142F00CB5D70 /* BLXLIFFExporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 507981F4110A142F00CB5D70 /* BLXLIFFExporter.xib */; };
+		50798259110A229000CB5D70 /* BLXLIFFImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50798257110A229000CB5D70 /* BLXLIFFImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5079825A110A229000CB5D70 /* BLXLIFFImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50798258110A229000CB5D70 /* BLXLIFFImporter.m */; };
+		507F05B71404E3A00008D824 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		507F05D91404E46C0008D824 /* OCMock.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5014BB0C0FB49C6600DC2EC3 /* OCMock.framework */; };
+		507F05DA1404E46C0008D824 /* hamcrest.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5014BB5A0FB4A3CC00DC2EC3 /* hamcrest.framework */; };
+		507F05DB1404E46C0008D824 /* BlueLocalization.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* BlueLocalization.framework */; };
+		507F05DD1404E6750008D824 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247AF0F979D7D003B3522 /* main.m */; };
+		508C3243110BB99B00EA6CAD /* BLFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 508C3241110BB99B00EA6CAD /* BLFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		508C3244110BB99B00EA6CAD /* BLFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 508C3242110BB99B00EA6CAD /* BLFile.m */; };
+		508C3246110BB9AD00EA6CAD /* BLFileInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 508C3245110BB9AD00EA6CAD /* BLFileInternal.h */; };
+		508C3278110BD07600EA6CAD /* BLPropertyListSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 508C3277110BD07600EA6CAD /* BLPropertyListSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		508C32C9110BF3A900EA6CAD /* BLDictionaryDocumentActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 508C32C7110BF3A900EA6CAD /* BLDictionaryDocumentActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		508C32CA110BF3A900EA6CAD /* BLDictionaryDocumentActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 508C32C8110BF3A900EA6CAD /* BLDictionaryDocumentActions.m */; };
+		508C331A110C114A00EA6CAD /* BLAppleGlotDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 508C3318110C114A00EA6CAD /* BLAppleGlotDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		508C331B110C114A00EA6CAD /* BLAppleGlotDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 508C3319110C114A00EA6CAD /* BLAppleGlotDocument.m */; };
+		508C333A110DC76600EA6CAD /* BLDocumentProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 508C3339110DC76600EA6CAD /* BLDocumentProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		508D0F9911359EDE00D50A2B /* BLTMXExporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 508D0F9711359EDE00D50A2B /* BLTMXExporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		508D0F9A11359EDE00D50A2B /* BLTMXExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 508D0F9811359EDE00D50A2B /* BLTMXExporter.m */; };
+		508D0FA411359F8C00D50A2B /* BLTMXExporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508D0FA211359F8C00D50A2B /* BLTMXExporter.xib */; };
+		50955159119496C0000FFC58 /* BLDocumentFileWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 50955157119496C0000FFC58 /* BLDocumentFileWrapper.h */; };
+		5095515A119496C0000FFC58 /* BLDocumentFileWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50955158119496C0000FFC58 /* BLDocumentFileWrapper.m */; };
+		5095539A1194ABF1000FFC58 /* BLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 509553981194ABF1000FFC58 /* BLDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5095539B1194ABF1000FFC58 /* BLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 509553991194ABF1000FFC58 /* BLDocument.m */; };
+		50A0F63F112E9F92000C6216 /* BLDictionaryController.h in Headers */ = {isa = PBXBuildFile; fileRef = 50A0F63D112E9F92000C6216 /* BLDictionaryController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50A0F640112E9F92000C6216 /* BLDictionaryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0F63E112E9F92000C6216 /* BLDictionaryController.m */; };
+		50A9B6480FF7CC0400B24D7A /* BLDictionaryDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 50A9B6460FF7CC0400B24D7A /* BLDictionaryDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50A9B6490FF7CC0400B24D7A /* BLDictionaryDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A9B6470FF7CC0400B24D7A /* BLDictionaryDocument.m */; };
+		50AE891A0FA674CD00CE3EFF /* BLDatabaseDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AE89180FA674CD00CE3EFF /* BLDatabaseDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50AE891B0FA674CD00CE3EFF /* BLDatabaseDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AE89190FA674CD00CE3EFF /* BLDatabaseDocument.m */; };
+		50AE891E0FA676EC00CE3EFF /* BLDatabaseDocumentActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AE891C0FA676EC00CE3EFF /* BLDatabaseDocumentActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50AE891F0FA676EC00CE3EFF /* BLDatabaseDocumentActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AE891D0FA676EC00CE3EFF /* BLDatabaseDocumentActions.m */; };
+		50AE893C0FA8461E00CE3EFF /* BLCreatorStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AE893A0FA8461E00CE3EFF /* BLCreatorStep.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50AE893D0FA8461E00CE3EFF /* BLCreatorStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AE893B0FA8461E00CE3EFF /* BLCreatorStep.m */; };
+		50AE89400FA849AA00CE3EFF /* BLCreationStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AE893E0FA849AA00CE3EFF /* BLCreationStep.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50AE89410FA849AA00CE3EFF /* BLCreationStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AE893F0FA849AA00CE3EFF /* BLCreationStep.m */; };
+		50B1A70E11070E3F00551CA7 /* BLStringsExporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B1A70511070E3F00551CA7 /* BLStringsExporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B1A70F11070E3F00551CA7 /* BLStringsExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B1A70611070E3F00551CA7 /* BLStringsExporter.m */; };
+		50B1A71011070E3F00551CA7 /* BLStringsImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B1A70711070E3F00551CA7 /* BLStringsImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B1A71111070E3F00551CA7 /* BLStringsImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B1A70811070E3F00551CA7 /* BLStringsImporter.m */; };
+		50B1A71211070E3F00551CA7 /* BLXcodeExporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B1A70A11070E3F00551CA7 /* BLXcodeExporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B1A71311070E3F00551CA7 /* BLXcodeExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B1A70B11070E3F00551CA7 /* BLXcodeExporter.m */; };
+		50B1A71411070E3F00551CA7 /* BLXcodeImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B1A70C11070E3F00551CA7 /* BLXcodeImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B1A71511070E3F00551CA7 /* BLXcodeImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B1A70D11070E3F00551CA7 /* BLXcodeImporter.m */; };
+		50B1A7231107183200551CA7 /* BLNibConverterStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B1A71F1107183200551CA7 /* BLNibConverterStep.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B1A7241107183200551CA7 /* BLNibConverterStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B1A7201107183200551CA7 /* BLNibConverterStep.m */; };
+		50B1A7251107183200551CA7 /* BLNibFileConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B1A7211107183200551CA7 /* BLNibFileConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B1A7261107183200551CA7 /* BLNibFileConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B1A7221107183200551CA7 /* BLNibFileConverter.m */; };
+		50B1AA171107414D00551CA7 /* BLXcodeProjectInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B1AA101107414D00551CA7 /* BLXcodeProjectInternal.h */; };
+		50B1AA181107414D00551CA7 /* BLXcodeProjectItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B1AA111107414D00551CA7 /* BLXcodeProjectItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B1AA191107414D00551CA7 /* BLXcodeProjectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B1AA121107414D00551CA7 /* BLXcodeProjectItem.m */; };
+		50B1AA1A1107414D00551CA7 /* BLXcodeProjectLocalization.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B1AA131107414D00551CA7 /* BLXcodeProjectLocalization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B1AA1B1107414D00551CA7 /* BLXcodeProjectLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B1AA141107414D00551CA7 /* BLXcodeProjectLocalization.m */; };
+		50B1AA1C1107414D00551CA7 /* BLXcodeProjectParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B1AA151107414D00551CA7 /* BLXcodeProjectParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B1AA1D1107414D00551CA7 /* BLXcodeProjectParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B1AA161107414D00551CA7 /* BLXcodeProjectParser.m */; };
+		50B1AE541108F3BE00551CA7 /* BLTMXDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B1AE521108F3BE00551CA7 /* BLTMXDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B1AE551108F3BE00551CA7 /* BLTMXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B1AE531108F3BE00551CA7 /* BLTMXDocument.m */; };
+		50B1AE591108F3E400551CA7 /* BLXLIFFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B1AE571108F3E400551CA7 /* BLXLIFFDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B1AE5A1108F3E400551CA7 /* BLXLIFFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B1AE581108F3E400551CA7 /* BLXLIFFDocument.m */; };
+		50B64E7D112BF7BC001CDB35 /* BLStringSegmentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B64E7B112BF7BC001CDB35 /* BLStringSegmentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B64E7E112BF7BC001CDB35 /* BLStringSegmentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B64E7C112BF7BC001CDB35 /* BLStringSegmentation.m */; };
+		50B64F67112C5C74001CDB35 /* BLSegmentedKeyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B64F65112C5C74001CDB35 /* BLSegmentedKeyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B64F68112C5C74001CDB35 /* BLSegmentedKeyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B64F66112C5C74001CDB35 /* BLSegmentedKeyObject.m */; };
+		50BB617D10B483DE00A1AD4C /* BLToolPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BB617B10B483DE00A1AD4C /* BLToolPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50BB617E10B483DE00A1AD4C /* BLToolPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BB617C10B483DE00A1AD4C /* BLToolPath.m */; };
+		50C2473F0F979D58003B3522 /* BLDictionaryFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C246D60F979D58003B3522 /* BLDictionaryFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247400F979D58003B3522 /* BLDictionaryFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C246D70F979D58003B3522 /* BLDictionaryFile.m */; };
+		50C247420F979D58003B3522 /* BLLocalizerFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C246D90F979D58003B3522 /* BLLocalizerFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247430F979D58003B3522 /* BLLocalizerFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C246DA0F979D58003B3522 /* BLLocalizerFile.m */; };
+		50C247440F979D58003B3522 /* BLArrayExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C246DC0F979D58003B3522 /* BLArrayExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247450F979D58003B3522 /* BLArrayExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C246DD0F979D58003B3522 /* BLArrayExtensions.m */; };
+		50C247480F979D58003B3522 /* BLFileManagerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C246E00F979D58003B3522 /* BLFileManagerAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247490F979D58003B3522 /* BLFileManagerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C246E10F979D58003B3522 /* BLFileManagerAdditions.m */; };
+		50C2474A0F979D58003B3522 /* BLSecurityExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C246E20F979D58003B3522 /* BLSecurityExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C2474B0F979D58003B3522 /* BLSecurityExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C246E30F979D58003B3522 /* BLSecurityExtensions.m */; };
+		50C2474E0F979D58003B3522 /* BLFileCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C246E90F979D58003B3522 /* BLFileCreator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C2474F0F979D58003B3522 /* BLFileCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C246EA0F979D58003B3522 /* BLFileCreator.m */; };
+		50C247500F979D58003B3522 /* BLNibFileCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C246EB0F979D58003B3522 /* BLNibFileCreator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247510F979D58003B3522 /* BLNibFileCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C246EC0F979D58003B3522 /* BLNibFileCreator.m */; };
+		50C247520F979D58003B3522 /* BLPlistFileCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C246ED0F979D58003B3522 /* BLPlistFileCreator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247530F979D58003B3522 /* BLPlistFileCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C246EE0F979D58003B3522 /* BLPlistFileCreator.m */; };
+		50C247560F979D58003B3522 /* BLRTFFileCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C246F10F979D58003B3522 /* BLRTFFileCreator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247570F979D58003B3522 /* BLRTFFileCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C246F20F979D58003B3522 /* BLRTFFileCreator.m */; };
+		50C247580F979D58003B3522 /* BLStringsFileCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C246F30F979D58003B3522 /* BLStringsFileCreator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247590F979D58003B3522 /* BLStringsFileCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C246F40F979D58003B3522 /* BLStringsFileCreator.m */; };
+		50C2475A0F979D58003B3522 /* BLTXTFileCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C246F50F979D58003B3522 /* BLTXTFileCreator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C2475B0F979D58003B3522 /* BLTXTFileCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C246F60F979D58003B3522 /* BLTXTFileCreator.m */; };
+		50C247600F979D58003B3522 /* BLFileInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C246FE0F979D58003B3522 /* BLFileInterpreter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247610F979D58003B3522 /* BLFileInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C246FF0F979D58003B3522 /* BLFileInterpreter.m */; };
+		50C247620F979D58003B3522 /* BLNibFileInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C247000F979D58003B3522 /* BLNibFileInterpreter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247630F979D58003B3522 /* BLNibFileInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247010F979D58003B3522 /* BLNibFileInterpreter.m */; };
+		50C247640F979D58003B3522 /* BLPlistFileInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C247020F979D58003B3522 /* BLPlistFileInterpreter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247650F979D58003B3522 /* BLPlistFileInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247030F979D58003B3522 /* BLPlistFileInterpreter.m */; };
+		50C247680F979D58003B3522 /* BLRTFFileInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C247060F979D58003B3522 /* BLRTFFileInterpreter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247690F979D58003B3522 /* BLRTFFileInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247070F979D58003B3522 /* BLRTFFileInterpreter.m */; };
+		50C2476A0F979D58003B3522 /* BLStringsFileInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C247080F979D58003B3522 /* BLStringsFileInterpreter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C2476B0F979D58003B3522 /* BLStringsFileInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247090F979D58003B3522 /* BLStringsFileInterpreter.m */; };
+		50C2476C0F979D58003B3522 /* BLTXTFileInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C2470A0F979D58003B3522 /* BLTXTFileInterpreter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C2476D0F979D58003B3522 /* BLTXTFileInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C2470B0F979D58003B3522 /* BLTXTFileInterpreter.m */; };
+		50C2476E0F979D58003B3522 /* BLBundleObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C2470E0F979D58003B3522 /* BLBundleObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C2476F0F979D58003B3522 /* BLBundleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C2470F0F979D58003B3522 /* BLBundleObject.m */; };
+		50C247720F979D58003B3522 /* BLObjectExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C247120F979D58003B3522 /* BLObjectExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247730F979D58003B3522 /* BLObjectExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247130F979D58003B3522 /* BLObjectExtensions.m */; };
+		50C247740F979D58003B3522 /* BLFileObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C247150F979D58003B3522 /* BLFileObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247750F979D58003B3522 /* BLFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247160F979D58003B3522 /* BLFileObject.m */; };
+		50C247760F979D58003B3522 /* BLNibFileObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C247170F979D58003B3522 /* BLNibFileObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247770F979D58003B3522 /* BLNibFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247180F979D58003B3522 /* BLNibFileObject.m */; };
+		50C247780F979D58003B3522 /* BLPlistFileObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C247190F979D58003B3522 /* BLPlistFileObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247790F979D58003B3522 /* BLPlistFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C2471A0F979D58003B3522 /* BLPlistFileObject.m */; };
+		50C2477C0F979D58003B3522 /* BLRTFFileObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C2471D0F979D58003B3522 /* BLRTFFileObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C2477D0F979D58003B3522 /* BLRTFFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C2471E0F979D58003B3522 /* BLRTFFileObject.m */; };
+		50C2477E0F979D58003B3522 /* BLStringsFileObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C2471F0F979D58003B3522 /* BLStringsFileObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C2477F0F979D58003B3522 /* BLStringsFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247200F979D58003B3522 /* BLStringsFileObject.m */; };
+		50C247800F979D58003B3522 /* BLTXTFileObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C247210F979D58003B3522 /* BLTXTFileObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247810F979D58003B3522 /* BLTXTFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247220F979D58003B3522 /* BLTXTFileObject.m */; };
+		50C247820F979D58003B3522 /* BLKeyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C247240F979D58003B3522 /* BLKeyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247830F979D58003B3522 /* BLKeyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247250F979D58003B3522 /* BLKeyObject.m */; };
+		50C247840F979D58003B3522 /* BLRTFDKeyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C247260F979D58003B3522 /* BLRTFDKeyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247850F979D58003B3522 /* BLRTFDKeyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247270F979D58003B3522 /* BLRTFDKeyObject.m */; };
+		50C247860F979D58003B3522 /* BLStringKeyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C247280F979D58003B3522 /* BLStringKeyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247870F979D58003B3522 /* BLStringKeyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247290F979D58003B3522 /* BLStringKeyObject.m */; };
+		50C247880F979D58003B3522 /* BlueLocalization.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C2472B0F979D58003B3522 /* BlueLocalization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C2478A0F979D58003B3522 /* BLLanguageTranslator.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C2472F0F979D58003B3522 /* BLLanguageTranslator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C2478B0F979D58003B3522 /* BLLanguageTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247300F979D58003B3522 /* BLLanguageTranslator.m */; };
+		50C2478E0F979D58003B3522 /* BLPathCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C247330F979D58003B3522 /* BLPathCreator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C2478F0F979D58003B3522 /* BLPathCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247340F979D58003B3522 /* BLPathCreator.m */; };
+		50C247920F979D58003B3522 /* BLStringReplacement.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C247380F979D58003B3522 /* BLStringReplacement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247930F979D58003B3522 /* BLStringReplacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247390F979D58003B3522 /* BLStringReplacement.m */; };
+		50C247940F979D58003B3522 /* BLStringsDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C2473A0F979D58003B3522 /* BLStringsDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247950F979D58003B3522 /* BLStringsDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C2473B0F979D58003B3522 /* BLStringsDictionary.m */; };
+		50C247960F979D58003B3522 /* BLStringsScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C2473C0F979D58003B3522 /* BLStringsScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C247970F979D58003B3522 /* BLStringsScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C2473D0F979D58003B3522 /* BLStringsScanner.m */; };
+		50D10D7A0FB5CC03006FCF8C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50C247DE0F979F1B003B3522 /* Localizable.strings */; };
+		50D112700FB86C05006FCF8C /* BLGroupedKeyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 50D1126E0FB86C05006FCF8C /* BLGroupedKeyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50D112710FB86C05006FCF8C /* BLGroupedKeyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D1126F0FB86C05006FCF8C /* BLGroupedKeyObject.m */; };
+		50D19EC6129C708B0097AA99 /* BLXcodeImportAssociationStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 50D19EC4129C708B0097AA99 /* BLXcodeImportAssociationStep.h */; };
+		50D19EC7129C708B0097AA99 /* BLXcodeImportAssociationStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D19EC5129C708B0097AA99 /* BLXcodeImportAssociationStep.m */; };
+		50EF075E114A9E7A002DBB02 /* BLDatabaseFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 50EF075C114A9E7A002DBB02 /* BLDatabaseFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50EF075F114A9E7A002DBB02 /* BLDatabaseFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EF075D114A9E7A002DBB02 /* BLDatabaseFile.m */; };
+		50EF0A9C114D40B0002DBB02 /* BLPropertyListSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EF0A9B114D40B0002DBB02 /* BLPropertyListSerialization.m */; };
+		50EF0BBD114EB1E1002DBB02 /* BLDictionaryFileImportStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 50EF0BBB114EB1E1002DBB02 /* BLDictionaryFileImportStep.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50EF0BBE114EB1E1002DBB02 /* BLDictionaryFileImportStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EF0BBC114EB1E1002DBB02 /* BLDictionaryFileImportStep.m */; };
+		50F03BD90FA5EB5300FDB765 /* BLObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 50F03BD70FA5EB5300FDB765 /* BLObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50F03BDA0FA5EB5300FDB765 /* BLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F03BD80FA5EB5300FDB765 /* BLObject.m */; };
+		50F03BF90FA60CEA00FDB765 /* BLProcessManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 50F03BF70FA60CEA00FDB765 /* BLProcessManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50F03BFA0FA60CEA00FDB765 /* BLProcessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F03BF80FA60CEA00FDB765 /* BLProcessManager.m */; };
+		50F03BFD0FA60F5C00FDB765 /* BLProcessStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 50F03BFB0FA60F5C00FDB765 /* BLProcessStep.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50F03BFE0FA60F5C00FDB765 /* BLProcessStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F03BFC0FA60F5C00FDB765 /* BLProcessStep.m */; };
+		50F03C010FA61F7D00FDB765 /* BLInterpreterStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 50F03BFF0FA61F7D00FDB765 /* BLInterpreterStep.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50F03C020FA61F7D00FDB765 /* BLInterpreterStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F03C000FA61F7D00FDB765 /* BLInterpreterStep.m */; };
+		50F03C0D0FA626C700FDB765 /* BLProcessStep.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50F03C0C0FA626C700FDB765 /* BLProcessStep.strings */; };
+		50F03C100FA627AC00FDB765 /* BLInterpretationStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 50F03C0E0FA627AC00FDB765 /* BLInterpretationStep.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50F03C110FA627AC00FDB765 /* BLInterpretationStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F03C0F0FA627AC00FDB765 /* BLInterpretationStep.m */; };
+		50F6BA3310144B84008C8727 /* BLXcodeImporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F6BA3110144B84008C8727 /* BLXcodeImporter.xib */; };
+		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		507F05D11404E3DD0008D824 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = BlueLocalization;
+		};
+		507F05D31404E3DD0008D824 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 507F05B41404E3A00008D824;
+			remoteInfo = TestHost;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		507F05D81404E45A0008D824 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				507F05D91404E46C0008D824 /* OCMock.framework in Copy Frameworks */,
+				507F05DA1404E46C0008D824 /* hamcrest.framework in Copy Frameworks */,
+				507F05DB1404E46C0008D824 /* BlueLocalization.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		5006929812804F3500470F3D /* DocumentCompressionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentCompressionTest.h; sourceTree = "<group>"; };
+		5006929912804F3500470F3D /* DocumentCompressionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentCompressionTest.m; sourceTree = "<group>"; };
+		500C5817140FB36600DD5F0E /* BLXcodeImportUpdateStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXcodeImportUpdateStep.h; sourceTree = "<group>"; };
+		500C5818140FB36600DD5F0E /* BLXcodeImportUpdateStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXcodeImportUpdateStep.m; sourceTree = "<group>"; };
+		5010B769129C8D6E0044A488 /* BLXcodeExportUpdateStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXcodeExportUpdateStep.h; sourceTree = "<group>"; };
+		5010B76A129C8D6E0044A488 /* BLXcodeExportUpdateStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXcodeExportUpdateStep.m; sourceTree = "<group>"; };
+		5014B98C0FB3360300DC2EC3 /* ObjectProxyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectProxyTest.h; sourceTree = "<group>"; };
+		5014B98D0FB3360300DC2EC3 /* ObjectProxyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectProxyTest.m; sourceTree = "<group>"; };
+		5014B9900FB3362200DC2EC3 /* BLObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLObjectProxy.m; sourceTree = "<group>"; };
+		5014B9910FB3362200DC2EC3 /* BLObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLObjectProxy.h; sourceTree = "<group>"; };
+		5014BB0C0FB49C6600DC2EC3 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = ../Shared/Frameworks/OCMock.framework; sourceTree = SOURCE_ROOT; };
+		5014BB5A0FB4A3CC00DC2EC3 /* hamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = hamcrest.framework; path = ../Shared/Frameworks/hamcrest.framework; sourceTree = SOURCE_ROOT; };
+		502148FE101605F900A8180B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/BLXcodeExporter.xib; sourceTree = "<group>"; };
+		50244FFA1095B911000AF365 /* StringsFileCreatorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringsFileCreatorTest.h; sourceTree = "<group>"; };
+		50244FFB1095B911000AF365 /* StringsFileCreatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringsFileCreatorTest.m; sourceTree = "<group>"; };
+		5024700C113002D3001DA94B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/BLDictionaryExporter.xib; sourceTree = "<group>"; };
+		5024701211300414001DA94B /* BLDictionaryExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDictionaryExporter.h; sourceTree = "<group>"; };
+		5024701311300414001DA94B /* BLDictionaryExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDictionaryExporter.m; sourceTree = "<group>"; };
+		5024F8F20FBB160600E6097F /* BLStringComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLStringComparison.h; path = ../../Extensions/BLStringComparison.h; sourceTree = "<group>"; };
+		5024F8F30FBB160600E6097F /* BLStringComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLStringComparison.m; path = ../../Extensions/BLStringComparison.m; sourceTree = "<group>"; };
+		50293192075BD4D7009FEC06 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		503F87D114068848000EA4AC /* BLDefaultPlaceholders.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BLDefaultPlaceholders.plist; sourceTree = "<group>"; };
+		5048BF2C1279D3D0006FFAC2 /* BLDatabaseDocumentPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDatabaseDocumentPreferences.h; sourceTree = "<group>"; };
+		5048BF63127A1D98006FFAC2 /* BLDocumentPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDocumentPreferences.h; sourceTree = "<group>"; };
+		5048BF64127A1D98006FFAC2 /* BLDocumentPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDocumentPreferences.m; sourceTree = "<group>"; };
+		5048BF90127A3323006FFAC2 /* DocumentPreferencesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentPreferencesTest.h; sourceTree = "<group>"; };
+		5048BF91127A3323006FFAC2 /* DocumentPreferencesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentPreferencesTest.m; sourceTree = "<group>"; };
+		5054D2C71404D04900434EAC /* BlueLocalization Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BlueLocalization Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5054D2C81404D04900434EAC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5055576B0FB4E20F0008BE20 /* BLLocalizerExportStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLLocalizerExportStep.h; path = ../Processing/BLLocalizerExportStep.h; sourceTree = "<group>"; };
+		5055576C0FB4E20F0008BE20 /* BLLocalizerExportStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLLocalizerExportStep.m; path = ../Processing/BLLocalizerExportStep.m; sourceTree = "<group>"; };
+		505557770FB4F8B40008BE20 /* BLGenericProcessStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLGenericProcessStep.h; sourceTree = "<group>"; };
+		505557780FB4F8B40008BE20 /* BLGenericProcessStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLGenericProcessStep.m; sourceTree = "<group>"; };
+		505558E80FB521910008BE20 /* BLLocalizerImportStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLLocalizerImportStep.h; path = Source/Framework/Documents/Processing/BLLocalizerImportStep.h; sourceTree = SOURCE_ROOT; };
+		505558E90FB521910008BE20 /* BLLocalizerImportStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLLocalizerImportStep.m; path = Source/Framework/Documents/Processing/BLLocalizerImportStep.m; sourceTree = SOURCE_ROOT; };
+		50597F5B0FCE91E0001275A5 /* BLLocalizerDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLLocalizerDocument.h; sourceTree = "<group>"; };
+		50597F5C0FCE91E0001275A5 /* BLLocalizerDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLLocalizerDocument.m; sourceTree = "<group>"; };
+		5064FC120FBDA50100DF3069 /* BLProcessLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLProcessLog.h; sourceTree = "<group>"; };
+		5064FC130FBDA50100DF3069 /* BLProcessLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLProcessLog.m; sourceTree = "<group>"; };
+		5064FCC90FC13EBE00DF3069 /* ProcessLogTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessLogTest.h; sourceTree = "<group>"; };
+		5064FCCA0FC13EBE00DF3069 /* ProcessLogTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessLogTest.m; sourceTree = "<group>"; };
+		506E80FE1057AAF2005BAB74 /* LanguageTranslatorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageTranslatorTest.h; sourceTree = "<group>"; };
+		506E80FF1057AAF2005BAB74 /* LanguageTranslatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageTranslatorTest.m; sourceTree = "<group>"; };
+		507378CC1406752E00CC54C4 /* TXTFileCreatorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXTFileCreatorTest.h; sourceTree = "<group>"; };
+		507378CD1406752E00CC54C4 /* TXTFileCreatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXTFileCreatorTest.m; sourceTree = "<group>"; };
+		507981EF110A105300CB5D70 /* BLXLIFFExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXLIFFExporter.h; sourceTree = "<group>"; };
+		507981F0110A105300CB5D70 /* BLXLIFFExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXLIFFExporter.m; sourceTree = "<group>"; };
+		507981F5110A142F00CB5D70 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/BLXLIFFExporter.xib; sourceTree = "<group>"; };
+		50798257110A229000CB5D70 /* BLXLIFFImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXLIFFImporter.h; sourceTree = "<group>"; };
+		50798258110A229000CB5D70 /* BLXLIFFImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXLIFFImporter.m; sourceTree = "<group>"; };
+		507F05B51404E3A00008D824 /* TestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		507F05B91404E3A00008D824 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		507F05BA1404E3A00008D824 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		507F05BB1404E3A00008D824 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		507F05DE1404E6C50008D824 /* TestHost-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TestHost-Info.plist"; path = "Resources/TestHost-Info.plist"; sourceTree = SOURCE_ROOT; };
+		507F05DF1404E6C50008D824 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "UnitTests-Info.plist"; path = "Resources/UnitTests-Info.plist"; sourceTree = SOURCE_ROOT; };
+		508C3241110BB99B00EA6CAD /* BLFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFile.h; sourceTree = "<group>"; };
+		508C3242110BB99B00EA6CAD /* BLFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLFile.m; sourceTree = "<group>"; };
+		508C3245110BB9AD00EA6CAD /* BLFileInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFileInternal.h; sourceTree = "<group>"; };
+		508C3277110BD07600EA6CAD /* BLPropertyListSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPropertyListSerialization.h; sourceTree = "<group>"; };
+		508C32C7110BF3A900EA6CAD /* BLDictionaryDocumentActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDictionaryDocumentActions.h; sourceTree = "<group>"; };
+		508C32C8110BF3A900EA6CAD /* BLDictionaryDocumentActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDictionaryDocumentActions.m; sourceTree = "<group>"; };
+		508C3318110C114A00EA6CAD /* BLAppleGlotDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAppleGlotDocument.h; sourceTree = "<group>"; };
+		508C3319110C114A00EA6CAD /* BLAppleGlotDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLAppleGlotDocument.m; sourceTree = "<group>"; };
+		508C331C110DC29400EA6CAD /* AppleGlotIntegrationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleGlotIntegrationTest.h; sourceTree = "<group>"; };
+		508C331D110DC29400EA6CAD /* AppleGlotIntegrationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleGlotIntegrationTest.m; sourceTree = "<group>"; };
+		508C3339110DC76600EA6CAD /* BLDocumentProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDocumentProtocol.h; sourceTree = "<group>"; };
+		508D0F9711359EDE00D50A2B /* BLTMXExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTMXExporter.h; sourceTree = "<group>"; };
+		508D0F9811359EDE00D50A2B /* BLTMXExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTMXExporter.m; sourceTree = "<group>"; };
+		508D0FA311359F8C00D50A2B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/BLTMXExporter.xib; sourceTree = "<group>"; };
+		50955157119496C0000FFC58 /* BLDocumentFileWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDocumentFileWrapper.h; sourceTree = "<group>"; };
+		50955158119496C0000FFC58 /* BLDocumentFileWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDocumentFileWrapper.m; sourceTree = "<group>"; };
+		509553981194ABF1000FFC58 /* BLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDocument.h; sourceTree = "<group>"; };
+		509553991194ABF1000FFC58 /* BLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDocument.m; sourceTree = "<group>"; };
+		509736180FFE4960001DBF72 /* XcodeProjectModificationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeProjectModificationTest.h; sourceTree = "<group>"; };
+		509736190FFE4960001DBF72 /* XcodeProjectModificationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeProjectModificationTest.m; sourceTree = "<group>"; };
+		509860C410CFE56800614FFE /* StringsImporterTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringsImporterTest.h; sourceTree = "<group>"; };
+		509860C510CFE56800614FFE /* StringsImporterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringsImporterTest.m; sourceTree = "<group>"; };
+		5098629510D1743900614FFE /* KeyObjectTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyObjectTest.h; sourceTree = "<group>"; };
+		5098629610D1743900614FFE /* KeyObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyObjectTest.m; sourceTree = "<group>"; };
+		50A0F63D112E9F92000C6216 /* BLDictionaryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDictionaryController.h; sourceTree = "<group>"; };
+		50A0F63E112E9F92000C6216 /* BLDictionaryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDictionaryController.m; sourceTree = "<group>"; };
+		50A9B6460FF7CC0400B24D7A /* BLDictionaryDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDictionaryDocument.h; sourceTree = "<group>"; };
+		50A9B6470FF7CC0400B24D7A /* BLDictionaryDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDictionaryDocument.m; sourceTree = "<group>"; };
+		50AE89180FA674CD00CE3EFF /* BLDatabaseDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDatabaseDocument.h; sourceTree = "<group>"; };
+		50AE89190FA674CD00CE3EFF /* BLDatabaseDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDatabaseDocument.m; sourceTree = "<group>"; };
+		50AE891C0FA676EC00CE3EFF /* BLDatabaseDocumentActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDatabaseDocumentActions.h; sourceTree = "<group>"; };
+		50AE891D0FA676EC00CE3EFF /* BLDatabaseDocumentActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDatabaseDocumentActions.m; sourceTree = "<group>"; };
+		50AE893A0FA8461E00CE3EFF /* BLCreatorStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCreatorStep.h; path = ../../Documents/Processing/BLCreatorStep.h; sourceTree = "<group>"; };
+		50AE893B0FA8461E00CE3EFF /* BLCreatorStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCreatorStep.m; path = ../../Documents/Processing/BLCreatorStep.m; sourceTree = "<group>"; };
+		50AE893E0FA849AA00CE3EFF /* BLCreationStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCreationStep.h; path = ../../Documents/Processing/BLCreationStep.h; sourceTree = "<group>"; };
+		50AE893F0FA849AA00CE3EFF /* BLCreationStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCreationStep.m; path = ../../Documents/Processing/BLCreationStep.m; sourceTree = "<group>"; };
+		50B1A70511070E3F00551CA7 /* BLStringsExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStringsExporter.h; sourceTree = "<group>"; };
+		50B1A70611070E3F00551CA7 /* BLStringsExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStringsExporter.m; sourceTree = "<group>"; };
+		50B1A70711070E3F00551CA7 /* BLStringsImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStringsImporter.h; sourceTree = "<group>"; };
+		50B1A70811070E3F00551CA7 /* BLStringsImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStringsImporter.m; sourceTree = "<group>"; };
+		50B1A70A11070E3F00551CA7 /* BLXcodeExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXcodeExporter.h; sourceTree = "<group>"; };
+		50B1A70B11070E3F00551CA7 /* BLXcodeExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXcodeExporter.m; sourceTree = "<group>"; };
+		50B1A70C11070E3F00551CA7 /* BLXcodeImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXcodeImporter.h; sourceTree = "<group>"; };
+		50B1A70D11070E3F00551CA7 /* BLXcodeImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXcodeImporter.m; sourceTree = "<group>"; };
+		50B1A71F1107183200551CA7 /* BLNibConverterStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLNibConverterStep.h; sourceTree = "<group>"; };
+		50B1A7201107183200551CA7 /* BLNibConverterStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLNibConverterStep.m; sourceTree = "<group>"; };
+		50B1A7211107183200551CA7 /* BLNibFileConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLNibFileConverter.h; sourceTree = "<group>"; };
+		50B1A7221107183200551CA7 /* BLNibFileConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLNibFileConverter.m; sourceTree = "<group>"; };
+		50B1AA101107414D00551CA7 /* BLXcodeProjectInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXcodeProjectInternal.h; sourceTree = "<group>"; };
+		50B1AA111107414D00551CA7 /* BLXcodeProjectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXcodeProjectItem.h; sourceTree = "<group>"; };
+		50B1AA121107414D00551CA7 /* BLXcodeProjectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXcodeProjectItem.m; sourceTree = "<group>"; };
+		50B1AA131107414D00551CA7 /* BLXcodeProjectLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXcodeProjectLocalization.h; sourceTree = "<group>"; };
+		50B1AA141107414D00551CA7 /* BLXcodeProjectLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXcodeProjectLocalization.m; sourceTree = "<group>"; };
+		50B1AA151107414D00551CA7 /* BLXcodeProjectParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXcodeProjectParser.h; sourceTree = "<group>"; };
+		50B1AA161107414D00551CA7 /* BLXcodeProjectParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXcodeProjectParser.m; sourceTree = "<group>"; };
+		50B1AA3011076DE100551CA7 /* TMXIntegrationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXIntegrationTest.h; sourceTree = "<group>"; };
+		50B1AA3111076DE100551CA7 /* TMXIntegrationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXIntegrationTest.m; sourceTree = "<group>"; };
+		50B1AE521108F3BE00551CA7 /* BLTMXDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTMXDocument.h; sourceTree = "<group>"; };
+		50B1AE531108F3BE00551CA7 /* BLTMXDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTMXDocument.m; sourceTree = "<group>"; };
+		50B1AE571108F3E400551CA7 /* BLXLIFFDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXLIFFDocument.h; sourceTree = "<group>"; };
+		50B1AE581108F3E400551CA7 /* BLXLIFFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXLIFFDocument.m; sourceTree = "<group>"; };
+		50B1AE8A1109DB6700551CA7 /* XLIFFIntegrationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLIFFIntegrationTest.h; sourceTree = "<group>"; };
+		50B1AE8B1109DB6700551CA7 /* XLIFFIntegrationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLIFFIntegrationTest.m; sourceTree = "<group>"; };
+		50B64E7B112BF7BC001CDB35 /* BLStringSegmentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStringSegmentation.h; sourceTree = "<group>"; };
+		50B64E7C112BF7BC001CDB35 /* BLStringSegmentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStringSegmentation.m; sourceTree = "<group>"; };
+		50B64E9C112C0E6D001CDB35 /* StringSegmentationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringSegmentationTest.h; sourceTree = "<group>"; };
+		50B64E9D112C0E6D001CDB35 /* StringSegmentationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringSegmentationTest.m; sourceTree = "<group>"; };
+		50B64F65112C5C74001CDB35 /* BLSegmentedKeyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSegmentedKeyObject.h; sourceTree = "<group>"; };
+		50B64F66112C5C74001CDB35 /* BLSegmentedKeyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLSegmentedKeyObject.m; sourceTree = "<group>"; };
+		50B64F72112C6A3A001CDB35 /* SegmentedKeyObjectTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedKeyObjectTest.h; sourceTree = "<group>"; };
+		50B64F73112C6A3A001CDB35 /* SegmentedKeyObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedKeyObjectTest.m; sourceTree = "<group>"; };
+		50BB617B10B483DE00A1AD4C /* BLToolPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLToolPath.h; sourceTree = "<group>"; };
+		50BB617C10B483DE00A1AD4C /* BLToolPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLToolPath.m; sourceTree = "<group>"; };
+		50BB648710B5B62C00A1AD4C /* ObjectExtensionsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectExtensionsTest.h; sourceTree = "<group>"; };
+		50BB648810B5B62C00A1AD4C /* ObjectExtensionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectExtensionsTest.m; sourceTree = "<group>"; };
+		50BBBE3F0FFC06760000E48E /* XcodeProjectParserTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeProjectParserTest.h; sourceTree = "<group>"; };
+		50BBBE400FFC06760000E48E /* XcodeProjectParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeProjectParserTest.m; sourceTree = "<group>"; };
+		50BF2D490F99438100942BC0 /* FileInterpreterTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileInterpreterTest.h; sourceTree = "<group>"; };
+		50BF2D4A0F99438100942BC0 /* FileInterpreterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileInterpreterTest.m; sourceTree = "<group>"; };
+		50C1D5C91010EDC300C94293 /* XcodeProjectLocalizationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeProjectLocalizationTest.h; sourceTree = "<group>"; };
+		50C1D5CA1010EDC300C94293 /* XcodeProjectLocalizationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeProjectLocalizationTest.m; sourceTree = "<group>"; };
+		50C246D60F979D58003B3522 /* BLDictionaryFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDictionaryFile.h; sourceTree = "<group>"; };
+		50C246D70F979D58003B3522 /* BLDictionaryFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDictionaryFile.m; sourceTree = "<group>"; };
+		50C246D90F979D58003B3522 /* BLLocalizerFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLLocalizerFile.h; sourceTree = "<group>"; };
+		50C246DA0F979D58003B3522 /* BLLocalizerFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLLocalizerFile.m; sourceTree = "<group>"; };
+		50C246DC0F979D58003B3522 /* BLArrayExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLArrayExtensions.h; sourceTree = "<group>"; };
+		50C246DD0F979D58003B3522 /* BLArrayExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLArrayExtensions.m; sourceTree = "<group>"; };
+		50C246E00F979D58003B3522 /* BLFileManagerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFileManagerAdditions.h; sourceTree = "<group>"; };
+		50C246E10F979D58003B3522 /* BLFileManagerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLFileManagerAdditions.m; sourceTree = "<group>"; };
+		50C246E20F979D58003B3522 /* BLSecurityExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSecurityExtensions.h; sourceTree = "<group>"; };
+		50C246E30F979D58003B3522 /* BLSecurityExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLSecurityExtensions.m; sourceTree = "<group>"; };
+		50C246E90F979D58003B3522 /* BLFileCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFileCreator.h; sourceTree = "<group>"; };
+		50C246EA0F979D58003B3522 /* BLFileCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLFileCreator.m; sourceTree = "<group>"; };
+		50C246EB0F979D58003B3522 /* BLNibFileCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLNibFileCreator.h; sourceTree = "<group>"; };
+		50C246EC0F979D58003B3522 /* BLNibFileCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLNibFileCreator.m; sourceTree = "<group>"; };
+		50C246ED0F979D58003B3522 /* BLPlistFileCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPlistFileCreator.h; sourceTree = "<group>"; };
+		50C246EE0F979D58003B3522 /* BLPlistFileCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPlistFileCreator.m; sourceTree = "<group>"; };
+		50C246F10F979D58003B3522 /* BLRTFFileCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLRTFFileCreator.h; sourceTree = "<group>"; };
+		50C246F20F979D58003B3522 /* BLRTFFileCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLRTFFileCreator.m; sourceTree = "<group>"; };
+		50C246F30F979D58003B3522 /* BLStringsFileCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStringsFileCreator.h; sourceTree = "<group>"; };
+		50C246F40F979D58003B3522 /* BLStringsFileCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStringsFileCreator.m; sourceTree = "<group>"; };
+		50C246F50F979D58003B3522 /* BLTXTFileCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTXTFileCreator.h; sourceTree = "<group>"; };
+		50C246F60F979D58003B3522 /* BLTXTFileCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTXTFileCreator.m; sourceTree = "<group>"; };
+		50C246FE0F979D58003B3522 /* BLFileInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFileInterpreter.h; sourceTree = "<group>"; };
+		50C246FF0F979D58003B3522 /* BLFileInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLFileInterpreter.m; sourceTree = "<group>"; };
+		50C247000F979D58003B3522 /* BLNibFileInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLNibFileInterpreter.h; sourceTree = "<group>"; };
+		50C247010F979D58003B3522 /* BLNibFileInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLNibFileInterpreter.m; sourceTree = "<group>"; };
+		50C247020F979D58003B3522 /* BLPlistFileInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPlistFileInterpreter.h; sourceTree = "<group>"; };
+		50C247030F979D58003B3522 /* BLPlistFileInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPlistFileInterpreter.m; sourceTree = "<group>"; };
+		50C247060F979D58003B3522 /* BLRTFFileInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLRTFFileInterpreter.h; sourceTree = "<group>"; };
+		50C247070F979D58003B3522 /* BLRTFFileInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLRTFFileInterpreter.m; sourceTree = "<group>"; };
+		50C247080F979D58003B3522 /* BLStringsFileInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStringsFileInterpreter.h; sourceTree = "<group>"; };
+		50C247090F979D58003B3522 /* BLStringsFileInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStringsFileInterpreter.m; sourceTree = "<group>"; };
+		50C2470A0F979D58003B3522 /* BLTXTFileInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTXTFileInterpreter.h; sourceTree = "<group>"; };
+		50C2470B0F979D58003B3522 /* BLTXTFileInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTXTFileInterpreter.m; sourceTree = "<group>"; };
+		50C2470E0F979D58003B3522 /* BLBundleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLBundleObject.h; sourceTree = "<group>"; };
+		50C2470F0F979D58003B3522 /* BLBundleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLBundleObject.m; sourceTree = "<group>"; };
+		50C247120F979D58003B3522 /* BLObjectExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLObjectExtensions.h; sourceTree = "<group>"; };
+		50C247130F979D58003B3522 /* BLObjectExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLObjectExtensions.m; sourceTree = "<group>"; };
+		50C247150F979D58003B3522 /* BLFileObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFileObject.h; sourceTree = "<group>"; };
+		50C247160F979D58003B3522 /* BLFileObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLFileObject.m; sourceTree = "<group>"; };
+		50C247170F979D58003B3522 /* BLNibFileObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLNibFileObject.h; sourceTree = "<group>"; };
+		50C247180F979D58003B3522 /* BLNibFileObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLNibFileObject.m; sourceTree = "<group>"; };
+		50C247190F979D58003B3522 /* BLPlistFileObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPlistFileObject.h; sourceTree = "<group>"; };
+		50C2471A0F979D58003B3522 /* BLPlistFileObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPlistFileObject.m; sourceTree = "<group>"; };
+		50C2471D0F979D58003B3522 /* BLRTFFileObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLRTFFileObject.h; sourceTree = "<group>"; };
+		50C2471E0F979D58003B3522 /* BLRTFFileObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLRTFFileObject.m; sourceTree = "<group>"; };
+		50C2471F0F979D58003B3522 /* BLStringsFileObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStringsFileObject.h; sourceTree = "<group>"; };
+		50C247200F979D58003B3522 /* BLStringsFileObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStringsFileObject.m; sourceTree = "<group>"; };
+		50C247210F979D58003B3522 /* BLTXTFileObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTXTFileObject.h; sourceTree = "<group>"; };
+		50C247220F979D58003B3522 /* BLTXTFileObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTXTFileObject.m; sourceTree = "<group>"; };
+		50C247240F979D58003B3522 /* BLKeyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLKeyObject.h; sourceTree = "<group>"; };
+		50C247250F979D58003B3522 /* BLKeyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLKeyObject.m; sourceTree = "<group>"; };
+		50C247260F979D58003B3522 /* BLRTFDKeyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLRTFDKeyObject.h; sourceTree = "<group>"; };
+		50C247270F979D58003B3522 /* BLRTFDKeyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLRTFDKeyObject.m; sourceTree = "<group>"; };
+		50C247280F979D58003B3522 /* BLStringKeyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStringKeyObject.h; sourceTree = "<group>"; };
+		50C247290F979D58003B3522 /* BLStringKeyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStringKeyObject.m; sourceTree = "<group>"; };
+		50C2472B0F979D58003B3522 /* BlueLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueLocalization.h; sourceTree = "<group>"; };
+		50C2472C0F979D58003B3522 /* BlueLocalization_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueLocalization_Prefix.pch; sourceTree = "<group>"; };
+		50C2472F0F979D58003B3522 /* BLLanguageTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLLanguageTranslator.h; sourceTree = "<group>"; };
+		50C247300F979D58003B3522 /* BLLanguageTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLLanguageTranslator.m; sourceTree = "<group>"; };
+		50C247330F979D58003B3522 /* BLPathCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPathCreator.h; sourceTree = "<group>"; };
+		50C247340F979D58003B3522 /* BLPathCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPathCreator.m; sourceTree = "<group>"; };
+		50C247380F979D58003B3522 /* BLStringReplacement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStringReplacement.h; sourceTree = "<group>"; };
+		50C247390F979D58003B3522 /* BLStringReplacement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStringReplacement.m; sourceTree = "<group>"; };
+		50C2473A0F979D58003B3522 /* BLStringsDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStringsDictionary.h; sourceTree = "<group>"; };
+		50C2473B0F979D58003B3522 /* BLStringsDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStringsDictionary.m; sourceTree = "<group>"; };
+		50C2473C0F979D58003B3522 /* BLStringsScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStringsScanner.h; sourceTree = "<group>"; };
+		50C2473D0F979D58003B3522 /* BLStringsScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStringsScanner.m; sourceTree = "<group>"; };
+		50C247A60F979D7D003B3522 /* StringsFileInterpreterTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringsFileInterpreterTest.h; sourceTree = "<group>"; };
+		50C247A70F979D7D003B3522 /* StringsFileInterpreterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringsFileInterpreterTest.m; sourceTree = "<group>"; };
+		50C247AA0F979D7D003B3522 /* ObjectTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectTest.h; sourceTree = "<group>"; };
+		50C247AB0F979D7D003B3522 /* ObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectTest.m; sourceTree = "<group>"; };
+		50C247AF0F979D7D003B3522 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50C247B00F979D7D003B3522 /* UnitTests_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTests_Prefix.pch; sourceTree = "<group>"; };
+		50C247C10F979DAB003B3522 /* StringsDictionaryTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringsDictionaryTest.h; sourceTree = "<group>"; };
+		50C247C20F979DAB003B3522 /* StringsDictionaryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringsDictionaryTest.m; sourceTree = "<group>"; };
+		50C247DB0F979F1B003B3522 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/BLStringsExporter.xib; sourceTree = "<group>"; };
+		50C247DD0F979F1B003B3522 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50C247DF0F979F1B003B3522 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		50C2481D0F979F8C003B3522 /* Test Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Test Data"; path = "Resources/Test Data"; sourceTree = SOURCE_ROOT; };
+		50CC9B1F115CE3D200AFC588 /* FileObjectTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileObjectTest.h; sourceTree = "<group>"; };
+		50CC9B20115CE3D200AFC588 /* FileObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileObjectTest.m; sourceTree = "<group>"; };
+		50D1126E0FB86C05006FCF8C /* BLGroupedKeyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLGroupedKeyObject.h; sourceTree = "<group>"; };
+		50D1126F0FB86C05006FCF8C /* BLGroupedKeyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLGroupedKeyObject.m; sourceTree = "<group>"; };
+		50D19EC4129C708B0097AA99 /* BLXcodeImportAssociationStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXcodeImportAssociationStep.h; sourceTree = "<group>"; };
+		50D19EC5129C708B0097AA99 /* BLXcodeImportAssociationStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXcodeImportAssociationStep.m; sourceTree = "<group>"; };
+		50EF075C114A9E7A002DBB02 /* BLDatabaseFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDatabaseFile.h; sourceTree = "<group>"; };
+		50EF075D114A9E7A002DBB02 /* BLDatabaseFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDatabaseFile.m; sourceTree = "<group>"; };
+		50EF0A9B114D40B0002DBB02 /* BLPropertyListSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPropertyListSerialization.m; sourceTree = "<group>"; };
+		50EF0BBB114EB1E1002DBB02 /* BLDictionaryFileImportStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLDictionaryFileImportStep.h; path = Source/Framework/Documents/Processing/BLDictionaryFileImportStep.h; sourceTree = SOURCE_ROOT; };
+		50EF0BBC114EB1E1002DBB02 /* BLDictionaryFileImportStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLDictionaryFileImportStep.m; path = Source/Framework/Documents/Processing/BLDictionaryFileImportStep.m; sourceTree = SOURCE_ROOT; };
+		50EF0BCF114EB316002DBB02 /* FileTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTest.h; sourceTree = "<group>"; };
+		50EF0BD0114EB316002DBB02 /* FileTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTest.m; sourceTree = "<group>"; };
+		50EF0E0E1150F4C7002DBB02 /* NibFileCreatorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NibFileCreatorTest.h; sourceTree = "<group>"; };
+		50EF0E0F1150F4C7002DBB02 /* NibFileCreatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NibFileCreatorTest.m; sourceTree = "<group>"; };
+		50F03A960FA5B73900FDB765 /* NibFileInterpreterTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NibFileInterpreterTest.h; sourceTree = "<group>"; };
+		50F03A970FA5B73900FDB765 /* NibFileInterpreterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NibFileInterpreterTest.m; sourceTree = "<group>"; };
+		50F03B1F0FA5BF3700FDB765 /* PlistFileInterpreterTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistFileInterpreterTest.h; sourceTree = "<group>"; };
+		50F03B200FA5BF3700FDB765 /* PlistFileInterpreterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistFileInterpreterTest.m; sourceTree = "<group>"; };
+		50F03BD70FA5EB5300FDB765 /* BLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLObject.h; sourceTree = "<group>"; };
+		50F03BD80FA5EB5300FDB765 /* BLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLObject.m; sourceTree = "<group>"; };
+		50F03BF70FA60CEA00FDB765 /* BLProcessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLProcessManager.h; sourceTree = "<group>"; };
+		50F03BF80FA60CEA00FDB765 /* BLProcessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLProcessManager.m; sourceTree = "<group>"; };
+		50F03BFB0FA60F5C00FDB765 /* BLProcessStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLProcessStep.h; sourceTree = "<group>"; };
+		50F03BFC0FA60F5C00FDB765 /* BLProcessStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLProcessStep.m; sourceTree = "<group>"; };
+		50F03BFF0FA61F7D00FDB765 /* BLInterpreterStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLInterpreterStep.h; path = ../../Documents/Processing/BLInterpreterStep.h; sourceTree = "<group>"; };
+		50F03C000FA61F7D00FDB765 /* BLInterpreterStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLInterpreterStep.m; path = ../../Documents/Processing/BLInterpreterStep.m; sourceTree = "<group>"; };
+		50F03C0A0FA626C000FDB765 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/BLProcessStep.strings; sourceTree = "<group>"; };
+		50F03C0E0FA627AC00FDB765 /* BLInterpretationStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLInterpretationStep.h; path = ../../Documents/Processing/BLInterpretationStep.h; sourceTree = "<group>"; };
+		50F03C0F0FA627AC00FDB765 /* BLInterpretationStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLInterpretationStep.m; path = ../../Documents/Processing/BLInterpretationStep.m; sourceTree = "<group>"; };
+		50F6BA3210144B84008C8727 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/BLXcodeImporter.xib; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* BlueLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlueLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5054D2C31404D04900434EAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5054D3141404D24D00434EAC /* BlueLocalization.framework in Frameworks */,
+				5054D2C91404D04900434EAC /* SenTestingKit.framework in Frameworks */,
+				5054D2CA1404D04900434EAC /* Cocoa.framework in Frameworks */,
+				5054D3121404D20A00434EAC /* OCMock.framework in Frameworks */,
+				5054D3131404D20A00434EAC /* hamcrest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		507F05B21404E3A00008D824 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				507F05B71404E3A00008D824 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* BlueLocalization.framework */,
+				5054D2C71404D04900434EAC /* BlueLocalization Tests.octest */,
+				507F05B51404E3A00008D824 /* TestHost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* BlueLocalization */ = {
+			isa = PBXGroup;
+			children = (
+				50C246D20F979D58003B3522 /* Framework */,
+				50C247A20F979D7D003B3522 /* Tests */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = BlueLocalization;
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+				5014BB0C0FB49C6600DC2EC3 /* OCMock.framework */,
+				5014BB5A0FB4A3CC00DC2EC3 /* hamcrest.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				5054D2C81404D04900434EAC /* SenTestingKit.framework */,
+				507F05B81404E3A00008D824 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5024701111300408001DA94B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5024701211300414001DA94B /* BLDictionaryExporter.h */,
+				5024701311300414001DA94B /* BLDictionaryExporter.m */,
+				508D0F9711359EDE00D50A2B /* BLTMXExporter.h */,
+				508D0F9811359EDE00D50A2B /* BLTMXExporter.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		5048BF67127A2686006FFAC2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5048BF63127A1D98006FFAC2 /* BLDocumentPreferences.h */,
+				5048BF64127A1D98006FFAC2 /* BLDocumentPreferences.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		5048BF8F127A3316006FFAC2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5048BF90127A3323006FFAC2 /* DocumentPreferencesTest.h */,
+				5048BF91127A3323006FFAC2 /* DocumentPreferencesTest.m */,
+				5006929812804F3500470F3D /* DocumentCompressionTest.h */,
+				5006929912804F3500470F3D /* DocumentCompressionTest.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		50597F5F0FCE931B001275A5 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				50AE89180FA674CD00CE3EFF /* BLDatabaseDocument.h */,
+				50AE89190FA674CD00CE3EFF /* BLDatabaseDocument.m */,
+				5048BF2C1279D3D0006FFAC2 /* BLDatabaseDocumentPreferences.h */,
+				50AE891C0FA676EC00CE3EFF /* BLDatabaseDocumentActions.h */,
+				50AE891D0FA676EC00CE3EFF /* BLDatabaseDocumentActions.m */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		50597F600FCE9320001275A5 /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				50597F5B0FCE91E0001275A5 /* BLLocalizerDocument.h */,
+				50597F5C0FCE91E0001275A5 /* BLLocalizerDocument.m */,
+				5055576B0FB4E20F0008BE20 /* BLLocalizerExportStep.h */,
+				5055576C0FB4E20F0008BE20 /* BLLocalizerExportStep.m */,
+				505558E80FB521910008BE20 /* BLLocalizerImportStep.h */,
+				505558E90FB521910008BE20 /* BLLocalizerImportStep.m */,
+			);
+			name = Localizer;
+			sourceTree = "<group>";
+		};
+		50597F610FCE9331001275A5 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				50C246D60F979D58003B3522 /* BLDictionaryFile.h */,
+				50C246D70F979D58003B3522 /* BLDictionaryFile.m */,
+			);
+			name = Dictionary;
+			sourceTree = "<group>";
+		};
+		50597F620FCE9337001275A5 /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				50C246D90F979D58003B3522 /* BLLocalizerFile.h */,
+				50C246DA0F979D58003B3522 /* BLLocalizerFile.m */,
+			);
+			name = Localizer;
+			sourceTree = "<group>";
+		};
+		507981EE110A104300CB5D70 /* XLIFF */ = {
+			isa = PBXGroup;
+			children = (
+				507981EF110A105300CB5D70 /* BLXLIFFExporter.h */,
+				507981F0110A105300CB5D70 /* BLXLIFFExporter.m */,
+				50798257110A229000CB5D70 /* BLXLIFFImporter.h */,
+				50798258110A229000CB5D70 /* BLXLIFFImporter.m */,
+			);
+			path = XLIFF;
+			sourceTree = "<group>";
+		};
+		507F05B81404E3A00008D824 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				507F05B91404E3A00008D824 /* AppKit.framework */,
+				507F05BA1404E3A00008D824 /* CoreData.framework */,
+				507F05BB1404E3A00008D824 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		509551551194969E000FFC58 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				508C3245110BB9AD00EA6CAD /* BLFileInternal.h */,
+				508C3277110BD07600EA6CAD /* BLPropertyListSerialization.h */,
+				50EF0A9B114D40B0002DBB02 /* BLPropertyListSerialization.m */,
+				50955157119496C0000FFC58 /* BLDocumentFileWrapper.h */,
+				50955158119496C0000FFC58 /* BLDocumentFileWrapper.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		509860C210CFE55500614FFE /* Importer */ = {
+			isa = PBXGroup;
+			children = (
+				509860C410CFE56800614FFE /* StringsImporterTest.h */,
+				509860C510CFE56800614FFE /* StringsImporterTest.m */,
+			);
+			path = Importer;
+			sourceTree = "<group>";
+		};
+		50A9B6330FF7C8A400B24D7A /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				50A9B6460FF7CC0400B24D7A /* BLDictionaryDocument.h */,
+				50A9B6470FF7CC0400B24D7A /* BLDictionaryDocument.m */,
+				508C32C7110BF3A900EA6CAD /* BLDictionaryDocumentActions.h */,
+				508C32C8110BF3A900EA6CAD /* BLDictionaryDocumentActions.m */,
+				50EF0BBB114EB1E1002DBB02 /* BLDictionaryFileImportStep.h */,
+				50EF0BBC114EB1E1002DBB02 /* BLDictionaryFileImportStep.m */,
+			);
+			name = Dictionary;
+			sourceTree = "<group>";
+		};
+		50AE89160FA674BC00CE3EFF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				508C3339110DC76600EA6CAD /* BLDocumentProtocol.h */,
+				509553981194ABF1000FFC58 /* BLDocument.h */,
+				509553991194ABF1000FFC58 /* BLDocument.m */,
+				50597F5F0FCE931B001275A5 /* Database */,
+				50597F600FCE9320001275A5 /* Localizer */,
+				50A9B6330FF7C8A400B24D7A /* Dictionary */,
+				5048BF67127A2686006FFAC2 /* Utilities */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		50B1A70311070E3F00551CA7 /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				50B1A70411070E3F00551CA7 /* Strings */,
+				50B1A70911070E3F00551CA7 /* Xcode */,
+				507981EE110A104300CB5D70 /* XLIFF */,
+				5024701111300408001DA94B /* Other */,
+			);
+			path = Integration;
+			sourceTree = "<group>";
+		};
+		50B1A70411070E3F00551CA7 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				50B1A70511070E3F00551CA7 /* BLStringsExporter.h */,
+				50B1A70611070E3F00551CA7 /* BLStringsExporter.m */,
+				50B1A70711070E3F00551CA7 /* BLStringsImporter.h */,
+				50B1A70811070E3F00551CA7 /* BLStringsImporter.m */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		50B1A70911070E3F00551CA7 /* Xcode */ = {
+			isa = PBXGroup;
+			children = (
+				50B1A70A11070E3F00551CA7 /* BLXcodeExporter.h */,
+				50B1A70B11070E3F00551CA7 /* BLXcodeExporter.m */,
+				50B1A70C11070E3F00551CA7 /* BLXcodeImporter.h */,
+				50B1A70D11070E3F00551CA7 /* BLXcodeImporter.m */,
+				50D19EC4129C708B0097AA99 /* BLXcodeImportAssociationStep.h */,
+				50D19EC5129C708B0097AA99 /* BLXcodeImportAssociationStep.m */,
+				500C5817140FB36600DD5F0E /* BLXcodeImportUpdateStep.h */,
+				500C5818140FB36600DD5F0E /* BLXcodeImportUpdateStep.m */,
+				5010B769129C8D6E0044A488 /* BLXcodeExportUpdateStep.h */,
+				5010B76A129C8D6E0044A488 /* BLXcodeExportUpdateStep.m */,
+			);
+			path = Xcode;
+			sourceTree = "<group>";
+		};
+		50B1A71E1107183200551CA7 /* Nib */ = {
+			isa = PBXGroup;
+			children = (
+				50B1A71F1107183200551CA7 /* BLNibConverterStep.h */,
+				50B1A7201107183200551CA7 /* BLNibConverterStep.m */,
+				50B1A7211107183200551CA7 /* BLNibFileConverter.h */,
+				50B1A7221107183200551CA7 /* BLNibFileConverter.m */,
+			);
+			path = Nib;
+			sourceTree = "<group>";
+		};
+		50B1AA0F1107414D00551CA7 /* Xcode */ = {
+			isa = PBXGroup;
+			children = (
+				50B1AA151107414D00551CA7 /* BLXcodeProjectParser.h */,
+				50B1AA161107414D00551CA7 /* BLXcodeProjectParser.m */,
+				50B1AA101107414D00551CA7 /* BLXcodeProjectInternal.h */,
+				50B1AA111107414D00551CA7 /* BLXcodeProjectItem.h */,
+				50B1AA121107414D00551CA7 /* BLXcodeProjectItem.m */,
+				50B1AA131107414D00551CA7 /* BLXcodeProjectLocalization.h */,
+				50B1AA141107414D00551CA7 /* BLXcodeProjectLocalization.m */,
+			);
+			path = Xcode;
+			sourceTree = "<group>";
+		};
+		50B1AE511108F3BE00551CA7 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				50B1AE521108F3BE00551CA7 /* BLTMXDocument.h */,
+				50B1AE531108F3BE00551CA7 /* BLTMXDocument.m */,
+				50B1AE571108F3E400551CA7 /* BLXLIFFDocument.h */,
+				50B1AE581108F3E400551CA7 /* BLXLIFFDocument.m */,
+				508C3318110C114A00EA6CAD /* BLAppleGlotDocument.h */,
+				508C3319110C114A00EA6CAD /* BLAppleGlotDocument.m */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		50BBBE070FFC010F0000E48E /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				50BB617B10B483DE00A1AD4C /* BLToolPath.h */,
+				50BB617C10B483DE00A1AD4C /* BLToolPath.m */,
+				50B1AE511108F3BE00551CA7 /* Files */,
+				50B1AA0F1107414D00551CA7 /* Xcode */,
+			);
+			path = Integration;
+			sourceTree = "<group>";
+		};
+		50BBBE3E0FFC06680000E48E /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				50BBBE3F0FFC06760000E48E /* XcodeProjectParserTest.h */,
+				50BBBE400FFC06760000E48E /* XcodeProjectParserTest.m */,
+				509736180FFE4960001DBF72 /* XcodeProjectModificationTest.h */,
+				509736190FFE4960001DBF72 /* XcodeProjectModificationTest.m */,
+				50C1D5C91010EDC300C94293 /* XcodeProjectLocalizationTest.h */,
+				50C1D5CA1010EDC300C94293 /* XcodeProjectLocalizationTest.m */,
+				50B1AA3011076DE100551CA7 /* TMXIntegrationTest.h */,
+				50B1AA3111076DE100551CA7 /* TMXIntegrationTest.m */,
+				50B1AE8A1109DB6700551CA7 /* XLIFFIntegrationTest.h */,
+				50B1AE8B1109DB6700551CA7 /* XLIFFIntegrationTest.m */,
+				508C331C110DC29400EA6CAD /* AppleGlotIntegrationTest.h */,
+				508C331D110DC29400EA6CAD /* AppleGlotIntegrationTest.m */,
+			);
+			path = Integration;
+			sourceTree = "<group>";
+		};
+		50C246D20F979D58003B3522 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				50C2470C0F979D58003B3522 /* Model */,
+				50C246D30F979D58003B3522 /* Documents */,
+				50C246E40F979D58003B3522 /* Files */,
+				50C2472D0F979D58003B3522 /* Utilities */,
+				50C246DB0F979D58003B3522 /* Extensions */,
+				50C247D20F979F1B003B3522 /* Resources */,
+				50C2472A0F979D58003B3522 /* Other */,
+			);
+			name = Framework;
+			path = Source/Framework;
+			sourceTree = "<group>";
+		};
+		50C246D30F979D58003B3522 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				50AE89160FA674BC00CE3EFF /* Classes */,
+				50F03BF50FA60CCF00FDB765 /* Processing */,
+				50C246D50F979D58003B3522 /* Files */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		50C246D50F979D58003B3522 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				508C3241110BB99B00EA6CAD /* BLFile.h */,
+				508C3242110BB99B00EA6CAD /* BLFile.m */,
+				50EF0761114A9E89002DBB02 /* Database */,
+				50597F620FCE9337001275A5 /* Localizer */,
+				50597F610FCE9331001275A5 /* Dictionary */,
+				509551551194969E000FFC58 /* Utilities */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		50C246DB0F979D58003B3522 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				50C246DC0F979D58003B3522 /* BLArrayExtensions.h */,
+				50C246DD0F979D58003B3522 /* BLArrayExtensions.m */,
+				50C246E00F979D58003B3522 /* BLFileManagerAdditions.h */,
+				50C246E10F979D58003B3522 /* BLFileManagerAdditions.m */,
+				50C246E20F979D58003B3522 /* BLSecurityExtensions.h */,
+				50C246E30F979D58003B3522 /* BLSecurityExtensions.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		50C246E40F979D58003B3522 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				50C246FD0F979D58003B3522 /* Interpreter */,
+				50C246E80F979D58003B3522 /* Creator */,
+				50B1A70311070E3F00551CA7 /* Integration */,
+				50C246E50F979D58003B3522 /* Converter */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		50C246E50F979D58003B3522 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				50B1A71E1107183200551CA7 /* Nib */,
+			);
+			path = Converter;
+			sourceTree = "<group>";
+		};
+		50C246E80F979D58003B3522 /* Creator */ = {
+			isa = PBXGroup;
+			children = (
+				50AE893A0FA8461E00CE3EFF /* BLCreatorStep.h */,
+				50AE893B0FA8461E00CE3EFF /* BLCreatorStep.m */,
+				50AE893E0FA849AA00CE3EFF /* BLCreationStep.h */,
+				50AE893F0FA849AA00CE3EFF /* BLCreationStep.m */,
+				50C246E90F979D58003B3522 /* BLFileCreator.h */,
+				50C246EA0F979D58003B3522 /* BLFileCreator.m */,
+				50C246EB0F979D58003B3522 /* BLNibFileCreator.h */,
+				50C246EC0F979D58003B3522 /* BLNibFileCreator.m */,
+				50C246ED0F979D58003B3522 /* BLPlistFileCreator.h */,
+				50C246EE0F979D58003B3522 /* BLPlistFileCreator.m */,
+				50C246F10F979D58003B3522 /* BLRTFFileCreator.h */,
+				50C246F20F979D58003B3522 /* BLRTFFileCreator.m */,
+				50C246F30F979D58003B3522 /* BLStringsFileCreator.h */,
+				50C246F40F979D58003B3522 /* BLStringsFileCreator.m */,
+				50C246F50F979D58003B3522 /* BLTXTFileCreator.h */,
+				50C246F60F979D58003B3522 /* BLTXTFileCreator.m */,
+			);
+			path = Creator;
+			sourceTree = "<group>";
+		};
+		50C246FD0F979D58003B3522 /* Interpreter */ = {
+			isa = PBXGroup;
+			children = (
+				50F03BFF0FA61F7D00FDB765 /* BLInterpreterStep.h */,
+				50F03C000FA61F7D00FDB765 /* BLInterpreterStep.m */,
+				50F03C0E0FA627AC00FDB765 /* BLInterpretationStep.h */,
+				50F03C0F0FA627AC00FDB765 /* BLInterpretationStep.m */,
+				50C246FE0F979D58003B3522 /* BLFileInterpreter.h */,
+				50C246FF0F979D58003B3522 /* BLFileInterpreter.m */,
+				50C247000F979D58003B3522 /* BLNibFileInterpreter.h */,
+				50C247010F979D58003B3522 /* BLNibFileInterpreter.m */,
+				50C247020F979D58003B3522 /* BLPlistFileInterpreter.h */,
+				50C247030F979D58003B3522 /* BLPlistFileInterpreter.m */,
+				50C247060F979D58003B3522 /* BLRTFFileInterpreter.h */,
+				50C247070F979D58003B3522 /* BLRTFFileInterpreter.m */,
+				50C247080F979D58003B3522 /* BLStringsFileInterpreter.h */,
+				50C247090F979D58003B3522 /* BLStringsFileInterpreter.m */,
+				50C2470A0F979D58003B3522 /* BLTXTFileInterpreter.h */,
+				50C2470B0F979D58003B3522 /* BLTXTFileInterpreter.m */,
+			);
+			path = Interpreter;
+			sourceTree = "<group>";
+		};
+		50C2470C0F979D58003B3522 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				50C2470D0F979D58003B3522 /* Base */,
+				50C247140F979D58003B3522 /* Files */,
+				50C247230F979D58003B3522 /* Keys */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		50C2470D0F979D58003B3522 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				50F03BD70FA5EB5300FDB765 /* BLObject.h */,
+				50F03BD80FA5EB5300FDB765 /* BLObject.m */,
+				50C2470E0F979D58003B3522 /* BLBundleObject.h */,
+				50C2470F0F979D58003B3522 /* BLBundleObject.m */,
+				50C247120F979D58003B3522 /* BLObjectExtensions.h */,
+				50C247130F979D58003B3522 /* BLObjectExtensions.m */,
+				5014B9910FB3362200DC2EC3 /* BLObjectProxy.h */,
+				5014B9900FB3362200DC2EC3 /* BLObjectProxy.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		50C247140F979D58003B3522 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				50C247150F979D58003B3522 /* BLFileObject.h */,
+				50C247160F979D58003B3522 /* BLFileObject.m */,
+				50C247170F979D58003B3522 /* BLNibFileObject.h */,
+				50C247180F979D58003B3522 /* BLNibFileObject.m */,
+				50C247190F979D58003B3522 /* BLPlistFileObject.h */,
+				50C2471A0F979D58003B3522 /* BLPlistFileObject.m */,
+				50C2471D0F979D58003B3522 /* BLRTFFileObject.h */,
+				50C2471E0F979D58003B3522 /* BLRTFFileObject.m */,
+				50C2471F0F979D58003B3522 /* BLStringsFileObject.h */,
+				50C247200F979D58003B3522 /* BLStringsFileObject.m */,
+				50C247210F979D58003B3522 /* BLTXTFileObject.h */,
+				50C247220F979D58003B3522 /* BLTXTFileObject.m */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		50C247230F979D58003B3522 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				50C247240F979D58003B3522 /* BLKeyObject.h */,
+				50C247250F979D58003B3522 /* BLKeyObject.m */,
+				50C247260F979D58003B3522 /* BLRTFDKeyObject.h */,
+				50C247270F979D58003B3522 /* BLRTFDKeyObject.m */,
+				50C247280F979D58003B3522 /* BLStringKeyObject.h */,
+				50C247290F979D58003B3522 /* BLStringKeyObject.m */,
+				50D1126E0FB86C05006FCF8C /* BLGroupedKeyObject.h */,
+				50D1126F0FB86C05006FCF8C /* BLGroupedKeyObject.m */,
+				50B64F65112C5C74001CDB35 /* BLSegmentedKeyObject.h */,
+				50B64F66112C5C74001CDB35 /* BLSegmentedKeyObject.m */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
+		50C2472A0F979D58003B3522 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				50C2472B0F979D58003B3522 /* BlueLocalization.h */,
+				50C2472C0F979D58003B3522 /* BlueLocalization_Prefix.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		50C2472D0F979D58003B3522 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				50C2472E0F979D58003B3522 /* General */,
+				50BBBE070FFC010F0000E48E /* Integration */,
+				50C247370F979D58003B3522 /* Strings */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		50C2472E0F979D58003B3522 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				50C2472F0F979D58003B3522 /* BLLanguageTranslator.h */,
+				50C247300F979D58003B3522 /* BLLanguageTranslator.m */,
+				50C247330F979D58003B3522 /* BLPathCreator.h */,
+				50C247340F979D58003B3522 /* BLPathCreator.m */,
+				5064FC120FBDA50100DF3069 /* BLProcessLog.h */,
+				5064FC130FBDA50100DF3069 /* BLProcessLog.m */,
+				50A0F63D112E9F92000C6216 /* BLDictionaryController.h */,
+				50A0F63E112E9F92000C6216 /* BLDictionaryController.m */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		50C247370F979D58003B3522 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				50C247380F979D58003B3522 /* BLStringReplacement.h */,
+				50C247390F979D58003B3522 /* BLStringReplacement.m */,
+				50C2473A0F979D58003B3522 /* BLStringsDictionary.h */,
+				50C2473B0F979D58003B3522 /* BLStringsDictionary.m */,
+				50C2473C0F979D58003B3522 /* BLStringsScanner.h */,
+				50C2473D0F979D58003B3522 /* BLStringsScanner.m */,
+				5024F8F20FBB160600E6097F /* BLStringComparison.h */,
+				5024F8F30FBB160600E6097F /* BLStringComparison.m */,
+				50B64E7B112BF7BC001CDB35 /* BLStringSegmentation.h */,
+				50B64E7C112BF7BC001CDB35 /* BLStringSegmentation.m */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		50C247A20F979D7D003B3522 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				50C247A80F979D7D003B3522 /* Model */,
+				50EF0BCC114EB2EE002DBB02 /* Documents */,
+				50C247A30F979D7D003B3522 /* Files */,
+				50C247BE0F979DAB003B3522 /* Utilities */,
+				50C2481D0F979F8C003B3522 /* Test Data */,
+				50C247AE0F979D7D003B3522 /* Other */,
+			);
+			name = Tests;
+			path = Source/Tests;
+			sourceTree = "<group>";
+		};
+		50C247A30F979D7D003B3522 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				50C247A50F979D7D003B3522 /* Interpreter */,
+				50C247A40F979D7D003B3522 /* Creator */,
+				509860C210CFE55500614FFE /* Importer */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		50C247A40F979D7D003B3522 /* Creator */ = {
+			isa = PBXGroup;
+			children = (
+				50244FFA1095B911000AF365 /* StringsFileCreatorTest.h */,
+				50244FFB1095B911000AF365 /* StringsFileCreatorTest.m */,
+				507378CC1406752E00CC54C4 /* TXTFileCreatorTest.h */,
+				507378CD1406752E00CC54C4 /* TXTFileCreatorTest.m */,
+				50EF0E0E1150F4C7002DBB02 /* NibFileCreatorTest.h */,
+				50EF0E0F1150F4C7002DBB02 /* NibFileCreatorTest.m */,
+			);
+			path = Creator;
+			sourceTree = "<group>";
+		};
+		50C247A50F979D7D003B3522 /* Interpreter */ = {
+			isa = PBXGroup;
+			children = (
+				50BF2D490F99438100942BC0 /* FileInterpreterTest.h */,
+				50BF2D4A0F99438100942BC0 /* FileInterpreterTest.m */,
+				50C247A60F979D7D003B3522 /* StringsFileInterpreterTest.h */,
+				50C247A70F979D7D003B3522 /* StringsFileInterpreterTest.m */,
+				50F03A960FA5B73900FDB765 /* NibFileInterpreterTest.h */,
+				50F03A970FA5B73900FDB765 /* NibFileInterpreterTest.m */,
+				50F03B1F0FA5BF3700FDB765 /* PlistFileInterpreterTest.h */,
+				50F03B200FA5BF3700FDB765 /* PlistFileInterpreterTest.m */,
+			);
+			path = Interpreter;
+			sourceTree = "<group>";
+		};
+		50C247A80F979D7D003B3522 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				50C247A90F979D7D003B3522 /* Base */,
+				50C247AC0F979D7D003B3522 /* Files */,
+				50C247AD0F979D7D003B3522 /* Keys */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		50C247A90F979D7D003B3522 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				50C247AA0F979D7D003B3522 /* ObjectTest.h */,
+				50C247AB0F979D7D003B3522 /* ObjectTest.m */,
+				5014B98C0FB3360300DC2EC3 /* ObjectProxyTest.h */,
+				5014B98D0FB3360300DC2EC3 /* ObjectProxyTest.m */,
+				50BB648710B5B62C00A1AD4C /* ObjectExtensionsTest.h */,
+				50BB648810B5B62C00A1AD4C /* ObjectExtensionsTest.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		50C247AC0F979D7D003B3522 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				50CC9B1F115CE3D200AFC588 /* FileObjectTest.h */,
+				50CC9B20115CE3D200AFC588 /* FileObjectTest.m */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		50C247AD0F979D7D003B3522 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				5098629510D1743900614FFE /* KeyObjectTest.h */,
+				5098629610D1743900614FFE /* KeyObjectTest.m */,
+				50B64F72112C6A3A001CDB35 /* SegmentedKeyObjectTest.h */,
+				50B64F73112C6A3A001CDB35 /* SegmentedKeyObjectTest.m */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
+		50C247AE0F979D7D003B3522 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				507F05DE1404E6C50008D824 /* TestHost-Info.plist */,
+				507F05DF1404E6C50008D824 /* UnitTests-Info.plist */,
+				50C247AF0F979D7D003B3522 /* main.m */,
+				50C247B00F979D7D003B3522 /* UnitTests_Prefix.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		50C247BE0F979DAB003B3522 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				50C247BF0F979DAB003B3522 /* General */,
+				50BBBE3E0FFC06680000E48E /* Integration */,
+				50C247C00F979DAB003B3522 /* Strings */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		50C247BF0F979DAB003B3522 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				506E80FE1057AAF2005BAB74 /* LanguageTranslatorTest.h */,
+				506E80FF1057AAF2005BAB74 /* LanguageTranslatorTest.m */,
+				5064FCC90FC13EBE00DF3069 /* ProcessLogTest.h */,
+				5064FCCA0FC13EBE00DF3069 /* ProcessLogTest.m */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		50C247C00F979DAB003B3522 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				50C247C10F979DAB003B3522 /* StringsDictionaryTest.h */,
+				50C247C20F979DAB003B3522 /* StringsDictionaryTest.m */,
+				50B64E9C112C0E6D001CDB35 /* StringSegmentationTest.h */,
+				50B64E9D112C0E6D001CDB35 /* StringSegmentationTest.m */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		50C247D20F979F1B003B3522 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50293192075BD4D7009FEC06 /* Info.plist */,
+				50C247DC0F979F1B003B3522 /* InfoPlist.strings */,
+				50C247DE0F979F1B003B3522 /* Localizable.strings */,
+				5024700B113002D3001DA94B /* BLDictionaryExporter.xib */,
+				50F03C0C0FA626C700FDB765 /* BLProcessStep.strings */,
+				503F87D114068848000EA4AC /* BLDefaultPlaceholders.plist */,
+				50C247DA0F979F1B003B3522 /* BLStringsExporter.xib */,
+				508D0FA211359F8C00D50A2B /* BLTMXExporter.xib */,
+				502148FD101605F900A8180B /* BLXcodeExporter.xib */,
+				50F6BA3110144B84008C8727 /* BLXcodeImporter.xib */,
+				507981F4110A142F00CB5D70 /* BLXLIFFExporter.xib */,
+			);
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		50EF0761114A9E89002DBB02 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				50EF075C114A9E7A002DBB02 /* BLDatabaseFile.h */,
+				50EF075D114A9E7A002DBB02 /* BLDatabaseFile.m */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		50EF0BCC114EB2EE002DBB02 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				5048BF8F127A3316006FFAC2 /* Classes */,
+				50EF0BCD114EB2EE002DBB02 /* Files */,
+				50EF0BCE114EB2EE002DBB02 /* Processing */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		50EF0BCD114EB2EE002DBB02 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				50EF0BCF114EB316002DBB02 /* FileTest.h */,
+				50EF0BD0114EB316002DBB02 /* FileTest.m */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		50EF0BCE114EB2EE002DBB02 /* Processing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Processing;
+			sourceTree = "<group>";
+		};
+		50F03BF50FA60CCF00FDB765 /* Processing */ = {
+			isa = PBXGroup;
+			children = (
+				50F03BF70FA60CEA00FDB765 /* BLProcessManager.h */,
+				50F03BF80FA60CEA00FDB765 /* BLProcessManager.m */,
+				50F03BFB0FA60F5C00FDB765 /* BLProcessStep.h */,
+				50F03BFC0FA60F5C00FDB765 /* BLProcessStep.m */,
+				505557770FB4F8B40008BE20 /* BLGenericProcessStep.h */,
+				505557780FB4F8B40008BE20 /* BLGenericProcessStep.m */,
+			);
+			path = Processing;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C2473F0F979D58003B3522 /* BLDictionaryFile.h in Headers */,
+				50C247420F979D58003B3522 /* BLLocalizerFile.h in Headers */,
+				50C247440F979D58003B3522 /* BLArrayExtensions.h in Headers */,
+				50C247480F979D58003B3522 /* BLFileManagerAdditions.h in Headers */,
+				50C2474A0F979D58003B3522 /* BLSecurityExtensions.h in Headers */,
+				50C2474E0F979D58003B3522 /* BLFileCreator.h in Headers */,
+				50C247500F979D58003B3522 /* BLNibFileCreator.h in Headers */,
+				50C247520F979D58003B3522 /* BLPlistFileCreator.h in Headers */,
+				50C247560F979D58003B3522 /* BLRTFFileCreator.h in Headers */,
+				50C247580F979D58003B3522 /* BLStringsFileCreator.h in Headers */,
+				50C2475A0F979D58003B3522 /* BLTXTFileCreator.h in Headers */,
+				50C247600F979D58003B3522 /* BLFileInterpreter.h in Headers */,
+				50C247620F979D58003B3522 /* BLNibFileInterpreter.h in Headers */,
+				50C247640F979D58003B3522 /* BLPlistFileInterpreter.h in Headers */,
+				50C247680F979D58003B3522 /* BLRTFFileInterpreter.h in Headers */,
+				50C2476A0F979D58003B3522 /* BLStringsFileInterpreter.h in Headers */,
+				50C2476C0F979D58003B3522 /* BLTXTFileInterpreter.h in Headers */,
+				50C2476E0F979D58003B3522 /* BLBundleObject.h in Headers */,
+				50C247720F979D58003B3522 /* BLObjectExtensions.h in Headers */,
+				50C247740F979D58003B3522 /* BLFileObject.h in Headers */,
+				50C247760F979D58003B3522 /* BLNibFileObject.h in Headers */,
+				50C247780F979D58003B3522 /* BLPlistFileObject.h in Headers */,
+				50C2477C0F979D58003B3522 /* BLRTFFileObject.h in Headers */,
+				50C2477E0F979D58003B3522 /* BLStringsFileObject.h in Headers */,
+				50C247800F979D58003B3522 /* BLTXTFileObject.h in Headers */,
+				50C247820F979D58003B3522 /* BLKeyObject.h in Headers */,
+				50C247840F979D58003B3522 /* BLRTFDKeyObject.h in Headers */,
+				50C247860F979D58003B3522 /* BLStringKeyObject.h in Headers */,
+				50C247880F979D58003B3522 /* BlueLocalization.h in Headers */,
+				50C2478A0F979D58003B3522 /* BLLanguageTranslator.h in Headers */,
+				50C2478E0F979D58003B3522 /* BLPathCreator.h in Headers */,
+				50C247920F979D58003B3522 /* BLStringReplacement.h in Headers */,
+				50C247940F979D58003B3522 /* BLStringsDictionary.h in Headers */,
+				50C247960F979D58003B3522 /* BLStringsScanner.h in Headers */,
+				50F03BD90FA5EB5300FDB765 /* BLObject.h in Headers */,
+				50F03BF90FA60CEA00FDB765 /* BLProcessManager.h in Headers */,
+				50F03BFD0FA60F5C00FDB765 /* BLProcessStep.h in Headers */,
+				50F03C010FA61F7D00FDB765 /* BLInterpreterStep.h in Headers */,
+				50F03C100FA627AC00FDB765 /* BLInterpretationStep.h in Headers */,
+				50AE891A0FA674CD00CE3EFF /* BLDatabaseDocument.h in Headers */,
+				50AE891E0FA676EC00CE3EFF /* BLDatabaseDocumentActions.h in Headers */,
+				50AE893C0FA8461E00CE3EFF /* BLCreatorStep.h in Headers */,
+				50AE89400FA849AA00CE3EFF /* BLCreationStep.h in Headers */,
+				5014B9930FB3362200DC2EC3 /* BLObjectProxy.h in Headers */,
+				5055576D0FB4E20F0008BE20 /* BLLocalizerExportStep.h in Headers */,
+				505557790FB4F8B40008BE20 /* BLGenericProcessStep.h in Headers */,
+				505558EA0FB521910008BE20 /* BLLocalizerImportStep.h in Headers */,
+				50D112700FB86C05006FCF8C /* BLGroupedKeyObject.h in Headers */,
+				5024F8F40FBB160600E6097F /* BLStringComparison.h in Headers */,
+				5064FC140FBDA50100DF3069 /* BLProcessLog.h in Headers */,
+				50597F5D0FCE91E0001275A5 /* BLLocalizerDocument.h in Headers */,
+				50A9B6480FF7CC0400B24D7A /* BLDictionaryDocument.h in Headers */,
+				50BB617D10B483DE00A1AD4C /* BLToolPath.h in Headers */,
+				50B1A70E11070E3F00551CA7 /* BLStringsExporter.h in Headers */,
+				50B1A71011070E3F00551CA7 /* BLStringsImporter.h in Headers */,
+				50B1A71211070E3F00551CA7 /* BLXcodeExporter.h in Headers */,
+				50B1A71411070E3F00551CA7 /* BLXcodeImporter.h in Headers */,
+				50B1A7231107183200551CA7 /* BLNibConverterStep.h in Headers */,
+				50B1A7251107183200551CA7 /* BLNibFileConverter.h in Headers */,
+				50B1AA171107414D00551CA7 /* BLXcodeProjectInternal.h in Headers */,
+				50B1AA181107414D00551CA7 /* BLXcodeProjectItem.h in Headers */,
+				50B1AA1A1107414D00551CA7 /* BLXcodeProjectLocalization.h in Headers */,
+				50B1AA1C1107414D00551CA7 /* BLXcodeProjectParser.h in Headers */,
+				50B1AE541108F3BE00551CA7 /* BLTMXDocument.h in Headers */,
+				50B1AE591108F3E400551CA7 /* BLXLIFFDocument.h in Headers */,
+				507981F1110A105300CB5D70 /* BLXLIFFExporter.h in Headers */,
+				50798259110A229000CB5D70 /* BLXLIFFImporter.h in Headers */,
+				508C3243110BB99B00EA6CAD /* BLFile.h in Headers */,
+				508C3246110BB9AD00EA6CAD /* BLFileInternal.h in Headers */,
+				508C3278110BD07600EA6CAD /* BLPropertyListSerialization.h in Headers */,
+				508C32C9110BF3A900EA6CAD /* BLDictionaryDocumentActions.h in Headers */,
+				508C331A110C114A00EA6CAD /* BLAppleGlotDocument.h in Headers */,
+				508C333A110DC76600EA6CAD /* BLDocumentProtocol.h in Headers */,
+				50B64E7D112BF7BC001CDB35 /* BLStringSegmentation.h in Headers */,
+				50B64F67112C5C74001CDB35 /* BLSegmentedKeyObject.h in Headers */,
+				50A0F63F112E9F92000C6216 /* BLDictionaryController.h in Headers */,
+				5024701411300414001DA94B /* BLDictionaryExporter.h in Headers */,
+				508D0F9911359EDE00D50A2B /* BLTMXExporter.h in Headers */,
+				50EF075E114A9E7A002DBB02 /* BLDatabaseFile.h in Headers */,
+				50EF0BBD114EB1E1002DBB02 /* BLDictionaryFileImportStep.h in Headers */,
+				50955159119496C0000FFC58 /* BLDocumentFileWrapper.h in Headers */,
+				5095539A1194ABF1000FFC58 /* BLDocument.h in Headers */,
+				5048BF2D1279D3D0006FFAC2 /* BLDatabaseDocumentPreferences.h in Headers */,
+				5048BF65127A1D98006FFAC2 /* BLDocumentPreferences.h in Headers */,
+				50D19EC6129C708B0097AA99 /* BLXcodeImportAssociationStep.h in Headers */,
+				5010B76B129C8D6E0044A488 /* BLXcodeExportUpdateStep.h in Headers */,
+				500C5819140FB36600DD5F0E /* BLXcodeImportUpdateStep.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5054D2C61404D04900434EAC /* BlueLocalization Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5054D2DC1404D04900434EAC /* Build configuration list for PBXNativeTarget "BlueLocalization Tests" */;
+			buildPhases = (
+				507F05E01404E8230008D824 /* ShellScript */,
+				5054D2C21404D04900434EAC /* Sources */,
+				5054D2C31404D04900434EAC /* Frameworks */,
+				5054D2C41404D04900434EAC /* Resources */,
+				5054D2C51404D04900434EAC /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				507F05D21404E3DD0008D824 /* PBXTargetDependency */,
+				507F05D41404E3DD0008D824 /* PBXTargetDependency */,
+			);
+			name = "BlueLocalization Tests";
+			productName = "Unit Tests";
+			productReference = 5054D2C71404D04900434EAC /* BlueLocalization Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		507F05B41404E3A00008D824 /* TestHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 507F05D01404E3A00008D824 /* Build configuration list for PBXNativeTarget "TestHost" */;
+			buildPhases = (
+				507F05B11404E3A00008D824 /* Sources */,
+				507F05B21404E3A00008D824 /* Frameworks */,
+				507F05D81404E45A0008D824 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestHost;
+			productName = TestHost;
+			productReference = 507F05B51404E3A00008D824 /* TestHost.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8DC2EF4F0486A6940098B216 /* BlueLocalization */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 501EBC3C0854F27900FBC27B /* Build configuration list for PBXNativeTarget "BlueLocalization" */;
+			buildPhases = (
+				50293194075BD547009FEC06 /* Update Build Number */,
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlueLocalization;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = BlueLocalization;
+			productReference = 8DC2EF5B0486A6940098B216 /* BlueLocalization.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Localization Suite";
+			};
+			buildConfigurationList = 501EBC400854F27900FBC27B /* Build configuration list for PBXProject "BlueLocalization" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* BlueLocalization */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DC2EF4F0486A6940098B216 /* BlueLocalization */,
+				5054D2C61404D04900434EAC /* BlueLocalization Tests */,
+				507F05B41404E3A00008D824 /* TestHost */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5054D2C41404D04900434EAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5054D3111404D1F000434EAC /* Test Data in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50D10D7A0FB5CC03006FCF8C /* Localizable.strings in Resources */,
+				50F03C0D0FA626C700FDB765 /* BLProcessStep.strings in Resources */,
+				5015EA880FF1A21600239775 /* BLStringsExporter.xib in Resources */,
+				50F6BA3310144B84008C8727 /* BLXcodeImporter.xib in Resources */,
+				502148FF101605F900A8180B /* BLXcodeExporter.xib in Resources */,
+				507981F6110A142F00CB5D70 /* BLXLIFFExporter.xib in Resources */,
+				5024700D113002D3001DA94B /* BLDictionaryExporter.xib in Resources */,
+				508D0FA411359F8C00D50A2B /* BLTMXExporter.xib in Resources */,
+				503F87D214068848000EA4AC /* BLDefaultPlaceholders.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50293194075BD547009FEC06 /* Update Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Updating build number\"\n\ncd \"$PROJECT_DIR/../Shared/Tools\"\n./buildnumber -d \"$PRODUCT_SETTINGS_PATH\"\n\necho \"Done\"";
+		};
+		5054D2C51404D04900434EAC /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		507F05E01404E8230008D824 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make tests";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5054D2C21404D04900434EAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5054D2DE1404D1E100434EAC /* ObjectTest.m in Sources */,
+				5054D2E01404D1E100434EAC /* ObjectProxyTest.m in Sources */,
+				5054D2E21404D1E100434EAC /* ObjectExtensionsTest.m in Sources */,
+				5054D2E41404D1E100434EAC /* FileObjectTest.m in Sources */,
+				5054D2E61404D1E100434EAC /* KeyObjectTest.m in Sources */,
+				5054D2E81404D1E100434EAC /* SegmentedKeyObjectTest.m in Sources */,
+				5054D2EA1404D1E100434EAC /* DocumentPreferencesTest.m in Sources */,
+				5054D2EC1404D1E100434EAC /* DocumentCompressionTest.m in Sources */,
+				5054D2EE1404D1E100434EAC /* FileTest.m in Sources */,
+				5054D2F01404D1E100434EAC /* FileInterpreterTest.m in Sources */,
+				5054D2F21404D1E100434EAC /* StringsFileInterpreterTest.m in Sources */,
+				5054D2F41404D1E100434EAC /* NibFileInterpreterTest.m in Sources */,
+				5054D2F61404D1E100434EAC /* PlistFileInterpreterTest.m in Sources */,
+				5054D2F81404D1E100434EAC /* StringsFileCreatorTest.m in Sources */,
+				5054D2FA1404D1E100434EAC /* NibFileCreatorTest.m in Sources */,
+				5054D2FC1404D1E100434EAC /* StringsImporterTest.m in Sources */,
+				5054D2FE1404D1E100434EAC /* LanguageTranslatorTest.m in Sources */,
+				5054D3001404D1E100434EAC /* ProcessLogTest.m in Sources */,
+				5054D3021404D1E100434EAC /* XcodeProjectParserTest.m in Sources */,
+				5054D3041404D1E100434EAC /* XcodeProjectModificationTest.m in Sources */,
+				5054D3061404D1E100434EAC /* XcodeProjectLocalizationTest.m in Sources */,
+				5054D3081404D1E100434EAC /* TMXIntegrationTest.m in Sources */,
+				5054D30A1404D1E100434EAC /* XLIFFIntegrationTest.m in Sources */,
+				5054D30C1404D1E100434EAC /* AppleGlotIntegrationTest.m in Sources */,
+				5054D30E1404D1E100434EAC /* StringsDictionaryTest.m in Sources */,
+				5054D3101404D1E100434EAC /* StringSegmentationTest.m in Sources */,
+				507378CE1406752E00CC54C4 /* TXTFileCreatorTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		507F05B11404E3A00008D824 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				507F05DD1404E6750008D824 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C247400F979D58003B3522 /* BLDictionaryFile.m in Sources */,
+				50C247430F979D58003B3522 /* BLLocalizerFile.m in Sources */,
+				50C247450F979D58003B3522 /* BLArrayExtensions.m in Sources */,
+				50C247490F979D58003B3522 /* BLFileManagerAdditions.m in Sources */,
+				50C2474B0F979D58003B3522 /* BLSecurityExtensions.m in Sources */,
+				50C2474F0F979D58003B3522 /* BLFileCreator.m in Sources */,
+				50C247510F979D58003B3522 /* BLNibFileCreator.m in Sources */,
+				50C247530F979D58003B3522 /* BLPlistFileCreator.m in Sources */,
+				50C247570F979D58003B3522 /* BLRTFFileCreator.m in Sources */,
+				50C247590F979D58003B3522 /* BLStringsFileCreator.m in Sources */,
+				50C2475B0F979D58003B3522 /* BLTXTFileCreator.m in Sources */,
+				50C247610F979D58003B3522 /* BLFileInterpreter.m in Sources */,
+				50C247630F979D58003B3522 /* BLNibFileInterpreter.m in Sources */,
+				50C247650F979D58003B3522 /* BLPlistFileInterpreter.m in Sources */,
+				50C247690F979D58003B3522 /* BLRTFFileInterpreter.m in Sources */,
+				50C2476B0F979D58003B3522 /* BLStringsFileInterpreter.m in Sources */,
+				50C2476D0F979D58003B3522 /* BLTXTFileInterpreter.m in Sources */,
+				50C2476F0F979D58003B3522 /* BLBundleObject.m in Sources */,
+				50C247730F979D58003B3522 /* BLObjectExtensions.m in Sources */,
+				50C247750F979D58003B3522 /* BLFileObject.m in Sources */,
+				50C247770F979D58003B3522 /* BLNibFileObject.m in Sources */,
+				50C247790F979D58003B3522 /* BLPlistFileObject.m in Sources */,
+				50C2477D0F979D58003B3522 /* BLRTFFileObject.m in Sources */,
+				50C2477F0F979D58003B3522 /* BLStringsFileObject.m in Sources */,
+				50C247810F979D58003B3522 /* BLTXTFileObject.m in Sources */,
+				50C247830F979D58003B3522 /* BLKeyObject.m in Sources */,
+				50C247850F979D58003B3522 /* BLRTFDKeyObject.m in Sources */,
+				50C247870F979D58003B3522 /* BLStringKeyObject.m in Sources */,
+				50C2478B0F979D58003B3522 /* BLLanguageTranslator.m in Sources */,
+				50C2478F0F979D58003B3522 /* BLPathCreator.m in Sources */,
+				50C247930F979D58003B3522 /* BLStringReplacement.m in Sources */,
+				50C247950F979D58003B3522 /* BLStringsDictionary.m in Sources */,
+				50C247970F979D58003B3522 /* BLStringsScanner.m in Sources */,
+				50F03BDA0FA5EB5300FDB765 /* BLObject.m in Sources */,
+				50F03BFA0FA60CEA00FDB765 /* BLProcessManager.m in Sources */,
+				50F03BFE0FA60F5C00FDB765 /* BLProcessStep.m in Sources */,
+				50F03C020FA61F7D00FDB765 /* BLInterpreterStep.m in Sources */,
+				50F03C110FA627AC00FDB765 /* BLInterpretationStep.m in Sources */,
+				50AE891B0FA674CD00CE3EFF /* BLDatabaseDocument.m in Sources */,
+				50AE891F0FA676EC00CE3EFF /* BLDatabaseDocumentActions.m in Sources */,
+				50AE893D0FA8461E00CE3EFF /* BLCreatorStep.m in Sources */,
+				50AE89410FA849AA00CE3EFF /* BLCreationStep.m in Sources */,
+				5014B9920FB3362200DC2EC3 /* BLObjectProxy.m in Sources */,
+				5055576E0FB4E20F0008BE20 /* BLLocalizerExportStep.m in Sources */,
+				5055577A0FB4F8B40008BE20 /* BLGenericProcessStep.m in Sources */,
+				505558EB0FB521910008BE20 /* BLLocalizerImportStep.m in Sources */,
+				50D112710FB86C05006FCF8C /* BLGroupedKeyObject.m in Sources */,
+				5024F8F50FBB160600E6097F /* BLStringComparison.m in Sources */,
+				5064FC150FBDA50100DF3069 /* BLProcessLog.m in Sources */,
+				50597F5E0FCE91E0001275A5 /* BLLocalizerDocument.m in Sources */,
+				50A9B6490FF7CC0400B24D7A /* BLDictionaryDocument.m in Sources */,
+				50BB617E10B483DE00A1AD4C /* BLToolPath.m in Sources */,
+				50B1A70F11070E3F00551CA7 /* BLStringsExporter.m in Sources */,
+				50B1A71111070E3F00551CA7 /* BLStringsImporter.m in Sources */,
+				50B1A71311070E3F00551CA7 /* BLXcodeExporter.m in Sources */,
+				50B1A71511070E3F00551CA7 /* BLXcodeImporter.m in Sources */,
+				50B1A7241107183200551CA7 /* BLNibConverterStep.m in Sources */,
+				50B1A7261107183200551CA7 /* BLNibFileConverter.m in Sources */,
+				50B1AA191107414D00551CA7 /* BLXcodeProjectItem.m in Sources */,
+				50B1AA1B1107414D00551CA7 /* BLXcodeProjectLocalization.m in Sources */,
+				50B1AA1D1107414D00551CA7 /* BLXcodeProjectParser.m in Sources */,
+				50B1AE551108F3BE00551CA7 /* BLTMXDocument.m in Sources */,
+				50B1AE5A1108F3E400551CA7 /* BLXLIFFDocument.m in Sources */,
+				507981F2110A105300CB5D70 /* BLXLIFFExporter.m in Sources */,
+				5079825A110A229000CB5D70 /* BLXLIFFImporter.m in Sources */,
+				508C3244110BB99B00EA6CAD /* BLFile.m in Sources */,
+				508C32CA110BF3A900EA6CAD /* BLDictionaryDocumentActions.m in Sources */,
+				508C331B110C114A00EA6CAD /* BLAppleGlotDocument.m in Sources */,
+				50B64E7E112BF7BC001CDB35 /* BLStringSegmentation.m in Sources */,
+				50B64F68112C5C74001CDB35 /* BLSegmentedKeyObject.m in Sources */,
+				50A0F640112E9F92000C6216 /* BLDictionaryController.m in Sources */,
+				5024701511300414001DA94B /* BLDictionaryExporter.m in Sources */,
+				508D0F9A11359EDE00D50A2B /* BLTMXExporter.m in Sources */,
+				50EF075F114A9E7A002DBB02 /* BLDatabaseFile.m in Sources */,
+				50EF0A9C114D40B0002DBB02 /* BLPropertyListSerialization.m in Sources */,
+				50EF0BBE114EB1E1002DBB02 /* BLDictionaryFileImportStep.m in Sources */,
+				5095515A119496C0000FFC58 /* BLDocumentFileWrapper.m in Sources */,
+				5095539B1194ABF1000FFC58 /* BLDocument.m in Sources */,
+				5048BF66127A1D98006FFAC2 /* BLDocumentPreferences.m in Sources */,
+				50D19EC7129C708B0097AA99 /* BLXcodeImportAssociationStep.m in Sources */,
+				5010B76C129C8D6E0044A488 /* BLXcodeExportUpdateStep.m in Sources */,
+				500C581A140FB36600DD5F0E /* BLXcodeImportUpdateStep.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		507F05D21404E3DD0008D824 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* BlueLocalization */;
+			targetProxy = 507F05D11404E3DD0008D824 /* PBXContainerItemProxy */;
+		};
+		507F05D41404E3DD0008D824 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 507F05B41404E3A00008D824 /* TestHost */;
+			targetProxy = 507F05D31404E3DD0008D824 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		502148FD101605F900A8180B /* BLXcodeExporter.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				502148FE101605F900A8180B /* English */,
+			);
+			name = BLXcodeExporter.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5024700B113002D3001DA94B /* BLDictionaryExporter.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5024700C113002D3001DA94B /* English */,
+			);
+			name = BLDictionaryExporter.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		507981F4110A142F00CB5D70 /* BLXLIFFExporter.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				507981F5110A142F00CB5D70 /* English */,
+			);
+			name = BLXLIFFExporter.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		508D0FA211359F8C00D50A2B /* BLTMXExporter.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				508D0FA311359F8C00D50A2B /* English */,
+			);
+			name = BLTMXExporter.xib;
+			sourceTree = "<group>";
+		};
+		50C247DA0F979F1B003B3522 /* BLStringsExporter.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50C247DB0F979F1B003B3522 /* English */,
+			);
+			name = BLStringsExporter.xib;
+			sourceTree = "<group>";
+		};
+		50C247DC0F979F1B003B3522 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50C247DD0F979F1B003B3522 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		50C247DE0F979F1B003B3522 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50C247DF0F979F1B003B3522 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		50F03C0C0FA626C700FDB765 /* BLProcessStep.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50F03C0A0FA626C000FDB765 /* English */,
+			);
+			name = BLProcessStep.strings;
+			sourceTree = "<group>";
+		};
+		50F6BA3110144B84008C8727 /* BLXcodeImporter.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50F6BA3210144B84008C8727 /* English */,
+			);
+			name = BLXcodeImporter.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		501EBC3D0854F27900FBC27B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = Source/Framework/Other/BlueLocalization_Prefix.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "@executable_path/../Frameworks/";
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = BlueLocalization;
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		501EBC410854F27900FBC27B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5054D2D91404D04900434EAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TestHost.app/Contents/MacOS/TestHost";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/../Shared/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = Source/Tests/Other/UnitTests_Prefix.pch;
+				INFOPLIST_FILE = "Resources/UnitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5058362A1406F62000762666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5058362B1406F62000762666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = Source/Framework/Other/BlueLocalization_Prefix.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "@executable_path/../Frameworks/";
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = BlueLocalization;
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5058362C1406F62000762666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TestHost.app/Contents/MacOS/TestHost";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/../Shared/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = Source/Tests/Other/UnitTests_Prefix.pch;
+				INFOPLIST_FILE = "Resources/UnitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		5058362D1406F62000762666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "Resources/TestHost-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks/;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		507F05CE1404E3A00008D824 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "Resources/TestHost-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks/;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		501EBC3C0854F27900FBC27B /* Build configuration list for PBXNativeTarget "BlueLocalization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				501EBC3D0854F27900FBC27B /* Debug */,
+				5058362B1406F62000762666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		501EBC400854F27900FBC27B /* Build configuration list for PBXProject "BlueLocalization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				501EBC410854F27900FBC27B /* Debug */,
+				5058362A1406F62000762666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5054D2DC1404D04900434EAC /* Build configuration list for PBXNativeTarget "BlueLocalization Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5054D2D91404D04900434EAC /* Debug */,
+				5058362C1406F62000762666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		507F05D01404E3A00008D824 /* Build configuration list for PBXNativeTarget "TestHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507F05CE1404E3A00008D824 /* Debug */,
+				5058362D1406F62000762666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

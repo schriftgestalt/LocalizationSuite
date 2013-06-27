@@ -1,0 +1,29 @@
+/* Title for guess/match window part */
+"matchguess" = "Matches / Guesses";
+
+/* Title for separate editor window part */
+"editor" = "Editor";
+
+/* Title for separate editor window part */
+"problems" = "Translation Problems";
+
+/* Title for comments window part */
+"comment" = "Comments";
+
+/* Title for filter settings part */
+"filter" = "Filtering";
+
+/* Title for languages settings part */
+"languages" = "Languages";
+
+/* Title for display settings part */
+"display" = "Show";
+
+/* Title for preview settings part */
+"preview" = "Interface Preview";
+
+/* Title for matching settings part */
+"matchingGuessing" = "Matching / Guessing";
+
+/* Title for progress display part */
+"progress" = "Translation Progress";

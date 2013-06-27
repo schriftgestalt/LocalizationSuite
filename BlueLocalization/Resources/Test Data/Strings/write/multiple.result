@@ -1,0 +1,17 @@
+// comment
+// second
+"key" = "value";
+
+// comment
+// second
+// third
+"key2" = "54 74 90 2006";
+
+/* comment2 */
+/* second */
+"key3" = "54 74 \n 90 2010";
+
+/* comment2 */
+/* second */
+/* third */
+"key4" = "value4";

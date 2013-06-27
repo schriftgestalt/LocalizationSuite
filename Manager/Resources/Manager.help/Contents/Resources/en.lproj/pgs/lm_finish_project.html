@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Start-HTML des Helpbooks muss mit XHTML 1.0 kompatibel sein. -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+    <head>
+    <title>Finishing a Localization Project</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../sty/style.css" rel="stylesheet" type="text/css" media="all"/>
+    </head>
+
+    <body id="mainbox">
+    <a name="lm_finish_project"></a>
+        
+<!-- Start Kopfzeile für Navigation -->
+
+        <div id="statusleiste">
+        <p><a href="help:anchor=lm_start bookID=org.loc-suite.manager.help" class="statuslink">Start</a></p>
+        </div>
+        
+        <div id="headerlogo"><img src="../gfx/lm_logo.png"></div>
+        <div id="header">
+        <p><h1>Localization Manager Help</h1></p>
+        </div>
+        
+<!-- Ende Kopfzeile -->
+
+
+<!-- Start Content -->
+        
+        <div id="contentbox">
+        
+            
+            
+            
+            
+            
+            
+            <h2>Finishing a Localization Project</h2>
+
+            <p>Finally, you have received all the translated Localizer files from your translators (or you have translated yourself) and there are no more updates to be implemented. You are ready to finish the localization of your application.<br><br>
+
+<a name="lm_import_language"></a><b>Importing the Localizer files using <font class="ui">Read In...</font></b><br>
+
+First of all you need to import the translated Localizer files into your Localization Manager Project. To do so, click <font class="ui">Read In...</font> and select the Localizer files you want to import. You can select multiple files to be imported by using the Cmd or Shift key.<br><br></p>
+
+<div id="contentframe">
+<p><b>When importing Localizer files you can choose from several options:</b><br><br>
+
+<img src="../gfx/readin_options.png"><br><br>
+
+<i>Import changed strings only</i><br>
+Check this box if you only want to update all localized strings that have been changed since the last Read In.<br><br
+
+<i>Update missing strings only</i><br>
+Check this box if you have a partial localization of your resources and do not want existing localizations to change. Only those strings not translated yet in the Localization Manager Project will be imported.<br><br
+
+<i>Compatibility mode</i><br>
+Activating this option will import files by matching their keys using the value of the reference language. This is more compatible but may result in loss of different translations for the same strings.<br><br>
+</p></div><br>
+
+<p><b>Creating the localized .lproj folders</b><br>
+
+Your Localization Manager Project is updated and contains all localizations. Now you will want to create the localized .lproj folders for your application.<br><br
+
+<i>If you have created a Localization Manager Project from XCode:</i><br>
+Click <font class="ui">File > Export > To Xcode Project...</font> to update your Xcode project and include the localized .lproj folders in your Xcode project.<br><br>
+
+<i>If you have created a Localization Manager Project from Empty:</i><br>
+To create the localized .lproj folders for all languages, simply deselect all languages in the Languages list of the Localization Manager window (Selection area shows <font class="ui">All languages</font>) and click <font class="ui">Synchronize</font> in the .lproj folder area <b>(screenshot lower synchronize)</b>.
+When selecting one or more languages you can create/update all resource files for these languages when clicking <font class="ui">Synchronize</font> in the .lproj folder area.<br><br>
+
+You can also update certain files for all languages by selecting the files to be updated in the file list and clicking <font class="ui">Synchronize</font> below the file list.<br><br>
+
+
+<b>Creating/updating the dictionary</b><br>
+
+You have now localized your application and are ready to build the final version. In order to use these translations again for any future versions of your application, you should create/update your dictionary.<br><br>
+
+If you did not have an existing dictionary and want to create a new dictionary containing the localizations, click <font class="ui">File > Export > As Dictionary...</font> and select location and name of the new dictionary.<br><br>
+
+If you want to update an existing dictionary, click <font class="ui">File > Export > Into Dictionary...</font> and select the dictionary you want to update.
+
+<br><br>
+
+
+    
+    </div>
+    
+    </body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>BLDatabaseDocument </title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style>
+</head>
+<body bgcolor="#ffffff">
+<a name="top"></a><a name="//apple_ref/doc/class/BLDatabaseDocument" title="BLDatabaseDocument "></a><hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="BLDatabaseDocument">BLDatabaseDocument </a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --> A basic database storage document that does all the data handling but has no interface support whatsoever.
+<!-- end abstract --></p>
+<p><b>Conforms&nbsp;to:</b> <!-- a logicalPath="//apple_ref/occ/cl/BLDocumentProtocol" -->BLDocumentProtocol<!-- /a --><br><b>Superclass:</b> <!-- a logicalPath="//apple_ref/occ/cl/NSDocument" -->NSDocument<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">BLDatabaseDocument.h</a><br></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion --> To add user interaction or other custom functionality, override this class.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<br><h2>Methods</h2>
+<a name="HeaderDoc_methods"></a><dl>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/addBundle:" target="doc">-addBundle: </a></tt></dt>
+<dd>Add the bundle to the document.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/addLanguage:" target="doc">-addLanguage: </a></tt></dt>
+<dd>Add the given language.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/bundles" target="doc">-bundles</a></tt></dt>
+<dd>The bundle objects of the document.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/languages" target="doc">-languages</a></tt></dt>
+<dd>The languages contained in the document.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/pathCreator" target="doc">-pathCreator</a></tt></dt>
+<dd>Returns the document's path creator.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/preferences" target="doc">-preferences</a></tt></dt>
+<dd>Settings of the user that affect the working of some methodes.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/processManager" target="doc">-processManager</a></tt></dt>
+<dd>Returns the document's process manager.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/referenceLanguage" target="doc">-referenceLanguage </a></tt></dt>
+<dd>The reference language of the document.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/removeBundle:" target="doc">-removeBundle:</a></tt></dt>
+<dd>Removes the given bundle from the document.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/removeLanguage:" target="doc">-removeLanguage: </a></tt></dt>
+<dd>Removes the given language from the document.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/setBundles:" target="doc">-setBundles:</a></tt></dt>
+<dd>Set the bundle objects of the document.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/setLanguages:" target="doc">-setLanguages:</a></tt></dt>
+<dd>Set the languages contained in the document.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/setPreferences:" target="doc">-setPreferences:</a></tt></dt>
+<dd>Change the users settings.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/setReferenceLanguage:" target="doc">-setReferenceLanguage: </a></tt></dt>
+<dd>Chnage the reference language of the document.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLDatabaseDocument/updateDocument:" target="doc">-updateDocument: </a></tt></dt>
+<dd>Updates a document file wrapper to the current most version.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/addBundle:;  name=BLDatabaseDocument::addBundle: --><a name="//apple_ref/occ/instm/BLDatabaseDocument/addBundle:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="addBundle:">addBundle: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Add the bundle to the document.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/addBundle //apple_ref/occ/clm/addBundle //apple_ref/occ/intfcm/addBundle //apple_ref/occ/intfm/addBundle //apple_ref/occ/func/addBundle //apple_ref/occ/ftmplt/addBundle //apple_ref/occ/defn/addBundle //apple_ref/occ/macro/addBundle" --><span class="function">addBundle</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/BLBundleObject //apple_ref/occ/tdef/BLBundleObject //apple_ref/occ/tag/BLBundleObject //apple_ref/occ/econst/BLBundleObject //apple_ref/occ/struct/BLBundleObject //apple_ref/occ/clconst/BLBundleObject //apple_ref/occ/intf/BLBundleObject" --><span class="type">BLBundleObject</span><!-- /a --> <span class="type">*</span>)<span class="var">bundle</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The bundle will only be added if it is not currently present in the document.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/addLanguage:;  name=BLDatabaseDocument::addLanguage: --><a name="//apple_ref/occ/instm/BLDatabaseDocument/addLanguage:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="addLanguage:">addLanguage: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Add the given language.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/addLanguage //apple_ref/occ/clm/addLanguage //apple_ref/occ/intfcm/addLanguage //apple_ref/occ/intfm/addLanguage //apple_ref/occ/func/addLanguage //apple_ref/occ/ftmplt/addLanguage //apple_ref/occ/defn/addLanguage //apple_ref/occ/macro/addLanguage" --><span class="function">addLanguage</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">language</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The given language will only be added if it is not currently present in the document. If language is the first to be added, it is automatically assigned to be the reference language.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/bundles;  name=BLDatabaseDocument::bundles --><a name="//apple_ref/occ/instm/BLDatabaseDocument/bundles"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="bundles">bundles</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->The bundle objects of the document.
+ <!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<span class="var">bundles</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/languages;  name=BLDatabaseDocument::languages --><a name="//apple_ref/occ/instm/BLDatabaseDocument/languages"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="languages">languages</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->The languages contained in the document.
+ <!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<span class="var">languages</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/pathCreator;  name=BLDatabaseDocument::pathCreator --><a name="//apple_ref/occ/instm/BLDatabaseDocument/pathCreator"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="pathCreator">pathCreator</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns the document's path creator.
+ <!-- end abstract --></p>
+<p></p>
+<pre>- (<a href="../../../../Documentation/BLPathCreator/Classes/BLPathCreator_/index.html#//apple_ref/occ/cl/BLPathCreator" logicalPath="//apple_ref/occ/cl/BLPathCreator" target="_top"><span class="type">BLPathCreator</span></a> <span class="type">*</span>)<span class="var">pathCreator</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/preferences;  name=BLDatabaseDocument::preferences --><a name="//apple_ref/occ/instm/BLDatabaseDocument/preferences"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="preferences">preferences</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Settings of the user that affect the working of some methodes.
+ <!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSMutableDictionary //apple_ref/occ/tdef/NSMutableDictionary //apple_ref/occ/tag/NSMutableDictionary //apple_ref/occ/econst/NSMutableDictionary //apple_ref/occ/struct/NSMutableDictionary //apple_ref/occ/clconst/NSMutableDictionary //apple_ref/occ/intf/NSMutableDictionary" --><span class="type">NSMutableDictionary</span><!-- /a --> <span class="type">*</span>)<span class="var">preferences</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/processManager;  name=BLDatabaseDocument::processManager --><a name="//apple_ref/occ/instm/BLDatabaseDocument/processManager"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="processManager">processManager</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns the document's process manager.
+ <!-- end abstract --></p>
+<p></p>
+<pre>- (<a href="../../../../Documentation/BLProcessManager/Classes/BLProcessManager_/index.html#//apple_ref/occ/cl/BLProcessManager" logicalPath="//apple_ref/occ/cl/BLProcessManager" target="_top"><span class="type">BLProcessManager</span></a> <span class="type">*</span>)<span class="var">processManager</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/referenceLanguage;  name=BLDatabaseDocument::referenceLanguage --><a name="//apple_ref/occ/instm/BLDatabaseDocument/referenceLanguage"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="referenceLanguage">referenceLanguage </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->The reference language of the document.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">referenceLanguage</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This language is used by mostly all functions, it is treaded special most of the times. Normally this should be the language that you do your development in. Changes will be transfered FROM this language to all others. So take care when changing it.
+If no reference language is set, this method returns the defualt reference language, namely @"en".
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/removeBundle:;  name=BLDatabaseDocument::removeBundle: --><a name="//apple_ref/occ/instm/BLDatabaseDocument/removeBundle:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="removeBundle:">removeBundle:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Removes the given bundle from the document.
+ <!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/removeBundle //apple_ref/occ/clm/removeBundle //apple_ref/occ/intfcm/removeBundle //apple_ref/occ/intfm/removeBundle //apple_ref/occ/func/removeBundle //apple_ref/occ/ftmplt/removeBundle //apple_ref/occ/defn/removeBundle //apple_ref/occ/macro/removeBundle" --><span class="function">removeBundle</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/BLBundleObject //apple_ref/occ/tdef/BLBundleObject //apple_ref/occ/tag/BLBundleObject //apple_ref/occ/econst/BLBundleObject //apple_ref/occ/struct/BLBundleObject //apple_ref/occ/clconst/BLBundleObject //apple_ref/occ/intf/BLBundleObject" --><span class="type">BLBundleObject</span><!-- /a --> <span class="type">*</span>)<span class="var">bundle</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/removeLanguage:;  name=BLDatabaseDocument::removeLanguage: --><a name="//apple_ref/occ/instm/BLDatabaseDocument/removeLanguage:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="removeLanguage:">removeLanguage: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Removes the given language from the document.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/removeLanguage //apple_ref/occ/clm/removeLanguage //apple_ref/occ/intfcm/removeLanguage //apple_ref/occ/intfm/removeLanguage //apple_ref/occ/func/removeLanguage //apple_ref/occ/ftmplt/removeLanguage //apple_ref/occ/defn/removeLanguage //apple_ref/occ/macro/removeLanguage" --><span class="function">removeLanguage</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">language</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->Please note that this method does not remove the strings for this language, this method removed just the notion that this language exists.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/setBundles:;  name=BLDatabaseDocument::setBundles: --><a name="//apple_ref/occ/instm/BLDatabaseDocument/setBundles:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="setBundles:">setBundles:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Set the bundle objects of the document.
+ <!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setBundles //apple_ref/occ/clm/setBundles //apple_ref/occ/intfcm/setBundles //apple_ref/occ/intfm/setBundles //apple_ref/occ/func/setBundles //apple_ref/occ/ftmplt/setBundles //apple_ref/occ/defn/setBundles //apple_ref/occ/macro/setBundles" --><span class="function">setBundles</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<span class="var">bundles</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/setLanguages:;  name=BLDatabaseDocument::setLanguages: --><a name="//apple_ref/occ/instm/BLDatabaseDocument/setLanguages:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="setLanguages:">setLanguages:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Set the languages contained in the document.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setLanguages //apple_ref/occ/clm/setLanguages //apple_ref/occ/intfcm/setLanguages //apple_ref/occ/intfm/setLanguages //apple_ref/occ/func/setLanguages //apple_ref/occ/ftmplt/setLanguages //apple_ref/occ/defn/setLanguages //apple_ref/occ/macro/setLanguages" --><span class="function">setLanguages</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<span class="var">languages</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/setPreferences:;  name=BLDatabaseDocument::setPreferences: --><a name="//apple_ref/occ/instm/BLDatabaseDocument/setPreferences:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="setPreferences:">setPreferences:</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Change the users settings.
+ <!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setPreferences //apple_ref/occ/clm/setPreferences //apple_ref/occ/intfcm/setPreferences //apple_ref/occ/intfm/setPreferences //apple_ref/occ/func/setPreferences //apple_ref/occ/ftmplt/setPreferences //apple_ref/occ/defn/setPreferences //apple_ref/occ/macro/setPreferences" --><span class="function">setPreferences</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSMutableDictionary //apple_ref/occ/tdef/NSMutableDictionary //apple_ref/occ/tag/NSMutableDictionary //apple_ref/occ/econst/NSMutableDictionary //apple_ref/occ/struct/NSMutableDictionary //apple_ref/occ/clconst/NSMutableDictionary //apple_ref/occ/intf/NSMutableDictionary" --><span class="type">NSMutableDictionary</span><!-- /a --> <span class="type">*</span>)<span class="var">preferences</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/setReferenceLanguage:;  name=BLDatabaseDocument::setReferenceLanguage: --><a name="//apple_ref/occ/instm/BLDatabaseDocument/setReferenceLanguage:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="setReferenceLanguage:">setReferenceLanguage: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Chnage the reference language of the document.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setReferenceLanguage //apple_ref/occ/clm/setReferenceLanguage //apple_ref/occ/intfcm/setReferenceLanguage //apple_ref/occ/intfm/setReferenceLanguage //apple_ref/occ/func/setReferenceLanguage //apple_ref/occ/ftmplt/setReferenceLanguage //apple_ref/occ/defn/setReferenceLanguage //apple_ref/occ/macro/setReferenceLanguage" --><span class="function">setReferenceLanguage</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">referenceLanguage</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->Only the language will be changed, no data is affected. However, there is a huge difference in changing the reference language, see -referenceLanguage for details. This method will also add the language to the languages array if it is not yet contained in the document.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLDatabaseDocument/updateDocument:;  name=BLDatabaseDocument::updateDocument: --><a name="//apple_ref/occ/instm/BLDatabaseDocument/updateDocument:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="updateDocument:">updateDocument: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Updates a document file wrapper to the current most version.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/updateDocument //apple_ref/occ/clm/updateDocument //apple_ref/occ/intfcm/updateDocument //apple_ref/occ/intfm/updateDocument //apple_ref/occ/func/updateDocument //apple_ref/occ/ftmplt/updateDocument //apple_ref/occ/defn/updateDocument //apple_ref/occ/macro/updateDocument" --><span class="function">updateDocument</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSFileWrapper //apple_ref/occ/tdef/NSFileWrapper //apple_ref/occ/tag/NSFileWrapper //apple_ref/occ/econst/NSFileWrapper //apple_ref/occ/struct/NSFileWrapper //apple_ref/occ/clconst/NSFileWrapper //apple_ref/occ/intf/NSFileWrapper" --><span class="type">NSFileWrapper</span><!-- /a --> <span class="type">*</span><span class="type">*</span>)<span class="var">fileWrapper</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->YES if the document can be opened, NO otherwise.
+ 
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The default method does not present any user prompts, you have to do so in a subclass if you want to. fileWrapper must be non-NULL on return of YES;
+<!-- end discussion --></p>
+<p></p>
+<p>Last Updated: 08.05.2009
+</p>
+</body>
+</html>

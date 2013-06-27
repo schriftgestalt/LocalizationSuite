@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5006916F12803C4E00470F3D /* ldb.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5006916E12803C4E00470F3D /* ldb.icns */; };
+		501195EC1152E76100E54DF2 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501195EB1152E76100E54DF2 /* Quartz.framework */; };
+		50172E111403AA7E006EFC17 /* NSAlert-Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50172E101403AA7E006EFC17 /* NSAlert-Extensions.m */; };
+		5021C2AC113155600057F2D9 /* Localizer.help in Resources */ = {isa = PBXBuildFile; fileRef = 5021C2A0113155600057F2D9 /* Localizer.help */; };
+		50241EA70EC35D8300122C6F /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50241EA50EC35D8300122C6F /* Document.xib */; };
+		50241EAD0EC35DA700122C6F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50241EAB0EC35DA700122C6F /* MainMenu.xib */; };
+		504333A51049FD4D005BD65F /* Editor.m in Sources */ = {isa = PBXBuildFile; fileRef = 504333A41049FD4D005BD65F /* Editor.m */; };
+		5047921C1119FEA000A17FD7 /* RBSplitView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5065C2CA110A879B00CC7D13 /* RBSplitView.framework */; };
+		504E099C130057EF006B5F4B /* BlueLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E0998130057EF006B5F4B /* BlueLocalization.framework */; };
+		504E099D130057EF006B5F4B /* NibPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E0999130057EF006B5F4B /* NibPreview.framework */; };
+		504E099E130057EF006B5F4B /* LocTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E099A130057EF006B5F4B /* LocTools.framework */; };
+		504E099F130057EF006B5F4B /* LocInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E099B130057EF006B5F4B /* LocInterface.framework */; };
+		504E09A0130057F4006B5F4B /* BlueLocalization.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E0998130057EF006B5F4B /* BlueLocalization.framework */; };
+		504E09A1130057F4006B5F4B /* NibPreview.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E0999130057EF006B5F4B /* NibPreview.framework */; };
+		504E09A2130057F4006B5F4B /* LocTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E099A130057EF006B5F4B /* LocTools.framework */; };
+		504E09A3130057F4006B5F4B /* LocInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E099B130057EF006B5F4B /* LocInterface.framework */; };
+		50515A0F03EDBE3000749D6B /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 50515A0D03EDBE3000749D6B /* Controller.m */; };
+		5052605705D5C32300429FDF /* Localizer.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5052605505D5C32300429FDF /* Localizer.icns */; };
+		50566599138415E200E8AB31 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50566597138415E200E8AB31 /* Preferences.xib */; };
+		5056659F1384161300E8AB31 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5056659E1384161300E8AB31 /* Preferences.m */; };
+		505665A1138417A800E8AB31 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505665A0138417A800E8AB31 /* BWToolkitFramework.framework */; };
+		505665A2138417B800E8AB31 /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 505665A0138417A800E8AB31 /* BWToolkitFramework.framework */; };
+		50597F010FCE8FF7001275A5 /* Window.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50597EFF0FCE8FF7001275A5 /* Window.strings */; };
+		505C938E0AB1A3AE007AEB26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 505C938C0AB1A3AE007AEB26 /* Localizable.strings */; };
+		5065C2CB110A879B00CC7D13 /* RBSplitView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5065C2CA110A879B00CC7D13 /* RBSplitView.framework */; };
+		506FE7B41194720B009A67A8 /* lod.icns in Resources */ = {isa = PBXBuildFile; fileRef = 506FE7B31194720B009A67A8 /* lod.icns */; };
+		50742E290C2C6C7B00851278 /* LineSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50742E270C2C6C7B00851278 /* LineSplitView.m */; };
+		507A47E505D6A20D0044A3E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 507A47E305D6A20D0044A3E3 /* InfoPlist.strings */; };
+		50BAEE160CB9232D002ACE87 /* TitleSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BAEE140CB9232D002ACE87 /* TitleSplitView.m */; };
+		50BB659F10B5C61A00A1AD4C /* StatisticsTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BB659E10B5C61A00A1AD4C /* StatisticsTextView.m */; };
+		50C3D18F0FC3792D005AEF1A /* loc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 50C3D18E0FC3792D005AEF1A /* loc.icns */; };
+		50C3D1A60FC37A32005AEF1A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C3D1A50FC37A32005AEF1A /* Sparkle.framework */; };
+		50C3D1A70FC37A3D005AEF1A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50C3D1A50FC37A32005AEF1A /* Sparkle.framework */; };
+		50C3D25C0FC37D40005AEF1A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 50C3D25B0FC37D40005AEF1A /* dsa_pub.pem */; };
+		8D15AC310486D014006FF6A4 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* Document.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5017C9B0072C0A7A002C21A7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				50C3D1A70FC37A3D005AEF1A /* Sparkle.framework in CopyFiles */,
+				5047921C1119FEA000A17FD7 /* RBSplitView.framework in CopyFiles */,
+				504E09A0130057F4006B5F4B /* BlueLocalization.framework in CopyFiles */,
+				504E09A1130057F4006B5F4B /* NibPreview.framework in CopyFiles */,
+				504E09A2130057F4006B5F4B /* LocTools.framework in CopyFiles */,
+				504E09A3130057F4006B5F4B /* LocInterface.framework in CopyFiles */,
+				505665A2138417B800E8AB31 /* BWToolkitFramework.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2A37F4ACFDCFA73011CA2CEA /* Document.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = Document.m; path = "Source/Main Classes/Document.m"; sourceTree = "<group>"; };
+		2A37F4AEFDCFA73011CA2CEA /* Document.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Document.h; path = "Source/Main Classes/Document.h"; sourceTree = "<group>"; };
+		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = "<group>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32DBCF750370BD2300C91783 /* Localizer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Localizer_Prefix.pch; path = Source/Localizer_Prefix.pch; sourceTree = "<group>"; };
+		5006916E12803C4E00470F3D /* ldb.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = ldb.icns; path = ../Shared/Icons/ldb.icns; sourceTree = SOURCE_ROOT; };
+		501195EB1152E76100E54DF2 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		50172E0F1403AA7E006EFC17 /* NSAlert-Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAlert-Extensions.h"; path = "../Shared/Source/NSAlert-Extensions.h"; sourceTree = "<group>"; };
+		50172E101403AA7E006EFC17 /* NSAlert-Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAlert-Extensions.m"; path = "../Shared/Source/NSAlert-Extensions.m"; sourceTree = "<group>"; };
+		5021C2A0113155600057F2D9 /* Localizer.help */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Localizer.help; path = Resources/Localizer.help; sourceTree = "<group>"; };
+		50241EA60EC35D8300122C6F /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Interface/English.lproj/Document.xib; sourceTree = "<group>"; };
+		50241EAC0EC35DA700122C6F /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Interface/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		504333A31049FD4D005BD65F /* Editor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Editor.h; path = "Source/Main Classes/Editor.h"; sourceTree = "<group>"; };
+		504333A41049FD4D005BD65F /* Editor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Editor.m; path = "Source/Main Classes/Editor.m"; sourceTree = "<group>"; };
+		504E0998130057EF006B5F4B /* BlueLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BlueLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		504E0999130057EF006B5F4B /* NibPreview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NibPreview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		504E099A130057EF006B5F4B /* LocTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LocTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		504E099B130057EF006B5F4B /* LocInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LocInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50515A0C03EDBE3000749D6B /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = "Source/Main Classes/Controller.h"; sourceTree = "<group>"; };
+		50515A0D03EDBE3000749D6B /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = Controller.m; path = "Source/Main Classes/Controller.m"; sourceTree = "<group>"; };
+		5052605505D5C32300429FDF /* Localizer.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Localizer.icns; path = Icons/Localizer.icns; sourceTree = "<group>"; };
+		50566598138415E200E8AB31 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Interface/English.lproj/Preferences.xib; sourceTree = "<group>"; };
+		5056659D1384161300E8AB31 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Preferences.h; path = "Source/Main Classes/Preferences.h"; sourceTree = "<group>"; };
+		5056659E1384161300E8AB31 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Preferences.m; path = "Source/Main Classes/Preferences.m"; sourceTree = "<group>"; };
+		505665A0138417A800E8AB31 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = ../Shared/Frameworks/BWToolkitFramework.framework; sourceTree = "<group>"; };
+		50597F000FCE8FF7001275A5 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Interface/English.lproj/Window.strings; sourceTree = "<group>"; };
+		505C938D0AB1A3AE007AEB26 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Interface/English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5065C2CA110A879B00CC7D13 /* RBSplitView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RBSplitView.framework; path = ../Shared/Frameworks/RBSplitView.framework; sourceTree = SOURCE_ROOT; };
+		506FE7B31194720B009A67A8 /* lod.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = lod.icns; path = ../Shared/Icons/lod.icns; sourceTree = SOURCE_ROOT; };
+		50742E260C2C6C7B00851278 /* LineSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineSplitView.h; path = Source/Interface/LineSplitView.h; sourceTree = "<group>"; };
+		50742E270C2C6C7B00851278 /* LineSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineSplitView.m; path = Source/Interface/LineSplitView.m; sourceTree = "<group>"; };
+		507A47E405D6A20D0044A3E3 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = Interface/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		507A482805D6BFD90044A3E3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		50BAEE130CB9232D002ACE87 /* TitleSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TitleSplitView.h; path = Source/Interface/TitleSplitView.h; sourceTree = "<group>"; };
+		50BAEE140CB9232D002ACE87 /* TitleSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TitleSplitView.m; path = Source/Interface/TitleSplitView.m; sourceTree = "<group>"; };
+		50BB659D10B5C61A00A1AD4C /* StatisticsTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsTextView.h; path = Source/Interface/StatisticsTextView.h; sourceTree = "<group>"; };
+		50BB659E10B5C61A00A1AD4C /* StatisticsTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsTextView.m; path = Source/Interface/StatisticsTextView.m; sourceTree = "<group>"; };
+		50C3D18E0FC3792D005AEF1A /* loc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = loc.icns; path = ../Shared/Icons/loc.icns; sourceTree = SOURCE_ROOT; };
+		50C3D1A50FC37A32005AEF1A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../Shared/Frameworks/Sparkle.framework; sourceTree = SOURCE_ROOT; };
+		50C3D25B0FC37D40005AEF1A /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = ../Shared/Updates/dsa_pub.pem; sourceTree = SOURCE_ROOT; };
+		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		8D15AC370486D014006FF6A4 /* Localizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Localizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D15AC330486D014006FF6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				50C3D1A60FC37A32005AEF1A /* Sparkle.framework in Frameworks */,
+				5065C2CB110A879B00CC7D13 /* RBSplitView.framework in Frameworks */,
+				501195EC1152E76100E54DF2 /* Quartz.framework in Frameworks */,
+				504E099C130057EF006B5F4B /* BlueLocalization.framework in Frameworks */,
+				504E099D130057EF006B5F4B /* NibPreview.framework in Frameworks */,
+				504E099E130057EF006B5F4B /* LocTools.framework in Frameworks */,
+				504E099F130057EF006B5F4B /* LocInterface.framework in Frameworks */,
+				505665A1138417A800E8AB31 /* BWToolkitFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D15AC370486D014006FF6A4 /* Localizer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				50D110890FB84EFE006FCF8C /* Classes */,
+				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
+				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				50C3D17E0FC37920005AEF1A /* Icons */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = Localizer;
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				50515A0C03EDBE3000749D6B /* Controller.h */,
+				50515A0D03EDBE3000749D6B /* Controller.m */,
+				2A37F4AEFDCFA73011CA2CEA /* Document.h */,
+				2A37F4ACFDCFA73011CA2CEA /* Document.m */,
+				504333A31049FD4D005BD65F /* Editor.h */,
+				504333A41049FD4D005BD65F /* Editor.m */,
+				5056659D1384161300E8AB31 /* Preferences.h */,
+				5056659E1384161300E8AB31 /* Preferences.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF750370BD2300C91783 /* Localizer_Prefix.pch */,
+				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50241EA50EC35D8300122C6F /* Document.xib */,
+				50241EAB0EC35DA700122C6F /* MainMenu.xib */,
+				50566597138415E200E8AB31 /* Preferences.xib */,
+				8D15AC360486D014006FF6A4 /* Info.plist */,
+				507A47E305D6A20D0044A3E3 /* InfoPlist.strings */,
+				505C938C0AB1A3AE007AEB26 /* Localizable.strings */,
+				50597EFF0FCE8FF7001275A5 /* Window.strings */,
+				5021C2A0113155600057F2D9 /* Localizer.help */,
+				50C3D25B0FC37D40005AEF1A /* dsa_pub.pem */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+				507A482805D6BFD90044A3E3 /* WebKit.framework */,
+				50C3D1A50FC37A32005AEF1A /* Sparkle.framework */,
+				5065C2CA110A879B00CC7D13 /* RBSplitView.framework */,
+				501195EB1152E76100E54DF2 /* Quartz.framework */,
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+				504E0998130057EF006B5F4B /* BlueLocalization.framework */,
+				504E0999130057EF006B5F4B /* NibPreview.framework */,
+				504E099A130057EF006B5F4B /* LocTools.framework */,
+				504E099B130057EF006B5F4B /* LocInterface.framework */,
+				505665A0138417A800E8AB31 /* BWToolkitFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50172E0E1403AA7E006EFC17 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				50172E0F1403AA7E006EFC17 /* NSAlert-Extensions.h */,
+				50172E101403AA7E006EFC17 /* NSAlert-Extensions.m */,
+			);
+			name = Other;
+			path = ../Manager;
+			sourceTree = "<group>";
+		};
+		50C3D17E0FC37920005AEF1A /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				5052605505D5C32300429FDF /* Localizer.icns */,
+				5006916E12803C4E00470F3D /* ldb.icns */,
+				50C3D18E0FC3792D005AEF1A /* loc.icns */,
+				506FE7B31194720B009A67A8 /* lod.icns */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		50D110890FB84EFE006FCF8C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4ABFDCFA73011CA2CEA /* Controllers */,
+				50E8D89D08CDBF71003F43C3 /* Interface */,
+				50172E0E1403AA7E006EFC17 /* Other */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		50E8D89D08CDBF71003F43C3 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				50742E260C2C6C7B00851278 /* LineSplitView.h */,
+				50742E270C2C6C7B00851278 /* LineSplitView.m */,
+				50BAEE130CB9232D002ACE87 /* TitleSplitView.h */,
+				50BAEE140CB9232D002ACE87 /* TitleSplitView.m */,
+				50BB659D10B5C61A00A1AD4C /* StatisticsTextView.h */,
+				50BB659E10B5C61A00A1AD4C /* StatisticsTextView.m */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D15AC270486D014006FF6A4 /* Localizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 501EBC870855AE8600FBC27B /* Build configuration list for PBXNativeTarget "Localizer" */;
+			buildPhases = (
+				8D15AC2B0486D014006FF6A4 /* Resources */,
+				8D15AC300486D014006FF6A4 /* Sources */,
+				8D15AC330486D014006FF6A4 /* Frameworks */,
+				5017C9B0072C0A7A002C21A7 /* CopyFiles */,
+				5017C9AF072C0A5D002C21A7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Localizer;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Localizer;
+			productReference = 8D15AC370486D014006FF6A4 /* Localizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Localization Suite";
+			};
+			buildConfigurationList = 501EBC8B0855AE8600FBC27B /* Build configuration list for PBXProject "Localizer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* Localizer */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D15AC270486D014006FF6A4 /* Localizer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D15AC2B0486D014006FF6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5052605705D5C32300429FDF /* Localizer.icns in Resources */,
+				507A47E505D6A20D0044A3E3 /* InfoPlist.strings in Resources */,
+				505C938E0AB1A3AE007AEB26 /* Localizable.strings in Resources */,
+				50241EA70EC35D8300122C6F /* Document.xib in Resources */,
+				50241EAD0EC35DA700122C6F /* MainMenu.xib in Resources */,
+				50C3D18F0FC3792D005AEF1A /* loc.icns in Resources */,
+				50C3D25C0FC37D40005AEF1A /* dsa_pub.pem in Resources */,
+				50597F010FCE8FF7001275A5 /* Window.strings in Resources */,
+				5021C2AC113155600057F2D9 /* Localizer.help in Resources */,
+				506FE7B41194720B009A67A8 /* lod.icns in Resources */,
+				5006916F12803C4E00470F3D /* ldb.icns in Resources */,
+				50566599138415E200E8AB31 /* Preferences.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5017C9AF072C0A5D002C21A7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Updating build number\"\n\ncd \"$SRCROOT/../Shared/Tools\"\n./buildnumber -d \"$BUILD_DIR/$INFOPLIST_PATH\"\n./buildnumber -d \"$PRODUCT_SETTINGS_PATH\"\n\necho \"Done\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D15AC300486D014006FF6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC310486D014006FF6A4 /* Document.m in Sources */,
+				8D15AC320486D014006FF6A4 /* main.m in Sources */,
+				50515A0F03EDBE3000749D6B /* Controller.m in Sources */,
+				50742E290C2C6C7B00851278 /* LineSplitView.m in Sources */,
+				50BAEE160CB9232D002ACE87 /* TitleSplitView.m in Sources */,
+				504333A51049FD4D005BD65F /* Editor.m in Sources */,
+				50BB659F10B5C61A00A1AD4C /* StatisticsTextView.m in Sources */,
+				5056659F1384161300E8AB31 /* Preferences.m in Sources */,
+				50172E111403AA7E006EFC17 /* NSAlert-Extensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		50241EA50EC35D8300122C6F /* Document.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50241EA60EC35D8300122C6F /* English */,
+			);
+			name = Document.xib;
+			sourceTree = "<group>";
+		};
+		50241EAB0EC35DA700122C6F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50241EAC0EC35DA700122C6F /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		50566597138415E200E8AB31 /* Preferences.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50566598138415E200E8AB31 /* English */,
+			);
+			name = Preferences.xib;
+			sourceTree = "<group>";
+		};
+		50597EFF0FCE8FF7001275A5 /* Window.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50597F000FCE8FF7001275A5 /* English */,
+			);
+			name = Window.strings;
+			sourceTree = "<group>";
+		};
+		505C938C0AB1A3AE007AEB26 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				505C938D0AB1A3AE007AEB26 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		507A47E305D6A20D0044A3E3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				507A47E405D6A20D0044A3E3 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		501EBC880855AE8600FBC27B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: The Blue Technologies Group";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Localizer_Prefix.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
+				PRODUCT_NAME = Localizer;
+				PROVISIONING_PROFILE = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		501EBC890855AE8600FBC27B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: The Blue Technologies Group";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Localizer_Prefix.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
+				PRODUCT_NAME = Localizer;
+				PROVISIONING_PROFILE = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		501EBC8C0855AE8600FBC27B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks/;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		501EBC8D0855AE8600FBC27B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks/;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		501EBC870855AE8600FBC27B /* Build configuration list for PBXNativeTarget "Localizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				501EBC880855AE8600FBC27B /* Debug */,
+				501EBC890855AE8600FBC27B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		501EBC8B0855AE8600FBC27B /* Build configuration list for PBXProject "Localizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				501EBC8C0855AE8600FBC27B /* Debug */,
+				501EBC8D0855AE8600FBC27B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}

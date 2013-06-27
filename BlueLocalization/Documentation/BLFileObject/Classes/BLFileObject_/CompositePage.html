@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>BLFileObject </title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style>
+</head>
+<body bgcolor="#ffffff">
+<a name="top"></a><a name="//apple_ref/doc/class/BLFileObject" title="BLFileObject "></a><hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="BLFileObject">BLFileObject </a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --> Represents a file in a localization context.
+<!-- end abstract --></p>
+<p><b>Superclass:</b> <!-- a logicalPath="//apple_ref/occ/cl/BLObject" -->BLObject<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">BLFileObject.h</a><br></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion --> Some behaviours depend on the type of the file, especially the extension. This class represents a class cluster. If you want to subclass it, call +registerClass:forPathExtension: registerung your class to be recognized in the process of creating objects.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<br><h2>Methods</h2>
+<a name="HeaderDoc_methods"></a><dl>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLFileObject/availablePathExtensions" target="doc">+availablePathExtensions</a></tt></dt>
+<dd>Returns an array with all path extensions registered by subclasses. Other extensions will not be accepted.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLFileObject/classForPathExtension:" target="doc">+classForPathExtension: </a></tt></dt>
+<dd>Retuns the concrete implementation subclass for the given extension.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLFileObject/classOfStoredKeys" target="doc">+classOfStoredKeys</a></tt></dt>
+<dd>Returns the subclass of BLKeyObject to be used when creating keys.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLFileObject/fileObjectWithPath:" target="doc">+fileObjectWithPath: </a></tt></dt>
+<dd>Creates an file object suited for the given file type at path.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLFileObject/fileObjectWithPathExtension:" target="doc">+fileObjectWithPathExtension: </a></tt></dt>
+<dd>Creates an file object suited for the given file type.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileObject/initWithPath:" target="doc">-initWithPath: </a></tt></dt>
+<dd>Initializes a new file object using the given path.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLFileObject/initWithPathExtension:" target="doc">-initWithPathExtension: </a></tt></dt>
+<dd>Initializes a new blank file of the given type.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLFileObject/registerClass:forPathExtension:" target="doc">+registerClass:forPathExtension: </a></tt></dt>
+<dd>Registers a subclass to a file extension.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLFileObject/availablePathExtensions;  name=BLFileObject::availablePathExtensions --><a name="//apple_ref/occ/clm/BLFileObject/availablePathExtensions"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="availablePathExtensions">availablePathExtensions</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns an array with all path extensions registered by subclasses. Other extensions will not be accepted.
+ <!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<span class="var">availablePathExtensions</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLFileObject/classForPathExtension:;  name=BLFileObject::classForPathExtension: --><a name="//apple_ref/occ/clm/BLFileObject/classForPathExtension:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="classForPathExtension:">classForPathExtension: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Retuns the concrete implementation subclass for the given extension.
+<!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/Class //apple_ref/occ/tdef/Class //apple_ref/occ/tag/Class //apple_ref/occ/econst/Class //apple_ref/occ/struct/Class //apple_ref/occ/clconst/Class //apple_ref/occ/intf/Class" --><span class="type">Class</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/classForPathExtension //apple_ref/occ/clm/classForPathExtension //apple_ref/occ/intfcm/classForPathExtension //apple_ref/occ/intfm/classForPathExtension //apple_ref/occ/func/classForPathExtension //apple_ref/occ/ftmplt/classForPathExtension //apple_ref/occ/defn/classForPathExtension //apple_ref/occ/macro/classForPathExtension" --><span class="function">classForPathExtension</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">ext</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->You should not use this method to instantiate such classes directly, use fileObjectWithPathExtension: instead!
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLFileObject/classOfStoredKeys;  name=BLFileObject::classOfStoredKeys --><a name="//apple_ref/occ/clm/BLFileObject/classOfStoredKeys"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="classOfStoredKeys">classOfStoredKeys</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns the subclass of BLKeyObject to be used when creating keys.
+ <!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/Class //apple_ref/occ/tdef/Class //apple_ref/occ/tag/Class //apple_ref/occ/econst/Class //apple_ref/occ/struct/Class //apple_ref/occ/clconst/Class //apple_ref/occ/intf/Class" --><span class="type">Class</span><!-- /a -->)<span class="var">classOfStoredKeys</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLFileObject/fileObjectWithPath:;  name=BLFileObject::fileObjectWithPath: --><a name="//apple_ref/occ/clm/BLFileObject/fileObjectWithPath:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="fileObjectWithPath:">fileObjectWithPath: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Creates an file object suited for the given file type at path.
+<!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/fileObjectWithPath //apple_ref/occ/clm/fileObjectWithPath //apple_ref/occ/intfcm/fileObjectWithPath //apple_ref/occ/intfm/fileObjectWithPath //apple_ref/occ/func/fileObjectWithPath //apple_ref/occ/ftmplt/fileObjectWithPath //apple_ref/occ/defn/fileObjectWithPath //apple_ref/occ/macro/fileObjectWithPath" --><span class="function">fileObjectWithPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">path</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The actual returned object will be a subclass of BLFileObject, as this class is a class cluster.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLFileObject/fileObjectWithPathExtension:;  name=BLFileObject::fileObjectWithPathExtension: --><a name="//apple_ref/occ/clm/BLFileObject/fileObjectWithPathExtension:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="fileObjectWithPathExtension:">fileObjectWithPathExtension: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Creates an file object suited for the given file type.
+<!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/fileObjectWithPathExtension //apple_ref/occ/clm/fileObjectWithPathExtension //apple_ref/occ/intfcm/fileObjectWithPathExtension //apple_ref/occ/intfm/fileObjectWithPathExtension //apple_ref/occ/func/fileObjectWithPathExtension //apple_ref/occ/ftmplt/fileObjectWithPathExtension //apple_ref/occ/defn/fileObjectWithPathExtension //apple_ref/occ/macro/fileObjectWithPathExtension" --><span class="function">fileObjectWithPathExtension</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">extension</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The actual returned object will be a subclass of BLFileObject, as this class is a class cluster.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileObject/initWithPath:;  name=BLFileObject::initWithPath: --><a name="//apple_ref/occ/instm/BLFileObject/initWithPath:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="initWithPath:">initWithPath: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Initializes a new file object using the given path.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initWithPath //apple_ref/occ/clm/initWithPath //apple_ref/occ/intfcm/initWithPath //apple_ref/occ/intfm/initWithPath //apple_ref/occ/func/initWithPath //apple_ref/occ/ftmplt/initWithPath //apple_ref/occ/defn/initWithPath //apple_ref/occ/macro/initWithPath" --><span class="function">initWithPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">path</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The file object's path is the relative portion of the given path. This method also creates a new bundle object with the bundle path portion of the given path. The file object is added to the bundle. Please note that this may result in duplicate bundles that must be resolved afterwards!
+However, if the path cannot be split into the two portions, the result is a file object with no bundle and it's path set to the given one.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLFileObject/initWithPathExtension:;  name=BLFileObject::initWithPathExtension: --><a name="//apple_ref/occ/instm/BLFileObject/initWithPathExtension:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="initWithPathExtension:">initWithPathExtension: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Initializes a new blank file of the given type.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initWithPathExtension //apple_ref/occ/clm/initWithPathExtension //apple_ref/occ/intfcm/initWithPathExtension //apple_ref/occ/intfm/initWithPathExtension //apple_ref/occ/func/initWithPathExtension //apple_ref/occ/ftmplt/initWithPathExtension //apple_ref/occ/defn/initWithPathExtension //apple_ref/occ/macro/initWithPathExtension" --><span class="function">initWithPathExtension</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">extension</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->In contrast to initWithPath: this does neither set a path nor create a bundle object.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLFileObject/registerClass:forPathExtension:;  name=BLFileObject::registerClass:forPathExtension: --><a name="//apple_ref/occ/clm/BLFileObject/registerClass:forPathExtension:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="registerClass:forPathExtension:">registerClass:forPathExtension: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Registers a subclass to a file extension.
+<!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/registerClass //apple_ref/occ/clm/registerClass //apple_ref/occ/intfcm/registerClass //apple_ref/occ/intfm/registerClass //apple_ref/occ/func/registerClass //apple_ref/occ/ftmplt/registerClass //apple_ref/occ/defn/registerClass //apple_ref/occ/macro/registerClass" --><span class="function">registerClass</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/Class //apple_ref/occ/tdef/Class //apple_ref/occ/tag/Class //apple_ref/occ/econst/Class //apple_ref/occ/struct/Class //apple_ref/occ/clconst/Class //apple_ref/occ/intf/Class" --><span class="type">Class</span><!-- /a -->)<span class="param">fileClass</span> <!-- a logicalPath="//apple_ref/occ/instm/forPathExtension //apple_ref/occ/clm/forPathExtension //apple_ref/occ/intfcm/forPathExtension //apple_ref/occ/intfm/forPathExtension //apple_ref/occ/func/forPathExtension //apple_ref/occ/ftmplt/forPathExtension //apple_ref/occ/defn/forPathExtension //apple_ref/occ/macro/forPathExtension" --><span class="function">forPathExtension</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">extension</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->Subclasses should call this one in their +load method, as there are few other possibilites to register a class before it is to be used. Throws, if the class is not a subclass or if the extension has already been registered to any class.
+ <!-- end discussion --></p>
+<p></p>
+<p>Last Updated: 08.05.2009
+</p>
+</body>
+</html>

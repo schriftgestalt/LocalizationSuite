@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>BLPathCreator </title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style>
+</head>
+<body bgcolor="#ffffff">
+<a name="top"></a><a name="//apple_ref/doc/class/BLPathCreator" title="BLPathCreator "></a><hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="BLPathCreator">BLPathCreator </a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --> An object that transfroms paths, but mainly creates the paths needed to access the files referenced by a document.
+<!-- end abstract --></p>
+<p><b>Superclass:</b> <!-- a logicalPath="//apple_ref/occ/cl/NSObject" -->NSObject<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">BLPathCreator.h</a><br></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion --> Here will follow several definitions that will be used in the following method descriptions.
+<br><br><b>Language Name</b>: Depending on the namingStyle property of a bundle, the name of a language is the name of the language's ".lproj" folder in the given bundle. Example: Given the brazilian portuguese langauge, in the short naming style the name would be "pt_BR". In the long naming style it would be "Brazilian Portuguese". However, these long names are not only discouraged but also more unspecific. Therefore, in the mixed naming style, long names which contain either spaces (" ") or underscores ("_") are abbreviated to identifiers. In the case of brazillian portuguese, the short identifier would be used.
+<br><br><b>File Path</b>: A file path basically consists of three parts: the bundle portion, the language folder and the file portion. The bundle path is just the path to the folder which contains the .lproj folders, the relative file path is the path of the file inside this .lproj folder (and therefor most of the time just a single path component). Note that the language folder name is not contained in both paths. This is because when giving a language, the folder name can be generated.
+<br><br><b>Bundle Path</b>: The bundle path is the bundle portion of a file path. All objects in BlueLocalization are organized with a bundle as root, it is the major splitting of projects. However, when not contained in a file path, the bundle path can come in two flavours. Either it is relative or absolute. The latter one is always the case woth file paths. The first one is a standard relative path as seen from the document it belongs to.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<br><h2>Methods</h2>
+<a name="HeaderDoc_methods"></a><dl>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLPathCreator/absolutePathForFile:andLanguage:" target="doc">-absolutePathForFile:andLanguage: </a></tt></dt>
+<dd>Calculates the full path of a file in a specific language.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLPathCreator/bundlePathForFile:" target="doc">-bundlePathForFile: </a></tt></dt>
+<dd>Returns the bundle file path portion of a full path.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLPathCreator/exactLanguageOfFileAtPath:" target="doc">-exactLanguageOfFileAtPath: </a></tt></dt>
+<dd>Scans a given path for an .lproj folder and returns it's name.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLPathCreator/fullPathForBundle:" target="doc">-fullPathForBundle: </a></tt></dt>
+<dd>Returns the absolute path of a bundle.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLPathCreator/fullPathForRelativeBundlePath:" target="doc">-fullPathForRelativeBundlePath: </a></tt></dt>
+<dd>Converts a relative bundle path into an absolute path.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLPathCreator/independendPathCreator" target="doc">+independendPathCreator</a></tt></dt>
+<dd>Returns an global document-independent path creator.
+ </dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLPathCreator/initWithDocument:" target="doc">-initWithDocument: </a></tt></dt>
+<dd>Designated initializer.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLPathCreator/languageNameForLanguage:inBundle:" target="doc">-languageNameForLanguage:inBundle: </a></tt></dt>
+<dd>Return the proposed name of a language for a given bundle.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLPathCreator/languageOfFileAtPath:" target="doc">-languageOfFileAtPath: </a></tt></dt>
+<dd>Scans a given path for an .lproj folder and returns the alnguage identifier by using it's name as description.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLPathCreator/pathForFolderOfLanguage:inBundle:" target="doc">-pathForFolderOfLanguage:inBundle: </a></tt></dt>
+<dd>Returns the ideal path for a language folder in a bundle.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLPathCreator/realPathForFolderOfLanguage:inBundle:" target="doc">-realPathForFolderOfLanguage:inBundle: </a></tt></dt>
+<dd>Returns the actual real path for a language folder in a bundle, if it exists.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLPathCreator/relativePathForBundle:" target="doc">-relativePathForBundle: </a></tt></dt>
+<dd>Returns the relative path of a bundle as seen from the document.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLPathCreator/relativePathForFile:" target="doc">-relativePathForFile: </a></tt></dt>
+<dd>Returns the relative file path portion of a full path.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLPathCreator/relativePathForFullBundlePath:" target="doc">-relativePathForFullBundlePath: </a></tt></dt>
+<dd>Converts an absolute bundle path into a relative path.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/instm/BLPathCreator/replaceLanguage:inPath:withLanguage:bundle:" target="doc">-replaceLanguage:inPath:withLanguage:bundle: </a></tt></dt>
+<dd>Replaces the occurence of a language in a path with another language.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLPathCreator/absolutePathForFile:andLanguage:;  name=BLPathCreator::absolutePathForFile:andLanguage: --><a name="//apple_ref/occ/instm/BLPathCreator/absolutePathForFile:andLanguage:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="absolutePathForFile:andLanguage:">absolutePathForFile:andLanguage: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Calculates the full path of a file in a specific language.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/absolutePathForFile //apple_ref/occ/clm/absolutePathForFile //apple_ref/occ/intfcm/absolutePathForFile //apple_ref/occ/intfm/absolutePathForFile //apple_ref/occ/func/absolutePathForFile //apple_ref/occ/ftmplt/absolutePathForFile //apple_ref/occ/defn/absolutePathForFile //apple_ref/occ/macro/absolutePathForFile" --><span class="function">absolutePathForFile</span><!-- /a -->:(<a href="../../../../Documentation/BLFileObject/Classes/BLFileObject_/index.html#//apple_ref/occ/cl/BLFileObject" logicalPath="//apple_ref/occ/cl/BLFileObject" target="_top"><span class="type">BLFileObject</span></a> <span class="type">*</span>)<span class="param">file</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/andLanguage //apple_ref/occ/clm/andLanguage //apple_ref/occ/intfcm/andLanguage //apple_ref/occ/intfm/andLanguage //apple_ref/occ/func/andLanguage //apple_ref/occ/ftmplt/andLanguage //apple_ref/occ/defn/andLanguage //apple_ref/occ/macro/andLanguage" --><span class="function">andLanguage</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">language</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This method does nothing else than checking for the real path of the containing bundle and returns the real path of the language folder plus the file path. If the bundle path does not exist, the path where the file should be found is returned. This can be used to create written copies of bundles in the database. See class description for details about paths.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLPathCreator/bundlePathForFile:;  name=BLPathCreator::bundlePathForFile: --><a name="//apple_ref/occ/instm/BLPathCreator/bundlePathForFile:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="bundlePathForFile:">bundlePathForFile: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns the bundle file path portion of a full path.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/bundlePathForFile //apple_ref/occ/clm/bundlePathForFile //apple_ref/occ/intfcm/bundlePathForFile //apple_ref/occ/intfm/bundlePathForFile //apple_ref/occ/func/bundlePathForFile //apple_ref/occ/ftmplt/bundlePathForFile //apple_ref/occ/defn/bundlePathForFile //apple_ref/occ/macro/bundlePathForFile" --><span class="function">bundlePathForFile</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">filePath</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->See class description for details about paths.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLPathCreator/exactLanguageOfFileAtPath:;  name=BLPathCreator::exactLanguageOfFileAtPath: --><a name="//apple_ref/occ/instm/BLPathCreator/exactLanguageOfFileAtPath:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="exactLanguageOfFileAtPath:">exactLanguageOfFileAtPath: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Scans a given path for an .lproj folder and returns it's name.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/exactLanguageOfFileAtPath //apple_ref/occ/clm/exactLanguageOfFileAtPath //apple_ref/occ/intfcm/exactLanguageOfFileAtPath //apple_ref/occ/intfm/exactLanguageOfFileAtPath //apple_ref/occ/func/exactLanguageOfFileAtPath //apple_ref/occ/ftmplt/exactLanguageOfFileAtPath //apple_ref/occ/defn/exactLanguageOfFileAtPath //apple_ref/occ/macro/exactLanguageOfFileAtPath" --><span class="function">exactLanguageOfFileAtPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">path</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->See class description for details about paths.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLPathCreator/fullPathForBundle:;  name=BLPathCreator::fullPathForBundle: --><a name="//apple_ref/occ/instm/BLPathCreator/fullPathForBundle:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="fullPathForBundle:">fullPathForBundle: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns the absolute path of a bundle.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/fullPathForBundle //apple_ref/occ/clm/fullPathForBundle //apple_ref/occ/intfcm/fullPathForBundle //apple_ref/occ/intfm/fullPathForBundle //apple_ref/occ/func/fullPathForBundle //apple_ref/occ/ftmplt/fullPathForBundle //apple_ref/occ/defn/fullPathForBundle //apple_ref/occ/macro/fullPathForBundle" --><span class="function">fullPathForBundle</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/BLBundleObject //apple_ref/occ/tdef/BLBundleObject //apple_ref/occ/tag/BLBundleObject //apple_ref/occ/econst/BLBundleObject //apple_ref/occ/struct/BLBundleObject //apple_ref/occ/clconst/BLBundleObject //apple_ref/occ/intf/BLBundleObject" --><span class="type">BLBundleObject</span><!-- /a --> <span class="type">*</span>)<span class="var">bundle</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->See class description for details about paths.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLPathCreator/fullPathForRelativeBundlePath:;  name=BLPathCreator::fullPathForRelativeBundlePath: --><a name="//apple_ref/occ/instm/BLPathCreator/fullPathForRelativeBundlePath:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="fullPathForRelativeBundlePath:">fullPathForRelativeBundlePath: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Converts a relative bundle path into an absolute path.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/fullPathForRelativeBundlePath //apple_ref/occ/clm/fullPathForRelativeBundlePath //apple_ref/occ/intfcm/fullPathForRelativeBundlePath //apple_ref/occ/intfm/fullPathForRelativeBundlePath //apple_ref/occ/func/fullPathForRelativeBundlePath //apple_ref/occ/ftmplt/fullPathForRelativeBundlePath //apple_ref/occ/defn/fullPathForRelativeBundlePath //apple_ref/occ/macro/fullPathForRelativeBundlePath" --><span class="function">fullPathForRelativeBundlePath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">path</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->See class description for details about paths.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLPathCreator/independendPathCreator;  name=BLPathCreator::independendPathCreator --><a name="//apple_ref/occ/clm/BLPathCreator/independendPathCreator"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="independendPathCreator">independendPathCreator</a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns an global document-independent path creator.
+ <!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<span class="var">independendPathCreator</span>; </pre>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLPathCreator/initWithDocument:;  name=BLPathCreator::initWithDocument: --><a name="//apple_ref/occ/instm/BLPathCreator/initWithDocument:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="initWithDocument:">initWithDocument: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Designated initializer.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initWithDocument //apple_ref/occ/clm/initWithDocument //apple_ref/occ/intfcm/initWithDocument //apple_ref/occ/intfm/initWithDocument //apple_ref/occ/func/initWithDocument //apple_ref/occ/ftmplt/initWithDocument //apple_ref/occ/defn/initWithDocument //apple_ref/occ/macro/initWithDocument" --><span class="function">initWithDocument</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSDocument //apple_ref/occ/tdef/NSDocument //apple_ref/occ/tag/NSDocument //apple_ref/occ/econst/NSDocument //apple_ref/occ/struct/NSDocument //apple_ref/occ/clconst/NSDocument //apple_ref/occ/intf/NSDocument" --><span class="type">NSDocument</span><!-- /a -->&lt;<span class="param">BLDocumentProtocol</span>&gt; <span class="type">*</span>)<span class="var">document</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->Use this method if you want to return a path creator for a BLDocumentProtocol object.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLPathCreator/languageNameForLanguage:inBundle:;  name=BLPathCreator::languageNameForLanguage:inBundle: --><a name="//apple_ref/occ/instm/BLPathCreator/languageNameForLanguage:inBundle:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="languageNameForLanguage:inBundle:">languageNameForLanguage:inBundle: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Return the proposed name of a language for a given bundle.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/languageNameForLanguage //apple_ref/occ/clm/languageNameForLanguage //apple_ref/occ/intfcm/languageNameForLanguage //apple_ref/occ/intfm/languageNameForLanguage //apple_ref/occ/func/languageNameForLanguage //apple_ref/occ/ftmplt/languageNameForLanguage //apple_ref/occ/defn/languageNameForLanguage //apple_ref/occ/macro/languageNameForLanguage" --><span class="function">languageNameForLanguage</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">language</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/inBundle //apple_ref/occ/clm/inBundle //apple_ref/occ/intfcm/inBundle //apple_ref/occ/intfm/inBundle //apple_ref/occ/func/inBundle //apple_ref/occ/ftmplt/inBundle //apple_ref/occ/defn/inBundle //apple_ref/occ/macro/inBundle" --><span class="function">inBundle</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/BLBundleObject //apple_ref/occ/tdef/BLBundleObject //apple_ref/occ/tag/BLBundleObject //apple_ref/occ/econst/BLBundleObject //apple_ref/occ/struct/BLBundleObject //apple_ref/occ/clconst/BLBundleObject //apple_ref/occ/intf/BLBundleObject" --><span class="type">BLBundleObject</span><!-- /a --> <span class="type">*</span>)<span class="var">bundle</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This takes into account the setting of the bundle - to either use identifiers, long names or both. When the bundles naming style is BLIdentifiersAndDescriptionsNamingStyle, the long name is returned if the description does not contain any spaces (" ") or underscores ("_"), otherwise the identifier is used. See class description for details about paths.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLPathCreator/languageOfFileAtPath:;  name=BLPathCreator::languageOfFileAtPath: --><a name="//apple_ref/occ/instm/BLPathCreator/languageOfFileAtPath:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="languageOfFileAtPath:">languageOfFileAtPath: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Scans a given path for an .lproj folder and returns the alnguage identifier by using it's name as description.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/languageOfFileAtPath //apple_ref/occ/clm/languageOfFileAtPath //apple_ref/occ/intfcm/languageOfFileAtPath //apple_ref/occ/intfm/languageOfFileAtPath //apple_ref/occ/func/languageOfFileAtPath //apple_ref/occ/ftmplt/languageOfFileAtPath //apple_ref/occ/defn/languageOfFileAtPath //apple_ref/occ/macro/languageOfFileAtPath" --><span class="function">languageOfFileAtPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">path</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->See class description for details about paths.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLPathCreator/pathForFolderOfLanguage:inBundle:;  name=BLPathCreator::pathForFolderOfLanguage:inBundle: --><a name="//apple_ref/occ/instm/BLPathCreator/pathForFolderOfLanguage:inBundle:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="pathForFolderOfLanguage:inBundle:">pathForFolderOfLanguage:inBundle: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns the ideal path for a language folder in a bundle.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/pathForFolderOfLanguage //apple_ref/occ/clm/pathForFolderOfLanguage //apple_ref/occ/intfcm/pathForFolderOfLanguage //apple_ref/occ/intfm/pathForFolderOfLanguage //apple_ref/occ/func/pathForFolderOfLanguage //apple_ref/occ/ftmplt/pathForFolderOfLanguage //apple_ref/occ/defn/pathForFolderOfLanguage //apple_ref/occ/macro/pathForFolderOfLanguage" --><span class="function">pathForFolderOfLanguage</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">language</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/inBundle //apple_ref/occ/clm/inBundle //apple_ref/occ/intfcm/inBundle //apple_ref/occ/intfm/inBundle //apple_ref/occ/func/inBundle //apple_ref/occ/ftmplt/inBundle //apple_ref/occ/defn/inBundle //apple_ref/occ/macro/inBundle" --><span class="function">inBundle</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/BLBundleObject //apple_ref/occ/tdef/BLBundleObject //apple_ref/occ/tag/BLBundleObject //apple_ref/occ/econst/BLBundleObject //apple_ref/occ/struct/BLBundleObject //apple_ref/occ/clconst/BLBundleObject //apple_ref/occ/intf/BLBundleObject" --><span class="type">BLBundleObject</span><!-- /a --> <span class="type">*</span>)<span class="var">bundle</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The returned path does not have to be a real path, it can be the real path of a bundle plus the language folder named by the naming style of the containing bundle. This method also returns a path if the bundle does not exist at that location. See class description for details about paths.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLPathCreator/realPathForFolderOfLanguage:inBundle:;  name=BLPathCreator::realPathForFolderOfLanguage:inBundle: --><a name="//apple_ref/occ/instm/BLPathCreator/realPathForFolderOfLanguage:inBundle:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="realPathForFolderOfLanguage:inBundle:">realPathForFolderOfLanguage:inBundle: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns the actual real path for a language folder in a bundle, if it exists.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/realPathForFolderOfLanguage //apple_ref/occ/clm/realPathForFolderOfLanguage //apple_ref/occ/intfcm/realPathForFolderOfLanguage //apple_ref/occ/intfm/realPathForFolderOfLanguage //apple_ref/occ/func/realPathForFolderOfLanguage //apple_ref/occ/ftmplt/realPathForFolderOfLanguage //apple_ref/occ/defn/realPathForFolderOfLanguage //apple_ref/occ/macro/realPathForFolderOfLanguage" --><span class="function">realPathForFolderOfLanguage</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">language</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/inBundle //apple_ref/occ/clm/inBundle //apple_ref/occ/intfcm/inBundle //apple_ref/occ/intfm/inBundle //apple_ref/occ/func/inBundle //apple_ref/occ/ftmplt/inBundle //apple_ref/occ/defn/inBundle //apple_ref/occ/macro/inBundle" --><span class="function">inBundle</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/BLBundleObject //apple_ref/occ/tdef/BLBundleObject //apple_ref/occ/tag/BLBundleObject //apple_ref/occ/econst/BLBundleObject //apple_ref/occ/struct/BLBundleObject //apple_ref/occ/clconst/BLBundleObject //apple_ref/occ/intf/BLBundleObject" --><span class="type">BLBundleObject</span><!-- /a --> <span class="type">*</span>)<span class="var">bundle</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->The returned path is always a real path that can be used. In contrast to pathForFolderOfLanguage:inBundle:, the returned path might have a different naming style that the bundle. When working on files, this method should be used to ensure that user-specific namings are reflected. If the bundle path given by bundle does not exist, nil is returned. See class description for details about paths.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLPathCreator/relativePathForBundle:;  name=BLPathCreator::relativePathForBundle: --><a name="//apple_ref/occ/instm/BLPathCreator/relativePathForBundle:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="relativePathForBundle:">relativePathForBundle: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns the relative path of a bundle as seen from the document.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/relativePathForBundle //apple_ref/occ/clm/relativePathForBundle //apple_ref/occ/intfcm/relativePathForBundle //apple_ref/occ/intfm/relativePathForBundle //apple_ref/occ/func/relativePathForBundle //apple_ref/occ/ftmplt/relativePathForBundle //apple_ref/occ/defn/relativePathForBundle //apple_ref/occ/macro/relativePathForBundle" --><span class="function">relativePathForBundle</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/BLBundleObject //apple_ref/occ/tdef/BLBundleObject //apple_ref/occ/tag/BLBundleObject //apple_ref/occ/econst/BLBundleObject //apple_ref/occ/struct/BLBundleObject //apple_ref/occ/clconst/BLBundleObject //apple_ref/occ/intf/BLBundleObject" --><span class="type">BLBundleObject</span><!-- /a --> <span class="type">*</span>)<span class="var">bundle</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->See class description for details about paths.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLPathCreator/relativePathForFile:;  name=BLPathCreator::relativePathForFile: --><a name="//apple_ref/occ/instm/BLPathCreator/relativePathForFile:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="relativePathForFile:">relativePathForFile: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Returns the relative file path portion of a full path.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/relativePathForFile //apple_ref/occ/clm/relativePathForFile //apple_ref/occ/intfcm/relativePathForFile //apple_ref/occ/intfm/relativePathForFile //apple_ref/occ/func/relativePathForFile //apple_ref/occ/ftmplt/relativePathForFile //apple_ref/occ/defn/relativePathForFile //apple_ref/occ/macro/relativePathForFile" --><span class="function">relativePathForFile</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">filePath</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->See class description for details about paths.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLPathCreator/relativePathForFullBundlePath:;  name=BLPathCreator::relativePathForFullBundlePath: --><a name="//apple_ref/occ/instm/BLPathCreator/relativePathForFullBundlePath:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="relativePathForFullBundlePath:">relativePathForFullBundlePath: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Converts an absolute bundle path into a relative path.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/relativePathForFullBundlePath //apple_ref/occ/clm/relativePathForFullBundlePath //apple_ref/occ/intfcm/relativePathForFullBundlePath //apple_ref/occ/intfm/relativePathForFullBundlePath //apple_ref/occ/func/relativePathForFullBundlePath //apple_ref/occ/ftmplt/relativePathForFullBundlePath //apple_ref/occ/defn/relativePathForFullBundlePath //apple_ref/occ/macro/relativePathForFullBundlePath" --><span class="function">relativePathForFullBundlePath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">path</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->See class description for details about paths.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/BLPathCreator/replaceLanguage:inPath:withLanguage:bundle:;  name=BLPathCreator::replaceLanguage:inPath:withLanguage:bundle: --><a name="//apple_ref/occ/instm/BLPathCreator/replaceLanguage:inPath:withLanguage:bundle:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="replaceLanguage:inPath:withLanguage:bundle:">replaceLanguage:inPath:withLanguage:bundle: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Replaces the occurence of a language in a path with another language.
+<!-- end abstract --></p>
+<p></p>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/replaceLanguage //apple_ref/occ/clm/replaceLanguage //apple_ref/occ/intfcm/replaceLanguage //apple_ref/occ/intfm/replaceLanguage //apple_ref/occ/func/replaceLanguage //apple_ref/occ/ftmplt/replaceLanguage //apple_ref/occ/defn/replaceLanguage //apple_ref/occ/macro/replaceLanguage" --><span class="function">replaceLanguage</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">oldLanguage</span> <!-- a logicalPath="//apple_ref/occ/instm/inPath //apple_ref/occ/clm/inPath //apple_ref/occ/intfcm/inPath //apple_ref/occ/intfm/inPath //apple_ref/occ/func/inPath //apple_ref/occ/ftmplt/inPath //apple_ref/occ/defn/inPath //apple_ref/occ/macro/inPath" --><span class="function">inPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">path</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/withLanguage //apple_ref/occ/clm/withLanguage //apple_ref/occ/intfcm/withLanguage //apple_ref/occ/intfm/withLanguage //apple_ref/occ/func/withLanguage //apple_ref/occ/ftmplt/withLanguage //apple_ref/occ/defn/withLanguage //apple_ref/occ/macro/withLanguage" --><span class="function">withLanguage</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">newLanguage</span> <!-- a logicalPath="//apple_ref/occ/instm/bundle //apple_ref/occ/clm/bundle //apple_ref/occ/intfcm/bundle //apple_ref/occ/intfm/bundle //apple_ref/occ/func/bundle //apple_ref/occ/ftmplt/bundle //apple_ref/occ/defn/bundle //apple_ref/occ/macro/bundle" --><span class="function">bundle</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/BLBundleObject //apple_ref/occ/tdef/BLBundleObject //apple_ref/occ/tag/BLBundleObject //apple_ref/occ/econst/BLBundleObject //apple_ref/occ/struct/BLBundleObject //apple_ref/occ/clconst/BLBundleObject //apple_ref/occ/intf/BLBundleObject" --><span class="type">BLBundleObject</span><!-- /a --> <span class="type">*</span>)<span class="var">bundle</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This method tries to find an occurrence of the given old language, using both its identifier and description. If one is found, it is replaced with the new languages name as set in the bundle settings. See languageNameForLanguage:inBundle: for more details. See class description for details about paths.
+ <!-- end discussion --></p>
+<p></p>
+<p>Last Updated: 08.05.2009
+</p>
+</body>
+</html>

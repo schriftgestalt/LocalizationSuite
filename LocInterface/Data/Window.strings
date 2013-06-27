@@ -1,0 +1,12 @@
+/* Title for guess/match window part */
+"matchguess" = "Matches / Guesses";
+
+/* Title for separate editor window part */
+"editor" = "Separate Editor";
+
+/* Title for separate editor window part */
+"problems" = "Translation Problems";
+
+/* Title for comment window part */
+"comment" = "Comment";
+

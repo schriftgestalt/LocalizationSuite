@@ -1,0 +1,26 @@
+/* Title of LIContent column showing whether a key object is active or not. */
+"active" = "Active";
+
+/* Title of LIContent column showing whether a key object was updated or not. */
+"updated" = "Updated";
+
+/* Title of LIContent column showing the status of a key object. */
+"status" = "Status";
+
+/* Description for key object status "autotranslated", displayed as tooltip */
+"Autotranslated" = "Autotranslated";
+
+/* One-Char constant describing the key object status "autotranslated" */
+"A" = "A";
+
+/* Description for key object status "deactivated", displayed as tooltip */
+"Deactivated" = "Deactivated";
+
+/* One-Char constant describing the key object status "autotranslated" */
+"D" = "D";
+
+/* Description for key object status "updated", displayed as tooltip */
+"Updated" = "Updated";
+
+/* One-Char constant describing the key object status "autotranslated" */
+"U" = "U";

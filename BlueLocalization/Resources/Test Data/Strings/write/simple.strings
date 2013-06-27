@@ -1,0 +1,5 @@
+// comment
+"key" = "value";
+
+/* comment2 */
+key2 = "value2";

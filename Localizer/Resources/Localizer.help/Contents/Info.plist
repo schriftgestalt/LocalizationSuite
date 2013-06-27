@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.loc-suite.localizer.help</string>
+	<key>CFBundleName</key>
+	<string>Localizer</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleSignature</key>
+	<string>hbwr</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>HPDBookAccessPath</key>
+	<string>index.html</string>
+	<key>HPDBookIndexPath</key>
+	<string>Localizer.helpindex</string>
+	<key>HPDBookKBURL</key>
+	<string>http://www.loc-suite.org</string>
+	<key>HPDBookTitle</key>
+	<string>Localizer Help</string>
+	<key>HPDBookType</key>
+	<string>3</string>
+</dict>
+</plist>

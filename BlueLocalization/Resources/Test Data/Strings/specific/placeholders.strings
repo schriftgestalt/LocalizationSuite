@@ -1,0 +1,8 @@
+// comment
+"key" = "value";
+"key2" = "value2";
+
+/* comment2 */
+"key5" = "Item 3";
+"key3" = "value3";
+"key4" = "<do not localize>";

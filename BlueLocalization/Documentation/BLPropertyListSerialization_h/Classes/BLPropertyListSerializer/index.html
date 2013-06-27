@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><head>
+    <title>BLPropertyListSerializer</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <meta name="generator" content="HeaderDoc" />
+<meta name="xcode-display" content="render" />
+<style><!--
+.toc_contents_text {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+ul.tocSubEntryList li.tocSubEntry {
+    list-style: none;
+}
+
+#colorbox {
+		display: none;
+}
+.spec_sheet_line {
+		margin-bottom: 1px;
+}
+.collapsible {
+		display: none;
+}
+.toc_leadspace {
+		width: 10; min-width: 10;
+}
+.disclosure_triangle_td {
+		width: 14; min-width: 14;
+		font-size: 10px;
+		vertical-align: middle;
+}
+.specbox td {
+		font-size: 13px;
+}
+.specbox td a {
+		font-size: 13px;
+}
+.specbox td code {
+		font-size: 13px;
+}
+.specbox td tt {
+		font-size: 13px;
+}
+.specbox td pre {
+		font-size: 13px;
+}
+.specbox a {
+		font-size: 12px;
+}
+.disclosure_triangle_td a:hover {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:hover {
+		text-decoration: none;
+}
+.hd_toc_box {
+		padding-top: 10px;
+		padding-right: 15px;
+}.tocSeparator {
+		margin-top: 15px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+}
+.tocSubEntryList {
+		margin-left: 0px;
+		padding-left: 40px;
+		padding-top: 0px;
+		margin-top: 2px;
+		padding-bottom: 0px;
+		margin-bottom: 8px;
+}
+.hd_toc_heading_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.hd_toc_entry_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.tocSubEntry {
+		margin-left: 0px;
+		padding-left: 0px;
+		margin-top: 0px;
+		margin-bottom: 1px;
+}
+.tocSubEntry a {
+		font-size: 10pt;
+}
+.tocSubheading {
+		padding-left: 14px;
+		margin-left: 0px;
+		margin-top: 5px;
+		padding-top: 0px;
+		font-size: 16px;
+		color: #808080;
+}
+
+#tocMenu {
+		border-right: 1px solid #c0c0c0;
+		background-color: #f4f4ff;
+		top:0px;
+		left:0px;
+		width:230px;
+		height:100%;
+}
+#bodyContents {
+		width: auto;
+		padding-left: 15px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function getNewHTTPObject()
+{
+        var xmlhttp;
+
+        /** Special IE only code ... */
+        /*@cc_on
+          @if (@_jscript_version >= 5)
+              try
+              {
+                  xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');
+              }
+              catch (e)
+              {
+                  try
+                  {
+                      xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                  }
+                  catch (E)
+                  {
+                      xmlhttp = false;
+                  }
+             }
+          @else
+             xmlhttp = false;
+        @end @*/
+
+        /** Every other browser on the planet */
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined')
+        {
+            try
+            {
+                xmlhttp = new XMLHttpRequest();
+            }
+            catch (e)
+            {
+                xmlhttp = false;
+            }
+        }
+
+        return xmlhttp;
+}
+
+function hidetoc() {
+	var toc = document.getElementById('tocMenu');
+	var src = toc.getAttribute('src');
+	var xhr = getNewHTTPObject();
+	xhr.open('GET', src, true);
+	xhr.onreadystatechange = function() {
+		if(xhr.readyState == 4) {
+			var toc = document.getElementById('tocMenu');
+			toc.innerHTML = xhr.responseText;
+		}
+	}
+	xhr.send(null);
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var body = document.getElementById('bodyContents');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+
+function disclosure_triangle(elt) {
+   var linkelt = elt;
+   while (elt && elt.tagName != 'TABLE') { elt = elt.parentNode;}
+   if (!elt) { return; }
+   while (elt && elt.tagName != 'DIV') { elt = elt.nextSibling;}
+   if (!elt) { return; }
+   if (parseInt(linkelt.getAttribute('state'))) {
+      // It's open.  Close it
+      linkelt.innerHTML = '&#x25B7;';
+      linkelt.setAttribute('state', 0);
+      linkelt.setAttribute('class', 'closed_disclosure_triangle');
+      elt.style.display = 'none';
+   } else {
+      // It's closed.  Open it
+      linkelt.innerHTML = '&#x25BC;';
+      linkelt.setAttribute('state', 1);
+      linkelt.setAttribute('class', 'open_disclosure_triangle');
+      elt.style.display = 'block';
+   }
+}
+--></script>
+<style type="text/css"><!--div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style></head><body bgcolor="#ffffff" onload="hidetoc();" >
+<!-- headerDoc=cl; uid=//apple_ref/occ/cl/BLPropertyListSerializer;  name=BLPropertyListSerializer-->
+<a name="//apple_ref/occ/cl/BLPropertyListSerializer"></a><table id="hd_outermost_table" height="100%" width="100%"><tr><td valign='top' id='tocMenu' src='toc.html'></td>
+<td id='bodyContents' valign='top'>
+<a name="top"></a>
+<h1><a name="BLPropertyListSerializer">BLPropertyListSerializer</a></h1>
+<div class="spec_sheet_info_box"><table cellspacing="0" class="specbox">
+<tr><td scope="row"><b>Superclass:</b></td><td><div style="margin-bottom:1px"><div class="content_text"><!-- a logicalPath="//apple_ref/occ/cl/NSObject" machineGenerated="true" -->NSObject<!-- /a --></div></div></td></tr>
+<tr><td scope="row"><b>Declared In:</b></td><td><div style="margin-bottom:1px"><div class="content_text"><a href="../../index.html" logicalPath="//apple_ref/doc/header/BLPropertyListSerialization.h" target="_top" machineGenerated="true">BLPropertyListSerialization.h</a></div></div></td></tr>
+</table></div>
+<h2>Introduction</h2>
+<p><!-- headerDoc=abstract;uid=//apple_ref/occ/cl/BLPropertyListSerializer;name=start --><!-- begin abstract --><p>A utility class for serializing a tree of objects.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/cl/BLPropertyListSerializer;name=end --></p>
+<hr class="afterClassOrHeaderInfo"><br><a name="HeaderDoc_methods"></a>
+<h2 class="h2tight">Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/BLPropertyListSerializer/objectWithPropertyList:fileWrappers:" target="_top">+objectWithPropertyList:fileWrappers:</a></tt></dt>
+<dd><p>Returns a new object created from the given property list.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/BLPropertyListSerializer/serializeObject:withAttributes:outWrappers:" target="_top">+serializeObject:withAttributes:outWrappers:</a></tt></dt>
+<dd><p>Creates a property list from of the object.
+</dd>
+</dl>
+<hr class="betweenAPIEntries"><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLPropertyListSerializer/objectWithPropertyList:fileWrappers:;   name=BLPropertyListSerializer::objectWithPropertyList:fileWrappers: -->
+<a name="//apple_ref/occ/clm/BLPropertyListSerializer/objectWithPropertyList:fileWrappers:"></a>
+<h3><a name="objectWithPropertyList:fileWrappers:">objectWithPropertyList:fileWrappers:</a></h3>
+<hr class="afterName"><p><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/BLPropertyListSerializer/objectWithPropertyList:fileWrappers:;name=start --><!-- begin abstract --><p>Returns a new object created from the given property list.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/BLPropertyListSerializer/objectWithPropertyList:fileWrappers:;name=end --></p>
+<div class='declaration_indent'>
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/clm/BLPropertyListSerializer/objectWithPropertyList:fileWrappers:;name=start -->+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/struct/id //apple_ref/occ/intf/id //apple_ref/doc/anysymbol/id" machineGenerated="true" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/BLPropertyListSerializer/objectWithPropertyList //apple_ref/occ/clm/BLPropertyListSerializer/objectWithPropertyList //apple_ref/occ/intfcm/BLPropertyListSerializer/objectWithPropertyList //apple_ref/occ/intfm/BLPropertyListSerializer/objectWithPropertyList //apple_ref/occ/func/objectWithPropertyList //apple_ref/occ/ftmplt/BLPropertyListSerializer/objectWithPropertyList //apple_ref/occ/defn/objectWithPropertyList //apple_ref/occ/macro/objectWithPropertyList //apple_ref/doc/anysymbol/objectWithPropertyList" machineGenerated="true" --><span class="function">objectWithPropertyList</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/struct/id //apple_ref/occ/intf/id //apple_ref/doc/anysymbol/id" machineGenerated="true" --><span class="type">id</span><!-- /a -->)<span class="param">plist</span> <!-- a logicalPath="//apple_ref/occ/instm/BLPropertyListSerializer/fileWrappers //apple_ref/occ/clm/BLPropertyListSerializer/fileWrappers //apple_ref/occ/intfcm/BLPropertyListSerializer/fileWrappers //apple_ref/occ/intfm/BLPropertyListSerializer/fileWrappers //apple_ref/occ/func/fileWrappers //apple_ref/occ/ftmplt/BLPropertyListSerializer/fileWrappers //apple_ref/occ/defn/fileWrappers //apple_ref/occ/macro/fileWrappers //apple_ref/doc/anysymbol/fileWrappers" machineGenerated="true" --><span class="function">fileWrappers</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSDictionary //apple_ref/occ/tdef/NSDictionary //apple_ref/occ/tag/NSDictionary //apple_ref/occ/struct/NSDictionary //apple_ref/occ/intf/NSDictionary //apple_ref/doc/anysymbol/NSDictionary" machineGenerated="true" --><span class="type">NSDictionary</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/fileWrappers //apple_ref/occ/data/BLPropertyListSerializer/fileWrappers //apple_ref/occ/data/fileWrappers //apple_ref/occ/clconst/BLPropertyListSerializer/fileWrappers " machineGenerated="true" --><span class="var">fileWrappers</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/clm/BLPropertyListSerializer/objectWithPropertyList:fileWrappers:;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/clm/BLPropertyListSerializer/objectWithPropertyList:fileWrappers:;name=start --><p>The passed property list needs not to directly originate form a object. Passed arrays or dictionaries will recursively call this method on their contained objects.
+The property list passed here has been created using +serializeObject:withAttributes:outWrappers: beforehand. The passed file wrappers have to be the same as previously returned by that method.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/clm/BLPropertyListSerializer/objectWithPropertyList:fileWrappers:;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries"><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLPropertyListSerializer/serializeObject:withAttributes:outWrappers:;   name=BLPropertyListSerializer::serializeObject:withAttributes:outWrappers: -->
+<a name="//apple_ref/occ/clm/BLPropertyListSerializer/serializeObject:withAttributes:outWrappers:"></a>
+<h3><a name="serializeObject:withAttributes:outWrappers:">serializeObject:withAttributes:outWrappers:</a></h3>
+<hr class="afterName"><p><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/BLPropertyListSerializer/serializeObject:withAttributes:outWrappers:;name=start --><!-- begin abstract --><p>Creates a property list from of the object.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/BLPropertyListSerializer/serializeObject:withAttributes:outWrappers:;name=end --></p>
+<div class='declaration_indent'>
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/clm/BLPropertyListSerializer/serializeObject:withAttributes:outWrappers:;name=start -->+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/struct/id //apple_ref/occ/intf/id //apple_ref/doc/anysymbol/id" machineGenerated="true" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/BLPropertyListSerializer/serializeObject //apple_ref/occ/clm/BLPropertyListSerializer/serializeObject //apple_ref/occ/intfcm/BLPropertyListSerializer/serializeObject //apple_ref/occ/intfm/BLPropertyListSerializer/serializeObject //apple_ref/occ/func/serializeObject //apple_ref/occ/ftmplt/BLPropertyListSerializer/serializeObject //apple_ref/occ/defn/serializeObject //apple_ref/occ/macro/serializeObject //apple_ref/doc/anysymbol/serializeObject" machineGenerated="true" --><span class="function">serializeObject</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/struct/id //apple_ref/occ/intf/id //apple_ref/doc/anysymbol/id" machineGenerated="true" --><span class="type">id</span><!-- /a -->)<span class="param">object</span> <!-- a logicalPath="//apple_ref/occ/instm/BLPropertyListSerializer/withAttributes //apple_ref/occ/clm/BLPropertyListSerializer/withAttributes //apple_ref/occ/intfcm/BLPropertyListSerializer/withAttributes //apple_ref/occ/intfm/BLPropertyListSerializer/withAttributes //apple_ref/occ/func/withAttributes //apple_ref/occ/ftmplt/BLPropertyListSerializer/withAttributes //apple_ref/occ/defn/withAttributes //apple_ref/occ/macro/withAttributes //apple_ref/doc/anysymbol/withAttributes" machineGenerated="true" --><span class="function">withAttributes</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSDictionary //apple_ref/occ/tdef/NSDictionary //apple_ref/occ/tag/NSDictionary //apple_ref/occ/struct/NSDictionary //apple_ref/occ/intf/NSDictionary //apple_ref/doc/anysymbol/NSDictionary" machineGenerated="true" --><span class="type">NSDictionary</span><!-- /a --> <span class="type">*</span>)<span class="param">attributes</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/BLPropertyListSerializer/outWrappers //apple_ref/occ/clm/BLPropertyListSerializer/outWrappers //apple_ref/occ/intfcm/BLPropertyListSerializer/outWrappers //apple_ref/occ/intfm/BLPropertyListSerializer/outWrappers //apple_ref/occ/func/outWrappers //apple_ref/occ/ftmplt/BLPropertyListSerializer/outWrappers //apple_ref/occ/defn/outWrappers //apple_ref/occ/macro/outWrappers //apple_ref/doc/anysymbol/outWrappers" machineGenerated="true" --><span class="function">outWrappers</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSDictionary //apple_ref/occ/tdef/NSDictionary //apple_ref/occ/tag/NSDictionary //apple_ref/occ/struct/NSDictionary //apple_ref/occ/intf/NSDictionary //apple_ref/doc/anysymbol/NSDictionary" machineGenerated="true" --><span class="type">NSDictionary</span><!-- /a --> <span class="type">*</span><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/fileWrappers //apple_ref/occ/data/BLPropertyListSerializer/fileWrappers //apple_ref/occ/data/fileWrappers //apple_ref/occ/clconst/BLPropertyListSerializer/fileWrappers " machineGenerated="true" --><span class="var">fileWrappers</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/clm/BLPropertyListSerializer/serializeObject:withAttributes:outWrappers:;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/clm/BLPropertyListSerializer/serializeObject:withAttributes:outWrappers:;name=start --><p>The passed object can be any kind of object. Passed arrays or dictionaries will recursively call this method on their contained objects.
+The resulting property list is then examined, and non-plist objects will either be serialized recursively, or - if the do not support BLPropertyListSerialization - they will be archived using a keyed archiver. If both are not possible, an exception is thrown. The returned wrappers are the file wrappers that were returned during the serialization process.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/clm/BLPropertyListSerializer/serializeObject:withAttributes:outWrappers:;name=end --><!-- end discussion -->
+<p class="gapBeforeFooter">&nbsp;</p><hr class="afterFooter"><div class="hd_copyright_and_timestamp">
+<p class="hd_timestamp">Last Updated: 24.08.2011
+</p></div>
+</td></tr></table>
+</body></html>

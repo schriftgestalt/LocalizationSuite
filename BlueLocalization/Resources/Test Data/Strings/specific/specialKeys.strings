@@ -1,0 +1,4 @@
+key:part = "test:value";
+key.test = "part:value";
+test-key = "part:value";
+key_test = "value-test";

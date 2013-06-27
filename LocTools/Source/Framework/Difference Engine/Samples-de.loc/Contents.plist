@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundles</key>
+	<array>
+		<dict>
+			<key>associated Xcode projects</key>
+			<array/>
+			<key>change date</key>
+			<date>2001-01-01T00:00:00Z</date>
+			<key>class</key>
+			<string>BLBundleObject</string>
+			<key>errors</key>
+			<array/>
+			<key>files</key>
+			<array>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-05-23T19:05:40Z</date>
+					<key>class</key>
+					<string>BLPlistFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>0da86c578ec2602c2d48a0238d2fe690
+</string>
+					<key>name</key>
+					<string>Samples/2 - EDITING AND ADDING CONTENT/.Info.plist</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>EDITING AND ADDING CONTENT.</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>BEARBEITEN UND HINZUFÜGEN VON INHALTEN.</string>
+								<key>en</key>
+								<string>EDITING AND ADDING CONTENT.</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict>
+						<key>en</key>
+						<string>1</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-07-18T15:28:16Z</date>
+					<key>class</key>
+					<string>BLTXTFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>216eda6ffd76451c17989e25c0e060fe
+</string>
+					<key>name</key>
+					<string>Samples/2 - EDITING AND ADDING CONTENT/ADDING SHEETS! Work. Flow..txt</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>content</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>BLÄTTER HINZUFÜGEN!
+Arbeit. Erledigen.
+
+{%$]----------
+
+Jetzt befinden Sie sich gerade auf dem letzten Blatt dieses Stapels.
+Überzeugen Sie sich in der Blattübersicht selbst davon (Ja! Daumen und Zeigefinger zusammenziehen!): Stimmt's?
+
+Wenn Sie am Ende des Stapels ein neues Blatt einfügen möchten, brauchen Sie nur über das Ende der Blattübersicht rechts hinaus streichen.  Und wenn Sie auf dieses neue Blatt auch etwas draufschreiben, können Sie auf gleiche Art und Weise noch ein neues Blatt hinzufügen. Und noch eins. So viele Sie benötigen.
+
+Probieren Sie es aus: „Erstreichen“ Sie sich ein neues Blatt und schreiben Sie etwas drauf. Und das ganze noch einmal.
+Wechseln Sie dann zu dem Stapel, auf dem „TEILEN UND SYNCHRONISIEREN VON STAPELN MIT DER CLOUD“ steht und öffnen Sie ihn.</string>
+								<key>en</key>
+								<string>ADDING SHEETS!
+Work. Flow.
+
+{%$]----------
+
+Right now, this is the very last sheet in this very paper stack. You might try and check for yourself: Pinch to sheet overview - last page, see?
+
+In order to add another sheet at the end of a stack, just swipe from right to left. A new sheet will be created, and as long as you add content to that sheet, yet *another* sheet will be created whenever you swipe right-to-left again.
+
+Do this now: Swipe to create a blank sheet. Write some text. Add more sheets. Write some more text. Then navigate to the stack named “SHARING, AND SYNCING STACKS WITH THE CLOUD” and open it.</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-07-18T15:28:16Z</date>
+					<key>class</key>
+					<string>BLTXTFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>dc34effd015b9c17125217100c519a72
+</string>
+					<key>name</key>
+					<string>Samples/1 - WELCOME TO DAEDALUS/Lesson one- Navigation, pt. 2.txt</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>content</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Lektion Zwei:
+Navigation, Teil 2
+
+{%$]----------
+
+Super! Genau so. Jetzt wissen Sie, wie in Daedalus zwischen den einzelnen Blättern eines Stapels gewechselt wird. Da ein Stapel aber sehr viele Blätter enthalten kann, wäre das Wechseln durch Streichen echter Fingersport. Streichen Sie sich doch einmal durch z. B. 36 Seiten. Fingersport, wie bereits gesagt.
+
+Einfacher wird's mit der Blattübersicht.
+
+Die Blattübersicht erreichen Sie durch Auf- /Zuziehen mit Daumen und Zeigefinger. Dort angelangt, „überstreichen“ Sie mit einem Fingerzug gleich mehrere Blätter. Wenn Sie eines öffnen möchten, tippen Sie es einfach doppelt an.
+
+Versuchen Sie es doch einmal: Ziehen Sie dieses Blatt mit Daumen und Zeigefinger zu. Sie gelangen in die Blattübersicht und können durch die Blätter navigieren. Um wieder zur Einführung zurückzukehren, brauchen Sie nur das Blatt mit Namen „HIER ENDET DIE NAVIGATION“ doppelt anzutippen.</string>
+								<key>en</key>
+								<string>Lesson one:
+Navigation, pt. 2
+
+{%$]----------
+
+Excellent! You have just learned how to navigate from sheet to sheet in Daedalus. Since a paper stack may contain dozens of sheets, swiping from left to right or vice versa could become quite a tedious task, when trying to move, say, 36 pages.
+
+Enter the sheets overview.
+
+The sheets overview is accessed by pinching with two fingers. Once in sheets overview, you can quickly move back and forth multiple sheets by swiping left and right. To view a sheet, just double-tap it.
+
+Do this now: Pinch this page with two fingers and switch to sheets overview. Navigate around. To get back to the tutorial, double-tap the sheet named “NAVIGATION ENDS HERE”.</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-07-18T15:28:16Z</date>
+					<key>class</key>
+					<string>BLTXTFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>47fc6980c2bd234b901fcb3fee02e7c8
+</string>
+					<key>name</key>
+					<string>Samples/1 - WELCOME TO DAEDALUS/Lesson One- Concept &amp; Navigation.txt</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>content</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Lektion Eins:
+Konzept &amp; Navigation
+
+{%$]----------
+
+In Daedalus gibt es keine Dokumentenlisten. Es gibt nämlich auch gar keine Dokumente im klassischen Sinne. Ordner auch nicht. Wir bleiben bei der einzig sinnvollen Metapher: Dem Papierstapel.
+
+Jeder Papierstapel enthält per se eine unbegrenzte Anzahl an Blättern. Durch Streichen nach rechts und links wechseln Sie innerhalb eines Stapels zwischen den enthaltenen Blättern hin und her.
+
+Probieren Sie es jetzt einfach aus: Streichen Sie von rechts nach links.</string>
+								<key>en</key>
+								<string>Lesson One:
+Concept &amp; Navigation
+
+{%$]----------
+
+In Daedalus, there are no document lists. In fact, there are no documents. There are no folders, either. The single metaphor is this: the paper stack.
+
+Each paper stack contains an infinite amount of sheets. You navigate sheets by swiping from right to left or left to right.
+
+Try this now: swipe from right to left.</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-07-18T15:28:16Z</date>
+					<key>class</key>
+					<string>BLTXTFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>fceb0f0760df0d60eb655ea7a402e337
+</string>
+					<key>name</key>
+					<string>Samples/2 - EDITING AND ADDING CONTENT/WELCOME BACK! Let’s start editing sheets..txt</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>content</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>WILLKOMMEN ZURÜCK!
+Lassen Sie uns nun Blätter bearbeiten.
+
+{%$]----------
+
+Sie können jetzt mit Stapeln und Blättern umgehen und finden sich zurecht. Warum holen wir jetzt nicht einmal kurz Ihre kreative Ader heraus und schreiben ein paar Zeilen?
+
+Dafür tippen Sie einfach in einen der beiden Textbereiche: Entweder in den Titel (oben) oder in den Inhaltsbereich (hier, wo dieser Text steht).
+
+Dann mal los: HIER, JA HIER, AUF DIESEN TEXT TIPPEN!!! Und jetzt schreiben Sie hier, was Sie Ihrem Sitznachbarn gerne sagen würden, sich aber nicht trauen.
+Damit er/sie das nicht sieht, wechseln Sie mit einem Streichen von rechts nach links zum nächsten Blatt.</string>
+								<key>en</key>
+								<string>WELCOME BACK!
+Let’s start editing sheets.
+
+{%$]----------
+
+Now that you know how to navigate sheets and stacks, why not get creative for a moment and start editing some text?
+
+To do that, simply tap inside any of the two text areas – the title at the top of the sheet, or the body right here.
+
+Do this now: TAP HERE! ME! TAP THIS!!! Then write something nasty. Once you’re finished, navigate to the next sheet by swiping from right to left.</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-07-18T15:28:16Z</date>
+					<key>class</key>
+					<string>BLTXTFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>a7539a2bbfd13db8ec7f7f5b65fe9e2f
+</string>
+					<key>name</key>
+					<string>Samples/1 - WELCOME TO DAEDALUS/NAVIGATION ENDS HERE!.txt</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>content</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>HIER ENDET
+DIE NAVIGATION!
+
+{%$]----------
+
+Willkommen zurück!
+
+Sie finden sich jetzt also in den Blättern zurecht – werden sich aber wahrscheinlich fragen, wie Sie ganz zum Anfang zurückkehren können. Der Anfang – den nennen wir die „Stapelübersicht“.
+
+Keine große Kunst! Genau so wie Sie vom Blatt zur Blattübersicht gelangt sind, kommen Sie auch zur Stapelübersicht: Ziehen Sie das Blatt einfach mit Daumen und Zeigefinger zu. Sie gelangen in die Blattübersicht und vollführen das Kunststück gleich noch einmal: Voilà! Die Stapelübersicht!
+Hier können Sie sich wie in der Blattübersicht bewegen: Nach rechts und links streichen und – wer hätte es gedacht – den Stapel doppelt antippen, um ihn zu öffnen.
+
+Wenn ein Stapel schon einmal geöffnet wurde, ist automatisch das zuletzt benutzte Blatt im Fokus.
+
+Probieren Sie es doch aus: Ziehen Sie mit Daumen und Zeigefinger das Blatt, danach auf gleiche Weise die Blattübersicht, zu. Sie gelangen in die Stapelübersicht, streichen dort zu einem Stapel mit Namen „BEARBEITEN UND HINZUFÜGEN VON INHALTEN“. Öffnen Sie diesen Stapel, um dessen Inhalte anzuzeigen.</string>
+								<key>en</key>
+								<string>NAVIGATION
+ENDS HERE!
+
+{%$]----------
+
+Welcome back.
+
+Now that you know how to navigate sheets, you might wonder how to get back to the very beginning – the stack overview.
+
+Easy. Just pinch to sheets overview, then pinch again to move to stack overview. You can then navigate stacks as you did sheets: Swipe left or right to focus on a stack and double-tap it to view its contents.
+
+Provided a stack has been opened before, the last viewed sheet will be centered for quick access.
+
+Do this now: Pinch to access sheets overview, then pinch again to access stack overview. In stack overview, please navigate to the stack named “EDITING AND ADDING CONTENT” and double-tap to view its contents.</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-05-23T19:05:40Z</date>
+					<key>class</key>
+					<string>BLPlistFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>72965e42f4e07f8bb833ec0ccb9ef87e
+</string>
+					<key>name</key>
+					<string>Samples/3 - SHARING AND HOW TO SYNC/.Info.plist</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>SHARING, AND HOW TO SYNC STACKS WITH THE CLOUD.</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>TEILEN UND SYNCHRONISIEREN VON STAPELN MIT DER CLOUD.</string>
+								<key>en</key>
+								<string>SHARING, AND HOW TO SYNC STACKS WITH THE CLOUD.</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict>
+						<key>en</key>
+						<string>1</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-05-23T19:05:40Z</date>
+					<key>class</key>
+					<string>BLPlistFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>1298437cb20d7c1cb27e1a8fc69a3e12
+</string>
+					<key>name</key>
+					<string>Samples/1 - WELCOME TO DAEDALUS/.Info.plist</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>WELCOME TO DAEDALUS! PLEASE DOUBLE-TAP OR PINCH TO OPEN.</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>WILLKOMMEN IN DAEDALUS! BITTE DOPPELTIPPEN ODER MIT DAUMEN UND ZEIGEFINGER AUFZIEHEN.</string>
+								<key>en</key>
+								<string>WELCOME TO DAEDALUS! PLEASE DOUBLE-TAP OR PINCH TO OPEN.</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict>
+						<key>en</key>
+						<string>1</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-07-18T15:28:16Z</date>
+					<key>class</key>
+					<string>BLTXTFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>1371ba51a8f3c54f266bac95ba8c278f
+</string>
+					<key>name</key>
+					<string>Samples/3 - SHARING AND HOW TO SYNC/AAAAAND… ACTION! Send some mail..txt</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>1</integer>
+							<key>key</key>
+							<string>content</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>AAAAAND… ACTION!
+Send some mail.
+
+{%$]----------
+
+Now, what good is your work, if you can’t get it out of the app, right?
+
+Daedalus offers several options to share your texts with the world. First: Export via the Action menu, which sits in the top left corner of the screen. It allows you to either send this very text as an email (auto filling subject and body), as a .txt attachment, a PDF, or to open it in another app you got installed on your iPad.
+
+Try this now: Tap the Action menu, tap “Export”, then select “Send as Mail”. Send it to support@the-soulmen.com if you like, we’d love to hear from you.
+
+Next up: Syncing.</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-07-18T15:28:16Z</date>
+					<key>class</key>
+					<string>BLTXTFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>f144e2e2364a3adfb759c08e9c0cf7b4
+</string>
+					<key>name</key>
+					<string>Samples/3 - SHARING AND HOW TO SYNC/SAVE IT FOR A RAINY DAY- Dropbox and MobileMe syncing.txt</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>1</integer>
+							<key>key</key>
+							<string>content</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>SAVE IT FOR A RAINY DAY:
+Dropbox and MobileMe syncing
+
+{%$]----------
+
+If you have an account for Dropbox or MobileMe, you can sync individual stacks with each of the two services.
+
+Syncing is pretty straight forward: In both overviews, there’s this arrowed circle button in the top left corner. If no account is set up yet, the button will prompt you to set one up. If either service is setup, the button will attempt to sync the current stack to a default folder on the remote host.
+
+We call it Intelligent Sync Service Setup or ISSS.
+Actually, we don’t.
+
+You can change several settings (including the default folder) if you tap’n’hold the sync button.
+
+And that‘s it for the tutorial.</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-07-18T15:28:16Z</date>
+					<key>class</key>
+					<string>BLTXTFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>480f1f78d2d87142ecc29f7b9d08e70e
+</string>
+					<key>name</key>
+					<string>Samples/3 - SHARING AND HOW TO SYNC/WAIT, ONE MORE THING!!! or “some words from the creators” and “check out the not-so hidden stack”.txt</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>1</integer>
+							<key>key</key>
+							<string>content</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>WAIT, ONE MORE THING!!!
+or “some words from the creators” and “check out the not-so hidden stack”
+
+{%$]----------
+
+Dear customer,
+
+we strongly believe that Daedalus touch offers an experience like no other text editor on the market. There may be some quirks here and there, some rough edges, some getting-used-to even.
+
+These tutorial stacks where only meant to give a quick introduction to the app by offering some sort of rudimental learning-by-doing approach. With hyphens, of course.
+
+There’s another stack waiting for you, entitled “BET YOU DIDN’T NOTICE...” which features some sort of a quick help overview by means of feature lists and such. Please take a moment to check it out, or else you’re missing out. ;)
+
+As for these stacks – feel free to delete them, once you’re comfortable using Daedalus. If you ever wish to get them back, there’s a slider in the iPad’s Settings app to let you do just that. Or, maybe, you’ve backed them up already via one of the sync services. Then try and import them via that down-pointing arrow-in-a-box thingy in the top right corner of the stack overview.
+
+Either way, Daedalus touch was built to let you create. And create quickly. Use it like you would a paper stack, really. Don’t think in terms of files and folders – think in stacks and sheets. Only write to the bottom of the *screen*, then swipe to create a new sheet and only fill in the body. Rinse. Repeat.
+
+It may very well change the way you’re working with text. Forever.
+
+Let us know how it fares.
+
+Thanks for choosing Daedalus touch. And happy editing.
+
+The Soulmen
+May 2011</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-07-18T15:28:16Z</date>
+					<key>class</key>
+					<string>BLTXTFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>87b60d41962aaaef71dfc14b887a8234
+</string>
+					<key>name</key>
+					<string>Samples/4 - BET YOU DIDN’T NOTICE/Gesture Overview.txt</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>1</integer>
+							<key>key</key>
+							<string>content</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Stack Overview
+--------------
+- Swipe left/right to flip through stacks
+- Double-tap on stack to enter sheet overview
+- Pinch-open to enter sheet overview (focus on last focussed sheet)
+
+
+Sheet Overview
+--------------
+- Swipe left/right to flip through sheets
+- Double-tap on sheet to enter edit view
+- Pinch-open to enter edit view
+- Tap’n’hold to rearrange sheets
+- Pinch-close to enter stack overview
+
+
+Edit view
+---------
+- Swipe left/right to flip through sheets
+- Swipe left on last sheet to create new sheet
+- Pinch-close to enter sheet overview
+- Tap on title to edit title
+- Tap on body to edit body text
+- Tap on left/right margin to move insertion point by character
+- Two-finger tap on left/right margin to move insertion point by word
+</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-07-19T07:26:27Z</date>
+					<key>class</key>
+					<string>BLPlistFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>86ef18d28240acee9710ed3bd0fd57e9
+</string>
+					<key>name</key>
+					<string>Samples/4 - BET YOU DIDN’T NOTICE/.Info.plist</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>BET YOU DIDN’T NOTICE…</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>HABEN SIE MICH SCHON ENTDECKT?</string>
+								<key>en</key>
+								<string>BET YOU DIDN’T NOTICE…</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict>
+						<key>en</key>
+						<string>1</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-07-18T15:28:16Z</date>
+					<key>class</key>
+					<string>BLTXTFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>c323b3ca4ab94ce13c7e90c72599bc42
+</string>
+					<key>name</key>
+					<string>Samples/4 - BET YOU DIDN’T NOTICE/Sync Overview.txt</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>1</integer>
+							<key>key</key>
+							<string>content</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Setup
+--------------
+- Support for Dropbox and MobileMe (iDisk)
+- Remote folder defaults to /Daedalus/Nameofstack
+- Tap’n’hold Sync button to access settings
+
+Settings
+--------------
+- Directory: Change the remote sync directory
+- Conflicts: Set how to deal with documents, if remote AND local were modified since last sync
+- Deletion: Define if files should be deleted from remote host whenever they get deleted from within Daedalus
+
+Import
+--------------
+- Import remote folders into Daedalus by tapping on the import icon
+- Imported folders will automatically be synced
+
+Sync status
+--------------
+- Stacks will show sync service and sync status (dirty = !, synced = √)
+- Sync button shows sync status (dot = dirty)
+- NOTE: Sync status is only relative to last time you activated Daedalus. We currently do NOT check for remote changes during sessions.</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2011-07-18T15:28:16Z</date>
+					<key>class</key>
+					<string>BLTXTFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>2dce3d74dacf577ab5c0d2a91aeca18c
+</string>
+					<key>name</key>
+					<string>Samples/4 - BET YOU DIDN’T NOTICE/What’s new in 1-1.txt</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>content</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>What’s new in 1.1
+
+{%$]----------
+
+Editor
+--------------
+- “Look &amp; Feel” menu now features “Large Type” option
+- Also features fourth color scheme: “Console”
+- Last not least: Option to turn on “Button Row”, see below
+
+Button Row
+--------------
+- Adds an additional row above the standard keyboard
+- Allows for insertion of single characters as well as start-/end-wrappers, such as quotation marks
+- I.e. select a phrase, then tap start-/end-wrapper to insert characters “around” the selection
+- Highly customizable:
+-- Tap’n’hold key to swap current character
+-- Edit character list to add new characters
+-- Add special characters, such as Fwd-Delete, Tab, © or ™
+
+Export
+--------------
+- Added PDF export
+- Added option to export multiple title-less sheets as one document
+- Added Print option
+
+Sync
+--------------
+- Stacks can now be synced to arbitrary folders
+-- Tap'n'hold Sync button
+-- Current sync location will be shown below sync service
+-- Tap current sync location to choose a different folder</string>
+							</dict>
+						</dict>
+					</array>
+					<key>versions</key>
+					<dict/>
+				</dict>
+			</array>
+			<key>flags</key>
+			<integer>0</integer>
+			<key>name</key>
+			<string></string>
+			<key>naming style</key>
+			<integer>1</integer>
+			<key>referencing style</key>
+			<integer>1</integer>
+			<key>user name</key>
+			<string>Samples</string>
+		</dict>
+	</array>
+	<key>languages</key>
+	<array>
+		<string>en</string>
+		<string>de</string>
+	</array>
+	<key>preferences</key>
+	<dict/>
+	<key>reference language</key>
+	<string>en</string>
+	<key>supports preview</key>
+	<false/>
+	<key>version</key>
+	<integer>4</integer>
+</dict>
+</plist>

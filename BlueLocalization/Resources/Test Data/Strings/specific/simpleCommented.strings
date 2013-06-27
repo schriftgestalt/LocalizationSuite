@@ -1,0 +1,12 @@
+// my comment
+"frist" = "last";
+
+/* thy comment */
+"key" = "value";
+
+/*
+ our
+ multiline
+ comment
+ */
+"key2" = "value2";

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>BLStringsScanner</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style>
+</head>
+<body bgcolor="#ffffff">
+<a name="top"></a><a name="//apple_ref/doc/class/BLStringsScanner" title="BLStringsScanner"></a><hr>
+<table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h1><a name="BLStringsScanner">BLStringsScanner</a></h1>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract --> A sophisticated strings scanner working on NSStrings.
+ <!-- end abstract --></p>
+<p><b>Superclass:</b> <!-- a logicalPath="//apple_ref/occ/cl/NSObject" -->NSObject<!-- /a --><br><b>Declared In:</b> <a href="../../index.html" target="_top">BLStringsScanner.h</a><br></p>
+<p></p>
+<hr>
+<br><h2>Methods</h2>
+<a name="HeaderDoc_methods"></a><dl>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLStringsScanner/processComments:" target="doc">+processComments: </a></tt></dt>
+<dd>Post-processes previously scanned comments.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLStringsScanner/processKeyOrder:" target="doc">+processKeyOrder: </a></tt></dt>
+<dd>Post-processes previously scanned strings.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLStringsScanner/processStrings:" target="doc">+processStrings: </a></tt></dt>
+<dd>Post-processes previously scanned strings.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/occ/clm/BLStringsScanner/scanString:toDictionary:withComments:andKeyOrder:" target="doc">+scanString:toDictionary:withComments:andKeyOrder: </a></tt></dt>
+<dd>Scans strings and comment from an given string.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLStringsScanner/processComments:;  name=BLStringsScanner::processComments: --><a name="//apple_ref/occ/clm/BLStringsScanner/processComments:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="processComments:">processComments: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Post-processes previously scanned comments.
+<!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/processComments //apple_ref/occ/clm/processComments //apple_ref/occ/intfcm/processComments //apple_ref/occ/intfm/processComments //apple_ref/occ/func/processComments //apple_ref/occ/ftmplt/processComments //apple_ref/occ/defn/processComments //apple_ref/occ/macro/processComments" --><span class="function">processComments</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSMutableDictionary //apple_ref/occ/tdef/NSMutableDictionary //apple_ref/occ/tag/NSMutableDictionary //apple_ref/occ/econst/NSMutableDictionary //apple_ref/occ/struct/NSMutableDictionary //apple_ref/occ/clconst/NSMutableDictionary //apple_ref/occ/intf/NSMutableDictionary" --><span class="type">NSMutableDictionary</span><!-- /a --> <span class="type">*</span>)<span class="var">comments</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This will apply the standard replacements and unicode replacements to both keys and values. In addition, the values will be trimmed and formatted as appropriate. It is expected (and not checked) that the mutability is given.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLStringsScanner/processKeyOrder:;  name=BLStringsScanner::processKeyOrder: --><a name="//apple_ref/occ/clm/BLStringsScanner/processKeyOrder:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="processKeyOrder:">processKeyOrder: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Post-processes previously scanned strings.
+<!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/processKeyOrder //apple_ref/occ/clm/processKeyOrder //apple_ref/occ/intfcm/processKeyOrder //apple_ref/occ/intfm/processKeyOrder //apple_ref/occ/func/processKeyOrder //apple_ref/occ/ftmplt/processKeyOrder //apple_ref/occ/defn/processKeyOrder //apple_ref/occ/macro/processKeyOrder" --><span class="function">processKeyOrder</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSMutableArray //apple_ref/occ/tdef/NSMutableArray //apple_ref/occ/tag/NSMutableArray //apple_ref/occ/econst/NSMutableArray //apple_ref/occ/struct/NSMutableArray //apple_ref/occ/clconst/NSMutableArray //apple_ref/occ/intf/NSMutableArray" --><span class="type">NSMutableArray</span><!-- /a --> <span class="type">*</span>)<span class="var">keys</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This will apply the standard replacements and unicode replacements to both keys and values. It is expected (and not checked) that the mutability is given.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLStringsScanner/processStrings:;  name=BLStringsScanner::processStrings: --><a name="//apple_ref/occ/clm/BLStringsScanner/processStrings:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="processStrings:">processStrings: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Post-processes previously scanned strings.
+<!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/processStrings //apple_ref/occ/clm/processStrings //apple_ref/occ/intfcm/processStrings //apple_ref/occ/intfm/processStrings //apple_ref/occ/func/processStrings //apple_ref/occ/ftmplt/processStrings //apple_ref/occ/defn/processStrings //apple_ref/occ/macro/processStrings" --><span class="function">processStrings</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSMutableDictionary //apple_ref/occ/tdef/NSMutableDictionary //apple_ref/occ/tag/NSMutableDictionary //apple_ref/occ/econst/NSMutableDictionary //apple_ref/occ/struct/NSMutableDictionary //apple_ref/occ/clconst/NSMutableDictionary //apple_ref/occ/intf/NSMutableDictionary" --><span class="type">NSMutableDictionary</span><!-- /a --> <span class="type">*</span>)<span class="var">strings</span>; </pre>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->This will apply the standard replacements and unicode replacements to both keys and values. It is expected (and not checked) that the mutability is given.
+ <!-- end discussion --></p>
+<p></p>
+<hr>
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/BLStringsScanner/scanString:toDictionary:withComments:andKeyOrder:;  name=BLStringsScanner::scanString:toDictionary:withComments:andKeyOrder: --><a name="//apple_ref/occ/clm/BLStringsScanner/scanString:toDictionary:withComments:andKeyOrder:"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="scanString:toDictionary:withComments:andKeyOrder:">scanString:toDictionary:withComments:andKeyOrder: </a></h3>
+</td></tr></table>
+<hr>
+<p><!-- begin abstract -->Scans strings and comment from an given string.
+<!-- end abstract --></p>
+<p></p>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/scanString //apple_ref/occ/clm/scanString //apple_ref/occ/intfcm/scanString //apple_ref/occ/intfm/scanString //apple_ref/occ/func/scanString //apple_ref/occ/ftmplt/scanString //apple_ref/occ/defn/scanString //apple_ref/occ/macro/scanString" --><span class="function">scanString</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">string</span> <!-- a logicalPath="//apple_ref/occ/instm/toDictionary //apple_ref/occ/clm/toDictionary //apple_ref/occ/intfcm/toDictionary //apple_ref/occ/intfm/toDictionary //apple_ref/occ/func/toDictionary //apple_ref/occ/ftmplt/toDictionary //apple_ref/occ/defn/toDictionary //apple_ref/occ/macro/toDictionary" --><span class="function">toDictionary</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSMutableDictionary //apple_ref/occ/tdef/NSMutableDictionary //apple_ref/occ/tag/NSMutableDictionary //apple_ref/occ/econst/NSMutableDictionary //apple_ref/occ/struct/NSMutableDictionary //apple_ref/occ/clconst/NSMutableDictionary //apple_ref/occ/intf/NSMutableDictionary" --><span class="type">NSMutableDictionary</span><!-- /a --> <span class="type">*</span>)<span class="param">strings</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/withComments //apple_ref/occ/clm/withComments //apple_ref/occ/intfcm/withComments //apple_ref/occ/intfm/withComments //apple_ref/occ/func/withComments //apple_ref/occ/ftmplt/withComments //apple_ref/occ/defn/withComments //apple_ref/occ/macro/withComments" --><span class="function">withComments</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSMutableDictionary //apple_ref/occ/tdef/NSMutableDictionary //apple_ref/occ/tag/NSMutableDictionary //apple_ref/occ/econst/NSMutableDictionary //apple_ref/occ/struct/NSMutableDictionary //apple_ref/occ/clconst/NSMutableDictionary //apple_ref/occ/intf/NSMutableDictionary" --><span class="type">NSMutableDictionary</span><!-- /a --> <span class="type">*</span>)<span class="param">comments</span> <!-- a logicalPath="//apple_ref/occ/instm/andKeyOrder //apple_ref/occ/clm/andKeyOrder //apple_ref/occ/intfcm/andKeyOrder //apple_ref/occ/intfm/andKeyOrder //apple_ref/occ/func/andKeyOrder //apple_ref/occ/ftmplt/andKeyOrder //apple_ref/occ/defn/andKeyOrder //apple_ref/occ/macro/andKeyOrder" --><span class="function">andKeyOrder</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSMutableArray //apple_ref/occ/tdef/NSMutableArray //apple_ref/occ/tag/NSMutableArray //apple_ref/occ/econst/NSMutableArray //apple_ref/occ/struct/NSMutableArray //apple_ref/occ/clconst/NSMutableArray //apple_ref/occ/intf/NSMutableArray" --><span class="type">NSMutableArray</span><!-- /a --> <span class="type">*</span>)<span class="var">keys</span>;</pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value -->YES on success, NO otherwise.
+ 
+<!-- end return value --></p>
+<h5 class="tight">
+<font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5>
+<p><!-- begin discussion -->No processing is done on the data, this has to be done separately. It is expected (and not checked) that all inputs are set correctly, especially that the mutability is given to all mutable arguments.
+<!-- end discussion --></p>
+<p></p>
+<p>Last Updated: 08.05.2009
+</p>
+</body>
+</html>

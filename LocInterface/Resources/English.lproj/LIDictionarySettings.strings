@@ -1,0 +1,6 @@
+
+/* Statistical display for loaded dictionary files */
+"KeysLanguages" = "%d Keys, %d Languages";
+
+/* Information showing that a file contains a dictionary */
+"ContainsDict" = "Contains Dictionary";
