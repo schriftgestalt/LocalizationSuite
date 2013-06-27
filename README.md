@@ -19,4 +19,8 @@ This project is supposed to use git-flow branching structure. Read about [the co
 
     brew install git-flow
 
-This project uses the default naming scheme suggested when initializing git flow on your checkout.
+This project uses the default naming scheme suggested when initializing git flow on your checkout. After checking out, go into your project directory and enter:
+
+	git flow init -d
+
+You're all set :)
