@@ -51,7 +51,7 @@
 	STAssertTrue(object_getClass([pObject bundleObject]) == [BLObjectProxy class], @"returned bundle should actually be a proxy again");
 	
 	for (NSUInteger i=0; i<4; i++) {
-		id object = [pObject objectForKey:[NSString stringWithFormat:@"blah%d", i] createIfNeeded:YES];
+		id object = [pObject objectForKey:[NSString stringWithFormat:@"blah%lu", i] createIfNeeded:YES];
 		STAssertTrue([object isKindOfClass: [BLKeyObject class]], @"key of wrong class");
 		STAssertTrue(object_getClass(object) == [BLObjectProxy class], @"key should actually be a proxy again");
 	}

@@ -24,14 +24,12 @@
     for (i=0; i<lines->size(); i++)
         _newValue = [_newValue stringByAppendingFormat: @"%@ ", [NSString stringWithUTF8String: (*lines)[i]]];
     if (i) _newValue = [_newValue substringToIndex: [_newValue length] - 1];
-    _newValue = _newValue;
     
     _oldValue = @"";
     lines = &(op->oldLines);
     for (i=0; i<lines->size(); i++)
         _oldValue = [_oldValue stringByAppendingFormat: @"%@ ", [NSString stringWithUTF8String: (*lines)[i]]];
     if (i) _oldValue = [_oldValue substringToIndex: [_oldValue length] - 1];
-    _oldValue = _oldValue;
     
     _type = (LTDifferenceType) op->type;
     
