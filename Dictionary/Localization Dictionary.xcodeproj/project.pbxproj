@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		50022EE407E6301F005710B9 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 50022EE207E6301F005710B9 /* Controller.m */; };
 		500230E807E63289005710B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 500230E007E63289005710B9 /* Localizable.strings */; };
+		50084011177C32E600766DCA /* NSAlert-Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50084010177C32E600766DCA /* NSAlert-Extensions.m */; };
 		501195BE11529CDF00E54DF2 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501195BD11529CDF00E54DF2 /* Quartz.framework */; };
-		50172E161403AAB0006EFC17 /* NSAlert-Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50172E151403AAB0006EFC17 /* NSAlert-Extensions.m */; };
 		5021C2FF113155FA0057F2D9 /* Dictionary.help in Resources */ = {isa = PBXBuildFile; fileRef = 5021C2F3113155FA0057F2D9 /* Dictionary.help */; };
 		504E09A813005805006B5F4B /* BlueLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E09A413005805006B5F4B /* BlueLocalization.framework */; };
 		504E09A913005805006B5F4B /* NibPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E09A513005805006B5F4B /* NibPreview.framework */; };
@@ -66,9 +66,9 @@
 		50022EE107E6301F005710B9 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = "Source/Main Classes/Controller.h"; sourceTree = "<group>"; };
 		50022EE207E6301F005710B9 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Controller.m; path = "Source/Main Classes/Controller.m"; sourceTree = "<group>"; };
 		500230E107E63289005710B9 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Interface/English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5008400F177C32E600766DCA /* NSAlert-Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAlert-Extensions.h"; sourceTree = "<group>"; };
+		50084010177C32E600766DCA /* NSAlert-Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAlert-Extensions.m"; sourceTree = "<group>"; };
 		501195BD11529CDF00E54DF2 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
-		50172E141403AAB0006EFC17 /* NSAlert-Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAlert-Extensions.h"; path = "../Shared/Source/NSAlert-Extensions.h"; sourceTree = "<group>"; };
-		50172E151403AAB0006EFC17 /* NSAlert-Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAlert-Extensions.m"; path = "../Shared/Source/NSAlert-Extensions.m"; sourceTree = "<group>"; };
 		5021C2F3113155FA0057F2D9 /* Dictionary.help */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Dictionary.help; path = Resources/Dictionary.help; sourceTree = "<group>"; };
 		504E09A413005805006B5F4B /* BlueLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BlueLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		504E09A513005805006B5F4B /* NibPreview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NibPreview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,12 +192,12 @@
 		50172E131403AAB0006EFC17 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				50172E141403AAB0006EFC17 /* NSAlert-Extensions.h */,
-				50172E151403AAB0006EFC17 /* NSAlert-Extensions.m */,
+				5008400F177C32E600766DCA /* NSAlert-Extensions.h */,
+				50084010177C32E600766DCA /* NSAlert-Extensions.m */,
 			);
 			name = Other;
-			path = "/Users/max/Localization Suite/Localizer/../Manager";
-			sourceTree = "<absolute>";
+			path = ../Shared/Source;
+			sourceTree = "<group>";
 		};
 		508C30F6110B577C00EA6CAD /* Interface */ = {
 			isa = PBXGroup;
@@ -304,7 +304,7 @@
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
 				50022EE407E6301F005710B9 /* Controller.m in Sources */,
 				508C30F9110B578600EA6CAD /* GradientView.m in Sources */,
-				50172E161403AAB0006EFC17 /* NSAlert-Extensions.m in Sources */,
+				50084011177C32E600766DCA /* NSAlert-Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +357,7 @@
 		50A883FD0A6E65A500647446 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: The Blue Technologies Group";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -377,7 +377,7 @@
 		50A883FE0A6E65A500647446 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: The Blue Technologies Group";
+				CODE_SIGN_IDENTITY = "Developer ID Application: The Soulmen GBR";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
