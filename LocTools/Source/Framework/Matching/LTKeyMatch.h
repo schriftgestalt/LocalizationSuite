@@ -16,6 +16,7 @@
     BLKeyObject *_object;
     float       _percentage;
     NSString    *_matchLanguage;
+	BLKeyObject *_sourceObject;
 }
 
 /*!
@@ -40,6 +41,11 @@
 - (NSString *)matchLanguage;
 
 /*!
+ @abstract The source of the match
+ */
+- (BLKeyObject *)sourceObject;
+
+/*!
  @abstract The quality of the match in percent.
  */
 - (float)matchPercentage;
@@ -49,6 +55,12 @@
  @discussion Returns a formatted and colored percentage string. Exactly 100% gives a green, above or eqal to 50% a orange and percentages below return a red string.
  */
 - (NSAttributedString *)percentageString;
+
+/*!
+ @abstract The difference between source and match
+ @discussion Returns a formatted and colored string showing the difference between the source and the matched string
+ */
+- (NSAttributedString *)differenceString;
 
 /*!
  @abstract Convenience accessor returning the matched value.

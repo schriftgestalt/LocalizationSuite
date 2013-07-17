@@ -120,7 +120,7 @@ bail:
 				continue;
 			
 			// Create match object
-			LTKeyMatch *match = [[LTKeyMatch alloc] initWithKeyObject:matchKey matchPercentage:matchValue forTargetLanguage:_targetLanguage actualTargetLanguage:actualTargetLanguage andMatchLanguage:_matchLanguage];
+			LTKeyMatch *match = [[LTKeyMatch alloc] initWithKeyObject:matchKey matchPercentage:matchValue forTargetLanguage:_targetLanguage actualTargetLanguage:actualTargetLanguage andMatchLanguage:_matchLanguage fromSource:_keyObject];
 			if ([[self delegate] respondsToSelector: @selector(keyMatcher:foundMatch:forKeyObject:)])
 				[[self delegate] keyMatcher:self foundMatch:match forKeyObject:_keyObject];
 		}

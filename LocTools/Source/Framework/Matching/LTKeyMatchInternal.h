@@ -11,6 +11,6 @@
  */
 @interface LTKeyMatch (LTKeyMatchInternal)
 
-- (id)initWithKeyObject:(BLKeyObject *)match matchPercentage:(float)percentage forTargetLanguage:(NSString *)language actualTargetLanguage:(NSString *)actualLanguage andMatchLanguage:(NSString *)matchLanguage;
+- (id)initWithKeyObject:(BLKeyObject *)match matchPercentage:(float)percentage forTargetLanguage:(NSString *)language actualTargetLanguage:(NSString *)actualLanguage andMatchLanguage:(NSString *)matchLanguage fromSource:(BLKeyObject *)source;
 
 @end

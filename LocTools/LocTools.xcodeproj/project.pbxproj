@@ -51,6 +51,8 @@
 		50F275410FCEE9C900AF108D /* LTTranslationProblem.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F2753F0FCEE9C900AF108D /* LTTranslationProblem.m */; };
 		50F275D90FCEF2E500AF108D /* LTTranslationCheckerQuotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50F275D80FCEF2E500AF108D /* LTTranslationCheckerQuotes.plist */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		B651FF2917968B67007B43F2 /* NSString+DiffTools.h in Headers */ = {isa = PBXBuildFile; fileRef = B651FF2717968B67007B43F2 /* NSString+DiffTools.h */; };
+		B651FF2A17968B67007B43F2 /* NSString+DiffTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B651FF2817968B67007B43F2 /* NSString+DiffTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		50FE49390FDCDF5E00D815A9 /* KeyValueMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueMatcher.h; sourceTree = "<group>"; };
 		50FE493A0FDCDF5E00D815A9 /* KeyValueMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueMatcher.m; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* LocTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B651FF2717968B67007B43F2 /* NSString+DiffTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DiffTools.h"; sourceTree = "<group>"; };
+		B651FF2817968B67007B43F2 /* NSString+DiffTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DiffTools.m"; sourceTree = "<group>"; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -237,6 +241,8 @@
 		50A9B3200FF7941800B24D7A /* Matching */ = {
 			isa = PBXGroup;
 			children = (
+				B651FF2717968B67007B43F2 /* NSString+DiffTools.h */,
+				B651FF2817968B67007B43F2 /* NSString+DiffTools.m */,
 				50A9B3230FF7941800B24D7A /* LTKeyMatcher.h */,
 				50A9B3240FF7941800B24D7A /* LTKeyMatcher.m */,
 				50A9B3280FF7941800B24D7A /* LTSingleKeyMatcher.h */,
@@ -348,6 +354,7 @@
 				50F274E90FCEE23F00AF108D /* LTDifferenceEngine.h in Headers */,
 				50F274EC0FCEE23F00AF108D /* diffEngine.h in Headers */,
 				50F274ED0FCEE23F00AF108D /* LTTranslationChecker.h in Headers */,
+				B651FF2917968B67007B43F2 /* NSString+DiffTools.h in Headers */,
 				50F2751F0FCEE3F500AF108D /* LTDifference.h in Headers */,
 				50F275400FCEE9C900AF108D /* LTTranslationProblem.h in Headers */,
 				509B80630FF530AD00DE7C73 /* LTAutotranslationStep.h in Headers */,
@@ -490,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50F274EA0FCEE23F00AF108D /* LTDifferenceEngine.mm in Sources */,
+				B651FF2A17968B67007B43F2 /* NSString+DiffTools.m in Sources */,
 				50F274EB0FCEE23F00AF108D /* diffEngine.cpp in Sources */,
 				50F274EE0FCEE23F00AF108D /* LTTranslationChecker.m in Sources */,
 				50F275200FCEE3F500AF108D /* LTDifference.mm in Sources */,

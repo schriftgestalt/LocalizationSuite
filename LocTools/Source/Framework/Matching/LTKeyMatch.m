@@ -7,10 +7,11 @@
  */
 
 #import "LTKeyMatch.h"
+#import "NSString+DiffTools.h"
 
 @implementation LTKeyMatch
 
-- (id)initWithKeyObject:(BLKeyObject *)match matchPercentage:(float)percentage forTargetLanguage:(NSString *)language actualTargetLanguage:(NSString *)actualLanguage andMatchLanguage:(NSString *)matchLanguage
+- (id)initWithKeyObject:(BLKeyObject *)match matchPercentage:(float)percentage forTargetLanguage:(NSString *)language actualTargetLanguage:(NSString *)actualLanguage andMatchLanguage:(NSString *)matchLanguage fromSource:(BLKeyObject *)source
 {
     self = [super init];
     
@@ -20,6 +21,7 @@
 		_object = match;
 		_percentage = percentage;
 		_matchLanguage = matchLanguage;
+		_sourceObject = source;
 	}
     
     return self;
@@ -54,6 +56,10 @@
 	return _matchLanguage;
 }
 
+- (BLKeyObject *)sourceObject
+{
+	return _sourceObject;
+}
 
 #pragma mark - Display Accessors
 
@@ -75,6 +81,11 @@
 											 attributes:[NSDictionary dictionaryWithObject:color forKey:NSForegroundColorAttributeName]];
     
     return result;
+}
+
+- (NSAttributedString *)differenceString
+{
+	return [[_sourceObject stringForLanguage:_matchLanguage] coloredDiffToString:[self matchedValue]];
 }
 
 - (NSString *)matchedValue

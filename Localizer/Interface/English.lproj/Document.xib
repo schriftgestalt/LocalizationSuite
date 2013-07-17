@@ -2715,6 +2715,7 @@ AAAAAAAAA</bytes>
           <string>referenceValue</string>
           <string>translationValue</string>
           <string>percentageString</string>
+		  <string>differenceString</string>
           <string>fix</string>
           <string>matchedValue</string>
           <string>targetValue</string>
@@ -3205,15 +3206,15 @@ AAAAAAAAA</bytes>
         </object>
         <object class="IBConnectionRecord">
           <object class="IBBindingConnection" key="connection">
-            <string key="label">value: arrangedObjects.matchedValue</string>
+            <string key="label">value: arrangedObjects.differenceString</string>
             <reference key="source" ref="640357415"/>
             <reference key="destination" ref="478372939"/>
             <object class="NSNibBindingConnector" key="connector">
               <reference key="NSSource" ref="640357415"/>
               <reference key="NSDestination" ref="478372939"/>
-              <string key="NSLabel">value: arrangedObjects.matchedValue</string>
+              <string key="NSLabel">value: arrangedObjects.differenceString</string>
               <string key="NSBinding">value</string>
-              <string key="NSKeyPath">arrangedObjects.matchedValue</string>
+              <string key="NSKeyPath">arrangedObjects.differenceString</string>
               <object class="NSDictionary" key="NSOptions">
                 <string key="NS.key.0">NSConditionallySetsEditable</string>
                 <boolean value="YES" key="NS.object.0"/>

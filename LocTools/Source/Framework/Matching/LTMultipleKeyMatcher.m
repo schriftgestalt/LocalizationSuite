@@ -97,7 +97,7 @@
 			
 			// Create match object
 			NSString *actualTargetLanguage = ([matchKeyObject isEmptyForLanguage: _targetLanguage]) ? baseTargetLanguage : _targetLanguage;
-			LTKeyMatch *match = [[LTKeyMatch alloc] initWithKeyObject:matchKeyObject matchPercentage:1.0 forTargetLanguage:_targetLanguage actualTargetLanguage:actualTargetLanguage andMatchLanguage:_matchLanguage];
+			LTKeyMatch *match = [[LTKeyMatch alloc] initWithKeyObject:matchKeyObject matchPercentage:1.0 forTargetLanguage:_targetLanguage actualTargetLanguage:actualTargetLanguage andMatchLanguage:_matchLanguage fromSource:keyObject];
 			if ([[self delegate] respondsToSelector: @selector(keyMatcher:foundMatch:forKeyObject:)])
 				[[self delegate] keyMatcher:self foundMatch:match forKeyObject:keyObject];
 		}
