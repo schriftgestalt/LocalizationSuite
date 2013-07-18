@@ -37,6 +37,7 @@ NSString *BLFileKeyKey                  = @"key";
 NSString *BLFileKeysKey                 = @"keys";
 NSString *BLFileLanguagesKey            = @"languages";
 NSString *BLFileLocalizationsKey        = @"localizations";
+NSString *BLFilePreviousLocalizationsKey= @"previous localizations";
 NSString *BLFileNameKey                 = @"name";
 NSString *BLFileNamingStyleKey          = @"naming style";
 NSString *BLFileObjectsKey              = @"objects";

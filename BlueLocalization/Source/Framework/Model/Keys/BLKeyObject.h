@@ -33,6 +33,7 @@ enum {
     NSString			*_key;
     NSMutableDictionary *_objects;
     NSMutableDictionary *_snapshot;
+	NSMutableDictionary *_oldObjects;
 }
 
 /*!
@@ -107,6 +108,11 @@ enum {
  */
 - (id)snapshotForLanguage:(NSString *)language;
 
+/*!
+ @abstract Returns the difference between the current and the previous version for the specified language
+ @discussion if no previous version is found, the current version will be returned without any changes to it
+ */
+- (NSAttributedString *)differenceForLanguage:(NSString *)language;
 
 /*!
  @abstract Determines whether all languages of the object are empty.

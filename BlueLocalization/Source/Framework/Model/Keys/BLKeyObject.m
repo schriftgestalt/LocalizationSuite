@@ -13,6 +13,7 @@
 #import "BLFileObject.h"
 #import "BLLocalizerFile.h"
 #import "BLPropertyListSerialization.h"
+#import "NSString+DiffTools.h"
 
 
 @implementation BLKeyObject
@@ -28,6 +29,7 @@
     _key = nil;
     _objects = [[NSMutableDictionary alloc] init];
 	_snapshot = [[NSMutableDictionary alloc] init];
+	_oldObjects = [[NSMutableDictionary alloc] init];
     
     return self;
 }
@@ -56,6 +58,11 @@
 		// strings
 		[_objects setDictionary: [plist objectForKey: BLFileLocalizationsKey]];
 		[_snapshot setDictionary: [plist objectForKey: BLFileSnapshotsKey]];
+
+		if ([plist objectForKey:BLFilePreviousLocalizationsKey])
+		{
+			[_oldObjects setDictionary:[plist objectForKey:BLFilePreviousLocalizationsKey]];
+		}
 		
 		// changes
 		[_changedValues setArray: [plist objectForKey: BLFileChangedValuesKey]];
@@ -82,6 +89,7 @@
 	// Exported strings
 	NSMutableDictionary *exportedStrings = [NSMutableDictionary dictionaryWithDictionary: self.strings];
 	NSMutableDictionary *snapshotStrings = [NSMutableDictionary dictionaryWithDictionary: _snapshot];
+	NSMutableDictionary *previousStrings = [NSMutableDictionary dictionaryWithDictionary: _oldObjects];
 	
 	// Filter languages
 	if ([attributes objectForKey: BLLanguagesSerializationKey]) {
@@ -90,10 +98,15 @@
 		
 		[exportedStrings removeObjectsForKeys: [remove allObjects]];
 		[_snapshot removeObjectsForKeys: [remove allObjects]];
+		[previousStrings removeObjectForKey:[remove allObjects]];
 	}
 	
 	// Store strings
 	[dict setObject:exportedStrings forKey:BLFileLocalizationsKey];
+
+	if (previousStrings.count > 0)
+		[dict setObject:previousStrings forKey:BLFilePreviousLocalizationsKey];
+
 	if (![[attributes objectForKey: BLClearAllBackupsSerializationKey] boolValue])
 		[dict setObject:snapshotStrings forKey:BLFileSnapshotsKey];
 	
@@ -218,7 +231,7 @@
         return [self key];
     if ([[self languages] containsObject: key])
         return [self objectForLanguage: key];
-    
+
     return [super valueForKey: key];
 }
 
@@ -292,6 +305,8 @@
             [_objects removeObjectForKey: lang];
         
 		// Track changes
+		[_oldObjects setObject:oldObject forKey:lang];
+
 		[self didChangeValueForKey: lang];
 		[self setValue:lang didChange:YES];
 	}
@@ -325,6 +340,18 @@
 - (id)snapshotForLanguage:(NSString *)language
 {
 	return [_snapshot objectForKey: language];
+}
+
+- (NSAttributedString *)differenceForLanguage:(NSString *)language
+{
+	if ([_oldObjects objectForKey:language])
+	{
+		return [[_oldObjects objectForKey:language] coloredDiffToString:[self stringForLanguage:language]];
+	}
+	else
+	{
+		return [[NSAttributedString alloc] initWithString:[self stringForLanguage:language]];
+	}
 }
 
 

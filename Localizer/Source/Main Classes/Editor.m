@@ -170,9 +170,19 @@ NSColor *BackgroundColorNotEditable;
 - (id)valueForLeftLanguage
 {
     if ([document selectedObject] != nil)
-        return [self valueForObject: [[document selectedObject] objectForLanguage: [[document preferences] objectForKey: DocumentViewOptionLeftLanguage]]];
+	{
+		if ([self leftFieldEditable]) {
+			return [self valueForObject: [[document selectedObject] objectForLanguage: [[document preferences] objectForKey: DocumentViewOptionLeftLanguage]]];
+		}
+		else
+		{
+			return [[document selectedObject] differenceForLanguage:[[document preferences] objectForKey: DocumentViewOptionLeftLanguage]];
+		}
+	}
     else
+	{
         return NSNoSelectionMarker;
+	}
 }
 
 - (void)setValueForLeftLanguage:(id)newValue
@@ -197,9 +207,20 @@ NSColor *BackgroundColorNotEditable;
 - (id)valueForRightLanguage
 {
     if ([document selectedObject] != nil)
-        return [self valueForObject: [[document selectedObject] objectForLanguage: [[document preferences] objectForKey: DocumentViewOptionRightLanguage]]];
-    else
+	{
+		if ([self rightFieldEditable])
+		{
+			return [self valueForObject: [[document selectedObject] objectForLanguage: [[document preferences] objectForKey: DocumentViewOptionRightLanguage]]];
+		}
+		else
+		{
+			return [[document selectedObject] differenceForLanguage:[[document preferences] objectForKey: DocumentViewOptionRightLanguage]];
+		}
+    }
+	else
+	{
         return NSNoSelectionMarker;
+	}
 }
 
 - (void)setValueForRightLanguage:(id)newValue

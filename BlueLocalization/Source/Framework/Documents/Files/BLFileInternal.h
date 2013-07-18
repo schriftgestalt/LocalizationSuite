@@ -30,6 +30,7 @@ extern NSString *BLFileKeyKey;
 extern NSString *BLFileKeysKey;
 extern NSString *BLFileLanguagesKey;
 extern NSString *BLFileLocalizationsKey;
+extern NSString *BLFilePreviousLocalizationsKey;
 extern NSString *BLFileNameKey;
 extern NSString *BLFileNamingStyleKey;
 extern NSString *BLFileObjectsKey;

@@ -224,6 +224,8 @@
 		50F03C110FA627AC00FDB765 /* BLInterpretationStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F03C0F0FA627AC00FDB765 /* BLInterpretationStep.m */; };
 		50F6BA3310144B84008C8727 /* BLXcodeImporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F6BA3110144B84008C8727 /* BLXcodeImporter.xib */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		B615FC101797DC1800CFAE11 /* NSString+DiffTools.h in Headers */ = {isa = PBXBuildFile; fileRef = B615FC0E1797DC1800CFAE11 /* NSString+DiffTools.h */; };
+		B615FC111797DC1800CFAE11 /* NSString+DiffTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B615FC0F1797DC1800CFAE11 /* NSString+DiffTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -512,6 +514,8 @@
 		50F03C0F0FA627AC00FDB765 /* BLInterpretationStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLInterpretationStep.m; path = ../../Documents/Processing/BLInterpretationStep.m; sourceTree = "<group>"; };
 		50F6BA3210144B84008C8727 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/BLXcodeImporter.xib; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* BlueLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlueLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B615FC0E1797DC1800CFAE11 /* NSString+DiffTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+DiffTools.h"; path = "../../../../../LocTools/Source/Framework/Matching/NSString+DiffTools.h"; sourceTree = "<group>"; };
+		B615FC0F1797DC1800CFAE11 /* NSString+DiffTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+DiffTools.m"; path = "../../../../../LocTools/Source/Framework/Matching/NSString+DiffTools.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -995,6 +999,8 @@
 		50C247230F979D58003B3522 /* Keys */ = {
 			isa = PBXGroup;
 			children = (
+				B615FC0E1797DC1800CFAE11 /* NSString+DiffTools.h */,
+				B615FC0F1797DC1800CFAE11 /* NSString+DiffTools.m */,
 				50C247240F979D58003B3522 /* BLKeyObject.h */,
 				50C247250F979D58003B3522 /* BLKeyObject.m */,
 				50C247260F979D58003B3522 /* BLRTFDKeyObject.h */,
@@ -1326,6 +1332,7 @@
 				50BB617D10B483DE00A1AD4C /* BLToolPath.h in Headers */,
 				50B1A70E11070E3F00551CA7 /* BLStringsExporter.h in Headers */,
 				50B1A71011070E3F00551CA7 /* BLStringsImporter.h in Headers */,
+				B615FC101797DC1800CFAE11 /* NSString+DiffTools.h in Headers */,
 				50B1A71211070E3F00551CA7 /* BLXcodeExporter.h in Headers */,
 				50B1A71411070E3F00551CA7 /* BLXcodeImporter.h in Headers */,
 				50B1A7231107183200551CA7 /* BLNibConverterStep.h in Headers */,
@@ -1632,6 +1639,7 @@
 				50B1A7241107183200551CA7 /* BLNibConverterStep.m in Sources */,
 				50B1A7261107183200551CA7 /* BLNibFileConverter.m in Sources */,
 				50B1AA191107414D00551CA7 /* BLXcodeProjectItem.m in Sources */,
+				B615FC111797DC1800CFAE11 /* NSString+DiffTools.m in Sources */,
 				50B1AA1B1107414D00551CA7 /* BLXcodeProjectLocalization.m in Sources */,
 				50B1AA1D1107414D00551CA7 /* BLXcodeProjectParser.m in Sources */,
 				50B1AE551108F3BE00551CA7 /* BLTMXDocument.m in Sources */,

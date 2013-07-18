@@ -35,11 +35,11 @@
         NSColor *color = [NSColor blackColor];
         if ([[dict objectForKey:@"sign"] integerValue] == LTDiffSignAdded)
         {
-            color = [NSColor greenColor];
+            color = [NSColor colorWithCalibratedRed:0.058 green:0.439 blue:0.005 alpha:1.000];
         }
         else if ([[dict objectForKey:@"sign"] integerValue] == LTDiffSignRemoved)
         {
-            color = [NSColor redColor];
+            color = [NSColor colorWithCalibratedRed:0.564 green:0.004 blue:0.069 alpha:1.000];
         }
 
 
