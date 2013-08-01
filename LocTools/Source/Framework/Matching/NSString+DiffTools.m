@@ -7,117 +7,72 @@
 //
 
 #import "NSString+DiffTools.h"
+#import <LocTools/LocTools.h>
 
 @implementation NSString (DiffTools)
 
-- (NSArray *)diffToString:(NSString *)secondString
-{
-	NSMutableArray *result = [NSMutableArray arrayWithCapacity:100];
-	[self generateDiffFromLCS:[self calculateLCS:secondString] forSecondString:secondString toLengthA:self.length lengthB:secondString.length intoResult:&result];
-		
-	return result;
-}
-
 - (NSAttributedString *)coloredDiffToString:(NSString *)secondString
 {
-	//Generate a new Diff...
-    NSArray * result = [self diffToString:secondString];
-
-    NSMutableAttributedString* attrString = [[NSMutableAttributedString alloc] initWithString:@""];
-
+	LTDifferenceEngine *engine = [[LTDifferenceEngine alloc] init];
+	engine.segmentation = BLDetailedSegmentation;
+	engine.newString = secondString;
+	engine.oldString = self;
+	[engine computeDifferences];
+	
+	NSArray *differences = [engine differences];
+	
+	NSMutableAttributedString* attrString = [[NSMutableAttributedString alloc] initWithString:@""];
     [attrString beginEditing];
-
+	
     // make the text appear in blue
-    for (NSDictionary *dict in result)
+    for (LTDifference *diff in differences)
 	{
-        [attrString appendAttributedString:[[NSAttributedString alloc] initWithString:[dict objectForKey:@"value"]]];
-
+		NSString *stringToAppend = diff.newValue;
+		
+		if (diff.type == LTDifferenceDelete)
+		{
+			stringToAppend = diff.oldValue;
+		}
+		
+        [attrString appendAttributedString:[[NSAttributedString alloc] initWithString:stringToAppend]];
+		
+		NSRange currentRange = NSMakeRange(attrString.length-stringToAppend.length, stringToAppend.length);
+		
         NSColor *color = [NSColor blackColor];
-        if ([[dict objectForKey:@"sign"] integerValue] == LTDiffSignAdded)
+		NSColor *backgroundColor = [NSColor clearColor];
+		
+		
+        if (diff.type == LTDifferenceAdd)
         {
-            color = [NSColor colorWithCalibratedRed:0.058 green:0.439 blue:0.005 alpha:1.000];
+            color = [NSColor colorWithCalibratedRed:0.f green:0.6f blue:0.f alpha:1.000];
+			backgroundColor = [NSColor colorWithCalibratedRed:0.72f green:1.f blue:0.72f alpha:1];
         }
-        else if ([[dict objectForKey:@"sign"] integerValue] == LTDiffSignRemoved)
+        else if (diff.type == LTDifferenceDelete)
         {
-            color = [NSColor colorWithCalibratedRed:0.564 green:0.004 blue:0.069 alpha:1.000];
+            color = [NSColor colorWithCalibratedRed:0.6f green:0.f blue:0.f alpha:1.000];
+			backgroundColor = [NSColor colorWithCalibratedRed:1.f green:0.72f blue:0.72f alpha:1];
+			
+			[attrString addAttribute:NSStrikethroughStyleAttributeName
+							   value:[NSNumber numberWithInt:1]
+							   range:currentRange];
         }
-
-
-        [attrString addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(attrString.length-1, 1)];
+		else if (diff.type == LTDifferenceChange)
+		{
+			color = [NSColor colorWithCalibratedRed:0.f green:0.f blue:0.6f alpha:1.000];
+			backgroundColor = [NSColor colorWithCalibratedRed:0.72f green:0.72f blue:1.f alpha:1];
+		}
+		
+        [attrString addAttribute:NSForegroundColorAttributeName value:color range:currentRange];
+		[attrString addAttribute:NSBackgroundColorAttributeName value:backgroundColor range:currentRange];
+		
+		//Append space
+		[attrString appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
     }
-
+	
     [attrString endEditing];
-
+	
     return [[NSAttributedString alloc] initWithAttributedString:attrString];
 }
 
-- (void)generateDiffFromLCS:(NSArray *)C forSecondString:(NSString *)secondString toLengthA:(NSInteger)i lengthB:(NSInteger)j intoResult:(NSMutableArray **)result
-{
-	if (i > 0 && j > 0 &&  [self characterAtIndex:i - 1] == [secondString characterAtIndex:j -1 ])
-	{
-		[self generateDiffFromLCS:C forSecondString:secondString toLengthA:i - 1 lengthB:j - 1 intoResult:result];
-		
-		[*result addObject:
-				[NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:[NSNumber numberWithInt:LTDiffSignUnchanged], [self substringWithRange:NSMakeRange(i - 1, 1)], nil]
-											forKeys:[NSArray arrayWithObjects:@"sign", @"value", nil]]
-		 ];
-
-    }
-    else
-	{
-		if (j > 0 && (i == 0 || [[[C objectAtIndex:i] objectAtIndex:j-1] intValue] >= [[[C objectAtIndex:i - 1] objectAtIndex:j] intValue]))
-		{
-			[self generateDiffFromLCS:C forSecondString:secondString toLengthA:i lengthB:j-1 intoResult:result];
-			
-			[*result addObject:
-			 [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:[NSNumber numberWithInt:LTDiffSignAdded], [secondString substringWithRange:NSMakeRange(j - 1, 1)], nil]
-										 forKeys:[NSArray arrayWithObjects:@"sign", @"value", nil]]
-			 ];
-		}
-		else if (i > 0 && (j == 0 || [[[C objectAtIndex:i] objectAtIndex:j-1] intValue] < [[[C objectAtIndex:i-1] objectAtIndex:j] intValue]))
-		{
-			[self generateDiffFromLCS:C forSecondString:secondString toLengthA:i-1 lengthB:j intoResult:result];
-			
-			[*result addObject:
-			 [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:[NSNumber numberWithInt:LTDiffSignRemoved], [self substringWithRange:NSMakeRange(i - 1, 1)], nil]
-										 forKeys:[NSArray arrayWithObjects:@"sign", @"value", nil]]
-			 ];
-		}
-    }
-}
-
-- (NSArray *)calculateLCS:(NSString *)secondString
-{
-	NSInteger m = self.length;
-    NSInteger n = secondString.length;
-    NSMutableArray *C = [NSMutableArray arrayWithCapacity:100];
-    
-	for (NSInteger i = 0; i < m+1; i++)
-	{
-		NSMutableArray *inner = [NSMutableArray arrayWithCapacity:n];
-		
-		for (NSInteger j=0; j < n+1; j++)
-		{
-			[inner addObject:[NSNumber numberWithInt:0]];
-		}
-		[C addObject:inner];
-    }
-	
-    for (NSInteger i = 1; i < m+1; i++)
-	{
-		for (NSInteger j = 1; j < n+1; j++)
-		{
-			if ([self characterAtIndex:i-1] == [secondString characterAtIndex:j - 1])
-			{
-				[[C objectAtIndex:i] replaceObjectAtIndex:j withObject:[NSNumber numberWithInt:[[[C objectAtIndex:i -1] objectAtIndex:j -1] intValue] +1]];
-			}
-			else
-			{
-				[[C objectAtIndex:i] replaceObjectAtIndex:j withObject:[NSNumber numberWithInt:MAX([[[C objectAtIndex:i] objectAtIndex:j-1] intValue], [[[C objectAtIndex:i-1] objectAtIndex:j] intValue])]];
-			}
-		}
-    }
-    return C;
-}
 
 @end

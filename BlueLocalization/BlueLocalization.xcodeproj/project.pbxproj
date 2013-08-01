@@ -226,6 +226,7 @@
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 		B615FC101797DC1800CFAE11 /* NSString+DiffTools.h in Headers */ = {isa = PBXBuildFile; fileRef = B615FC0E1797DC1800CFAE11 /* NSString+DiffTools.h */; };
 		B615FC111797DC1800CFAE11 /* NSString+DiffTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B615FC0F1797DC1800CFAE11 /* NSString+DiffTools.m */; };
+		B6D31ED517AA4F2500283C7B /* LocTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D31ED317AA4F1B00283C7B /* LocTools.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -516,6 +517,7 @@
 		8DC2EF5B0486A6940098B216 /* BlueLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlueLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B615FC0E1797DC1800CFAE11 /* NSString+DiffTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+DiffTools.h"; path = "../../../../../LocTools/Source/Framework/Matching/NSString+DiffTools.h"; sourceTree = "<group>"; };
 		B615FC0F1797DC1800CFAE11 /* NSString+DiffTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+DiffTools.m"; path = "../../../../../LocTools/Source/Framework/Matching/NSString+DiffTools.m"; sourceTree = "<group>"; };
+		B6D31ED317AA4F1B00283C7B /* LocTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocTools.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Loc-Suite-fbnitvyrvvldsfdoyzjxjlruyhum/Build/Products/Debug/LocTools.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -544,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+				B6D31ED517AA4F2500283C7B /* LocTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +578,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6D31ED317AA4F1B00283C7B /* LocTools.framework */,
 				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
 				5014BB0C0FB49C6600DC2EC3 /* OCMock.framework */,
 				5014BB5A0FB4A3CC00DC2EC3 /* hamcrest.framework */,

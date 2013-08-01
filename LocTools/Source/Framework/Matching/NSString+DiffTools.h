@@ -12,19 +12,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
-	LTDiffSignAdded,
-	LTDiffSignRemoved,
-	LTDiffSignUnchanged
-} LTDiffSign;
-
 @interface NSString (DiffTools)
-
-/*!
- @abstract raw difference between two strings
- @discussion This method returns an array, each char is inside a NSDictionary with the information if it was added, removed or unchanged
- */
-- (NSArray *)diffToString:(NSString *)secondString;
 
 /*!
  @abstract Colored Diff between two strings
