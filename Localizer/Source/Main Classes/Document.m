@@ -110,7 +110,12 @@ typedef enum {
 	[content bind:@"leftLanguageEditable" toObject:editor withKeyPath:@"leftFieldEditable" options:nil];
 	[content bind:@"rightLanguage" toObject:self withKeyPath:@"preferences.rightLanguage" options:nil];
 	[content bind:@"rightLanguageEditable" toObject:editor withKeyPath:@"rightFieldEditable" options:nil];
+	
+	//set the selectedObject so the first item gets selected initially
+	BLKeyObject *selected = [content selectedObject];
 	[content bind:@"selectedObject" toObject:self withKeyPath:@"selectedObject" options:nil];
+	
+	
 	[content bind:@"search" toObject:self withKeyPath:@"preferences.search" options:nil];
     
 	// adjust content view
@@ -145,6 +150,8 @@ typedef enum {
 	
 	[[BLDictionaryController sharedInstance] registerDocument: self];
 	[[LIPreferences sharedInstance] registerDocument: self];
+	
+	[self setSelectedObject:selected];
 }
 
 - (void)showWindows
