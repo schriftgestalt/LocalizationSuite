@@ -115,6 +115,11 @@ enum {
 - (NSAttributedString *)differenceForLanguage:(NSString *)language;
 
 /*!
+ @abstract Saves the given object in the old objects array used for diffing
+ */
+- (void)setOldObject:(id)object forLanguage:(NSString *)language;
+
+/*!
  @abstract Determines whether all languages of the object are empty.
  @discussion Checks for each language in the key, whether -isEmptyForLanguage: returns YES. If all languages are empty this method also returns YES, otherwise NO.
  */

@@ -384,6 +384,10 @@ NSMutableDictionary *__fileInterpreterClasses	= nil;
 		value = [keyObject objectForLanguage: _language];
 		_changed = _changed || (value && ![value isEqual: oldValue]) || (!value && oldValue);
 		
+		//Save the old object if change, for diffing
+		if (!isNew && oldValue && value && ![value isEqual:oldValue])
+			[keyObject setOldObject:oldValue forLanguage:_language];
+		
 		// Ignore empty keys
 		if (![self optionIsActive: BLFileInterpreterImportEmptyKeys] && [keyObject isEmpty]) {
 			// We first always create empty key objects but remove them afterwards if the are to be ignored

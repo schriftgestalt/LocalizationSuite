@@ -304,9 +304,6 @@
         else
             [_objects removeObjectForKey: lang];
         
-		// Track changes
-		[_oldObjects setObject:oldObject forKey:lang];
-
 		[self didChangeValueForKey: lang];
 		[self setValue:lang didChange:YES];
 	}
@@ -354,6 +351,10 @@
 	}
 }
 
+- (void)setOldObject:(id)object forLanguage:(NSString *)language
+{
+	[_oldObjects setObject:object forKey:language];
+}
 
 #pragma mark - Empty Accessors
 
