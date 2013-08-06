@@ -7,7 +7,7 @@
  */
 
 #import "LTKeyMatch.h"
-#import "NSString+DiffTools.h"
+#import <BlueLocalization/BLStringDiffer.h>
 
 @implementation LTKeyMatch
 
@@ -85,7 +85,7 @@
 
 - (NSAttributedString *)differenceString
 {
-	return [[_sourceObject stringForLanguage:_matchLanguage] coloredDiffToString:[self matchedValue]];
+	return [BLStringDiffer diffBetween:[_sourceObject stringForLanguage:_matchLanguage] and:[self matchedValue]];
 }
 
 - (NSString *)matchedValue

@@ -87,3 +87,7 @@
 #import <BlueLocalization/BLFileManagerAdditions.h>
 #import <BlueLocalization/BLSecurityExtensions.h>
 
+//DIFFING
+#import <BlueLocalization/BLDifference.h>
+#import <BlueLocalization/BLDifferenceEngine.h>
+#import <BlueLocalization/BLStringDiffer.h>

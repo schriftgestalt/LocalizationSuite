@@ -8,9 +8,6 @@
 //
 
 
-#import <LocTools/LTDifferenceEngine.h>
-#import <LocTools/LTDifference.h>
-
 #import <LocTools/LTTranslationChecker.h>
 #import <LocTools/LTTranslationProblem.h>
 

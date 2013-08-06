@@ -10,7 +10,7 @@
  @abstract A engine that computes the difference between two given strings.
  @discussion The input is a "old" string and a "new" string which can be seen as generations of the same object. The algorithm then computes all differences using a given granularity. The result is a array of differences where substrings of the input strings are matched against each other. Another outcome is a "match value" which basically represents how similar or different the strings are.
  */
-@interface LTDifferenceEngine : NSObject
+@interface BLDifferenceEngine : NSObject
 {
     NSMutableArray		*_differences;
     void				*engine;

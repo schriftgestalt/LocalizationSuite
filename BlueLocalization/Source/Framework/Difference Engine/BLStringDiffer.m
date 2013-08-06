@@ -1,22 +1,30 @@
 //
-//  NSString+DiffTooles.m
-//  DiffTester
+//  LTStringDiffer.m
+//  LocTools
 //
-//  Created by Peter Kraml on 09.07.13.
-//  Copyright (c) 2013 Boinx Software Ltd. All rights reserved.
+//  Created by Peter Kraml on 06.08.13.
+//  Copyright (c) 2013 Localization Suite. All rights reserved.
 //
 
-#import "NSString+DiffTools.h"
-#import <LocTools/LocTools.h>
+#import "BLStringDiffer.h"
+#import "BLDifferenceEngine.h"
+#import "BLDifference.h"
 
-@implementation NSString (DiffTools)
+@interface BLStringDiffer ()
 
-- (NSAttributedString *)coloredDiffToString:(NSString *)secondString
++ (void)addGreenString:(NSString *)newString toAttributedString:(NSMutableAttributedString *)attrString;
++ (void)addRedString:(NSString *)oldString toAttributedString:(NSMutableAttributedString *)attrString;
+
+@end
+
+@implementation BLStringDiffer
+
++ (NSAttributedString *)diffBetween:(NSString *)inAStr and:(NSString *)inBStr
 {
-	LTDifferenceEngine *engine = [[LTDifferenceEngine alloc] init];
+	BLDifferenceEngine *engine = [[BLDifferenceEngine alloc] init];
 	engine.segmentation = BLDetailedSegmentation;
-	engine.newString = secondString;
-	engine.oldString = self;
+	engine.newString = inBStr;
+	engine.oldString = inAStr;
 	[engine computeDifferences];
 	
 	NSArray *differences = [engine differences];
@@ -25,19 +33,19 @@
     [attrString beginEditing];
 	
     // make the text appear in blue
-    for (LTDifference *diff in differences)
+    for (BLDifference *diff in differences)
 	{
-		if (diff.type == LTDifferenceAdd)
+		if (diff.type == BLDifferenceAdd)
         {
 			//String was added, append it, color it green
 			[self addGreenString:diff.newValue toAttributedString:attrString];
 		}
-		else if (diff.type == LTDifferenceDelete)
+		else if (diff.type == BLDifferenceDelete)
 		{
 			//String was removed, append the old value and color it red
 			[self addRedString:diff.oldValue toAttributedString:attrString];
 		}
-		else if (diff.type == LTDifferenceChange)
+		else if (diff.type == BLDifferenceChange)
 		{
 			//string was changed, append the old and the new one, color accordingly
 			[self addRedString:diff.oldValue toAttributedString:attrString];
@@ -56,7 +64,7 @@
     return [[NSAttributedString alloc] initWithAttributedString:attrString];
 }
 
-- (void)addGreenString:(NSString *)newString toAttributedString:(NSMutableAttributedString *)attrString
++ (void)addGreenString:(NSString *)newString toAttributedString:(NSMutableAttributedString *)attrString
 {
 	[attrString appendAttributedString:[[NSAttributedString alloc] initWithString:newString]];
 	
@@ -71,7 +79,7 @@
 	[attrString appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
 }
 
-- (void)addRedString:(NSString *)oldString toAttributedString:(NSMutableAttributedString *)attrString
++ (void)addRedString:(NSString *)oldString toAttributedString:(NSMutableAttributedString *)attrString
 {
 	[attrString appendAttributedString:[[NSAttributedString alloc] initWithString:oldString]];
 	
@@ -90,6 +98,5 @@
 	
 	[attrString appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
 }
-
 
 @end

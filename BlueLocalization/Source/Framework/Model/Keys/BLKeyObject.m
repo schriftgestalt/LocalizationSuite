@@ -13,8 +13,7 @@
 #import "BLFileObject.h"
 #import "BLLocalizerFile.h"
 #import "BLPropertyListSerialization.h"
-#import "NSString+DiffTools.h"
-
+#import "BLStringDiffer.h"
 
 @implementation BLKeyObject
 
@@ -343,7 +342,7 @@
 {
 	if ([_oldObjects objectForKey:language])
 	{
-		return [[_oldObjects objectForKey:language] coloredDiffToString:[self stringForLanguage:language]];
+		return [BLStringDiffer diffBetween:[_oldObjects objectForKey:language] and:[self stringForLanguage:language]];
 	}
 	else
 	{

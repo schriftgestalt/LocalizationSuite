@@ -6,11 +6,11 @@
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
-#import "LTDifference.h"
+#import "BLDifference.h"
 #import "diffEngine.h"
 
 
-@implementation LTDifference
+@implementation BLDifference
 
 - (id)initWithDiffOp:(DiffOperation *)op
 {
@@ -31,7 +31,7 @@
         _oldValue = [_oldValue stringByAppendingFormat: @"%@ ", [NSString stringWithUTF8String: (*lines)[i]]];
     if (i) _oldValue = [_oldValue substringToIndex: [_oldValue length] - 1];
     
-    _type = (LTDifferenceType) op->type;
+    _type = (BLDifferenceType) op->type;
     
     return self;
 }
@@ -47,7 +47,7 @@
     return _oldValue;
 }
 
-- (LTDifferenceType)type
+- (BLDifferenceType)type
 {
     return _type;
 }

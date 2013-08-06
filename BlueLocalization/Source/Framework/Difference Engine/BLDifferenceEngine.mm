@@ -6,14 +6,14 @@
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
-#import "LTDifferenceEngine.h"
-#import "LTDifference.h"
+#import "BLDifferenceEngine.h"
+#import "BLDifference.h"
 #import "diffEngine.h"
 
 /*!
  @abstract Internal methodes of LTDifference used by LTDifferenceEngine.
  */
-@interface LTDifference (DiffOperationInternal)
+@interface BLDifference (DiffOperationInternal)
 
 - (id)initWithDiffOp:(DiffOperation *)op;
 
@@ -22,7 +22,7 @@
 /*!
  @abstract Internal methodes of LTDifferenceEngine.
  */
-@interface LTDifferenceEngine (LTDifferenceEngineInternal)
+@interface BLDifferenceEngine (LTDifferenceEngineInternal)
 
 - (void)computeDifferencesDetailled:(BOOL)detail;
 - (void)splitString:(NSString *)string intoParts:(char ***)parts count:(unsigned *)partCount;
@@ -30,7 +30,7 @@
 @end
 
 
-@implementation LTDifferenceEngine
+@implementation BLDifferenceEngine
 
 - (id)init
 {
@@ -110,14 +110,14 @@
 	
 	for (NSString *segment in _newSegments)
 		newObjects[index++] = [segment UTF8String];
-	((DiffEngine *)engine)->set_to(newObjects, [_newSegments count]);
+	((DiffEngine *)engine)->set_to(newObjects, (int)[_newSegments count]);
 	
 	const char **oldObjects = (const char **)malloc(sizeof(const char *) * [_oldSegments count]);
 	index = 0;
 	
 	for (NSString *segment in _oldSegments)
 		oldObjects[index++] = [segment UTF8String];
-	((DiffEngine *)engine)->set_from(oldObjects, [_oldSegments count]);
+	((DiffEngine *)engine)->set_from(oldObjects, (int)[_oldSegments count]);
 	
     // Run engine
     diffs = ((DiffEngine *)engine)->diff();
@@ -134,7 +134,7 @@
     
     for (NSUInteger i=0; i<diffs->size(); i++) {
 		if (detail)
-			[_differences addObject: [[LTDifference alloc] initWithDiffOp: (*diffs)[i]]];
+			[_differences addObject: [[BLDifference alloc] initWithDiffOp: (*diffs)[i]]];
 		
 		oldLines = (*diffs)[i]->oldLines;
 		newLines = (*diffs)[i]->newLines;
