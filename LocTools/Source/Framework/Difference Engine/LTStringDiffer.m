@@ -6,22 +6,20 @@
 //  Copyright (c) 2013 Localization Suite. All rights reserved.
 //
 
-#import "BLStringDiffer.h"
-#import "BLDifferenceEngine.h"
-#import "BLDifference.h"
+#import "LTStringDiffer.h"
 
-@interface BLStringDiffer ()
+@interface LTStringDiffer ()
 
 + (void)addGreenString:(NSString *)newString toAttributedString:(NSMutableAttributedString *)attrString;
 + (void)addRedString:(NSString *)oldString toAttributedString:(NSMutableAttributedString *)attrString;
 
 @end
 
-@implementation BLStringDiffer
+@implementation LTStringDiffer
 
 + (NSAttributedString *)diffBetween:(NSString *)inAStr and:(NSString *)inBStr
 {
-	BLDifferenceEngine *engine = [[BLDifferenceEngine alloc] init];
+	LTDifferenceEngine *engine = [[LTDifferenceEngine alloc] init];
 	engine.segmentation = BLDetailedSegmentation;
 	engine.newString = inBStr;
 	engine.oldString = inAStr;
@@ -33,19 +31,19 @@
     [attrString beginEditing];
 	
     // make the text appear in blue
-    for (BLDifference *diff in differences)
+    for (LTDifference *diff in differences)
 	{
-		if (diff.type == BLDifferenceAdd)
+		if (diff.type == LTDifferenceAdd)
         {
 			//String was added, append it, color it green
 			[self addGreenString:diff.newValue toAttributedString:attrString];
 		}
-		else if (diff.type == BLDifferenceDelete)
+		else if (diff.type == LTDifferenceDelete)
 		{
 			//String was removed, append the old value and color it red
 			[self addRedString:diff.oldValue toAttributedString:attrString];
 		}
-		else if (diff.type == BLDifferenceChange)
+		else if (diff.type == LTDifferenceChange)
 		{
 			//string was changed, append the old and the new one, color accordingly
 			[self addRedString:diff.oldValue toAttributedString:attrString];

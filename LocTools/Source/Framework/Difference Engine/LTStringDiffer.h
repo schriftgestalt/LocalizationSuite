@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BLStringDiffer : NSObject
+@interface LTStringDiffer : NSObject
 
 //Returns a colored diff between two strings.
 + (NSAttributedString *)diffBetween:(NSString *)inAStr and:(NSString *)inBStr;

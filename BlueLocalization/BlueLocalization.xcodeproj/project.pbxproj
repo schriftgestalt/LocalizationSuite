@@ -224,14 +224,6 @@
 		50F03C110FA627AC00FDB765 /* BLInterpretationStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F03C0F0FA627AC00FDB765 /* BLInterpretationStep.m */; };
 		50F6BA3310144B84008C8727 /* BLXcodeImporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F6BA3110144B84008C8727 /* BLXcodeImporter.xib */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
-		B6F379D717B147E40044A8B0 /* diffEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6F379CC17B147E40044A8B0 /* diffEngine.cpp */; };
-		B6F379D817B147E40044A8B0 /* diffEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = B6F379CD17B147E40044A8B0 /* diffEngine.h */; };
-		B6F379D917B147E40044A8B0 /* BLDifference.h in Headers */ = {isa = PBXBuildFile; fileRef = B6F379CE17B147E40044A8B0 /* BLDifference.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B6F379DA17B147E40044A8B0 /* BLDifference.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6F379CF17B147E40044A8B0 /* BLDifference.mm */; };
-		B6F379DB17B147E40044A8B0 /* BLDifferenceEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = B6F379D017B147E40044A8B0 /* BLDifferenceEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B6F379DC17B147E40044A8B0 /* BLDifferenceEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6F379D117B147E40044A8B0 /* BLDifferenceEngine.mm */; };
-		B6F379DD17B147E40044A8B0 /* BLStringDiffer.h in Headers */ = {isa = PBXBuildFile; fileRef = B6F379D217B147E40044A8B0 /* BLStringDiffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B6F379DE17B147E40044A8B0 /* BLStringDiffer.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F379D317B147E40044A8B0 /* BLStringDiffer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -520,14 +512,6 @@
 		50F03C0F0FA627AC00FDB765 /* BLInterpretationStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLInterpretationStep.m; path = ../../Documents/Processing/BLInterpretationStep.m; sourceTree = "<group>"; };
 		50F6BA3210144B84008C8727 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/BLXcodeImporter.xib; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* BlueLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlueLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6F379CC17B147E40044A8B0 /* diffEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = diffEngine.cpp; sourceTree = "<group>"; };
-		B6F379CD17B147E40044A8B0 /* diffEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = diffEngine.h; sourceTree = "<group>"; };
-		B6F379CE17B147E40044A8B0 /* BLDifference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDifference.h; sourceTree = "<group>"; };
-		B6F379CF17B147E40044A8B0 /* BLDifference.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BLDifference.mm; sourceTree = "<group>"; };
-		B6F379D017B147E40044A8B0 /* BLDifferenceEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDifferenceEngine.h; sourceTree = "<group>"; };
-		B6F379D117B147E40044A8B0 /* BLDifferenceEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BLDifferenceEngine.mm; sourceTree = "<group>"; };
-		B6F379D217B147E40044A8B0 /* BLStringDiffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStringDiffer.h; sourceTree = "<group>"; };
-		B6F379D317B147E40044A8B0 /* BLStringDiffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStringDiffer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -851,7 +835,6 @@
 		50C246D20F979D58003B3522 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				B6F379CB17B147E40044A8B0 /* Difference Engine */,
 				50C2470C0F979D58003B3522 /* Model */,
 				50C246D30F979D58003B3522 /* Documents */,
 				50C246E40F979D58003B3522 /* Files */,
@@ -1281,21 +1264,6 @@
 			path = Processing;
 			sourceTree = "<group>";
 		};
-		B6F379CB17B147E40044A8B0 /* Difference Engine */ = {
-			isa = PBXGroup;
-			children = (
-				B6F379CC17B147E40044A8B0 /* diffEngine.cpp */,
-				B6F379CD17B147E40044A8B0 /* diffEngine.h */,
-				B6F379CE17B147E40044A8B0 /* BLDifference.h */,
-				B6F379CF17B147E40044A8B0 /* BLDifference.mm */,
-				B6F379D017B147E40044A8B0 /* BLDifferenceEngine.h */,
-				B6F379D117B147E40044A8B0 /* BLDifferenceEngine.mm */,
-				B6F379D217B147E40044A8B0 /* BLStringDiffer.h */,
-				B6F379D317B147E40044A8B0 /* BLStringDiffer.m */,
-			);
-			path = "Difference Engine";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1390,10 +1358,6 @@
 				50D19EC6129C708B0097AA99 /* BLXcodeImportAssociationStep.h in Headers */,
 				5010B76B129C8D6E0044A488 /* BLXcodeExportUpdateStep.h in Headers */,
 				500C5819140FB36600DD5F0E /* BLXcodeImportUpdateStep.h in Headers */,
-				B6F379D817B147E40044A8B0 /* diffEngine.h in Headers */,
-				B6F379D917B147E40044A8B0 /* BLDifference.h in Headers */,
-				B6F379DB17B147E40044A8B0 /* BLDifferenceEngine.h in Headers */,
-				B6F379DD17B147E40044A8B0 /* BLStringDiffer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1691,10 +1655,6 @@
 				50D19EC7129C708B0097AA99 /* BLXcodeImportAssociationStep.m in Sources */,
 				5010B76C129C8D6E0044A488 /* BLXcodeExportUpdateStep.m in Sources */,
 				500C581A140FB36600DD5F0E /* BLXcodeImportUpdateStep.m in Sources */,
-				B6F379D717B147E40044A8B0 /* diffEngine.cpp in Sources */,
-				B6F379DA17B147E40044A8B0 /* BLDifference.mm in Sources */,
-				B6F379DC17B147E40044A8B0 /* BLDifferenceEngine.mm in Sources */,
-				B6F379DE17B147E40044A8B0 /* BLStringDiffer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,21 +15,21 @@
  @const LTDifferenceAdd		The part has been added in the new string.
  */
 typedef enum {
-    BLDifferenceCopy	= 0,
-    BLDifferenceChange	= 1,
-    BLDifferenceDelete	= 2,
-    BLDifferenceAdd		= 3
-} BLDifferenceType;
+    LTDifferenceCopy	= 0,
+    LTDifferenceChange	= 1,
+    LTDifferenceDelete	= 2,
+    LTDifferenceAdd		= 3
+} LTDifferenceType;
 
 /*!
  @abstract Basic result object returned by LTDifferenceEngine.
  @discussion Represents a part of both matched strings and 
  */
-@interface BLDifference : NSObject
+@interface LTDifference : NSObject
 {
     NSString			*_newValue;
     NSString			*_oldValue;
-    BLDifferenceType	_type;
+    LTDifferenceType	_type;
 }
 
 /*!
@@ -46,7 +46,7 @@ typedef enum {
  @abstract The type of the difference.
  @discussion The result is type of the difference between oldValue and newValue only. See LTDifferenceType for possible values.
  */
-- (BLDifferenceType)type;
+- (LTDifferenceType)type;
 
 @end
 

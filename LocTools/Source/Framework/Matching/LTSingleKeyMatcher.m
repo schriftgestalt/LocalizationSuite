@@ -10,6 +10,8 @@
 
 #import "LTKeyMatch.h"
 #import "LTKeyMatchInternal.h"
+#import "LTDifferenceEngine.h"
+
 
 @implementation LTSingleKeyMatcher
 
@@ -79,7 +81,7 @@ bail:
 	
 	// Setup
 		NSString *targetString = [_keyObject stringForLanguage: _matchLanguage];
-		BLDifferenceEngine	*engine = [[BLDifferenceEngine alloc] init];
+		LTDifferenceEngine	*engine = [[LTDifferenceEngine alloc] init];
 		[engine setSegmentation: _guessingType];
 		[engine setNewString: targetString];	
 		

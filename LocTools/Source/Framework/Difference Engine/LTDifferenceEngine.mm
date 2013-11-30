@@ -6,14 +6,14 @@
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
-#import "BLDifferenceEngine.h"
-#import "BLDifference.h"
+#import "LTDifferenceEngine.h"
+#import "LTDifference.h"
 #import "diffEngine.h"
 
 /*!
  @abstract Internal methodes of LTDifference used by LTDifferenceEngine.
  */
-@interface BLDifference (DiffOperationInternal)
+@interface LTDifference (DiffOperationInternal)
 
 - (id)initWithDiffOp:(DiffOperation *)op;
 
@@ -22,7 +22,7 @@
 /*!
  @abstract Internal methodes of LTDifferenceEngine.
  */
-@interface BLDifferenceEngine (LTDifferenceEngineInternal)
+@interface LTDifferenceEngine (LTDifferenceEngineInternal)
 
 - (void)computeDifferencesDetailled:(BOOL)detail;
 - (void)splitString:(NSString *)string intoParts:(char ***)parts count:(unsigned *)partCount;
@@ -30,7 +30,7 @@
 @end
 
 
-@implementation BLDifferenceEngine
+@implementation LTDifferenceEngine
 
 - (id)init
 {
@@ -134,7 +134,7 @@
     
     for (NSUInteger i=0; i<diffs->size(); i++) {
 		if (detail)
-			[_differences addObject: [[BLDifference alloc] initWithDiffOp: (*diffs)[i]]];
+			[_differences addObject: [[LTDifference alloc] initWithDiffOp: (*diffs)[i]]];
 		
 		oldLines = (*diffs)[i]->oldLines;
 		newLines = (*diffs)[i]->newLines;

@@ -7,7 +7,7 @@
  */
 
 #import <LocTools/LTKeyMatcher.h>
-#import <BlueLocalization/BLDifferenceEngine.h>
+#import <LocTools/LTDifferenceEngine.h>
 
 /*!
  @abstract A matching object that assynchronously matches a single key object with set of key objects.

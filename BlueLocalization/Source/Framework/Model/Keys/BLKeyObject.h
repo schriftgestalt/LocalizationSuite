@@ -108,11 +108,6 @@ enum {
  */
 - (id)snapshotForLanguage:(NSString *)language;
 
-/*!
- @abstract Returns the difference between the current and the previous version for the specified language
- @discussion if no previous version is found, the current version will be returned without any changes to it
- */
-- (NSAttributedString *)differenceForLanguage:(NSString *)language;
 
 /*!
  @abstract Saves the given object in the old objects array used for diffing

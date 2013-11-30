@@ -13,7 +13,6 @@
 #import "BLFileObject.h"
 #import "BLLocalizerFile.h"
 #import "BLPropertyListSerialization.h"
-#import "BLStringDiffer.h"
 
 @implementation BLKeyObject
 
@@ -336,18 +335,6 @@
 - (id)snapshotForLanguage:(NSString *)language
 {
 	return [_snapshot objectForKey: language];
-}
-
-- (NSAttributedString *)differenceForLanguage:(NSString *)language
-{
-	if ([_oldObjects objectForKey:language])
-	{
-		return [BLStringDiffer diffBetween:[_oldObjects objectForKey:language] and:[self stringForLanguage:language]];
-	}
-	else
-	{
-		return [[NSAttributedString alloc] initWithString:[self stringForLanguage:language]];
-	}
 }
 
 - (void)setOldObject:(id)object forLanguage:(NSString *)language

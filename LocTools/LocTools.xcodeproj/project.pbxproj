@@ -45,6 +45,24 @@
 		50F275410FCEE9C900AF108D /* LTTranslationProblem.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F2753F0FCEE9C900AF108D /* LTTranslationProblem.m */; };
 		50F275D90FCEF2E500AF108D /* LTTranslationCheckerQuotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50F275D80FCEF2E500AF108D /* LTTranslationCheckerQuotes.plist */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		B65D3661184A0E9300BE275E /* diffEngine.cpp in Resources */ = {isa = PBXBuildFile; fileRef = B65D3658184A0E9300BE275E /* diffEngine.cpp */; };
+		B65D3662184A0E9300BE275E /* diffEngine.h in Resources */ = {isa = PBXBuildFile; fileRef = B65D3659184A0E9300BE275E /* diffEngine.h */; };
+		B65D3663184A0E9300BE275E /* LTDifference.h in Resources */ = {isa = PBXBuildFile; fileRef = B65D365A184A0E9300BE275E /* LTDifference.h */; };
+		B65D3664184A0E9300BE275E /* LTDifference.mm in Resources */ = {isa = PBXBuildFile; fileRef = B65D365B184A0E9300BE275E /* LTDifference.mm */; };
+		B65D3665184A0E9300BE275E /* LTDifferenceEngine.h in Resources */ = {isa = PBXBuildFile; fileRef = B65D365C184A0E9300BE275E /* LTDifferenceEngine.h */; };
+		B65D3666184A0E9300BE275E /* LTDifferenceEngine.mm in Resources */ = {isa = PBXBuildFile; fileRef = B65D365D184A0E9300BE275E /* LTDifferenceEngine.mm */; };
+		B65D3667184A0E9300BE275E /* LTStringDiffer.h in Resources */ = {isa = PBXBuildFile; fileRef = B65D365E184A0E9300BE275E /* LTStringDiffer.h */; };
+		B65D3668184A0E9300BE275E /* LTStringDiffer.m in Resources */ = {isa = PBXBuildFile; fileRef = B65D365F184A0E9300BE275E /* LTStringDiffer.m */; };
+		B65D366B184A103800BE275E /* BLKeyObject+Difference.h in Headers */ = {isa = PBXBuildFile; fileRef = B65D3669184A103800BE275E /* BLKeyObject+Difference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B65D366C184A103800BE275E /* BLKeyObject+Difference.m in Sources */ = {isa = PBXBuildFile; fileRef = B65D366A184A103800BE275E /* BLKeyObject+Difference.m */; };
+		B65D3671184A15B000BE275E /* LTDifferenceEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = B65D365C184A0E9300BE275E /* LTDifferenceEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B65D3672184A15BF00BE275E /* LTDifference.h in Headers */ = {isa = PBXBuildFile; fileRef = B65D365A184A0E9300BE275E /* LTDifference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B65D3673184A15DD00BE275E /* diffEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = B65D3659184A0E9300BE275E /* diffEngine.h */; };
+		B65D3674184A15EE00BE275E /* LTStringDiffer.h in Headers */ = {isa = PBXBuildFile; fileRef = B65D365E184A0E9300BE275E /* LTStringDiffer.h */; };
+		B65D3675184A160F00BE275E /* LTDifferenceEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65D365D184A0E9300BE275E /* LTDifferenceEngine.mm */; };
+		B65D3676184A161700BE275E /* diffEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B65D3658184A0E9300BE275E /* diffEngine.cpp */; };
+		B65D3677184A162600BE275E /* LTDifference.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65D365B184A0E9300BE275E /* LTDifference.mm */; };
+		B65D3678184A164400BE275E /* LTStringDiffer.m in Sources */ = {isa = PBXBuildFile; fileRef = B65D365F184A0E9300BE275E /* LTStringDiffer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +127,16 @@
 		50FE49390FDCDF5E00D815A9 /* KeyValueMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueMatcher.h; sourceTree = "<group>"; };
 		50FE493A0FDCDF5E00D815A9 /* KeyValueMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueMatcher.m; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* LocTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B65D3658184A0E9300BE275E /* diffEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = diffEngine.cpp; sourceTree = "<group>"; };
+		B65D3659184A0E9300BE275E /* diffEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = diffEngine.h; sourceTree = "<group>"; };
+		B65D365A184A0E9300BE275E /* LTDifference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTDifference.h; sourceTree = "<group>"; };
+		B65D365B184A0E9300BE275E /* LTDifference.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LTDifference.mm; sourceTree = "<group>"; };
+		B65D365C184A0E9300BE275E /* LTDifferenceEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTDifferenceEngine.h; sourceTree = "<group>"; };
+		B65D365D184A0E9300BE275E /* LTDifferenceEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LTDifferenceEngine.mm; sourceTree = "<group>"; };
+		B65D365E184A0E9300BE275E /* LTStringDiffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTStringDiffer.h; sourceTree = "<group>"; };
+		B65D365F184A0E9300BE275E /* LTStringDiffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTStringDiffer.m; sourceTree = "<group>"; };
+		B65D3669184A103800BE275E /* BLKeyObject+Difference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BLKeyObject+Difference.h"; sourceTree = "<group>"; };
+		B65D366A184A103800BE275E /* BLKeyObject+Difference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BLKeyObject+Difference.m"; sourceTree = "<group>"; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -247,6 +275,7 @@
 			children = (
 				509A46890FD53F9300621825 /* Autotranslation */,
 				50A9B3200FF7941800B24D7A /* Matching */,
+				B65D3660184A0E9300BE275E /* Difference Engine */,
 				50F274E60FCEE23F00AF108D /* Translation Checker */,
 				50F273E20FCEDAB300AF108D /* Other */,
 			);
@@ -311,6 +340,23 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		B65D3660184A0E9300BE275E /* Difference Engine */ = {
+			isa = PBXGroup;
+			children = (
+				B65D365C184A0E9300BE275E /* LTDifferenceEngine.h */,
+				B65D365D184A0E9300BE275E /* LTDifferenceEngine.mm */,
+				B65D365A184A0E9300BE275E /* LTDifference.h */,
+				B65D365B184A0E9300BE275E /* LTDifference.mm */,
+				B65D3659184A0E9300BE275E /* diffEngine.h */,
+				B65D3658184A0E9300BE275E /* diffEngine.cpp */,
+				B65D365E184A0E9300BE275E /* LTStringDiffer.h */,
+				B65D365F184A0E9300BE275E /* LTStringDiffer.m */,
+				B65D3669184A103800BE275E /* BLKeyObject+Difference.h */,
+				B65D366A184A103800BE275E /* BLKeyObject+Difference.m */,
+			);
+			path = "Difference Engine";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -319,16 +365,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				50F274360FCEDE1300AF108D /* LocTools.h in Headers */,
+				B65D3671184A15B000BE275E /* LTDifferenceEngine.h in Headers */,
 				50F274ED0FCEE23F00AF108D /* LTTranslationChecker.h in Headers */,
+				B65D3672184A15BF00BE275E /* LTDifference.h in Headers */,
 				50F275400FCEE9C900AF108D /* LTTranslationProblem.h in Headers */,
 				509B80630FF530AD00DE7C73 /* LTAutotranslationStep.h in Headers */,
 				50A9B32A0FF7941800B24D7A /* LTKeyMatch.h in Headers */,
 				50A9B32C0FF7941800B24D7A /* LTKeyMatcher.h in Headers */,
-				50A9B32E0FF7941800B24D7A /* LTKeyMatchInternal.h in Headers */,
 				50A9B32F0FF7941800B24D7A /* LTMultipleKeyMatcher.h in Headers */,
-				50A9B3310FF7941800B24D7A /* LTSingleKeyMatcher.h in Headers */,
-				502469F5112EA944001DA94B /* BLLocalizerExportStepExtensions.h in Headers */,
 				50246CE1112F24E9001DA94B /* LTKeyMatchCollector.h in Headers */,
+				50A9B3310FF7941800B24D7A /* LTSingleKeyMatcher.h in Headers */,
+				B65D3673184A15DD00BE275E /* diffEngine.h in Headers */,
+				B65D3674184A15EE00BE275E /* LTStringDiffer.h in Headers */,
+				B65D366B184A103800BE275E /* BLKeyObject+Difference.h in Headers */,
+				50A9B32E0FF7941800B24D7A /* LTKeyMatchInternal.h in Headers */,
+				502469F5112EA944001DA94B /* BLLocalizerExportStepExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,9 +469,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B65D3664184A0E9300BE275E /* LTDifference.mm in Resources */,
 				50F275D90FCEF2E500AF108D /* LTTranslationCheckerQuotes.plist in Resources */,
+				B65D3663184A0E9300BE275E /* LTDifference.h in Resources */,
 				5034717E0FDC2234001876EE /* LTTranslationChecker.strings in Resources */,
 				50A9B6270FF7BE5600B24D7A /* LTAutotranslationStep.strings in Resources */,
+				B65D3665184A0E9300BE275E /* LTDifferenceEngine.h in Resources */,
+				B65D3666184A0E9300BE275E /* LTDifferenceEngine.mm in Resources */,
+				B65D3662184A0E9300BE275E /* diffEngine.h in Resources */,
+				B65D3668184A0E9300BE275E /* LTStringDiffer.m in Resources */,
+				B65D3667184A0E9300BE275E /* LTStringDiffer.h in Resources */,
+				B65D3661184A0E9300BE275E /* diffEngine.cpp in Resources */,
 				50246A81112EB9AD001DA94B /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,13 +519,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B65D3678184A164400BE275E /* LTStringDiffer.m in Sources */,
+				B65D3675184A160F00BE275E /* LTDifferenceEngine.mm in Sources */,
+				B65D3676184A161700BE275E /* diffEngine.cpp in Sources */,
 				50F274EE0FCEE23F00AF108D /* LTTranslationChecker.m in Sources */,
+				B65D3677184A162600BE275E /* LTDifference.mm in Sources */,
 				50F275410FCEE9C900AF108D /* LTTranslationProblem.m in Sources */,
 				509B80640FF530B000DE7C73 /* LTAutotranslationStep.m in Sources */,
 				50A9B32B0FF7941800B24D7A /* LTKeyMatch.m in Sources */,
 				50A9B32D0FF7941800B24D7A /* LTKeyMatcher.m in Sources */,
 				50A9B3300FF7941800B24D7A /* LTMultipleKeyMatcher.m in Sources */,
 				50A9B3320FF7941800B24D7A /* LTSingleKeyMatcher.m in Sources */,
+				B65D366C184A103800BE275E /* BLKeyObject+Difference.m in Sources */,
 				502469F6112EA944001DA94B /* BLLocalizerExportStepExtensions.m in Sources */,
 				50246CE2112F24E9001DA94B /* LTKeyMatchCollector.m in Sources */,
 			);
