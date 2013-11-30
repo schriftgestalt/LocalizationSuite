@@ -92,9 +92,12 @@
 		[NSException raise:NSInvalidArgumentException format:@"Only variant groups have localizations!"];
 	NSAssert([[self children] count] > 0, @"Cannot add localization to empty variant group!");
 	
-	NSString *bundlePath = [BLPathCreator bundlePartOfFilePath: [[[self children] objectAtIndex: 0] fullPath]];
-	NSString *fileBundlePath = [BLPathCreator bundlePartOfFilePath: [[[self children] objectAtIndex: 0] path]];
-	NSString *filePath = [BLPathCreator relativePartOfFilePath: [[[self children] objectAtIndex: 0] path]];
+	BLXcodeProjectItem *firstChild = [[self children] objectAtIndex: 0];
+	
+	NSString *bundlePath = [BLPathCreator bundlePartOfFilePath: firstChild.fullPath];
+	NSString *fileBundlePath = [BLPathCreator relativePathFromPath:self.fullPath toPath:[BLPathCreator bundlePartOfFilePath: firstChild.fullPath]];
+	NSString *filePath = [BLPathCreator relativePartOfFilePath: firstChild.path];
+	
 	
 	for (NSString *language in languages) {
 		NSString *languageName, *path;
