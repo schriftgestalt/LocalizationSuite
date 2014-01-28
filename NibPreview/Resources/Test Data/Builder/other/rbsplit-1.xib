@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.03">
+<archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1050</int>
-		<string key="IBDocument.SystemVersion">9G55</string>
-		<string key="IBDocument.InterfaceBuilderVersion">677</string>
-		<string key="IBDocument.AppKitVersion">949.43</string>
-		<string key="IBDocument.HIToolboxVersion">353.00</string>
+		<string key="IBDocument.SystemVersion">11G63b</string>
+		<string key="IBDocument.InterfaceBuilderVersion">925</string>
+		<string key="IBDocument.AppKitVersion">1138.51</string>
+		<string key="IBDocument.HIToolboxVersion">569.00</string>
+		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
+			<string key="NS.object.0">925</string>
+		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="1"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<string>net.brockerhoff.RBSplitView.IBPlugin</string>
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.Metadata">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<object class="NSArray" key="dict.sortedKeys">
+			<object class="NSArray" key="dict.sortedKeys" id="0">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
@@ -36,83 +38,43 @@
 				<string key="NSClassName">NSApplication</string>
 			</object>
 			<object class="NSCustomView" id="1005">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="RBSplitView" id="74740032">
+					<object class="NSCustomView" id="74740032">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">256</int>
 						<object class="NSMutableArray" key="NSSubviews">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="RBSplitSubview" id="1045422070">
+							<object class="NSCustomView" id="1045422070">
 								<reference key="NSNextResponder" ref="74740032"/>
 								<int key="NSvFlags">256</int>
 								<string key="NSFrameSize">{60, 80}</string>
 								<reference key="NSSuperview" ref="74740032"/>
-								<string key="identifier"/>
-								<int key="tag">0</int>
-								<float key="minDimension">1.000000e+00</float>
-								<float key="maxDimension">1.000000e+06</float>
-								<double key="fraction">0.000000e+00</double>
-								<bool key="canCollapse">NO</bool>
+								<string key="NSReuseIdentifierKey"/>
+								<string key="NSClassName">RBSplitSubview</string>
 							</object>
-							<object class="RBSplitSubview" id="712952340">
+							<object class="NSCustomView" id="712952340">
 								<reference key="NSNextResponder" ref="74740032"/>
 								<int key="NSvFlags">256</int>
 								<string key="NSFrame">{{68, 0}, {60, 80}}</string>
 								<reference key="NSSuperview" ref="74740032"/>
-								<string key="identifier"/>
-								<int key="tag">0</int>
-								<float key="minDimension">1.000000e+00</float>
-								<float key="maxDimension">1.000000e+06</float>
-								<double key="fraction">0.000000e+00</double>
-								<bool key="canCollapse">NO</bool>
+								<string key="NSReuseIdentifierKey"/>
+								<string key="NSClassName">RBSplitSubview</string>
 							</object>
 						</object>
 						<string key="NSFrame">{{53, 172}, {128, 80}}</string>
 						<reference key="NSSuperview" ref="1005"/>
-						<string key="identifier"/>
-						<int key="tag">0</int>
-						<float key="minDimension">1.000000e+00</float>
-						<float key="maxDimension">1.000000e+06</float>
-						<double key="fraction">0.000000e+00</double>
-						<bool key="canCollapse">NO</bool>
-						<nil key="delegate"/>
-						<string key="autosaveName"/>
-						<object class="NSData" key="divider">
-							<bytes key="NS.bytes">TU0AKgAAAQj///8A////AP///wD///8A////AP///wD///8A////AP///wC2trYAYGBgHwwMDGcKCgpm
-VlZWIKioqAD///8A////AGBgYB8cHByoAQEB/xgYGP9FRUWobW1tH////wD///8ACAgIZg4ODv89PT3/
-d3d3/4WFhf+IiIhm////AP///wAUFBRmT09P/7y8vP/8/Pz/4+Pj/729vWb///8A////AHNzcyGfn5+o
-8/Pz//////////+o6enpH////wD///8Ara2tAMHBwR729vZm/f39ZtjY2B64uLgA////AP///wD///8A
-////AP///wD///8A////AP///wD///8AAA4BAAADAAAAAQAIAAABAQADAAAAAQAIAAABAgADAAAABAAA
-AbYBAwADAAAAAQABAAABBgADAAAAAQACAAABEQAEAAAAAQAAAAgBEgADAAAAAQABAAABFQADAAAAAQAE
-AAABFgADAAAAARAAAAABFwAEAAAAAQAAAQABHAADAAAAAQABAAABUgADAAAAAQACAAABUwADAAAABAAA
-Ab6HcwAHAAACwAAAAcYAAAAAAAgACAAIAAgAAQABAAEAAQAAAsBhcHBsAgAAAG1udHJSR0IgWFlaIAfZ
-AAMABAAAAAAAAGFjc3BBUFBMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAAANMtYXBwbADs
-ps/ihiuvKFEqMcB/4MYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADHJYWVoAAAEUAAAAFGdY
-WVoAAAEoAAAAFGJYWVoAAAE8AAAAFHd0cHQAAAFQAAAAFGNoYWQAAAFkAAAALHJUUkMAAAGQAAAADmdU
-UkMAAAGgAAAADmJUUkMAAAGwAAAADnZjZ3QAAAHAAAAAMG5kaW4AAAHwAAAAOGRlc2MAAAIoAAAAdGNw
-cnQAAAKcAAAAJFhZWiAAAAAAAAB0SwAAPh0AAAPMWFlaIAAAAAAAAFpzAACspgAAFyZYWVogAAAAAAAA
-KBgAABVXAAC4M1hZWiAAAAAAAADzUQABAAAAARbMc2YzMgAAAAAAAQxCAAAF3v//8yYAAAeTAAD9kP//
-+6L///2jAAAD3AAAwG5jdXJ2AAAAAAAAAAEB0QAAY3VydgAAAAAAAAABAdEAAGN1cnYAAAAAAAAAAQHR
-AAB2Y2d0AAAAAAAAAAEAAQAAAAAAAAABAAAAAQAAAAAAAAABAAAAAQAAAAAAAAABAABuZGluAAAAAAAA
-ADAAAKFIAABXCgAAS4UAAJrhAAAnrgAAE7YAAFANAABUOQAB0XQAAdF0AAHRdGRlc2MAAAAAAAAAGkNh
-bGlicmF0ZWQgUkdCIENvbG9yc3BhY2UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdGV4dAAAAABDb3B5cmlnaHQg
-QXBwbGUsIEluYy4sIDIwMDkAA</bytes>
-						</object>
-						<nil key="background"/>
-						<float key="dividerThickness">0.000000e+00</float>
-						<bool key="isHorizontal">NO</bool>
-						<bool key="isCoupled">YES</bool>
+						<string key="NSReuseIdentifierKey"/>
+						<string key="NSClassName">RBSplitView</string>
 					</object>
-					<object class="RBSplitView" id="332270771">
+					<object class="NSCustomView" id="332270771">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">256</int>
 						<object class="NSMutableArray" key="NSSubviews">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="RBSplitSubview" id="96775136">
+							<object class="NSCustomView" id="96775136">
 								<reference key="NSNextResponder" ref="332270771"/>
 								<int key="NSvFlags">256</int>
 								<object class="NSMutableArray" key="NSSubviews">
@@ -129,8 +91,8 @@ QXBwbGUsIEluYy4sIDIwMDkAA</bytes>
 											<string key="NSContents"/>
 											<object class="NSFont" key="NSSupport" id="784412787">
 												<string key="NSName">LucidaGrande</string>
-												<double key="NSSize">1.300000e+01</double>
-												<int key="NSfFlags">1044</int>
+												<double key="NSSize">13</double>
+												<int key="NSfFlags">1040</int>
 											</object>
 											<reference key="NSControlView" ref="459904756"/>
 											<bool key="NSDrawsBackground">YES</bool>
@@ -157,14 +119,10 @@ QXBwbGUsIEluYy4sIDIwMDkAA</bytes>
 								</object>
 								<string key="NSFrameSize">{202, 69}</string>
 								<reference key="NSSuperview" ref="332270771"/>
-								<string key="identifier"/>
-								<int key="tag">0</int>
-								<float key="minDimension">1.000000e+00</float>
-								<float key="maxDimension">1.000000e+06</float>
-								<double key="fraction">0.000000e+00</double>
-								<bool key="canCollapse">NO</bool>
+								<string key="NSReuseIdentifierKey"/>
+								<string key="NSClassName">RBSplitSubview</string>
 							</object>
-							<object class="RBSplitSubview" id="961982135">
+							<object class="NSCustomView" id="961982135">
 								<reference key="NSNextResponder" ref="332270771"/>
 								<int key="NSvFlags">256</int>
 								<object class="NSMutableArray" key="NSSubviews">
@@ -189,54 +147,17 @@ QXBwbGUsIEluYy4sIDIwMDkAA</bytes>
 								</object>
 								<string key="NSFrame">{{0, 77}, {202, 69}}</string>
 								<reference key="NSSuperview" ref="332270771"/>
-								<string key="identifier"/>
-								<int key="tag">0</int>
-								<float key="minDimension">1.000000e+00</float>
-								<float key="maxDimension">1.000000e+06</float>
-								<double key="fraction">0.000000e+00</double>
-								<bool key="canCollapse">NO</bool>
+								<string key="NSReuseIdentifierKey"/>
+								<string key="NSClassName">RBSplitSubview</string>
 							</object>
 						</object>
 						<string key="NSFrame">{{233, 54}, {202, 146}}</string>
 						<reference key="NSSuperview" ref="1005"/>
-						<string key="identifier"/>
-						<int key="tag">0</int>
-						<float key="minDimension">1.000000e+00</float>
-						<float key="maxDimension">1.000000e+06</float>
-						<double key="fraction">0.000000e+00</double>
-						<bool key="canCollapse">NO</bool>
-						<nil key="delegate"/>
-						<string key="autosaveName"/>
-						<object class="NSData" key="divider">
-							<bytes key="NS.bytes">TU0AKgAAAQj///8A////AP///wD///8A////AP///wD///8A////AP///wC2trYAYGBgHwwMDGcKCgpm
-VlZWIKioqAD///8A////AGBgYB8cHByoAQEB/xgYGP9FRUWobW1tH////wD///8ACAgIZg4ODv89PT3/
-d3d3/4WFhf+IiIhm////AP///wAUFBRmT09P/7y8vP/8/Pz/4+Pj/729vWb///8A////AHNzcyGfn5+o
-8/Pz//////////+o6enpH////wD///8Ara2tAMHBwR729vZm/f39ZtjY2B64uLgA////AP///wD///8A
-////AP///wD///8A////AP///wD///8AAA4BAAADAAAAAQAIAAABAQADAAAAAQAIAAABAgADAAAABAAA
-AbYBAwADAAAAAQABAAABBgADAAAAAQACAAABEQAEAAAAAQAAAAgBEgADAAAAAQABAAABFQADAAAAAQAE
-AAABFgADAAAAARAAAAABFwAEAAAAAQAAAQABHAADAAAAAQABAAABUgADAAAAAQACAAABUwADAAAABAAA
-Ab6HcwAHAAACwAAAAcYAAAAAAAgACAAIAAgAAQABAAEAAQAAAsBhcHBsAgAAAG1udHJSR0IgWFlaIAfZ
-AAMABAAAAAAAAGFjc3BBUFBMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAAANMtYXBwbADs
-ps/ihiuvKFEqMcB/4MYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADHJYWVoAAAEUAAAAFGdY
-WVoAAAEoAAAAFGJYWVoAAAE8AAAAFHd0cHQAAAFQAAAAFGNoYWQAAAFkAAAALHJUUkMAAAGQAAAADmdU
-UkMAAAGgAAAADmJUUkMAAAGwAAAADnZjZ3QAAAHAAAAAMG5kaW4AAAHwAAAAOGRlc2MAAAIoAAAAdGNw
-cnQAAAKcAAAAJFhZWiAAAAAAAAB0SwAAPh0AAAPMWFlaIAAAAAAAAFpzAACspgAAFyZYWVogAAAAAAAA
-KBgAABVXAAC4M1hZWiAAAAAAAADzUQABAAAAARbMc2YzMgAAAAAAAQxCAAAF3v//8yYAAAeTAAD9kP//
-+6L///2jAAAD3AAAwG5jdXJ2AAAAAAAAAAEB0QAAY3VydgAAAAAAAAABAdEAAGN1cnYAAAAAAAAAAQHR
-AAB2Y2d0AAAAAAAAAAEAAQAAAAAAAAABAAAAAQAAAAAAAAABAAAAAQAAAAAAAAABAABuZGluAAAAAAAA
-ADAAAKFIAABXCgAAS4UAAJrhAAAnrgAAE7YAAFANAABUOQAB0XQAAdF0AAHRdGRlc2MAAAAAAAAAGkNh
-bGlicmF0ZWQgUkdCIENvbG9yc3BhY2UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdGV4dAAAAABDb3B5cmlnaHQg
-QXBwbGUsIEluYy4sIDIwMDkAA</bytes>
-						</object>
-						<nil key="background"/>
-						<float key="dividerThickness">8.000000e+00</float>
-						<bool key="isHorizontal">YES</bool>
-						<bool key="isCoupled">YES</bool>
+						<string key="NSReuseIdentifierKey"/>
+						<string key="NSClassName">RBSplitView</string>
 					</object>
 				</object>
 				<string key="NSFrameSize">{480, 272}</string>
-				<reference key="NSSuperview"/>
 				<string key="NSClassName">NSView</string>
 			</object>
 		</object>
@@ -249,28 +170,26 @@ QXBwbGUsIEluYy4sIDIwMDkAA</bytes>
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBObjectRecord">
 						<int key="objectID">0</int>
-						<object class="NSArray" key="object" id="1002">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-						</object>
+						<reference key="object" ref="0"/>
 						<reference key="children" ref="1000"/>
 						<nil key="parent"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">-2</int>
 						<reference key="object" ref="1001"/>
-						<reference key="parent" ref="1002"/>
-						<string type="base64-UTF8" key="objectName">RmlsZSdzIE93bmVyA</string>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">File's Owner</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">-1</int>
 						<reference key="object" ref="1003"/>
-						<reference key="parent" ref="1002"/>
+						<reference key="parent" ref="0"/>
 						<string key="objectName">First Responder</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">-3</int>
 						<reference key="object" ref="1004"/>
-						<reference key="parent" ref="1002"/>
+						<reference key="parent" ref="0"/>
 						<string key="objectName">Application</string>
 					</object>
 					<object class="IBObjectRecord">
@@ -281,7 +200,7 @@ QXBwbGUsIEluYy4sIDIwMDkAA</bytes>
 							<reference ref="74740032"/>
 							<reference ref="332270771"/>
 						</object>
-						<reference key="parent" ref="1002"/>
+						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">2</int>
@@ -363,10 +282,8 @@ QXBwbGUsIEluYy4sIDIwMDkAA</bytes>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="NSMutableArray" key="dict.sortedKeys">
+				<object class="NSArray" key="dict.sortedKeys">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>-1.IBPluginDependency</string>
-					<string>-2.IBPluginDependency</string>
 					<string>-3.IBPluginDependency</string>
 					<string>1.IBEditorWindowLastContentRect</string>
 					<string>1.IBPluginDependency</string>
@@ -374,11 +291,17 @@ QXBwbGUsIEluYy4sIDIwMDkAA</bytes>
 					<string>1.editorWindowContentRectSynchronizationRect</string>
 					<string>10.IBPluginDependency</string>
 					<string>11.IBPluginDependency</string>
+					<string>2.IBAttributePlaceholdersKey</string>
 					<string>2.IBPluginDependency</string>
+					<string>3.IBAttributePlaceholdersKey</string>
 					<string>3.IBPluginDependency</string>
+					<string>4.IBAttributePlaceholdersKey</string>
 					<string>4.IBPluginDependency</string>
+					<string>5.IBAttributePlaceholdersKey</string>
 					<string>5.IBPluginDependency</string>
+					<string>6.IBAttributePlaceholdersKey</string>
 					<string>6.IBPluginDependency</string>
+					<string>7.IBAttributePlaceholdersKey</string>
 					<string>7.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
 					<string>9.IBPluginDependency</string>
@@ -386,29 +309,468 @@ QXBwbGUsIEluYy4sIDIwMDkAA</bytes>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{63, 493}, {480, 272}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{628, 654}</string>
 					<string>{{357, 416}, {480, 272}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>net.brockerhoff.RBSplitView.IBPlugin</string>
-					<string>net.brockerhoff.RBSplitView.IBPlugin</string>
-					<string>net.brockerhoff.RBSplitView.IBPlugin</string>
-					<string>net.brockerhoff.RBSplitView.IBPlugin</string>
-					<string>net.brockerhoff.RBSplitView.IBPlugin</string>
-					<string>net.brockerhoff.RBSplitView.IBPlugin</string>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+						<object class="IBUserDefinedRuntimeAttributesPlaceholder" key="NS.object.0">
+							<string key="name">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+							<reference key="object" ref="74740032"/>
+							<object class="NSArray" key="userDefinedRuntimeAttributes">
+								<bool key="EncodedWithXMLCoder">YES</bool>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">fromImage</string>
+									<boolean value="YES" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">collapsed</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">canCollapse</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">minDimension</string>
+									<real value="1" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
+									<string key="keyPath">autosaveName</string>
+									<string key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.color</string>
+									<string key="keyPath">backgroundColor</string>
+									<object class="NSColor" key="value" id="319736653">
+										<int key="NSColorSpace">3</int>
+										<bytes key="NSWhite">MCAwAA</bytes>
+									</object>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">tag</string>
+									<integer value="0" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">hasSplitView</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">position</string>
+									<integer value="0" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
+									<string key="keyPath">identifier</string>
+									<string key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">isCoupled</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">numberOfSubviews</string>
+									<integer value="2" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">notCoupled</string>
+									<boolean value="YES" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">dimension</string>
+									<real value="128" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">dividerThickness</string>
+									<real value="8" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">canAdjust</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">vertical</string>
+									<boolean value="YES" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">maxDimension</string>
+									<real value="1000000" key="value"/>
+								</object>
+							</object>
+						</object>
+					</object>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+						<object class="IBUserDefinedRuntimeAttributesPlaceholder" key="NS.object.0">
+							<string key="name">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+							<reference key="object" ref="1045422070"/>
+							<object class="NSArray" key="userDefinedRuntimeAttributes">
+								<bool key="EncodedWithXMLCoder">YES</bool>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">hasSplitView</string>
+									<boolean value="YES" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">position</string>
+									<integer value="0" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">collapsed</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">minDimension</string>
+									<real value="1" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">tag</string>
+									<integer value="0" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
+									<string key="keyPath">identifier</string>
+									<string key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">dimension</string>
+									<real value="60" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">canCollapse</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">canAdjust</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">maxDimension</string>
+									<real value="1000000" key="value"/>
+								</object>
+							</object>
+						</object>
+					</object>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+						<object class="IBUserDefinedRuntimeAttributesPlaceholder" key="NS.object.0">
+							<string key="name">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+							<reference key="object" ref="712952340"/>
+							<object class="NSArray" key="userDefinedRuntimeAttributes">
+								<bool key="EncodedWithXMLCoder">YES</bool>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">hasSplitView</string>
+									<boolean value="YES" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">position</string>
+									<integer value="1" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">collapsed</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">minDimension</string>
+									<real value="1" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">tag</string>
+									<integer value="0" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
+									<string key="keyPath">identifier</string>
+									<string key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">dimension</string>
+									<real value="60" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">canCollapse</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">canAdjust</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">maxDimension</string>
+									<real value="1000000" key="value"/>
+								</object>
+							</object>
+						</object>
+					</object>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+						<object class="IBUserDefinedRuntimeAttributesPlaceholder" key="NS.object.0">
+							<string key="name">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+							<reference key="object" ref="332270771"/>
+							<object class="NSArray" key="userDefinedRuntimeAttributes">
+								<bool key="EncodedWithXMLCoder">YES</bool>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">fromImage</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">collapsed</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">canCollapse</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">minDimension</string>
+									<real value="1" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
+									<string key="keyPath">autosaveName</string>
+									<string key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.color</string>
+									<string key="keyPath">backgroundColor</string>
+									<reference key="value" ref="319736653"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">tag</string>
+									<integer value="0" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">hasSplitView</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">position</string>
+									<integer value="0" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
+									<string key="keyPath">identifier</string>
+									<string key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">isCoupled</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">numberOfSubviews</string>
+									<integer value="2" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">notCoupled</string>
+									<boolean value="YES" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">dimension</string>
+									<real value="202" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">dividerThickness</string>
+									<real value="8" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">canAdjust</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">vertical</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">maxDimension</string>
+									<real value="1000000" key="value"/>
+								</object>
+							</object>
+						</object>
+					</object>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+						<object class="IBUserDefinedRuntimeAttributesPlaceholder" key="NS.object.0">
+							<string key="name">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+							<reference key="object" ref="961982135"/>
+							<object class="NSArray" key="userDefinedRuntimeAttributes">
+								<bool key="EncodedWithXMLCoder">YES</bool>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">hasSplitView</string>
+									<boolean value="YES" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">position</string>
+									<integer value="1" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">collapsed</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">minDimension</string>
+									<real value="1" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">tag</string>
+									<integer value="0" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
+									<string key="keyPath">identifier</string>
+									<string key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">dimension</string>
+									<real value="69" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">canCollapse</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">canAdjust</string>
+									<boolean value="YES" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">maxDimension</string>
+									<real value="1000000" key="value"/>
+								</object>
+							</object>
+						</object>
+					</object>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+						<object class="IBUserDefinedRuntimeAttributesPlaceholder" key="NS.object.0">
+							<string key="name">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+							<reference key="object" ref="96775136"/>
+							<object class="NSArray" key="userDefinedRuntimeAttributes">
+								<bool key="EncodedWithXMLCoder">YES</bool>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">hasSplitView</string>
+									<boolean value="YES" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">position</string>
+									<integer value="0" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">collapsed</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">minDimension</string>
+									<real value="1" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">tag</string>
+									<integer value="0" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
+									<string key="keyPath">identifier</string>
+									<string key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">dimension</string>
+									<real value="69" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">canCollapse</string>
+									<boolean value="NO" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">canAdjust</string>
+									<boolean value="YES" key="value"/>
+								</object>
+								<object class="IBUserDefinedRuntimeAttribute">
+									<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.number</string>
+									<string key="keyPath">maxDimension</string>
+									<real value="1000000" key="value"/>
+								</object>
+							</object>
+						</object>
+					</object>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="NSArray" key="dict.sortedKeys">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-				</object>
+				<reference key="dict.sortedKeys" ref="0"/>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 				</object>
@@ -416,9 +778,7 @@ QXBwbGUsIEluYy4sIDIwMDkAA</bytes>
 			<nil key="activeLocalization"/>
 			<object class="NSMutableDictionary" key="localizations">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="NSArray" key="dict.sortedKeys">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-				</object>
+				<reference key="dict.sortedKeys" ref="0"/>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 				</object>
@@ -428,6 +788,16 @@ QXBwbGUsIEluYy4sIDIwMDkAA</bytes>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
+		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
+		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencies">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.macosx</string>
+			<integer value="1050" key="NS.object.0"/>
+		</object>
+		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.InterfaceBuilder3</string>
+			<integer value="3000" key="NS.object.0"/>
+		</object>
+		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<nil key="IBDocument.LastKnownRelativeProjectPath"/>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 	</data>

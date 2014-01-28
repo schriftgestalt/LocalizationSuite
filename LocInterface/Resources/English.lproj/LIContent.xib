@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1070</int>
-		<string key="IBDocument.SystemVersion">11B26</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1923</string>
-		<string key="IBDocument.AppKitVersion">1138</string>
-		<string key="IBDocument.HIToolboxVersion">566.00</string>
+		<string key="IBDocument.SystemVersion">11G63b</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2182</string>
+		<string key="IBDocument.AppKitVersion">1138.51</string>
+		<string key="IBDocument.HIToolboxVersion">569.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">1923</string>
+			<string key="NS.object.0">2182</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>NSCustomObject</string>
@@ -49,20 +49,21 @@
 							<object class="NSTableView" id="152760337">
 								<reference key="NSNextResponder" ref="854280561"/>
 								<int key="NSvFlags">4352</int>
-								<string key="NSFrameSize">{791, 112}</string>
+								<string key="NSFrameSize">{776, 112}</string>
 								<reference key="NSSuperview" ref="854280561"/>
 								<bool key="NSEnabled">YES</bool>
 								<object class="NSTableHeaderView" key="NSHeaderView" id="196530658">
 									<reference key="NSNextResponder" ref="449385644"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrameSize">{791, 17}</string>
+									<string key="NSFrameSize">{776, 17}</string>
 									<reference key="NSSuperview" ref="449385644"/>
 									<reference key="NSTableView" ref="152760337"/>
 								</object>
-								<object class="_NSCornerView" key="NSCornerView">
-									<nil key="NSNextResponder"/>
+								<object class="_NSCornerView" key="NSCornerView" id="733126655">
+									<reference key="NSNextResponder" ref="353318745"/>
 									<int key="NSvFlags">256</int>
 									<string key="NSFrame">{{777, 0}, {16, 17}}</string>
+									<reference key="NSSuperview" ref="353318745"/>
 								</object>
 								<array class="NSMutableArray" key="NSTableColumns">
 									<object class="NSTableColumn" id="581226439">
@@ -213,7 +214,7 @@
 									</object>
 									<object class="NSTableColumn" id="1053350319">
 										<string key="NSIdentifier">file</string>
-										<double key="NSWidth">74</double>
+										<double key="NSWidth">71</double>
 										<double key="NSMinWidth">50</double>
 										<double key="NSMaxWidth">300</double>
 										<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -244,7 +245,7 @@
 									</object>
 									<object class="NSTableColumn" id="916595755">
 										<string key="NSIdentifier">key</string>
-										<double key="NSWidth">73</double>
+										<double key="NSWidth">70</double>
 										<double key="NSMinWidth">50</double>
 										<double key="NSMaxWidth">300</double>
 										<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -278,7 +279,7 @@
 									</object>
 									<object class="NSTableColumn" id="978562790">
 										<string key="NSIdentifier">leftLanguage</string>
-										<double key="NSWidth">204</double>
+										<double key="NSWidth">201</double>
 										<double key="NSMinWidth">50</double>
 										<double key="NSMaxWidth">1000</double>
 										<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -310,7 +311,7 @@
 									</object>
 									<object class="NSTableColumn" id="974417554">
 										<string key="NSIdentifier">rightLanguage</string>
-										<double key="NSWidth">204</double>
+										<double key="NSWidth">201</double>
 										<double key="NSMinWidth">50</double>
 										<double key="NSMaxWidth">1000</double>
 										<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -342,7 +343,7 @@
 									</object>
 									<object class="NSTableColumn" id="2895384">
 										<string key="NSIdentifier">comment</string>
-										<double key="NSWidth">96</double>
+										<double key="NSWidth">93</double>
 										<double key="NSMinWidth">50</double>
 										<double key="NSMaxWidth">1000</double>
 										<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -432,7 +433,7 @@
 								<int key="NSTableViewGroupRowStyle">1</int>
 							</object>
 						</array>
-						<string key="NSFrame">{{1, 17}, {791, 112}}</string>
+						<string key="NSFrame">{{1, 17}, {776, 112}}</string>
 						<reference key="NSSuperview" ref="353318745"/>
 						<reference key="NSNextKeyView" ref="152760337"/>
 						<reference key="NSDocView" ref="152760337"/>
@@ -464,13 +465,14 @@
 						<array class="NSMutableArray" key="NSSubviews">
 							<reference ref="196530658"/>
 						</array>
-						<string key="NSFrame">{{1, 0}, {791, 17}}</string>
+						<string key="NSFrame">{{1, 0}, {776, 17}}</string>
 						<reference key="NSSuperview" ref="353318745"/>
 						<reference key="NSNextKeyView" ref="196530658"/>
 						<reference key="NSDocView" ref="196530658"/>
 						<reference key="NSBGColor" ref="791821191"/>
 						<int key="NScvFlags">4</int>
 					</object>
+					<reference ref="733126655"/>
 				</array>
 				<string key="NSFrameSize">{793, 130}</string>
 				<reference key="NSSuperview"/>
@@ -480,6 +482,7 @@
 				<reference key="NSHScroller" ref="372705112"/>
 				<reference key="NSContentView" ref="854280561"/>
 				<reference key="NSHeaderClipView" ref="449385644"/>
+				<reference key="NSCornerView" ref="733126655"/>
 				<bytes key="NSScrollAmts">QSAAAEEgAABBgAAAQYAAAA</bytes>
 			</object>
 			<object class="NSArrayController" id="711560889">

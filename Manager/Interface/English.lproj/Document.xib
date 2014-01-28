@@ -2,39 +2,39 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1050</int>
-		<string key="IBDocument.SystemVersion">13A569</string>
-		<string key="IBDocument.InterfaceBuilderVersion">4488.1</string>
-		<string key="IBDocument.AppKitVersion">1251</string>
-		<string key="IBDocument.HIToolboxVersion">694.00</string>
+		<string key="IBDocument.SystemVersion">11G63b</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2182</string>
+		<string key="IBDocument.AppKitVersion">1138.51</string>
+		<string key="IBDocument.HIToolboxVersion">569.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">4488.1</string>
+			<string key="NS.object.0">2182</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
-			<string>NSArrayController</string>
-			<string>NSBox</string>
-			<string>NSButton</string>
-			<string>NSButtonCell</string>
-			<string>NSCustomObject</string>
-			<string>NSCustomView</string>
 			<string>NSMatrix</string>
 			<string>NSMenu</string>
-			<string>NSMenuItem</string>
-			<string>NSObjectController</string>
-			<string>NSOutlineView</string>
-			<string>NSScrollView</string>
-			<string>NSScroller</string>
+			<string>NSButton</string>
+			<string>NSCustomObject</string>
+			<string>NSArrayController</string>
+			<string>NSTableView</string>
+			<string>NSCustomView</string>
+			<string>NSTextField</string>
 			<string>NSSearchField</string>
 			<string>NSSearchFieldCell</string>
-			<string>NSTableColumn</string>
-			<string>NSTableHeaderView</string>
-			<string>NSTableView</string>
-			<string>NSTextField</string>
+			<string>NSWindowTemplate</string>
 			<string>NSTextFieldCell</string>
 			<string>NSTreeController</string>
-			<string>NSUserDefaultsController</string>
+			<string>NSButtonCell</string>
+			<string>NSTableColumn</string>
+			<string>NSBox</string>
 			<string>NSView</string>
-			<string>NSWindowTemplate</string>
+			<string>NSOutlineView</string>
+			<string>NSObjectController</string>
+			<string>NSScrollView</string>
+			<string>NSUserDefaultsController</string>
+			<string>NSScroller</string>
+			<string>NSMenuItem</string>
+			<string>NSTableHeaderView</string>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -137,7 +137,6 @@
 							<int key="NSvFlags">289</int>
 							<string key="NSFrame">{{534, 270}, {95, 22}}</string>
 							<reference key="NSSuperview" ref="263884340"/>
-							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="288329048">
 								<int key="NSCellFlags">67108864</int>
@@ -157,14 +156,12 @@
 								<int key="NSPeriodicDelay">200</int>
 								<int key="NSPeriodicInterval">25</int>
 							</object>
-							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 						</object>
 						<object class="NSButton" id="154522647">
 							<reference key="NSNextResponder" ref="263884340"/>
 							<int key="NSvFlags">289</int>
 							<string key="NSFrame">{{434, 270}, {95, 22}}</string>
 							<reference key="NSSuperview" ref="263884340"/>
-							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="672825431">
 								<int key="NSCellFlags">-2080374784</int>
@@ -182,14 +179,12 @@
 								<int key="NSPeriodicDelay">200</int>
 								<int key="NSPeriodicInterval">25</int>
 							</object>
-							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 						</object>
 						<object class="NSButton" id="468435888">
 							<reference key="NSNextResponder" ref="263884340"/>
 							<int key="NSvFlags">289</int>
 							<string key="NSFrame">{{318, 270}, {95, 22}}</string>
 							<reference key="NSSuperview" ref="263884340"/>
-							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="308312957">
 								<int key="NSCellFlags">67108864</int>
@@ -205,14 +200,12 @@
 								<int key="NSPeriodicDelay">200</int>
 								<int key="NSPeriodicInterval">25</int>
 							</object>
-							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 						</object>
 						<object class="NSButton" id="457061706">
 							<reference key="NSNextResponder" ref="263884340"/>
 							<int key="NSvFlags">292</int>
 							<string key="NSFrame">{{92, 270}, {22, 22}}</string>
 							<reference key="NSSuperview" ref="263884340"/>
-							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="869689121">
 								<int key="NSCellFlags">67108864</int>
@@ -233,7 +226,6 @@
 								<int key="NSPeriodicDelay">200</int>
 								<int key="NSPeriodicInterval">25</int>
 							</object>
-							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 						</object>
 						<object class="NSScrollView" id="357879168">
 							<reference key="NSNextResponder" ref="263884340"/>
@@ -246,24 +238,21 @@
 										<object class="NSOutlineView" id="969700762">
 											<reference key="NSNextResponder" ref="46394344"/>
 											<int key="NSvFlags">4352</int>
-											<string key="NSFrameSize">{607, 215}</string>
+											<string key="NSFrameSize">{592, 215}</string>
 											<reference key="NSSuperview" ref="46394344"/>
-											<reference key="NSWindow"/>
 											<bool key="NSEnabled">YES</bool>
-											<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-											<bool key="NSControlAllowsExpansionToolTips">YES</bool>
 											<object class="NSTableHeaderView" key="NSHeaderView" id="389158982">
 												<reference key="NSNextResponder" ref="1025085148"/>
 												<int key="NSvFlags">256</int>
-												<string key="NSFrameSize">{607, 17}</string>
+												<string key="NSFrameSize">{592, 17}</string>
 												<reference key="NSSuperview" ref="1025085148"/>
-												<reference key="NSWindow"/>
 												<reference key="NSTableView" ref="969700762"/>
 											</object>
-											<object class="_NSCornerView" key="NSCornerView">
-												<nil key="NSNextResponder"/>
+											<object class="_NSCornerView" key="NSCornerView" id="907630877">
+												<reference key="NSNextResponder" ref="357879168"/>
 												<int key="NSvFlags">256</int>
 												<string key="NSFrame">{{593, 0}, {16, 17}}</string>
+												<reference key="NSSuperview" ref="357879168"/>
 											</object>
 											<array class="NSMutableArray" key="NSTableColumns">
 												<object class="NSTableColumn" id="301010660">
@@ -297,7 +286,7 @@
 														<object class="NSFont" key="NSSupport">
 															<string key="NSName">LucidaGrande</string>
 															<double key="NSSize">12</double>
-															<int key="NSfFlags">4883</int>
+															<int key="NSfFlags">16</int>
 														</object>
 														<reference key="NSControlView" ref="969700762"/>
 														<int key="NSButtonFlags">1211912448</int>
@@ -328,7 +317,7 @@
 														<int key="NSCellFlags2">2048</int>
 														<string key="NSContents">Bundles/Files</string>
 														<object class="NSFont" key="NSSupport" id="27">
-															<string key="NSName">.LucidaGrandeUI-Bold</string>
+															<string key="NSName">LucidaGrande-Bold</string>
 															<double key="NSSize">11</double>
 															<int key="NSfFlags">3357</int>
 														</object>
@@ -371,7 +360,7 @@
 												</object>
 												<object class="NSTableColumn" id="836612533">
 													<string key="NSIdentifier">change</string>
-													<double key="NSWidth">215</double>
+													<double key="NSWidth">200</double>
 													<double key="NSMinWidth">10</double>
 													<double key="NSMaxWidth">1000</double>
 													<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -476,9 +465,8 @@
 											<reference key="NSOutlineViewOutlineTableColumnKey" ref="278162502"/>
 										</object>
 									</array>
-									<string key="NSFrame">{{1, 17}, {607, 215}}</string>
+									<string key="NSFrame">{{1, 17}, {592, 215}}</string>
 									<reference key="NSSuperview" ref="357879168"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="969700762"/>
 									<reference key="NSDocView" ref="969700762"/>
 									<reference key="NSBGColor" ref="59570441"/>
@@ -490,9 +478,8 @@
 									<array class="NSMutableArray" key="NSSubviews">
 										<reference ref="389158982"/>
 									</array>
-									<string key="NSFrame">{{1, 0}, {607, 17}}</string>
+									<string key="NSFrame">{{1, 0}, {592, 17}}</string>
 									<reference key="NSSuperview" ref="357879168"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="389158982"/>
 									<reference key="NSDocView" ref="389158982"/>
 									<reference key="NSBGColor" ref="59570441"/>
@@ -501,10 +488,8 @@
 								<object class="NSScroller" id="601175301">
 									<reference key="NSNextResponder" ref="357879168"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrame">{{592, 17}, {16, 215}}</string>
+									<string key="NSFrame">{{593, 17}, {15, 215}}</string>
 									<reference key="NSSuperview" ref="357879168"/>
-									<reference key="NSWindow"/>
-									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									<reference key="NSTarget" ref="357879168"/>
 									<string key="NSAction">_doScroller:</string>
 									<double key="NSPercent">0.99537038803100586</double>
@@ -514,34 +499,29 @@
 									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{-100, -100}, {570, 15}}</string>
 									<reference key="NSSuperview" ref="357879168"/>
-									<reference key="NSWindow"/>
-									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									<int key="NSsFlags">1</int>
 									<reference key="NSTarget" ref="357879168"/>
 									<string key="NSAction">_doScroller:</string>
 									<double key="NSPercent">0.93289691209793091</double>
 								</object>
+								<reference ref="907630877"/>
 							</array>
 							<string key="NSFrame">{{20, 299}, {609, 233}}</string>
 							<reference key="NSSuperview" ref="263884340"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="46394344"/>
 							<int key="NSsFlags">133138</int>
 							<reference key="NSVScroller" ref="601175301"/>
 							<reference key="NSHScroller" ref="496174534"/>
 							<reference key="NSContentView" ref="46394344"/>
 							<reference key="NSHeaderClipView" ref="1025085148"/>
+							<reference key="NSCornerView" ref="907630877"/>
 							<bytes key="NSScrollAmts">QSAAAEEgAABBgAAAQYAAAA</bytes>
-							<double key="NSMinMagnification">0.25</double>
-							<double key="NSMaxMagnification">4</double>
-							<double key="NSMagnification">1</double>
 						</object>
 						<object class="NSButton" id="410925389">
 							<reference key="NSNextResponder" ref="263884340"/>
 							<int key="NSvFlags">292</int>
 							<string key="NSFrame">{{71, 270}, {22, 22}}</string>
 							<reference key="NSSuperview" ref="263884340"/>
-							<reference key="NSWindow"/>
 							<int key="NSTag">1</int>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="958552787">
@@ -568,7 +548,6 @@
 								<int key="NSPeriodicDelay">200</int>
 								<int key="NSPeriodicInterval">25</int>
 							</object>
-							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 						</object>
 						<object class="NSBox" id="678240267">
 							<reference key="NSNextResponder" ref="263884340"/>
@@ -589,24 +568,21 @@
 														<object class="NSTableView" id="957541193">
 															<reference key="NSNextResponder" ref="517252742"/>
 															<int key="NSvFlags">4352</int>
-															<string key="NSFrameSize">{194, 165}</string>
+															<string key="NSFrameSize">{183, 165}</string>
 															<reference key="NSSuperview" ref="517252742"/>
-															<reference key="NSWindow"/>
 															<bool key="NSEnabled">YES</bool>
-															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-															<bool key="NSControlAllowsExpansionToolTips">YES</bool>
 															<object class="NSTableHeaderView" key="NSHeaderView" id="394601560">
 																<reference key="NSNextResponder" ref="52756589"/>
 																<int key="NSvFlags">256</int>
-																<string key="NSFrameSize">{194, 17}</string>
+																<string key="NSFrameSize">{183, 17}</string>
 																<reference key="NSSuperview" ref="52756589"/>
-																<reference key="NSWindow"/>
 																<reference key="NSTableView" ref="957541193"/>
 															</object>
-															<object class="_NSCornerView" key="NSCornerView">
-																<nil key="NSNextResponder"/>
+															<object class="_NSCornerView" key="NSCornerView" id="671019958">
+																<reference key="NSNextResponder" ref="840685351"/>
 																<int key="NSvFlags">256</int>
 																<string key="NSFrame">{{184, 0}, {12, 17}}</string>
+																<reference key="NSSuperview" ref="840685351"/>
 															</object>
 															<array class="NSMutableArray" key="NSTableColumns">
 																<object class="NSTableColumn" id="84853234">
@@ -638,7 +614,7 @@
 																	<reference key="NSTableView" ref="957541193"/>
 																</object>
 																<object class="NSTableColumn" id="827986491">
-																	<double key="NSWidth">65</double>
+																	<double key="NSWidth">54.041019439697266</double>
 																	<double key="NSMinWidth">54.041019439697266</double>
 																	<double key="NSMaxWidth">65</double>
 																	<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -680,9 +656,8 @@
 															<int key="NSTableViewGroupRowStyle">1</int>
 														</object>
 													</array>
-													<string key="NSFrame">{{1, 17}, {194, 165}}</string>
+													<string key="NSFrame">{{1, 17}, {183, 165}}</string>
 													<reference key="NSSuperview" ref="840685351"/>
-													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="957541193"/>
 													<reference key="NSDocView" ref="957541193"/>
 													<reference key="NSBGColor" ref="59570441"/>
@@ -694,9 +669,8 @@
 													<array class="NSMutableArray" key="NSSubviews">
 														<reference ref="394601560"/>
 													</array>
-													<string key="NSFrame">{{1, 0}, {194, 17}}</string>
+													<string key="NSFrame">{{1, 0}, {183, 17}}</string>
 													<reference key="NSSuperview" ref="840685351"/>
-													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="394601560"/>
 													<reference key="NSDocView" ref="394601560"/>
 													<reference key="NSBGColor" ref="59570441"/>
@@ -705,10 +679,8 @@
 												<object class="NSScroller" id="131096307">
 													<reference key="NSNextResponder" ref="840685351"/>
 													<int key="NSvFlags">256</int>
-													<string key="NSFrame">{{181, 17}, {14, 165}}</string>
+													<string key="NSFrame">{{184, 17}, {11, 165}}</string>
 													<reference key="NSSuperview" ref="840685351"/>
-													<reference key="NSWindow"/>
-													<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 													<int key="NSsFlags">256</int>
 													<reference key="NSTarget" ref="840685351"/>
 													<string key="NSAction">_doScroller:</string>
@@ -719,27 +691,23 @@
 													<int key="NSvFlags">-2147483392</int>
 													<string key="NSFrame">{{-100, -100}, {248, 11}}</string>
 													<reference key="NSSuperview" ref="840685351"/>
-													<reference key="NSWindow"/>
-													<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 													<int key="NSsFlags">1</int>
 													<reference key="NSTarget" ref="840685351"/>
 													<string key="NSAction">_doScroller:</string>
 													<double key="NSPercent">0.99047619104385376</double>
 												</object>
+												<reference ref="671019958"/>
 											</array>
 											<string key="NSFrame">{{15, 43}, {196, 183}}</string>
 											<reference key="NSSuperview" ref="40062684"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="517252742"/>
 											<int key="NSsFlags">133138</int>
 											<reference key="NSVScroller" ref="131096307"/>
 											<reference key="NSHScroller" ref="440994904"/>
 											<reference key="NSContentView" ref="517252742"/>
 											<reference key="NSHeaderClipView" ref="52756589"/>
+											<reference key="NSCornerView" ref="671019958"/>
 											<bytes key="NSScrollAmts">QSAAAEEgAABBgAAAQYAAAA</bytes>
-											<double key="NSMinMagnification">0.25</double>
-											<double key="NSMaxMagnification">4</double>
-											<double key="NSMagnification">1</double>
 										</object>
 										<object class="NSBox" id="86309317">
 											<reference key="NSNextResponder" ref="40062684"/>
@@ -754,7 +722,6 @@
 															<int key="NSvFlags">268</int>
 															<string key="NSFrame">{{184, 51}, {80, 22}}</string>
 															<reference key="NSSuperview" ref="250227084"/>
-															<reference key="NSWindow"/>
 															<bool key="NSEnabled">YES</bool>
 															<object class="NSButtonCell" key="NSCell" id="504258146">
 																<int key="NSCellFlags">67108864</int>
@@ -772,14 +739,12 @@
 																<int key="NSPeriodicDelay">200</int>
 																<int key="NSPeriodicInterval">25</int>
 															</object>
-															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 														</object>
 														<object class="NSTextField" id="311411260">
 															<reference key="NSNextResponder" ref="250227084"/>
 															<int key="NSvFlags">268</int>
 															<string key="NSFrame">{{15, 100}, {75, 14}}</string>
 															<reference key="NSSuperview" ref="250227084"/>
-															<reference key="NSWindow"/>
 															<bool key="NSEnabled">YES</bool>
 															<object class="NSTextFieldCell" key="NSCell" id="863600703">
 																<int key="NSCellFlags">67108864</int>
@@ -795,15 +760,12 @@
 																</object>
 																<reference key="NSTextColor" ref="225102943"/>
 															</object>
-															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-															<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
 														</object>
 														<object class="NSTextField" id="258758739">
 															<reference key="NSNextResponder" ref="250227084"/>
 															<int key="NSvFlags">268</int>
 															<string key="NSFrame">{{18, 18}, {71, 14}}</string>
 															<reference key="NSSuperview" ref="250227084"/>
-															<reference key="NSWindow"/>
 															<bool key="NSEnabled">YES</bool>
 															<object class="NSTextFieldCell" key="NSCell" id="291197430">
 																<int key="NSCellFlags">67108864</int>
@@ -814,15 +776,12 @@
 																<reference key="NSBackgroundColor" ref="528388587"/>
 																<reference key="NSTextColor" ref="225102943"/>
 															</object>
-															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-															<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
 														</object>
 														<object class="NSTextField" id="382827588">
 															<reference key="NSNextResponder" ref="250227084"/>
 															<int key="NSvFlags">270</int>
 															<string key="NSFrame">{{91, 151}, {205, 17}}</string>
 															<reference key="NSSuperview" ref="250227084"/>
-															<reference key="NSWindow"/>
 															<bool key="NSEnabled">YES</bool>
 															<object class="NSTextFieldCell" key="NSCell" id="617910518">
 																<int key="NSCellFlags">67108928</int>
@@ -833,15 +792,12 @@
 																<reference key="NSBackgroundColor" ref="528388587"/>
 																<reference key="NSTextColor" ref="225102943"/>
 															</object>
-															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-															<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
 														</object>
 														<object class="NSTextField" id="793751977">
 															<reference key="NSNextResponder" ref="250227084"/>
 															<int key="NSvFlags">268</int>
 															<string key="NSFrame">{{33, 151}, {56, 14}}</string>
 															<reference key="NSSuperview" ref="250227084"/>
-															<reference key="NSWindow"/>
 															<bool key="NSEnabled">YES</bool>
 															<object class="NSTextFieldCell" key="NSCell" id="263748512">
 																<int key="NSCellFlags">67108864</int>
@@ -852,15 +808,12 @@
 																<reference key="NSBackgroundColor" ref="528388587"/>
 																<reference key="NSTextColor" ref="225102943"/>
 															</object>
-															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-															<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
 														</object>
 														<object class="NSButton" id="734061330">
 															<reference key="NSNextResponder" ref="250227084"/>
 															<int key="NSvFlags">268</int>
 															<string key="NSFrame">{{184, 14}, {80, 22}}</string>
 															<reference key="NSSuperview" ref="250227084"/>
-															<reference key="NSWindow"/>
 															<bool key="NSEnabled">YES</bool>
 															<object class="NSButtonCell" key="NSCell" id="502719482">
 																<int key="NSCellFlags">67108864</int>
@@ -878,14 +831,12 @@
 																<int key="NSPeriodicDelay">200</int>
 																<int key="NSPeriodicInterval">25</int>
 															</object>
-															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 														</object>
 														<object class="NSButton" id="515466203">
 															<reference key="NSNextResponder" ref="250227084"/>
 															<int key="NSvFlags">268</int>
 															<string key="NSFrame">{{94, 14}, {80, 22}}</string>
 															<reference key="NSSuperview" ref="250227084"/>
-															<reference key="NSWindow"/>
 															<bool key="NSEnabled">YES</bool>
 															<object class="NSButtonCell" key="NSCell" id="676265318">
 																<int key="NSCellFlags">67108864</int>
@@ -903,14 +854,12 @@
 																<int key="NSPeriodicDelay">200</int>
 																<int key="NSPeriodicInterval">25</int>
 															</object>
-															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 														</object>
 														<object class="NSBox" id="1067655405">
 															<reference key="NSNextResponder" ref="250227084"/>
 															<int key="NSvFlags">270</int>
 															<string key="NSFrame">{{94, 41}, {258, 5}}</string>
 															<reference key="NSSuperview" ref="250227084"/>
-															<reference key="NSWindow"/>
 															<string key="NSOffsets">{0, 0}</string>
 															<object class="NSTextFieldCell" key="NSTitleCell">
 																<int key="NSCellFlags">67108864</int>
@@ -933,7 +882,6 @@
 															<int key="NSvFlags">265</int>
 															<string key="NSFrame">{{249, 151}, {106, 17}}</string>
 															<reference key="NSSuperview" ref="250227084"/>
-															<reference key="NSWindow"/>
 															<bool key="NSEnabled">YES</bool>
 															<object class="NSTextFieldCell" key="NSCell" id="119118647">
 																<int key="NSCellFlags">67108928</int>
@@ -952,17 +900,13 @@
 																	</object>
 																</object>
 															</object>
-															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-															<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
 														</object>
 														<object class="NSMatrix" id="712562215">
 															<reference key="NSNextResponder" ref="250227084"/>
 															<int key="NSvFlags">268</int>
 															<string key="NSFrame">{{182, 80}, {161, 38}}</string>
 															<reference key="NSSuperview" ref="250227084"/>
-															<reference key="NSWindow"/>
 															<bool key="NSEnabled">YES</bool>
-															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 															<int key="NSNumRows">2</int>
 															<int key="NSNumCols">1</int>
 															<array class="NSMutableArray" key="NSCells">
@@ -1534,7 +1478,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 															<int key="NSvFlags">268</int>
 															<string key="NSFrame">{{94, 96}, {80, 22}}</string>
 															<reference key="NSSuperview" ref="250227084"/>
-															<reference key="NSWindow"/>
 															<bool key="NSEnabled">YES</bool>
 															<object class="NSButtonCell" key="NSCell" id="529868686">
 																<int key="NSCellFlags">67108864</int>
@@ -1552,14 +1495,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 																<int key="NSPeriodicDelay">200</int>
 																<int key="NSPeriodicInterval">25</int>
 															</object>
-															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 														</object>
 														<object class="NSButton" id="538534943">
 															<reference key="NSNextResponder" ref="250227084"/>
 															<int key="NSvFlags">268</int>
 															<string key="NSFrame">{{94, 51}, {80, 22}}</string>
 															<reference key="NSSuperview" ref="250227084"/>
-															<reference key="NSWindow"/>
 															<bool key="NSEnabled">YES</bool>
 															<object class="NSButtonCell" key="NSCell" id="877230739">
 																<int key="NSCellFlags">67108864</int>
@@ -1577,14 +1518,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 																<int key="NSPeriodicDelay">200</int>
 																<int key="NSPeriodicInterval">25</int>
 															</object>
-															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 														</object>
 														<object class="NSTextField" id="827466157">
 															<reference key="NSNextResponder" ref="250227084"/>
 															<int key="NSvFlags">268</int>
 															<string key="NSFrame">{{91, 133}, {132, 14}}</string>
 															<reference key="NSSuperview" ref="250227084"/>
-															<reference key="NSWindow"/>
 															<bool key="NSEnabled">YES</bool>
 															<object class="NSTextFieldCell" key="NSCell" id="643755591">
 																<int key="NSCellFlags">67108928</int>
@@ -1595,15 +1534,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 																<reference key="NSBackgroundColor" ref="528388587"/>
 																<reference key="NSTextColor" ref="669630250"/>
 															</object>
-															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-															<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
 														</object>
 														<object class="NSBox" id="403496584">
 															<reference key="NSNextResponder" ref="250227084"/>
 															<int key="NSvFlags">270</int>
 															<string key="NSFrame">{{94, 123}, {258, 5}}</string>
 															<reference key="NSSuperview" ref="250227084"/>
-															<reference key="NSWindow"/>
 															<string key="NSOffsets">{0, 0}</string>
 															<object class="NSTextFieldCell" key="NSTitleCell">
 																<int key="NSCellFlags">67108864</int>
@@ -1624,12 +1560,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 													</array>
 													<string key="NSFrame">{{1, 1}, {371, 181}}</string>
 													<reference key="NSSuperview" ref="86309317"/>
-													<reference key="NSWindow"/>
 												</object>
 											</array>
 											<string key="NSFrame">{{219, 43}, {373, 183}}</string>
 											<reference key="NSSuperview" ref="40062684"/>
-											<reference key="NSWindow"/>
 											<string key="NSOffsets">{0, 0}</string>
 											<object class="NSTextFieldCell" key="NSTitleCell">
 												<int key="NSCellFlags">67108864</int>
@@ -1666,7 +1600,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 											<int key="NSvFlags">292</int>
 											<string key="NSFrame">{{15, 14}, {22, 22}}</string>
 											<reference key="NSSuperview" ref="40062684"/>
-											<reference key="NSWindow"/>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSButtonCell" key="NSCell" id="505098501">
 												<int key="NSCellFlags">67108864</int>
@@ -1685,14 +1618,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 												<int key="NSPeriodicDelay">200</int>
 												<int key="NSPeriodicInterval">25</int>
 											</object>
-											<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 										</object>
 										<object class="NSButton" id="40174001">
 											<reference key="NSNextResponder" ref="40062684"/>
 											<int key="NSvFlags">292</int>
 											<string key="NSFrame">{{36, 14}, {22, 22}}</string>
 											<reference key="NSSuperview" ref="40062684"/>
-											<reference key="NSWindow"/>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSButtonCell" key="NSCell" id="453187143">
 												<int key="NSCellFlags">67108864</int>
@@ -1711,17 +1642,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 												<int key="NSPeriodicDelay">200</int>
 												<int key="NSPeriodicInterval">25</int>
 											</object>
-											<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 										</object>
 									</array>
 									<string key="NSFrame">{{1, 1}, {607, 241}}</string>
 									<reference key="NSSuperview" ref="678240267"/>
-									<reference key="NSWindow"/>
 								</object>
 							</array>
 							<string key="NSFrame">{{20, 20}, {609, 243}}</string>
 							<reference key="NSSuperview" ref="263884340"/>
-							<reference key="NSWindow"/>
 							<string key="NSOffsets">{0, 0}</string>
 							<object class="NSTextFieldCell" key="NSTitleCell">
 								<int key="NSCellFlags">67108864</int>
@@ -1750,7 +1678,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 							<int key="NSvFlags">289</int>
 							<string key="NSFrame">{{421, 275}, {5, 13}}</string>
 							<reference key="NSSuperview" ref="263884340"/>
-							<reference key="NSWindow"/>
 							<string key="NSOffsets">{0, 0}</string>
 							<object class="NSTextFieldCell" key="NSTitleCell">
 								<int key="NSCellFlags">67108864</int>
@@ -1773,7 +1700,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 							<int key="NSvFlags">292</int>
 							<string key="NSFrame">{{20, 270}, {22, 22}}</string>
 							<reference key="NSSuperview" ref="263884340"/>
-							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="346433342">
 								<int key="NSCellFlags">67108864</int>
@@ -1789,14 +1715,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 								<int key="NSPeriodicDelay">200</int>
 								<int key="NSPeriodicInterval">25</int>
 							</object>
-							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 						</object>
 						<object class="NSButton" id="687505541">
 							<reference key="NSNextResponder" ref="263884340"/>
 							<int key="NSvFlags">292</int>
 							<string key="NSFrame">{{41, 270}, {22, 22}}</string>
 							<reference key="NSSuperview" ref="263884340"/>
-							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="640125790">
 								<int key="NSCellFlags">67108864</int>
@@ -1812,14 +1736,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 								<int key="NSPeriodicDelay">200</int>
 								<int key="NSPeriodicInterval">25</int>
 							</object>
-							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 						</object>
 						<object class="NSButton" id="511438903">
 							<reference key="NSNextResponder" ref="263884340"/>
 							<int key="NSvFlags">292</int>
 							<string key="NSFrame">{{113, 270}, {22, 22}}</string>
 							<reference key="NSSuperview" ref="263884340"/>
-							<reference key="NSWindow"/>
 							<int key="NSTag">1</int>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="684657911">
@@ -1842,14 +1764,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 								<int key="NSPeriodicDelay">200</int>
 								<int key="NSPeriodicInterval">25</int>
 							</object>
-							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 						</object>
 						<object class="NSSearchField" id="1025989201">
 							<reference key="NSNextResponder" ref="263884340"/>
 							<int key="NSvFlags">292</int>
 							<string key="NSFrame">{{143, 271}, {131, 19}}</string>
 							<reference key="NSSuperview" ref="263884340"/>
-							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSSearchFieldCell" key="NSCell" id="142569306">
 								<int key="NSCellFlags">342884416</int>
@@ -1897,13 +1817,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 								<string key="NSRecentsAutosaveName"/>
 								<int key="NSMaximumRecents">255</int>
 							</object>
-							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-							<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
 						</object>
 					</array>
 					<string key="NSFrameSize">{649, 552}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {2560, 1418}}</string>
 				<string key="NSMinSize">{649, 570}</string>
@@ -2111,7 +2028,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 							<int key="NSPeriodicDelay">200</int>
 							<int key="NSPeriodicInterval">25</int>
 						</object>
-						<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 					</object>
 					<object class="NSButton" id="276533208">
 						<reference key="NSNextResponder" ref="821540055"/>
@@ -2134,7 +2050,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 							<int key="NSPeriodicDelay">200</int>
 							<int key="NSPeriodicInterval">25</int>
 						</object>
-						<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 					</object>
 					<object class="NSButton" id="602628978">
 						<reference key="NSNextResponder" ref="821540055"/>
@@ -2157,7 +2072,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bytes>
 							<int key="NSPeriodicDelay">200</int>
 							<int key="NSPeriodicInterval">25</int>
 						</object>
-						<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 					</object>
 				</array>
 				<string key="NSFrameSize">{386, 94}</string>
@@ -3988,14 +3902,9 @@ YW5kIGNoYW5nZWQgbGFuZ3VhZ2VzLg</string>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
-		<bool key="IBDocument.previouslyAttemptedUpgradeToXcode5">YES</bool>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.macosx</string>
 			<integer value="1050" key="NS.object.0"/>
-		</object>
-		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
-			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.macosx</string>
-			<real value="1060" key="NS.object.0"/>
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.InterfaceBuilder3</string>
