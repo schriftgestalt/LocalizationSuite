@@ -1,6 +1,0 @@
-
-/* Title of process display when autotranslating */
-"Autotranslating" = "Autotranslating…";
-
-/* Detail text of display while autotranslating */
-"AutotranslatingText" = "Finding translations for %d key objects.\nTarget Language: %@";

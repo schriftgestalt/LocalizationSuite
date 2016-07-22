@@ -1,7 +1,0 @@
-
-/* Format for small statictics */
-"Statistics" = "%d/%d keys visible";
-
-
-/* Format string presented while autotranslating */
-"AutotranslationProgress" = "Processing object “%@“…";

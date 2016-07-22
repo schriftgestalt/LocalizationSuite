@@ -1,8 +1,0 @@
-// comment
-"key" = "value2";
-"key2" = "value3";
-
-/* comment2 */
-"key3" = "value4";
-"key4" = "value5";
-"key5" = "value";
