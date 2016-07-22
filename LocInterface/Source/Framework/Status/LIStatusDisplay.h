@@ -6,17 +6,15 @@
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
-#import <RBSplitView/RBSplitView.h>
-
 /*!
  @abstract Shows a little modal panel with information about currently displayed content.
  */
 @interface LIStatusDisplay : NSObject
 {
-	IBOutlet RBSplitSubview	*calcStatsView;
+	IBOutlet NSView	*calcStatsView;
 	IBOutlet NSPanel		*panel;
-	IBOutlet RBSplitView	*splitView;
-	IBOutlet RBSplitSubview	*statsView;
+	IBOutlet NSView	*splitView;
+	IBOutlet NSView	*statsView;
 	
 	BOOL				_abortCalculation;
 	BOOL				_calculating;

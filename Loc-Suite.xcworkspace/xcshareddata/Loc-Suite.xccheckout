@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2ABD0D62-3C64-408B-A561-A959B4EDCEBE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Loc-Suite</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B8F48CE850A67A39AF57FD0389E599D5CDC20DD2</key>
+		<string>https://github.com/schriftgestalt/LocalizationSuite.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Loc-Suite.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B8F48CE850A67A39AF57FD0389E599D5CDC20DD2</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/schriftgestalt/LocalizationSuite.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B8F48CE850A67A39AF57FD0389E599D5CDC20DD2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B8F48CE850A67A39AF57FD0389E599D5CDC20DD2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LocalizationSuite</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -11,9 +11,6 @@
 		50069240128040F700470F3D /* LIPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5006923E128040F700470F3D /* LIPreferences.m */; };
 		50119054115242ED00E54DF2 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503FBCED1152358F00000BE1 /* Quartz.framework */; };
 		501190AA115242F200E54DF2 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503FBCC311516DAE00000BE1 /* QuickLook.framework */; };
-		50246C89112F15F9001DA94B /* RBSplitView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50246C88112F15F9001DA94B /* RBSplitView.framework */; };
-		50246C96112F161A001DA94B /* RBSplitView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50246C88112F15F9001DA94B /* RBSplitView.framework */; };
-		50246CAF112F1655001DA94B /* RBSplitView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50246C88112F15F9001DA94B /* RBSplitView.framework */; };
 		502E4EE1105142D3003528B8 /* LIContent.strings in Resources */ = {isa = PBXBuildFile; fileRef = 502E4EDF105142D3003528B8 /* LIContent.strings */; };
 		503FBB06115157D300000BE1 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 503FBB05115157D300000BE1 /* image.png */; };
 		503FBB6511515BAE00000BE1 /* LIAttachmentCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 503FBB6311515BAE00000BE1 /* LIAttachmentCell.h */; };
@@ -122,7 +119,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				50F20BBB0F8A2A7C00751057 /* LocInterface.framework in CopyFiles */,
-				50246C96112F161A001DA94B /* RBSplitView.framework in CopyFiles */,
 				504E09C5130059A9006B5F4B /* BlueLocalization.framework in CopyFiles */,
 				504E09C6130059A9006B5F4B /* NibPreview.framework in CopyFiles */,
 				504E09C7130059A9006B5F4B /* LocTools.framework in CopyFiles */,
@@ -137,7 +133,6 @@
 		089C1667FE841158C02AAC07 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = Resources/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5006923D128040F700470F3D /* LIPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIPreferences.h; sourceTree = "<group>"; };
 		5006923E128040F700470F3D /* LIPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIPreferences.m; sourceTree = "<group>"; };
-		50246C88112F15F9001DA94B /* RBSplitView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RBSplitView.framework; path = ../Shared/Frameworks/RBSplitView.framework; sourceTree = SOURCE_ROOT; };
 		502E4EE0105142D3003528B8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Resources/English.lproj/LIContent.strings; sourceTree = "<group>"; };
 		503FBB05115157D300000BE1 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image.png; path = Resources/image.png; sourceTree = "<group>"; };
 		503FBB6311515BAE00000BE1 /* LIAttachmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIAttachmentCell.h; sourceTree = "<group>"; };
@@ -239,7 +234,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50246CAF112F1655001DA94B /* RBSplitView.framework in Frameworks */,
 				50F209C40F88DA7000751057 /* Cocoa.framework in Frameworks */,
 				50F209C20F88DA7000751057 /* LocInterface.framework in Frameworks */,
 				501190AA115242F200E54DF2 /* QuickLook.framework in Frameworks */,
@@ -252,7 +246,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				503FBCAE11516D6A00000BE1 /* Cocoa.framework in Frameworks */,
-				50246C89112F15F9001DA94B /* RBSplitView.framework in Frameworks */,
 				503FBCC411516DAE00000BE1 /* QuickLook.framework in Frameworks */,
 				503FBCEE1152358F00000BE1 /* Quartz.framework in Frameworks */,
 				504E09BC13005996006B5F4B /* BlueLocalization.framework in Frameworks */,
@@ -291,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				50F209C30F88DA7000751057 /* Cocoa.framework */,
-				50246C88112F15F9001DA94B /* RBSplitView.framework */,
 				503FBCC311516DAE00000BE1 /* QuickLook.framework */,
 				503FBCED1152358F00000BE1 /* Quartz.framework */,
 				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
@@ -865,6 +857,7 @@
 				GCC_PREFIX_HEADER = Source/Framework/Other/LocInterface_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks/";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = LocInterface;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -937,6 +930,7 @@
 				GCC_PREFIX_HEADER = Source/Framework/Other/LocInterface_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks/";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = LocInterface;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;

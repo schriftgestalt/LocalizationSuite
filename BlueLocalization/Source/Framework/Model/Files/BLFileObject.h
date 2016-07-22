@@ -141,6 +141,8 @@ extern NSString *BLBackupAttachmentKey;
  */
 - (id)objectForKey:(NSString *)key;
 
+@property (nonatomic, readonly)NSString *key;
+
 /*!
  @abstract Returns the key object for a given key, creating it if wished.
  @discussion If create is YES and no key object with the given key can be found, a new one of the file's class of stored keys is being created and immediatelly added to the file's key objects.

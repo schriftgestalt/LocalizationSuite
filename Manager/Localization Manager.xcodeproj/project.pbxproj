@@ -45,7 +45,6 @@
 		5086C7BA0DFAF288009662A8 /* FileDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5086C7AC0DFAF288009662A8 /* FileDetail.xib */; };
 		5086C7BB0DFAF288009662A8 /* BundleDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5086C7AE0DFAF288009662A8 /* BundleDetail.xib */; };
 		5086C7BD0DFAF288009662A8 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5086C7B20DFAF288009662A8 /* Preferences.xib */; };
-		508C54741406703600D354A0 /* RBSplitView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 508C547214066FF000D354A0 /* RBSplitView.framework */; };
 		508C820D03EBDD80006B6ECB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 508C820B03EBDD80006B6ECB /* Localizable.strings */; };
 		50A6BD891131538E00928AD7 /* Manager.help in Resources */ = {isa = PBXBuildFile; fileRef = 50A6BD7E1131538E00928AD7 /* Manager.help */; };
 		50C3D10B0FC37358005AEF1A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C3D10A0FC37358005AEF1A /* Sparkle.framework */; };
@@ -72,7 +71,6 @@
 				504E0997130057B1006B5F4B /* LocInterface.framework in CopyFiles */,
 				50C3D1140FC37361005AEF1A /* Sparkle.framework in CopyFiles */,
 				504E098E1300578B006B5F4B /* BlueLocalization.framework in CopyFiles */,
-				508C54741406703600D354A0 /* RBSplitView.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +134,6 @@
 		5086C7AD0DFAF288009662A8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Interface/English.lproj/FileDetail.xib; sourceTree = "<group>"; };
 		5086C7AF0DFAF288009662A8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Interface/English.lproj/BundleDetail.xib; sourceTree = "<group>"; };
 		5086C7B30DFAF288009662A8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Interface/English.lproj/Preferences.xib; sourceTree = "<group>"; };
-		508C547214066FF000D354A0 /* RBSplitView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RBSplitView.framework; path = ../Shared/Frameworks/RBSplitView.framework; sourceTree = "<group>"; };
 		508C820C03EBDD80006B6ECB /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Interface/English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		50A6BD7E1131538E00928AD7 /* Manager.help */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Manager.help; path = Resources/Manager.help; sourceTree = "<group>"; };
 		50C3D10A0FC37358005AEF1A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../Shared/Frameworks/Sparkle.framework; sourceTree = SOURCE_ROOT; };
@@ -237,7 +234,6 @@
 				504E098F130057AB006B5F4B /* NibPreview.framework */,
 				504E0990130057AB006B5F4B /* LocTools.framework */,
 				504E0991130057AB006B5F4B /* LocInterface.framework */,
-				508C547214066FF000D354A0 /* RBSplitView.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -576,7 +572,7 @@
 		50B00B880881BF5300E66B22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
@@ -597,7 +593,7 @@
 		50B00B890881BF5300E66B22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: The Soulmen GBR";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

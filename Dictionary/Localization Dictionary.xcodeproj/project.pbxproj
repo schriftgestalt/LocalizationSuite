@@ -20,8 +20,6 @@
 		504E09AD1300580E006B5F4B /* NibPreview.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E09A513005805006B5F4B /* NibPreview.framework */; };
 		504E09AE1300580E006B5F4B /* LocTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E09A613005805006B5F4B /* LocTools.framework */; };
 		504E09AF1300580E006B5F4B /* LocInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E09A713005805006B5F4B /* LocInterface.framework */; };
-		5051146B11302BB9003426B1 /* RBSplitView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5051146A11302BB9003426B1 /* RBSplitView.framework */; };
-		5051147311302BBD003426B1 /* RBSplitView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5051146A11302BB9003426B1 /* RBSplitView.framework */; };
 		50823CB3110B1A0400E59A4A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50823CB1110B1A0400E59A4A /* MainMenu.xib */; };
 		50823CB7110B1A1300E59A4A /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50823CB5110B1A1300E59A4A /* Document.xib */; };
 		50823E23110B21CB00E59A4A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50823E22110B21CB00E59A4A /* Sparkle.framework */; };
@@ -43,7 +41,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5051147311302BBD003426B1 /* RBSplitView.framework in CopyFiles */,
 				50823E6F110B21D000E59A4A /* Sparkle.framework in CopyFiles */,
 				504E09AC1300580E006B5F4B /* BlueLocalization.framework in CopyFiles */,
 				504E09AD1300580E006B5F4B /* NibPreview.framework in CopyFiles */,
@@ -74,7 +71,6 @@
 		504E09A513005805006B5F4B /* NibPreview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NibPreview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		504E09A613005805006B5F4B /* LocTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LocTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		504E09A713005805006B5F4B /* LocInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LocInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5051146A11302BB9003426B1 /* RBSplitView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RBSplitView.framework; path = ../Shared/Frameworks/RBSplitView.framework; sourceTree = SOURCE_ROOT; };
 		50823CB2110B1A0400E59A4A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Interface/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		50823CB6110B1A1300E59A4A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Interface/English.lproj/Document.xib; sourceTree = "<group>"; };
 		50823E22110B21CB00E59A4A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../Shared/Frameworks/Sparkle.framework; sourceTree = SOURCE_ROOT; };
@@ -94,7 +90,6 @@
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
 				50823E23110B21CB00E59A4A /* Sparkle.framework in Frameworks */,
-				5051146B11302BB9003426B1 /* RBSplitView.framework in Frameworks */,
 				501195BE11529CDF00E54DF2 /* Quartz.framework in Frameworks */,
 				504E09A813005805006B5F4B /* BlueLocalization.framework in Frameworks */,
 				504E09A913005805006B5F4B /* NibPreview.framework in Frameworks */,
@@ -167,7 +162,6 @@
 			children = (
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
 				50823E22110B21CB00E59A4A /* Sparkle.framework */,
-				5051146A11302BB9003426B1 /* RBSplitView.framework */,
 				501195BD11529CDF00E54DF2 /* Quartz.framework */,
 				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
 				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,

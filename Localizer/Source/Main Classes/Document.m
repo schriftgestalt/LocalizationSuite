@@ -9,7 +9,6 @@
 #import "Document.h"
 
 #import "Editor.h"
-#import "TitleSplitView.h"
 
 #import <objc/message.h>
 
@@ -52,12 +51,7 @@ typedef enum {
 
 + (BOOL)autosavesInPlace
 {
-	return YES;
-}
-
-+ (BOOL)preservesVersions
-{
-	return YES;
+	return NO;
 }
 
 - (id)init
@@ -623,11 +617,6 @@ typedef enum {
 }
 
 #pragma mark -
-
-- (NSString *)splitView:(TitleSplitView *)splitView userInfoForSubviewWithIdentifier:(NSString *)identifier
-{
-	return nil;
-}
 
 @end
 

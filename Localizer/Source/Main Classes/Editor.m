@@ -68,6 +68,7 @@ NSColor *BackgroundColorNotEditable;
 
 - (void)setUp
 {
+	[[leftEditor window] setBackgroundColor:[NSColor whiteColor]];
 	[document addObserver:self forKeyPath:@"selectedObject" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
 	[document addObserver:self forKeyPath:@"preferences.showTranslationProblems" options:0 context:@"ERROR"];
 	
@@ -76,6 +77,18 @@ NSColor *BackgroundColorNotEditable;
 	
     [leftEditor bind:@"backgroundColor" toObject:self withKeyPath:@"leftBackgroundColor" options:nil];
     [rightEditor bind:@"backgroundColor" toObject:self withKeyPath:@"rightBackgroundColor" options:nil];
+	
+	[leftEditor setTextContainerInset:NSMakeSize(25, 6)];
+	[rightEditor setTextContainerInset:NSMakeSize(10, 6)];
+	NSRect scrollerFrame = [[leftEditor enclosingScrollView] frame];
+	NSRect textFrame = [leftEditor frame];
+	textFrame.size.width = NSWidth(scrollerFrame);
+	[leftEditor setFrame:textFrame];
+	
+	scrollerFrame = [[rightEditor enclosingScrollView] frame];
+	textFrame = [rightEditor frame];
+	textFrame.size.width = NSWidth(scrollerFrame);
+	[rightEditor setFrame:textFrame];
 }
 
 - (void)cleanUp

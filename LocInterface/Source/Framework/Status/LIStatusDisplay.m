@@ -369,54 +369,6 @@ id __sharedStatusDisplay;
 	
 	// Load Panel
 	[NSBundle loadNibNamed:LIStatusDisplayNibName owner:self];
-	[splitView adjustSubviews];
-}
-
-- (void)willAdjustSubviews:(RBSplitView *)sender
-{
-	// Calculate height
-	NSRect viewFrame = [splitView frame];
-	CGFloat oldHeight = viewFrame.size.height;
-	
-	viewFrame.size.height = -[splitView dividerThickness];
-	for (RBSplitSubview *subview in [splitView subviews]) {
-		if (![subview isHidden])
-			viewFrame.size.height += [subview maxDimension] + [splitView dividerThickness];
-	}
-	
-	viewFrame.origin.y += oldHeight - viewFrame.size.height;
-	
-	// Update if the frame changes
-	if (!NSEqualRects([splitView frame], viewFrame)) {
-		[splitView setFrame: viewFrame];
-		
-		// Calculate new window frame
-		NSRect newFrame = [splitView frame];
-		newFrame = [panel frameRectForContentRect: newFrame];
-		
-		NSRect windowFrame = [panel frame];
-		windowFrame.origin.y += windowFrame.size.height - newFrame.size.height;
-		windowFrame.size.height = newFrame.size.height;
-		
-		// Calculate min adn max size
-		NSSize minSize = [panel minSize];
-		minSize.height = windowFrame.size.height;
-		
-		NSSize maxSize = [panel maxSize];
-		maxSize.height = windowFrame.size.height;
-		
-		// Resize with animation if visible
-		if ([panel isVisible]) {
-			[[NSAnimationContext currentContext] setDuration: 0.2];
-			[[panel animator] setMinSize: minSize];
-			[[panel animator] setMaxSize: maxSize];
-			[[panel animator] setFrame:windowFrame display:YES];
-		} else {
-			[panel setMinSize: minSize];
-			[panel setMaxSize: maxSize];
-			[panel setFrame:windowFrame display:YES];
-		}
-	}
 }
 
 @synthesize visibility=_visibility;

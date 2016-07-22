@@ -357,7 +357,7 @@
 			name = "NibPreview Tests";
 			productName = "Unit Tests";
 			productReference = 503E127D1404DA30009FA279 /* NibPreview Tests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		50CE95AC0F5BC41500026BB5 /* NibPreview */ = {
 			isa = PBXNativeTarget;
@@ -383,7 +383,8 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastTestingUpgradeCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Localization Suite";
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NibPreview" */;
@@ -517,6 +518,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "Resources/Unit Tests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = org.locsuite.nibpreview.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -541,6 +543,7 @@
 				GCC_PREFIX_HEADER = Source/Tests/UnitTests_Prefix.h;
 				INFOPLIST_FILE = "Resources/Unit Tests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = org.locsuite.nibpreview.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -565,6 +568,7 @@
 				INFOPLIST_FILE = "Resources/NibPreview-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks/";
 				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks;
+				PRODUCT_BUNDLE_IDENTIFIER = org.locsuite.nibpreview;
 				PRODUCT_NAME = NibPreview;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -589,6 +593,7 @@
 				INFOPLIST_FILE = "Resources/NibPreview-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks/";
 				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks;
+				PRODUCT_BUNDLE_IDENTIFIER = org.locsuite.nibpreview;
 				PRODUCT_NAME = NibPreview;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -604,10 +609,15 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -628,9 +638,13 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;

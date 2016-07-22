@@ -68,11 +68,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>12.10</string>
+	<string>12.11</string>
 	<key>CFBundleSignature</key>
 	<string>LOCM</string>
 	<key>CFBundleVersion</key>
-	<string>1FF60.002</string>
+	<string>1FF61.002</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
