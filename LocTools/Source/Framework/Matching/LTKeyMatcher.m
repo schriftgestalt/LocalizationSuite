@@ -13,11 +13,8 @@
 
 + (NSString *)baseLanguageForLanguage:(NSString *)language
 {
-	static NSCharacterSet *splitter = nil;
-	if (!splitter)
-		splitter = [NSCharacterSet characterSetWithCharactersInString: @"-_"];
-	
-	return [[language componentsSeparatedByCharactersInSet: splitter] objectAtIndex: 0];
+	NSCharacterSet *splitter = [NSCharacterSet characterSetWithCharactersInString: @"-_"];
+	return [[language componentsSeparatedByCharactersInSet: splitter] firstObject];
 }
 
 - (id)init
