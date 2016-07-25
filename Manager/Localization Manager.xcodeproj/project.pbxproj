@@ -377,7 +377,6 @@
 				8D15AC300486D014006FF6A4 /* Sources */,
 				8D15AC330486D014006FF6A4 /* Frameworks */,
 				50F03C780FA63C6100FDB765 /* CopyFiles */,
-				5017CC95072C1375002C21A7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -446,22 +445,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5017CC95072C1375002C21A7 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\necho \"Updating build number\"\n\ncd \"$SRCROOT/../Shared/Tools\"\n./buildnumber -d \"$BUILD_DIR/$INFOPLIST_PATH\"\n./buildnumber -d \"$PRODUCT_SETTINGS_PATH\"\n\necho \"Done\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D15AC300486D014006FF6A4 /* Sources */ = {
@@ -582,6 +565,7 @@
 				GCC_PREFIX_HEADER = "Source/Other/Localization Manager_Prefix.pch";
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks/;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_NAME = "Localization Manager";
 				PROVISIONING_PROFILE = "";
@@ -603,6 +587,7 @@
 				GCC_PREFIX_HEADER = "Source/Other/Localization Manager_Prefix.pch";
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks/;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_NAME = "Localization Manager";
 				PROVISIONING_PROFILE = "";

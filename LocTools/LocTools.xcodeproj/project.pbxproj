@@ -381,7 +381,7 @@
 			name = "LocTools Tests";
 			productName = "Unit Tests";
 			productReference = 503E12591404D62E009FA279 /* LocTools Tests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		8DC2EF4F0486A6940098B216 /* LocTools */ = {
 			isa = PBXNativeTarget;
@@ -409,6 +409,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				LastTestingUpgradeCheck = 0720;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Localization Suite";
 			};

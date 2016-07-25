@@ -37,12 +37,7 @@ NSString *kStringsPathExtension             = @"strings";
 
 + (BOOL)autosavesInPlace
 {
-	return YES;
-}
-
-+ (BOOL)preservesVersions
-{
-	return YES;
+	return NO;
 }
 
 - (id)init
