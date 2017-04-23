@@ -8,10 +8,10 @@
 // $Id$
 
 typedef void (^NSAlertSheetCompletionHandler)(NSInteger result);
-
+/*
 @interface NSAlert (Extensions)
 - (void)beginSheetModalForWindow:(NSWindow *)window completionHandler:(NSAlertSheetCompletionHandler)completionHandler;
 @end
-
+*/
 // Runs an NSAlert with an optional completion block. The returnCode passed to the block is based on the NSAlertFirstButtonReturn+N convention.
 extern void NSBeginAlertSheetWithBlock(NSString *title, NSString *defaultButton, NSString *alternateButton, NSString *otherButton, NSWindow *docWindow, NSAlertSheetCompletionHandler completionHandler, NSString *msgFormat, ...);

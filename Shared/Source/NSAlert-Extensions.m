@@ -50,7 +50,7 @@
 }
 
 @end
-
+/*
 @implementation NSAlert (Extensions)
 
 - (void)beginSheetModalForWindow:(NSWindow *)window completionHandler:(NSAlertSheetCompletionHandler)completionHandler;
@@ -60,7 +60,7 @@
 }
 
 @end
-
+*/
 
 
 void NSBeginAlertSheetWithBlock(NSString *title, NSString *defaultButton, NSString *alternateButton, NSString *otherButton, NSWindow *docWindow, NSAlertSheetCompletionHandler completionHandler, NSString *msgFormat, ...)
