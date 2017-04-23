@@ -30,7 +30,7 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
  Version 4:		Switched to bundle-based database files.
  Version 5:		Added per-user preferences.
  */
-#define BLDatabaseFileVersionNumber    5
+#define BLDatabaseFileVersionNumber    6
 
 
 @interface BLDatabaseFile (BLFileInternal)
@@ -98,15 +98,18 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 								[NSNumber numberWithBool: (options & BLFileActiveObjectsOnlyOption) != 0], BLActiveObjectsOnlySerializationKey,
 								[NSNumber numberWithBool: (options & BLFileClearChangedValuesOption) != 0], BLClearChangeInformationSerializationKey,
 								[properties objectForKey: BLLanguagesPropertyName], BLLanguagesSerializationKey,
+								[NSNumber numberWithBool: YES], BLClearAllBackupsSerializationKey,
 								nil];
 	
 	NSDictionary *resources = [NSDictionary dictionary];
     NSArray *archivedBundles = [BLPropertyListSerializer serializeObject:bundles withAttributes:attributes outWrappers:&resources];
-    
+	
+	NSFileWrapper *wrapper = nil;
 	// Create Resources directory
-	NSFileWrapper *wrapper = [[NSFileWrapper alloc] initDirectoryWithFileWrappers: resources];
-    [fileWrappers setObject:wrapper forKey:BLDatabaseFileResourcesDirectory];
-    
+	if (![attributes[BLClearAllBackupsSerializationKey] boolValue]) {
+		NSFileWrapper *wrapper = [[NSFileWrapper alloc] initDirectoryWithFileWrappers: resources];
+		[fileWrappers setObject:wrapper forKey:BLDatabaseFileResourcesDirectory];
+	}
     // Create Contents.plist
 	NSMutableDictionary *contents = [NSMutableDictionary dictionary];
 	[contents setObject:archivedBundles forKey:BLFileBundlesKey];
@@ -421,12 +424,10 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 		NSMutableSet *languages = [NSMutableSet set];
 		for (BLKeyObject *key in self.objects)
 			[languages addObjectsFromArray: [key languages]];
-		for (NSString *lang in languages)
-			[self setVersion:1 forLanguage:lang];
 		
 		// Set the attached backup
 		if (wrapper)
-			[self setAttachedObject:wrapper forKey:BLBackupAttachmentKey version:1];
+			[self setAttachedObject:wrapper forKey:BLBackupAttachmentKey];
 	}
     
     return self;

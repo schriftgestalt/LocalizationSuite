@@ -40,10 +40,9 @@
 		return NO;
     
 	// Check for reference file
-	NSUInteger referenceVersion = [object versionForLanguage: referenceLanguage];
-	NSString *referencePath = [[path stringByDeletingPathExtension] stringByAppendingFormat: @".r%lu.%@", referenceVersion, [path pathExtension]];
+	NSString *referencePath = [[path stringByDeletingPathExtension] stringByAppendingFormat: @".r.%@", [path pathExtension]];
 	
-	NSFileWrapper *reference = [object attachedObjectForKey:BLBackupAttachmentKey version:referenceVersion];
+	NSFileWrapper *reference = [object attachedObjectForKey:BLBackupAttachmentKey];
 	[reference writeToFile:referencePath atomically:YES updateFilenames:NO];
 	
 	// Try to get the encoding of the reference file

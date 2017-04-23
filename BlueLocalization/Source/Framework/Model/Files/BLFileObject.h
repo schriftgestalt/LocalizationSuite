@@ -22,15 +22,14 @@ extern NSString *BLBackupAttachmentKey;
  */
 @interface BLFileObject : BLObject
 {
-	NSDictionary		*_attachments;
+	NSDictionary			*_attachments;
     BLBundleObject		*_bundleObject;
     NSString			*_customType;
     NSString			*_hashValue;
     NSArray				*_objects;
     NSArray				*_oldObjects;
     NSString			*_path;
-	NSDictionary		*_snapshots;
-	NSDictionary		*_versions;
+	NSDictionary			*_snapshots;
 }
 
 /*!
@@ -174,26 +173,6 @@ extern NSString *BLBackupAttachmentKey;
  */
 - (NSArray *)snapshotForLanguage:(NSString *)language;
 
-
-/*!
- @abstract A version number for a given language.
- @discussion Version numbers allow versioned access to the attached objects. If no version has been set previously, the highest version available will be returned. Thus, passing nil as language will always return the largest version number.
- */
-- (NSUInteger)versionForLanguage:(NSString *)language;
-
-/*!
- @abstract Sets a version number for a given language.
- @discussion See -versionForLanguage: for details. Setting zero resets the version of the language.
- */
-- (void)setVersion:(NSUInteger)version forLanguage:(NSString *)language;
-
-/*!
- @abstract Increases the version of the given language to be the maximum.
- @discussion This method will change the version of the given language to be at least 1 larger than the version of every other language. All attached objects for the version of the language will also be referencd from the new version, nothing is copied. However, this bump is performed only if the language does not yet fulfill the criteria. This method returns YES, if the version any change was done, and NO otherwise.
- */
-- (BOOL)offsetVersionForLanguageIfNeeded:(NSString *)language;
-
-
 /*!
  @abstract Convenience accessor to the newest version of the attached object.
  @discussion Forwards to -attachedObjectForKey:version: with the newest version available amongst all langugages.
@@ -201,16 +180,10 @@ extern NSString *BLBackupAttachmentKey;
 - (id)attachedObjectForKey:(NSString *)key;
 
 /*!
- @abstract An attached object for a key and a version number.
- @discussion This mechanism allows the versioned storage of attached objects. Only objects whose version number exists in the array of version for languages will be persisted. The whole system basically is a versioned storage for realated objects that need not to be known but are important for some functions. Versions are introduced to cope with different versions of persisted files per language.
- */
-- (id)attachedObjectForKey:(NSString *)key version:(NSUInteger)version;
-
-/*!
  @abstract Stores an attached object for a given key and version number.
  @discussion See -attachedObjectForKey:version: for details.
  */
-- (void)setAttachedObject:(id)object forKey:(NSString *)key version:(NSUInteger)version;
+- (void)setAttachedObject:(id)object forKey:(NSString *)key;
 
 @end
 

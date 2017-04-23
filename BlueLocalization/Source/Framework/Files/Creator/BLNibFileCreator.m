@@ -63,10 +63,9 @@ NSString *BLNibFileCreatorIBLoadedPluginIdentifiersKey	= @"IBLoadedPluginIdentif
 	
 	// REFERENCE FILE
     // Version and path of the original file
-	NSUInteger referenceVersion = [object versionForLanguage: referenceLanguage];
-	NSString *referencePath = [[targetPath stringByDeletingPathExtension] stringByAppendingFormat: @".r%lu.%@", referenceVersion, [targetPath pathExtension]];
+	NSString *referencePath = [[targetPath stringByDeletingPathExtension] stringByAppendingFormat: @".r.%@", [targetPath pathExtension]];
 	
-	NSFileWrapper *reference = [object attachedObjectForKey:BLBackupAttachmentKey version:referenceVersion];
+	NSFileWrapper *reference = [object attachedObjectForKey:BLBackupAttachmentKey];
 	[reference writeToFile:referencePath atomically:YES updateFilenames:NO];
 	
 	if (![fileManager fileExistsAtPath: referencePath]) {
@@ -77,8 +76,7 @@ NSString *BLNibFileCreatorIBLoadedPluginIdentifiersKey	= @"IBLoadedPluginIdentif
 	
 	// PREVIOUS
     // Version and path of the previous original file
-	NSUInteger previousVersion = [object versionForLanguage: language];
-	NSString *previousPath = [[targetPath stringByDeletingPathExtension] stringByAppendingFormat: @".p%lu.%@", previousVersion, [targetPath pathExtension]];
+	NSString *previousPath = [[targetPath stringByDeletingPathExtension] stringByAppendingFormat: @".p.%@", [targetPath pathExtension]];
     
     // Temporary path for the result file
     NSString *tempPath = [[targetPath stringByDeletingPathExtension] stringByAppendingFormat: @".new.%@", [targetPath pathExtension]];
@@ -91,7 +89,7 @@ NSString *BLNibFileCreatorIBLoadedPluginIdentifiersKey	= @"IBLoadedPluginIdentif
 	// Incremental localization
 	if (![self optionIsActive: BLFileCreatorReinject] && ![language isEqual: referenceLanguage] && [fileManager fileExistsAtPath: targetPath]) {
 		// Write previous file
-		NSFileWrapper *previous = [object attachedObjectForKey:BLBackupAttachmentKey version:previousVersion];
+		NSFileWrapper *previous = [object attachedObjectForKey:BLBackupAttachmentKey];
 		[previous writeToFile:previousPath atomically:YES updateFilenames:NO];
 		
 		if (![fileManager fileExistsAtPath: previousPath])
@@ -159,7 +157,7 @@ NSString *BLNibFileCreatorIBLoadedPluginIdentifiersKey	= @"IBLoadedPluginIdentif
 	[fileManager removeItemAtPath:referencePath error:NULL];
 	
 	// update version number
-	[object setVersion:referenceVersion forLanguage:language];
+	//[object setVersion:referenceVersion forLanguage:language];
     
 	BLLogEndGroup();
     return YES;

@@ -301,15 +301,12 @@ NSMutableDictionary *__fileInterpreterClasses	= nil;
 			_fileObject.referenceChanged = YES;
 		}
 		
-		// Create backup if changed or not present
-		NSUInteger version = [_fileObject versionForLanguage: _language];
 		
 		if ([self optionIsActive: BLFileInterpreterReferenceImportCreatesBackup]
-			&& (![newHash isEqual: oldHash] || ![_fileObject attachedObjectForKey:BLBackupAttachmentKey version:version])) {
+			&& (![newHash isEqual: oldHash] || ![_fileObject attachedObjectForKey:BLBackupAttachmentKey])) {
 			NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithPath: path];
 			
-			[_fileObject offsetVersionForLanguageIfNeeded: _language];
-			[_fileObject setAttachedObject:wrapper forKey:BLBackupAttachmentKey version:[_fileObject versionForLanguage: _language]];
+			[_fileObject setAttachedObject:wrapper forKey:BLBackupAttachmentKey];
 		}
 	}
 	

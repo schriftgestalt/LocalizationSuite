@@ -71,7 +71,6 @@ NSMutableDictionary *__fileObjectClasses = nil;
 		_oldObjects = [[NSMutableArray alloc] init];
 		_path = [[NSString alloc] init];
 		_snapshots = [[NSMutableDictionary alloc] init];
-		_versions = [[NSMutableDictionary alloc] init];
 	}
     
     return self;
@@ -164,19 +163,17 @@ NSMutableDictionary *__fileObjectClasses = nil;
 		
 		for (NSString *key in attachments) {
 			NSDictionary *dict = [attachments objectForKey: key];
-			NSMutableDictionary *newDict = [NSMutableDictionary dictionary];
-			
-			for (NSString *vers in dict) {
-				id object = [dict objectForKey: vers];
-				
-				if ([object isKindOfClass: [BLWrapperHandle class]])
-					object = [object wrapper];
-				
-				if (object)
-					[newDict setObject:object forKey:vers];
+			id object = dict;
+			if ([object isKindOfClass:[NSDictionary class]]) { // reading old files
+				NSString *vers = [[dict allKeys] lastObject];
+				object = [dict objectForKey: vers];
 			}
-			
-			[newAttachments setObject:newDict forKey:key];
+			if ([object isKindOfClass: [BLWrapperHandle class]]) {
+				object = [object wrapper];
+			}
+			if (object) {
+				[newAttachments setObject:object forKey:key];
+			}
 		}
 		
 		// Set properties
@@ -187,7 +184,6 @@ NSMutableDictionary *__fileObjectClasses = nil;
 		[self setHashValue: [plist objectForKey: BLFileHashKey]];
 		[self setPath: [plist objectForKey: BLFileNameKey]];
 		
-		_versions = [[plist objectForKey: BLFileVersionsKey] copy];
 		_attachments = [newAttachments copy];
 		_snapshots = [[plist objectForKey: BLFileSnapshotsKey] copy];
 		
@@ -200,7 +196,6 @@ NSMutableDictionary *__fileObjectClasses = nil;
 - (NSDictionary *)propertyListWithAttributes:(NSDictionary *)attributes
 {
 	BOOL activeOnly = [[attributes objectForKey: BLActiveObjectsOnlySerializationKey] boolValue];
-	BOOL clearChanges = [[attributes objectForKey: BLClearChangeInformationSerializationKey] boolValue];
 	BOOL noBackups = [[attributes objectForKey: BLClearAllBackupsSerializationKey] boolValue];
 	
     // Serialize objects
@@ -212,40 +207,24 @@ NSMutableDictionary *__fileObjectClasses = nil;
 	
 	// Prepare attachments
 	NSMutableDictionary *attachments = [NSMutableDictionary dictionary];
-	NSArray *allVersions = [_versions allValues];
-	
-	// Clearing change information - only export the newest version!
-	if (clearChanges && [allVersions count])
-		allVersions = [NSArray arrayWithObject: [NSString stringWithFormat: @"%lu", [self versionForLanguage: nil]]];
-	
+
 	for (NSString *key in _attachments) {
-		NSDictionary *dict = [_attachments objectForKey: key];
-		NSMutableDictionary *newDict = [NSMutableDictionary dictionary];
-		
+		id object = [_attachments objectForKey: key];
+		if ([object isKindOfClass:[NSDictionary class]]) {
+			object = [[object allValues] firstObject];
+		}
 		// Skip backups if requested
 		if (noBackups && [key isEqual: BLBackupAttachmentKey])
 			continue;
 		
-		// Encode each version
-		for (NSString *vers in dict) {
-			id object = [dict objectForKey: vers];
-			
-			// Skip no longer referenced attachments
-			if (![allVersions containsObject: vers])
-				continue;
-			
-			// Encapsultate file wrappers
-			if ([object isKindOfClass: [NSFileWrapper class]]) {
-				NSString *prefPath = [[self bundleObject] name];
-				prefPath = [prefPath stringByAppendingPathComponent: [[self name] stringByDeletingPathExtension]];
-				prefPath = [prefPath stringByAppendingPathComponent: vers];
-				object = [BLWrapperHandle handleWithWrapper:object forPreferredPath:prefPath];
-			}
-			
-			[newDict setObject:object forKey:vers];
+		// Encapsultate file wrappers
+		if ([object isKindOfClass: [NSFileWrapper class]]) {
+			NSString *prefPath = [[self bundleObject] name];
+			prefPath = [prefPath stringByAppendingPathComponent: [[self name] stringByDeletingPathExtension]];
+			object = [BLWrapperHandle handleWithWrapper:object forPreferredPath:prefPath];
 		}
 		
-		[attachments setObject:newDict forKey:key];
+		[attachments setObject:object forKey:key];
 	}
     
 	// Create the dictionary
@@ -261,10 +240,9 @@ NSMutableDictionary *__fileObjectClasses = nil;
     if ([self customFileType])
         [dict setObject:[self customFileType] forKey:BLFileCustomTypeKey];
 	
-	[dict setObject:_versions forKey:BLFileVersionsKey];
 	[dict setObject:attachments forKey:BLFileAttachmentsKey];
 	
-	if (!noBackups)
+	if (!noBackups && _snapshots)
 		[dict setObject:_snapshots forKey:BLFileSnapshotsKey];
     
     return dict;
@@ -487,81 +465,22 @@ NSMutableDictionary *__fileObjectClasses = nil;
 
 - (NSUInteger)versionForLanguage:(NSString *)language
 {
-	NSUInteger version;
-	
-	version = [[_versions objectForKey: language] integerValue];
-	if (version > 0)
-		return version;
-	
-	for (NSString *number in [_versions allValues]) {
-		NSUInteger n = [number integerValue];
-		version = (n > version) ? n : version;
-	}
-	
-	return version;
-}
-
-- (void)setVersion:(NSUInteger)version forLanguage:(NSString *)language
-{
-	NSMutableDictionary *mutableVersions = [_versions mutableCopy];
-	
-	if (version > 0)
-		[mutableVersions setObject:[NSString stringWithFormat: @"%lu", version] forKey:language];
-	else
-		[mutableVersions removeObjectForKey: language];
-	
-	_versions = [mutableVersions copy];
-}
-
-- (BOOL)offsetVersionForLanguageIfNeeded:(NSString *)language
-{
-	NSUInteger origVersion = [self versionForLanguage: language];
-	NSUInteger maxVersion = 0;
-	
-	// Find the second-largest version
-	for (NSString *aLanguage in [_versions allKeys]) {
-		if ([aLanguage isEqual: language])
-			continue;
-		
-		NSUInteger otherVersion = [self versionForLanguage: aLanguage];
-		maxVersion = (otherVersion > maxVersion) ? otherVersion : maxVersion;
-	}
-	
-	// Check wether increase is needed
-	if (origVersion > maxVersion)
-		return NO;
-	
-	// Calculte new version
-	NSUInteger newVersion = maxVersion + 1;
-	[self setVersion:newVersion forLanguage:language];
-	
-	// Re-Reference objects
-	for (NSString *key in [_attachments allKeys])
-		[self setAttachedObject:[self attachedObjectForKey:key version:origVersion] forKey:key version:newVersion];
-	
-	return YES;
+	NSAssert(NO, @"");
+	return 1;
 }
 
 - (id)attachedObjectForKey:(NSString *)key
 {
-	return [self attachedObjectForKey:key version:[self versionForLanguage: nil]];
+	return [_attachments objectForKey: key];
 }
 
-- (id)attachedObjectForKey:(NSString *)key version:(NSUInteger)version
-{
-	return [[_attachments objectForKey: key] objectForKey: [NSString stringWithFormat: @"%lu", version]];
-}
-
-- (void)setAttachedObject:(id)object forKey:(NSString *)key version:(NSUInteger)version
+- (void)setAttachedObject:(id)object forKey:(NSString *)key
 {
 	if (!object || !key)
 		return;
 	
-	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary: [_attachments objectForKey: key]];
-	[dict setObject:object forKey:[NSString stringWithFormat: @"%lu", version]];
-	
 	NSMutableDictionary *mutableAttachments = [_attachments mutableCopy];
-	[mutableAttachments setObject:dict forKey:key];
+	[mutableAttachments setObject:object forKey:key];
 	_attachments = [mutableAttachments copy];
 }
 

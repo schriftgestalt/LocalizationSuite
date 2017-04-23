@@ -48,7 +48,7 @@ NSString *BLFileReferencingStyleKey     = @"referencing style";
 NSString *BLFileSnapshotsKey			= @"snapshots";
 NSString *BLFileUserNameKey             = @"user name";
 NSString *BLFileVersionKey              = @"version";
-NSString *BLFileVersionsKey				= @"versions";
+//NSString *BLFileVersionsKey				= @"versions";
 NSString *BLFileWarningsKey             = @"warnings";
 NSString *BLFileXcodeProjectsKey		= @"associated Xcode projects";
 
