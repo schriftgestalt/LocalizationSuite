@@ -25,13 +25,13 @@
 		5031E6410F43625800A0DA35 /* LanguageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5031E6220F43625800A0DA35 /* LanguageObject.m */; };
 		503B3E4C1195974000884CB7 /* FilteredBundleProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B3E4B1195974000884CB7 /* FilteredBundleProxy.m */; };
 		504E098D13005776006B5F4B /* BlueLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E098C13005776006B5F4B /* BlueLocalization.framework */; };
-		504E098E1300578B006B5F4B /* BlueLocalization.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E098C13005776006B5F4B /* BlueLocalization.framework */; };
+		504E098E1300578B006B5F4B /* BlueLocalization.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E098C13005776006B5F4B /* BlueLocalization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		504E0992130057AB006B5F4B /* NibPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E098F130057AB006B5F4B /* NibPreview.framework */; };
 		504E0993130057AB006B5F4B /* LocTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E0990130057AB006B5F4B /* LocTools.framework */; };
 		504E0994130057AB006B5F4B /* LocInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E0991130057AB006B5F4B /* LocInterface.framework */; };
-		504E0995130057B1006B5F4B /* NibPreview.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E098F130057AB006B5F4B /* NibPreview.framework */; };
-		504E0996130057B1006B5F4B /* LocTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E0990130057AB006B5F4B /* LocTools.framework */; };
-		504E0997130057B1006B5F4B /* LocInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E0991130057AB006B5F4B /* LocInterface.framework */; };
+		504E0995130057B1006B5F4B /* NibPreview.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E098F130057AB006B5F4B /* NibPreview.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		504E0996130057B1006B5F4B /* LocTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E0990130057AB006B5F4B /* LocTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		504E0997130057B1006B5F4B /* LocInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E0991130057AB006B5F4B /* LocInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5052607405D5C3C200429FDF /* Localization Manager.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5052607305D5C3C200429FDF /* Localization Manager.icns */; };
 		506E805710566762005BAB74 /* MultiActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 506E805610566762005BAB74 /* MultiActionButton.m */; };
 		506E81721057BCE5005BAB74 /* MultiActionWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 506E81711057BCE5005BAB74 /* MultiActionWindow.m */; };
@@ -407,7 +407,6 @@
 				Japanese,
 				French,
 				German,
-				en,
 			);
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* Localization Manager */;
 			projectDirPath = "";
