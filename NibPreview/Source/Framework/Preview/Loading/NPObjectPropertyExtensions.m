@@ -126,7 +126,7 @@
 				break;
 		}
 		
-		value = [NSNumber numberWithInt: type];
+		value = [NSNumber numberWithInt:(int)type];
 	}
 	
 	if ([key isEqual: @"gButtonBehavior"])
@@ -280,7 +280,7 @@
 - (void)setChildren:(NSArray *)childs
 {
 	float height;
-	int rows, cols;
+	NSInteger rows, cols;
 	
 	height = [self cellSize].height;
 	height += [self intercellSpacing].height;
@@ -295,7 +295,7 @@
 	[self renewRows:rows columns:cols];
 	
 	for (NSUInteger i=0; i<[childs count]-1; i++) {
-		int row, col;
+		NSInteger row, col;
 		
 		row = i%rows;
 		col = i/rows;

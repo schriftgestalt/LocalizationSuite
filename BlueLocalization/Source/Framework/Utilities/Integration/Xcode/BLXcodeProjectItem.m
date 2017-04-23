@@ -260,7 +260,7 @@
 
 - (void)setPathType:(BLXcodePathType)newType
 {
-	if (!newType != self.pathType)
+	if (!(newType != self.pathType))
 		[_parser noteProjectWasChanged];
 	
 	switch (newType) {

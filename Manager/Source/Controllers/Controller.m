@@ -299,7 +299,7 @@ id __sharedControllerInstance;
 
 - (IBAction)importLocalizerFilesDirectly:(id)sender
 {
-	[[[NSDocumentController sharedDocumentController] currentDocument] importLocalizerFilesDirectly: sender];
+	[(Controller*)[[NSDocumentController sharedDocumentController] currentDocument] importLocalizerFilesDirectly: sender];
 }
 
 - (IBAction)editLocalizerFiles:(id)sender
