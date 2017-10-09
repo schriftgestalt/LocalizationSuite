@@ -11,7 +11,7 @@
 			<sparkle:minimumSystemVersion>10.7</sparkle:minimumSystemVersion>
 			<pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
 			<enclosure
-				url="https://schriftgestalt.github.io/LocalizationSuite/localizer/Localizer13.1-17.zip"
+				url="https://github.com/schriftgestalt/LocalizationSuite/releases/download/13.1/Localizer13.1-17.zip"
 				sparkle:version="17"
 				sparkle:shortVersionString="13.1"
 				type="application/octet-stream"
