@@ -351,7 +351,6 @@
 		50A883FD0A6E65A500647446 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -371,7 +370,6 @@
 		50A883FE0A6E65A500647446 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: The Soulmen GBR";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
@@ -393,6 +391,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Georg Seifert (X2L8375ZQ7)";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
@@ -405,6 +404,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Georg Seifert (X2L8375ZQ7)";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;

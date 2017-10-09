@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment version="1050" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,7 +21,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="1491" customClass="LanguageCoordinator">
             <connections>
                 <outlet property="document" destination="-2" id="1492"/>
@@ -109,7 +109,7 @@
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn width="16" minWidth="16" maxWidth="11" id="C9i-0Z-CiZ">
+                                        <tableColumn width="11" minWidth="16" maxWidth="11" id="C9i-0Z-CiZ">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -144,7 +144,7 @@
                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableHeaderCell>
                                             <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="1390">
-                                                <font key="font" metaFont="titleBar" size="12"/>
+                                                <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -167,21 +167,21 @@
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
                                             <textFieldCell key="dataCell" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="786">
-                                                <font key="font" metaFont="titleBar" size="12"/>
+                                                <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <sortDescriptor key="sortDescriptorPrototype" selector="caseInsensitiveCompare:" sortKey="changeDescription"/>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <connections>
-                                                <binding destination="572" name="textColor" keyPath="arrangedObjects.object" id="1463">
-                                                    <dictionary key="options">
-                                                        <string key="NSValueTransformerName">LIObjectColor</string>
-                                                    </dictionary>
-                                                </binding>
                                                 <binding destination="572" name="value" keyPath="arrangedObjects.changeDescription" id="785">
                                                     <dictionary key="options">
                                                         <integer key="NSConditionallySetsEditable" value="1"/>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="572" name="textColor" keyPath="arrangedObjects.object" id="1463">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">LIObjectColor</string>
                                                     </dictionary>
                                                 </binding>
                                             </connections>
@@ -193,7 +193,7 @@
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
                                             <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="1391">
-                                                <font key="font" metaFont="titleBar" size="12"/>
+                                                <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -255,8 +255,8 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <connections>
-                                                <binding destination="78" name="fontBold" keyPath="arrangedObjects.isReference" id="1076"/>
                                                 <binding destination="78" name="value" keyPath="arrangedObjects.description" id="640"/>
+                                                <binding destination="78" name="fontBold" keyPath="arrangedObjects.isReference" id="1076"/>
                                             </connections>
                                         </tableColumn>
                                         <tableColumn editable="NO" width="70" minWidth="70" maxWidth="70" id="468">
