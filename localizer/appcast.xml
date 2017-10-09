@@ -6,14 +6,14 @@
 		<description>Most recent changes</description>
 		<language>en</language>
 		<item>
-			<title>Version 13.0</title>
+			<title>Version 13.1</title>
 			<sparkle:releaseNotesLink>https://schriftgestalt.github.io/LocalizationSuite/localizer/localizer.html</sparkle:releaseNotesLink>
 			<sparkle:minimumSystemVersion>10.7</sparkle:minimumSystemVersion>
-			<pubDate>Wed, 22 July 2016 00:00:00 +0000</pubDate>
+			<pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
 			<enclosure
-				url="https://schriftgestalt.github.io/LocalizationSuite/localizer/Localizer13.0-16.zip"
-				sparkle:version="16"
-				sparkle:shortVersionString="13.0"
+				url="https://schriftgestalt.github.io/LocalizationSuite/localizer/Localizer13.1-17.zip"
+				sparkle:version="17"
+				sparkle:shortVersionString="13.1"
 				type="application/octet-stream"
 				length="2542402"
 			/>
