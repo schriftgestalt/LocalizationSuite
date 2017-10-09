@@ -91,7 +91,9 @@ NSMutableDictionary *__languageTranslatorCache = nil;
     
 	// Try to find a match
 	identifier = [NSLocale canonicalLocaleIdentifierFromString: language];
-	
+	if ([identifier length] > 10) {
+		return nil;
+	}
     if (!identifier
 		|| [identifier rangeOfString: @" "].location != NSNotFound
 		|| [identifier rangeOfString: @"("].location != NSNotFound) {
@@ -129,9 +131,9 @@ NSMutableDictionary *__languageTranslatorCache = nil;
         [__languageTranslatorCache setObject:locale forKey:language];
     if (identifier)
         [__languageTranslatorCache setObject:locale forKey:identifier];
-    if ([enLocale displayNameForKey:NSLocaleIdentifier value:identifier])
+	if ([enLocale displayNameForKey:NSLocaleIdentifier value:identifier]) {
         [__languageTranslatorCache setObject:locale forKey:[enLocale displayNameForKey:NSLocaleIdentifier value:identifier]];
-    
+	}
     return locale;
 }
 

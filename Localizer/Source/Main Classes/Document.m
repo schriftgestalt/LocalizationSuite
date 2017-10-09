@@ -111,7 +111,7 @@ typedef enum {
 	NSRect frame = content.view.frame;
 	frame.size.height += 1;
 	content.view.frame = frame;
-	[content.view setBorderType: NSNoBorder];
+	//[content.view setBorderType: NSNoBorder];
 	
 	// set double action
     [content.contentView setDoubleAction: @selector(openSeparateEditor:)];

@@ -70,7 +70,7 @@ NSString *BLNibFileCreatorIBLoadedPluginIdentifiersKey	= @"IBLoadedPluginIdentif
 	
 	if (![fileManager fileExistsAtPath: referencePath]) {
 		// Copy original if no reference version available
-		NSString *originalPath = [BLPathCreator replaceLanguage:language inPath:targetPath withLanguage:referencePath bundle:[object bundleObject]];
+		NSString *originalPath = [BLPathCreator replaceLanguage:language inPath:targetPath withLanguage:@"en" bundle:[object bundleObject]];
 		[fileManager copyItemAtPath:originalPath toPath:referencePath error:NULL];
 	}
 	
