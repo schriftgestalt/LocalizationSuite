@@ -565,7 +565,6 @@
 				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks/;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_NAME = "Localization Manager";
-				PROVISIONING_PROFILE = "";
 				WARNING_CFLAGS = "-Wmost";
 				WRAPPER_EXTENSION = app;
 			};
@@ -585,7 +584,6 @@
 				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks/;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_NAME = "Localization Manager";
-				PROVISIONING_PROFILE = "";
 				WARNING_CFLAGS = "-Wmost";
 				WRAPPER_EXTENSION = app;
 			};

@@ -570,7 +570,6 @@
 				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks;
 				PRODUCT_BUNDLE_IDENTIFIER = org.locsuite.nibpreview;
 				PRODUCT_NAME = NibPreview;
-				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -595,7 +594,6 @@
 				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks;
 				PRODUCT_BUNDLE_IDENTIFIER = org.locsuite.nibpreview;
 				PRODUCT_NAME = NibPreview;
-				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
