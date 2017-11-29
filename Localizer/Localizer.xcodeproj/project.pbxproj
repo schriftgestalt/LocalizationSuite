@@ -283,6 +283,11 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Localization Suite";
+				TargetAttributes = {
+					8D15AC270486D014006FF6A4 = {
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = 501EBC8B0855AE8600FBC27B /* Build configuration list for PBXProject "Localizer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -399,6 +404,7 @@
 		501EBC880855AE8600FBC27B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
@@ -410,6 +416,7 @@
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.loc-suite.localizer";
 				PRODUCT_NAME = Localizer;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WARNING_CFLAGS = "-Wmost";
 				WRAPPER_EXTENSION = app;
 			};
@@ -418,6 +425,7 @@
 		501EBC890855AE8600FBC27B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -429,6 +437,7 @@
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.loc-suite.localizer";
 				PRODUCT_NAME = Localizer;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WARNING_CFLAGS = "-Wmost";
 				WRAPPER_EXTENSION = app;
 			};

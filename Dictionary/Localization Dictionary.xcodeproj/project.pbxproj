@@ -235,6 +235,11 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Localization Suite";
+				TargetAttributes = {
+					8D15AC270486D014006FF6A4 = {
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = 50A884000A6E65A500647446 /* Build configuration list for PBXProject "Localization Dictionary" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -351,6 +356,7 @@
 		50A883FD0A6E65A500647446 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -361,6 +367,7 @@
 				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks/;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_NAME = "Localization Dictionary";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WARNING_CFLAGS = "-Wmost";
 				WRAPPER_EXTENSION = app;
 			};
@@ -369,6 +376,7 @@
 		50A883FE0A6E65A500647446 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
@@ -379,6 +387,7 @@
 				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks/;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_NAME = "Localization Dictionary";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WARNING_CFLAGS = "-Wmost";
 				WRAPPER_EXTENSION = app;
 			};
