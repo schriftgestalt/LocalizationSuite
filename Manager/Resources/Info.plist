@@ -60,7 +60,7 @@
 	<key>CFBundleIconFile</key>
 	<string>Localization Manager</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.loc-suite.manager</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -72,7 +72,7 @@
 	<key>CFBundleSignature</key>
 	<string>LOCM</string>
 	<key>CFBundleVersion</key>
-	<string>17</string>
+	<string>18</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

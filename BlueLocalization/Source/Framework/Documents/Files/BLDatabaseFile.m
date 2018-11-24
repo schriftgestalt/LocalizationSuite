@@ -233,7 +233,7 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
         
         // Update preferences
         prefs = [NSMutableDictionary dictionaryWithDictionary: [dict objectForKey: @"preferences"]];
-        [prefs setObject:nil forKey:@"lastSavePath"];
+        [prefs removeObjectForKey:@"lastSavePath"];
         [dict setObject:prefs forKey:@"preferences"];
     }
 	if (version < 3) {

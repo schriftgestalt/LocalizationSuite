@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment version="1050" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -338,7 +338,7 @@ Applies to everything if nothing selected.</string>
                             <action selector="editLocalizerFiles:" target="-2" id="1437"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="487">
+                    <textField verticalHuggingPriority="750" id="487">
                         <rect key="frame" x="260" y="196" width="81" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Localizer file" id="1366">
@@ -347,7 +347,7 @@ Applies to everything if nothing selected.</string>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="489">
+                    <textField verticalHuggingPriority="750" id="489">
                         <rect key="frame" x="267" y="108" width="74" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title=".lproj folder" id="1368">
@@ -356,7 +356,7 @@ Applies to everything if nothing selected.</string>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="494">
+                    <textField verticalHuggingPriority="750" id="494">
                         <rect key="frame" x="344" y="246" width="205" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="&lt;do not localize&gt;" id="1370">
@@ -373,7 +373,7 @@ Applies to everything if nothing selected.</string>
                             </binding>
                         </connections>
                     </textField>
-                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="493">
+                    <textField verticalHuggingPriority="750" id="493">
                         <rect key="frame" x="275" y="246" width="66" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Selection" id="1369">
@@ -408,7 +408,7 @@ Applies to everything if nothing selected.</string>
                         <rect key="frame" x="346" y="133" width="258" height="5"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                     </box>
-                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="670">
+                    <textField verticalHuggingPriority="750" id="670">
                         <rect key="frame" x="500" y="246" width="106" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" lineBreakMode="truncatingHead" sendsActionOnEndEditing="YES" alignment="right" title="&lt;dnl&gt;" id="1376">
@@ -473,7 +473,7 @@ Applies to everything if nothing selected.</string>
                             <action selector="importLocalizerFiles:" target="-2" id="1454"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="1077">
+                    <textField verticalHuggingPriority="750" id="1077">
                         <rect key="frame" x="344" y="229" width="132" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Development Language" id="1377">
@@ -578,7 +578,7 @@ Updates all localized versions of the selected files. Applies to whole database 
                         <nil key="toolTip"/>
                         <size key="minSize" width="136" height="22"/>
                         <size key="maxSize" width="136" height="22"/>
-                        <searchField key="view" wantsLayer="YES" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="YLl-n7-37u">
+                        <searchField key="view" wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" id="YLl-n7-37u">
                             <rect key="frame" x="0.0" y="14" width="136" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search" bezelStyle="round" recentsAutosaveName="" id="w4L-6r-ggu">

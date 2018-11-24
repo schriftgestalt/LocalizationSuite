@@ -151,7 +151,7 @@ NSString *LIAttachmentPasteboardType	= @"LIAttachment";
 	
 	// Deleting the attachment
 	if ([theEvent type] == NSLeftMouseUp && isDeleting && delete) {
-		objc_msgSend([self target], [self action], self);
+		[[self target] performSelector:[self action] withObject:self];
 		return YES;
 	}
 	

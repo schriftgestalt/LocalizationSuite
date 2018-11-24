@@ -333,7 +333,7 @@ BLProcessLog *__sharedProcessLog;
 
 - (void)addItem:(BLProcessLogItem *)newItem
 {
-	@synchronized(_items) {
+	@synchronized(self) {
 		[self willChange:NSKeyValueChangeInsertion valuesAtIndexes:[NSIndexSet indexSetWithIndex: [_items count]] forKey:@"items"];
 		
 		if (!_items) {
