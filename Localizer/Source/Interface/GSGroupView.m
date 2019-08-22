@@ -19,11 +19,11 @@
 	NSRect rect = bounds;
 	rect.origin.y += NSHeight(rect) - 1;
 	rect.size.height = 1;
-	NSRectFill(rect);
+	[NSBezierPath fillRect:rect];
 	if (NSHeight(bounds) < 30 && NSHeight(bounds) > 3) {
 		[[NSColor tertiaryLabelColor] set];
 		rect.origin.y = 0;
-		NSRectFill(rect);
+		[NSBezierPath fillRect:rect];
 	}
 }
 

@@ -11,8 +11,17 @@
 @implementation GSLine
 
 - (void)drawRect:(NSRect)dirtyRect {
+	NSRect frame = [self frame];
+	if (frame.size.height > frame.size.width) {
+		dirtyRect.origin.x += 2;
+		dirtyRect.size.width = 1;
+	}
+	else {
+		dirtyRect.origin.y += 2;
+		dirtyRect.size.height = 1;
+	}
 	[[NSColor tertiaryLabelColor] set];
-	NSRectFill(dirtyRect);
+	[NSBezierPath fillRect:dirtyRect];
 }
 
 @end
