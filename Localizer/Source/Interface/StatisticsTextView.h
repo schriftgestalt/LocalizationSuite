@@ -6,8 +6,7 @@
 //  Copyright 2009 The Soulmen. All rights reserved.
 //
 
-@interface StatisticsTextView : NSTextView <LIStatusObjects>
-{
+@interface StatisticsTextView : NSTextView <LIStatusObjects> {
 }
 
 - (void)updateCurrentObjects;
@@ -17,7 +16,7 @@
 @protocol StatisticsTextViewDelegate
 @optional
 
-- (NSArray *)currentObjectsInTextView:(StatisticsTextView *)textView;
-- (NSArray *)currentLanguagesInTextView:(StatisticsTextView *)textView;
+- (NSArray*)currentObjectsInTextView:(StatisticsTextView*)textView;
+- (NSArray*)currentLanguagesInTextView:(StatisticsTextView*)textView;
 
 @end
