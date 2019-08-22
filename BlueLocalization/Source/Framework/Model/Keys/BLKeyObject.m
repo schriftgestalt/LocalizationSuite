@@ -80,8 +80,12 @@
 	
 	// Exported strings
 	NSMutableDictionary *exportedStrings = [NSMutableDictionary dictionaryWithDictionary: self.strings];
-	NSMutableDictionary *snapshotStrings = [NSMutableDictionary dictionaryWithDictionary: _snapshot];
-	
+	NSMutableDictionary *snapshotStrings;
+	if (_snapshot.count)
+		snapshotStrings = [_snapshot mutableCopy]; // [NSMutableDictionary dictionaryWithDictionary: _snapshot];
+	else {
+		snapshotStrings = [NSMutableDictionary dictionary];
+	}
 	// Filter languages
 	if ([attributes objectForKey: BLLanguagesSerializationKey]) {
 		NSMutableSet *remove = [NSMutableSet setWithArray: [exportedStrings allKeys]];
