@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -69,7 +69,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" topStrut="YES"/>
             <rect key="contentRect" x="210" y="86" width="1082" height="720"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <value key="minSize" type="size" width="910" height="615"/>
             <view key="contentView" id="421">
                 <rect key="frame" x="0.0" y="0.0" width="1082" height="720"/>
@@ -97,11 +97,11 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView drawsBackground="NO" importsGraphics="NO" richText="NO" horizontallyResizable="YES" verticallyResizable="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" spellingCorrection="YES" grammarChecking="YES" smartInsertDelete="YES" id="447" customClass="StatisticsTextView">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="134"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="415" height="134"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="128" height="134"/>
+                                            <size key="minSize" width="415" height="134"/>
                                             <size key="maxSize" width="787" height="10000000"/>
                                             <attributedString key="textStorage">
                                                 <fragment content="Text">
@@ -114,12 +114,12 @@
                                             </attributedString>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <connections>
+                                                <binding destination="607" name="editable" keyPath="selection.leftFieldEditable" id="611"/>
                                                 <binding destination="607" name="attributedString" keyPath="selection.valueForLeftLanguage" id="YND-pu-prL">
                                                     <dictionary key="options">
                                                         <string key="NSValueTransformerName">GSStringToAttributedValueTransformer</string>
                                                     </dictionary>
                                                 </binding>
-                                                <binding destination="607" name="editable" keyPath="selection.leftFieldEditable" id="611"/>
                                                 <outlet property="delegate" destination="601" id="858"/>
                                             </connections>
                                         </textView>
@@ -412,7 +412,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="26" height="134"/>
+                                            <size key="minSize" width="415" height="134"/>
                                             <size key="maxSize" width="778" height="10000000"/>
                                             <attributedString key="textStorage">
                                                 <fragment content="Text">
@@ -425,13 +425,13 @@
                                             </attributedString>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <connections>
+                                                <binding destination="607" name="editable" keyPath="selection.rightFieldEditable" id="613"/>
                                                 <binding destination="607" name="attributedString" keyPath="selection.valueForRightLanguage" id="HaD-hV-Dmg">
                                                     <dictionary key="options">
                                                         <bool key="NSContinuouslyUpdatesValue" value="YES"/>
                                                         <string key="NSValueTransformerName">GSStringToAttributedValueTransformer</string>
                                                     </dictionary>
                                                 </binding>
-                                                <binding destination="607" name="editable" keyPath="selection.rightFieldEditable" id="613"/>
                                                 <outlet property="delegate" destination="601" id="859"/>
                                             </connections>
                                         </textView>
@@ -485,16 +485,16 @@
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="825">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="720"/>
                         <subviews>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="449">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="23" horizontalPageScroll="10" verticalLineScroll="23" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="449">
                                 <rect key="frame" x="0.0" y="489" width="250" height="231"/>
                                 <clipView key="contentView" id="wbK-GI-PJm">
                                     <rect key="frame" x="0.0" y="0.0" width="250" height="231"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnResizing="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="14" indentationPerLevel="10" outlineTableColumn="451" id="450">
-                                            <rect key="frame" x="0.0" y="0.0" width="252" height="231"/>
+                                        <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnResizing="NO" emptySelection="NO" autosaveColumns="NO" indentationPerLevel="10" outlineTableColumn="451" id="450">
+                                            <rect key="frame" x="0.0" y="0.0" width="264" height="231"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <size key="intercellSpacing" width="4" height="6"/>
+                                            <size key="intercellSpacing" width="16" height="6"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
@@ -504,8 +504,8 @@
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                     </tableHeaderCell>
-                                                    <textFieldCell key="dataCell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="706">
-                                                        <font key="font" metaFont="smallSystem"/>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="706">
+                                                        <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
@@ -790,7 +790,7 @@
                                 <rect key="frame" x="0.0" y="70" width="250" height="106"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="465">
-                                        <rect key="frame" x="25" y="6" width="106" height="27"/>
+                                        <rect key="frame" x="25" y="6" width="106" height="28"/>
                                         <buttonCell key="cell" type="push" title="Autotranslation" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="680">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="smallSystem"/>
@@ -811,7 +811,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="501">
-                                        <rect key="frame" x="140" y="70" width="89" height="27"/>
+                                        <rect key="frame" x="140" y="70" width="89" height="28"/>
                                         <buttonCell key="cell" type="push" title="Dictionaries" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="696">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="smallSystem"/>
@@ -861,7 +861,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
                                 <subviews>
                                     <levelIndicator verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="900">
-                                        <rect key="frame" x="26" y="37" width="171" height="18"/>
+                                        <rect key="frame" x="26" y="39" width="172" height="16"/>
                                         <levelIndicatorCell key="cell" controlSize="mini" alignment="left" doubleValue="76" maxValue="100" warningValue="75" criticalValue="50" levelIndicatorStyle="continuousCapacity" id="901">
                                             <font key="font" metaFont="miniSystem"/>
                                         </levelIndicatorCell>
