@@ -12,6 +12,7 @@
 
 #import <objc/message.h>
 
+BOOL (*objc_msgSendPerform)(id self, SEL _cmd, NSString *referenceLanguage, NSString *targetLanguage) = (void*)objc_msgSend;
 
 // Keys
 NSString *DocumentViewOptionDisplayEqualsAsOne	= @"displayEqualStringsAsOne";
@@ -277,7 +278,7 @@ typedef enum {
     [[self windowForSheet] endEditingFor: nil];
 	
 	// Copy string
-	BOOL needsEditing = (BOOL)objc_msgSend(object, action, referenceLanguage, targetLanguage);
+	BOOL needsEditing = objc_msgSendPerform(object, action, referenceLanguage, targetLanguage);
 	[self updateChangeCount: NSChangeDone];
 	
 	// Move selection
