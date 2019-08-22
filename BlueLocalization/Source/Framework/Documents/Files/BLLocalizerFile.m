@@ -68,7 +68,7 @@ NSString *BLDictionaryPropertyName		= @"dictionary";
 
 + (NSFileWrapper *)createFileForObjects:(NSArray *)bundles withOptions:(NSUInteger)options andProperties:(NSDictionary *)properties
 {
-    BLLog(BLLogInfo, @"Generating Localizer File for languages: %@", [[properties objectForKey: BLLanguagesPropertyName] componentsJoinedByString: @", "]);
+	BLLog(BLLogInfo, @"Generating Localizer File for languages: %@", [[properties objectForKey: BLLanguagesPropertyName] componentsJoinedByString: @", "]);
 	
 	// Check input
 	for (NSString *key in [self requiredProperties]) {
@@ -77,9 +77,9 @@ NSString *BLDictionaryPropertyName		= @"dictionary";
 	}
 	
 	// General setup
-    NSMutableDictionary *fileWrappers = [NSMutableDictionary dictionary];
+	NSMutableDictionary *fileWrappers = [NSMutableDictionary dictionary];
 	
-    // Archive all bundles
+	// Archive all bundles
 	NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
 								[NSNumber numberWithBool: (options & BLFileActiveObjectsOnlyOption) != 0], BLActiveObjectsOnlySerializationKey,
 								[NSNumber numberWithBool: (options & BLFileClearChangedValuesOption) != 0], BLClearChangeInformationSerializationKey,
@@ -88,24 +88,24 @@ NSString *BLDictionaryPropertyName		= @"dictionary";
 								nil];
 	
 	NSDictionary *resources = [NSDictionary dictionary];
-    NSArray *archivedBundles = [BLPropertyListSerializer serializeObject:[BLObject bundleObjectsFromArray: bundles] withAttributes:attributes outWrappers:&resources];
-    
+	NSArray *archivedBundles = [BLPropertyListSerializer serializeObject:[BLObject bundleObjectsFromArray: bundles] withAttributes:attributes outWrappers:&resources];
+	
 	// Create Resources directory
 	NSFileWrapper *wrapper = [[NSFileWrapper alloc] initDirectoryWithFileWrappers: resources];
-    [fileWrappers setObject:wrapper forKey:BLLocalizerFileResourcesDirectory];
+	[fileWrappers setObject:wrapper forKey:BLLocalizerFileResourcesDirectory];
 	
-    // Create Contents.plist
+	// Create Contents.plist
 	NSMutableDictionary *contents = [NSMutableDictionary dictionary];
 	[contents setObject:archivedBundles forKey:BLFileBundlesKey];
 	[contents secureSetObject:[properties objectForKey: BLReferenceLanguagePropertyName] forKey:BLFileReferenceLanguageKey];
-    [contents secureSetObject:[properties objectForKey: BLLanguagesPropertyName] forKey:BLFileLanguagesKey];
+	[contents secureSetObject:[properties objectForKey: BLLanguagesPropertyName] forKey:BLFileLanguagesKey];
 	[contents secureSetObject:[properties objectForKey: BLPreferencesPropertyName] forKey:BLFilePreferencesKey];
-    [contents setObject:[NSNumber numberWithBool: (options & BLFileIncludePreviewOption) != 0] forKey:BLFileIncludesPreviewKey];
-    [contents setObject:[NSNumber numberWithInt: BLLocalizerFileVersionNumber] forKey:BLFileVersionKey];
-    
-    // Create file wrapper for contents.plist file
-    wrapper = [[NSFileWrapper alloc] initRegularFileWithContents: [NSPropertyListSerialization dataFromPropertyList:contents format:NSPropertyListXMLFormat_v1_0 errorDescription:nil]];
-    [fileWrappers setObject:wrapper forKey:BLLocalizerFileContentsFileName];
+	[contents setObject:[NSNumber numberWithBool: (options & BLFileIncludePreviewOption) != 0] forKey:BLFileIncludesPreviewKey];
+	[contents setObject:[NSNumber numberWithInt: BLLocalizerFileVersionNumber] forKey:BLFileVersionKey];
+	
+	// Create file wrapper for contents.plist file
+	wrapper = [[NSFileWrapper alloc] initRegularFileWithContents: [NSPropertyListSerialization dataFromPropertyList:contents format:NSPropertyListXMLFormat_v1_0 errorDescription:nil]];
+	[fileWrappers setObject:wrapper forKey:BLLocalizerFileContentsFileName];
 	
 	// Embedded dictionary
 	BLDictionaryDocument *dictionary = [properties objectForKey: BLDictionaryPropertyName];
@@ -123,31 +123,31 @@ NSString *BLDictionaryPropertyName		= @"dictionary";
 		wrapper = [[NSFileWrapper alloc] initRegularFileWithContents: [NSPropertyListSerialization dataFromPropertyList:settings format:NSPropertyListXMLFormat_v1_0 errorDescription:nil]];
 		[fileWrappers setObject:wrapper forKey:filename];
 	}
-    
-    return [[NSFileWrapper alloc] initDirectoryWithFileWrappers: fileWrappers];
+	
+	return [[NSFileWrapper alloc] initDirectoryWithFileWrappers: fileWrappers];
 }
 
 + (NSArray *)objectsFromFile:(NSFileWrapper *)wrapper readingProperties:(NSDictionary **)outProperties
 {
 	BLLogBeginGroup(@"Reading Localizer File");
-    
-    // Init
-    NSDictionary *fileWrappers = [wrapper fileWrappers];
+	
+	// Init
+	NSDictionary *fileWrappers = [wrapper fileWrappers];
 	
 	// Unarchive contents
-    NSMutableDictionary *contents = [NSPropertyListSerialization propertyListFromData:[[fileWrappers objectForKey: BLLocalizerFileContentsFileName] regularFileContents] mutabilityOption:NSPropertyListMutableContainersAndLeaves format:nil errorDescription:nil];
-    if (![self updateLocalizerFile: contents]) {
+	NSMutableDictionary *contents = [NSPropertyListSerialization propertyListFromData:[[fileWrappers objectForKey: BLLocalizerFileContentsFileName] regularFileContents] mutabilityOption:NSPropertyListMutableContainersAndLeaves format:nil errorDescription:nil];
+	if (![self updateLocalizerFile: contents]) {
 		BLLogEndGroup();
 		return nil;
 	}
 	
-    // Deserialize bundles
+	// Deserialize bundles
 	NSArray *inBundles = [contents objectForKey: BLFileBundlesKey];
 	inBundles = [BLPropertyListSerializer objectWithPropertyList:inBundles fileWrappers:[[fileWrappers objectForKey: BLLocalizerFileResourcesDirectory] fileWrappers]];
 	NSMutableArray *bundles = [NSMutableArray arrayWithArray: inBundles];
-	    
-    // Update bundles
-    if (![self updateLocalizerObjects:bundles fromFile:contents]) {
+	
+	// Update bundles
+	if (![self updateLocalizerObjects:bundles fromFile:contents]) {
 		BLLogEndGroup();
 		return nil;
 	}
@@ -160,15 +160,15 @@ NSString *BLDictionaryPropertyName		= @"dictionary";
 		
 		[userPrefs setObject:[NSPropertyListSerialization propertyListFromData:[[fileWrappers objectForKey: file] regularFileContents] mutabilityOption:NSPropertyListMutableContainersAndLeaves format:nil errorDescription:nil] forKey:[file stringByDeletingPathExtension]];
 	}
-    
-    // Generate properties
-    if (outProperties != nil) {
-        NSMutableDictionary *properties = [NSMutableDictionary dictionary];
-        
+	
+	// Generate properties
+	if (outProperties != nil) {
+		NSMutableDictionary *properties = [NSMutableDictionary dictionary];
+		
 		[properties secureSetObject:[contents objectForKey: BLFileReferenceLanguageKey] forKey:BLReferenceLanguagePropertyName];
-        [properties secureSetObject:[contents objectForKey: BLFileLanguagesKey] forKey:BLLanguagesPropertyName];
-        [properties secureSetObject:[contents objectForKey: BLFileIncludesPreviewKey] forKey:BLIncludesPreviewPropertyName];
-        [properties secureSetObject:[contents objectForKey: BLFilePreferencesKey] forKey:BLPreferencesPropertyName];
+		[properties secureSetObject:[contents objectForKey: BLFileLanguagesKey] forKey:BLLanguagesPropertyName];
+		[properties secureSetObject:[contents objectForKey: BLFileIncludesPreviewKey] forKey:BLIncludesPreviewPropertyName];
+		[properties secureSetObject:[contents objectForKey: BLFilePreferencesKey] forKey:BLPreferencesPropertyName];
 		[properties secureSetObject:userPrefs forKey:BLUserPreferencesPropertyName];
 		
 		// Load dictionary
@@ -177,11 +177,11 @@ NSString *BLDictionaryPropertyName		= @"dictionary";
 		if (dictionaryWrapper && [dictionary readFromFileWrapper:dictionaryWrapper ofType:nil error:NULL])
 			[properties secureSetObject:dictionary forKey:BLDictionaryPropertyName];
 		
-        (*outProperties) = properties;
-     }
-    
+		(*outProperties) = properties;
+	}
+	
 	BLLogEndGroup();
-    return bundles;
+	return bundles;
 }
 
 
@@ -189,7 +189,7 @@ NSString *BLDictionaryPropertyName		= @"dictionary";
 
 + (BOOL)updateLocalizerFile:(NSMutableDictionary *)dict
 {
-    NSUInteger version = [[dict objectForKey: BLFileVersionKey] intValue];
+	NSUInteger version = [[dict objectForKey: BLFileVersionKey] intValue];
 	
 	if (version < 2) {
 		if (![dict objectForKey: BLFileBundlesKey]) {
@@ -209,20 +209,20 @@ NSString *BLDictionaryPropertyName		= @"dictionary";
 
 + (BOOL)updateLocalizerObjects:(NSMutableArray *)bundles fromFile:(NSMutableDictionary *)dict
 {
-    NSUInteger version = [[dict objectForKey: BLFileVersionKey] intValue];
-    
-    if (version < 1) {
-        NSMutableArray *languages;
-        NSUInteger i;
-        
-        [bundles makeObjectsPerformSelector: @selector(fixLanguages)];
-        
-        languages = [dict objectForKey: BLFileLanguagesKey];
-        for (i=0; i<[languages count]; i++)
-            [languages replaceObjectAtIndex:i withObject:[BLLanguageTranslator identifierForLanguage: [languages objectAtIndex: i]]];
-        
-        [dict setObject:[BLLanguageTranslator identifierForLanguage: [dict objectForKey: BLFileReferenceLanguageKey]] forKey:BLFileReferenceLanguageKey];
-     }
+	NSUInteger version = [[dict objectForKey: BLFileVersionKey] intValue];
+	
+	if (version < 1) {
+		NSMutableArray *languages;
+		NSUInteger i;
+		
+		[bundles makeObjectsPerformSelector: @selector(fixLanguages)];
+		
+		languages = [dict objectForKey: BLFileLanguagesKey];
+		for (i=0; i<[languages count]; i++)
+			[languages replaceObjectAtIndex:i withObject:[BLLanguageTranslator identifierForLanguage: [languages objectAtIndex: i]]];
+		
+		[dict setObject:[BLLanguageTranslator identifierForLanguage: [dict objectForKey: BLFileReferenceLanguageKey]] forKey:BLFileReferenceLanguageKey];
+	}
 	
 	return YES;
 }
@@ -233,7 +233,7 @@ NSString *BLDictionaryPropertyName		= @"dictionary";
 
 - (void)fixLanguages
 {
-    [[self objects] makeObjectsPerformSelector: @selector(fixLanguages)];
+	[[self objects] makeObjectsPerformSelector: @selector(fixLanguages)];
 }
 
 @end
@@ -242,30 +242,30 @@ NSString *BLDictionaryPropertyName		= @"dictionary";
 
 - (void)fixLanguages
 {
-    NSMutableArray *changes;
-    NSArray *languages;
-    NSUInteger i;
-    
-    changes = [[NSMutableArray alloc] initWithCapacity: [[self changedValues] count]];
-    
-    // update changes
-    for (i=0; i<[[self changedValues] count]; i++) {
-        if ([BLLanguageTranslator localeForLanguage: [[self changedValues] objectAtIndex: i]])
-            [changes addObject: [BLLanguageTranslator identifierForLanguage: [[self changedValues] objectAtIndex: i]]];
-        else
-            [changes addObject: [[self changedValues] objectAtIndex: i]];
-    }
-    
-    // update strings
-    languages = [self languages];
-    for (i=0; i<[languages count]; i++) {
-        id object = [self objectForLanguage: [languages objectAtIndex: i]];
-        [self setObject:object forLanguage:[BLLanguageTranslator identifierForLanguage: [languages objectAtIndex: i]]];
-        [self setObject:nil forLanguage:[languages objectAtIndex: i]];
-    }
-    
-    // save changes
-    [self setChangedValues: changes];
+	NSMutableArray *changes;
+	NSArray *languages;
+	NSUInteger i;
+	
+	changes = [[NSMutableArray alloc] initWithCapacity: [[self changedValues] count]];
+	
+	// update changes
+	for (i=0; i<[[self changedValues] count]; i++) {
+		if ([BLLanguageTranslator localeForLanguage: [[self changedValues] objectAtIndex: i]])
+			[changes addObject: [BLLanguageTranslator identifierForLanguage: [[self changedValues] objectAtIndex: i]]];
+		else
+			[changes addObject: [[self changedValues] objectAtIndex: i]];
+	}
+	
+	// update strings
+	languages = [self languages];
+	for (i=0; i<[languages count]; i++) {
+		id object = [self objectForLanguage: [languages objectAtIndex: i]];
+		[self setObject:object forLanguage:[BLLanguageTranslator identifierForLanguage: [languages objectAtIndex: i]]];
+		[self setObject:nil forLanguage:[languages objectAtIndex: i]];
+	}
+	
+	// save changes
+	[self setChangedValues: changes];
 }
 
 @end

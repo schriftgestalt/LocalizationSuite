@@ -41,18 +41,18 @@ NSMutableDictionary *__fileObjectClasses = nil;
 
 + (id)alloc
 {
-    if ([self isEqual: [BLFileObject class]])
-        return [BLPlaceholderFileObject alloc];
-    else
-        return [super alloc];
+	if ([self isEqual: [BLFileObject class]])
+		return [BLPlaceholderFileObject alloc];
+	else
+		return [super alloc];
 }
 
 + (id)allocWithZone:(NSZone *)zone
 {
-    if ([self isEqual: [BLFileObject class]])
-        return [BLPlaceholderFileObject allocWithZone: zone];
-    else
-        return [super allocWithZone: zone];
+	if ([self isEqual: [BLFileObject class]])
+		return [BLPlaceholderFileObject allocWithZone: zone];
+	else
+		return [super allocWithZone: zone];
 }
 
 
@@ -60,8 +60,8 @@ NSMutableDictionary *__fileObjectClasses = nil;
 
 - (id)init
 {
-    self = [super init];
-    
+	self = [super init];
+	
 	if (self) {
 		_attachments = [[NSMutableDictionary alloc] init];
 		_bundleObject = nil;
@@ -72,15 +72,15 @@ NSMutableDictionary *__fileObjectClasses = nil;
 		_path = [[NSString alloc] init];
 		_snapshots = [[NSMutableDictionary alloc] init];
 	}
-    
-    return self;
+	
+	return self;
 }
 
 - (id)initWithPath:(NSString *)path
 {
 	self = [self init];
 	
-    if (self) {
+	if (self) {
 		// Get the relative path
 		NSString *portion = [BLPathCreator relativePartOfFilePath: path];
 		
@@ -101,13 +101,13 @@ NSMutableDictionary *__fileObjectClasses = nil;
 			[self setPath: path];
 		}
 	}
-    
-    return self;
+	
+	return self;
 }
 
 - (id)initWithPathExtension:(NSString *)extension
 {
-    return [self init];
+	return [self init];
 }
 
 
@@ -115,12 +115,12 @@ NSMutableDictionary *__fileObjectClasses = nil;
 
 + (id)fileObjectWithPath:(NSString *)path
 {
-    return [[BLFileObject alloc] initWithPath: path];
+	return [[BLFileObject alloc] initWithPath: path];
 }
 
 + (id)fileObjectWithPathExtension:(NSString *)extension
 {
-    return [[BLFileObject alloc] initWithPathExtension: extension];
+	return [[BLFileObject alloc] initWithPathExtension: extension];
 }
 
 
@@ -128,12 +128,12 @@ NSMutableDictionary *__fileObjectClasses = nil;
 
 + (Class)classOfStoredKeys
 {
-    return Nil;
+	return Nil;
 }
 
 + (NSArray *)availablePathExtensions
 {
-    return [__fileObjectClasses allKeys];
+	return [__fileObjectClasses allKeys];
 }
 
 + (Class)classForPathExtension:(NSString *)ext
@@ -154,8 +154,8 @@ NSMutableDictionary *__fileObjectClasses = nil;
 
 - (id)initWithPropertyList:(NSDictionary *)plist
 {
-    self = [super initWithPropertyList: plist];
-    
+	self = [super initWithPropertyList: plist];
+	
 	if (self) {
 		// Unpack wrappers
 		NSDictionary *attachments = [plist objectForKey: BLFileAttachmentsKey];
@@ -190,7 +190,7 @@ NSMutableDictionary *__fileObjectClasses = nil;
 		[_changedValues setArray: [plist objectForKey: BLFileChangedValuesKey]];
 	}
 	
-    return self;
+	return self;
 }
 
 - (NSDictionary *)propertyListWithAttributes:(NSDictionary *)attributes
@@ -198,16 +198,16 @@ NSMutableDictionary *__fileObjectClasses = nil;
 	BOOL activeOnly = [[attributes objectForKey: BLActiveObjectsOnlySerializationKey] boolValue];
 	BOOL noBackups = [[attributes objectForKey: BLClearAllBackupsSerializationKey] boolValue];
 	
-    // Serialize objects
-    NSMutableArray *archivedObjects = [NSMutableArray array];
-    for (BLKeyObject *key in [self objects]) {
-        if ([key isActive] || !activeOnly)
-            [archivedObjects addObject: key];
-    }
+	// Serialize objects
+	NSMutableArray *archivedObjects = [NSMutableArray array];
+	for (BLKeyObject *key in [self objects]) {
+		if ([key isActive] || !activeOnly)
+			[archivedObjects addObject: key];
+	}
 	
 	// Prepare attachments
 	NSMutableDictionary *attachments = [NSMutableDictionary dictionary];
-
+	
 	for (NSString *key in _attachments) {
 		id object = [_attachments objectForKey: key];
 		if ([object isKindOfClass:[NSDictionary class]]) {
@@ -226,9 +226,9 @@ NSMutableDictionary *__fileObjectClasses = nil;
 		
 		[attachments setObject:object forKey:key];
 	}
-    
+	
 	// Create the dictionary
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
 	[dict setDictionary: [super propertyListWithAttributes: attributes]];
 	
 	[dict secureSetObject:[self hashValue] forKey:BLFileHashKey];
@@ -237,15 +237,15 @@ NSMutableDictionary *__fileObjectClasses = nil;
 	
 	if (!activeOnly)
 		[dict secureSetObject:[self oldObjects] forKey:BLFileOldObjectsKey];
-    if ([self customFileType])
-        [dict setObject:[self customFileType] forKey:BLFileCustomTypeKey];
+	if ([self customFileType])
+		[dict setObject:[self customFileType] forKey:BLFileCustomTypeKey];
 	
 	[dict setObject:attachments forKey:BLFileAttachmentsKey];
 	
 	if (!noBackups && _snapshots)
 		[dict setObject:_snapshots forKey:BLFileSnapshotsKey];
-    
-    return dict;
+	
+	return dict;
 }
 
 
@@ -262,19 +262,19 @@ NSMutableDictionary *__fileObjectClasses = nil;
 {
 	
 	if ([[self class] classForPathExtension: type])
-        _customType = type;
+		_customType = type;
 	else
 		_customType = nil;
 }
 
 - (NSString *)fileFormatInfo
 {
-    return nil;
+	return nil;
 }
 
 - (NSString *)hashValue
 {
-    return (_hashValue) ? _hashValue : @"";
+	return (_hashValue) ? _hashValue : @"";
 }
 
 - (void)setHashValue:(NSString *)hashValue
@@ -296,8 +296,8 @@ NSMutableDictionary *__fileObjectClasses = nil;
 
 - (void)setObjects:(NSArray *)objects
 {
-    [objects makeObjectsPerformSelector:@selector(setFileObject:) withObject:self];
-    _objects = [objects copy];
+	[objects makeObjectsPerformSelector:@selector(setFileObject:) withObject:self];
+	_objects = [objects copy];
 }
 
 - (NSArray *)oldObjects
@@ -307,8 +307,8 @@ NSMutableDictionary *__fileObjectClasses = nil;
 
 - (void)setOldObjects:(NSArray *)objects
 {
-    [objects makeObjectsPerformSelector:@selector(setFileObject:) withObject:self];
-    _oldObjects = [objects copy];
+	[objects makeObjectsPerformSelector:@selector(setFileObject:) withObject:self];
+	_oldObjects = [objects copy];
 }
 
 - (NSString *)description
@@ -349,7 +349,7 @@ NSMutableDictionary *__fileObjectClasses = nil;
 
 - (id)parentObject
 {
-    return [self bundleObject];
+	return [self bundleObject];
 }
 
 - (id)objectForKey:(NSString *)key
@@ -359,39 +359,39 @@ NSMutableDictionary *__fileObjectClasses = nil;
 
 - (id)objectForKey:(NSString *)key createIfNeeded:(BOOL)create
 {
-    BLKeyObject *object;
-    
-    if (!key)
-        return nil;
+	BLKeyObject *object;
+	
+	if (!key)
+		return nil;
 	
 	// Try to find an existing key object
-    object = nil;
-    for (NSUInteger i=0; i<[_objects count]; i++) {
-        if ([[[_objects objectAtIndex: i] key] isEqual: key]) {
-            object = [_objects objectAtIndex: i];
-            break;
-        }
+	object = nil;
+	for (NSUInteger i=0; i<[_objects count]; i++) {
+		if ([[[_objects objectAtIndex: i] key] isEqual: key]) {
+			object = [_objects objectAtIndex: i];
+			break;
+		}
 	}
-    
+	
 	// If wished and no key object was found, we create one here
-    if (object == nil && create) {
-        object = [[[[self class] classOfStoredKeys] alloc] initWithKey: key];
-        [self addObject: object];
-    }
-    
-    return object;
+	if (object == nil && create) {
+		object = [[[[self class] classOfStoredKeys] alloc] initWithKey: key];
+		[self addObject: object];
+	}
+	
+	return object;
 }
 
 - (NSUInteger)removeObjectsWithKeyInArray:(NSArray *)limitedKeys
 {
 	NSUInteger count = 0;
 	
-    for (NSUInteger i=0; i<[_objects count]; i++) {
-        if ([limitedKeys containsObject: [[_objects objectAtIndex: i] key]]) {
-            [self removeObject: [_objects objectAtIndex: i--]];
+	for (NSUInteger i=0; i<[_objects count]; i++) {
+		if ([limitedKeys containsObject: [[_objects objectAtIndex: i] key]]) {
+			[self removeObject: [_objects objectAtIndex: i--]];
 			count++;
 		}
-    }
+	}
 	
 	return count;
 }
@@ -400,12 +400,12 @@ NSMutableDictionary *__fileObjectClasses = nil;
 {
 	NSUInteger count = 0;
 	
-    for (NSUInteger i=0; i<[_objects count]; i++) {
-        if (![limitedKeys containsObject: [[_objects objectAtIndex: i] key]]) {
-            [self removeObject: [_objects objectAtIndex: i--]];
+	for (NSUInteger i=0; i<[_objects count]; i++) {
+		if (![limitedKeys containsObject: [[_objects objectAtIndex: i] key]]) {
+			[self removeObject: [_objects objectAtIndex: i--]];
 			count++;
 		}
-    }
+	}
 	
 	return count;
 }
@@ -458,7 +458,7 @@ NSMutableDictionary *__fileObjectClasses = nil;
 
 - (id)files
 {
-    return nil;
+	return nil;
 }
 
 #pragma mark - Attached objects
@@ -492,31 +492,31 @@ NSMutableDictionary *__fileObjectClasses = nil;
 
 - (id)initWithPath:(NSString *)path
 {
-    Class class;
-    
-    if ((class = [BLFileObject classForPathExtension: [path pathExtension]]))
-        return [[class alloc] initWithPath: path];
-    
-    return nil;
+	Class class;
+	
+	if ((class = [BLFileObject classForPathExtension: [path pathExtension]]))
+		return [[class alloc] initWithPath: path];
+	
+	return nil;
 }
 
 - (id)initWithPathExtension:(NSString *)extension
 {
-    Class class;
-    
-    if ((class = [BLFileObject classForPathExtension: extension]))
-        return [[class alloc] initWithPathExtension: extension];
-    
-    return nil;
+	Class class;
+	
+	if ((class = [BLFileObject classForPathExtension: extension]))
+		return [[class alloc] initWithPathExtension: extension];
+	
+	return nil;
 }
 
 - (id)initWithPropertyList:(NSDictionary *)plist
 {
-    Class class;
-    
-    if ((class = NSClassFromString([plist objectForKey: BLFileClassKey])))
+	Class class;
+	
+	if ((class = NSClassFromString([plist objectForKey: BLFileClassKey])))
 		return [[class alloc] initWithPropertyList: plist];
-    
+	
 	return nil;
 }
 
