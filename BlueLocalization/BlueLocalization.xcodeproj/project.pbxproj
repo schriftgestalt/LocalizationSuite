@@ -73,9 +73,9 @@
 		50798259110A229000CB5D70 /* BLXLIFFImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50798257110A229000CB5D70 /* BLXLIFFImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5079825A110A229000CB5D70 /* BLXLIFFImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50798258110A229000CB5D70 /* BLXLIFFImporter.m */; };
 		507F05B71404E3A00008D824 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
-		507F05D91404E46C0008D824 /* OCMock.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5014BB0C0FB49C6600DC2EC3 /* OCMock.framework */; };
-		507F05DA1404E46C0008D824 /* hamcrest.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5014BB5A0FB4A3CC00DC2EC3 /* hamcrest.framework */; };
-		507F05DB1404E46C0008D824 /* BlueLocalization.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* BlueLocalization.framework */; };
+		507F05D91404E46C0008D824 /* OCMock.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5014BB0C0FB49C6600DC2EC3 /* OCMock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		507F05DA1404E46C0008D824 /* hamcrest.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5014BB5A0FB4A3CC00DC2EC3 /* hamcrest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		507F05DB1404E46C0008D824 /* BlueLocalization.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* BlueLocalization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		507F05DD1404E6750008D824 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247AF0F979D7D003B3522 /* main.m */; };
 		508C3243110BB99B00EA6CAD /* BLFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 508C3241110BB99B00EA6CAD /* BLFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		508C3244110BB99B00EA6CAD /* BLFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 508C3242110BB99B00EA6CAD /* BLFile.m */; };
@@ -275,10 +275,8 @@
 		5014B9910FB3362200DC2EC3 /* BLObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLObjectProxy.h; sourceTree = "<group>"; };
 		5014BB0C0FB49C6600DC2EC3 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = ../Shared/Frameworks/OCMock.framework; sourceTree = SOURCE_ROOT; };
 		5014BB5A0FB4A3CC00DC2EC3 /* hamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = hamcrest.framework; path = ../Shared/Frameworks/hamcrest.framework; sourceTree = SOURCE_ROOT; };
-		502148FE101605F900A8180B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/BLXcodeExporter.xib; sourceTree = "<group>"; };
 		50244FFA1095B911000AF365 /* StringsFileCreatorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringsFileCreatorTest.h; sourceTree = "<group>"; };
 		50244FFB1095B911000AF365 /* StringsFileCreatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringsFileCreatorTest.m; sourceTree = "<group>"; };
-		5024700C113002D3001DA94B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/BLDictionaryExporter.xib; sourceTree = "<group>"; };
 		5024701211300414001DA94B /* BLDictionaryExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDictionaryExporter.h; sourceTree = "<group>"; };
 		5024701311300414001DA94B /* BLDictionaryExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDictionaryExporter.m; sourceTree = "<group>"; };
 		5024F8F20FBB160600E6097F /* BLStringComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLStringComparison.h; path = ../../Extensions/BLStringComparison.h; sourceTree = "<group>"; };
@@ -310,7 +308,6 @@
 		507378CD1406752E00CC54C4 /* TXTFileCreatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXTFileCreatorTest.m; sourceTree = "<group>"; };
 		507981EF110A105300CB5D70 /* BLXLIFFExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXLIFFExporter.h; sourceTree = "<group>"; };
 		507981F0110A105300CB5D70 /* BLXLIFFExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXLIFFExporter.m; sourceTree = "<group>"; };
-		507981F5110A142F00CB5D70 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/BLXLIFFExporter.xib; sourceTree = "<group>"; };
 		50798257110A229000CB5D70 /* BLXLIFFImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXLIFFImporter.h; sourceTree = "<group>"; };
 		50798258110A229000CB5D70 /* BLXLIFFImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXLIFFImporter.m; sourceTree = "<group>"; };
 		507F05B51404E3A00008D824 /* TestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,7 +329,6 @@
 		508C3339110DC76600EA6CAD /* BLDocumentProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDocumentProtocol.h; sourceTree = "<group>"; };
 		508D0F9711359EDE00D50A2B /* BLTMXExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTMXExporter.h; sourceTree = "<group>"; };
 		508D0F9811359EDE00D50A2B /* BLTMXExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTMXExporter.m; sourceTree = "<group>"; };
-		508D0FA311359F8C00D50A2B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/BLTMXExporter.xib; sourceTree = "<group>"; };
 		50955157119496C0000FFC58 /* BLDocumentFileWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDocumentFileWrapper.h; sourceTree = "<group>"; };
 		50955158119496C0000FFC58 /* BLDocumentFileWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDocumentFileWrapper.m; sourceTree = "<group>"; };
 		509553981194ABF1000FFC58 /* BLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDocument.h; sourceTree = "<group>"; };
@@ -476,9 +472,6 @@
 		50C247B00F979D7D003B3522 /* UnitTests_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTests_Prefix.pch; sourceTree = "<group>"; };
 		50C247C10F979DAB003B3522 /* StringsDictionaryTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringsDictionaryTest.h; sourceTree = "<group>"; };
 		50C247C20F979DAB003B3522 /* StringsDictionaryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringsDictionaryTest.m; sourceTree = "<group>"; };
-		50C247DB0F979F1B003B3522 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/BLStringsExporter.xib; sourceTree = "<group>"; };
-		50C247DD0F979F1B003B3522 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		50C247DF0F979F1B003B3522 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		50C2481D0F979F8C003B3522 /* Test Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Test Data"; path = "Resources/Test Data"; sourceTree = SOURCE_ROOT; };
 		50CC9B1F115CE3D200AFC588 /* FileObjectTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileObjectTest.h; sourceTree = "<group>"; };
 		50CC9B20115CE3D200AFC588 /* FileObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileObjectTest.m; sourceTree = "<group>"; };
@@ -507,10 +500,17 @@
 		50F03BFC0FA60F5C00FDB765 /* BLProcessStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLProcessStep.m; sourceTree = "<group>"; };
 		50F03BFF0FA61F7D00FDB765 /* BLInterpreterStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLInterpreterStep.h; path = ../../Documents/Processing/BLInterpreterStep.h; sourceTree = "<group>"; };
 		50F03C000FA61F7D00FDB765 /* BLInterpreterStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLInterpreterStep.m; path = ../../Documents/Processing/BLInterpreterStep.m; sourceTree = "<group>"; };
-		50F03C0A0FA626C000FDB765 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/BLProcessStep.strings; sourceTree = "<group>"; };
 		50F03C0E0FA627AC00FDB765 /* BLInterpretationStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLInterpretationStep.h; path = ../../Documents/Processing/BLInterpretationStep.h; sourceTree = "<group>"; };
 		50F03C0F0FA627AC00FDB765 /* BLInterpretationStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLInterpretationStep.m; path = ../../Documents/Processing/BLInterpretationStep.m; sourceTree = "<group>"; };
-		50F6BA3210144B84008C8727 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/BLXcodeImporter.xib; sourceTree = "<group>"; };
+		56320E78230EBF27002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resources/Base.lproj/BLDictionaryExporter.xib; sourceTree = "<group>"; };
+		56320E79230EBF27002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BLStringsExporter.xib; sourceTree = "<group>"; };
+		56320E7A230EBF28002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BLTMXExporter.xib; sourceTree = "<group>"; };
+		56320E7B230EBF28002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resources/Base.lproj/BLXcodeExporter.xib; sourceTree = "<group>"; };
+		56320E7C230EBF28002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resources/Base.lproj/BLXcodeImporter.xib; sourceTree = "<group>"; };
+		56320E7D230EBF28002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resources/Base.lproj/BLXLIFFExporter.xib; sourceTree = "<group>"; };
+		56320E7E230EBF2E002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BLProcessStep.strings; sourceTree = "<group>"; };
+		56320E7F230EBF2E002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		56320E80230EBF2E002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* BlueLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlueLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1430,18 +1430,24 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastTestingUpgradeCheck = 0730;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Localization Suite";
+				TargetAttributes = {
+					8DC2EF4F0486A6940098B216 = {
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = 501EBC400854F27900FBC27B /* Build configuration list for PBXProject "BlueLocalization" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				Base,
+				fr,
+				en,
+				ja,
+				de,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* BlueLocalization */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -1677,7 +1683,7 @@
 		502148FD101605F900A8180B /* BLXcodeExporter.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				502148FE101605F900A8180B /* English */,
+				56320E7B230EBF28002A5878 /* Base */,
 			);
 			name = BLXcodeExporter.xib;
 			path = ..;
@@ -1686,7 +1692,7 @@
 		5024700B113002D3001DA94B /* BLDictionaryExporter.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5024700C113002D3001DA94B /* English */,
+				56320E78230EBF27002A5878 /* Base */,
 			);
 			name = BLDictionaryExporter.xib;
 			path = ..;
@@ -1695,7 +1701,7 @@
 		507981F4110A142F00CB5D70 /* BLXLIFFExporter.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				507981F5110A142F00CB5D70 /* English */,
+				56320E7D230EBF28002A5878 /* Base */,
 			);
 			name = BLXLIFFExporter.xib;
 			path = ..;
@@ -1704,7 +1710,7 @@
 		508D0FA211359F8C00D50A2B /* BLTMXExporter.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				508D0FA311359F8C00D50A2B /* English */,
+				56320E7A230EBF28002A5878 /* Base */,
 			);
 			name = BLTMXExporter.xib;
 			sourceTree = "<group>";
@@ -1712,7 +1718,7 @@
 		50C247DA0F979F1B003B3522 /* BLStringsExporter.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				50C247DB0F979F1B003B3522 /* English */,
+				56320E79230EBF27002A5878 /* Base */,
 			);
 			name = BLStringsExporter.xib;
 			sourceTree = "<group>";
@@ -1720,7 +1726,7 @@
 		50C247DC0F979F1B003B3522 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				50C247DD0F979F1B003B3522 /* English */,
+				56320E7F230EBF2E002A5878 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1728,7 +1734,7 @@
 		50C247DE0F979F1B003B3522 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				50C247DF0F979F1B003B3522 /* English */,
+				56320E80230EBF2E002A5878 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1736,7 +1742,7 @@
 		50F03C0C0FA626C700FDB765 /* BLProcessStep.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				50F03C0A0FA626C000FDB765 /* English */,
+				56320E7E230EBF2E002A5878 /* en */,
 			);
 			name = BLProcessStep.strings;
 			sourceTree = "<group>";
@@ -1744,7 +1750,7 @@
 		50F6BA3110144B84008C8727 /* BLXcodeImporter.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				50F6BA3210144B84008C8727 /* English */,
+				56320E7C230EBF28002A5878 /* Base */,
 			);
 			name = BLXcodeImporter.xib;
 			path = ..;
@@ -1757,7 +1763,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -1769,6 +1778,7 @@
 				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = BlueLocalization;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1777,16 +1787,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
@@ -1825,16 +1850,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
@@ -1855,8 +1894,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -1868,6 +1910,7 @@
 				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = BlueLocalization;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

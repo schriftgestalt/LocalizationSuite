@@ -75,8 +75,6 @@
 		50172E0F1403AA7E006EFC17 /* NSAlert-Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAlert-Extensions.h"; path = "../Shared/Source/NSAlert-Extensions.h"; sourceTree = "<group>"; };
 		50172E101403AA7E006EFC17 /* NSAlert-Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAlert-Extensions.m"; path = "../Shared/Source/NSAlert-Extensions.m"; sourceTree = "<group>"; };
 		5021C2A0113155600057F2D9 /* Localizer.help */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Localizer.help; path = Resources/Localizer.help; sourceTree = "<group>"; };
-		50241EA60EC35D8300122C6F /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Interface/English.lproj/Document.xib; sourceTree = "<group>"; };
-		50241EAC0EC35DA700122C6F /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Interface/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		504333A31049FD4D005BD65F /* Editor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Editor.h; sourceTree = "<group>"; };
 		504333A41049FD4D005BD65F /* Editor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Editor.m; sourceTree = "<group>"; };
 		504E0998130057EF006B5F4B /* BlueLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BlueLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,14 +84,10 @@
 		50515A0C03EDBE3000749D6B /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		50515A0D03EDBE3000749D6B /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
 		5052605505D5C32300429FDF /* Localizer.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Localizer.icns; path = Icons/Localizer.icns; sourceTree = "<group>"; };
-		50566598138415E200E8AB31 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Interface/English.lproj/Preferences.xib; sourceTree = "<group>"; };
 		5056659D1384161300E8AB31 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
 		5056659E1384161300E8AB31 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
 		505665A0138417A800E8AB31 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = ../Shared/Frameworks/BWToolkitFramework.framework; sourceTree = "<group>"; };
-		50597F000FCE8FF7001275A5 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Interface/English.lproj/Window.strings; sourceTree = "<group>"; };
-		505C938D0AB1A3AE007AEB26 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = Interface/English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		506FE7B31194720B009A67A8 /* lod.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = lod.icns; path = ../Shared/Icons/lod.icns; sourceTree = SOURCE_ROOT; };
-		507A47E405D6A20D0044A3E3 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = Interface/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		507A482805D6BFD90044A3E3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		50BB659D10B5C61A00A1AD4C /* StatisticsTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsTextView.h; sourceTree = "<group>"; };
 		50BB659E10B5C61A00A1AD4C /* StatisticsTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsTextView.m; sourceTree = "<group>"; };
@@ -102,6 +96,12 @@
 		50C3D25B0FC37D40005AEF1A /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = ../Shared/Updates/dsa_pub.pem; sourceTree = SOURCE_ROOT; };
 		56320E72230EA988002A5878 /* GSStringToAttributedValueTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSStringToAttributedValueTransformer.h; sourceTree = "<group>"; };
 		56320E73230EA988002A5878 /* GSStringToAttributedValueTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSStringToAttributedValueTransformer.m; sourceTree = "<group>"; };
+		56320E86230EBF66002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Interface/Base.lproj/Document.xib; sourceTree = "<group>"; };
+		56320E87230EBF66002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Interface/Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		56320E88230EBF67002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Interface/Base.lproj/Preferences.xib; sourceTree = "<group>"; };
+		56320E89230EBF6C002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Interface/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		56320E8A230EBF6C002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Interface/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		56320E8B230EBF6C002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Interface/en.lproj/Window.strings; sourceTree = "<group>"; };
 		56370B431D42136B0024CD02 /* GSGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGroupView.h; sourceTree = "<group>"; };
 		56370B441D42136B0024CD02 /* GSGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGroupView.m; sourceTree = "<group>"; };
 		56370B461D4221700024CD02 /* GSLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLine.h; sourceTree = "<group>"; };
@@ -286,7 +286,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Localization Suite";
 				TargetAttributes = {
 					8D15AC270486D014006FF6A4 = {
@@ -296,13 +296,14 @@
 			};
 			buildConfigurationList = 501EBC8B0855AE8600FBC27B /* Build configuration list for PBXProject "Localizer" */;
 			compatibilityVersion = "Xcode 10.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				de,
+				ja,
+				Base,
+				fr,
+				en,
 			);
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* Localizer */;
 			projectDirPath = "";
@@ -359,7 +360,7 @@
 		50241EA50EC35D8300122C6F /* Document.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				50241EA60EC35D8300122C6F /* English */,
+				56320E86230EBF66002A5878 /* Base */,
 			);
 			name = Document.xib;
 			sourceTree = "<group>";
@@ -367,7 +368,7 @@
 		50241EAB0EC35DA700122C6F /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				50241EAC0EC35DA700122C6F /* English */,
+				56320E87230EBF66002A5878 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -375,7 +376,7 @@
 		50566597138415E200E8AB31 /* Preferences.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				50566598138415E200E8AB31 /* English */,
+				56320E88230EBF67002A5878 /* Base */,
 			);
 			name = Preferences.xib;
 			sourceTree = "<group>";
@@ -383,7 +384,7 @@
 		50597EFF0FCE8FF7001275A5 /* Window.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				50597F000FCE8FF7001275A5 /* English */,
+				56320E8B230EBF6C002A5878 /* en */,
 			);
 			name = Window.strings;
 			sourceTree = "<group>";
@@ -391,7 +392,7 @@
 		505C938C0AB1A3AE007AEB26 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				505C938D0AB1A3AE007AEB26 /* English */,
+				56320E8A230EBF6C002A5878 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -399,7 +400,7 @@
 		507A47E305D6A20D0044A3E3 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				507A47E405D6A20D0044A3E3 /* English */,
+				56320E89230EBF6C002A5878 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -454,15 +455,27 @@
 		501EBC8C0855AE8600FBC27B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -484,15 +497,27 @@
 		501EBC8D0855AE8600FBC27B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
