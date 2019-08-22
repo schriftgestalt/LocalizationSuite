@@ -12,8 +12,8 @@
 
 - (id)initWithKeyObject:(BLKeyObject *)match matchPercentage:(float)percentage forTargetLanguage:(NSString *)language actualTargetLanguage:(NSString *)actualLanguage andMatchLanguage:(NSString *)matchLanguage
 {
-    self = [super init];
-    
+	self = [super init];
+	
 	if (self) {
 		_actualTargetLanguage = actualLanguage;
 		_targetLanguage = language;
@@ -21,8 +21,8 @@
 		_percentage = percentage;
 		_matchLanguage = matchLanguage;
 	}
-    
-    return self;
+	
+	return self;
 }
 
 
@@ -31,12 +31,12 @@
 
 - (BLKeyObject *)keyObject
 {
-    return _object;
+	return _object;
 }
 
 - (float)matchPercentage
 {
-    return _percentage;
+	return _percentage;
 }
 
 - (NSString *)targetLanguage
@@ -59,33 +59,33 @@
 
 - (NSAttributedString *)percentageString
 {
-    NSAttributedString *result;
-    NSColor *color;
-    
-    if (_percentage == 1.0)
-        color = [NSColor colorWithDeviceRed:0 green:0.5 blue:0 alpha:1.0];
-    else if (_percentage >= 0.75)
-        color = [NSColor colorWithDeviceRed:0.9 green:0.6 blue:0 alpha:1.0];
-    else if (_percentage >= 0.5)
-        color = [NSColor colorWithDeviceRed:0.8 green:0 blue:0 alpha:1.0];
-    else
-        color = [NSColor blackColor];
-    
-    result = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%0.0f%%", 100*[self matchPercentage]]
+	NSAttributedString *result;
+	NSColor *color;
+	
+	if (_percentage == 1.0)
+		color = [NSColor colorWithDeviceRed:0 green:0.5 blue:0 alpha:1.0];
+	else if (_percentage >= 0.75)
+		color = [NSColor colorWithDeviceRed:0.9 green:0.6 blue:0 alpha:1.0];
+	else if (_percentage >= 0.5)
+		color = [NSColor colorWithDeviceRed:0.8 green:0 blue:0 alpha:1.0];
+	else
+		color = [NSColor textColor];
+	
+	result = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%0.0f%%", 100*[self matchPercentage]]
 											 attributes:[NSDictionary dictionaryWithObject:color forKey:NSForegroundColorAttributeName]];
-    
-    return result;
+	
+	return result;
 }
 
 - (NSString *)matchedValue
 {
-    return [_object stringForLanguage: _matchLanguage];
+	return [_object stringForLanguage: _matchLanguage];
 }
 
 - (NSString *)targetValue
 {
 	NSString *language = (_actualTargetLanguage) ? _actualTargetLanguage : _targetLanguage;
-    return [_object stringForLanguage: language];
+	return [_object stringForLanguage: language];
 }
 
 

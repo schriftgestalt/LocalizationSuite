@@ -81,7 +81,7 @@
 	// Label
 	NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
 								[NSFont fontWithName:@"Helvetica Bold" size:10], NSFontAttributeName,
-								[NSColor whiteColor], NSForegroundColorAttributeName,
+								[NSColor textBackgroundColor], NSForegroundColorAttributeName,
 								nil];
 	rect.origin.x += 2;
 	rect.origin.y -= 1;

@@ -27,7 +27,7 @@
 	NSRect target;
 	
 	NSString *path = [[_document fileURL] path];
-	NSColor *altColor = ([self isHighlighted] && [[controlView window] firstResponder] == controlView && [[controlView window] isKeyWindow]) ? [NSColor whiteColor] : nil;
+	NSColor *altColor = ([self isHighlighted] && [[controlView window] firstResponder] == controlView && [[controlView window] isKeyWindow]) ? [NSColor textBackgroundColor] : nil;
 	
 	// Contains dict?
 	BOOL containsDict = ([_document isKindOfClass: [BLLocalizerDocument class]] && [_document embeddedDictionary]);
@@ -41,7 +41,7 @@
 	[icon drawInRect:target fromRect:source operation:NSCompositeSourceOver fraction:1.0];
 	
 	// Draw the file name
-	NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys: [NSFont systemFontOfSize: 13], NSFontAttributeName, (altColor) ? altColor : [NSColor blackColor], NSForegroundColorAttributeName, nil];
+	NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys: [NSFont systemFontOfSize: 13], NSFontAttributeName, (altColor) ? altColor : [NSColor textColor], NSForegroundColorAttributeName, nil];
 	target.origin = NSMakePoint(target.size.width + 6, 2 + cellFrame.origin.y);
 	target.size = NSMakeSize(cellFrame.size.width - target.origin.x - 150, 17);
 	[[[path lastPathComponent] stringByDeletingPathExtension] drawInRect:target withAttributes:attributes];

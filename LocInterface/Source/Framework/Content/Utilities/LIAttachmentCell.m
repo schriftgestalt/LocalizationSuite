@@ -107,7 +107,7 @@ NSString *LIAttachmentPasteboardType	= @"LIAttachment";
 	[self setHighlighted: hightlighted];
 	
 	// Delete mark
-	NSImage *delete = [self deleteImageWithColor: (![self isHighlighted]) ? [NSColor whiteColor] : [NSColor lightGrayColor]];
+	NSImage *delete = [self deleteImageWithColor: (![self isHighlighted]) ? [NSColor textBackgroundColor] : [NSColor lightGrayColor]];
 	NSRect fromRect = NSMakeRect(0, 0, [delete size].width, [delete size].height);
 	
 	[delete drawInRect:[self deleteButtonFrame: cellFrame] fromRect:fromRect operation:NSCompositeSourceOver fraction:1];

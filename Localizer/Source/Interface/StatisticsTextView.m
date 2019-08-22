@@ -11,22 +11,19 @@
 
 @implementation StatisticsTextView
 
-- (void)updateCurrentObjects
-{
+- (void)updateCurrentObjects {
 	[self willChangeValueForKey: @"currentObjects"];
 	[self didChangeValueForKey: @"currentObjects"];
 }
 
-- (NSArray *)currentObjects
-{
+- (NSArray *)currentObjects {
 	if ([[self delegate] respondsToSelector: @selector(currentObjectsInTextView:)])
 		return [(id)[self delegate] currentObjectsInTextView: self];
 	else
 		return nil;
 }
 
-- (NSArray *)currentLanguages
-{
+- (NSArray *)currentLanguages {
 	if ([[self delegate] respondsToSelector: @selector(currentLanguagesInTextView:)])
 		return [(id)[self delegate] currentLanguagesInTextView: self];
 	else

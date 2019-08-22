@@ -81,7 +81,7 @@ CGFloat			LTTranslationCheckerMaxLengthDeviation	= 50;
 	LTTranslationCheckerDefaultPlaceholders = [NSArray arrayWithObjects: @"%*@", @"^C", @"%*d", @"%*f", @"%*s", @"%c", @"%*x", @"%*i", @"%*u", nil];
 	LTTranslationCheckerIgnorePlaceholders = [NSArray arrayWithObjects: @"%%", @"%_", nil];
 	
-	LTTranslationCheckerStringEndingCharacters = [NSArray arrayWithObjects: @":", @";", @".", @"…", @"!", @"?", @")", @"]", @"}", @">", nil];
+	LTTranslationCheckerStringEndingCharacters = [NSArray arrayWithObjects: @":", @";", @".", @"…", @"!", @"?", @")", @"]", @"}", @">", @"。", nil];
 	
 	LTTranslationCheckerWhitespaceReplacements = [NSDictionary dictionaryWithObjectsAndKeys: @"<return>", @"\n", @"<tab>", @"\t", @"<space>", @" ", nil];
 	
@@ -249,7 +249,12 @@ CGFloat			LTTranslationCheckerMaxLengthDeviation	= 50;
 	transWhitespace = [translated substringFromIndex: transEnd];
 	origEnding = [original substringWithRange: origRange];
 	transEnding = [translated substringWithRange: transRange];
-	
+	if ([origEnding isEqualToString:@"。"]) {
+		origEnding = @".";
+	}
+	if ([transEnding isEqualToString:@"。"]) {
+		transEnding = @".";
+	}
 	if (![origEnding isEqual: transEnding]) {
 		description = [NSString stringWithFormat: NSLocalizedStringFromTableInBundle(@"Mismatching string ending", @"LTTranslationChecker", [NSBundle bundleForClass: [self class]], nil), origEnding, transEnding];
 		fix = [NSString stringWithFormat: @"%@%@%@", [translated substringToIndex: [translated length] - [transWhitespace length] - [transEnding length]], origEnding, transWhitespace];

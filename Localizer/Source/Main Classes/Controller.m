@@ -10,7 +10,7 @@
 
 #import "Document.h"
 #import "Preferences.h"
-
+#import "GSStringToAttributedValueTransformer.h"
 
 @implementation Controller
 
@@ -21,6 +21,8 @@
 {
 	[LILogWindow logWindow];
 	[[SUUpdater sharedUpdater] setDelegate: self];
+	NSValueTransformer *transformer = [[GSStringToAttributedValueTransformer alloc] init];
+	[NSValueTransformer setValueTransformer:transformer forName:@"GSStringToAttributedValueTransformer"];
 }
 
 

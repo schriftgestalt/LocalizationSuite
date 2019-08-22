@@ -31,30 +31,30 @@ id __sharedLIPreferences;
 
 - (id)init
 {
-    self = [super init];
-    
+	self = [super init];
+	
 	if (self) {
 		self.openDocuments = [NSArray array];
 		self.selectedDocument = nil;
 		
 		[self addObserver:self forKeyPath:@"openDocuments" options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionPrior context:@"documents"];
 	}
-    
-    return self;
+	
+	return self;
 }
 
 - (void)dealloc
 {
-    __sharedLIPreferences = nil;
+	__sharedLIPreferences = nil;
 	[query removeObserver:self forKeyPath:@"results"];
 }
 
 + (id)sharedInstance
 {
-    if (!__sharedLIPreferences)
-        __sharedLIPreferences = [[self alloc] init];
-    
-    return __sharedLIPreferences;
+	if (!__sharedLIPreferences)
+		__sharedLIPreferences = [[self alloc] init];
+	
+	return __sharedLIPreferences;
 }
 
 
@@ -72,7 +72,7 @@ id __sharedLIPreferences;
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if (context == @"documents") {
+	if (context == @"documents") {
 		if (![self.openDocuments containsObject: self.selectedDocument]) {
 			if ([self.openDocuments count])
 				self.selectedDocument = [self.openDocuments objectAtIndex: 0];
@@ -81,11 +81,11 @@ id __sharedLIPreferences;
 		}
 	}
 	else if (context == @"toolPaths") {
-        if ([change objectForKey: NSKeyValueChangeNotificationIsPriorKey])
+		if ([change objectForKey: NSKeyValueChangeNotificationIsPriorKey])
 			[self willChangeValueForKey: @"availableDeveloperTools"];
 		else
 			[self didChangeValueForKey: @"availableDeveloperTools"];
-    }
+	}
 	else {
 		[super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
 	}

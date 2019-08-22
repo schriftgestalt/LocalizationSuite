@@ -34,10 +34,10 @@ NSColor *BackgroundColorNotEditable;
 
 + (void)initialize
 {
-    [super initialize];
-    
-    BackgroundColorEditable = [NSColor whiteColor];
-    BackgroundColorNotEditable = [NSColor colorWithDeviceWhite:0.95 alpha:1.0];
+	[super initialize];
+	
+	BackgroundColorEditable = [NSColor textBackgroundColor];
+	BackgroundColorNotEditable = [NSColor controlBackgroundColor];
 }
 
 - (id)init
@@ -68,15 +68,14 @@ NSColor *BackgroundColorNotEditable;
 
 - (void)setUp
 {
-	[[leftEditor window] setBackgroundColor:[NSColor whiteColor]];
 	[document addObserver:self forKeyPath:@"selectedObject" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
 	[document addObserver:self forKeyPath:@"preferences.showTranslationProblems" options:0 context:@"ERROR"];
 	
 	[[BLDictionaryController sharedInstance] addObserver:self forKeyPath:@"useDocuments" options:0 context:@"MATCH"];
 	[[BLDictionaryController sharedInstance] addObserver:self forKeyPath:@"availableKeys" options:0 context:@"MATCH"];
 	
-    [leftEditor bind:@"backgroundColor" toObject:self withKeyPath:@"leftBackgroundColor" options:nil];
-    [rightEditor bind:@"backgroundColor" toObject:self withKeyPath:@"rightBackgroundColor" options:nil];
+	[leftEditor bind:@"backgroundColor" toObject:self withKeyPath:@"leftBackgroundColor" options:nil];
+	[rightEditor bind:@"backgroundColor" toObject:self withKeyPath:@"rightBackgroundColor" options:nil];
 	
 	[leftEditor setTextContainerInset:NSMakeSize(25, 6)];
 	[rightEditor setTextContainerInset:NSMakeSize(10, 6)];
@@ -102,7 +101,7 @@ NSColor *BackgroundColorNotEditable;
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if (object == document && [keyPath isEqual: @"selectedObject"]) {
+	if (object == document && [keyPath isEqual: @"selectedObject"]) {
 		// Remove observation
 		id oldObject = [change objectForKey: NSKeyValueChangeOldKey];
 		if (oldObject != [NSNull null]) {
@@ -113,15 +112,15 @@ NSColor *BackgroundColorNotEditable;
 			@catch (NSException *e) {}
 		}
 		
-        // Save changes
+		// Save changes
 		NSWindow *window = [leftEditor window];
 		if ([window firstResponder] == leftEditor)
 			[window endEditingFor: leftEditor];
 		if ([window firstResponder] == rightEditor)
 			[window endEditingFor: rightEditor];
-        
-        // Update contents
-        [self willChangeValueForKey: @"selectedObject"];
+		
+		// Update contents
+		[self willChangeValueForKey: @"selectedObject"];
 		[self didChangeValueForKey: @"selectedObject"];
 		
 		// Set rich text
@@ -144,7 +143,7 @@ NSColor *BackgroundColorNotEditable;
 	if (context == @"ERROR" || context == @"content")
 		[self notifyUpdateTranslationErrors];
 	if (context == @"content") {
-        [self willChangeValueForKey: @"selectedObject"];
+		[self willChangeValueForKey: @"selectedObject"];
 		[self didChangeValueForKey: @"selectedObject"];
 	}
 	
@@ -161,18 +160,18 @@ NSColor *BackgroundColorNotEditable;
 
 - (NSString *)comment
 {
-    if ([document selectedObject] != nil)
-        return [[document selectedObject] comment];
-    else
-        return @"";
+	if ([document selectedObject] != nil)
+		return [[document selectedObject] comment];
+	else
+		return @"";
 }
 
 - (void)setComment:(NSString *)aComment
 {
-    if ([document selectedObject] != nil) {
-        [[document selectedObject] setComment: aComment];
+	if ([document selectedObject] != nil) {
+		[[document selectedObject] setComment: aComment];
 		[document updateChangeCount: NSChangeDone];
-    }
+	}
 }
 
 + (NSSet *)keyPathsForValuesAffectingComment
@@ -182,24 +181,24 @@ NSColor *BackgroundColorNotEditable;
 
 - (id)valueForLeftLanguage
 {
-    if ([document selectedObject] != nil)
-        return [self valueForObject: [[document selectedObject] objectForLanguage: [[document preferences] objectForKey: DocumentViewOptionLeftLanguage]]];
-    else
-        return NSNoSelectionMarker;
+	if ([document selectedObject] != nil)
+		return [self valueForObject: [[document selectedObject] objectForLanguage: [[document preferences] objectForKey: DocumentViewOptionLeftLanguage]]];
+	else
+		return NSNoSelectionMarker;
 }
 
 - (void)setValueForLeftLanguage:(id)newValue
 {
-    id value;
-    
-    value = [self objectFromString:newValue withClass:[[[document selectedObject] class] classOfObjects]];
-    
-    if ([document selectedObject] != nil && ![[[document selectedObject] objectForLanguage: [[document preferences] objectForKey: DocumentViewOptionLeftLanguage]] isEqual: value]) {
-        [[document selectedObject] setObject:value forLanguage:[[document preferences] objectForKey: DocumentViewOptionLeftLanguage]];
+	id value;
+	
+	value = [self objectFromString:newValue withClass:[[[document selectedObject] class] classOfObjects]];
+	
+	if ([document selectedObject] != nil && ![[[document selectedObject] objectForLanguage: [[document preferences] objectForKey: DocumentViewOptionLeftLanguage]] isEqual: value]) {
+		[[document selectedObject] setObject:value forLanguage:[[document preferences] objectForKey: DocumentViewOptionLeftLanguage]];
 		[document updateChangeCount: NSChangeDone];
 		
 		[self notifyUpdateTranslationErrors];
-    }
+	}
 }
 
 + (NSSet *)keyPathsForValuesAffectingValueForLeftLanguage
@@ -209,23 +208,23 @@ NSColor *BackgroundColorNotEditable;
 
 - (id)valueForRightLanguage
 {
-    if ([document selectedObject] != nil)
-        return [self valueForObject: [[document selectedObject] objectForLanguage: [[document preferences] objectForKey: DocumentViewOptionRightLanguage]]];
-    else
-        return NSNoSelectionMarker;
+	if ([document selectedObject] != nil)
+		return [self valueForObject: [[document selectedObject] objectForLanguage: [[document preferences] objectForKey: DocumentViewOptionRightLanguage]]];
+	else
+		return NSNoSelectionMarker;
 }
 
 - (void)setValueForRightLanguage:(id)newValue
 {
-    id value;
-    
-    value = [self objectFromString:newValue withClass:[[[document selectedObject] class] classOfObjects]];
-    
-    if ([document selectedObject] != nil && ![[[document selectedObject] objectForLanguage: [[document preferences] objectForKey: DocumentViewOptionRightLanguage]] isEqual: value]) {
-        [[document selectedObject] setObject:value forLanguage:[[document preferences] objectForKey: DocumentViewOptionRightLanguage]];
+	id value;
+	
+	value = [self objectFromString:newValue withClass:[[[document selectedObject] class] classOfObjects]];
+	
+	if ([document selectedObject] != nil && ![[[document selectedObject] objectForLanguage: [[document preferences] objectForKey: DocumentViewOptionRightLanguage]] isEqual: value]) {
+		[[document selectedObject] setObject:value forLanguage:[[document preferences] objectForKey: DocumentViewOptionRightLanguage]];
 		[document updateChangeCount: NSChangeDone];
 		[self notifyUpdateTranslationErrors];
-    }
+	}
 }
 
 + (NSSet *)keyPathsForValuesAffectingValueForRightLanguage
@@ -242,19 +241,19 @@ NSColor *BackgroundColorNotEditable;
 	// Stop matcher
 	if ([_matcher isRunning])
 		[_matcher stop];
-    
+	
 	// Only update of enabled
 	if (!_matchingEnabled)
 		return;
 	
 	// Get the languages
-    if ([self leftFieldEditable]) {
-        language = [[document preferences] objectForKey: DocumentViewOptionLeftLanguage];
-        refLanguage = [[document preferences] objectForKey: DocumentViewOptionRightLanguage];
-    } else {
-        language = [[document preferences] objectForKey: DocumentViewOptionRightLanguage];
-        refLanguage = [[document preferences] objectForKey: DocumentViewOptionLeftLanguage];
-    }
+	if ([self leftFieldEditable]) {
+		language = [[document preferences] objectForKey: DocumentViewOptionLeftLanguage];
+		refLanguage = [[document preferences] objectForKey: DocumentViewOptionRightLanguage];
+	} else {
+		language = [[document preferences] objectForKey: DocumentViewOptionRightLanguage];
+		refLanguage = [[document preferences] objectForKey: DocumentViewOptionLeftLanguage];
+	}
 	
 	// Reset results and restart matcher
 	[self setMatches: nil];
@@ -285,7 +284,7 @@ NSColor *BackgroundColorNotEditable;
 			matches = [NSArray arrayWithObject: match];
 		
 		self.matches = [matches sortedArrayUsingDescriptors:
-				   [NSArray arrayWithObject: [[NSSortDescriptor alloc] initWithKey:@"matchPercentage" ascending:NO]]];
+						[NSArray arrayWithObject: [[NSSortDescriptor alloc] initWithKey:@"matchPercentage" ascending:NO]]];
 	}
 }
 
@@ -309,10 +308,10 @@ NSColor *BackgroundColorNotEditable;
 
 - (void)useKeyMatch:(LTKeyMatch *)match
 {
-    if ([match matchPercentage] == 1.0) {
-		BLKeyObject *object = document.selectedObject;		
-        [document selectNext: nil];
-	
+	if ([match matchPercentage] == 1.0) {
+		BLKeyObject *object = document.selectedObject;
+		[document selectNext: nil];
+		
 		if ([self rightFieldEditable])
 			[object setObject:[match targetValue] forLanguage: [document.preferences objectForKey: DocumentViewOptionRightLanguage]];
 		else
@@ -376,17 +375,17 @@ NSColor *BackgroundColorNotEditable;
 - (void)updateTranslationErrors
 {
 	NSString *language, *refLanguage;
-    
-	if (_errorsTimer)
-		_errorsTimer = nil; 
 	
-    if ([self leftFieldEditable]) {
-        language = [[document preferences] objectForKey: DocumentViewOptionLeftLanguage];
-        refLanguage = [[document preferences] objectForKey: DocumentViewOptionRightLanguage];
-    } else {
-        language = [[document preferences] objectForKey: DocumentViewOptionRightLanguage];
-        refLanguage = [[document preferences] objectForKey: DocumentViewOptionLeftLanguage];
-    }
+	if (_errorsTimer)
+		_errorsTimer = nil;
+	
+	if ([self leftFieldEditable]) {
+		language = [[document preferences] objectForKey: DocumentViewOptionLeftLanguage];
+		refLanguage = [[document preferences] objectForKey: DocumentViewOptionRightLanguage];
+	} else {
+		language = [[document preferences] objectForKey: DocumentViewOptionRightLanguage];
+		refLanguage = [[document preferences] objectForKey: DocumentViewOptionLeftLanguage];
+	}
 	
 	if ([document selectedObject] && [[[document preferences] objectForKey: DocumentViewOptionShowProblems] boolValue])
 		[self setTranslationErrors: [LTTranslationChecker calculateTranslationErrorsForKeyObject:[document selectedObject] forLanguage:language withReference:refLanguage]];
@@ -402,11 +401,11 @@ NSColor *BackgroundColorNotEditable;
 
 - (IBAction)fixError:(id)sender
 {
-    LTTranslationProblem *problem;
-    
-    problem = [[errorsArrayController arrangedObjects] objectAtIndex: [sender clickedRow]];
+	LTTranslationProblem *problem;
+	
+	problem = [[errorsArrayController arrangedObjects] objectAtIndex: [sender clickedRow]];
 	[problem fix];
-    
+	
 	[self beginEditing];
 	[self updateTranslationErrors];
 }
@@ -416,7 +415,7 @@ NSColor *BackgroundColorNotEditable;
 
 - (BOOL)leftFieldEditable
 {
-    return ![[[document preferences] objectForKey: DocumentViewOptionLeftLanguage] isEqual: [document referenceLanguage]];
+	return ![[[document preferences] objectForKey: DocumentViewOptionLeftLanguage] isEqual: [document referenceLanguage]];
 }
 
 + (NSSet *)keyPathsForValuesAffectingLeftFieldEditable
@@ -426,7 +425,7 @@ NSColor *BackgroundColorNotEditable;
 
 - (BOOL)rightFieldEditable
 {
-    return ![[[document preferences] objectForKey: DocumentViewOptionRightLanguage] isEqual: [document referenceLanguage]];
+	return ![[[document preferences] objectForKey: DocumentViewOptionRightLanguage] isEqual: [document referenceLanguage]];
 }
 
 + (NSSet *)keyPathsForValuesAffectingRightFieldEditable
@@ -436,10 +435,10 @@ NSColor *BackgroundColorNotEditable;
 
 - (NSColor *)leftBackgroundColor
 {
-    if ([self leftFieldEditable])
-        return BackgroundColorEditable;
-    else
-        return BackgroundColorNotEditable;
+	if ([self leftFieldEditable])
+		return BackgroundColorEditable;
+	else
+		return BackgroundColorNotEditable;
 }
 
 + (NSSet *)keyPathsForValuesAffectingLeftBackgroundColor
@@ -449,10 +448,10 @@ NSColor *BackgroundColorNotEditable;
 
 - (NSColor *)rightBackgroundColor
 {
-    if ([self rightFieldEditable])
-        return BackgroundColorEditable;
-    else
-        return BackgroundColorNotEditable;
+	if ([self rightFieldEditable])
+		return BackgroundColorEditable;
+	else
+		return BackgroundColorNotEditable;
 }
 
 + (NSSet *)keyPathsForValuesAffectingRightBackgroundColor
@@ -477,26 +476,32 @@ NSColor *BackgroundColorNotEditable;
 
 - (NSAttributedString *)valueForObject:(id)object
 {
-    NSAttributedString *string = nil;
-    
-    if ([object isKindOfClass: [NSString class]])
-        string = [[NSAttributedString alloc] initWithString: object];
-    else if ([object isKindOfClass: [NSAttributedString class]])
-        string = object;
-    
-    return string;
+	NSAttributedString *string = nil;
+	
+	if ([object isKindOfClass: [NSString class]])
+		string = [[NSAttributedString alloc] initWithString: object];
+	else if ([object isKindOfClass: [NSAttributedString class]])
+		string = object;
+	
+	return string;
 }
 
 - (id)objectFromString:(NSAttributedString *)string withClass:(Class)class
 {
-    id object = nil;
+	id object = nil;
 	
-    if ([class isSubclassOfClass: [NSString class]])
-		object = [string string];
-    else if (class == [NSAttributedString class])
-        object = string;
-    
-    return object;
+	if ([class isSubclassOfClass: [NSString class]]) {
+		if (![string isKindOfClass:class]) {
+			object = [string string];
+		}
+		else {
+			object = string;
+		}
+	}
+	else if (class == [NSAttributedString class])
+		object = string;
+	
+	return object;
 }
 
 #pragma mark - Statistics

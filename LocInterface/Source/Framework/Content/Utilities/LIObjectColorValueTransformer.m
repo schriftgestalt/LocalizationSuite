@@ -28,7 +28,7 @@ NSString *LIObjectColorValueTransformerName = @"LIObjectColor";
 	BLObject *object;
 	
 	if (![value isKindOfClass: [BLObject class]])
-		return [NSColor blackColor];
+		return [NSColor textColor];
 	object = (BLObject *)value;
 	
 	if ([[object errors] count] > 0)
@@ -36,7 +36,7 @@ NSString *LIObjectColorValueTransformerName = @"LIObjectColor";
 	else if ([object isKindOfClass: [BLBundleObject class]])
 		return [NSColor disabledControlTextColor];
 	else
-		return [NSColor blackColor];
+		return [NSColor textColor];
 }
 
 @end

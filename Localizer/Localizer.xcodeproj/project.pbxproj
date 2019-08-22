@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,6 +37,7 @@
 		50C3D1A60FC37A32005AEF1A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C3D1A50FC37A32005AEF1A /* Sparkle.framework */; };
 		50C3D1A70FC37A3D005AEF1A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50C3D1A50FC37A32005AEF1A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		50C3D25C0FC37D40005AEF1A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 50C3D25B0FC37D40005AEF1A /* dsa_pub.pem */; };
+		56320E74230EA988002A5878 /* GSStringToAttributedValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56320E73230EA988002A5878 /* GSStringToAttributedValueTransformer.m */; };
 		56370B451D42136B0024CD02 /* GSGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56370B441D42136B0024CD02 /* GSGroupView.m */; };
 		56370B481D4221700024CD02 /* GSLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 56370B471D4221700024CD02 /* GSLine.m */; };
 		565DBF2F1D42066C000513F0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565DBF2E1D42066C000513F0 /* Cocoa.framework */; };
@@ -99,6 +100,8 @@
 		50C3D18E0FC3792D005AEF1A /* loc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = loc.icns; path = ../Shared/Icons/loc.icns; sourceTree = SOURCE_ROOT; };
 		50C3D1A50FC37A32005AEF1A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../Shared/Frameworks/Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		50C3D25B0FC37D40005AEF1A /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = ../Shared/Updates/dsa_pub.pem; sourceTree = SOURCE_ROOT; };
+		56320E72230EA988002A5878 /* GSStringToAttributedValueTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSStringToAttributedValueTransformer.h; sourceTree = "<group>"; };
+		56320E73230EA988002A5878 /* GSStringToAttributedValueTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSStringToAttributedValueTransformer.m; sourceTree = "<group>"; };
 		56370B431D42136B0024CD02 /* GSGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGroupView.h; sourceTree = "<group>"; };
 		56370B441D42136B0024CD02 /* GSGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGroupView.m; sourceTree = "<group>"; };
 		56370B461D4221700024CD02 /* GSLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLine.h; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 		50E8D89D08CDBF71003F43C3 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				56320E72230EA988002A5878 /* GSStringToAttributedValueTransformer.h */,
+				56320E73230EA988002A5878 /* GSStringToAttributedValueTransformer.m */,
 				50BB659D10B5C61A00A1AD4C /* StatisticsTextView.h */,
 				50BB659E10B5C61A00A1AD4C /* StatisticsTextView.m */,
 				56370B431D42136B0024CD02 /* GSGroupView.h */,
@@ -290,7 +295,7 @@
 				};
 			};
 			buildConfigurationList = 501EBC8B0855AE8600FBC27B /* Build configuration list for PBXProject "Localizer" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -344,6 +349,7 @@
 				50BB659F10B5C61A00A1AD4C /* StatisticsTextView.m in Sources */,
 				5056659F1384161300E8AB31 /* Preferences.m in Sources */,
 				50172E111403AA7E006EFC17 /* NSAlert-Extensions.m in Sources */,
+				56320E74230EA988002A5878 /* GSStringToAttributedValueTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +413,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = X2L8375ZQ7;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -429,6 +436,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = X2L8375ZQ7;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

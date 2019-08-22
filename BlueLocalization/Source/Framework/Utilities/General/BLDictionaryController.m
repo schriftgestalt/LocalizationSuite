@@ -51,34 +51,34 @@ id __sharedDictionaryController = nil;
 
 - (id)init
 {
-    self = [super init];
+	self = [super init];
 	
-    _dictionaries = [[NSMutableArray alloc] init];
+	_dictionaries = [[NSMutableArray alloc] init];
 	_documents = [[NSMutableArray alloc] init];
-    _keys = [[NSMutableArray alloc] init];
+	_keys = [[NSMutableArray alloc] init];
 	_useDocuments = NO;
-    
+	
 	__sharedDictionaryController = self;
 	
 	[self loadSettings];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillTerminate:) name:NSApplicationWillTerminateNotification object:NSApp];
-    
-    return self;
+	
+	return self;
 }
 
 - (void)dealloc
 {
-    
-    __sharedDictionaryController = nil;
-    
+	
+	__sharedDictionaryController = nil;
+	
 }
 
 + (id)sharedInstance
 {
-    if (!__sharedDictionaryController)
-        __sharedDictionaryController = [[self alloc] init];
-    
-    return __sharedDictionaryController;
+	if (!__sharedDictionaryController)
+		__sharedDictionaryController = [[self alloc] init];
+	
+	return __sharedDictionaryController;
 }
 
 
@@ -86,18 +86,18 @@ id __sharedDictionaryController = nil;
 
 - (void)loadSettings
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    [self registerDictionariesAtPathURLs: [defaults objectForKey: LTDictionaryControllerDictionaryURLsKey]];
-    [self setUseDocuments: [defaults boolForKey: LTDictionaryControllerUseDocumentsKey]];
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	
+	[self registerDictionariesAtPathURLs: [defaults objectForKey: LTDictionaryControllerDictionaryURLsKey]];
+	[self setUseDocuments: [defaults boolForKey: LTDictionaryControllerUseDocumentsKey]];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	
-    [defaults setObject:[_dictionaries valueForKeyPath: @"fileURL.absoluteString"] forKey:LTDictionaryControllerDictionaryURLsKey];
-    [defaults setBool:[self useDocuments] forKey:LTDictionaryControllerUseDocumentsKey];
+	[defaults setObject:[_dictionaries valueForKeyPath: @"fileURL.absoluteString"] forKey:LTDictionaryControllerDictionaryURLsKey];
+	[defaults setBool:[self useDocuments] forKey:LTDictionaryControllerUseDocumentsKey];
 }
 
 

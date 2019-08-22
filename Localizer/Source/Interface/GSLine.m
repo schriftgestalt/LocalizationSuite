@@ -11,7 +11,7 @@
 @implementation GSLine
 
 - (void)drawRect:(NSRect)dirtyRect {
-	[[NSColor colorWithCalibratedWhite:0.6 alpha:1] set];
+	[[NSColor tertiaryLabelColor] set];
 	NSRectFill(dirtyRect);
 }
 
