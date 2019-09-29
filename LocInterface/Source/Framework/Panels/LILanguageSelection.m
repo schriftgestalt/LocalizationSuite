@@ -104,7 +104,14 @@ NSString *LILanguageSelectionNibName = @"LILanguageSelection";
 	[[self window] makeFirstResponder: searchField];
 }
 
+- (void)beginSheetModalForWindow:(NSWindow *)window completionHandler:(void (^)(NSModalResponse))handler
+{
+	if (!view)
+		[self loadInterface];
+	[self setAccessoryView: view];
+	
+	[super beginSheetModalForWindow:window completionHandler:handler];
+	[[self window] makeFirstResponder: searchField];
+}
 
 @end
-
-

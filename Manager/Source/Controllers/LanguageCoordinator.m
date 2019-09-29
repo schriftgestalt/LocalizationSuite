@@ -76,7 +76,7 @@
 			return;
 		
 		for (NSString *language in selection.selectedLanguages)
-			[document addLanguage: [BLLanguageTranslator identifierForLanguage: language]];
+			[self->document addLanguage: [BLLanguageTranslator identifierForLanguage: language]];
 	}];
 }
 
@@ -94,7 +94,7 @@
 		if (result != NSAlertFirstButtonReturn)
 			return;
 		
-		[document addLanguage: selection.language];
+		[self->document addLanguage: selection.language];
 	}];
 }
 
