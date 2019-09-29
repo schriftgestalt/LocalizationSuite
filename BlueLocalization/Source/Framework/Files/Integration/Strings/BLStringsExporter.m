@@ -261,7 +261,7 @@ id __sharedStringsExporter;
 			if (separateFiles) {
 				NSString *writePath;
 				
-				// Get the write path and appen .strings extension if necessary
+				// Get the write path and append .strings extension if necessary
 				writePath = [bundlePath stringByAppendingPathComponent: [fileObject name]];
 				if (![[writePath pathExtension] isEqual: kStringsPathExtension])
 					writePath = [writePath stringByAppendingPathExtension: kStringsPathExtension];
