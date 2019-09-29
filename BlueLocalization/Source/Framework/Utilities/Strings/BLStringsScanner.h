@@ -18,7 +18,7 @@
  @discussion No processing is done on the data, this has to be done separately. It is expected (and not checked) that all inputs are set correctly, especially that the mutability is given to all mutable arguments. The arguments strings, comments and keys may be nil though, if the output is not needed.
  @return YES on success, NO otherwise.
  */
-+ (BOOL)scanString:(NSString *)string toDictionary:(NSMutableDictionary *)strings withComments:(NSMutableDictionary *)comments andKeyOrder:(NSMutableArray *)keys;
++ (BOOL)scanString:(NSString *)string toDictionary:(NSMutableDictionary *)strings withLeadingComments:(NSMutableDictionary *)leadingComments withInlineComments:(NSMutableDictionary *)inlineComments andKeyOrder:(NSMutableArray *)keys;
 
 /*!
  @abstract Scans through the string and replaces all values with the ones in the dictionary.

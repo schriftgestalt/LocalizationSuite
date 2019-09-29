@@ -15,19 +15,20 @@
 
 + (NSDictionary *)dictionaryWithStringsAtPath:(NSString *)path
 {
-	return [self dictionaryWithStringsAtPath:path scannedComments:NULL scannedKeyOrder:NULL];
+	return [self dictionaryWithStringsAtPath:path scannedLeadingComments:NULL scannedInlineComments:NULL scannedKeyOrder:NULL];
 }
 
-+ (NSDictionary *)dictionaryWithStringsAtPath:(NSString *)path scannedComments:(NSDictionary **)outComments scannedKeyOrder:(NSArray **)keyOrder
++ (NSDictionary *)dictionaryWithStringsAtPath:(NSString *)path scannedLeadingComments:(NSDictionary **)outLeadingComments scannedInlineComments:(NSDictionary **)outInlineComments scannedKeyOrder:(NSArray **)keyOrder
 {
-	NSMutableDictionary *strings, *comments;
-	NSMutableArray *keys;
+	NSMutableDictionary<NSString*, NSString*> *strings, *leadingComments, *inlineComments;
+	NSMutableArray<NSString*> *keys;
 	NSString *content;
 	
 	// Initialize
 	keys = [NSMutableArray array];
 	strings = [NSMutableDictionary dictionary];
-	comments = [NSMutableDictionary dictionary];
+	leadingComments = [NSMutableDictionary dictionary];
+	inlineComments = [NSMutableDictionary dictionary];
 	
 	// Load file
 	content = [NSString stringWithContentsOfFile:path usedEncoding:NULL error:NULL];
@@ -35,12 +36,14 @@
 		return nil;
 	
 	// The heavy work
-	if (![BLStringsScanner scanString:content toDictionary:strings withComments:comments andKeyOrder:keys])
+	if (![BLStringsScanner scanString:content toDictionary:strings withLeadingComments:leadingComments withInlineComments:inlineComments andKeyOrder:keys])
 		return nil;
 	
 	// Return values
-	if (outComments)
-		*outComments = comments;
+	if (outLeadingComments)
+		*outLeadingComments = leadingComments;
+	if (outInlineComments)
+		*outInlineComments = inlineComments;
 	if (keyOrder)
 		*keyOrder = keys;
 	return strings;

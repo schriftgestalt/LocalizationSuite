@@ -50,7 +50,7 @@ void BLLogBeginGroup(NSString *format, ...);
  @abstract End the last opened group.
  @discussion Throws an NSInternalInconsistencyException if no group has been opened before.
  */
-void BLLogEndGroup();
+void BLLogEndGroup(void);
 
 /*!
  @abstract The logging facility of the BlueLocalization framework.

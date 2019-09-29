@@ -340,14 +340,18 @@ NSMutableDictionary *__fileInterpreterClasses	= nil;
 	_forward = aInterpreter;
 }
 
-- (void)_emitKey:(NSString *)key value:(id)value comment:(NSString *)comment
+- (void)_emitKey:(NSString *)key value:(id)value leadingComment:(NSString *)leadingComment inlineComment:(NSString*)inlineComment
 {
 	// Interpreter forwarding implementation
 	if (_forward) {
-		[_forward _emitKey:key value:value comment:comment];
+		[_forward _emitKey:key value:value leadingComment:leadingComment inlineComment:inlineComment];
 		return;
 	}
 	
+	//	if (comment.length > 0 || !_asReference && ([key isEqualToString:@"Kind.Image"] || [key isEqualToString:@"Exactly four characters need to be entered"])) {
+	//		key = key;
+	//	}
+
 	// Find an existing key object
 	BLKeyObject *keyObject = [_fileObject objectForKey:key createIfNeeded:NO];
 	BOOL isNew = (keyObject == nil);
@@ -398,10 +402,13 @@ NSMutableDictionary *__fileInterpreterClasses	= nil;
 	
 	// Set comment
 	if ([self optionIsActive: BLFileInterpreterImportComments] && [self optionIsActive: BLFileInterpreterAllowChangesToKeyObjects]) {
-			if (comment && [comment length]) {
+		NSString *comment = inlineComment ? inlineComment : leadingComment;	// prefer inline over leading comment
+		if (comment) {
 			[keyObject setComment: comment];
-				_lastComment = comment;
-			} else if ([self optionIsActive: BLFileInterpreterEnableShadowComments] && _lastComment && [_lastComment length]) {
+		}
+		if (leadingComment) {	// TT 29Sep19 fix: In order to be able to clear a previously set _lastComment, we need to allow empty non-nil comments here
+			_lastComment = [leadingComment length] ? leadingComment : nil;
+		} else if (!comment && [self optionIsActive: BLFileInterpreterEnableShadowComments] && [_lastComment length]) {
 			[keyObject setComment: _lastComment];
 		}
 	}
@@ -409,6 +416,7 @@ NSMutableDictionary *__fileInterpreterClasses	= nil;
 	// Set updated flag
 	if ([self optionIsActive: BLFileInterpreterTrackValueChangesAsUpdate] && !isNew && ![value isEqual: oldValue])
 		[keyObject setWasUpdated: YES];
+
 }
 
 - (void)autotranslateUsingObjects:(NSArray *)translations

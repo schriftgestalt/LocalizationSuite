@@ -23,7 +23,7 @@
  @discussion If outComments is not NULL, a Dictionary containing all found comments will be returned. If keyOrder is not NULL, a array containing the order of the scanned keys will be included.
  @return The scanned dictionary, or nil on failure.
  */
-+ (NSDictionary *)dictionaryWithStringsAtPath:(NSString *)path scannedComments:(NSDictionary **)outComments scannedKeyOrder:(NSArray **)keyOrder;
++ (NSDictionary *)dictionaryWithStringsAtPath:(NSString *)path scannedLeadingComments:(NSDictionary **)outLeadingComments scannedInlineComments:(NSDictionary **)outInlineComments scannedKeyOrder:(NSArray **)keyOrder;
 
 /*!
  @abstract Writes the dictionary of strings to path.

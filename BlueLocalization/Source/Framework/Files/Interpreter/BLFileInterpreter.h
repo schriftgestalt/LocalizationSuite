@@ -214,7 +214,7 @@ enum {
  @abstract The primitive method to be used by subclasses to emit scanned values.
  @discussion The order in which this method will be called and in which the keys are being returned is the order in the final file object.
  */
-- (void)_emitKey:(NSString *)key value:(id)value comment:(NSString *)comment;
+- (void)_emitKey:(NSString *)key value:(id)value leadingComment:(NSString *)leadingComment inlineComment:(NSString*)inlineComment;
 
 @end
 

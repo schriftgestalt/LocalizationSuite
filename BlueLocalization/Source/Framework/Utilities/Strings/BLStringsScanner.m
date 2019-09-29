@@ -16,7 +16,7 @@
 /*!
  @abstract Internal scan method, scnas AND updates at the same time.
  */
-+ (BOOL)_processScanString:(NSString *)string result:(NSString **)outString targetDictionary:(NSMutableDictionary *)strings withComments:(NSMutableDictionary *)comments andKeyOrder:(NSMutableArray *)keys replacements:(NSDictionary *)replacements;
++ (BOOL)_processScanString:(NSString *)string result:(NSString **)outString targetDictionary:(NSMutableDictionary *)strings withLeadingComments:(NSMutableDictionary *)leadingComments withInlineComments:(NSMutableDictionary *)inlineComments andKeyOrder:(NSMutableArray *)keys replacements:(NSDictionary *)replacements;
 
 /*!
  @abstract Scanns comments using the given scanner.
@@ -53,15 +53,15 @@
 
 @implementation BLStringsScanner
 
-+ (BOOL)scanString:(NSString *)string toDictionary:(NSMutableDictionary *)strings withComments:(NSMutableDictionary *)comments andKeyOrder:(NSMutableArray *)keys
++ (BOOL)scanString:(NSString *)string toDictionary:(NSMutableDictionary *)strings withLeadingComments:(NSMutableDictionary *)leadingComments withInlineComments:(NSMutableDictionary *)inlineComments andKeyOrder:(NSMutableArray *)keys
 {
-	return [self _processScanString:string result:NULL targetDictionary:strings withComments:comments andKeyOrder:keys replacements:nil];
+	return [self _processScanString:string result:NULL targetDictionary:strings withLeadingComments:leadingComments withInlineComments:inlineComments andKeyOrder:keys replacements:nil];
 }
 
 + (NSString *)scanAndUpdateString:(NSString *)string withReplacementDictionary:(NSDictionary *)strings
 {
 	NSString *result = nil;
-	if ([self _processScanString:string result:&result targetDictionary:nil withComments:nil andKeyOrder:nil replacements:strings])
+	if ([self _processScanString:string result:&result targetDictionary:nil withLeadingComments:nil withInlineComments:nil andKeyOrder:nil replacements:strings])
 		return result;
 	else
 		return nil;
@@ -69,7 +69,7 @@
 
 #pragma mark - Scanning
 
-+ (BOOL)_processScanString:(NSString *)string result:(NSString **)outString targetDictionary:(NSMutableDictionary *)strings withComments:(NSMutableDictionary *)comments andKeyOrder:(NSMutableArray *)keys replacements:(NSDictionary *)replacements
++ (BOOL)_processScanString:(NSString *)string result:(NSString **)outString targetDictionary:(NSMutableDictionary *)strings withLeadingComments:(NSMutableDictionary *)leadingComments withInlineComments:(NSMutableDictionary *)inlineComments andKeyOrder:(NSMutableArray *)keys replacements:(NSDictionary *)replacements
 {
 	// Initialization
 	NSScanner *scanner = [NSScanner scannerWithString: string];
@@ -83,10 +83,10 @@
 	
 	// Scanning loop, each run should be one key/value pair
 	while (![scanner isAtEnd]) {
-		NSString *key, *comment, *value;
+		NSString *key, *leadingComment, *inlineComment, *value;
 		
-		// Scan comments and key
-		comment = [self _scannerScanComments: scanner];
+		// Scan leading comments and key
+		leadingComment = [self _scannerScanComments: scanner];
 		key = [self _scannerScanString: scanner];
 		
 		// Check for the = between key and value
@@ -101,7 +101,7 @@
 		
 		// Scan the value
 		value = [self _scannerScanString: scanner];
-		
+
 		// Output value
 		if (result && [scanner scanLocation] != updateLocation) {
 			if ([replacements objectForKey: key])
@@ -118,13 +118,29 @@
 		if ((value || key) && ![scanner scanString:@";" intoString:NULL])
 			BLLog(BLLogWarning, @"Expected a \";\" after a value... Ignored. (line/position: %d/%d)", [scanner currentLine], [scanner currentOffsetInLine]);
 		
+		// Do we have a trailing comment within the current line?
+		if (value || key) {
+			NSUInteger lastPos = scanner.scanLocation;
+			NSCharacterSet *lastSkipped = scanner.charactersToBeSkipped;
+			scanner.charactersToBeSkipped = [NSCharacterSet whitespaceCharacterSet];	// skip whitespace but no CR/LF
+			BOOL hasComment = [scanner scanString:@"/" intoString:NULL];
+			scanner.scanLocation = lastPos;
+			if (hasComment) {
+				// Scan comment, but only until end of line
+				inlineComment = [self _scannerScanComments: scanner];
+			}
+			scanner.charactersToBeSkipped = lastSkipped;
+		}
+		
 		if (key) {
 			[keys addObject: key];
 			
 			if (value)
 				[strings setObject:value forKey:key];
-			if (comment)
-				[comments setObject:comment forKey:key];
+			if (leadingComment)
+				[leadingComments setObject:leadingComment forKey:key];
+			if (inlineComment)
+				[inlineComments setObject:inlineComment forKey:key];
 		}
 		
 		// Liveness criteria
@@ -158,7 +174,7 @@
 + (NSString *)_scannerScanComments:(NSScanner *)scanner
 {
 	NSString *comment = nil;
-	
+
 	// Check for a comment start
 	while (![scanner isAtEnd] && [scanner scanString:@"/" intoString:NULL]) {
 		NSString *scan = nil;
@@ -173,6 +189,10 @@
 			// Scan to to the end of the comment
 			[scanner scanUpToString:@"*/" intoString:&scan];
 			[scanner scanString:@"*/" intoString:NULL];
+			if (scan == nil) {
+				// We got an empty comment -> return empty string, not nil
+				scan = @"";
+			}
 		}
 		// No comment, just a slash?
 		else {
@@ -199,7 +219,7 @@
 		
 		// The string is empty
 		if ([scanner scanString:@"\"" intoString:NULL]) {
-			// Reset the scanner to it's previous state
+			// Reset the scanner to its previous state
 			[scanner setCharactersToBeSkipped: skippedSet];
 			// Return an empty result
 			return [self _processString: @""];
@@ -233,7 +253,7 @@
 			scan = nil;
 		}
 		
-		// Reset the scanner to it's previous state
+		// Reset the scanner to its previous state
 		[scanner setCharactersToBeSkipped: skippedSet];
 		
 		return [self _processString: string];
