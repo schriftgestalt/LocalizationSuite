@@ -48,8 +48,8 @@
 		_steps = 0;
 		_stepsCompleted = 0;
 		
-		[_queue setMaxConcurrentOperationCount: 1];
-//		[_queue setMaxConcurrentOperationCount: [NSProcessInfo processInfo].processorCount];
+//		[_queue setMaxConcurrentOperationCount: 1];
+		[_queue setMaxConcurrentOperationCount: [NSProcessInfo processInfo].processorCount];
 		[_queue addObserver:self forKeyPath:@"operations" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NULL];
 	}
 	
