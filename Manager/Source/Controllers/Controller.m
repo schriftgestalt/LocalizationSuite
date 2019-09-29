@@ -209,7 +209,7 @@ id __sharedControllerInstance;
 
 - (IBAction)addLanguage:(id)sender
 {
-	[[[NSDocumentController sharedDocumentController] currentDocument] addLanguage: sender];
+	[[[NSDocumentController sharedDocumentController] currentDocument] addNewLanguage: sender];
 }
 
 - (IBAction)addCustomLanguage:(id)sender
