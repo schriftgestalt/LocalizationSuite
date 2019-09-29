@@ -274,8 +274,8 @@ NSMutableDictionary *__fileInterpreterClasses	= nil;
 	
 	// Sort key objects like the keys
 	_fileObject.objects = [_fileObject.objects sortedArrayUsingComparator:^NSComparisonResult(BLFileObject *obj1, BLFileObject *obj2) {
-		NSUInteger v1 = [_emittedKeys indexOfObject: obj1.key];
-		NSUInteger v2 = [_emittedKeys indexOfObject: obj2.key];
+		NSUInteger v1 = [self->_emittedKeys indexOfObject: obj1.key];
+		NSUInteger v2 = [self->_emittedKeys indexOfObject: obj2.key];
 		
 		if (v1 < v2)
 			return NSOrderedAscending;
@@ -348,70 +348,67 @@ NSMutableDictionary *__fileInterpreterClasses	= nil;
 		return;
 	}
 	
-	@autoreleasepool {
-		// Find an existing key object
-		BLKeyObject *keyObject = [_fileObject objectForKey:key createIfNeeded:NO];
-		BOOL isNew = (keyObject == nil);
-		
-		// Create key object if option is active
-		if (!keyObject && [self optionIsActive: BLFileInterpreterAllowChangesToKeyObjects])
-			keyObject = [_fileObject objectForKey:key createIfNeeded:YES];
-		if (!keyObject)
-			return;
-		
-		// Remember the key and the old value
-		[_emittedKeys addObject: key];
-		id oldValue = [keyObject objectForLanguage: _language];
-		
-		// Check for non-reference changes that are for deactivated keys or that are equal to the reference value and as such will not get imported
-		if (!_asReference && [self optionIsActive: BLFileInterpreterImportNonReferenceValuesOnly]
-			&& (![keyObject isActive] || [value isEqual: [keyObject objectForLanguage: _reference]]))
-			return;
-		
-		// Reset key if value changed
-		if ([self optionIsActive: BLFileInterpreterValueChangesResetKeys] && [self optionIsActive: BLFileInterpreterAllowChangesToKeyObjects] && oldValue && ![value isEqual: oldValue]) {
-			[_fileObject removeObject: keyObject];
-			keyObject = [_fileObject objectForKey:key createIfNeeded:YES];
-		}
-		
-		// Set new value
-		[keyObject setObject:value forLanguage:_language];
-		
-		// Track any changes
-		value = [keyObject objectForLanguage: _language];
-		_changed = _changed || (value && ![value isEqual: oldValue]) || (!value && oldValue);
-		
-		// Ignore empty keys
-		if (![self optionIsActive: BLFileInterpreterImportEmptyKeys] && [keyObject isEmpty]) {
-			// We first always create empty key objects but remove them afterwards if the are to be ignored
-			// The major benefit of this is that the key object itself is responsible to determine when it's empty or not
-			[_emittedKeys removeLastObject];
-			return;
-		}
-		
-		// Deactivate empty keys
-		if ([self optionIsActive: BLFileInterpreterDeactivateEmptyKeys] && [keyObject isEmpty])
-			[keyObject setIsActive: NO];
-		
-		// Deactivate ignored placeholders
-		if (_asReference && [self optionIsActive: BLFileInterpreterDeactivatePlaceholderStrings]
-			&& [self.ignoredPlaceholderStrings containsObject: [keyObject stringForLanguage: _language]])
-			[keyObject setIsActive: NO];
-		
-		// Set comment
-		if ([self optionIsActive: BLFileInterpreterImportComments] && [self optionIsActive: BLFileInterpreterAllowChangesToKeyObjects]) {
+	// Find an existing key object
+	BLKeyObject *keyObject = [_fileObject objectForKey:key createIfNeeded:NO];
+	BOOL isNew = (keyObject == nil);
+	
+	// Create key object if option is active
+	if (!keyObject && [self optionIsActive: BLFileInterpreterAllowChangesToKeyObjects])
+		keyObject = [_fileObject objectForKey:key createIfNeeded:YES];
+	if (!keyObject)
+		return;
+	
+	// Remember the key and the old value
+	[_emittedKeys addObject: key];
+	id oldValue = [keyObject objectForLanguage: _language];
+	
+	// Check for non-reference changes that are for deactivated keys
+	if (!_asReference && [self optionIsActive: BLFileInterpreterImportNonReferenceValuesOnly] && ![keyObject isActive])
+		return;
+	
+	// Reset key if value changed
+	if ([self optionIsActive: BLFileInterpreterValueChangesResetKeys] && [self optionIsActive: BLFileInterpreterAllowChangesToKeyObjects] && oldValue && ![value isEqual: oldValue]) {
+		[_fileObject removeObject: keyObject];
+		keyObject = [_fileObject objectForKey:key createIfNeeded:YES];
+	}
+	
+	// Set new value
+	[keyObject setObject:value forLanguage:_language];
+	
+	// Track any changes
+	value = [keyObject objectForLanguage: _language];
+	_changed = _changed || (value && ![value isEqual: oldValue]) || (!value && oldValue);
+	
+	// Ignore empty keys
+	if (![self optionIsActive: BLFileInterpreterImportEmptyKeys] && [keyObject isEmpty]) {
+		// We first always create empty key objects but remove them afterwards if the are to be ignored
+		// The major benefit of this is that the key object itself is responsible to determine when it's empty or not
+		[_emittedKeys removeLastObject];
+		return;
+	}
+	
+	// Deactivate empty keys
+	if ([self optionIsActive: BLFileInterpreterDeactivateEmptyKeys] && [keyObject isEmpty])
+		[keyObject setIsActive: NO];
+	
+	// Deactivate ignored placeholders
+	if (_asReference && [self optionIsActive: BLFileInterpreterDeactivatePlaceholderStrings]
+		&& [self.ignoredPlaceholderStrings containsObject: [keyObject stringForLanguage: _language]])
+		[keyObject setIsActive: NO];
+	
+	// Set comment
+	if ([self optionIsActive: BLFileInterpreterImportComments] && [self optionIsActive: BLFileInterpreterAllowChangesToKeyObjects]) {
 			if (comment && [comment length]) {
-				[keyObject setComment: comment];
+			[keyObject setComment: comment];
 				_lastComment = comment;
 			} else if ([self optionIsActive: BLFileInterpreterEnableShadowComments] && _lastComment && [_lastComment length]) {
-				[keyObject setComment: _lastComment];
-			}
+			[keyObject setComment: _lastComment];
 		}
-		
-		// Set updated flag
-		if ([self optionIsActive: BLFileInterpreterTrackValueChangesAsUpdate] && !isNew && ![value isEqual: oldValue])
-			[keyObject setWasUpdated: YES];
 	}
+	
+	// Set updated flag
+	if ([self optionIsActive: BLFileInterpreterTrackValueChangesAsUpdate] && !isNew && ![value isEqual: oldValue])
+		[keyObject setWasUpdated: YES];
 }
 
 - (void)autotranslateUsingObjects:(NSArray *)translations
