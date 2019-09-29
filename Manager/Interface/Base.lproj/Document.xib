@@ -304,7 +304,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <string key="toolTip">Checks the development language files for changes and imports them.
 Applies to everything if nothing selected.</string>
-                        <buttonCell key="cell" type="smallSquare" title="Rescan" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" inset="2" id="1434">
+                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" controlSize="small" borderStyle="border" inset="2" id="1434">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="smallSystem"/>
                             <modifierMask key="keyEquivalentModifierMask" command="YES"/>
@@ -318,7 +318,7 @@ Applies to everything if nothing selected.</string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <string key="toolTip">Checks the development language files for changes and imports them.
 Applies to everything if nothing selected.</string>
-                        <buttonCell key="cell" type="smallSquare" title="Rescan" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" inset="2" id="1433">
+                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" controlSize="small" borderStyle="border" inset="2" id="1433">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="smallSystem"/>
                             <modifierMask key="keyEquivalentModifierMask" command="YES"/>
