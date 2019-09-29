@@ -209,7 +209,7 @@
 
 + (NSString *)_scannerScanString:(NSScanner *)scanner
 {
-	// Our string starts with a quote
+	// Our string starts with a double quote character
 	if ([scanner scanString:@"\"" intoString:NULL]) {
 		NSCharacterSet *inStringSet = [NSCharacterSet characterSetWithCharactersInString: @"\\\""];
 		
@@ -217,7 +217,7 @@
 		NSCharacterSet *skippedSet = [scanner charactersToBeSkipped];
 		[scanner setCharactersToBeSkipped: nil];
 		
-		// The string is empty
+		// Is the string empty?
 		if ([scanner scanString:@"\"" intoString:NULL]) {
 			// Reset the scanner to its previous state
 			[scanner setCharactersToBeSkipped: skippedSet];
@@ -235,13 +235,17 @@
 			if (scan)
 				[string appendString: scan];
 			
-			// Check for a escape sequence
+			// Check for an escape sequence
+			// TT 29Sep19 (Issue #5) Actually, it appears this does not process escape sequences at all.
+			//   It should un-escape any such sequence right here, including special chars like \n and \U0020.
+			//   Instead, all this is handled later, in _processString - which makes little sense to me,
+			//   as it mainly just slows down processing.
 			if ([scanner scanString:@"\\" intoString:NULL]) {
 				// Skip the escaped character
 				[scanner setScanLocation: [scanner scanLocation] + 1];
-				scan = [[scanner string] substringWithRange: NSMakeRange([scanner scanLocation]-2, 2)];
 				
-				// Append the escape sequence
+				// Append the escape sequence 
+				scan = [[scanner string] substringWithRange: NSMakeRange([scanner scanLocation]-2, 2)];
 				[string appendString: scan];
 			}
 			// Check for the quote end
@@ -257,9 +261,8 @@
 		[scanner setCharactersToBeSkipped: skippedSet];
 		
 		return [self _processString: string];
-	}
-	// Try to find a single unquoted string
-	else {
+	} else {
+		// Try to scan an unquoted string as a single word
 		NSMutableCharacterSet *stringSet = [NSMutableCharacterSet alphanumericCharacterSet];
 		[stringSet addCharactersInString: @":.-_"];
 		
@@ -276,13 +279,10 @@
 
 + (NSString *)_processString:(NSString *)string
 {
-	NSMutableString *mString = [NSMutableString stringWithString: string];
+	NSMutableString *mString = string.mutableCopy;
 	
-	// Decode Unicode escape sequences
-	[mString replaceEscapedUnicodeCharacters];
-	
-	// Apply string replacements
-	[mString applyReplacementDictionary:BLStandardStringReplacements reverseDirection:NO];
+	// Decode any escape sequences - TT 29Sep19 (#5)
+	[mString replaceEscapedCharacters];
 	
 	return [NSString stringWithString: mString];
 }

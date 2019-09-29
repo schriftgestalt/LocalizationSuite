@@ -25,9 +25,9 @@ extern NSDictionary *BLStandardStringReplacements;
 - (void)applyReplacementDictionary:(NSDictionary *)dict reverseDirection:(BOOL)reverse;
 
 /*!
- @abstract Replaces all escaped character codes with the actual characters.
+ @abstract Replaces all escaped character codes with the actual characters, including the ones from BLStandardStringReplacements (which get preference).
  */
-- (void)replaceEscapedUnicodeCharacters;
+- (void)replaceEscapedCharacters;
 
 /*!
  @abstract Replaces all composed unicode characters with an appropriate escape sequence.
