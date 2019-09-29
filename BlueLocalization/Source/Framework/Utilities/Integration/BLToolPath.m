@@ -39,7 +39,12 @@ NSString *BLToolPathDeveloperDirectoryKeyPath	= @"developerToolsPath";
 		// Check path and fallback if needed
 		NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDeveloperDirectory, NSSystemDomainMask, YES);
 		if ((!__BLUsedDeveloperToolsPath || ![[NSFileManager defaultManager] fileExistsAtPath: __BLUsedDeveloperToolsPath]) && [paths count]) {
-			__BLUsedDeveloperToolsPath = [paths objectAtIndex: 0];
+			NSString *path = [paths objectAtIndex: 0];
+			if ([NSFileManager.defaultManager fileExistsAtPath:path]) {
+				__BLUsedDeveloperToolsPath = path;
+			} else {
+				__BLUsedDeveloperToolsPath = @"";
+			}
 		}
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
