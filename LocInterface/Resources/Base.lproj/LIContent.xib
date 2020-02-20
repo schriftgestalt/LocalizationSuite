@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,11 +19,11 @@
             <rect key="frame" x="0.0" y="0.0" width="793" height="130"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <clipView key="contentView" id="4Gv-oZ-Jjj">
-                <rect key="frame" x="0.0" y="0.0" width="778" height="130"/>
+                <rect key="frame" x="0.0" y="0.0" width="793" height="130"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" multipleSelection="NO" emptySelection="NO" autosaveName="LIContent" rowHeight="18" headerView="12" id="15" customClass="LIContentTableView">
-                        <rect key="frame" x="0.0" y="0.0" width="778" height="107"/>
+                        <rect key="frame" x="0.0" y="0.0" width="793" height="107"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <size key="intercellSpacing" width="3" height="6"/>
                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -56,7 +56,7 @@
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                 </tableHeaderCell>
-                                <buttonCell key="dataCell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="only" alignment="left" controlSize="small" lineBreakMode="charWrapping" inset="2" id="82">
+                                <buttonCell key="dataCell" type="check" bezelStyle="regularSquare" imagePosition="overlaps" alignment="left" controlSize="small" lineBreakMode="charWrapping" inset="2" id="82">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="smallSystem"/>
                                 </buttonCell>
@@ -71,7 +71,7 @@
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                 </tableHeaderCell>
-                                <buttonCell key="dataCell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="only" alignment="left" controlSize="small" lineBreakMode="charWrapping" inset="2" id="84">
+                                <buttonCell key="dataCell" type="check" bezelStyle="regularSquare" imagePosition="overlaps" alignment="left" controlSize="small" lineBreakMode="charWrapping" inset="2" id="84">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="smallSystem"/>
                                 </buttonCell>
@@ -80,7 +80,7 @@
                                     <binding destination="28" name="value" keyPath="arrangedObjects.wasUpdated" id="85"/>
                                 </connections>
                             </tableColumn>
-                            <tableColumn identifier="file" editable="NO" width="69.5" minWidth="50" maxWidth="300" id="16">
+                            <tableColumn identifier="file" editable="NO" width="72" minWidth="50" maxWidth="300" id="16">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="File">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -102,7 +102,7 @@
                                     </binding>
                                 </connections>
                             </tableColumn>
-                            <tableColumn identifier="key" editable="NO" width="68.5" minWidth="50" maxWidth="300" id="19">
+                            <tableColumn identifier="key" editable="NO" width="71" minWidth="50" maxWidth="300" id="19">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Key">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -124,7 +124,7 @@
                                     </binding>
                                 </connections>
                             </tableColumn>
-                            <tableColumn identifier="leftLanguage" width="199.5" minWidth="50" maxWidth="1000" id="17">
+                            <tableColumn identifier="leftLanguage" width="202" minWidth="50" maxWidth="1000" id="17">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -138,7 +138,7 @@
                                 <sortDescriptor key="sortDescriptorPrototype" selector="compareAsString:" sortKey="leftLanguage"/>
                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                             </tableColumn>
-                            <tableColumn identifier="rightLanguage" width="199.5" minWidth="50" maxWidth="1000" id="20">
+                            <tableColumn identifier="rightLanguage" width="202" minWidth="50" maxWidth="1000" id="20">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -152,7 +152,7 @@
                                 <sortDescriptor key="sortDescriptorPrototype" selector="compareAsString:" sortKey="rightLanguage"/>
                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                             </tableColumn>
-                            <tableColumn identifier="comment" editable="NO" width="91" minWidth="50" maxWidth="1000" id="18">
+                            <tableColumn identifier="comment" editable="NO" width="93.5" minWidth="50" maxWidth="1000" id="18">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Comment">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -174,7 +174,7 @@
                                     </binding>
                                 </connections>
                             </tableColumn>
-                            <tableColumn identifier="media" editable="NO" width="70" minWidth="10" maxWidth="3.4028234663852886e+38" id="96">
+                            <tableColumn identifier="media" editable="NO" width="72.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="96">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Attachment">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -195,18 +195,19 @@
                     </tableView>
                 </subviews>
             </clipView>
-            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="13">
+            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="13">
                 <rect key="frame" x="-100" y="-100" width="781" height="15"/>
                 <autoresizingMask key="autoresizingMask"/>
             </scroller>
-            <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="14">
-                <rect key="frame" x="778" y="23" width="15" height="107"/>
+            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="14">
+                <rect key="frame" x="777" y="23" width="16" height="107"/>
                 <autoresizingMask key="autoresizingMask"/>
             </scroller>
             <tableHeaderView key="headerView" id="12">
-                <rect key="frame" x="0.0" y="0.0" width="778" height="23"/>
+                <rect key="frame" x="0.0" y="0.0" width="793" height="23"/>
                 <autoresizingMask key="autoresizingMask"/>
             </tableHeaderView>
+            <point key="canvasLocation" x="139" y="154"/>
         </scrollView>
         <arrayController objectClassName="BLKeyObject" clearsFilterPredicateOnInsertion="NO" id="28" userLabel="Content Objects" customClass="LIContentArrayController">
             <declaredKeys>
