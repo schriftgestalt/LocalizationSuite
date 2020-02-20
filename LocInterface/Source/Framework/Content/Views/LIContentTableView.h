@@ -13,9 +13,8 @@
  @abstract A custom table view used by the LIContent.
  @discussion Currently only invalidates row heigts after a edit.
  */
-@interface LIContentTableView : LICustomColumnTableView
-{
-	QLPreviewPanel	*_previewPanel;
+@interface LIContentTableView : LICustomColumnTableView {
+	QLPreviewPanel *_previewPanel;
 }
 
 @end
@@ -33,6 +32,6 @@
 /*!
  @abstract The delegate should return the data source for the QuickLook preview panel.
  */
-- (id <QLPreviewPanelDataSource>)dataSourceForPreviewPanel:(QLPreviewPanel *)previewPanel inTableView:(LIContentTableView *)tableView;
+- (id<QLPreviewPanelDataSource>)dataSourceForPreviewPanel:(QLPreviewPanel *)previewPanel inTableView:(LIContentTableView *)tableView;
 
 @end
