@@ -96,14 +96,14 @@
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="23" horizontalPageScroll="10" verticalLineScroll="23" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="561">
-                        <rect key="frame" x="-1" y="276" width="651" height="271"/>
+                        <rect key="frame" x="-1" y="256" width="651" height="291"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" ambiguous="YES" id="e4Q-Rw-kRt">
-                            <rect key="frame" x="1" y="0.0" width="649" height="270"/>
+                            <rect key="frame" x="1" y="0.0" width="649" height="290"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="sequential" autosaveColumns="NO" autosaveName="bundlesFiles" rowHeight="18" headerView="1397" indentationPerLevel="16" outlineTableColumn="567" id="562">
-                                    <rect key="frame" x="0.0" y="0.0" width="649" height="247"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="649" height="267"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="5" height="5"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -195,7 +195,7 @@
                                             <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="1391">
                                                 <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="numberOfObjects"/>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
@@ -229,7 +229,7 @@
                         </tableHeaderView>
                     </scrollView>
                     <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="21" horizontalPageScroll="10" verticalLineScroll="21" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="465">
-                        <rect key="frame" x="21" y="39" width="233" height="224"/>
+                        <rect key="frame" x="21" y="19" width="233" height="224"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <clipView key="contentView" ambiguous="YES" id="Q7y-Ku-7UM">
                             <rect key="frame" x="1" y="0.0" width="231" height="223"/>
@@ -299,36 +299,8 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1431">
-                        <rect key="frame" x="21" y="19" width="22" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <string key="toolTip">Checks the development language files for changes and imports them.
-Applies to everything if nothing selected.</string>
-                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" controlSize="small" borderStyle="border" inset="2" id="1434">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
-                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="addNewLanguage:" target="-2" id="1457"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1432">
-                        <rect key="frame" x="42" y="19" width="22" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <string key="toolTip">Checks the development language files for changes and imports them.
-Applies to everything if nothing selected.</string>
-                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" controlSize="small" borderStyle="border" inset="2" id="1433">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
-                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="removeLanguages:" target="-2" id="1484"/>
-                        </connections>
-                    </button>
                     <button toolTip="Writes the selected Localizer files out and opens them in Localizer." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="505">
-                        <rect key="frame" x="447" y="139" width="76" height="32"/>
+                        <rect key="frame" x="447" y="119" width="76" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Edit..." bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1373">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -339,7 +311,7 @@ Applies to everything if nothing selected.</string>
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="487">
-                        <rect key="frame" x="260" y="196" width="81" height="17"/>
+                        <rect key="frame" x="260" y="176" width="81" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Localizer file" id="1366">
                             <font key="font" metaFont="system"/>
@@ -347,17 +319,8 @@ Applies to everything if nothing selected.</string>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="489">
-                        <rect key="frame" x="267" y="108" width="74" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title=".lproj folder" id="1368">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="494">
-                        <rect key="frame" x="344" y="246" width="205" height="17"/>
+                        <rect key="frame" x="344" y="226" width="205" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="&lt;do not localize&gt;" id="1370">
                             <font key="font" metaFont="system"/>
@@ -374,7 +337,7 @@ Applies to everything if nothing selected.</string>
                         </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="493">
-                        <rect key="frame" x="275" y="246" width="66" height="17"/>
+                        <rect key="frame" x="275" y="226" width="66" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Selection" id="1369">
                             <font key="font" metaFont="system"/>
@@ -382,34 +345,8 @@ Applies to everything if nothing selected.</string>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button toolTip="Removes all localized files of the selected languages and re-creates them using the development language files." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="500">
-                        <rect key="frame" x="462" y="98" width="96" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="Re-Inject" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1372">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="resetLanguage:" target="-2" id="581"/>
-                        </connections>
-                    </button>
-                    <button toolTip="Forces all localized files of the selected languages to be updated." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="499">
-                        <rect key="frame" x="340" y="98" width="116" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="Synchronize" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1371">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="updateLanguage:" target="-2" id="580"/>
-                        </connections>
-                    </button>
-                    <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="506">
-                        <rect key="frame" x="346" y="133" width="258" height="5"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                    </box>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="670">
-                        <rect key="frame" x="500" y="246" width="106" height="17"/>
+                        <rect key="frame" x="500" y="226" width="106" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" lineBreakMode="truncatingHead" sendsActionOnEndEditing="YES" alignment="right" title="&lt;dnl&gt;" id="1376">
                             <font key="font" metaFont="system"/>
@@ -426,7 +363,7 @@ Applies to everything if nothing selected.</string>
                         </connections>
                     </textField>
                     <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" translatesAutoresizingMaskIntoConstraints="NO" id="600">
-                        <rect key="frame" x="442" y="178" width="161" height="38"/>
+                        <rect key="frame" x="442" y="158" width="161" height="38"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         <size key="cellSize" width="161" height="21"/>
@@ -452,7 +389,7 @@ Applies to everything if nothing selected.</string>
                         </connections>
                     </matrix>
                     <button toolTip="Writes the selected languages into one or multiple Localizer files at the default location." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="486">
-                        <rect key="frame" x="340" y="186" width="99" height="32"/>
+                        <rect key="frame" x="340" y="166" width="99" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Write Out" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1365">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -463,7 +400,7 @@ Applies to everything if nothing selected.</string>
                         </connections>
                     </button>
                     <button toolTip="Manually select a Localizer file to read from." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="623" customClass="MultiActionButton">
-                        <rect key="frame" x="340" y="139" width="100" height="32"/>
+                        <rect key="frame" x="340" y="119" width="100" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Read In..." alternateTitle="Read In" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1375">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -474,7 +411,7 @@ Applies to everything if nothing selected.</string>
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1077">
-                        <rect key="frame" x="344" y="229" width="132" height="14"/>
+                        <rect key="frame" x="344" y="209" width="132" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Development Language" id="1377">
                             <font key="font" metaFont="smallSystem"/>
@@ -495,7 +432,7 @@ Applies to everything if nothing selected.</string>
                         </connections>
                     </textField>
                     <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="1325">
-                        <rect key="frame" x="346" y="219" width="258" height="5"/>
+                        <rect key="frame" x="346" y="199" width="258" height="5"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                     </box>
                 </subviews>
@@ -749,8 +686,4 @@ Updates all localized versions of the selected files. Applies to whole database 
             <point key="canvasLocation" x="139" y="859"/>
         </view>
     </objects>
-    <resources>
-        <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSRemoveTemplate" width="11" height="11"/>
-    </resources>
 </document>
