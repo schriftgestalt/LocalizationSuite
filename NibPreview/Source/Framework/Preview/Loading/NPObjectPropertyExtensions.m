@@ -133,7 +133,7 @@
 		return;
 	
 	if ([key isEqual: @"inset"]) {
-		_bcFlags.inset = [value unsignedIntValue];
+		//_bcFlags.inset = [value unsignedIntValue];
 		return;
 	}
 	
