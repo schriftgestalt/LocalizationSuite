@@ -10,13 +10,11 @@
 
 @implementation Controller
 
-- (IBAction)showLog:(id)sender
-{
+- (IBAction)showLog:(id)sender {
 	[[LILogWindow logWindow] show];
 }
 
-- (IBAction)showStats:(id)sender
-{
+- (IBAction)showStats:(id)sender {
 	[[LIStatusDisplay statusDisplay] show];
 }
 

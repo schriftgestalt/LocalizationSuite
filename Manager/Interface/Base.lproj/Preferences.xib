@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1060" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,15 +18,15 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="200">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="1009" y="679" width="480" height="86"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="201">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="86"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             </view>
             <toolbar key="toolbar" implicitIdentifier="1AC55EB1-4571-49A6-97F2-6739B125C728" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="652">
                 <allowedToolbarItems>
@@ -62,12 +62,12 @@
                         <popUpButton key="view" verticalHuggingPriority="750" id="430">
                             <rect key="frame" x="0.0" y="14" width="140" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <popUpButtonCell key="cell" type="roundTextured" title="Item 1" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="431">
+                            <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="431">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="system"/>
+                                <font key="font" metaFont="menu"/>
                                 <menu key="menu" title="OtherViews" id="432">
                                     <items>
-                                        <menuItem title="Item 1" state="on" id="433"/>
+                                        <menuItem title="Item 1" id="433"/>
                                         <menuItem title="Item 2" id="434"/>
                                         <menuItem title="Item 3" id="435"/>
                                     </items>
@@ -154,7 +154,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="331"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <button id="627">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="627">
                     <rect key="frame" x="18" y="259" width="204" height="18"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <buttonCell key="cell" type="check" title="Open folder after writing out" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="628">
@@ -165,7 +165,7 @@
                         <binding destination="301" name="value" keyPath="selection.openFolderAfterWriteOut" id="649"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="626">
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="626">
                     <rect key="frame" x="17" y="294" width="94" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Save Location:" id="629">
@@ -174,7 +174,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField verticalHuggingPriority="750" id="625">
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="625">
                     <rect key="frame" x="118" y="294" width="253" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" title="some/path/that/to/save/my/files/to" id="630">
@@ -190,7 +190,7 @@
                         </binding>
                     </connections>
                 </textField>
-                <button verticalHuggingPriority="750" id="624">
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="624">
                     <rect key="frame" x="370" y="284" width="96" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Select…" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="631">
@@ -206,7 +206,7 @@
                         </binding>
                     </connections>
                 </button>
-                <button id="623">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="623">
                     <rect key="frame" x="18" y="157" width="180" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <buttonCell key="cell" type="check" title="Include interface preview" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="632">
@@ -217,7 +217,7 @@
                         <binding destination="301" name="value" keyPath="selection.includeInterfacePreview" id="642"/>
                     </connections>
                 </button>
-                <button id="622">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="622">
                     <rect key="frame" x="18" y="89" width="136" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <buttonCell key="cell" type="check" title="Embed dictionary" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="633">
@@ -228,7 +228,7 @@
                         <binding destination="301" name="value" keyPath="selection.embedDictionary" id="644"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="621">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="621">
                     <rect key="frame" x="36" y="123" width="427" height="28"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="634">
@@ -238,7 +238,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField verticalHuggingPriority="750" id="615">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="615">
                     <rect key="frame" x="36" y="20" width="427" height="42"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="640">
@@ -248,7 +248,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" id="618">
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="618">
                     <rect key="frame" x="333" y="81" width="132" height="28"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Show Dictionaries…" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="637">
@@ -259,7 +259,7 @@
                         <action selector="showDictionaries:" target="-2" id="650"/>
                     </connections>
                 </button>
-                <button id="620">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="620">
                     <rect key="frame" x="18" y="239" width="223" height="18"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <buttonCell key="cell" type="check" title="Save files in compressed format" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="635">
@@ -270,7 +270,7 @@
                         <binding destination="301" name="value" keyPath="selection.compressLocalizationFiles" id="647"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="619">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="619">
                     <rect key="frame" x="36" y="191" width="427" height="42"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="636">
@@ -280,7 +280,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button id="617">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="617">
                     <rect key="frame" x="37" y="69" width="215" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <buttonCell key="cell" type="check" title="Also include keys for guessing" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="638">
@@ -288,6 +288,8 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
+                        <binding destination="301" name="enabled" keyPath="selection.embedDictionary" id="645"/>
+                        <binding destination="301" name="value" keyPath="selection.embedDictionaryGuesses" id="643"/>
                         <binding destination="301" name="enabled2" keyPath="selection.embedDictionaryTailored" previousBinding="645" id="646">
                             <dictionary key="options">
                                 <integer key="NSMultipleValuesPlaceholder" value="-1"/>
@@ -296,11 +298,9 @@
                                 <integer key="NSNullPlaceholder" value="-1"/>
                             </dictionary>
                         </binding>
-                        <binding destination="301" name="enabled" keyPath="selection.embedDictionary" id="645"/>
-                        <binding destination="301" name="value" keyPath="selection.embedDictionaryGuesses" id="643"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="616">
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="616">
                     <rect key="frame" x="253" y="70" width="72" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(very slow)" id="639">
@@ -315,7 +315,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="339"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <button id="81">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="81">
                     <rect key="frame" x="18" y="195" width="322" height="18"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <buttonCell key="cell" type="check" title="For new strings, try to use previous localization" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="182">
@@ -326,7 +326,7 @@
                         <binding destination="301" name="value" keyPath="selection.autotranslateNewStrings" id="393"/>
                     </connections>
                 </button>
-                <button id="87">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="87">
                     <rect key="frame" x="37" y="175" width="239" height="18"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <buttonCell key="cell" type="check" title="Mark those strings as not updated" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="184">
@@ -338,7 +338,7 @@
                         <binding destination="301" name="value" keyPath="selection.markAutotranslatedAsNotChanged" id="339"/>
                     </connections>
                 </button>
-                <button id="110">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="110">
                     <rect key="frame" x="37" y="18" width="268" height="18"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <buttonCell key="cell" type="check" title="Automatically deactivate empty strings" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="185">
@@ -346,11 +346,11 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <binding destination="301" name="enabled" keyPath="selection.importEmptyStrings" id="460"/>
                         <binding destination="301" name="value" keyPath="selection.deactivateEmptyStrings" id="343"/>
+                        <binding destination="301" name="enabled" keyPath="selection.importEmptyStrings" id="460"/>
                     </connections>
                 </button>
-                <button id="132">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="132">
                     <rect key="frame" x="18" y="38" width="156" height="18"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <buttonCell key="cell" type="check" title="Import empty strings" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="186">
@@ -361,7 +361,7 @@
                         <binding destination="301" name="value" keyPath="selection.importEmptyStrings" id="341"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="140">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="140">
                     <rect key="frame" x="36" y="141" width="427" height="28"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="189">
@@ -371,7 +371,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button id="191">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="191">
                     <rect key="frame" x="18" y="263" width="302" height="18"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <buttonCell key="cell" type="check" title="Changes to reference language reset strings" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="192">
@@ -382,7 +382,7 @@
                         <binding destination="301" name="value" keyPath="selection.valueChangesResetStrings" id="392"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="194">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="194">
                     <rect key="frame" x="36" y="229" width="427" height="28"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="195">
@@ -392,15 +392,15 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <popUpButton verticalHuggingPriority="750" id="568">
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="568">
                     <rect key="frame" x="140" y="295" width="323" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="569">
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="569">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" title="OtherViews" id="570">
                             <items>
-                                <menuItem title="Item 1" state="on" id="571"/>
+                                <menuItem title="Item 1" id="571"/>
                                 <menuItem title="Item 2" id="572"/>
                                 <menuItem title="Item 3" id="573"/>
                             </items>
@@ -408,12 +408,12 @@
                     </popUpButtonCell>
                     <connections>
                         <binding destination="-2" name="content" keyPath="availableDeveloperTools" id="766"/>
-                        <binding destination="-2" name="contentObjects" keyPath="availableDeveloperTools.path" previousBinding="766" id="769"/>
                         <binding destination="-2" name="contentValues" keyPath="availableDeveloperTools.displayPath" previousBinding="769" id="772"/>
+                        <binding destination="-2" name="contentObjects" keyPath="availableDeveloperTools.path" previousBinding="766" id="769"/>
                         <binding destination="17" name="selectedObject" keyPath="values.developerToolsPath" previousBinding="772" id="773"/>
                     </connections>
                 </popUpButton>
-                <textField verticalHuggingPriority="750" id="574">
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="574">
                     <rect key="frame" x="17" y="301" width="121" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Used Xcode Tools:" id="575">
@@ -422,7 +422,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button id="668">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="668">
                     <rect key="frame" x="18" y="106" width="213" height="18"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <buttonCell key="cell" type="check" title="Deactivate placeholder strings" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="669">
@@ -433,7 +433,7 @@
                         <binding destination="301" name="value" keyPath="selection.deactivatePlaceholderStrings" id="680"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" id="676">
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="676">
                     <rect key="frame" x="335" y="99" width="130" height="28"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Edit Placholders…" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="677">
@@ -449,7 +449,7 @@
                         </binding>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="678">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="678">
                     <rect key="frame" x="36" y="72" width="402" height="28"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="679">
@@ -465,7 +465,7 @@
             <rect key="frame" x="0.0" y="0.0" width="504" height="273"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <button id="53">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53">
                     <rect key="frame" x="30" y="38" width="162" height="18"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <buttonCell key="cell" type="check" title="Show removed strings" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="179">
@@ -476,7 +476,7 @@
                         <binding destination="301" name="value" keyPath="selection.showRemovedStrings" id="356"/>
                     </connections>
                 </button>
-                <button id="134">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="134">
                     <rect key="frame" x="30" y="18" width="146" height="18"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <buttonCell key="cell" type="check" title="Show empty strings" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="187">
@@ -487,7 +487,7 @@
                         <binding destination="301" name="value" keyPath="selection.showEmptyStrings" id="358"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="52">
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="52">
                     <rect key="frame" x="17" y="82" width="85" height="17"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="File Content" id="178">
@@ -496,7 +496,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField verticalHuggingPriority="750" id="34">
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="34">
                     <rect key="frame" x="17" y="168" width="91" height="17"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="New Bundles" id="173">
@@ -505,7 +505,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField verticalHuggingPriority="750" id="35">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35">
                     <rect key="frame" x="29" y="143" width="117" height="17"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Referencing Style:" id="174">
@@ -514,15 +514,15 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <popUpButton verticalHuggingPriority="750" id="36">
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="36">
                     <rect key="frame" x="148" y="137" width="316" height="26"/>
                     <autoresizingMask key="autoresizingMask"/>
-                    <popUpButtonCell key="cell" type="push" title="Relative to Localization Database" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="175">
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="175">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" title="OtherViews" id="37">
                             <items>
-                                <menuItem title="Relative to Localization Database" state="on" tag="1" id="39"/>
+                                <menuItem title="Relative to Localization Database" tag="1" id="39"/>
                                 <menuItem title="Absolute Path" id="38"/>
                             </items>
                         </menu>
@@ -531,7 +531,7 @@
                         <binding destination="301" name="selectedTag" keyPath="selection.defaultBundleReferencing" id="352"/>
                     </connections>
                 </popUpButton>
-                <textField verticalHuggingPriority="750" id="41">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="41">
                     <rect key="frame" x="29" y="117" width="91" height="17"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Naming Style:" id="176">
@@ -540,15 +540,15 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <popUpButton verticalHuggingPriority="750" id="46">
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="46">
                     <rect key="frame" x="148" y="111" width="316" height="26"/>
                     <autoresizingMask key="autoresizingMask"/>
-                    <popUpButtonCell key="cell" type="push" title="Identifiers only (recommended)" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="177">
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="177">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" title="OtherViews" id="47">
                             <items>
-                                <menuItem title="Identifiers only (recommended)" state="on" tag="1" id="49"/>
+                                <menuItem title="Identifiers only (recommended)" tag="1" id="49"/>
                                 <menuItem title="Identifiers and Descriptions (compatible)" id="48"/>
                                 <menuItem title="Descriptions only (depreciated)" tag="2" id="50"/>
                             </items>
@@ -558,7 +558,7 @@
                         <binding destination="301" name="selectedTag" keyPath="selection.defaultBundleNaming" id="354"/>
                     </connections>
                 </popUpButton>
-                <button id="310">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="310">
                     <rect key="frame" x="18" y="237" width="241" height="18"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <buttonCell key="cell" type="check" title="Save project in compressed format" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="311">
@@ -569,7 +569,7 @@
                         <binding destination="301" name="value" keyPath="selection.saveCompressed" id="350"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="315">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="315">
                     <rect key="frame" x="37" y="203" width="450" height="28"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="316">
@@ -579,7 +579,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button id="397">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="397">
                     <rect key="frame" x="30" y="58" width="125" height="18"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <buttonCell key="cell" type="check" title="Show comments" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="398">
@@ -591,12 +591,13 @@
                     </connections>
                 </button>
             </subviews>
+            <point key="canvasLocation" x="-130" y="155"/>
         </view>
         <view id="580">
             <rect key="frame" x="0.0" y="0.0" width="495" height="348"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <button id="483">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="483">
                     <rect key="frame" x="18" y="216" width="324" height="18"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <buttonCell key="cell" type="check" title="Automatically update associated Xcode projects" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="486">
@@ -607,7 +608,7 @@
                         <binding destination="301" name="value" keyPath="selection.updateXcodeProjects" id="541"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="484">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="484">
                     <rect key="frame" x="37" y="154" width="440" height="56"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="485">
@@ -617,7 +618,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button id="488">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="488">
                     <rect key="frame" x="35" y="120" width="393" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Add files that are missing from the project" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="507">
@@ -625,11 +626,11 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <binding destination="301" name="enabled" keyPath="selection.updateXcodeProjects" id="550"/>
                         <binding destination="301" name="value" keyPath="selection.XcodeAddMissingFiles" id="542"/>
+                        <binding destination="301" name="enabled" keyPath="selection.updateXcodeProjects" id="550"/>
                     </connections>
                 </button>
-                <button id="489">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="489">
                     <rect key="frame" x="35" y="100" width="393" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Remove files not matching below criteria" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="506">
@@ -637,23 +638,15 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <binding destination="301" name="enabled" keyPath="selection.updateXcodeProjects" id="551"/>
                         <binding destination="301" name="value" keyPath="selection.XcodeRemoveNotMatchingFiles" id="543"/>
+                        <binding destination="301" name="enabled" keyPath="selection.updateXcodeProjects" id="551"/>
                     </connections>
                 </button>
-                <slider verticalHuggingPriority="750" id="490">
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="490">
                     <rect key="frame" x="333" y="76" width="104" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <sliderCell key="cell" controlSize="small" state="on" alignment="left" minValue="70" maxValue="100" doubleValue="100" tickMarkPosition="above" numberOfTickMarks="13" allowsTickMarkValuesOnly="YES" sliderType="linear" id="505"/>
                     <connections>
-                        <binding destination="301" name="enabled2" keyPath="selection.XcodeRemoveNotMatchingFiles" previousBinding="554" id="559">
-                            <dictionary key="options">
-                                <integer key="NSMultipleValuesPlaceholder" value="-1"/>
-                                <integer key="NSNoSelectionPlaceholder" value="-1"/>
-                                <integer key="NSNotApplicablePlaceholder" value="-1"/>
-                                <integer key="NSNullPlaceholder" value="-1"/>
-                            </dictionary>
-                        </binding>
                         <binding destination="301" name="enabled3" keyPath="selection.XcodeHasLanguageLimit" previousBinding="559" id="561">
                             <dictionary key="options">
                                 <integer key="NSMultipleValuesPlaceholder" value="-1"/>
@@ -662,15 +655,23 @@
                                 <integer key="NSNullPlaceholder" value="-1"/>
                             </dictionary>
                         </binding>
-                        <binding destination="301" name="enabled" keyPath="selection.updateXcodeProjects" id="554"/>
                         <binding destination="301" name="value" keyPath="selection.XcodeLanguageLimit" id="564">
                             <dictionary key="options">
                                 <integer key="NSValidatesImmediately" value="1"/>
                             </dictionary>
                         </binding>
+                        <binding destination="301" name="enabled2" keyPath="selection.XcodeRemoveNotMatchingFiles" previousBinding="554" id="559">
+                            <dictionary key="options">
+                                <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                <integer key="NSNullPlaceholder" value="-1"/>
+                            </dictionary>
+                        </binding>
+                        <binding destination="301" name="enabled" keyPath="selection.updateXcodeProjects" id="554"/>
                     </connections>
                 </slider>
-                <textField verticalHuggingPriority="750" id="491">
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="491">
                     <rect key="frame" x="442" y="75" width="38" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="100%" id="504">
@@ -686,7 +687,7 @@
                         </binding>
                     </connections>
                 </textField>
-                <button id="492">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="492">
                     <rect key="frame" x="52" y="75" width="271" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Languages need to be localized at least" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="503">
@@ -694,6 +695,7 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
+                        <binding destination="301" name="value" keyPath="selection.XcodeHasLanguageLimit" id="560"/>
                         <binding destination="301" name="enabled2" keyPath="selection.XcodeRemoveNotMatchingFiles" previousBinding="552" id="556">
                             <dictionary key="options">
                                 <integer key="NSMultipleValuesPlaceholder" value="-1"/>
@@ -703,20 +705,16 @@
                             </dictionary>
                         </binding>
                         <binding destination="301" name="enabled" keyPath="selection.updateXcodeProjects" id="552"/>
-                        <binding destination="301" name="value" keyPath="selection.XcodeHasLanguageLimit" id="560"/>
                     </connections>
                 </button>
-                <slider verticalHuggingPriority="750" id="493">
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="493">
                     <rect key="frame" x="333" y="56" width="104" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <sliderCell key="cell" controlSize="small" state="on" alignment="left" minValue="70" maxValue="100" doubleValue="82.5" tickMarkPosition="above" numberOfTickMarks="13" allowsTickMarkValuesOnly="YES" sliderType="linear" id="502"/>
                     <connections>
-                        <binding destination="301" name="enabled2" keyPath="selection.XcodeRemoveNotMatchingFiles" previousBinding="555" id="558">
+                        <binding destination="301" name="value" keyPath="selection.XcodeFileLimit" id="565">
                             <dictionary key="options">
-                                <integer key="NSMultipleValuesPlaceholder" value="-1"/>
-                                <integer key="NSNoSelectionPlaceholder" value="-1"/>
-                                <integer key="NSNotApplicablePlaceholder" value="-1"/>
-                                <integer key="NSNullPlaceholder" value="-1"/>
+                                <integer key="NSValidatesImmediately" value="1"/>
                             </dictionary>
                         </binding>
                         <binding destination="301" name="enabled3" keyPath="selection.XcodeHasFileLimit" previousBinding="558" id="563">
@@ -727,15 +725,18 @@
                                 <integer key="NSNullPlaceholder" value="-1"/>
                             </dictionary>
                         </binding>
-                        <binding destination="301" name="enabled" keyPath="selection.updateXcodeProjects" id="555"/>
-                        <binding destination="301" name="value" keyPath="selection.XcodeFileLimit" id="565">
+                        <binding destination="301" name="enabled2" keyPath="selection.XcodeRemoveNotMatchingFiles" previousBinding="555" id="558">
                             <dictionary key="options">
-                                <integer key="NSValidatesImmediately" value="1"/>
+                                <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                <integer key="NSNullPlaceholder" value="-1"/>
                             </dictionary>
                         </binding>
+                        <binding destination="301" name="enabled" keyPath="selection.updateXcodeProjects" id="555"/>
                     </connections>
                 </slider>
-                <textField verticalHuggingPriority="750" id="494">
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="494">
                     <rect key="frame" x="442" y="56" width="38" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="80%" id="501">
@@ -751,7 +752,7 @@
                         </binding>
                     </connections>
                 </textField>
-                <button id="495">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="495">
                     <rect key="frame" x="52" y="55" width="271" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Files need to be localized at least" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="500">
@@ -759,6 +760,7 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
+                        <binding destination="301" name="value" keyPath="selection.XcodeHasFileLimit" id="562"/>
                         <binding destination="301" name="enabled2" keyPath="selection.XcodeRemoveNotMatchingFiles" previousBinding="553" id="557">
                             <dictionary key="options">
                                 <integer key="NSMultipleValuesPlaceholder" value="-1"/>
@@ -768,10 +770,9 @@
                             </dictionary>
                         </binding>
                         <binding destination="301" name="enabled" keyPath="selection.updateXcodeProjects" id="553"/>
-                        <binding destination="301" name="value" keyPath="selection.XcodeHasFileLimit" id="562"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="496">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="496">
                     <rect key="frame" x="54" y="20" width="423" height="28"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" id="499">
@@ -781,7 +782,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button id="742">
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="742">
                     <rect key="frame" x="18" y="312" width="416" height="18"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <buttonCell key="cell" type="check" title="Automatically import new files from associated Xcode projects" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="745">
@@ -792,7 +793,7 @@
                         <binding destination="301" name="value" keyPath="selection.rescanXcodeProjects" id="748"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="743">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="743">
                     <rect key="frame" x="37" y="250" width="441" height="56"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="744">
@@ -808,16 +809,16 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="283" y="305" width="342" height="250"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <value key="minSize" type="size" width="342" height="250"/>
             <view key="contentView" id="703">
                 <rect key="frame" x="0.0" y="0.0" width="342" height="250"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="711">
+                    <scrollView focusRingType="none" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="711">
                         <rect key="frame" x="20" y="55" width="302" height="139"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <clipView key="contentView" id="0bs-Og-YDu">
+                        <clipView key="contentView" ambiguous="YES" id="0bs-Og-YDu">
                             <rect key="frame" x="1" y="1" width="300" height="137"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -857,7 +858,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <button verticalHuggingPriority="750" id="720">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="720">
                         <rect key="frame" x="244" y="12" width="84" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="721">
@@ -871,7 +872,7 @@ DQ
                             <action selector="closePlaceholdersSheet:" target="-2" id="739"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" id="726">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="726">
                         <rect key="frame" x="20" y="19" width="22" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <string key="toolTip">Add Existing Files
@@ -885,7 +886,7 @@ Reads the file's contents to either an existing file in the databse or creates a
                             <action selector="addPlaceholder:" target="-2" id="740"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" id="727">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="727">
                         <rect key="frame" x="41" y="19" width="22" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <string key="toolTip">Remove Selected Files
@@ -899,7 +900,7 @@ Removes the selected files from the databse but keeps the actual files if they e
                             <action selector="removePlaceholders:" target="-2" id="741"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" id="733">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="733">
                         <rect key="frame" x="17" y="207" width="308" height="28"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Define the placeholder strings that will be automatically deactivated when imported from the reference language." id="734">
@@ -911,7 +912,6 @@ Removes the selected files from the databse but keeps the actual files if they e
                 </subviews>
             </view>
         </window>
-        <customObject id="203" customClass="BWSelectableToolbarHelper"/>
     </objects>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>

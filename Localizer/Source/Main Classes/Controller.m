@@ -10,7 +10,7 @@
 
 #import "Document.h"
 #import "GSStringToAttributedValueTransformer.h"
-#import "Preferences.h"
+
 
 @implementation Controller
 
@@ -35,9 +35,9 @@
 
 #pragma mark - Localizer Menu
 
-- (IBAction)showPreferences:(id)sender {
-	[[Preferences sharedInstance] open];
-}
+//- (IBAction)showPreferences:(id)sender {
+//	[[Preferences sharedInstance] open];
+//}
 
 #pragma mark - File Menu
 

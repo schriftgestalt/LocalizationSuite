@@ -47,7 +47,6 @@
 		5086C7BD0DFAF288009662A8 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5086C7B20DFAF288009662A8 /* Preferences.xib */; };
 		508C820D03EBDD80006B6ECB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 508C820B03EBDD80006B6ECB /* Localizable.strings */; };
 		50A6BD891131538E00928AD7 /* Manager.help in Resources */ = {isa = PBXBuildFile; fileRef = 50A6BD7E1131538E00928AD7 /* Manager.help */; };
-		50C3D10B0FC37358005AEF1A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C3D10A0FC37358005AEF1A /* Sparkle.framework */; };
 		50C3D1140FC37361005AEF1A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50C3D10A0FC37358005AEF1A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		50C3D1270FC374A7005AEF1A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 50C3D1260FC374A7005AEF1A /* dsa_pub.pem */; };
 		50D10F570FB6F61B006FCF8C /* DetailButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 50D10F560FB6F61B006FCF8C /* DetailButton.png */; };
@@ -55,6 +54,7 @@
 		50D111FE0FB85023006FCF8C /* ldb.icns in Resources */ = {isa = PBXBuildFile; fileRef = 50D111FB0FB85023006FCF8C /* ldb.icns */; };
 		50D111FF0FB85023006FCF8C /* loc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 50D111FC0FB85023006FCF8C /* loc.icns */; };
 		50E8D83108C9C8B2003F43C3 /* TableHeaders.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50E8D82F08C9C8B2003F43C3 /* TableHeaders.strings */; };
+		56528DB12459F20C0030395E /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C3D10A0FC37358005AEF1A /* Sparkle.framework */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -153,7 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
-				50C3D10B0FC37358005AEF1A /* Sparkle.framework in Frameworks */,
+				56528DB12459F20C0030395E /* Sparkle.framework in Frameworks */,
 				501193F31152936600E54DF2 /* Quartz.framework in Frameworks */,
 				504E098D13005776006B5F4B /* BlueLocalization.framework in Frameworks */,
 				504E0992130057AB006B5F4B /* NibPreview.framework in Frameworks */,
@@ -572,7 +572,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Other/Localization Manager_Prefix.pch";
 				INFOPLIST_FILE = Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks/;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MARKETING_VERSION = 14.1;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.loc-suite.manager";
@@ -597,7 +597,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Other/Localization Manager_Prefix.pch";
 				INFOPLIST_FILE = Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks/;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MARKETING_VERSION = 14.1;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.loc-suite.manager";

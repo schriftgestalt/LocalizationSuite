@@ -11,8 +11,8 @@
 @interface Controller : NSObject <SUVersionComparison> {
 }
 
-// Localizer menu
-- (IBAction)showPreferences:(id)sender;
+//// Localizer menu
+//- (IBAction)showPreferences:(id)sender;
 
 // File menu
 - (IBAction)importStrings:(id)sender;
