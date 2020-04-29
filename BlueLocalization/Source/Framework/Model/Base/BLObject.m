@@ -57,8 +57,12 @@ NSString *BLObjectFileUnimportableError = @"File cannot be imported";
 	[dict secureSetObject:[self errors] forKey:BLFileErrorsKey];
 	[dict secureSetObject:[NSNumber numberWithUnsignedInteger:[self flags]] forKey:BLFileFlagsKey];
 
-	if (![[attributes objectForKey:BLClearChangeInformationSerializationKey] boolValue])
-		[dict secureSetObject:[self changedValues] forKey:BLFileChangedValuesKey];
+	if (![[attributes objectForKey:BLClearChangeInformationSerializationKey] boolValue]) {
+		NSArray *changedValues = [self changedValues];
+		if (changedValues.count > 0) {
+			[dict secureSetObject:changedValues forKey:BLFileChangedValuesKey];
+		}
+	}
 
 	return dict;
 }
