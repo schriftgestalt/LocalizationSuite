@@ -106,6 +106,7 @@
 		56370B441D42136B0024CD02 /* GSGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGroupView.m; sourceTree = "<group>"; };
 		56370B461D4221700024CD02 /* GSLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLine.h; sourceTree = "<group>"; };
 		56370B471D4221700024CD02 /* GSLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLine.m; sourceTree = "<group>"; };
+		56528DB02459867D0030395E /* Localizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Localizer.entitlements; sourceTree = "<group>"; };
 		565DBF2E1D42066C000513F0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* Localizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Localizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +142,7 @@
 		2A37F4AAFDCFA73011CA2CEA /* Localizer */ = {
 			isa = PBXGroup;
 			children = (
+				56528DB02459867D0030395E /* Localizer.entitlements */,
 				50D110890FB84EFE006FCF8C /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
@@ -411,10 +413,13 @@
 		501EBC880855AE8600FBC27B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Localizer.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = X2L8375ZQ7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -433,11 +438,14 @@
 		501EBC890855AE8600FBC27B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Localizer.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 21;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = X2L8375ZQ7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
