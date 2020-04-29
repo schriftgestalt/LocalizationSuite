@@ -426,6 +426,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Localizer_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
+				MARKETING_VERSION = 14.2;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.loc-suite.localizer";
 				PRODUCT_NAME = Localizer;
@@ -451,6 +452,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Localizer_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
+				MARKETING_VERSION = 14.2;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.loc-suite.localizer";
 				PRODUCT_NAME = Localizer;
