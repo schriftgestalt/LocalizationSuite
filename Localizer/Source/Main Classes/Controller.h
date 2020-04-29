@@ -8,8 +8,7 @@
 
 #import <Sparkle/Sparkle.h>
 
-@interface Controller : NSObject <SUVersionComparison>
-{
+@interface Controller : NSObject <SUVersionComparison> {
 }
 
 // Localizer menu
@@ -43,6 +42,5 @@
 - (IBAction)showDictionaries:(id)sender;
 - (IBAction)showProcessLog:(id)sender;
 - (IBAction)showStatusDisplay:(id)sender;
-
 
 @end

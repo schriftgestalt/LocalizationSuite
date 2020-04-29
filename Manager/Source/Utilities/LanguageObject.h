@@ -6,12 +6,11 @@
 //  Copyright 2006 The Blue Technologies Group. All rights reserved.
 //
 
-@interface LanguageObject : NSObject
-{
-    NSArray     *_bundles;
-    NSString    *_description;
-    NSString    *_identifier;
-	BOOL		_reference;
+@interface LanguageObject : NSObject {
+	NSArray *_bundles;
+	NSString *_description;
+	NSString *_identifier;
+	BOOL _reference;
 }
 
 + (id)languageObjectWithLanguage:(NSString *)aLanguage;

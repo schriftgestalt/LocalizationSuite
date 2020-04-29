@@ -6,8 +6,7 @@
 //  Copyright 2009 Localization Foundation. All rights reserved.
 //
 
-@interface MultiActionWindow : NSWindow
-{
+@interface MultiActionWindow : NSWindow {
 	NSMutableArray *_flagResponders;
 }
 

@@ -8,37 +8,32 @@
 
 #import "FilePreview.h"
 
-
 @implementation FilePreview
 
-- (id)init
-{
+- (id)init {
 	self = [super init];
-	
+
 	if (self) {
-		[self setShouldCloseDocument: NO];
-		[self setShouldCascadeWindows: YES];
+		[self setShouldCloseDocument:NO];
+		[self setShouldCascadeWindows:YES];
 	}
-	
+
 	return self;
 }
 
-- (NSString *)windowTitleForDocumentDisplayName:(NSString *)displayName
-{
-	return [NSString stringWithFormat: NSLocalizedString(@"PreviewWindowTitle", nil), displayName, [self.fileObject name]];
+- (NSString *)windowTitleForDocumentDisplayName:(NSString *)displayName {
+	return [NSString stringWithFormat:NSLocalizedString(@"PreviewWindowTitle", nil), displayName, [self.fileObject name]];
 }
 
-- (void)setDocument:(NSDocument *)document
-{
-	[super setDocument: document];
-	
-	[self.window setRepresentedURL: [document fileURL]];
+- (void)setDocument:(NSDocument *)document {
+	[super setDocument:document];
+
+	[self.window setRepresentedURL:[document fileURL]];
 }
 
-- (void)windowDidLoad
-{
+- (void)windowDidLoad {
 	[super windowDidLoad];
-	[self.window setRepresentedURL: [self.document fileURL]];
+	[self.window setRepresentedURL:[self.document fileURL]];
 }
 
 @end

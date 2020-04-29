@@ -6,8 +6,7 @@
 //  Copyright 2009 Localization Foundation. All rights reserved.
 //
 
-@interface FilePreview : LIPreviewController
-{
+@interface FilePreview : LIPreviewController {
 }
 
 @end

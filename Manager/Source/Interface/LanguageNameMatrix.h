@@ -6,8 +6,7 @@
 //  Copyright 2007 The Blue Technologies Group. All rights reserved.
 //
 
-@interface LanguageNameMatrix : NSMatrix
-{
+@interface LanguageNameMatrix : NSMatrix {
 }
 
 @end

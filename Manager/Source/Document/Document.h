@@ -8,33 +8,31 @@
 
 @class LanguageCoordinator, MultiActionButton;
 
-@interface Document : BLDatabaseDocument <LIStatusObjectsTableViewDelegate>
-{
-    // Interface
-    IBOutlet NSTreeController		*bundlesController;
-    IBOutlet NSArrayController		*languagesController;
-	IBOutlet LanguageCoordinator	*languageCoordinator;
-	IBOutlet NSView					*localizerImportOptions;
-	IBOutlet MultiActionButton		*readInButton;
-	IBOutlet MultiActionButton		*rescanButton;
-	IBOutlet MultiActionButton		*syncButton;
-    IBOutlet NSTableView			*tableLanguages;
-    IBOutlet NSOutlineView			*tableBundles;
-    
-    
-    // temporary instance variables
-	NSMapTable			*_fileContentWindows;
-    NSMapTable			*_fileDetailWindows;
-	NSMapTable			*_filePreviewWindows;
-	NSArray				*_filteredBundles;
-	LIProcessDisplay	*_processDisplay;
-	NSString			*_searchString;
+@interface Document : BLDatabaseDocument <LIStatusObjectsTableViewDelegate> {
+	// Interface
+	IBOutlet NSTreeController *bundlesController;
+	IBOutlet NSArrayController *languagesController;
+	IBOutlet LanguageCoordinator *languageCoordinator;
+	IBOutlet NSView *localizerImportOptions;
+	IBOutlet MultiActionButton *readInButton;
+	IBOutlet MultiActionButton *rescanButton;
+	IBOutlet MultiActionButton *syncButton;
+	IBOutlet NSTableView *tableLanguages;
+	IBOutlet NSOutlineView *tableBundles;
+
+	// temporary instance variables
+	NSMapTable *_fileContentWindows;
+	NSMapTable *_fileDetailWindows;
+	NSMapTable *_filePreviewWindows;
+	NSArray *_filteredBundles;
+	LIProcessDisplay *_processDisplay;
+	NSString *_searchString;
 }
 
-@property(nonatomic, strong, readonly) NSArray *filteredBundles;
-@property(nonatomic, strong) NSString *searchString;
+@property (nonatomic, strong, readonly) NSArray *filteredBundles;
+@property (nonatomic, strong) NSString *searchString;
 
-@property(nonatomic, strong, readonly) NSArray *selectedLanguages;
+@property (nonatomic, strong, readonly) NSArray *selectedLanguages;
 
 @end
 

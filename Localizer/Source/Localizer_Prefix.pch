@@ -3,10 +3,10 @@
 //
 
 #ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-	#import <Quartz/Quartz.h>
-	#import <BlueLocalization/BlueLocalization.h>
-	#import <NibPreview/NibPreview.h>
-	#import <LocTools/LocTools.h>
-	#import <LocInterface/LocInterface.h>
+#import <Cocoa/Cocoa.h>
+#import <Quartz/Quartz.h>
+#import <BlueLocalization/BlueLocalization.h>
+#import <NibPreview/NibPreview.h>
+#import <LocTools/LocTools.h>
+#import <LocInterface/LocInterface.h>
 #endif

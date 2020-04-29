@@ -8,40 +8,35 @@
 
 #import "MultiActionWindow.h"
 
-
 @implementation MultiActionWindow
 
-- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag
-{
+- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag {
 	self = [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag];
 
 	_flagResponders = [[NSMutableArray alloc] init];
-	
+
 	return self;
 }
 
-- (void)registerResponderForFlagsChangedEvents:(id)responder
-{
-	[_flagResponders addObject: responder];
+- (void)registerResponderForFlagsChangedEvents:(id)responder {
+	[_flagResponders addObject:responder];
 }
 
-- (void)deregisterResponderForFlagsChangedEvents:(id)responder
-{
-	[_flagResponders removeObject: responder];
+- (void)deregisterResponderForFlagsChangedEvents:(id)responder {
+	[_flagResponders removeObject:responder];
 }
 
-- (void)flagsChanged:(NSEvent *)theEvent
-{
+- (void)flagsChanged:(NSEvent *)theEvent {
 	static NSEvent *aEvent = nil;
-	
+
 	if (theEvent == aEvent)
 		return;
-	
-	[super flagsChanged: theEvent];
-	
+
+	[super flagsChanged:theEvent];
+
 	aEvent = theEvent;
 	for (id responder in _flagResponders)
-		[responder flagsChanged: theEvent];
+		[responder flagsChanged:theEvent];
 	aEvent = nil;
 }
 

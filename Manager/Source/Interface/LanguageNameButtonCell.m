@@ -10,14 +10,12 @@
 
 @implementation LanguageNameButtonCell
 
-- (void)setTitle:(id)value
-{
-    [super setTitle: [BLLanguageTranslator descriptionForLanguage: value]];
+- (void)setTitle:(id)value {
+	[super setTitle:[BLLanguageTranslator descriptionForLanguage:value]];
 }
 
-- (NSString *)title
-{
-    return [BLLanguageTranslator identifierForLanguage: [super title]];
+- (NSString *)title {
+	return [BLLanguageTranslator identifierForLanguage:[super title]];
 }
 
 @end

@@ -18,21 +18,21 @@
 	return [NSAttributedString class];
 }
 
-- (NSAttributedString*)transformedValue:(NSString*)value {
+- (NSAttributedString *)transformedValue:(NSString *)value {
 	if (!value) {
 		return nil;
 	}
 	if ([value isKindOfClass:[NSAttributedString class]])
-		value = [(NSAttributedString*)value string];
+		value = [(NSAttributedString *)value string];
 	return [[NSAttributedString alloc] initWithString:value attributes:@{NSFontAttributeName: [NSFont systemFontOfSize:15], NSForegroundColorAttributeName: [NSColor textColor]}];
 }
 
-- (NSString*)reverseTransformedValue:(NSAttributedString*)value {
+- (NSString *)reverseTransformedValue:(NSAttributedString *)value {
 	if (!value) {
 		return nil;
 	}
 	if ([value isKindOfClass:[NSString class]])
-		return (NSString*)value;
+		return (NSString *)value;
 	return [value string];
 }
 @end

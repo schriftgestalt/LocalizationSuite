@@ -6,15 +6,14 @@
 //  Copyright 2006 The Blue Technologies Group. All rights reserved.
 //
 
-@interface Preferences : LIPreferences <NSToolbarDelegate, NSTableViewDataSource>
-{
+@interface Preferences : LIPreferences <NSToolbarDelegate, NSTableViewDataSource> {
 	IBOutlet NSView *generalView;
 	IBOutlet NSView *importView;
 	IBOutlet NSView *xcodeView;
 	IBOutlet NSView *filesView;
-	
-	IBOutlet NSWindow		*placeholdersSheet;
-	IBOutlet NSTableView	*placeholdersTableView;
+
+	IBOutlet NSWindow *placeholdersSheet;
+	IBOutlet NSTableView *placeholdersTableView;
 }
 
 - (IBAction)setSaveLocation:(id)sender;

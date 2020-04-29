@@ -19,17 +19,17 @@
 - (void)awakeFromNib {
 	[LILogWindow logWindow];
 	[[SUUpdater sharedUpdater] setDelegate:self];
-	NSValueTransformer* transformer = [[GSStringToAttributedValueTransformer alloc] init];
+	NSValueTransformer *transformer = [[GSStringToAttributedValueTransformer alloc] init];
 	[NSValueTransformer setValueTransformer:transformer forName:@"GSStringToAttributedValueTransformer"];
 }
 
 #pragma mark - Updates
 
-- (id<SUVersionComparison>)versionComparatorForUpdater:(SUUpdater*)updater {
+- (id<SUVersionComparison>)versionComparatorForUpdater:(SUUpdater *)updater {
 	return self;
 }
 
-- (NSComparisonResult)compareVersion:(NSString*)versionA toVersion:(NSString*)versionB {
+- (NSComparisonResult)compareVersion:(NSString *)versionA toVersion:(NSString *)versionB {
 	return [versionA hexanumericalCompare:versionB];
 }
 
@@ -121,12 +121,12 @@
 
 #pragma mark - Delegate Methods
 
-- (BOOL)applicationShouldOpenUntitledFile:(NSApplication*)sender {
+- (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender {
 	return NO;
 }
 
-- (BOOL)validateMenuItem:(NSMenuItem*)menuItem {
-	Document* document = [[NSDocumentController sharedDocumentController] currentDocument];
+- (BOOL)validateMenuItem:(NSMenuItem *)menuItem {
+	Document *document = [[NSDocumentController sharedDocumentController] currentDocument];
 
 	if ([menuItem tag] == 100)
 		return (document && [document validateMenuItem:menuItem]);
