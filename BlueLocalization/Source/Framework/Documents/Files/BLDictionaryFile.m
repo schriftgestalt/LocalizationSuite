@@ -59,6 +59,12 @@ NSString *BLFilterSettingsPropertyName	= @"filterSettings";
 								[properties objectForKey: BLLanguagesPropertyName], BLLanguagesSerializationKey,
 								nil];
 	NSArray *archivedKeys = [BLPropertyListSerializer serializeObject:[BLObject keyObjectsFromArray: keys] withAttributes:attributes outWrappers:NULL];
+	archivedKeys = [archivedKeys sortedArrayUsingComparator:^NSComparisonResult(NSDictionary *_Nonnull obj1, NSDictionary *_Nonnull obj2) {
+		
+		NSString *key1 = obj1[@"key"];
+		NSString *key2 = obj2[@"key"];
+		return [key1 compare:key2];
+	}];
 	
     // Create Contents.plist
 	NSMutableDictionary *contents = [NSMutableDictionary dictionary];
