@@ -40,6 +40,7 @@
 
 // Manage Languages
 - (IBAction)addNewLanguage:(id)sender;
+- (IBAction)beginAddLanguage:(id)sender;
 - (IBAction)addCustomLanguage:(id)sender;
 - (IBAction)removeLanguages:(id)sender;
 

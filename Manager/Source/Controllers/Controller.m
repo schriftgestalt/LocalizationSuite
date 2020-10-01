@@ -176,7 +176,7 @@ id __sharedControllerInstance;
 #pragma mark -
 
 - (IBAction)addLanguage:(id)sender {
-	[[[NSDocumentController sharedDocumentController] currentDocument] addLanguage:sender];
+	[[[NSDocumentController sharedDocumentController] currentDocument] beginAddLanguage:sender];
 }
 
 - (IBAction)addCustomLanguage:(id)sender {
