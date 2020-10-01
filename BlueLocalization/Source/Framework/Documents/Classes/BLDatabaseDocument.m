@@ -62,7 +62,9 @@ NSString *BLDatabaseDocumentUpdateXcodeFileLimitKey = @"XcodeFileLimit";
 	NSMutableDictionary *properties = [NSMutableDictionary dictionary];
 
 	// Persistent properties
-	[properties setObject:_languages forKey:BLLanguagesPropertyName];
+	if (_languages) {
+		[properties setObject:_languages forKey:BLLanguagesPropertyName];
+	}
 	[properties setObject:_preferences forKey:BLPreferencesPropertyName];
 	[properties setObject:_userPreferences forKey:BLUserPreferencesPropertyName];
 	if (_referenceLanguage)

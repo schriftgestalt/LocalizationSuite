@@ -53,13 +53,18 @@ NSString *BLFilterSettingsPropertyName = @"filterSettings";
 								 BLClearChangeInformationSerializationKey: @((options & BLFileClearChangedValuesOption) != 0),
 								 BLLanguagesSerializationKey: [properties objectForKey:BLLanguagesPropertyName]};
 
-	NSArray *archivedKeys = [BLPropertyListSerializer serializeObject:[BLObject keyObjectsFromArray:keys] withAttributes:attributes outWrappers:NULL];
+	NSArray *archivedKeys = [BLPropertyListSerializer serializeObject:keys withAttributes:attributes outWrappers:NULL];
 
 	archivedKeys = [archivedKeys sortedArrayUsingComparator:^NSComparisonResult(NSDictionary *_Nonnull obj1, NSDictionary *_Nonnull obj2) {
 		
-		NSString *key1 = obj1[@"key"];
-		NSString *key2 = obj2[@"key"];
-		return [key1 compare:key2];
+		NSString *key1 = obj1[@"localizations"][@"en"];
+		NSString *key2 = obj2[@"localizations"][@"en"];
+		NSComparisonResult result = [key1 compare:key2];
+		if (result != NSOrderedSame) {
+			return result;
+		}
+		NSLog(@"%@ == %@", obj1, obj2);
+		return result;
 	}];
 	
 	// Create Contents.plist

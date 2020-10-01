@@ -99,7 +99,7 @@ NSString *BLDictionaryPropertyName = @"dictionary";
 	// Embedded dictionary
 	BLDictionaryDocument *dictionary = [properties objectForKey:BLDictionaryPropertyName];
 	if (dictionary) {
-		wrapper = [dictionary fileWrapperOfType:nil error:NULL];
+		wrapper = [dictionary fileWrapperOfType:@"dictionary" error:NULL];
 		[fileWrappers secureSetObject:wrapper forKey:BLLocalizerFileDictionaryFileName];
 	}
 

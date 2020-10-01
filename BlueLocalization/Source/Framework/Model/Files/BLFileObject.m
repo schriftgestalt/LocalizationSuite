@@ -293,7 +293,9 @@ NSMutableDictionary *__fileObjectClasses = nil;
 
 	if (!([self customFileType] == nil && [other customFileType] == nil) && ![[self customFileType] isEqual:[other customFileType]])
 		return NO;
-	if (!([self hashValue] == nil && [other hashValue] == nil) && ![[self hashValue] isEqual:[other hashValue]])
+	NSString *hashValue1 = [self hashValue];
+	NSString *otherValue1 = [other hashValue];
+	if (!(hashValue1 == nil && otherValue1 == nil) && ![hashValue1 isEqual:otherValue1])
 		return NO;
 
 	// Objects

@@ -129,6 +129,10 @@ NSArray *BLDocumentFileWrapperIgnoredNames = nil;
 			return NO;
 		}
 	}
+	else {
+		NSDictionary* attr = @{NSFileModificationDate: [NSDate date]};
+		[mgr setAttributes:attr ofItemAtPath:[url path] error: NULL];
+	}
 	
 	// Get the sub-wrappers
 	NSDictionary *wrappers = [wrapper fileWrappers];

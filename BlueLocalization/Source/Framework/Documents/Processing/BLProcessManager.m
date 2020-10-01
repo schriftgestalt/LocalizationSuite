@@ -45,6 +45,7 @@
 		_document = document;
 		_groups = [[NSMutableArray alloc] init];
 		_queue = [[NSOperationQueue alloc] init];
+		_queue.maxConcurrentOperationCount = 1;
 		_steps = 0;
 		_stepsCompleted = 0;
 		
