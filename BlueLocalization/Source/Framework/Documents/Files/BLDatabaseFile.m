@@ -80,7 +80,7 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 
 + (NSFileWrapper *)createFileForObjects:(NSArray *)bundles withOptions:(NSUInteger)options andProperties:(NSDictionary *)properties
 {
-    BLLog(BLLogInfo, @"Generating Database File");
+	BLLog(BLLogInfo, @"Generating Database File");
 	
 	// Check input
 	for (NSString *key in [self requiredProperties]) {
@@ -89,11 +89,11 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 	}
 	if (![[BLObject bundleObjectsFromArray: bundles] isEqual: bundles])
 		[NSException raise:NSInternalInconsistencyException format:@"Only bundles should be written to a database file!"];
-    
+
 	// Build document
 	NSMutableDictionary *fileWrappers = [NSMutableDictionary dictionary];
 	
-    // Archive all bundles
+	// Archive all bundles
 	NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
 								[NSNumber numberWithBool: (options & BLFileActiveObjectsOnlyOption) != 0], BLActiveObjectsOnlySerializationKey,
 								[NSNumber numberWithBool: (options & BLFileClearChangedValuesOption) != 0], BLClearChangeInformationSerializationKey,
@@ -102,7 +102,7 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 								nil];
 	
 	NSDictionary *resources = [NSDictionary dictionary];
-    NSArray *archivedBundles = [BLPropertyListSerializer serializeObject:bundles withAttributes:attributes outWrappers:&resources];
+	NSArray *archivedBundles = [BLPropertyListSerializer serializeObject:bundles withAttributes:attributes outWrappers:&resources];
 	
 	NSFileWrapper *wrapper = nil;
 	// Create Resources directory
@@ -110,14 +110,14 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 		NSFileWrapper *wrapper = [[NSFileWrapper alloc] initDirectoryWithFileWrappers: resources];
 		[fileWrappers setObject:wrapper forKey:BLDatabaseFileResourcesDirectory];
 	}
-    // Create Contents.plist
+	// Create Contents.plist
 	NSMutableDictionary *contents = [NSMutableDictionary dictionary];
 	[contents setObject:archivedBundles forKey:BLFileBundlesKey];
 	[contents secureSetObject:[properties objectForKey: BLReferenceLanguagePropertyName] forKey:BLFileReferenceLanguageKey];
-    [contents secureSetObject:[properties objectForKey: BLLanguagesPropertyName] forKey:BLFileLanguagesKey];
+	[contents secureSetObject:[properties objectForKey: BLLanguagesPropertyName] forKey:BLFileLanguagesKey];
 	[contents secureSetObject:[properties objectForKey: BLPreferencesPropertyName] forKey:BLFilePreferencesKey];
-    [contents setObject:[NSNumber numberWithInt: BLDatabaseFileVersionNumber] forKey:BLFileVersionKey];
-    
+	[contents setObject:[NSNumber numberWithInt: BLDatabaseFileVersionNumber] forKey:BLFileVersionKey];
+
 	wrapper = [[NSFileWrapper alloc] initRegularFileWithContents: [NSPropertyListSerialization dataFromPropertyList:contents format:NSPropertyListXMLFormat_v1_0 errorDescription:nil]];
 	[fileWrappers setObject:wrapper forKey:BLDatabaseFileContentsFileName];
 	
@@ -130,8 +130,8 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 		wrapper = [[NSFileWrapper alloc] initRegularFileWithContents: [NSPropertyListSerialization dataFromPropertyList:settings format:NSPropertyListXMLFormat_v1_0 errorDescription:nil]];
 		[fileWrappers setObject:wrapper forKey:filename];
 	}
-    
-    return [[NSFileWrapper alloc] initDirectoryWithFileWrappers: fileWrappers];
+
+	return [[NSFileWrapper alloc] initDirectoryWithFileWrappers: fileWrappers];
 }
 
 + (NSArray *)objectsFromFile:(NSFileWrapper *)wrapper readingProperties:(NSDictionary **)outProperties
@@ -141,7 +141,7 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 	NSMutableDictionary *userPrefs = [NSMutableDictionary dictionary];
 	NSMutableDictionary *contents = nil;
 	NSMutableArray *bundles = nil;
-    
+
 	// Check version
 	if (![wrapper isDirectory]) {
 		// Legacy support
@@ -182,21 +182,21 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 			[userPrefs setObject:[NSPropertyListSerialization propertyListFromData:[[fileWrappers objectForKey: file] regularFileContents] mutabilityOption:NSPropertyListMutableContainersAndLeaves format:nil errorDescription:nil] forKey:[file stringByDeletingPathExtension]];
 		}
 	}
-    
-    // Generate properties
-    if (outProperties) {
-        NSMutableDictionary *properties = [NSMutableDictionary dictionary];
-        
+
+	// Generate properties
+	if (outProperties) {
+		NSMutableDictionary *properties = [NSMutableDictionary dictionary];
+	
 		[properties secureSetObject:[contents objectForKey: BLFileReferenceLanguageKey] forKey:BLReferenceLanguagePropertyName];
-        [properties secureSetObject:[contents objectForKey: BLFileLanguagesKey] forKey:BLLanguagesPropertyName];
-        [properties secureSetObject:[contents objectForKey: BLFilePreferencesKey] forKey:BLPreferencesPropertyName];
+		[properties secureSetObject:[contents objectForKey: BLFileLanguagesKey] forKey:BLLanguagesPropertyName];
+		[properties secureSetObject:[contents objectForKey: BLFilePreferencesKey] forKey:BLPreferencesPropertyName];
 		[properties secureSetObject:userPrefs forKey:BLUserPreferencesPropertyName];
-        
-        (*outProperties) = properties;
-     }
-    
+
+		(*outProperties) = properties;
+	 }
+
 	BLLogEndGroup();
-    return bundles;
+	return bundles;
 }
 
 
@@ -205,37 +205,37 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 + (NSMutableDictionary *)convertLegacyDatabaseFile:(NSData *)data
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary: [NSKeyedUnarchiver unarchiveObjectWithData: data]];
-    NSUInteger version = [[dict objectForKey: BLFileVersionKey] intValue];
+	NSUInteger version = [[dict objectForKey: BLFileVersionKey] intValue];
 	
 	// Upgrade old versions
 	if (version < 1) {
-        NSMutableArray *languages;
-        BLBundleObject *bundle;
-        
-        // Create bundle
-        bundle = [BLBundleObject bundleObjectWithPath: [dict objectForKey: @"basePath"]];
-        [bundle setFiles: [dict objectForKey: @"files"]];
-        [dict setObject:[NSArray arrayWithObject: bundle] forKey:@"bundles"];
-        
-        // Fix languages
-        [[bundle files] makeObjectsPerformSelector: @selector(fixLanguages)];
-        [dict setObject:[BLLanguageTranslator identifierForLanguage: [dict objectForKey: @"referenceLanguage"]] forKey:@"referenceLanguage"];
-        
-        languages = [NSMutableArray arrayWithArray: [dict objectForKey: @"languages"]];
-        for (unsigned i=0; i<[languages count]; i++)
-            [languages replaceObjectAtIndex:i withObject:[BLLanguageTranslator identifierForLanguage: [languages objectAtIndex: i]]];
-        [dict setObject:languages forKey:@"languages"];
+		NSMutableArray *languages;
+		BLBundleObject *bundle;
+
+		// Create bundle
+		bundle = [BLBundleObject bundleObjectWithPath: [dict objectForKey: @"basePath"]];
+		[bundle setFiles: [dict objectForKey: @"files"]];
+		[dict setObject:[NSArray arrayWithObject: bundle] forKey:@"bundles"];
+	
+		// Fix languages
+		[[bundle files] makeObjectsPerformSelector: @selector(fixLanguages)];
+		[dict setObject:[BLLanguageTranslator identifierForLanguage: [dict objectForKey: @"referenceLanguage"]] forKey:@"referenceLanguage"];
+
+		languages = [NSMutableArray arrayWithArray: [dict objectForKey: @"languages"]];
+		for (unsigned i=0; i<[languages count]; i++)
+			[languages replaceObjectAtIndex:i withObject:[BLLanguageTranslator identifierForLanguage: [languages objectAtIndex: i]]];
+		[dict setObject:languages forKey:@"languages"];
 		
-        [dict setObject:[NSDictionary dictionary] forKey:@"preferences"];
-    }
-    if (version < 2) {
-        NSMutableDictionary *prefs;
-        
-        // Update preferences
-        prefs = [NSMutableDictionary dictionaryWithDictionary: [dict objectForKey: @"preferences"]];
-        [prefs removeObjectForKey:@"lastSavePath"];
-        [dict setObject:prefs forKey:@"preferences"];
-    }
+		[dict setObject:[NSDictionary dictionary] forKey:@"preferences"];
+	}
+	if (version < 2) {
+		NSMutableDictionary *prefs;
+	
+		// Update preferences
+		prefs = [NSMutableDictionary dictionaryWithDictionary: [dict objectForKey: @"preferences"]];
+		[prefs removeObjectForKey:@"lastSavePath"];
+		[dict setObject:prefs forKey:@"preferences"];
+	}
 	if (version < 3) {
 		NSString *reference = [dict objectForKey: @"referenceLanguage"];
 		
@@ -285,8 +285,8 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [self init];
-    
+	self = [self init];
+	
 	if (self) {
 		[self setChangeDate: [aDecoder decodeObjectForKey: @"ObjectChangeDate"]];
 		[self setFlags: [aDecoder decodeIntForKey: @"ObjectFlags"]];
@@ -294,8 +294,8 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 		[self setErrors: [aDecoder decodeObjectForKey: @"ObjectErrors"]];
 		[_changedValues setArray: [aDecoder decodeObjectForKey: @"ObjectChangedValues"]];
 	}
-    
-    return self;
+	
+	return self;
 }
 
 @end
@@ -304,8 +304,8 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithCoder: aDecoder];
-    
+	self = [super initWithCoder: aDecoder];
+	
 	if (self) {
 		[self setFiles: [aDecoder decodeObjectForKey: @"BundleObjectFiles"]];
 		[self setName: [aDecoder decodeObjectForKey: @"BundleObjectName"]];
@@ -315,8 +315,8 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 		
 		[_changedValues setArray: [aDecoder decodeObjectForKey: @"ObjectChangedValues"]];
 	}
-    
-    return self;
+	
+	return self;
 }
 
 @end
@@ -325,8 +325,8 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithCoder: aDecoder];
-    
+	self = [super initWithCoder: aDecoder];
+	
 	if (self) {
 		[self setCustomFileType: [aDecoder decodeObjectForKey: @"FileObjectCustomType"]];
 		[self setHashValue: [aDecoder decodeObjectForKey: @"FileObjectHashValue"]];
@@ -336,8 +336,8 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 		
 		[_changedValues setArray: [aDecoder decodeObjectForKey: @"ObjectChangedValues"]];
 	}
-    
-    return self;
+	
+	return self;
 }
 
 @end
@@ -346,13 +346,13 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithCoder: aDecoder];
-    
+	self = [super initWithCoder: aDecoder];
+	
 	if (self) {
 		[self setIsPlistStringsFile: [aDecoder decodeBoolForKey: @"StringsFileObjectPlistFile"]];
 	}
-    
-    return self;
+	
+	return self;
 }
 
 @end
@@ -386,8 +386,8 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 	[tar setCurrentDirectoryPath: tempFolder];
 	[tar setArguments: [NSArray arrayWithObjects: @"-xjf", [tempPath lastPathComponent], [[self name] lastPathComponent], nil]];
 	[tar setStandardError: BLLogOpenPipe(@"Extracting backup using Tar")];
-    
-    // run
+	
+	// run
 	[tar launch];
 	
 	NSUInteger cycles = 0;
@@ -409,8 +409,8 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithCoder: aDecoder];
-    
+	self = [super initWithCoder: aDecoder];
+	
 	if (self) {
 		// Stage backup and re-import it as fiel wrapper
 		NSString *tmpPath = @"/tmp/locsuitetmp";
@@ -429,8 +429,8 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 		if (wrapper)
 			[self setAttachedObject:wrapper forKey:BLBackupAttachmentKey];
 	}
-    
-    return self;
+	
+	return self;
 }
 
 @end
@@ -439,7 +439,7 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithCoder: aDecoder];
+	self = [super initWithCoder: aDecoder];
 	
 	if (self) {
 		// values first
@@ -455,8 +455,8 @@ NSString *BLUserPreferencesPropertyName	= @"userPreferences";
 		// set changes
 		[_changedValues setArray: [aDecoder decodeObjectForKey: @"KeyObjectChangedValues"]];
 	}
-    
-    return self;
+	
+	return self;
 }
 
 @end

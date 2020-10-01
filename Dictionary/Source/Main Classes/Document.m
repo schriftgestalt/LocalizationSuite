@@ -250,16 +250,16 @@ NSString *DocumentViewOptionSearch			= @"search";
 		[_viewOptions removeObjectForKey: DocumentViewOptionSearch];
 	
 	// Add the object
-    [self willChange:NSKeyValueChangeInsertion valuesAtIndexes:indexes forKey:@"keys"];
+	[self willChange:NSKeyValueChangeInsertion valuesAtIndexes:indexes forKey:@"keys"];
 	_keyObjects = [_keyObjects arrayByAddingObject: newKey];
-    [self didChange:NSKeyValueChangeInsertion valuesAtIndexes:indexes forKey:@"keys"];
-    
+	[self didChange:NSKeyValueChangeInsertion valuesAtIndexes:indexes forKey:@"keys"];
+
 	// Select object and begin editing
 	self.selectedObject = newKey;
 	[content.contentView editColumn:0 row:[content.contentView selectedRow] withEvent:nil select:YES];
 	
 	// Make document dirty
-    [self updateChangeCount: NSChangeDone];
+	[self updateChangeCount: NSChangeDone];
 }
 
 - (IBAction)deleteKey:(id)sender
@@ -283,9 +283,9 @@ NSString *DocumentViewOptionSearch			= @"search";
 	NSMutableArray *keyObjects = [NSMutableArray arrayWithArray: self.keys];
 	[keyObjects removeObject: deletedObject];
 	[self setKeys: keyObjects];
-    
+
 	// Make document dirty
-    [self updateChangeCount: NSChangeDone];
+	[self updateChangeCount: NSChangeDone];
 }
 
 - (IBAction)beginAddLanguage:(id)sender

@@ -9,10 +9,10 @@
 
 @interface Document : BLDictionaryDocument
 {
-    IBOutlet LIContentController	*content;
+	IBOutlet LIContentController	*content;
 	IBOutlet NSPanel				*filterSettingsPanel;
-    
-    NSMutableDictionary	*_viewOptions;
+
+	NSMutableDictionary	*_viewOptions;
 	LIProcessDisplay	*_processDisplay;
 	BLKeyObject			*_selectedObject;
 }

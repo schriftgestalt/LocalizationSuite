@@ -123,7 +123,7 @@ NSArray *BLDocumentFileWrapperIgnoredNames = nil;
 			return NO;
 		}
 	}
-	if (![mgr fileExistsAtPath: [url path]]) {
+	if (![mgr fileExistsAtPath:[url path]]) {
 		if (![mgr createDirectoryAtPath:[url path] withIntermediateDirectories:YES attributes:nil error:outError]) {
 			BLLog(BLLogWarning, @"Error during saving. Could not create directory at path: %@", [url path]);
 			return NO;

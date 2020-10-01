@@ -118,7 +118,7 @@ id sharedControllerInstance;
 
 - (IBAction)deleteLanguage:(id)sender
 {
-    [[[NSDocumentController sharedDocumentController] currentDocument] beginDeleteLanguage: sender];
+	[[[NSDocumentController sharedDocumentController] currentDocument] beginDeleteLanguage: sender];
 }
 
 - (IBAction)addLanguage:(id)sender
