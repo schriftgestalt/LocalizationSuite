@@ -16,7 +16,7 @@
 @protocol StatisticsTextViewDelegate
 @optional
 
-- (NSArray*)currentObjectsInTextView:(StatisticsTextView*)textView;
-- (NSArray*)currentLanguagesInTextView:(StatisticsTextView*)textView;
+- (NSArray *)currentObjectsInTextView:(StatisticsTextView *)textView;
+- (NSArray *)currentLanguagesInTextView:(StatisticsTextView *)textView;
 
 @end

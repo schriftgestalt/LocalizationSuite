@@ -12,19 +12,18 @@
 
 @implementation LanguageNameMatrix
 
-- (void)bind:(NSString *)binding toObject:(id)observable withKeyPath:(NSString *)keyPath options:(NSDictionary *)options
-{
-    if (![[self prototype] isKindOfClass: [LanguageNameButtonCell class]]) {
-        NSButtonCell *prototype;
-        prototype = [[LanguageNameButtonCell alloc] init];
-        [prototype setButtonType: NSSwitchButton];
-        [prototype setControlSize: NSSmallControlSize];
-        [prototype setFont: [NSFont systemFontOfSize: [NSFont systemFontSizeForControlSize: NSSmallControlSize]]];
-        [prototype setLineBreakMode: NSLineBreakByTruncatingTail];
-        [self setPrototype: prototype];
-    }
-    
-    [super bind:binding toObject:observable withKeyPath:keyPath options:options];
+- (void)bind:(NSString *)binding toObject:(id)observable withKeyPath:(NSString *)keyPath options:(NSDictionary *)options {
+	if (![[self prototype] isKindOfClass:[LanguageNameButtonCell class]]) {
+		NSButtonCell *prototype;
+		prototype = [[LanguageNameButtonCell alloc] init];
+		[prototype setButtonType:NSSwitchButton];
+		[prototype setControlSize:NSSmallControlSize];
+		[prototype setFont:[NSFont systemFontOfSize:[NSFont systemFontSizeForControlSize:NSSmallControlSize]]];
+		[prototype setLineBreakMode:NSLineBreakByTruncatingTail];
+		[self setPrototype:prototype];
+	}
+
+	[super bind:binding toObject:observable withKeyPath:keyPath options:options];
 }
 
 @end

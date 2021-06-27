@@ -18,21 +18,20 @@ extern NSString *DocumentViewOptionFilter;
 
 @class Editor, InterfacePreviewController, DataSource;
 
-@interface Document : BLLocalizerDocument
-{
-	IBOutlet NSTreeController		*bundlesController;
-	IBOutlet LIContentController	*content;
-	IBOutlet Editor					*editor;
-	
-    LIPreviewController	*_previewController;
-	LIProcessDisplay	*_processDisplay;
-    BLKeyObject			*_selectedObject;
-    NSMutableDictionary	*_viewOptions;
-	NSWindowController	*_windowController;
+@interface Document : BLLocalizerDocument {
+	IBOutlet NSTreeController *bundlesController;
+	IBOutlet LIContentController *content;
+	IBOutlet Editor *editor;
+
+	LIPreviewController *_previewController;
+	LIProcessDisplay *_processDisplay;
+	BLKeyObject *_selectedObject;
+	NSMutableDictionary *_viewOptions;
+	NSWindowController *_windowController;
 }
 
 // Properties
-@property(strong) BLKeyObject *selectedObject;
+@property (strong) BLKeyObject *selectedObject;
 
 - (NSArray *)filteredKeys;
 - (NSUInteger)progress;

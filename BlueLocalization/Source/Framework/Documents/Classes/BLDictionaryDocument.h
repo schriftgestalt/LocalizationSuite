@@ -33,9 +33,9 @@ extern NSString *BLDictionaryNormLanguageFilterSetting;
 @interface BLDictionaryDocument : BLDocument
 {
 	NSMutableDictionary	*_filterSettings;
-    NSArray				*_keyObjects;
+	NSArray				*_keyObjects;
 	NSLock				*_keysLock;
-    NSMutableArray      *_languages;
+	NSMutableArray		*_languages;
 	BLProcessManager	*_processManager;
 }
 

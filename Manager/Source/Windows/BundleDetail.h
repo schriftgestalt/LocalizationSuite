@@ -8,16 +8,15 @@
 
 @class Document;
 
-@interface BundleDetail : NSWindowController
-{
-    BLBundleObject	*_bundle;
+@interface BundleDetail : NSWindowController {
+	BLBundleObject *_bundle;
 }
 
-@property(nonatomic,strong) BLBundleObject *bundleObject;
-@property(nonatomic,assign) BLReferencingStyle referencingStyle;
+@property (nonatomic, strong) BLBundleObject *bundleObject;
+@property (nonatomic, assign) BLReferencingStyle referencingStyle;
 
-@property(strong, nonatomic, readonly) NSString *fullPath;
-@property(strong, nonatomic, readonly) NSString *namingStyleComment;
+@property (strong, nonatomic, readonly) NSString *fullPath;
+@property (strong, nonatomic, readonly) NSString *namingStyleComment;
 
 // Actions
 - (IBAction)choosePath:(id)sender;

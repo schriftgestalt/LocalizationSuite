@@ -8,16 +8,15 @@
 
 @class Document;
 
-@interface FileDetail : NSWindowController
-{
-    IBOutlet NSMatrix       *changeMatrix;
-    IBOutlet NSPopUpButton  *typePopUp;
+@interface FileDetail : NSWindowController {
+	IBOutlet NSMatrix *changeMatrix;
+	IBOutlet NSPopUpButton *typePopUp;
 }
 
-@property(strong) BLFileObject *fileObject;
+@property (strong) BLFileObject *fileObject;
 
-@property(strong, readonly) NSString *fullPath;
-@property(strong, readonly) NSString *currentErrors;
+@property (strong, readonly) NSString *fullPath;
+@property (strong, readonly) NSString *currentErrors;
 
 // Actions
 - (IBAction)choosePath:(id)sender;

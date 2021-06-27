@@ -8,11 +8,11 @@
 
 #import "Preferences.h"
 
-NSString* PreferencesNibFilename = @"Preferences";
+NSString *PreferencesNibFilename = @"Preferences";
 
 @implementation Preferences
 
-+ (NSString*)windowNibName {
++ (NSString *)windowNibName {
 	return PreferencesNibFilename;
 }
 

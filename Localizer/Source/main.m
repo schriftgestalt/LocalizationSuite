@@ -6,7 +6,6 @@
 //  Copyright (c) 2003 __MyCompanyName__. All rights reserved.
 //
 
-int main(int argc, const char *argv[])
-{
-    return NSApplicationMain(argc, argv);
+int main(int argc, const char *argv[]) {
+	return NSApplicationMain(argc, argv);
 }

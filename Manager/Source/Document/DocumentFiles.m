@@ -17,164 +17,150 @@
 
 #import "NSAlert-Extensions.h"
 
-
 @implementation Document (DocumentFiles)
 
 #pragma mark - Manage Files
 
-- (IBAction)addFile:(id)sender
-{
-    NSOpenPanel *openPanel;
-    
-    openPanel = [NSOpenPanel openPanel];
-	[openPanel setCanChooseDirectories: YES];
-    [openPanel setAllowsMultipleSelection: YES];
-    
-	[openPanel beginSheetModalForWindow:[self windowForSheet] completionHandler:^(NSInteger result) {
-		if (result == NSAlertDefaultReturn)
-			[self addFiles: [[openPanel URLs] valueForKey: @"path"]];
-	}];
+- (IBAction)addFile:(id)sender {
+	NSOpenPanel *openPanel;
+
+	openPanel = [NSOpenPanel openPanel];
+	[openPanel setCanChooseDirectories:YES];
+	[openPanel setAllowsMultipleSelection:YES];
+
+	[openPanel beginSheetModalForWindow:[self windowForSheet]
+					  completionHandler:^(NSInteger result) {
+						  if (result == NSAlertDefaultReturn)
+							  [self addFiles:[[openPanel URLs] valueForKey:@"path"]];
+					  }];
 }
 
-- (IBAction)removeFile:(id)sender
-{
-	NSArray *objects = [self getSelectedObjects: NO];
-	
-	for (NSUInteger i=0; i<[objects count]; i++) {
-		BLObject *object = [objects objectAtIndex: i];
-		
-		if ([object isKindOfClass: [BLFileObject class]])
-			[[(BLFileObject *)object bundleObject] removeFile: (BLFileObject *)object];
-		if ([object isKindOfClass: [BLBundleObject class]])
-			[self removeBundle: (BLBundleObject *)object];
+- (IBAction)removeFile:(id)sender {
+	NSArray *objects = [self getSelectedObjects:NO];
+
+	for (NSUInteger i = 0; i < [objects count]; i++) {
+		BLObject *object = [objects objectAtIndex:i];
+
+		if ([object isKindOfClass:[BLFileObject class]])
+			[[(BLFileObject *)object bundleObject] removeFile:(BLFileObject *)object];
+		if ([object isKindOfClass:[BLBundleObject class]])
+			[self removeBundle:(BLBundleObject *)object];
 	}
-	
-	[self updateChangeCount: NSChangeDone];
+
+	[self updateChangeCount:NSChangeDone];
 }
 
-- (void)removeFilePanelDidEnd:(NSOpenPanel *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
-{
-    NSArray *selectedObjects;
-    NSUInteger i;
-    
-    selectedObjects = [self getSelectedObjects: NO];
-    
-    // remove files
-    for (i=0; i<[selectedObjects count]; i++) {
-        id object = [selectedObjects objectAtIndex: i];
-        if ([object isKindOfClass: [BLFileObject class]])
-            [[object bundleObject] removeFile: object];
-    }
-    // remove bundles
-    for (i=0; i<[selectedObjects count]; i++) {
-        id object = [selectedObjects objectAtIndex: i];
-        if ([object isKindOfClass: [BLBundleObject class]])
-			[self removeBundle: object];
-    }
-    
-}
+- (void)removeFilePanelDidEnd:(NSOpenPanel *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
+	NSArray *selectedObjects;
+	NSUInteger i;
 
+	selectedObjects = [self getSelectedObjects:NO];
+
+	// remove files
+	for (i = 0; i < [selectedObjects count]; i++) {
+		id object = [selectedObjects objectAtIndex:i];
+		if ([object isKindOfClass:[BLFileObject class]])
+			[[object bundleObject] removeFile:object];
+	}
+	// remove bundles
+	for (i = 0; i < [selectedObjects count]; i++) {
+		id object = [selectedObjects objectAtIndex:i];
+		if ([object isKindOfClass:[BLBundleObject class]])
+			[self removeBundle:object];
+	}
+}
 
 #pragma mark -
 
-- (IBAction)rescanReferenceFiles:(id)sender
-{
-	[self rescanObjects:[self getSelectedObjects: YES] force:NO];
+- (IBAction)rescanReferenceFiles:(id)sender {
+	[self rescanObjects:[self getSelectedObjects:YES] force:NO];
 }
 
-- (IBAction)rescanReferenceFilesForced:(id)sender
-{
-	[self rescanObjects:[self getSelectedObjects: NO] force:YES];
+- (IBAction)rescanReferenceFilesForced:(id)sender {
+	[self rescanObjects:[self getSelectedObjects:NO] force:YES];
 }
 
-- (IBAction)rescanAllReferenceFiles:(id)sender
-{
-	[self rescan: NO];
+- (IBAction)rescanAllReferenceFiles:(id)sender {
+	[self rescan:NO];
 }
 
-- (IBAction)reimportFiles:(id)sender
-{
-	[self reimportFiles:[self getSelectedObjects: YES] forLanguages:[self languages]];
+- (IBAction)reimportFiles:(id)sender {
+	[self reimportFiles:[self getSelectedObjects:YES] forLanguages:[self languages]];
 }
 
-- (IBAction)reimportFilesForLanguage:(id)sender
-{
-	[self reimportFiles:[self getSelectedObjects: YES] forLanguages:[NSArray arrayWithObject: [sender representedObject]]];
+- (IBAction)reimportFilesForLanguage:(id)sender {
+	[self reimportFiles:[self getSelectedObjects:YES] forLanguages:[NSArray arrayWithObject:[sender representedObject]]];
 }
 
-- (IBAction)synchronizeFiles:(id)sender
-{
-	[self synchronizeObjects:[self getSelectedObjects: YES] forLanguages:[self languages] reinject:NO];
+- (IBAction)synchronizeFiles:(id)sender {
+	[self synchronizeObjects:[self getSelectedObjects:YES] forLanguages:[self languages] reinject:NO];
 }
 
-- (IBAction)synchronizeAllFiles:(id)sender
-{
+- (IBAction)synchronizeAllFiles:(id)sender {
 	[self synchronizeObjects:[self bundles] forLanguages:[self languages] reinject:NO];
 }
 
-- (IBAction)reinjectFiles:(id)sender
-{
+- (IBAction)reinjectFiles:(id)sender {
 	// Get objects
 	BOOL all = NO;
-	if ([sender isKindOfClass: [NSView class]])
+	if ([sender isKindOfClass:[NSView class]])
 		all = (([[[sender window] currentEvent] modifierFlags] & NSAlternateKeyMask) != 0);
-	NSArray *objects = (all) ? [self bundles] : [self getSelectedObjects: YES];
-	
+	NSArray *objects = (all) ? [self bundles] : [self getSelectedObjects:YES];
+
 	// Show warning
 	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"ResetFilesTitle", nil)
 									 defaultButton:NSLocalizedString(@"Yes", nil)
 								   alternateButton:NSLocalizedString(@"No", nil)
 									   otherButton:nil
 						 informativeTextWithFormat:NSLocalizedString(@"ResetFilesText", nil)];
-	[alert beginSheetModalForWindow:[self windowForSheet] completionHandler:^(NSInteger result) {
-		if (result != NSAlertDefaultReturn)
-			return;
-		
-		// Perform reinject
-		[self synchronizeObjects:objects forLanguages:[self languages] reinject:YES];
-	}];
+	[alert beginSheetModalForWindow:[self windowForSheet]
+				  completionHandler:^(NSInteger result) {
+					  if (result != NSAlertDefaultReturn)
+						  return;
+
+					  // Perform reinject
+					  [self synchronizeObjects:objects forLanguages:[self languages] reinject:YES];
+				  }];
 }
 
-- (IBAction)reinjectFilesForLanguage:(id)sender
-{
+- (IBAction)reinjectFilesForLanguage:(id)sender {
 	NSString *language = [sender representedObject];
-	NSString *languageName = [BLLanguageTranslator descriptionForLanguage: language];
-	
-	NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat: NSLocalizedString(@"ResetFilesLanguageTitle", nil), languageName]
+	NSString *languageName = [BLLanguageTranslator descriptionForLanguage:language];
+
+	NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:NSLocalizedString(@"ResetFilesLanguageTitle", nil), languageName]
 									 defaultButton:NSLocalizedString(@"Yes", nil)
 								   alternateButton:NSLocalizedString(@"No", nil)
 									   otherButton:nil
 						 informativeTextWithFormat:NSLocalizedString(@"ResetFilesLanguageText", nil), languageName];
-	[alert beginSheetModalForWindow:[self windowForSheet] completionHandler:^(NSInteger result) {
-		if (result != NSAlertDefaultReturn)
-			return;
-		
-		[self synchronizeObjects:[self getSelectedObjects: YES] forLanguages:[NSArray arrayWithObject: language] reinject:YES];
-	}];
-}
+	[alert beginSheetModalForWindow:[self windowForSheet]
+				  completionHandler:^(NSInteger result) {
+					  if (result != NSAlertDefaultReturn)
+						  return;
 
+					  [self synchronizeObjects:[self getSelectedObjects:YES] forLanguages:[NSArray arrayWithObject:language] reinject:YES];
+				  }];
+}
 
 #pragma mark - File Detail Windows
 
-- (IBAction)showFileDetail:(id)sender
-{
-    NSArray *objects = [self getSelectedObjects: NO];
-    
-    for (BLObject *object in objects) {
-        NSWindowController *detail;
-		
-        // Check for already open window
-		detail = [_fileDetailWindows objectForKey: object];
-        
+- (IBAction)showFileDetail:(id)sender {
+	NSArray *objects = [self getSelectedObjects:NO];
+
+	for (BLObject *object in objects) {
+		NSWindowController *detail;
+
+		// Check for already open window
+		detail = [_fileDetailWindows objectForKey:object];
+
 		// Create only if needed
 		if (!detail) {
 			// File object detail
-			if ([object isKindOfClass: [BLFileObject class]]) {
+			if ([object isKindOfClass:[BLFileObject class]]) {
 				detail = [[FileDetail alloc] init];
 				((FileDetail *)detail).fileObject = (BLFileObject *)object;
 			}
 			// Bundle object detail
-			else if ([object isKindOfClass: [BLBundleObject class]]) {
+			else if ([object isKindOfClass:[BLBundleObject class]]) {
 				detail = [[BundleDetail alloc] init];
 				((BundleDetail *)detail).bundleObject = (BLBundleObject *)object;
 			}
@@ -182,142 +168,135 @@
 			else {
 				continue;
 			}
-			
+
 			// Add to window controllers list
-			[self addWindowController: detail];
+			[self addWindowController:detail];
 			[_fileDetailWindows setObject:detail forKey:object];
 		}
-		
+
 		// Make sure the window is open
-		[detail showWindow: self];
+		[detail showWindow:self];
 	}
 }
 
-- (IBAction)showFilePreview:(id)sender
-{
-    NSArray *objects = [self getSelectedObjects: NO];
-    
-    for (BLObject *fileObject in objects) {
-        FilePreview *detail;
-		
+- (IBAction)showFilePreview:(id)sender {
+	NSArray *objects = [self getSelectedObjects:NO];
+
+	for (BLObject *fileObject in objects) {
+		FilePreview *detail;
+
 		// File objects only
-		if (![fileObject isKindOfClass: [BLFileObject class]])
+		if (![fileObject isKindOfClass:[BLFileObject class]])
 			continue;
-		
-        // Check for already open window
-		detail = [_filePreviewWindows objectForKey: fileObject];
-        
+
+		// Check for already open window
+		detail = [_filePreviewWindows objectForKey:fileObject];
+
 		// Create only if needed
 		if (!detail) {
 			detail = [[FilePreview alloc] init];
 			detail.fileObject = (BLFileObject *)fileObject;
 			[detail bind:@"languages" toObject:self withKeyPath:@"languages" options:nil];
-			
-			[self addWindowController: detail];
+
+			[self addWindowController:detail];
 			[_filePreviewWindows setObject:detail forKey:fileObject];
 		}
-		
+
 		// Make sure the window is open
-		[detail showWindow: self];
+		[detail showWindow:self];
 	}
 }
 
-- (IBAction)showFileContent:(id)sender
-{
-    NSArray *objects = [self getSelectedObjects: NO];
-    
-    for (BLObject *fileObject in objects) {
-        FileContent *detail;
-		
+- (IBAction)showFileContent:(id)sender {
+	NSArray *objects = [self getSelectedObjects:NO];
+
+	for (BLObject *fileObject in objects) {
+		FileContent *detail;
+
 		// File objects only
-		if (![fileObject isKindOfClass: [BLFileObject class]])
+		if (![fileObject isKindOfClass:[BLFileObject class]])
 			continue;
-		
-        // Check for already open window
-		detail = [_fileContentWindows objectForKey: fileObject];
-        
+
+		// Check for already open window
+		detail = [_fileContentWindows objectForKey:fileObject];
+
 		// Create only if needed
 		if (!detail) {
 			detail = [[FileContent alloc] init];
 			detail.fileObject = (BLFileObject *)fileObject;
-			
-			[self addWindowController: detail];
+
+			[self addWindowController:detail];
 			[_fileContentWindows setObject:detail forKey:fileObject];
 		}
-		
+
 		// Make sure the window is open
-		[detail showWindow: self];
+		[detail showWindow:self];
 	}
 }
 
-- (IBAction)revealFile:(id)sender
-{
+- (IBAction)revealFile:(id)sender {
 	NSString *filePath, *folderPath;
-    NSArray *objects;
-    NSUInteger i;
+	NSArray *objects;
+	NSUInteger i;
 	id object;
-    
-	objects = [self getSelectedObjects: NO];
-	
-    for (i=0; i<[objects count]; i++) {
-        object = [objects objectAtIndex: i];
-		
-		if ([object isKindOfClass: [BLFileObject class]]) {
+
+	objects = [self getSelectedObjects:NO];
+
+	for (i = 0; i < [objects count]; i++) {
+		object = [objects objectAtIndex:i];
+
+		if ([object isKindOfClass:[BLFileObject class]]) {
 			filePath = [[self pathCreator] absolutePathForFile:object andLanguage:_referenceLanguage];
 			folderPath = [[self pathCreator] realPathForFolderOfLanguage:_referenceLanguage inBundle:[object bundleObject]];
 		}
-		else if ([object isKindOfClass: [BLBundleObject class]]) {
-			filePath = [[self pathCreator] fullPathForBundle: object];
+		else if ([object isKindOfClass:[BLBundleObject class]]) {
+			filePath = [[self pathCreator] fullPathForBundle:object];
 			folderPath = [filePath stringByDeletingLastPathComponent];
 		}
 		else {
 			continue;
 		}
-		
+
 		[[NSWorkspace sharedWorkspace] selectFile:filePath inFileViewerRootedAtPath:folderPath];
 	}
 }
 
-- (void)detailWindowDidClose:(NSWindowController *)windowController
-{
+- (void)detailWindowDidClose:(NSWindowController *)windowController {
 	// Bundle windows
-	if ([windowController isKindOfClass: [BundleDetail class]])
-		[_fileDetailWindows removeObjectForKey: [(BundleDetail *)windowController bundleObject]];
-	
+	if ([windowController isKindOfClass:[BundleDetail class]])
+		[_fileDetailWindows removeObjectForKey:[(BundleDetail *)windowController bundleObject]];
+
 	// File windows
-	if ([windowController isKindOfClass: [FileDetail class]])
-		[_fileDetailWindows removeObjectForKey: [(FileDetail *)windowController fileObject]];
-	if ([windowController isKindOfClass: [FilePreview class]])
-		[_filePreviewWindows removeObjectForKey: [(FilePreview *)windowController fileObject]];
-	if ([windowController isKindOfClass: [FileContent class]])
-		[_fileContentWindows removeObjectForKey: [(FileContent *)windowController fileObject]];
+	if ([windowController isKindOfClass:[FileDetail class]])
+		[_fileDetailWindows removeObjectForKey:[(FileDetail *)windowController fileObject]];
+	if ([windowController isKindOfClass:[FilePreview class]])
+		[_filePreviewWindows removeObjectForKey:[(FilePreview *)windowController fileObject]];
+	if ([windowController isKindOfClass:[FileContent class]])
+		[_fileContentWindows removeObjectForKey:[(FileContent *)windowController fileObject]];
 }
 
 #pragma mark - Files TableView
 
-- (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op
-{
-    return NSDragOperationLink;
+- (NSDragOperation)tableView:(NSTableView *)tv validateDrop:(id<NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op {
+	return NSDragOperationLink;
 }
 
-- (BOOL)tableView:(NSTableView*)tv acceptDrop:(id <NSDraggingInfo>)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)op
-{
-    [self addFiles: [[info draggingPasteboard] propertyListForType: NSFilenamesPboardType]];
-    return YES;
+- (BOOL)tableView:(NSTableView *)tv acceptDrop:(id<NSDraggingInfo>)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)op {
+	[self addFiles:[[info draggingPasteboard] propertyListForType:NSFilenamesPboardType]];
+	return YES;
 }
 
-- (NSString *)tableView:(NSTableView *)tableView customNameForColumn:(NSTableColumn *)column
-{
-    NSString *table = @"", *key;
-    
-    if (tableView == tableLanguages)
-        table = @"languages";
-    if (tableView == tableBundles)
-        table = @"files";
-    
-    key = [NSString stringWithFormat: @"%@.%@", table, [column identifier]];
-    
-    return NSLocalizedStringFromTable(key, @"TableHeaders", nil);
+- (NSString *)tableView:(NSTableView *)tableView customNameForColumn:(NSTableColumn *)column {
+	NSString *table = @"", *key;
+
+	if (tableView == tableLanguages)
+		table = @"languages";
+	if (tableView == tableBundles)
+		table = @"files";
+
+	key = [NSString stringWithFormat:@"%@.%@", table, [column identifier]];
+
+	return NSLocalizedStringFromTable(key, @"TableHeaders", nil);
 }
 
 @end

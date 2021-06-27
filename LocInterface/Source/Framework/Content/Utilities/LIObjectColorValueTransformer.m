@@ -12,31 +12,28 @@ NSString *LIObjectColorValueTransformerName = @"LIObjectColor";
 
 @implementation LIObjectColorValueTransformer
 
-+ (void)load
-{
++ (void)load {
 	NSValueTransformer *transformer = [[self alloc] init];
 	[NSValueTransformer setValueTransformer:transformer forName:LIObjectColorValueTransformerName];
 }
 
-+ (Class)transformedValueClass
-{
++ (Class)transformedValueClass {
 	return [NSColor class];
 }
 
-- (id)transformedValue:(id)value
-{
+- (id)transformedValue:(id)value {
 	BLObject *object;
-	
-	if (![value isKindOfClass: [BLObject class]])
-		return [NSColor textColor];
+
+	if (![value isKindOfClass:[BLObject class]])
+		return [NSColor controlTextColor];
 	object = (BLObject *)value;
-	
+
 	if ([[object errors] count] > 0)
 		return [NSColor redColor];
-	else if ([object isKindOfClass: [BLBundleObject class]])
+	else if ([object isKindOfClass:[BLBundleObject class]])
 		return [NSColor disabledControlTextColor];
 	else
-		return [NSColor textColor];
+		return [NSColor controlTextColor];
 }
 
 @end

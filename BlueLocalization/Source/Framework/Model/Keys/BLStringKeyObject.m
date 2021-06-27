@@ -12,12 +12,12 @@
 
 + (id)keyObjectWithKey:(NSString *)key
 {
-    return [[self alloc] initWithKey: key];
+	return [[self alloc] initWithKey: key];
 }
 
 + (Class)classOfObjects
 {
-    return [NSString class];
+	return [NSString class];
 }
 
 + (BOOL)isEmptyValue:(id)value

@@ -94,6 +94,15 @@ NSString *LILanguageSelectionNibName = @"LILanguageSelection";
 	}
 }
 
+- (void)beginSheetModalForWindow:(NSWindow *)sheetWindow completionHandler:(void (^)(NSModalResponse))handler {
+	if (!view)
+		[self loadInterface];
+	[self setAccessoryView: view];
+	
+	[super beginSheetModalForWindow:sheetWindow completionHandler:handler];
+	[[self window] makeFirstResponder: searchField];
+}
+
 - (void)beginSheetModalForWindow:(NSWindow *)window modalDelegate:(id)delegate didEndSelector:(SEL)didEndSelector contextInfo:(void *)contextInfo
 {
 	if (!view)

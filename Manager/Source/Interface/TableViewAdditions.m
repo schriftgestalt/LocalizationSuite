@@ -12,18 +12,16 @@ NSString *NSTableViewSortingKeyFormat = @"NSTableView Sorting %@";
 
 @implementation NSTableView (TableViewAdditions)
 
-- (void)saveSortDescriptors
-{
-    [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject: [self sortDescriptors]] forKey:[NSString stringWithFormat:NSTableViewSortingKeyFormat, [self autosaveName]]];
+- (void)saveSortDescriptors {
+	[[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:[self sortDescriptors]] forKey:[NSString stringWithFormat:NSTableViewSortingKeyFormat, [self autosaveName]]];
 }
 
-- (void)loadSortDescriptors
-{
+- (void)loadSortDescriptors {
 	NSData *data;
-	
-	data = [[NSUserDefaults standardUserDefaults] objectForKey: [NSString stringWithFormat:NSTableViewSortingKeyFormat, [self autosaveName]]];
+
+	data = [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:NSTableViewSortingKeyFormat, [self autosaveName]]];
 	if (data)
-		[self setSortDescriptors: [NSKeyedUnarchiver unarchiveObjectWithData: data]];
+		[self setSortDescriptors:[NSKeyedUnarchiver unarchiveObjectWithData:data]];
 }
 
 @end

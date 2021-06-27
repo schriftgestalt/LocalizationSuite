@@ -8,33 +8,32 @@
 
 @class Document;
 
-@interface FileContent : NSWindowController
-{
-	IBOutlet LIContentController	*content;
-	IBOutlet LIContentController	*oldContent;
-    IBOutlet NSSplitView			*splitview;
-    IBOutlet NSView					*removedStringsView;
-    
-    BLFileObject		*_fileObject;
-    NSString			*_otherLanguage;
-	LIProcessDisplay	*_processDisplay;
-	BLProcessManager	*_processManager;
-    NSString			*_searchString;
-	BOOL				_showComments;
-    BOOL				_showEmptyStrings;
-    BOOL				_showRemovedStrings;
+@interface FileContent : NSWindowController {
+	IBOutlet LIContentController *content;
+	IBOutlet LIContentController *oldContent;
+	IBOutlet NSSplitView *splitview;
+	IBOutlet NSView *removedStringsView;
+
+	BLFileObject *_fileObject;
+	NSString *_otherLanguage;
+	LIProcessDisplay *_processDisplay;
+	BLProcessManager *_processManager;
+	NSString *_searchString;
+	BOOL _showComments;
+	BOOL _showEmptyStrings;
+	BOOL _showRemovedStrings;
 }
 
 // Accessors
-@property(nonatomic, strong) BLFileObject *fileObject;
+@property (nonatomic, strong) BLFileObject *fileObject;
 
-@property(nonatomic, strong) NSString *otherLanguage;
-@property(nonatomic, strong, readonly) NSArray *availableOtherLanguages;
-@property(nonatomic, strong) NSString *searchString;
+@property (nonatomic, strong) NSString *otherLanguage;
+@property (nonatomic, strong, readonly) NSArray *availableOtherLanguages;
+@property (nonatomic, strong) NSString *searchString;
 
-@property(nonatomic) BOOL showComments;
-@property(nonatomic) BOOL showEmptyStrings;
-@property(nonatomic) BOOL showRemovedStrings;
+@property (nonatomic) BOOL showComments;
+@property (nonatomic) BOOL showEmptyStrings;
+@property (nonatomic) BOOL showRemovedStrings;
 
 // Actions
 - (IBAction)markAsActive:(id)sender;

@@ -24,10 +24,6 @@
 		504E09A3130057F4006B5F4B /* LocInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E099B130057EF006B5F4B /* LocInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		50515A0F03EDBE3000749D6B /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 50515A0D03EDBE3000749D6B /* Controller.m */; };
 		5052605705D5C32300429FDF /* Localizer.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5052605505D5C32300429FDF /* Localizer.icns */; };
-		50566599138415E200E8AB31 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50566597138415E200E8AB31 /* Preferences.xib */; };
-		5056659F1384161300E8AB31 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5056659E1384161300E8AB31 /* Preferences.m */; };
-		505665A1138417A800E8AB31 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505665A0138417A800E8AB31 /* BWToolkitFramework.framework */; };
-		505665A2138417B800E8AB31 /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 505665A0138417A800E8AB31 /* BWToolkitFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		50597F010FCE8FF7001275A5 /* Window.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50597EFF0FCE8FF7001275A5 /* Window.strings */; };
 		505C938E0AB1A3AE007AEB26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 505C938C0AB1A3AE007AEB26 /* Localizable.strings */; };
 		506FE7B41194720B009A67A8 /* lod.icns in Resources */ = {isa = PBXBuildFile; fileRef = 506FE7B31194720B009A67A8 /* lod.icns */; };
@@ -57,7 +53,6 @@
 				504E09A1130057F4006B5F4B /* NibPreview.framework in CopyFiles */,
 				504E09A2130057F4006B5F4B /* LocTools.framework in CopyFiles */,
 				504E09A3130057F4006B5F4B /* LocInterface.framework in CopyFiles */,
-				505665A2138417B800E8AB31 /* BWToolkitFramework.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +93,6 @@
 		56320E73230EA988002A5878 /* GSStringToAttributedValueTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSStringToAttributedValueTransformer.m; sourceTree = "<group>"; };
 		56320E86230EBF66002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Interface/Base.lproj/Document.xib; sourceTree = "<group>"; };
 		56320E87230EBF66002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Interface/Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		56320E88230EBF67002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Interface/Base.lproj/Preferences.xib; sourceTree = "<group>"; };
 		56320E89230EBF6C002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Interface/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		56320E8A230EBF6C002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Interface/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		56320E8B230EBF6C002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Interface/en.lproj/Window.strings; sourceTree = "<group>"; };
@@ -106,6 +100,7 @@
 		56370B441D42136B0024CD02 /* GSGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGroupView.m; sourceTree = "<group>"; };
 		56370B461D4221700024CD02 /* GSLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLine.h; sourceTree = "<group>"; };
 		56370B471D4221700024CD02 /* GSLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLine.m; sourceTree = "<group>"; };
+		56528DB02459867D0030395E /* Localizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Localizer.entitlements; sourceTree = "<group>"; };
 		565DBF2E1D42066C000513F0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* Localizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Localizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,7 +118,6 @@
 				504E099D130057EF006B5F4B /* NibPreview.framework in Frameworks */,
 				504E099E130057EF006B5F4B /* LocTools.framework in Frameworks */,
 				504E099F130057EF006B5F4B /* LocInterface.framework in Frameworks */,
-				505665A1138417A800E8AB31 /* BWToolkitFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +135,7 @@
 		2A37F4AAFDCFA73011CA2CEA /* Localizer */ = {
 			isa = PBXGroup;
 			children = (
+				56528DB02459867D0030395E /* Localizer.entitlements */,
 				50D110890FB84EFE006FCF8C /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
@@ -181,7 +176,6 @@
 			children = (
 				50241EA50EC35D8300122C6F /* Document.xib */,
 				50241EAB0EC35DA700122C6F /* MainMenu.xib */,
-				50566597138415E200E8AB31 /* Preferences.xib */,
 				8D15AC360486D014006FF6A4 /* Info.plist */,
 				507A47E305D6A20D0044A3E3 /* InfoPlist.strings */,
 				505C938C0AB1A3AE007AEB26 /* Localizable.strings */,
@@ -288,11 +282,6 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Localization Suite";
-				TargetAttributes = {
-					8D15AC270486D014006FF6A4 = {
-						ProvisioningStyle = Manual;
-					};
-				};
 			};
 			buildConfigurationList = 501EBC8B0855AE8600FBC27B /* Build configuration list for PBXProject "Localizer" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -330,7 +319,6 @@
 				5021C2AC113155600057F2D9 /* Localizer.help in Resources */,
 				506FE7B41194720B009A67A8 /* lod.icns in Resources */,
 				5006916F12803C4E00470F3D /* ldb.icns in Resources */,
-				50566599138415E200E8AB31 /* Preferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +336,6 @@
 				50515A0F03EDBE3000749D6B /* Controller.m in Sources */,
 				504333A51049FD4D005BD65F /* Editor.m in Sources */,
 				50BB659F10B5C61A00A1AD4C /* StatisticsTextView.m in Sources */,
-				5056659F1384161300E8AB31 /* Preferences.m in Sources */,
 				50172E111403AA7E006EFC17 /* NSAlert-Extensions.m in Sources */,
 				56320E74230EA988002A5878 /* GSStringToAttributedValueTransformer.m in Sources */,
 			);
@@ -371,14 +358,6 @@
 				56320E87230EBF66002A5878 /* Base */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		50566597138415E200E8AB31 /* Preferences.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				56320E88230EBF67002A5878 /* Base */,
-			);
-			name = Preferences.xib;
 			sourceTree = "<group>";
 		};
 		50597EFF0FCE8FF7001275A5 /* Window.strings */ = {
@@ -411,9 +390,11 @@
 		501EBC880855AE8600FBC27B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: Georg Seifert (X2L8375ZQ7)";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = X2L8375ZQ7;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -421,10 +402,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Localizer_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MARKETING_VERSION = 14.2;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.loc-suite.localizer";
 				PRODUCT_NAME = Localizer;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				WARNING_CFLAGS = "-Wmost";
 				WRAPPER_EXTENSION = app;
 			};
@@ -433,16 +415,21 @@
 		501EBC890855AE8600FBC27B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = Localizer.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 21;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = X2L8375ZQ7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Localizer_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MARKETING_VERSION = 14.2;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.loc-suite.localizer";
 				PRODUCT_NAME = Localizer;

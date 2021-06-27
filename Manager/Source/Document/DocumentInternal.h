@@ -12,7 +12,6 @@ extern NSString *kLocalizerPathExtension;
 extern NSString *kDictionaryPathExtension;
 extern NSString *kStringsPathExtension;
 
-
 @interface Document () <NSMenuDelegate>
 
 /*!
@@ -27,7 +26,6 @@ extern NSString *kStringsPathExtension;
 - (NSArray *)getSelectedObjects:(BOOL)extend;
 
 @end
-
 
 @interface Document (DocumentInternal)
 /*!

@@ -12,23 +12,23 @@
 
 #import <objc/message.h>
 
-BOOL (*objc_msgSendPerform)
-(id self, SEL _cmd, NSString* referenceLanguage, NSString* targetLanguage) = (void*)objc_msgSend;
+BOOL(*objc_msgSendPerform)
+(id self, SEL _cmd, NSString *referenceLanguage, NSString *targetLanguage) = (void *)objc_msgSend;
 
 // Keys
-NSString* DocumentViewOptionDisplayEqualsAsOne = @"displayEqualStringsAsOne";
-NSString* DocumentViewOptionFilter = @"filter";
-NSString* DocumentViewOptionLeftLanguage = @"leftLanguage";
-NSString* DocumentViewOptionRightLanguage = @"rightLanguage";
-NSString* DocumentViewOptionSearch = @"search";
-NSString* DocumentViewOptionSegmentation = @"segmentation";
-NSString* DocumentViewOptionShowComments = @"showComments";
-NSString* DocumentViewOptionShowEditor = @"showEditor";
-NSString* DocumentViewOptionShowPreview = @"showPreview";
-NSString* DocumentViewOptionShowProblems = @"showTranslationProblems";
+NSString *DocumentViewOptionDisplayEqualsAsOne = @"displayEqualStringsAsOne";
+NSString *DocumentViewOptionFilter = @"filter";
+NSString *DocumentViewOptionLeftLanguage = @"leftLanguage";
+NSString *DocumentViewOptionRightLanguage = @"rightLanguage";
+NSString *DocumentViewOptionSearch = @"search";
+NSString *DocumentViewOptionSegmentation = @"segmentation";
+NSString *DocumentViewOptionShowComments = @"showComments";
+NSString *DocumentViewOptionShowEditor = @"showEditor";
+NSString *DocumentViewOptionShowPreview = @"showPreview";
+NSString *DocumentViewOptionShowProblems = @"showTranslationProblems";
 
-NSString* DocumentNibName = @"Document";
-NSString* DocumentWindowAutosaveName = @"window";
+NSString *DocumentNibName = @"Document";
+NSString *DocumentWindowAutosaveName = @"window";
 
 typedef enum {
 	DocumentKeyViewAllKeys = 0,
@@ -41,8 +41,8 @@ typedef enum {
 
 @interface BLKeyObject (DocumentActions)
 
-- (BOOL)copyFromReference:(NSString*)referenceLanguage toLanguage:(NSString*)targetLanguage;
-- (BOOL)copyMissingPlaceholdersFromReference:(NSString*)referenceLanguage toLanguage:(NSString*)targetLanguage;
+- (BOOL)copyFromReference:(NSString *)referenceLanguage toLanguage:(NSString *)targetLanguage;
+- (BOOL)copyMissingPlaceholdersFromReference:(NSString *)referenceLanguage toLanguage:(NSString *)targetLanguage;
 
 @end
 
@@ -88,7 +88,7 @@ typedef enum {
 	[_windowController setShouldCloseDocument:YES];
 }
 
-- (void)windowControllerDidLoadNib:(NSWindowController*)aController {
+- (void)windowControllerDidLoadNib:(NSWindowController *)aController {
 	// Remove unwanted columns
 	[content removeColumnWithIdentifier:LIContentActiveColumnIdentifier];
 	[content removeColumnWithIdentifier:LIContentUpdatedColumnIdentifier];
@@ -141,23 +141,23 @@ typedef enum {
 	[_windowController showWindow:nil];
 }
 
-- (NSWindow*)windowForSheet {
+- (NSWindow *)windowForSheet {
 	return [_windowController window];
 }
 
-- (void)shouldCloseWindowController:(NSWindowController*)windowController delegate:(id)delegate shouldCloseSelector:(SEL)shouldCloseSelector contextInfo:(void*)contextInfo {
+- (void)shouldCloseWindowController:(NSWindowController *)windowController delegate:(id)delegate shouldCloseSelector:(SEL)shouldCloseSelector contextInfo:(void *)contextInfo {
 	[super shouldCloseWindowController:windowController delegate:delegate shouldCloseSelector:shouldCloseSelector contextInfo:contextInfo];
 }
 
-- (void)canCloseDocumentWithDelegate:(id)delegate shouldCloseSelector:(SEL)shouldCloseSelector contextInfo:(void*)contextInfo {
+- (void)canCloseDocumentWithDelegate:(id)delegate shouldCloseSelector:(SEL)shouldCloseSelector contextInfo:(void *)contextInfo {
 	[[self windowForSheet] makeFirstResponder:nil];
 	[super canCloseDocumentWithDelegate:delegate shouldCloseSelector:shouldCloseSelector contextInfo:contextInfo];
 }
 
 #pragma mark - File Loading / Saving
 
-- (BOOL)readFromFileWrapper:(NSFileWrapper*)fileWrapper ofType:(NSString*)typeName error:(NSError**)outError {
-	NSArray* languages;
+- (BOOL)readFromFileWrapper:(NSFileWrapper *)fileWrapper ofType:(NSString *)typeName error:(NSError **)outError {
+	NSArray *languages;
 	BOOL result;
 
 	result = [super readFromFileWrapper:fileWrapper ofType:typeName error:outError];
@@ -192,8 +192,8 @@ typedef enum {
 	[super close];
 }
 
-+ (NSDictionary*)defaultPreferences {
-	NSMutableDictionary* prefs = [NSMutableDictionary dictionaryWithDictionary:[super defaultPreferences]];
++ (NSDictionary *)defaultPreferences {
+	NSMutableDictionary *prefs = [NSMutableDictionary dictionaryWithDictionary:[super defaultPreferences]];
 
 	[prefs setObject:[NSNumber numberWithBool:NO] forKey:DocumentViewOptionShowComments];
 	[prefs setObject:[NSNumber numberWithBool:YES] forKey:DocumentViewOptionShowEditor];
@@ -206,13 +206,13 @@ typedef enum {
 	return prefs;
 }
 
-+ (NSArray*)userPreferenceKeys {
++ (NSArray *)userPreferenceKeys {
 	return [[super userPreferenceKeys] arrayByAddingObjectsFromArray:[NSArray arrayWithObjects:DocumentViewOptionShowComments, DocumentViewOptionShowEditor, DocumentViewOptionShowPreview, DocumentViewOptionShowProblems, DocumentViewOptionFilter, DocumentViewOptionSegmentation, DocumentViewOptionDisplayEqualsAsOne, nil]];
 }
 
 #pragma mark - Accessors
 
-- (NSString*)name {
+- (NSString *)name {
 	return [self displayName];
 }
 
@@ -231,7 +231,7 @@ typedef enum {
 	return 99 - (missing * 99) / total;
 }
 
-+ (NSSet*)keyPathsForValuesAffectingProgress {
++ (NSSet *)keyPathsForValuesAffectingProgress {
 	return [NSSet setWithObjects:@"preferences.rightLanguage", nil];
 }
 
@@ -242,11 +242,11 @@ typedef enum {
 	NSInteger editedColumn = [[content contentView] editedColumn];
 	BOOL isEditing = [editor isEditing];
 
-	BLKeyObject* object = [self selectedObject];
-	NSString* referenceLanguage = [self referenceLanguage];
+	BLKeyObject *object = [self selectedObject];
+	NSString *referenceLanguage = [self referenceLanguage];
 
 	// Determine target language
-	NSString* targetLanguage = [self.preferences objectForKey:DocumentViewOptionRightLanguage];
+	NSString *targetLanguage = [self.preferences objectForKey:DocumentViewOptionRightLanguage];
 	if ([referenceLanguage isEqual:targetLanguage])
 		targetLanguage = [self.preferences objectForKey:DocumentViewOptionLeftLanguage];
 	if ([referenceLanguage isEqual:targetLanguage])
@@ -292,8 +292,8 @@ typedef enum {
 }
 
 - (IBAction)openSeparateEditor:(id)sender {
-	NSTableView* contentView;
-	NSTableColumn* column;
+	NSTableView *contentView;
+	NSTableColumn *column;
 
 	// Skip if nothing selected
 	if ([self selectedObject] == nil)
@@ -358,7 +358,7 @@ typedef enum {
 
 #pragma mark -
 
-- (BOOL)validateMenuItem:(NSMenuItem*)menuItem {
+- (BOOL)validateMenuItem:(NSMenuItem *)menuItem {
 	SEL action = [menuItem action];
 
 	if (action == @selector(useFirstMatch:))
@@ -386,7 +386,7 @@ typedef enum {
 
 #pragma mark - Export
 
-- (NSArray*)languagesForExport {
+- (NSArray *)languagesForExport {
 	return [NSArray arrayWithObjects:[self.preferences objectForKey:DocumentViewOptionLeftLanguage], [self.preferences objectForKey:DocumentViewOptionRightLanguage], nil];
 }
 
@@ -408,9 +408,9 @@ typedef enum {
 
 #pragma mark - Data Preparation
 
-- (NSArray*)filteredKeys {
+- (NSArray *)filteredKeys {
 	NSString *leftLanguage, *rightLanguage, *referenceLanguage, *otherLanguage;
-	NSMutableArray* keyObjects;
+	NSMutableArray *keyObjects;
 
 	// Init
 	leftLanguage = [self.preferences objectForKey:DocumentViewOptionLeftLanguage];
@@ -467,9 +467,9 @@ typedef enum {
 	// Apply segmentation
 	NSUInteger segmentation = [[self.preferences objectForKey:DocumentViewOptionSegmentation] intValue];
 	if (segmentation > 0) {
-		NSMutableArray* newObjects = [NSMutableArray arrayWithCapacity:[keyObjects count]];
+		NSMutableArray *newObjects = [NSMutableArray arrayWithCapacity:[keyObjects count]];
 
-		for (BLKeyObject* key in keyObjects)
+		for (BLKeyObject *key in keyObjects)
 			[newObjects addObjectsFromArray:[BLSegmentedKeyObject segmentKeyObject:key byType:segmentation]];
 
 		keyObjects = newObjects;
@@ -477,7 +477,7 @@ typedef enum {
 
 	// Merge equal strings
 	if ([[self.preferences objectForKey:DocumentViewOptionDisplayEqualsAsOne] boolValue]) {
-		NSSortDescriptor* descriptor;
+		NSSortDescriptor *descriptor;
 		NSString *value, *lastValue;
 		NSRange equalRange;
 
@@ -492,7 +492,7 @@ typedef enum {
 
 			if (![value isEqual:lastValue]) {
 				if (equalRange.length > 1) {
-					BLGroupedKeyObject* group;
+					BLGroupedKeyObject *group;
 
 					group = [BLGroupedKeyObject keyObjectWithKeyObjects:[keyObjects subarrayWithRange:equalRange]];
 					[keyObjects replaceObjectsInRange:equalRange withObjectsFromArray:[NSArray arrayWithObject:group]];
@@ -512,7 +512,7 @@ typedef enum {
 	return keyObjects;
 }
 
-- (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context {
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
 	if ([[self.preferences objectForKey:DocumentViewOptionFilter] intValue] == DocumentKeyViewProblematicKeys)
 		[self.preferences setObject:[NSNumber numberWithBool:YES] forKey:DocumentViewOptionShowProblems];
 	if (context == @"filteredKeys") {
@@ -530,7 +530,7 @@ typedef enum {
 #pragma mark - Autotranslation
 
 - (IBAction)autotranslate:(id)sender {
-	NSString* language;
+	NSString *language;
 
 	if (![[self referenceLanguage] isEqual:[self.preferences objectForKey:DocumentViewOptionRightLanguage]])
 		language = [self.preferences objectForKey:DocumentViewOptionRightLanguage];
@@ -551,15 +551,15 @@ typedef enum {
 
 #pragma mark - Delegates
 
-- (NSArray*)currentObjectsInTableView:(NSTableView*)tableView {
+- (NSArray *)currentObjectsInTableView:(NSTableView *)tableView {
 	return [bundlesController selectedObjects];
 }
 
-- (NSArray*)currentLanguagesInTableView:(NSTableView*)tableView {
+- (NSArray *)currentLanguagesInTableView:(NSTableView *)tableView {
 	return [NSArray arrayWithObjects:[self.preferences objectForKey:DocumentViewOptionLeftLanguage], [self.preferences objectForKey:DocumentViewOptionRightLanguage], nil];
 }
 
-- (void)outlineViewSelectionDidChange:(NSNotification*)notification {
+- (void)outlineViewSelectionDidChange:(NSNotification *)notification {
 	[[notification object] updateCurrentObjects];
 }
 
@@ -569,19 +569,19 @@ typedef enum {
 
 @implementation BLKeyObject (DocumentActions)
 
-- (BOOL)copyFromReference:(NSString*)referenceLanguage toLanguage:(NSString*)targetLanguage {
+- (BOOL)copyFromReference:(NSString *)referenceLanguage toLanguage:(NSString *)targetLanguage {
 	[self setObject:[self objectForLanguage:referenceLanguage] forLanguage:targetLanguage];
 	return NO;
 }
 
-- (BOOL)copyMissingPlaceholdersFromReference:(NSString*)referenceLanguage toLanguage:(NSString*)targetLanguage {
+- (BOOL)copyMissingPlaceholdersFromReference:(NSString *)referenceLanguage toLanguage:(NSString *)targetLanguage {
 	// String keys only
 	if ([[self class] classOfObjects] != [NSString class])
 		return NO;
 
-	NSString* value = [self stringForLanguage:targetLanguage];
-	NSArray* targetPlaceholders = [LTTranslationChecker extractPlaceholdersFromString:value];
-	NSArray* referencePlaceholders = [LTTranslationChecker extractPlaceholdersFromString:[self stringForLanguage:referenceLanguage]];
+	NSString *value = [self stringForLanguage:targetLanguage];
+	NSArray *targetPlaceholders = [LTTranslationChecker extractPlaceholdersFromString:value];
+	NSArray *referencePlaceholders = [LTTranslationChecker extractPlaceholdersFromString:[self stringForLanguage:referenceLanguage]];
 
 	// All placeholders are present
 	if (targetPlaceholders.count == referencePlaceholders.count)

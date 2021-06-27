@@ -97,7 +97,7 @@
 	
 	// Store strings
 	[dict setObject:exportedStrings forKey:BLFileLocalizationsKey];
-	if (![[attributes objectForKey: BLClearAllBackupsSerializationKey] boolValue])
+	if (snapshotStrings.count > 0 && ![[attributes objectForKey: BLClearAllBackupsSerializationKey] boolValue])
 		[dict setObject:snapshotStrings forKey:BLFileSnapshotsKey];
 	
 	return dict;
