@@ -62,34 +62,32 @@
 	[selection addButtonWithTitle:NSLocalizedString(@"Add", nil)];
 	[selection addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
 
-	selection.availableLanguages = [self unusedLanguages];
-
-	[selection beginSheetModalForWindow:[document windowForSheet]
-					  completionHandler:^(NSInteger result) {
-						  if (result != NSAlertFirstButtonReturn)
-							  return;
-
-						  for (NSString *language in selection.selectedLanguages)
-							  [document addLanguage:[BLLanguageTranslator identifierForLanguage:language]];
-					  }];
+	selection.availableLanguages = [self unusedLanguages];	
+	[selection beginSheetModalForWindow:[document windowForSheet] completionHandler:^(NSInteger result) {
+		if (result != NSAlertFirstButtonReturn)
+			return;
+		
+		for (NSString *language in selection.selectedLanguages)
+			[self->document addLanguage: [BLLanguageTranslator identifierForLanguage: language]];
+	}];
 }
 
 - (void)addCustomLanguage {
 	LICustomLanguageSelection *selection = [LICustomLanguageSelection customLanguageSelection];
 
 	// Display
-	[selection setMessageText:NSLocalizedString(@"AddCustomLanguageTitle", nil)];
-	[selection setInformativeText:NSLocalizedString(@"AddCustomLanguageText", nil)];
-	[selection addButtonWithTitle:NSLocalizedString(@"Add", nil)];
-	[selection addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
 
-	[selection beginSheetModalForWindow:[document windowForSheet]
-					  completionHandler:^(NSInteger result) {
-						  if (result != NSAlertFirstButtonReturn)
-							  return;
-
-						  [document addLanguage:selection.language];
-					  }];
+	[selection setMessageText: NSLocalizedString(@"AddCustomLanguageTitle", nil)];
+	[selection setInformativeText: NSLocalizedString(@"AddCustomLanguageText", nil)];
+	[selection addButtonWithTitle: NSLocalizedString(@"Add", nil)];
+	[selection addButtonWithTitle: NSLocalizedString(@"Cancel", nil)];
+	
+	[selection beginSheetModalForWindow:[document windowForSheet] completionHandler:^(NSInteger result) {
+		if (result != NSAlertFirstButtonReturn)
+			return;
+		
+		[self->document addLanguage: selection.language];
+	}];
 }
 
 #pragma mark - Observation

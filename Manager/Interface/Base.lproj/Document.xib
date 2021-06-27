@@ -299,8 +299,36 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
-                    <button toolTip="Writes the selected Localizer files out and opens them in Localizer." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="505">
-                        <rect key="frame" x="447" y="119" width="76" height="32"/>
+                    <button verticalHuggingPriority="750" id="1431">
+                        <rect key="frame" x="21" y="19" width="22" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <string key="toolTip">Checks the development language files for changes and imports them.
+Applies to everything if nothing selected.</string>
+                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" controlSize="small" borderStyle="border" inset="2" id="1434">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="addNewLanguage:" target="-2" id="1457"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="1432">
+                        <rect key="frame" x="42" y="19" width="22" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <string key="toolTip">Checks the development language files for changes and imports them.
+Applies to everything if nothing selected.</string>
+                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" controlSize="small" borderStyle="border" inset="2" id="1433">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="removeLanguages:" target="-2" id="1484"/>
+                        </connections>
+                    </button>
+                    <button toolTip="Writes the selected Localizer files out and opens them in Localizer." verticalHuggingPriority="750" id="505">
+                        <rect key="frame" x="447" y="139" width="76" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Edit..." bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1373">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>

@@ -41,7 +41,7 @@ NSString *kRTFDHashSubpath          = @"TXT.rtf";
     NSAttributedString *string;
 	
 	string = [[NSAttributedString alloc] initWithPath:path documentAttributes:nil];
-	[self _emitKey:BLRTFFileContentKeyName value:string comment:nil];
+	[self _emitKey:BLRTFFileContentKeyName value:string leadingComment:nil inlineComment:nil];
     
     return YES;
 }

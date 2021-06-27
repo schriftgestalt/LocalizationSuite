@@ -73,7 +73,7 @@ NSDictionary *BLStandardStringReplacements = nil;
      }
 }
 
-- (void)replaceEscapedUnicodeCharacters
+- (void)replaceEscapedCharacters
 {
 	NSMutableString *string;
 	NSScanner *scanner;
@@ -85,52 +85,67 @@ NSDictionary *BLStandardStringReplacements = nil;
 	// Create a temporary copy
 	string = [[NSMutableString alloc] initWithCapacity: [self length]];
 	
-	// Scan through the string
+	// Scan through the string, finding "\" chars
 	while (![scanner isAtEnd]) {
-		// Found a unicode sequence
-		while ([scanner scanString:@"\\U" intoString:nil]) {
-			NSUInteger pos;
-			unsigned val;
-			
-			// Skip the leading +
-			[scanner scanString:@"+" intoString:nil];
-			
-			// Scan exactly 4 bytes of hex numbers
-			pos = [scanner scanLocation];
-			val = 0;
-			
-			if (pos+3 >= [self length])
-				break;
-			
-			for (NSUInteger i=0; i<4; i++) {
-				val *= 16;
+		while ([scanner scanString:@"\\" intoString:nil]) {
+			// We've reached an escape sequence
+
+			if ([scanner scanString:@"U" intoString:nil] || [scanner scanString:@"u" intoString:nil]) {
+				// Found a unicode sequence
 				
-				UniChar c = [self characterAtIndex: pos+i];
-				if (c >= '0' && c <='9')
-					val += c - '0';
-				if (c >= 'A' && c <= 'F')
-					val += c - 'A' + 0xA;
-				if (c >= 'a' && c <= 'f')
-					val += c - 'a' + 0xA;
+				// Skip the (optional) leading +
+				[scanner scanString:@"+" intoString:nil];
+				
+				// Scan exactly 4 bytes of hex numbers
+				NSUInteger pos = [scanner scanLocation];
+				unsigned val = 0;
+				
+				if (pos+3 >= [self length])
+					break;
+				
+				for (NSUInteger i=0; i<4; i++) {
+					val *= 16;
+					
+					UniChar c = [self characterAtIndex: pos+i];
+					if (c >= '0' && c <='9')
+						val += c - '0';
+					if (c >= 'A' && c <= 'F')
+						val += c - 'A' + 0xA;
+					if (c >= 'a' && c <= 'f')
+						val += c - 'a' + 0xA;
+				}
+				
+				// We scanned a 4-byte hex int
+				[scanner setScanLocation: pos+4];
+				[string appendString: [NSString stringWithCharacters:(unichar[]){val} length:1]];
+			} else {
+				// Let's assume it's a single character after the backslash, which we can then replace.
+				// Ideally, we'd also handle hex (\x54) and octal (\123) and NUL (\0) sequences, but they do not
+				// seem to appear in the field (i.e. in .strings files) so far.
+				NSUInteger pos = [scanner scanLocation];
+				unichar ch = [self characterAtIndex:pos];
+				scanner.scanLocation += 1;
+				NSString *replacement;
+				if (ch == 'n') {
+					replacement = @"\n";
+				} else if (ch == 'r') {
+					replacement = @"\r";
+				} else if (ch == 't') {
+					replacement = @"\t";
+				} else if (ch == '"') {
+					replacement = @"\"";
+				} else {
+					// Replace with the single char after the backslash (so that \' turns into ')
+					replacement = [NSString stringWithCharacters:&ch length:1];
+				}
+				[string appendString:replacement];
 			}
-			
-			// We scanned a 4-byte hex int
-			[scanner setScanLocation: pos+4];
-			[string appendString: [NSString stringWithCharacters:(unichar[]){val} length:1]];
 		}
-		
+
 		// Scan the remainder
 		if (![scanner isAtEnd]) {
-			NSString *scan;
-			
-			// Look for a backslash
-			if ([scanner scanString:@"\\" intoString:&scan])
-				[string appendString: scan];
-			// Look for a escaped backslash
-			if ([scanner scanString:@"\\" intoString:&scan])
-				[string appendString: scan];
-			
 			// Scan to the next escape sequence
+			NSString *scan;
 			[scanner scanUpToString:@"\\" intoString:&scan];
 			[string appendString: scan];
 		}

@@ -51,7 +51,7 @@
     
     for (NSUInteger i=0; i<[keys count]; i++) {
 		NSString *key = [keys objectAtIndex: i];
-		[self _emitKey:key value:[dict objectForKey: key] comment:nil];
+		[self _emitKey:key value:[dict objectForKey: key] leadingComment:nil inlineComment:nil];
 	}
 	
     return YES;

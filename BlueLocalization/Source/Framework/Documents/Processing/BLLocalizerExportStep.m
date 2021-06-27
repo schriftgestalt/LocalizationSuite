@@ -215,7 +215,7 @@
 		[[self manager] enqueueStep:[BLGenericProcessStep genericStepWithBlock:^{
 							NSString *showPath;
 
-							if (_options & BLLocalizerExportStepCompressFilesOption)
+							if (self->_options & BLLocalizerExportStepCompressFilesOption)
 								showPath = [[NSFileManager defaultManager] pathOfFile:path compressedUsing:BLFileManagerTarGzipCompression];
 							else
 								showPath = path;

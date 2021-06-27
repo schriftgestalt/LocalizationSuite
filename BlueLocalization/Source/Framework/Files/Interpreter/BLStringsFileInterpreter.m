@@ -32,7 +32,7 @@
  */
 - (BOOL)_interpreteFile:(NSString *)path
 {
-    NSDictionary *contents, *comments;
+    NSDictionary *contents, *leadingComments, *inlineComments;
     BOOL isPlistFile;
     NSArray *keys;
     
@@ -52,7 +52,7 @@
 	}
     
 	// Import the strings file
-	contents = [NSDictionary dictionaryWithStringsAtPath:path scannedComments:&comments scannedKeyOrder:&keys];
+	contents = [NSDictionary dictionaryWithStringsAtPath:path scannedLeadingComments:&leadingComments scannedInlineComments:&inlineComments scannedKeyOrder:&keys];
 	
 	// The file can't be imported, there was an error
 	if (!contents)
@@ -61,7 +61,7 @@
 	// Process all keys
 	for (NSUInteger i=0; i<[keys count]; i++) {
 		NSString *key = [keys objectAtIndex: i];
-		[self _emitKey:key value:[contents objectForKey: key] comment:[comments objectForKey: key]];
+		[self _emitKey:key value:[contents objectForKey: key] leadingComment:[leadingComments objectForKey:key] inlineComment:[inlineComments objectForKey:key]];
 	}
 	
 	return YES;
