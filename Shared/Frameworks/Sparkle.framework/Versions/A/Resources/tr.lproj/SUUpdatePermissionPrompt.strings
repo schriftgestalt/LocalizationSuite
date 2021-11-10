@@ -1,0 +1,24 @@
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "43"; */
+"43.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "45"; */
+"45.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Otomatik olarak ara"; ObjectID = "176"; */
+"176.title" = "Otomatik olarak ara";
+
+/* Class = "NSButtonCell"; title = "Arama"; ObjectID = "177"; */
+"177.title" = "Arama";
+
+/* Class = "NSTextFieldCell"; title = "Güncellemeler kendiliğinden aransın mı?"; ObjectID = "178"; */
+"178.title" = "Güncellemeler kendiliğinden aransın mı?";
+
+/* Class = "NSTextFieldCell"; title = "DO NOT LOCALIZE"; ObjectID = "179"; */
+"179.title" = "DO NOT LOCALIZE";
+
+/* Class = "NSButtonCell"; title = "Sistem bilgilerini anonim olarak gönder"; ObjectID = "180"; */
+"180.title" = "Sistem bilgilerini anonim olarak gönder";
+
+/* Class = "NSTextFieldCell"; title = "Gönderdiğiniz anonim sistem bilgileri bu yazılımın geliştirilmesi için kullanılacaktır. Konu ile ilgili ayrıntılı bilgi için lütfen bizimle bağlantıya geçiniz. Göndereceğiniz Bilgiler:"; ObjectID = "183"; */
+"183.title" = "Gönderdiğiniz anonim sistem bilgileri bu yazılımın geliştirilmesi için kullanılacaktır. Konu ile ilgili ayrıntılı bilgi için lütfen bizimle bağlantıya geçiniz. Göndereceğiniz Bilgiler:";

@@ -1,0 +1,24 @@
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "43"; */
+"43.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "45"; */
+"45.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "자동으로 확인"; ObjectID = "176"; */
+"176.title" = "자동으로 확인";
+
+/* Class = "NSButtonCell"; title = "취소"; ObjectID = "177"; */
+"177.title" = "취소";
+
+/* Class = "NSTextFieldCell"; title = "자동으로 업데이트 확인할까요?"; ObjectID = "178"; */
+"178.title" = "자동으로 업데이트 확인할까요?";
+
+/* Class = "NSTextFieldCell"; title = "DO NOT LOCALIZE"; ObjectID = "179"; */
+"179.title" = "DO NOT LOCALIZE";
+
+/* Class = "NSButtonCell"; title = "익명 시스템 정보 포함"; ObjectID = "180"; */
+"180.title" = "익명 시스템 정보 포함";
+
+/* Class = "NSTextFieldCell"; title = "익명으로 보내지는 시스템 정보로 차후 프로그램 개발에 도움이 될 수 있습니다. 질문이 있으시면 연락 주십시오.\n\n아래 정보가 전송될 것입니다."; ObjectID = "183"; */
+"183.title" = "익명으로 보내지는 시스템 정보로 차후 프로그램 개발에 도움이 될 수 있습니다. 질문이 있으시면 연락 주십시오.\n\n아래 정보가 전송될 것입니다.";

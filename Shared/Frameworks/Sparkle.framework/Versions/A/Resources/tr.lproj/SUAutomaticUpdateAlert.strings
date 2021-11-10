@@ -1,0 +1,12 @@
+
+/* Class = "NSButtonCell"; title = "Kur ve yeniden başlat"; ObjectID = "41"; */
+"41.title" = "Kur ve yeniden başlat";
+
+/* Class = "NSButtonCell"; title = "Kapatırken kur"; ObjectID = "42"; */
+"42.title" = "Kapatırken kur";
+
+/* Class = "NSButtonCell"; title = "Bundan sonra güncellemeleri kendiliğinden indir ve kur"; ObjectID = "43"; */
+"43.title" = "Bundan sonra güncellemeleri kendiliğinden indir ve kur";
+
+/* Class = "NSButtonCell"; title = "Güncellemeyi kurma"; ObjectID = "44"; */
+"44.title" = "Güncellemeyi kurma";

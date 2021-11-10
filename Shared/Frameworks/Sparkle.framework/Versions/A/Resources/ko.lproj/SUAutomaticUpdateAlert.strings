@@ -1,0 +1,12 @@
+
+/* Class = "NSButtonCell"; title = "설치 및 재실행"; ObjectID = "41"; */
+"41.title" = "설치 및 재실행";
+
+/* Class = "NSButtonCell"; title = "종료 시 설치"; ObjectID = "42"; */
+"42.title" = "종료 시 설치";
+
+/* Class = "NSButtonCell"; title = "나중에 업데이트 자동으로 다운로드 및 설치"; ObjectID = "43"; */
+"43.title" = "나중에 업데이트 자동으로 다운로드 및 설치";
+
+/* Class = "NSButtonCell"; title = "설치 중단"; ObjectID = "44"; */
+"44.title" = "설치 중단";

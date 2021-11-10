@@ -1,0 +1,24 @@
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "43"; */
+"43.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "45"; */
+"45.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "自動檢查"; ObjectID = "176"; */
+"176.title" = "自動檢查";
+
+/* Class = "NSButtonCell"; title = "不要檢查"; ObjectID = "177"; */
+"177.title" = "不要檢查";
+
+/* Class = "NSTextFieldCell"; title = "自動檢查更新項目？"; ObjectID = "178"; */
+"178.title" = "自動檢查更新項目？";
+
+/* Class = "NSTextFieldCell"; title = "DO NOT LOCALIZE"; ObjectID = "179"; */
+"179.title" = "DO NOT LOCALIZE";
+
+/* Class = "NSButtonCell"; title = "包含匿名的系統描述資料"; ObjectID = "180"; */
+"180.title" = "包含匿名的系統描述資料";
+
+/* Class = "NSTextFieldCell"; title = "匿名系統描述資訊可用來協助我們計畫未來的開發工作。若您有任何相關問題，請與我們聯繫。\n\n以下是會傳送的資訊："; ObjectID = "183"; */
+"183.title" = "匿名系統描述資訊可用來協助我們計畫未來的開發工作。若您有任何相關問題，請與我們聯繫。\n\n以下是會傳送的資訊：";

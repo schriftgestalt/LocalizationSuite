@@ -1,0 +1,24 @@
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "43"; */
+"43.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "45"; */
+"45.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Controlla Automaticamente"; ObjectID = "176"; */
+"176.title" = "Controlla Automaticamente";
+
+/* Class = "NSButtonCell"; title = "Non controllare"; ObjectID = "177"; */
+"177.title" = "Non controllare";
+
+/* Class = "NSTextFieldCell"; title = "Controllo automaticamente gli aggiornamenti?"; ObjectID = "178"; */
+"178.title" = "Controllo automaticamente gli aggiornamenti?";
+
+/* Class = "NSTextFieldCell"; title = "DO NOT LOCALIZE"; ObjectID = "179"; */
+"179.title" = "DO NOT LOCALIZE";
+
+/* Class = "NSButtonCell"; title = "Include profilo di sistema anonimo"; ObjectID = "180"; */
+"180.title" = "Include profilo di sistema anonimo";
+
+/* Class = "NSTextFieldCell"; title = "Le informazioni del profilo di sistema anomino sono utilizzate per aiutarci in futuri lavori di sviluppo. Contattaci se hai dei quesiti sull’argomento.\n\nQueste sono le informazioni che verrebbero inviate:"; ObjectID = "183"; */
+"183.title" = "Le informazioni del profilo di sistema anomino sono utilizzate per aiutarci in futuri lavori di sviluppo. Contattaci se hai dei quesiti sull’argomento.\n\nQueste sono le informazioni che verrebbero inviate:";

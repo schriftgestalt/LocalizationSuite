@@ -1,0 +1,18 @@
+
+/* Class = "NSWindow"; title = "Aggiormento Software"; ObjectID = "5"; */
+"5.title" = "Aggiormento Software";
+
+/* Class = "NSTextFieldCell"; title = "Note di rilascio:"; ObjectID = "170"; */
+"170.title" = "Note di rilascio:";
+
+/* Class = "NSButtonCell"; title = "Ricordamelo più tardi"; ObjectID = "171"; */
+"171.title" = "Ricordamelo più tardi";
+
+/* Class = "NSButtonCell"; title = "Ignora questa versione"; ObjectID = "172"; */
+"172.title" = "Ignora questa versione";
+
+/* Class = "NSButtonCell"; title = "Installa"; ObjectID = "173"; */
+"173.title" = "Installa";
+
+/* Class = "NSButtonCell"; title = "In futuro scarica e installa automaticamente gli aggiornamenti"; ObjectID = "175"; */
+"175.title" = "In futuro scarica e installa automaticamente gli aggiornamenti";

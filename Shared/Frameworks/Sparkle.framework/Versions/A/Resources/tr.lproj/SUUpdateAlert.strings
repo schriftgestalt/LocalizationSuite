@@ -1,0 +1,18 @@
+
+/* Class = "NSWindow"; title = "Software-Aktualisierung"; ObjectID = "5"; */
+"5.title" = "Software-Aktualisierung";
+
+/* Class = "NSTextFieldCell"; title = "Sürüm Hakkında:"; ObjectID = "170"; */
+"170.title" = "Sürüm Hakkında:";
+
+/* Class = "NSButtonCell"; title = "tekrar Hatırlat"; ObjectID = "171"; */
+"171.title" = "tekrar Hatırlat";
+
+/* Class = "NSButtonCell"; title = "Bu sürümü geç"; ObjectID = "172"; */
+"172.title" = "Bu sürümü geç";
+
+/* Class = "NSButtonCell"; title = "Kur"; ObjectID = "173"; */
+"173.title" = "Kur";
+
+/* Class = "NSButtonCell"; title = "Bundan sonra güncellemeleri kendiliğinden indir ve kur"; ObjectID = "175"; */
+"175.title" = "Bundan sonra güncellemeleri kendiliğinden indir ve kur";

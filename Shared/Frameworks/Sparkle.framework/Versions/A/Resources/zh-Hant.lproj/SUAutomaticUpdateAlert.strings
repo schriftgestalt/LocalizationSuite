@@ -1,0 +1,12 @@
+
+/* Class = "NSButtonCell"; title = "安裝與重新啟動"; ObjectID = "41"; */
+"41.title" = "安裝與重新啟動";
+
+/* Class = "NSButtonCell"; title = "結束時安裝"; ObjectID = "42"; */
+"42.title" = "結束時安裝";
+
+/* Class = "NSButtonCell"; title = "自動下載並安裝未來的更新項目"; ObjectID = "43"; */
+"43.title" = "自動下載並安裝未來的更新項目";
+
+/* Class = "NSButtonCell"; title = "不要安裝"; ObjectID = "44"; */
+"44.title" = "不要安裝";

@@ -1,0 +1,12 @@
+
+/* Class = "NSButtonCell"; title = "Instalar y volver a arrancar"; ObjectID = "41"; */
+"41.title" = "Instalar y volver a arrancar";
+
+/* Class = "NSButtonCell"; title = "Instalar al salir"; ObjectID = "42"; */
+"42.title" = "Instalar al salir";
+
+/* Class = "NSButtonCell"; title = "Descargar e instalar actualizaciones automáticamente"; ObjectID = "43"; */
+"43.title" = "Descargar e instalar actualizaciones automáticamente";
+
+/* Class = "NSButtonCell"; title = "No instalar"; ObjectID = "44"; */
+"44.title" = "No instalar";

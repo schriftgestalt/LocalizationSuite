@@ -1,0 +1,24 @@
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "43"; */
+"43.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "45"; */
+"45.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "自动核查"; ObjectID = "176"; */
+"176.title" = "自动核查";
+
+/* Class = "NSButtonCell"; title = "不核查"; ObjectID = "177"; */
+"177.title" = "不核查";
+
+/* Class = "NSTextFieldCell"; title = "自动核查更新？"; ObjectID = "178"; */
+"178.title" = "自动核查更新？";
+
+/* Class = "NSTextFieldCell"; title = "DO NOT LOCALIZE"; ObjectID = "179"; */
+"179.title" = "DO NOT LOCALIZE";
+
+/* Class = "NSButtonCell"; title = "包括无记名系统概况"; ObjectID = "180"; */
+"180.title" = "包括无记名系统概况";
+
+/* Class = "NSTextFieldCell"; title = "无记名系统概况信息被用于帮助我们安排将来的开发工作。如果对此存在疑问请联系我们。\n\n这是将要被发送的信息：:"; ObjectID = "183"; */
+"183.title" = "无记名系统概况信息被用于帮助我们安排将来的开发工作。如果对此存在疑问请联系我们。\n\n这是将要被发送的信息：:";

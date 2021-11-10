@@ -1,0 +1,18 @@
+
+/* Class = "NSWindow"; title = "软件更新"; ObjectID = "5"; */
+"5.title" = "软件更新";
+
+/* Class = "NSTextFieldCell"; title = "更新信息："; ObjectID = "170"; */
+"170.title" = "更新信息：";
+
+/* Class = "NSButtonCell"; title = "稍后提示我"; ObjectID = "171"; */
+"171.title" = "稍后提示我";
+
+/* Class = "NSButtonCell"; title = "跳过这个版本"; ObjectID = "172"; */
+"172.title" = "跳过这个版本";
+
+/* Class = "NSButtonCell"; title = "安装更新"; ObjectID = "173"; */
+"173.title" = "安装更新";
+
+/* Class = "NSButtonCell"; title = "以后自动下载并安装更新"; ObjectID = "175"; */
+"175.title" = "以后自动下载并安装更新";
