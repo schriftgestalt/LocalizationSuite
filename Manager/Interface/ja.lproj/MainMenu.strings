@@ -1,0 +1,297 @@
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "5"; */
+"5.title" = "Bring All to Front";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "19"; */
+"19.title" = "Window";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "23"; */
+"23.title" = "Minimize";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "24"; */
+"24.title" = "Window";
+
+/* Class = "NSMenu"; title = "MainMenu"; ObjectID = "29"; */
+"29.title" = "MainMenu";
+
+/* Class = "NSMenuItem"; title = "Localization Manager"; ObjectID = "56"; */
+"56.title" = "Localization Manager";
+
+/* Class = "NSMenu"; title = "Localization Manager"; ObjectID = "57"; */
+"57.title" = "Localization Manager";
+
+/* Class = "NSMenuItem"; title = "About Localization Manager"; ObjectID = "58"; */
+"58.title" = "About Localization Manager";
+
+/* Class = "NSMenuItem"; title = "Open…"; ObjectID = "72"; */
+"72.title" = "Open…";
+
+/* Class = "NSMenuItem"; title = "Close"; ObjectID = "73"; */
+"73.title" = "Close";
+
+/* Class = "NSMenuItem"; title = "Save"; ObjectID = "75"; */
+"75.title" = "Save";
+
+/* Class = "NSMenuItem"; title = "Save As…"; ObjectID = "80"; */
+"80.title" = "Save As…";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "81"; */
+"81.title" = "File";
+
+/* Class = "NSMenuItem"; title = "File"; ObjectID = "83"; */
+"83.title" = "File";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "103"; */
+"103.title" = "Help";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "106"; */
+"106.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "Localization Manager Help"; ObjectID = "111"; */
+"111.title" = "Localization Manager Help";
+
+/* Class = "NSMenuItem"; title = "Revert"; ObjectID = "112"; */
+"112.title" = "Revert";
+
+/* Class = "NSMenuItem"; title = "Open Recent"; ObjectID = "124"; */
+"124.title" = "Open Recent";
+
+/* Class = "NSMenu"; title = "Open Recent"; ObjectID = "125"; */
+"125.title" = "Open Recent";
+
+/* Class = "NSMenuItem"; title = "Clear Menu"; ObjectID = "126"; */
+"126.title" = "Clear Menu";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "130"; */
+"130.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "131"; */
+"131.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Hide Localization Manager"; ObjectID = "134"; */
+"134.title" = "Hide Localization Manager";
+
+/* Class = "NSMenuItem"; title = "Quit Localization Manager"; ObjectID = "136"; */
+"136.title" = "Quit Localization Manager";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "145"; */
+"145.title" = "Hide Others";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "150"; */
+"150.title" = "Show All";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "157"; */
+"157.title" = "Copy";
+
+/* Class = "NSMenuItem"; title = "Cut"; ObjectID = "160"; */
+"160.title" = "Cut";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "163"; */
+"163.title" = "Edit";
+
+/* Class = "NSMenuItem"; title = "Delete"; ObjectID = "164"; */
+"164.title" = "Delete";
+
+/* Class = "NSMenu"; title = "Edit"; ObjectID = "169"; */
+"169.title" = "Edit";
+
+/* Class = "NSMenuItem"; title = "Paste"; ObjectID = "171"; */
+"171.title" = "Paste";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "172"; */
+"172.title" = "Select All";
+
+/* Class = "NSMenuItem"; title = "Spelling"; ObjectID = "184"; */
+"184.title" = "Spelling";
+
+/* Class = "NSMenu"; title = "Spelling"; ObjectID = "185"; */
+"185.title" = "Spelling";
+
+/* Class = "NSMenuItem"; title = "Spelling…"; ObjectID = "187"; */
+"187.title" = "Spelling…";
+
+/* Class = "NSMenuItem"; title = "Check Spelling"; ObjectID = "189"; */
+"189.title" = "Check Spelling";
+
+/* Class = "NSMenuItem"; title = "Check Spelling as You Type"; ObjectID = "191"; */
+"191.title" = "Check Spelling as You Type";
+
+/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "203"; */
+"203.title" = "Zoom";
+
+/* Class = "NSMenuItem"; title = "Check for Updates..."; ObjectID = "245"; */
+"245.title" = "Check for Updates...";
+
+/* Class = "NSMenuItem"; title = "Database"; ObjectID = "248"; */
+"248.title" = "Database";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "390"; */
+"390.title" = "Preferences…";
+
+/* Class = "NSMenuItem"; title = "Export"; ObjectID = "398"; */
+"398.title" = "Export";
+
+/* Class = "NSMenu"; title = "Export"; ObjectID = "399"; */
+"399.title" = "Export";
+
+/* Class = "NSMenuItem"; title = "As Dictionary…"; ObjectID = "400"; */
+"400.title" = "As Dictionary…";
+
+/* Class = "NSMenuItem"; title = "New"; ObjectID = "420"; */
+"420.title" = "New";
+
+/* Class = "NSMenu"; title = "New"; ObjectID = "421"; */
+"421.title" = "New";
+
+/* Class = "NSMenuItem"; title = "From Xcode Project…"; ObjectID = "422"; */
+"422.title" = "From Xcode Project…";
+
+/* Class = "NSMenuItem"; title = "Empty"; ObjectID = "423"; */
+"423.title" = "Empty";
+
+/* Class = "NSMenuItem"; title = "Import"; ObjectID = "429"; */
+"429.title" = "Import";
+
+/* Class = "NSMenu"; title = "Import"; ObjectID = "430"; */
+"430.title" = "Import";
+
+/* Class = "NSMenuItem"; title = "Xcode Project…"; ObjectID = "431"; */
+"431.title" = "Xcode Project…";
+
+/* Class = "NSMenuItem"; title = "As Strings Files…"; ObjectID = "433"; */
+"433.title" = "As Strings Files…";
+
+/* Class = "NSMenuItem"; title = "Strings Files…"; ObjectID = "436"; */
+"436.title" = "Strings Files…";
+
+/* Class = "NSMenu"; title = "Database"; ObjectID = "438"; */
+"438.title" = "Database";
+
+/* Class = "NSMenuItem"; title = "Copy from Reference"; ObjectID = "442"; */
+"442.title" = "Copy from Reference";
+
+/* Class = "NSMenuItem"; title = "Localizer Files"; ObjectID = "444"; */
+"444.title" = "Localizer Files";
+
+/* Class = "NSMenuItem"; title = "Synchronize Files"; ObjectID = "446"; */
+"446.title" = "Synchronize Files";
+
+/* Class = "NSMenuItem"; title = "Rescan Files"; ObjectID = "447"; */
+"447.title" = "Rescan Files";
+
+/* Class = "NSMenuItem"; title = "Files"; ObjectID = "448"; */
+"448.title" = "Files";
+
+/* Class = "NSMenuItem"; title = "Languages"; ObjectID = "449"; */
+"449.title" = "Languages";
+
+/* Class = "NSMenu"; title = "Languages"; ObjectID = "451"; */
+"451.title" = "Languages";
+
+/* Class = "NSMenuItem"; title = "Change Development Language…"; ObjectID = "452"; */
+"452.title" = "Change Development Language…";
+
+/* Class = "NSMenuItem"; title = "Add Custom…"; ObjectID = "453"; */
+"453.title" = "Add Custom…";
+
+/* Class = "NSMenuItem"; title = "Reset…"; ObjectID = "456"; */
+"456.title" = "Reset…";
+
+/* Class = "NSMenuItem"; title = "Update"; ObjectID = "457"; */
+"457.title" = "Update";
+
+/* Class = "NSMenuItem"; title = "Remove"; ObjectID = "458"; */
+"458.title" = "Remove";
+
+/* Class = "NSMenuItem"; title = "Add…"; ObjectID = "459"; */
+"459.title" = "Add…";
+
+/* Class = "NSMenu"; title = "Files"; ObjectID = "460"; */
+"460.title" = "Files";
+
+/* Class = "NSMenuItem"; title = "View Details…"; ObjectID = "461"; */
+"461.title" = "View Details…";
+
+/* Class = "NSMenuItem"; title = "View Contents…"; ObjectID = "463"; */
+"463.title" = "View Contents…";
+
+/* Class = "NSMenuItem"; title = "Remove"; ObjectID = "466"; */
+"466.title" = "Remove";
+
+/* Class = "NSMenuItem"; title = "Add…"; ObjectID = "467"; */
+"467.title" = "Add…";
+
+/* Class = "NSMenuItem"; title = "Re-Inject…"; ObjectID = "468"; */
+"468.title" = "Re-Inject…";
+
+/* Class = "NSMenu"; title = "Localizer Files"; ObjectID = "469"; */
+"469.title" = "Localizer Files";
+
+/* Class = "NSMenuItem"; title = "Set Save Location…"; ObjectID = "471"; */
+"471.title" = "Set Save Location…";
+
+/* Class = "NSMenuItem"; title = "Edit…"; ObjectID = "474"; */
+"474.title" = "Edit…";
+
+/* Class = "NSMenuItem"; title = "Read in…"; ObjectID = "475"; */
+"475.title" = "Read in…";
+
+/* Class = "NSMenuItem"; title = "Write out"; ObjectID = "478"; */
+"478.title" = "Write out";
+
+/* Class = "NSMenuItem"; title = "Utilities"; ObjectID = "481"; */
+"481.title" = "Utilities";
+
+/* Class = "NSMenu"; title = "Utilities"; ObjectID = "482"; */
+"482.title" = "Utilities";
+
+/* Class = "NSMenuItem"; title = "Convert Files to XIB…"; ObjectID = "484"; */
+"484.title" = "Convert Files to XIB…";
+
+/* Class = "NSMenuItem"; title = "Force Rescan Files"; ObjectID = "512"; */
+"512.title" = "Force Rescan Files";
+
+/* Class = "NSMenuItem"; title = "Re-Import…"; ObjectID = "514"; */
+"514.title" = "Re-Import…";
+
+/* Class = "NSMenuItem"; title = "Synchronize All Files"; ObjectID = "516"; */
+"516.title" = "Synchronize All Files";
+
+/* Class = "NSMenuItem"; title = "To Xcode Project…"; ObjectID = "524"; */
+"524.title" = "To Xcode Project…";
+
+/* Class = "NSMenuItem"; title = "View Preview…"; ObjectID = "527"; */
+"527.title" = "View Preview…";
+
+/* Class = "NSMenuItem"; title = "Rescan All Files"; ObjectID = "530"; */
+"530.title" = "Rescan All Files";
+
+/* Class = "NSMenuItem"; title = "As XLIFF…"; ObjectID = "628"; */
+"628.title" = "As XLIFF…";
+
+/* Class = "NSMenuItem"; title = "XLIFF…"; ObjectID = "630"; */
+"630.title" = "XLIFF…";
+
+/* Class = "NSMenuItem"; title = "Show Log…"; ObjectID = "635"; */
+"635.title" = "Show Log…";
+
+/* Class = "NSMenuItem"; title = "Show Statistics…"; ObjectID = "636"; */
+"636.title" = "Show Statistics…";
+
+/* Class = "NSMenuItem"; title = "Show Dictionaries…"; ObjectID = "641"; */
+"641.title" = "Show Dictionaries…";
+
+/* Class = "NSMenuItem"; title = "Autotranslation…"; ObjectID = "644"; */
+"644.title" = "Autotranslation…";
+
+/* Class = "NSMenuItem"; title = "Into Dictionary…"; ObjectID = "647"; */
+"647.title" = "Into Dictionary…";
+
+/* Class = "NSMenuItem"; title = "Read in"; ObjectID = "653"; */
+"653.title" = "Read in";
+
+/* Class = "NSMenuItem"; title = "Re-Import…"; ObjectID = "656"; */
+"656.title" = "Re-Import…";
+
+/* Class = "NSMenuItem"; title = "Delete Translation"; ObjectID = "659"; */
+"659.title" = "Delete Translation";

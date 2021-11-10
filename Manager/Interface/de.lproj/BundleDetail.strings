@@ -1,0 +1,111 @@
+
+/* Class = "NSWindow"; title = "Bundle"; ObjectID = "5"; */
+"5.title" = "Bundle";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Select a new Location for this Bundle, if it was moved externally. Adds the old Path to Bundle History."; ObjectID = "11"; */
+"11.ibShadowedToolTip" = "Select a new Location for this Bundle, if it was moved externally. Adds the old Path to Bundle History.";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "15"; */
+"15.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Descriptions (depreciated)"; ObjectID = "16"; */
+"16.title" = "Descriptions (depreciated)";
+
+/* Class = "NSMenuItem"; title = "Identifiers"; ObjectID = "17"; */
+"17.title" = "Identifiers";
+
+/* Class = "NSMenuItem"; title = "Identifiers and Descriptions (deprecated)"; ObjectID = "18"; */
+"18.title" = "Identifiers and Descriptions (deprecated)";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{title1}@/%{title2}@"; ObjectID = "49"; */
+"49.ibShadowedDisplayPattern" = "%{title1}@/%{title2}@";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{title1}@/%{title2}@"; ObjectID = "52"; */
+"52.ibShadowedDisplayPattern" = "%{title1}@/%{title2}@";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@ files, %{value2}@ keys"; ObjectID = "69"; */
+"69.ibShadowedDisplayPattern" = "%{value1}@ files, %{value2}@ keys";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "76"; */
+"76.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Relative to Localization Database"; ObjectID = "78"; */
+"78.title" = "Relative to Localization Database";
+
+/* Class = "NSMenuItem"; title = "Absolute path"; ObjectID = "79"; */
+"79.title" = "Absolute path";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedIsNilPlaceholder = "Same Folder as Localization Database"; ObjectID = "87"; */
+"87.ibShadowedIsNilPlaceholder" = "Same Folder as Localization Database";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Move this Bundle to a new Folder. Adds the old Path to Bundle History."; ObjectID = "88"; */
+"88.ibShadowedToolTip" = "Move this Bundle to a new Folder. Adds the old Path to Bundle History.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Show this Bundle in Finder."; ObjectID = "110"; */
+"110.ibShadowedToolTip" = "Show this Bundle in Finder.";
+
+/* Class = "NSTextFieldCell"; title = "Referencing path:"; ObjectID = "142"; */
+"142.title" = "Referencing path:";
+
+/* Class = "NSTextFieldCell"; title = "Name:"; ObjectID = "143"; */
+"143.title" = "Name:";
+
+/* Class = "NSButtonCell"; title = "Choose…"; ObjectID = "145"; */
+"145.title" = "Choose…";
+
+/* Class = "NSTextFieldCell"; title = "somepath"; ObjectID = "146"; */
+"146.title" = "somepath";
+
+/* Class = "NSTextFieldCell"; title = "Naming style:"; ObjectID = "147"; */
+"147.title" = "Naming style:";
+
+/* Class = "NSTextFieldCell"; title = "Uses descriptions for simple and identifiers for composite language names.\nExamples: English.lproj, pt_BR.lproj"; ObjectID = "149"; */
+"149.title" = "Uses descriptions for simple and identifiers for composite language names.\nExamples: English.lproj, pt_BR.lproj";
+
+/* Class = "NSTextFieldCell"; title = "Statistics:"; ObjectID = "150"; */
+"150.title" = "Statistics:";
+
+/* Class = "NSTextFieldCell"; title = "Activity:"; ObjectID = "151"; */
+"151.title" = "Activity:";
+
+/* Class = "NSButtonCell"; title = "Include in Localizer files"; ObjectID = "152"; */
+"152.title" = "Include in Localizer files";
+
+/* Class = "NSTextFieldCell"; title = "100 files, 2000 keys"; ObjectID = "153"; */
+"153.title" = "100 files, 2000 keys";
+
+/* Class = "NSButtonCell"; title = "Rename folders..."; ObjectID = "154"; */
+"154.title" = "Rename folders...";
+
+/* Class = "NSTextFieldCell"; title = "Full path:"; ObjectID = "155"; */
+"155.title" = "Full path:";
+
+/* Class = "NSTextFieldCell"; title = "somepath"; ObjectID = "156"; */
+"156.title" = "somepath";
+
+/* Class = "NSTextFieldCell"; title = "Referencing style:"; ObjectID = "158"; */
+"158.title" = "Referencing style:";
+
+/* Class = "NSButtonCell"; title = "Move…"; ObjectID = "159"; */
+"159.title" = "Move…";
+
+/* Class = "NSButtonCell"; title = "Reveal"; ObjectID = "162"; */
+"162.title" = "Reveal";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@ files, %{value2}@ keys"; ObjectID = "167"; */
+"167.ibShadowedDisplayPattern" = "%{value1}@ files, %{value2}@ keys";
+
+/* Class = "NSTableColumn"; headerCell.title = "Name"; ObjectID = "173"; */
+"173.headerCell.title" = "Name";
+
+/* Class = "NSTableColumn"; headerCell.title = "Relative Path"; ObjectID = "174"; */
+"174.headerCell.title" = "Relative Path";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "175"; */
+"175.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "176"; */
+"176.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Associated Xcode Projects:"; ObjectID = "178"; */
+"178.title" = "Associated Xcode Projects:";

@@ -1,0 +1,201 @@
+
+/* Class = "NSWindow"; title = "Window"; ObjectID = "5"; */
+"5.title" = "Window";
+
+/* Class = "NSTableColumn"; headerCell.title = "Languages"; ObjectID = "467"; */
+"467.headerCell.title" = "Languages";
+
+/* Class = "NSTableColumn"; headerCell.title = "Status"; ObjectID = "468"; */
+"468.headerCell.title" = "Status";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Writes the selected languages into one or multiple Localizer files at the default location."; ObjectID = "486"; */
+"486.ibShadowedToolTip" = "Writes the selected languages into one or multiple Localizer files at the default location.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Writes the selected Localizer files out and opens them in Localizer."; ObjectID = "505"; */
+"505.ibShadowedToolTip" = "Writes the selected Localizer files out and opens them in Localizer.";
+
+/* Class = "NSTableColumn"; headerCell.title = "Bundles/Files"; ObjectID = "567"; */
+"567.headerCell.title" = "Bundles/Files";
+
+/* Class = "NSTableColumn"; headerCell.title = "Status"; ObjectID = "568"; */
+"568.headerCell.title" = "Status";
+
+/* Class = "NSTableColumn"; headerCell.title = "Keys"; ObjectID = "569"; */
+"569.headerCell.title" = "Keys";
+
+/* Class = "NSButtonCell"; title = "Separate file per language"; ObjectID = "601"; */
+"601.title" = "Separate file per language";
+
+/* Class = "NSButtonCell"; title = "All languages in one file"; ObjectID = "602"; */
+"602.title" = "All languages in one file";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Manually select a Localizer file to read from."; ObjectID = "623"; */
+"623.ibShadowedToolTip" = "Manually select a Localizer file to read from.";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "786"; */
+"786.title" = "Text Cell";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedMultipleValuesPlaceholder = "Multiple Languages"; ObjectID = "795"; */
+"795.ibShadowedMultipleValuesPlaceholder" = "Multiple Languages";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedNoSelectionPlaceholder = "All Languages"; ObjectID = "795"; */
+"795.ibShadowedNoSelectionPlaceholder" = "All Languages";
+
+/* Class = "NSMenuItem"; title = "Get Info…"; ObjectID = "1233"; */
+"1233.title" = "Get Info…";
+
+/* Class = "NSMenuItem"; title = "Re-Inject…"; ObjectID = "1234"; */
+"1234.title" = "Re-Inject…";
+
+/* Class = "NSMenuItem"; title = "Synchronize"; ObjectID = "1235"; */
+"1235.title" = "Synchronize";
+
+/* Class = "NSMenuItem"; title = "Show Preview…"; ObjectID = "1238"; */
+"1238.title" = "Show Preview…";
+
+/* Class = "NSMenuItem"; title = "Rescan"; ObjectID = "1239"; */
+"1239.title" = "Rescan";
+
+/* Class = "NSMenuItem"; title = "Remove"; ObjectID = "1242"; */
+"1242.title" = "Remove";
+
+/* Class = "NSMenuItem"; title = "Reveal in Finder"; ObjectID = "1249"; */
+"1249.title" = "Reveal in Finder";
+
+/* Class = "NSButtonCell"; title = "Write Out"; ObjectID = "1365"; */
+"1365.title" = "Write Out";
+
+/* Class = "NSTextFieldCell"; title = "Localizer file"; ObjectID = "1366"; */
+"1366.title" = "Localizer file";
+
+/* Class = "NSTextFieldCell"; title = "Selection"; ObjectID = "1369"; */
+"1369.title" = "Selection";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize>"; ObjectID = "1370"; */
+"1370.title" = "<do not localize>";
+
+/* Class = "NSButtonCell"; title = "Edit..."; ObjectID = "1373"; */
+"1373.title" = "Edit...";
+
+/* Class = "NSButtonCell"; alternateTitle = "Read In"; ObjectID = "1375"; */
+"1375.alternateTitle" = "Read In";
+
+/* Class = "NSButtonCell"; title = "Read In..."; ObjectID = "1375"; */
+"1375.title" = "Read In...";
+
+/* Class = "NSTextFieldCell"; title = "<dnl>"; ObjectID = "1376"; */
+"1376.title" = "<dnl>";
+
+/* Class = "NSTextFieldCell"; title = "Development Language"; ObjectID = "1377"; */
+"1377.title" = "Development Language";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "1389"; */
+"1389.title" = "Radio";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "1390"; */
+"1390.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "1391"; */
+"1391.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "1392"; */
+"1392.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "1393"; */
+"1393.title" = "Text Cell";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Checks the development language files for changes and imports them.\nApplies to everything if nothing selected."; ObjectID = "1431"; */
+"1431.ibShadowedToolTip" = "Checks the development language files for changes and imports them.\nApplies to everything if nothing selected.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Checks the development language files for changes and imports them.\nApplies to everything if nothing selected."; ObjectID = "1432"; */
+"1432.ibShadowedToolTip" = "Checks the development language files for changes and imports them.\nApplies to everything if nothing selected.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Deactivating this option will import all non-empty localized strings."; ObjectID = "1444"; */
+"1444.ibShadowedToolTip" = "Deactivating this option will import all non-empty localized strings.";
+
+/* Class = "NSButtonCell"; title = "Import changed strings only"; ObjectID = "1445"; */
+"1445.title" = "Import changed strings only";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Activating this option will import files by matching their keys using the value of the reference language. This is more compatible but may result in loss of different translations for the same english strings."; ObjectID = "1474"; */
+"1474.ibShadowedToolTip" = "Activating this option will import files by matching their keys using the value of the reference language. This is more compatible but may result in loss of different translations for the same english strings.";
+
+/* Class = "NSButtonCell"; title = "Compatibility mode (slower, weaker)"; ObjectID = "1475"; */
+"1475.title" = "Compatibility mode (slower, weaker)";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Activating this option will import only strings that are not yet present in the database. Use together with compatibility mode for a careful import."; ObjectID = "1478"; */
+"1478.ibShadowedToolTip" = "Activating this option will import only strings that are not yet present in the database. Use together with compatibility mode for a careful import.";
+
+/* Class = "NSButtonCell"; title = "Update missing strings only"; ObjectID = "1479"; */
+"1479.title" = "Update missing strings only";
+
+/* Class = "NSMenuItem"; title = "Show Content…"; ObjectID = "1487"; */
+"1487.title" = "Show Content…";
+
+/* Class = "NSMenuItem"; title = "Re-Inject Language"; ObjectID = "1503"; */
+"1503.title" = "Re-Inject Language";
+
+/* Class = "NSMenu"; title = "Re-Inject Language"; ObjectID = "1504"; */
+"1504.title" = "Re-Inject Language";
+
+/* Class = "NSMenuItem"; title = "Item"; ObjectID = "1505"; */
+"1505.title" = "Item";
+
+/* Class = "NSMenuItem"; title = "Re-Import…"; ObjectID = "1547"; */
+"1547.title" = "Re-Import…";
+
+/* Class = "NSMenuItem"; title = "Re-Import Language"; ObjectID = "1549"; */
+"1549.title" = "Re-Import Language";
+
+/* Class = "NSMenu"; title = "Re-Import Language"; ObjectID = "1550"; */
+"1550.title" = "Re-Import Language";
+
+/* Class = "NSMenuItem"; title = "Item"; ObjectID = "1551"; */
+"1551.title" = "Item";
+
+/* Class = "NSToolbarItem"; label = "Custom View"; ObjectID = "2OM-4u-7Gg"; */
+"2OM-4u-7Gg.label" = "Custom View";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Custom View"; ObjectID = "2OM-4u-7Gg"; */
+"2OM-4u-7Gg.paletteLabel" = "Custom View";
+
+/* Class = "NSButtonCell"; alternateTitle = "Force Rescan"; ObjectID = "Are-RN-Qdl"; */
+"Are-RN-Qdl.alternateTitle" = "Force Rescan";
+
+/* Class = "NSButtonCell"; title = "Rescan"; ObjectID = "Are-RN-Qdl"; */
+"Are-RN-Qdl.title" = "Rescan";
+
+/* Class = "NSToolbarItem"; label = "Custom View"; ObjectID = "AtT-Ys-gPH"; */
+"AtT-Ys-gPH.label" = "Custom View";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Custom View"; ObjectID = "AtT-Ys-gPH"; */
+"AtT-Ys-gPH.paletteLabel" = "Custom View";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Re-Inject Files\nRemoves all localized versions of the selected files/bundles and re-creates them using the development language files."; ObjectID = "MS3-hD-VX3"; */
+"MS3-hD-VX3.ibShadowedToolTip" = "Re-Inject Files\nRemoves all localized versions of the selected files/bundles and re-creates them using the development language files.";
+
+/* Class = "NSToolbarItem"; label = "Custom View"; ObjectID = "Ny6-DF-Nu5"; */
+"Ny6-DF-Nu5.label" = "Custom View";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Custom View"; ObjectID = "Ny6-DF-Nu5"; */
+"Ny6-DF-Nu5.paletteLabel" = "Custom View";
+
+/* Class = "NSButtonCell"; title = "Synchronize"; ObjectID = "SlJ-4K-n5C"; */
+"SlJ-4K-n5C.title" = "Synchronize";
+
+/* Class = "NSButtonCell"; title = "Re-Inject"; ObjectID = "aqj-ac-7uA"; */
+"aqj-ac-7uA.title" = "Re-Inject";
+
+/* Class = "NSToolbarItem"; label = "Custom View"; ObjectID = "j0y-O4-toj"; */
+"j0y-O4-toj.label" = "Custom View";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Custom View"; ObjectID = "j0y-O4-toj"; */
+"j0y-O4-toj.paletteLabel" = "Custom View";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Rescan Reference Files\nChecks the selected development language files for changes and imports them. Applies to the whole database when nothing is selected.\n· Pressing \"alt\" will force a rescan even when nothing changed.\n· Pressing \"shift\" will perform a rescan up the whole database."; ObjectID = "tDb-Dg-CHb"; */
+"tDb-Dg-CHb.ibShadowedToolTip" = "Rescan Reference Files\nChecks the selected development language files for changes and imports them. Applies to the whole database when nothing is selected.\n· Pressing \"alt\" will force a rescan even when nothing changed.\n· Pressing \"shift\" will perform a rescan up the whole database.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Synchronize Files\nUpdates all localized versions of the selected files. Applies to whole database if nothing selected or \"shift\" pressed. "; ObjectID = "vIR-su-Lcj"; */
+"vIR-su-Lcj.ibShadowedToolTip" = "Synchronize Files\nUpdates all localized versions of the selected files. Applies to whole database if nothing selected or \"shift\" pressed. ";
+
+/* Class = "NSSearchFieldCell"; placeholderString = "Search"; ObjectID = "w4L-6r-ggu"; */
+"w4L-6r-ggu.placeholderString" = "Search";

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,14 +24,13 @@
                 <subviews>
                     <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" multipleSelection="NO" emptySelection="NO" autosaveName="LIContent" rowHeight="18" headerView="12" id="15" customClass="LIContentTableView">
                         <rect key="frame" x="0.0" y="0.0" width="793" height="107"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <size key="intercellSpacing" width="3" height="6"/>
                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                         <tableColumns>
                             <tableColumn identifier="status" editable="NO" width="25" minWidth="25" maxWidth="25" headerToolTip="Status" id="89">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="S">
-                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                 </tableHeaderCell>
@@ -52,7 +51,6 @@
                             </tableColumn>
                             <tableColumn identifier="active" width="14" minWidth="14" maxWidth="14" headerToolTip="Active" id="78">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="A">
-                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                 </tableHeaderCell>
@@ -67,7 +65,6 @@
                             </tableColumn>
                             <tableColumn identifier="updated" width="14" minWidth="14" maxWidth="14" headerToolTip="Updated" id="83">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="U">
-                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                 </tableHeaderCell>
@@ -80,9 +77,8 @@
                                     <binding destination="28" name="value" keyPath="arrangedObjects.wasUpdated" id="85"/>
                                 </connections>
                             </tableColumn>
-                            <tableColumn identifier="file" editable="NO" width="72" minWidth="50" maxWidth="300" id="16">
+                            <tableColumn identifier="file" editable="NO" width="67" minWidth="50" maxWidth="300" id="16">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="File">
-                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                 </tableHeaderCell>
@@ -102,9 +98,8 @@
                                     </binding>
                                 </connections>
                             </tableColumn>
-                            <tableColumn identifier="key" editable="NO" width="71" minWidth="50" maxWidth="300" id="19">
+                            <tableColumn identifier="key" editable="NO" width="66" minWidth="50" maxWidth="300" id="19">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Key">
-                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableHeaderCell>
@@ -124,9 +119,8 @@
                                     </binding>
                                 </connections>
                             </tableColumn>
-                            <tableColumn identifier="leftLanguage" width="202" minWidth="50" maxWidth="1000" id="17">
+                            <tableColumn identifier="leftLanguage" width="197" minWidth="50" maxWidth="1000" id="17">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableHeaderCell>
@@ -138,9 +132,8 @@
                                 <sortDescriptor key="sortDescriptorPrototype" selector="compareAsString:" sortKey="leftLanguage"/>
                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                             </tableColumn>
-                            <tableColumn identifier="rightLanguage" width="202" minWidth="50" maxWidth="1000" id="20">
+                            <tableColumn identifier="rightLanguage" width="197" minWidth="50" maxWidth="1000" id="20">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                 </tableHeaderCell>
@@ -152,9 +145,8 @@
                                 <sortDescriptor key="sortDescriptorPrototype" selector="compareAsString:" sortKey="rightLanguage"/>
                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                             </tableColumn>
-                            <tableColumn identifier="comment" editable="NO" width="93.5" minWidth="50" maxWidth="1000" id="18">
+                            <tableColumn identifier="comment" editable="NO" width="88.5" minWidth="50" maxWidth="1000" id="18">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Comment">
-                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                 </tableHeaderCell>
@@ -174,9 +166,8 @@
                                     </binding>
                                 </connections>
                             </tableColumn>
-                            <tableColumn identifier="media" editable="NO" width="72.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="96">
+                            <tableColumn identifier="media" editable="NO" width="68.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="96">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Attachment">
-                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                 </tableHeaderCell>
@@ -203,7 +194,7 @@
                 <rect key="frame" x="777" y="23" width="16" height="107"/>
                 <autoresizingMask key="autoresizingMask"/>
             </scroller>
-            <tableHeaderView key="headerView" id="12">
+            <tableHeaderView key="headerView" wantsLayer="YES" id="12">
                 <rect key="frame" x="0.0" y="0.0" width="793" height="23"/>
                 <autoresizingMask key="autoresizingMask"/>
             </tableHeaderView>
@@ -220,6 +211,7 @@
                 <string>attachedMedia.preferredFilename</string>
                 <string>attachedMedia</string>
             </declaredKeys>
+            <classReference key="objectClass" className="BLKeyObject"/>
             <connections>
                 <binding destination="-2" name="contentArray" keyPath="keyObjects" id="29"/>
             </connections>

@@ -1,0 +1,30 @@
+
+/* Class = "NSButtonCell"; title = "Add files that are missing from the project"; ObjectID = "5"; */
+"5.title" = "Add files that are missing from the project";
+
+/* Class = "NSButtonCell"; title = "Remove files not matching below criteria"; ObjectID = "31"; */
+"31.title" = "Remove files not matching below criteria";
+
+/* Class = "NSTextFieldCell"; title = "100%"; ObjectID = "36"; */
+"36.title" = "100%";
+
+/* Class = "NSButtonCell"; title = "Languages need to be localized at least"; ObjectID = "38"; */
+"38.title" = "Languages need to be localized at least";
+
+/* Class = "NSButtonCell"; title = "Files need to be localized at least"; ObjectID = "42"; */
+"42.title" = "Files need to be localized at least";
+
+/* Class = "NSTextFieldCell"; title = "80%"; ObjectID = "43"; */
+"43.title" = "80%";
+
+/* Class = "NSTextFieldCell"; title = "“Files“ refers to localizations in this context. This means that only localized variants of files already known to the Xcode project will be added or removed."; ObjectID = "47"; */
+"47.title" = "“Files“ refers to localizations in this context. This means that only localized variants of files already known to the Xcode project will be added or removed.";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@%"; ObjectID = "55"; */
+"55.ibShadowedDisplayPattern" = "%{value1}@%";
+
+/* Class = "NSTextFieldCell"; title = "Localization Criteria"; ObjectID = "59"; */
+"59.title" = "Localization Criteria";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@%"; ObjectID = "62"; */
+"62.ibShadowedDisplayPattern" = "%{value1}@%";

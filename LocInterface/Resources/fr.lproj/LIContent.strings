@@ -1,0 +1,51 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "File"; ObjectID = "16"; */
+"16.headerCell.title" = "File";
+
+/* Class = "NSTableColumn"; headerCell.title = "Comment"; ObjectID = "18"; */
+"18.headerCell.title" = "Comment";
+
+/* Class = "NSTableColumn"; headerCell.title = "Key"; ObjectID = "19"; */
+"19.headerCell.title" = "Key";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "21"; */
+"21.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "22"; */
+"22.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "23"; */
+"23.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "24"; */
+"24.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "25"; */
+"25.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "A"; ObjectID = "78"; */
+"78.headerCell.title" = "A";
+
+/* Class = "NSTableColumn"; headerToolTip = "Active"; ObjectID = "78"; */
+"78.headerToolTip" = "Active";
+
+/* Class = "NSTableColumn"; headerCell.title = "U"; ObjectID = "83"; */
+"83.headerCell.title" = "U";
+
+/* Class = "NSTableColumn"; headerToolTip = "Updated"; ObjectID = "83"; */
+"83.headerToolTip" = "Updated";
+
+/* Class = "NSTableColumn"; headerCell.title = "S"; ObjectID = "89"; */
+"89.headerCell.title" = "S";
+
+/* Class = "NSTableColumn"; headerToolTip = "Status"; ObjectID = "89"; */
+"89.headerToolTip" = "Status";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "90"; */
+"90.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Attachment"; ObjectID = "96"; */
+"96.headerCell.title" = "Attachment";
+
+/* Class = "NSButtonCell"; title = "Check"; ObjectID = "108"; */
+"108.title" = "Check";

@@ -1,0 +1,6 @@
+
+/* The status being displayed to the user while creating the match dictionary if the process is expected to be quick */
+"LTLocalizerExportDictionary" = "Creating embedded dictionary";
+
+/* The status being displayed to the user while creating the match dictionary if the process is expected to be slow */
+"LTLocalizerExportMatchStatus" = "Creating embedded dictionary: %d%%";

@@ -1,0 +1,150 @@
+
+/* Class = "NSWindow"; title = "Statistics"; ObjectID = "1"; */
+"1.title" = "Statistics";
+
+/* Class = "NSTextFieldCell"; title = "Objects"; ObjectID = "4"; */
+"4.title" = "Objects";
+
+/* Class = "NSTextFieldCell"; title = "10 Bundle(s)"; ObjectID = "6"; */
+"6.title" = "10 Bundle(s)";
+
+/* Class = "NSTextFieldCell"; title = "10 File(s)"; ObjectID = "10"; */
+"10.title" = "10 File(s)";
+
+/* Class = "NSTextFieldCell"; title = "10 Key(s)"; ObjectID = "12"; */
+"12.title" = "10 Key(s)";
+
+/* Class = "NSTextFieldCell"; title = "English"; ObjectID = "41"; */
+"41.title" = "English";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "44"; */
+"44.title" = "1";
+
+/* Class = "NSTextFieldCell"; title = "2"; ObjectID = "53"; */
+"53.title" = "2";
+
+/* Class = "NSTextFieldCell"; title = "German"; ObjectID = "54"; */
+"54.title" = "German";
+
+/* Class = "NSTextFieldCell"; title = "4"; ObjectID = "56"; */
+"56.title" = "4";
+
+/* Class = "NSTextFieldCell"; title = "5"; ObjectID = "57"; */
+"57.title" = "5";
+
+/* Class = "NSTextFieldCell"; title = "Text"; ObjectID = "63"; */
+"63.title" = "Text";
+
+/* Class = "NSTextFieldCell"; title = "3"; ObjectID = "64"; */
+"64.title" = "3";
+
+/* Class = "NSTextFieldCell"; title = "6"; ObjectID = "65"; */
+"65.title" = "6";
+
+/* Class = "NSTextFieldCell"; title = "Sentences:"; ObjectID = "68"; */
+"68.title" = "Sentences:";
+
+/* Class = "NSTextFieldCell"; title = "Words:"; ObjectID = "72"; */
+"72.title" = "Words:";
+
+/* Class = "NSTextFieldCell"; title = "Characters:"; ObjectID = "74"; */
+"74.title" = "Characters:";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@ Bundle(s)"; ObjectID = "116"; */
+"116.ibShadowedDisplayPattern" = "%{value1}@ Bundle(s)";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedIsNilPlaceholder = "0"; ObjectID = "116"; */
+"116.ibShadowedIsNilPlaceholder" = "0";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedNoSelectionPlaceholder = "0"; ObjectID = "116"; */
+"116.ibShadowedNoSelectionPlaceholder" = "0";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@ File(s)"; ObjectID = "117"; */
+"117.ibShadowedDisplayPattern" = "%{value1}@ File(s)";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedIsNilPlaceholder = "0"; ObjectID = "117"; */
+"117.ibShadowedIsNilPlaceholder" = "0";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedNoSelectionPlaceholder = "0"; ObjectID = "117"; */
+"117.ibShadowedNoSelectionPlaceholder" = "0";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@ Key(s)"; ObjectID = "118"; */
+"118.ibShadowedDisplayPattern" = "%{value1}@ Key(s)";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedIsNilPlaceholder = "0"; ObjectID = "118"; */
+"118.ibShadowedIsNilPlaceholder" = "0";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedNoSelectionPlaceholder = "0"; ObjectID = "118"; */
+"118.ibShadowedNoSelectionPlaceholder" = "0";
+
+/* Class = "NSTextFieldCell"; title = "Counters"; ObjectID = "124"; */
+"124.title" = "Counters";
+
+/* Class = "NSTextFieldCell"; title = "Statistics"; ObjectID = "139"; */
+"139.title" = "Statistics";
+
+/* Class = "NSTextFieldCell"; title = "Guesses ≥50%:"; ObjectID = "157"; */
+"157.title" = "Guesses ≥50%:";
+
+/* Class = "NSTextFieldCell"; title = "Guesses ≥75%:"; ObjectID = "158"; */
+"158.title" = "Guesses ≥75%:";
+
+/* Class = "NSTextFieldCell"; title = "Exact Matches:"; ObjectID = "159"; */
+"159.title" = "Exact Matches:";
+
+/* Class = "NSTextFieldCell"; title = "3"; ObjectID = "161"; */
+"161.title" = "3";
+
+/* Class = "NSTextFieldCell"; title = "Text"; ObjectID = "162"; */
+"162.title" = "Text";
+
+/* Class = "NSTextFieldCell"; title = "2"; ObjectID = "166"; */
+"166.title" = "2";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "167"; */
+"167.title" = "1";
+
+/* Class = "NSTextFieldCell"; title = "Keys"; ObjectID = "168"; */
+"168.title" = "Keys";
+
+/* Class = "NSTextFieldCell"; title = "No Matches:"; ObjectID = "178"; */
+"178.title" = "No Matches:";
+
+/* Class = "NSTextFieldCell"; title = "7"; ObjectID = "179"; */
+"179.title" = "7";
+
+/* Class = "NSTextFieldCell"; title = "5"; ObjectID = "180"; */
+"180.title" = "5";
+
+/* Class = "NSTextFieldCell"; title = "Words"; ObjectID = "181"; */
+"181.title" = "Words";
+
+/* Class = "NSTextFieldCell"; title = "6"; ObjectID = "182"; */
+"182.title" = "6";
+
+/* Class = "NSTextFieldCell"; title = "8"; ObjectID = "183"; */
+"183.title" = "8";
+
+/* Class = "NSTextFieldCell"; title = "4"; ObjectID = "184"; */
+"184.title" = "4";
+
+/* Class = "NSTextFieldCell"; title = "100%"; ObjectID = "194"; */
+"194.title" = "100%";
+
+/* Class = "NSButtonCell"; title = "Calculate"; ObjectID = "195"; */
+"195.title" = "Calculate";
+
+/* Class = "NSTextFieldCell"; title = "5"; ObjectID = "231"; */
+"231.title" = "5";
+
+/* Class = "NSTextFieldCell"; title = "9"; ObjectID = "232"; */
+"232.title" = "9";
+
+/* Class = "NSTextFieldCell"; title = "Translated:"; ObjectID = "234"; */
+"234.title" = "Translated:";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@%"; ObjectID = "255"; */
+"255.ibShadowedDisplayPattern" = "%{value1}@%";
+
+/* Class = "NSTextFieldCell"; title = "This may take some time."; ObjectID = "263"; */
+"263.title" = "This may take some time.";

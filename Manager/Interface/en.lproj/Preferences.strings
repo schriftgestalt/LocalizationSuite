@@ -1,0 +1,240 @@
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "37"; */
+"37.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Absolute Path"; ObjectID = "38"; */
+"38.title" = "Absolute Path";
+
+/* Class = "NSMenuItem"; title = "Relative to Localization Database"; ObjectID = "39"; */
+"39.title" = "Relative to Localization Database";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "47"; */
+"47.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Identifiers and Descriptions (compatible)"; ObjectID = "48"; */
+"48.title" = "Identifiers and Descriptions (compatible)";
+
+/* Class = "NSMenuItem"; title = "Identifiers only (recommended)"; ObjectID = "49"; */
+"49.title" = "Identifiers only (recommended)";
+
+/* Class = "NSMenuItem"; title = "Descriptions only (depreciated)"; ObjectID = "50"; */
+"50.title" = "Descriptions only (depreciated)";
+
+/* Class = "NSTextFieldCell"; title = "New Bundles"; ObjectID = "173"; */
+"173.title" = "New Bundles";
+
+/* Class = "NSTextFieldCell"; title = "Referencing Style:"; ObjectID = "174"; */
+"174.title" = "Referencing Style:";
+
+/* Class = "NSTextFieldCell"; title = "Naming Style:"; ObjectID = "176"; */
+"176.title" = "Naming Style:";
+
+/* Class = "NSTextFieldCell"; title = "File Content"; ObjectID = "178"; */
+"178.title" = "File Content";
+
+/* Class = "NSButtonCell"; title = "Show removed strings"; ObjectID = "179"; */
+"179.title" = "Show removed strings";
+
+/* Class = "NSButtonCell"; title = "For new strings, try to use previous localization"; ObjectID = "182"; */
+"182.title" = "For new strings, try to use previous localization";
+
+/* Class = "NSButtonCell"; title = "Mark those strings as not updated"; ObjectID = "184"; */
+"184.title" = "Mark those strings as not updated";
+
+/* Class = "NSButtonCell"; title = "Automatically deactivate empty strings"; ObjectID = "185"; */
+"185.title" = "Automatically deactivate empty strings";
+
+/* Class = "NSButtonCell"; title = "Import empty strings"; ObjectID = "186"; */
+"186.title" = "Import empty strings";
+
+/* Class = "NSButtonCell"; title = "Show empty strings"; ObjectID = "187"; */
+"187.title" = "Show empty strings";
+
+/* Class = "NSTextFieldCell"; title = "When editing files, it might happen that already translated strings are removed and later added again. Those strings are kept and can be used again if wished."; ObjectID = "189"; */
+"189.title" = "When editing files, it might happen that already translated strings are removed and later added again. Those strings are kept and can be used again if wished.";
+
+/* Class = "NSButtonCell"; title = "Changes to reference language reset strings"; ObjectID = "192"; */
+"192.title" = "Changes to reference language reset strings";
+
+/* Class = "NSTextFieldCell"; title = "When importing the refrence language and the value of a string changes, all it's localizations are discarded and stored in the removed strings of the file."; ObjectID = "195"; */
+"195.title" = "When importing the refrence language and the value of a string changes, all it's localizations are discarded and stored in the removed strings of the file.";
+
+/* Class = "NSWindow"; title = "Preferences"; ObjectID = "200"; */
+"200.title" = "Preferences";
+
+/* Class = "NSToolbarItem"; label = "General"; ObjectID = "204"; */
+"204.label" = "General";
+
+/* Class = "NSToolbarItem"; paletteLabel = "General"; ObjectID = "204"; */
+"204.paletteLabel" = "General";
+
+/* Class = "NSToolbarItem"; label = "File Import"; ObjectID = "207"; */
+"207.label" = "File Import";
+
+/* Class = "NSToolbarItem"; paletteLabel = "File Import"; ObjectID = "207"; */
+"207.paletteLabel" = "File Import";
+
+/* Class = "NSToolbarItem"; label = "Localization Files"; ObjectID = "212"; */
+"212.label" = "Localization Files";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Localization Files"; ObjectID = "212"; */
+"212.paletteLabel" = "Localization Files";
+
+/* Class = "NSButtonCell"; title = "Save project in compressed format"; ObjectID = "311"; */
+"311.title" = "Save project in compressed format";
+
+/* Class = "NSTextFieldCell"; title = "When saving a project in a compressed files file format, a single file will be created instead of a bundle. This format is more opaque when used under version control."; ObjectID = "316"; */
+"316.title" = "When saving a project in a compressed files file format, a single file will be created instead of a bundle. This format is more opaque when used under version control.";
+
+/* Class = "NSButtonCell"; title = "Show comments"; ObjectID = "398"; */
+"398.title" = "Show comments";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "432"; */
+"432.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "433"; */
+"433.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "434"; */
+"434.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "435"; */
+"435.title" = "Item 3";
+
+/* Class = "NSToolbarItem"; label = "Project"; ObjectID = "436"; */
+"436.label" = "Project";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Project"; ObjectID = "436"; */
+"436.paletteLabel" = "Project";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedIsNilPlaceholder = "No open project"; ObjectID = "448"; */
+"448.ibShadowedIsNilPlaceholder" = "No open project";
+
+/* Class = "NSToolbarItem"; label = "Xcode Integration"; ObjectID = "477"; */
+"477.label" = "Xcode Integration";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Xcode Integration"; ObjectID = "477"; */
+"477.paletteLabel" = "Xcode Integration";
+
+/* Class = "NSTextFieldCell"; title = "When synchronizing files, the affected associated Xcode projects will be updated according to the below settings. This feature requires Xcode project associations to have been set up, either by manually importing an Xcode project or adding it in the bundle info."; ObjectID = "485"; */
+"485.title" = "When synchronizing files, the affected associated Xcode projects will be updated according to the below settings. This feature requires Xcode project associations to have been set up, either by manually importing an Xcode project or adding it in the bundle info.";
+
+/* Class = "NSButtonCell"; title = "Automatically update associated Xcode projects"; ObjectID = "486"; */
+"486.title" = "Automatically update associated Xcode projects";
+
+/* Class = "NSTextFieldCell"; title = "“Files“ refers to localizations in this context. This means that only localized variants of files already known to the Xcode project will be added or removed."; ObjectID = "499"; */
+"499.title" = "“Files“ refers to localizations in this context. This means that only localized variants of files already known to the Xcode project will be added or removed.";
+
+/* Class = "NSButtonCell"; title = "Files need to be localized at least"; ObjectID = "500"; */
+"500.title" = "Files need to be localized at least";
+
+/* Class = "NSTextFieldCell"; title = "80%"; ObjectID = "501"; */
+"501.title" = "80%";
+
+/* Class = "NSButtonCell"; title = "Languages need to be localized at least"; ObjectID = "503"; */
+"503.title" = "Languages need to be localized at least";
+
+/* Class = "NSTextFieldCell"; title = "100%"; ObjectID = "504"; */
+"504.title" = "100%";
+
+/* Class = "NSButtonCell"; title = "Remove files not matching below criteria"; ObjectID = "506"; */
+"506.title" = "Remove files not matching below criteria";
+
+/* Class = "NSButtonCell"; title = "Add files that are missing from the project"; ObjectID = "507"; */
+"507.title" = "Add files that are missing from the project";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@%"; ObjectID = "547"; */
+"547.ibShadowedDisplayPattern" = "%{value1}@%";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@%"; ObjectID = "549"; */
+"549.ibShadowedDisplayPattern" = "%{value1}@%";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "570"; */
+"570.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "571"; */
+"571.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "572"; */
+"572.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "573"; */
+"573.title" = "Item 3";
+
+/* Class = "NSTextFieldCell"; title = "Used Xcode Tools:"; ObjectID = "575"; */
+"575.title" = "Used Xcode Tools:";
+
+/* Class = "NSButtonCell"; title = "Open folder after writing out"; ObjectID = "628"; */
+"628.title" = "Open folder after writing out";
+
+/* Class = "NSTextFieldCell"; title = "Save Location:"; ObjectID = "629"; */
+"629.title" = "Save Location:";
+
+/* Class = "NSTextFieldCell"; title = "some/path/that/to/save/my/files/to"; ObjectID = "630"; */
+"630.title" = "some/path/that/to/save/my/files/to";
+
+/* Class = "NSButtonCell"; title = "Select…"; ObjectID = "631"; */
+"631.title" = "Select…";
+
+/* Class = "NSButtonCell"; title = "Include interface preview"; ObjectID = "632"; */
+"632.title" = "Include interface preview";
+
+/* Class = "NSButtonCell"; title = "Embed dictionary"; ObjectID = "633"; */
+"633.title" = "Embed dictionary";
+
+/* Class = "NSTextFieldCell"; title = "The created Localizer file will contain a copy of all interface files, enabling localizers to get a preview of how the interface will look like after translation."; ObjectID = "634"; */
+"634.title" = "The created Localizer file will contain a copy of all interface files, enabling localizers to get a preview of how the interface will look like after translation.";
+
+/* Class = "NSButtonCell"; title = "Save files in compressed format"; ObjectID = "635"; */
+"635.title" = "Save files in compressed format";
+
+/* Class = "NSTextFieldCell"; title = "When saving a Localizer files using the compressed files file format, single files will be created instead of a bundles. This format is more opaque when used under version control."; ObjectID = "636"; */
+"636.title" = "When saving a Localizer files using the compressed files file format, single files will be created instead of a bundles. This format is more opaque when used under version control.";
+
+/* Class = "NSButtonCell"; title = "Show Dictionaries…"; ObjectID = "637"; */
+"637.title" = "Show Dictionaries…";
+
+/* Class = "NSButtonCell"; title = "Also include keys for guessing"; ObjectID = "638"; */
+"638.title" = "Also include keys for guessing";
+
+/* Class = "NSTextFieldCell"; title = "(very slow)"; ObjectID = "639"; */
+"639.title" = "(very slow)";
+
+/* Class = "NSTextFieldCell"; title = "The created Localizer file will contain a dictionary created from the currently loaded dictionaries and (optionally) currently open files. Only matching keys will be included. If activated, keys applying to guessing will also be contained."; ObjectID = "640"; */
+"640.title" = "The created Localizer file will contain a dictionary created from the currently loaded dictionaries and (optionally) currently open files. Only matching keys will be included. If activated, keys applying to guessing will also be contained.";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedIsNilPlaceholder = "Same as Database"; ObjectID = "641"; */
+"641.ibShadowedIsNilPlaceholder" = "Same as Database";
+
+/* Class = "NSButtonCell"; title = "Deactivate placeholder strings"; ObjectID = "669"; */
+"669.title" = "Deactivate placeholder strings";
+
+/* Class = "NSButtonCell"; title = "Edit Placholders…"; ObjectID = "677"; */
+"677.title" = "Edit Placholders…";
+
+/* Class = "NSTextFieldCell"; title = "Enabling this setting automatically deactivates placeholder strings that are replaced during runtime and don't need to be localized."; ObjectID = "679"; */
+"679.title" = "Enabling this setting automatically deactivates placeholder strings that are replaced during runtime and don't need to be localized.";
+
+/* Class = "NSWindow"; title = "Edit Placeholders"; ObjectID = "702"; */
+"702.title" = "Edit Placeholders";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "719"; */
+"719.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Done"; ObjectID = "721"; */
+"721.title" = "Done";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Add Existing Files\nReads the file's contents to either an existing file in the databse or creates a new one."; ObjectID = "726"; */
+"726.ibShadowedToolTip" = "Add Existing Files\nReads the file's contents to either an existing file in the databse or creates a new one.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Remove Selected Files\nRemoves the selected files from the databse but keeps the actual files if they exists."; ObjectID = "727"; */
+"727.ibShadowedToolTip" = "Remove Selected Files\nRemoves the selected files from the databse but keeps the actual files if they exists.";
+
+/* Class = "NSTextFieldCell"; title = "Define the placeholder strings that will be automatically deactivated when imported from the reference language."; ObjectID = "734"; */
+"734.title" = "Define the placeholder strings that will be automatically deactivated when imported from the reference language.";
+
+/* Class = "NSTextFieldCell"; title = "When rescanning files, the affected associated Xcode projects will be reimported. Localized files that are not yet referenced will be added to the database. This feature requires Xcode project associations to have been set up, either by manually importing an Xcode project or adding it in the bundle info."; ObjectID = "744"; */
+"744.title" = "When rescanning files, the affected associated Xcode projects will be reimported. Localized files that are not yet referenced will be added to the database. This feature requires Xcode project associations to have been set up, either by manually importing an Xcode project or adding it in the bundle info.";
+
+/* Class = "NSButtonCell"; title = "Automatically import new files from associated Xcode projects"; ObjectID = "745"; */
+"745.title" = "Automatically import new files from associated Xcode projects";

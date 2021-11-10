@@ -1,0 +1,21 @@
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "3"; */
+"3.title" = "Cancel";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize>"; ObjectID = "6"; */
+"6.title" = "<do not localize>";
+
+/* Class = "NSTextFieldCell"; title = "1000/1000"; ObjectID = "10"; */
+"10.title" = "1000/1000";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@/%{value2}@"; ObjectID = "18"; */
+"18.ibShadowedDisplayPattern" = "%{value1}@/%{value2}@";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@/%{value2}@"; ObjectID = "19"; */
+"19.ibShadowedDisplayPattern" = "%{value1}@/%{value2}@";
+
+/* Class = "NSWindow"; title = "Window"; ObjectID = "22"; */
+"22.title" = "Window";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize>"; ObjectID = "29"; */
+"29.title" = "<do not localize>";

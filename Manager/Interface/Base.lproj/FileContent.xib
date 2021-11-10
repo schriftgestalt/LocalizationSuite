@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -37,22 +37,22 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="294" y="311" width="660" height="387"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1728" height="1079"/>
             <value key="minSize" type="size" width="600" height="250"/>
-            <view key="contentView" id="6">
-                <rect key="frame" x="0.0" y="0.0" width="660" height="387"/>
+            <view key="contentView" misplaced="YES" id="6">
+                <rect key="frame" x="0.0" y="0.0" width="684" height="387"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <splitView autosaveName="FileContent" translatesAutoresizingMaskIntoConstraints="NO" id="462">
-                        <rect key="frame" x="-1" y="34" width="662" height="314"/>
+                        <rect key="frame" x="-1" y="36" width="693" height="309"/>
                         <subviews>
                             <customView fixedFrame="YES" id="463">
-                                <rect key="frame" x="0.0" y="0.0" width="662" height="188"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <rect key="frame" x="0.0" y="0.0" width="693" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" id="464">
-                                <rect key="frame" x="0.0" y="197" width="662" height="117"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <rect key="frame" x="0.0" y="194" width="693" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </customView>
                         </subviews>
                         <holdingPriorities>
@@ -61,20 +61,20 @@
                         </holdingPriorities>
                     </splitView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="46">
-                        <rect key="frame" x="8" y="10" width="49" height="14"/>
+                        <rect key="frame" x="8" y="10" width="56" height="16"/>
                         <textFieldCell key="cell" lineBreakMode="truncatingHead" sendsActionOnEndEditing="YES" alignment="left" title="Mark as:" id="424">
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55">
-                        <rect key="frame" x="10" y="358" width="230" height="19"/>
+                        <rect key="frame" x="10" y="355" width="230" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="230" id="N7s-j7-SsH"/>
                         </constraints>
-                        <searchFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="Search" bezelStyle="round" id="425">
-                            <font key="font" metaFont="smallSystem"/>
+                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="Search" bezelStyle="round" id="425">
+                            <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </searchFieldCell>
@@ -83,9 +83,9 @@
                         </connections>
                     </searchField>
                     <segmentedControl horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="70">
-                        <rect key="frame" x="61" y="6" width="133" height="21"/>
-                        <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="426">
-                            <font key="font" metaFont="smallSystem"/>
+                        <rect key="frame" x="67" y="6" width="128" height="24"/>
+                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="426">
+                            <font key="font" metaFont="system"/>
                             <segments>
                                 <segment label="Active" imageScaling="none" tag="1"/>
                                 <segment label="Not Active" imageScaling="none"/>
@@ -96,9 +96,9 @@
                         </connections>
                     </segmentedControl>
                     <segmentedControl horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="72">
-                        <rect key="frame" x="198" y="6" width="159" height="21"/>
-                        <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="427">
-                            <font key="font" metaFont="smallSystem"/>
+                        <rect key="frame" x="197" y="6" width="158" height="24"/>
+                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="427">
+                            <font key="font" metaFont="system"/>
                             <segments>
                                 <segment label="Updated" imageScaling="none" tag="1"/>
                                 <segment label="Not Updated" imageScaling="none"/>
@@ -109,10 +109,10 @@
                         </connections>
                     </segmentedControl>
                     <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="91">
-                        <rect key="frame" x="475" y="356" width="66" height="22"/>
-                        <popUpButtonCell key="cell" type="push" title="Item1" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="95" id="428">
+                        <rect key="frame" x="478" y="352" width="74" height="25"/>
+                        <popUpButtonCell key="cell" type="push" title="Item1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="95" id="428">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" metaFont="system"/>
                             <menu key="menu" title="OtherViews" id="92">
                                 <items>
                                     <menuItem title="Item1" state="on" id="95"/>
@@ -135,38 +135,38 @@
                         </connections>
                     </popUpButton>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="97">
-                        <rect key="frame" x="413" y="361" width="59" height="14"/>
+                        <rect key="frame" x="407" y="358" width="68" height="16"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Language:" id="429">
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="310">
-                        <rect key="frame" x="489" y="8" width="153" height="18"/>
-                        <buttonCell key="cell" type="check" title="Show removed strings" bezelStyle="regularSquare" imagePosition="leading" alignment="left" controlSize="small" inset="2" id="430">
+                        <rect key="frame" x="510" y="9" width="161" height="18"/>
+                        <buttonCell key="cell" type="check" title="Show removed strings" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="430">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
                             <binding destination="203" name="value" keyPath="selection.showRemovedStrings" id="394"/>
                         </connections>
                     </button>
                     <button horizontalHuggingPriority="251" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="404">
-                        <rect key="frame" x="360" y="8" width="126" height="18"/>
-                        <buttonCell key="cell" type="check" title="Show empty strings" bezelStyle="regularSquare" imagePosition="leading" alignment="left" controlSize="small" inset="2" id="431">
+                        <rect key="frame" x="358" y="9" width="146" height="18"/>
+                        <buttonCell key="cell" type="check" title="Show empty strings" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="431">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
                             <binding destination="203" name="value" keyPath="selection.showEmptyStrings" id="405"/>
                         </connections>
                     </button>
                     <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="407">
-                        <rect key="frame" x="543" y="359" width="109" height="18"/>
-                        <buttonCell key="cell" type="check" title="Show comments" bezelStyle="regularSquare" imagePosition="leading" alignment="left" controlSize="small" inset="2" id="432">
+                        <rect key="frame" x="554" y="357" width="127" height="18"/>
+                        <buttonCell key="cell" type="check" title="Show comments" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="432">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
                             <binding destination="203" name="value" keyPath="selection.showComments" id="409"/>

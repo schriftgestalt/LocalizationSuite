@@ -1,0 +1,45 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "If enabled, exported files are split and grouped in a separate file or folder for each bundle. Enabling this option will cause the export to create a folder for each language."; ObjectID = "2"; */
+"2.ibShadowedToolTip" = "If enabled, exported files are split and grouped in a separate file or folder for each bundle. Enabling this option will cause the export to create a folder for each language.";
+
+/* Class = "NSButtonCell"; title = "Group files by bundle"; ObjectID = "3"; */
+"3.title" = "Group files by bundle";
+
+/* Class = "NSButton"; ibShadowedToolTip = "If enabled, comments of key objects will be included in the export."; ObjectID = "4"; */
+"4.ibShadowedToolTip" = "If enabled, comments of key objects will be included in the export.";
+
+/* Class = "NSButtonCell"; title = "Export missing strings only"; ObjectID = "5"; */
+"5.title" = "Export missing strings only";
+
+/* Class = "NSButton"; ibShadowedToolTip = "If enabled, non-string files will be exported as well into separate files. Enabling this option will cause the export to create a folder for each language."; ObjectID = "6"; */
+"6.ibShadowedToolTip" = "If enabled, non-string files will be exported as well into separate files. Enabling this option will cause the export to create a folder for each language.";
+
+/* Class = "NSButtonCell"; title = "Include other files (.rtf, .rtfd, …)"; ObjectID = "7"; */
+"7.title" = "Include other files (.rtf, .rtfd, …)";
+
+/* Class = "NSButton"; ibShadowedToolTip = "If enabled, instead of creating a single strings file, the strings for each file will be exported into a separate file. Enabling this option will cause the export to create a folder for each language."; ObjectID = "10"; */
+"10.ibShadowedToolTip" = "If enabled, instead of creating a single strings file, the strings for each file will be exported into a separate file. Enabling this option will cause the export to create a folder for each language.";
+
+/* Class = "NSButtonCell"; title = "Each file separately"; ObjectID = "11"; */
+"11.title" = "Each file separately";
+
+/* Class = "NSTextFieldCell"; title = "Will export to folders:"; ObjectID = "13"; */
+"13.title" = "Will export to folders:";
+
+/* Class = "NSButton"; ibShadowedToolTip = "If enabled, a separate file mapping from the reference language to the reference language is created. This allows external changed to strings in the reference language."; ObjectID = "32"; */
+"32.ibShadowedToolTip" = "If enabled, a separate file mapping from the reference language to the reference language is created. This allows external changed to strings in the reference language.";
+
+/* Class = "NSButtonCell"; title = "Export development language"; ObjectID = "33"; */
+"33.title" = "Export development language";
+
+/* Class = "NSButton"; ibShadowedToolTip = "If enabled, only the currently selected files will be exported. Otherwise, all objects from the document are exported."; ObjectID = "41"; */
+"41.ibShadowedToolTip" = "If enabled, only the currently selected files will be exported. Otherwise, all objects from the document are exported.";
+
+/* Class = "NSButtonCell"; title = "Export selected files only"; ObjectID = "42"; */
+"42.title" = "Export selected files only";
+
+/* Class = "NSButton"; ibShadowedToolTip = "If enabled, comments of key objects will be included in the export."; ObjectID = "48"; */
+"48.ibShadowedToolTip" = "If enabled, comments of key objects will be included in the export.";
+
+/* Class = "NSButtonCell"; title = "Include comments"; ObjectID = "49"; */
+"49.title" = "Include comments";

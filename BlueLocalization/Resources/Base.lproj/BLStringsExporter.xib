@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -12,7 +12,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <objectController objectClassName="BLStringsExporter" id="35" userLabel="Exporter">
             <declaredKeys>
                 <string>includesReferenceLanguage</string>
@@ -26,20 +26,20 @@
             <rect key="frame" x="0.0" y="0.0" width="387" height="213"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="12">
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="12">
                     <rect key="frame" x="17" y="132" width="169" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Will export to folders:" id="13">
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" metaFont="menu" size="11"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button imageHugsTitle="YES" id="10">
+                <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="10">
                     <rect key="frame" x="38" y="108" width="331" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <string key="toolTip">If enabled, instead of creating a single strings file, the strings for each file will be exported into a separate file. Enabling this option will cause the export to create a folder for each language.</string>
-                    <buttonCell key="cell" type="check" title="Each file separately" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="11">
+                    <buttonCell key="cell" type="check" title="Each file separately" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="11">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -47,11 +47,11 @@
                         <binding destination="14" name="value" keyPath="values.stringsExporter.separateFiles" id="17"/>
                     </connections>
                 </button>
-                <button imageHugsTitle="YES" id="6">
+                <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6">
                     <rect key="frame" x="38" y="88" width="331" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <string key="toolTip">If enabled, non-string files will be exported as well into separate files. Enabling this option will cause the export to create a folder for each language.</string>
-                    <buttonCell key="cell" type="check" title="Include other files (.rtf, .rtfd, …)" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="7">
+                    <buttonCell key="cell" type="check" title="Include other files (.rtf, .rtfd, …)" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="7">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -59,7 +59,7 @@
                         <binding destination="14" name="value" keyPath="values.stringsExporter.includeOthers" id="18"/>
                     </connections>
                 </button>
-                <button toolTip="If enabled, comments of key objects will be included in the export." imageHugsTitle="YES" id="4">
+                <button toolTip="If enabled, comments of key objects will be included in the export." fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4">
                     <rect key="frame" x="18" y="157" width="351" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Export missing strings only" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="5">
@@ -70,11 +70,11 @@
                         <binding destination="14" name="value" keyPath="values.stringsExporter.missingStringsOnly" id="52"/>
                     </connections>
                 </button>
-                <button imageHugsTitle="YES" id="2">
+                <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2">
                     <rect key="frame" x="38" y="68" width="331" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <string key="toolTip">If enabled, exported files are split and grouped in a separate file or folder for each bundle. Enabling this option will cause the export to create a folder for each language.</string>
-                    <buttonCell key="cell" type="check" title="Group files by bundle" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="3">
+                    <buttonCell key="cell" type="check" title="Group files by bundle" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="3">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -82,7 +82,7 @@
                         <binding destination="14" name="value" keyPath="values.stringsExporter.groupByBundle" id="19"/>
                     </connections>
                 </button>
-                <button imageHugsTitle="YES" id="32">
+                <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32">
                     <rect key="frame" x="18" y="18" width="282" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <string key="toolTip">If enabled, a separate file mapping from the reference language to the reference language is created. This allows external changed to strings in the reference language.</string>
@@ -99,7 +99,7 @@
                         <binding destination="14" name="value" keyPath="values.stringsExporter.exportReference" id="38"/>
                     </connections>
                 </button>
-                <button toolTip="If enabled, only the currently selected files will be exported. Otherwise, all objects from the document are exported." imageHugsTitle="YES" id="41">
+                <button toolTip="If enabled, only the currently selected files will be exported. Otherwise, all objects from the document are exported." fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="41">
                     <rect key="frame" x="18" y="38" width="316" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Export selected files only" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="42">
@@ -114,7 +114,7 @@
                         </binding>
                     </connections>
                 </button>
-                <button toolTip="If enabled, comments of key objects will be included in the export." imageHugsTitle="YES" id="48">
+                <button toolTip="If enabled, comments of key objects will be included in the export." fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="48">
                     <rect key="frame" x="18" y="177" width="351" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Include comments" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="49">
@@ -126,6 +126,7 @@
                     </connections>
                 </button>
             </subviews>
+            <point key="canvasLocation" x="140" y="154"/>
         </customView>
     </objects>
 </document>

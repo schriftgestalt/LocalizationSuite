@@ -1,0 +1,1970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundles</key>
+	<array>
+		<dict>
+			<key>associated Xcode projects</key>
+			<array/>
+			<key>class</key>
+			<string>BLBundleObject</string>
+			<key>files</key>
+			<array>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2014-01-28T11:18:41Z</date>
+					<key>class</key>
+					<string>BLStringsFileObject</string>
+					<key>hash</key>
+					<string>380afc82cbaccdb455ae33678d80f0cb
+</string>
+					<key>name</key>
+					<string>LIPreviewWindow.strings</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Status text in preview window while loading</string>
+							<key>key</key>
+							<string>Loading</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Loading…</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Status text in preview window when no preview can be loaded</string>
+							<key>key</key>
+							<string>NoPreview</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>No Preview available.</string>
+							</dict>
+						</dict>
+					</array>
+					<key>old objects</key>
+					<array/>
+					<key>plist file</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2014-01-28T11:18:41Z</date>
+					<key>class</key>
+					<string>BLStringsFileObject</string>
+					<key>hash</key>
+					<string>9608df01b770ce44a6fb803206adf091
+</string>
+					<key>name</key>
+					<string>LIContent.strings</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Title of LIContent column showing whether a key object is active or not.</string>
+							<key>key</key>
+							<string>active</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Active</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Title of LIContent column showing whether a key object was updated or not.</string>
+							<key>key</key>
+							<string>updated</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Updated</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Title of LIContent column showing the status of a key object.</string>
+							<key>key</key>
+							<string>status</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Status</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Description for key object status "autotranslated", displayed as tooltip</string>
+							<key>key</key>
+							<string>Autotranslated</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Autotranslated</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>One-Char constant describing the key object status "autotranslated"</string>
+							<key>key</key>
+							<string>A</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>A</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Description for key object status "deactivated", displayed as tooltip</string>
+							<key>key</key>
+							<string>Deactivated</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Deactivated</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>One-Char constant describing the key object status "autotranslated"</string>
+							<key>key</key>
+							<string>D</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>D</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Description for key object status "updated", displayed as tooltip</string>
+							<key>key</key>
+							<string>Updated</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Updated</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>One-Char constant describing the key object status "autotranslated"</string>
+							<key>key</key>
+							<string>U</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>U</string>
+							</dict>
+						</dict>
+					</array>
+					<key>old objects</key>
+					<array/>
+					<key>plist file</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2014-01-28T11:18:41Z</date>
+					<key>class</key>
+					<string>BLStringsFileObject</string>
+					<key>hash</key>
+					<string>3c550c1e40afe6995534f20138f9059a
+</string>
+					<key>name</key>
+					<string>LIDictionarySettings.strings</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Statistical display for loaded dictionary files</string>
+							<key>key</key>
+							<string>KeysLanguages</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>%d Keys, %d Languages</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Information showing that a file contains a dictionary</string>
+							<key>key</key>
+							<string>ContainsDict</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Contains Dictionary</string>
+							</dict>
+						</dict>
+					</array>
+					<key>old objects</key>
+					<array/>
+					<key>plist file</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2021-11-10T09:43:00Z</date>
+					<key>class</key>
+					<string>BLStringsFileObject</string>
+					<key>hash</key>
+					<string>2ee74c0d4c93d9a7c3f814ae954df072
+</string>
+					<key>name</key>
+					<string>LIStatusDisplay.strings</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSWindow"; title = "Statistics"; ObjectID = "1";</string>
+							<key>key</key>
+							<string>1.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Statistik</string>
+								<key>en</key>
+								<string>Statistics</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Objects"; ObjectID = "4";</string>
+							<key>flags</key>
+							<integer>4</integer>
+							<key>key</key>
+							<string>4.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Objekte</string>
+								<key>en</key>
+								<string>Objects</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "10 Bundle(s)"; ObjectID = "6";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>6.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>10 Bundle(s)</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "10 File(s)"; ObjectID = "10";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>10.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>10 File(s)</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "10 Key(s)"; ObjectID = "12";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>12.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>10 Key(s)</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "English"; ObjectID = "41";</string>
+							<key>key</key>
+							<string>41.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>English</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "1"; ObjectID = "44";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>44.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>1</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "2"; ObjectID = "53";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>53.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>2</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "German"; ObjectID = "54";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>54.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>German</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "4"; ObjectID = "56";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>56.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>4</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "5"; ObjectID = "57";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>57.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>5</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Text"; ObjectID = "63";</string>
+							<key>flags</key>
+							<integer>4</integer>
+							<key>key</key>
+							<string>63.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Text</string>
+								<key>en</key>
+								<string>Text</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "3"; ObjectID = "64";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>64.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>3</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "6"; ObjectID = "65";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>65.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>6</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Sentences:"; ObjectID = "68";</string>
+							<key>key</key>
+							<string>68.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Sätze:</string>
+								<key>en</key>
+								<string>Sentences:</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Words:"; ObjectID = "72";</string>
+							<key>key</key>
+							<string>72.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Wörter:</string>
+								<key>en</key>
+								<string>Words:</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Characters:"; ObjectID = "74";</string>
+							<key>key</key>
+							<string>74.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Zeichen:</string>
+								<key>en</key>
+								<string>Characters:</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@ Bundle(s)"; ObjectID = "116";</string>
+							<key>key</key>
+							<string>116.ibShadowedDisplayPattern</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>%{value1}@ Bundle(s)</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "CocoaBindingsConnection"; ibShadowedIsNilPlaceholder = "0"; ObjectID = "116";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>116.ibShadowedIsNilPlaceholder</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>0</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "CocoaBindingsConnection"; ibShadowedNoSelectionPlaceholder = "0"; ObjectID = "116";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>116.ibShadowedNoSelectionPlaceholder</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>0</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@ File(s)"; ObjectID = "117";</string>
+							<key>key</key>
+							<string>117.ibShadowedDisplayPattern</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>%{value1}@ Dateien(s)</string>
+								<key>en</key>
+								<string>%{value1}@ File(s)</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "CocoaBindingsConnection"; ibShadowedIsNilPlaceholder = "0"; ObjectID = "117";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>117.ibShadowedIsNilPlaceholder</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>0</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "CocoaBindingsConnection"; ibShadowedNoSelectionPlaceholder = "0"; ObjectID = "117";</string>
+							<key>key</key>
+							<string>117.ibShadowedNoSelectionPlaceholder</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>0</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@ Key(s)"; ObjectID = "118";</string>
+							<key>key</key>
+							<string>118.ibShadowedDisplayPattern</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>%{value1}@ Einträge(s)</string>
+								<key>en</key>
+								<string>%{value1}@ Key(s)</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "CocoaBindingsConnection"; ibShadowedIsNilPlaceholder = "0"; ObjectID = "118";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>118.ibShadowedIsNilPlaceholder</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>0</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "CocoaBindingsConnection"; ibShadowedNoSelectionPlaceholder = "0"; ObjectID = "118";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>118.ibShadowedNoSelectionPlaceholder</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>0</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Counters"; ObjectID = "124";</string>
+							<key>key</key>
+							<string>124.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Counters</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Statistics"; ObjectID = "139";</string>
+							<key>key</key>
+							<string>139.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Statistics</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Guesses ≥50%:"; ObjectID = "157";</string>
+							<key>key</key>
+							<string>157.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Raten ≥50%:</string>
+								<key>en</key>
+								<string>Guesses ≥50%:</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Guesses ≥75%:"; ObjectID = "158";</string>
+							<key>key</key>
+							<string>158.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Raten ≥75%:</string>
+								<key>en</key>
+								<string>Guesses ≥75%:</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Exact Matches:"; ObjectID = "159";</string>
+							<key>key</key>
+							<string>159.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Exakt:</string>
+								<key>en</key>
+								<string>Exact Matches:</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "3"; ObjectID = "161";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>161.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>3</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Text"; ObjectID = "162";</string>
+							<key>flags</key>
+							<integer>4</integer>
+							<key>key</key>
+							<string>162.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Text</string>
+								<key>en</key>
+								<string>Text</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "2"; ObjectID = "166";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>166.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>2</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "1"; ObjectID = "167";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>167.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>1</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Keys"; ObjectID = "168";</string>
+							<key>key</key>
+							<string>168.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Keys</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "No Matches:"; ObjectID = "178";</string>
+							<key>key</key>
+							<string>178.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Keine Übereinstimmung:</string>
+								<key>en</key>
+								<string>No Matches:</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "7"; ObjectID = "179";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>179.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>7</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "5"; ObjectID = "180";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>180.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>5</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Words"; ObjectID = "181";</string>
+							<key>key</key>
+							<string>181.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Wörter</string>
+								<key>en</key>
+								<string>Words</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "6"; ObjectID = "182";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>182.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>6</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "8"; ObjectID = "183";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>183.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>8</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "4"; ObjectID = "184";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>184.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>4</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "100%"; ObjectID = "194";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>194.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>100%</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSButtonCell"; title = "Calculate"; ObjectID = "195";</string>
+							<key>key</key>
+							<string>195.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Berechnen</string>
+								<key>en</key>
+								<string>Calculate</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "5"; ObjectID = "231";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>231.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>5</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "9"; ObjectID = "232";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>232.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>9</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Translated:"; ObjectID = "234";</string>
+							<key>key</key>
+							<string>234.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>de</key>
+								<string>Übersetzt:</string>
+								<key>en</key>
+								<string>Translated:</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@%"; ObjectID = "255";</string>
+							<key>key</key>
+							<string>255.ibShadowedDisplayPattern</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>%{value1}@%</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "This may take some time."; ObjectID = "263";</string>
+							<key>key</key>
+							<string>263.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>This may take some time.</string>
+							</dict>
+						</dict>
+					</array>
+					<key>old objects</key>
+					<array/>
+					<key>plist file</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2021-11-10T09:42:45Z</date>
+					<key>class</key>
+					<string>BLStringsFileObject</string>
+					<key>hash</key>
+					<string>3fe846e721ba3ff09bfcaf3bb983590a
+</string>
+					<key>name</key>
+					<string>LIProcessDisplay.strings</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSButtonCell"; title = "Cancel"; ObjectID = "3";</string>
+							<key>key</key>
+							<string>3.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Cancel</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "&lt;do not localize&gt;"; ObjectID = "6";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>6.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>&lt;do not localize&gt;</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "1000/1000"; ObjectID = "10";</string>
+							<key>key</key>
+							<string>10.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>1000/1000</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@/%{value2}@"; ObjectID = "18";</string>
+							<key>key</key>
+							<string>18.ibShadowedDisplayPattern</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>%{value1}@/%{value2}@</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@/%{value2}@"; ObjectID = "19";</string>
+							<key>key</key>
+							<string>19.ibShadowedDisplayPattern</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>%{value1}@/%{value2}@</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSWindow"; title = "Window"; ObjectID = "22";</string>
+							<key>key</key>
+							<string>22.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Window</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "&lt;do not localize&gt;"; ObjectID = "29";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>29.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>&lt;do not localize&gt;</string>
+							</dict>
+						</dict>
+					</array>
+					<key>old objects</key>
+					<array/>
+					<key>plist file</key>
+					<false/>
+				</dict>
+			</array>
+			<key>name</key>
+			<string>LocInterface/Resources</string>
+			<key>naming style</key>
+			<integer>1</integer>
+			<key>referencing style</key>
+			<integer>1</integer>
+			<key>user name</key>
+			<string>Resources</string>
+		</dict>
+		<dict>
+			<key>associated Xcode projects</key>
+			<array/>
+			<key>class</key>
+			<string>BLBundleObject</string>
+			<key>files</key>
+			<array>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2014-01-28T11:18:41Z</date>
+					<key>class</key>
+					<string>BLStringsFileObject</string>
+					<key>hash</key>
+					<string>5afb65e582dd9de4df651c647ac6d1f9
+</string>
+					<key>name</key>
+					<string>Localizable.strings</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>The status being displayed to the user while creating the match dictionary if the process is expected to be quick</string>
+							<key>key</key>
+							<string>LTLocalizerExportDictionary</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Creating embedded dictionary</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>The status being displayed to the user while creating the match dictionary if the process is expected to be slow</string>
+							<key>key</key>
+							<string>LTLocalizerExportMatchStatus</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Creating embedded dictionary: %d%%</string>
+							</dict>
+						</dict>
+					</array>
+					<key>old objects</key>
+					<array/>
+					<key>plist file</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2014-01-28T11:18:41Z</date>
+					<key>class</key>
+					<string>BLStringsFileObject</string>
+					<key>hash</key>
+					<string>8f2f3a8d4169cc4a42f632729b82179f
+</string>
+					<key>name</key>
+					<string>LTAutotranslationStep.strings</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Title of process display when autotranslating</string>
+							<key>key</key>
+							<string>Autotranslating</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Autotranslating…</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Detail text of display while autotranslating</string>
+							<key>key</key>
+							<string>AutotranslatingText</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Finding translations for %d key objects.
+Target Language: %@</string>
+							</dict>
+						</dict>
+					</array>
+					<key>old objects</key>
+					<array/>
+					<key>plist file</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2014-01-28T11:18:41Z</date>
+					<key>class</key>
+					<string>BLStringsFileObject</string>
+					<key>hash</key>
+					<string>f8765d1bee8c9dfbc1903efc68dce2b5
+</string>
+					<key>name</key>
+					<string>LTTranslationChecker.strings</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Info string shown when count of placeholders is wrong</string>
+							<key>key</key>
+							<string>Wrong placeholder count</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Wrong number of placeholders: expected %d, found %d</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Info string shown when a placeholder is wrong</string>
+							<key>key</key>
+							<string>Wrong placeholder at index</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Wrong placeholder (number %d): expected “%@“, found “%@“</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Info string shown when a string might be too long</string>
+							<key>key</key>
+							<string>Significant length difference</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Significant difference in length: Translation is more than %d%% longer!</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Info string shown when the leading whitespace is wrong</string>
+							<key>key</key>
+							<string>Mismatching leading whitespace</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Possible mismatch of leading whitespace: expected “%@“, found “%@“</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Info string shown when the trailing whitespace is wrong</string>
+							<key>key</key>
+							<string>Mismatching trailing whitespace</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Possible mismatch of trailing whitespace: expected “%@“, found “%@“</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Info string shown when the string ending is wrong</string>
+							<key>key</key>
+							<string>Mismatching string ending</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Possible mismatch of string ending: expected “%@“, found “%@“</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Info string shown when the quoting style is wrong</string>
+							<key>key</key>
+							<string>Mismatching quoting style</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Possibly inappropriate quoting style: expected %@%@, found %@%@</string>
+							</dict>
+						</dict>
+					</array>
+					<key>old objects</key>
+					<array/>
+					<key>plist file</key>
+					<false/>
+				</dict>
+			</array>
+			<key>name</key>
+			<string>LocTools/Resources</string>
+			<key>naming style</key>
+			<integer>1</integer>
+			<key>referencing style</key>
+			<integer>1</integer>
+			<key>user name</key>
+			<string>Resources</string>
+		</dict>
+		<dict>
+			<key>associated Xcode projects</key>
+			<array/>
+			<key>class</key>
+			<string>BLBundleObject</string>
+			<key>files</key>
+			<array>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2014-01-28T11:18:41Z</date>
+					<key>class</key>
+					<string>BLRTFFileObject</string>
+					<key>hash</key>
+					<string>0fdeea6c60b960a4adf2faf0a1a1bdbc
+</string>
+					<key>name</key>
+					<string>AboutBox.rtf</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>class</key>
+							<string>BLRTFDKeyObject</string>
+							<key>key</key>
+							<string>content</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<data>
+								YnBsaXN0MDDU
+								AQIDBAUGBwpY
+								JHZlcnNpb25Z
+								JGFyY2hpdmVy
+								VCR0b3BYJG9i
+								amVjdHMSAAGG
+								oF8QD05TS2V5
+								ZWRBcmNoaXZl
+								ctEICVRyb290
+								gAGvECkLDBUW
+								HicoKTVESE5R
+								VFdaXWBjZmls
+								b3J1eYGChYiQ
+								k5ScoK+zu77C
+								xlUkbnVsbNQN
+								Dg8QERITFFhO
+								U1N0cmluZ18Q
+								D05TQXR0cmli
+								dXRlSW5mb1xO
+								U0F0dHJpYnV0
+								ZXNWJGNsYXNz
+								gAKAJoADgChv
+								EQIHAEMAbwBu
+								AGMAZQBwAHQA
+								IAAmACAARABl
+								AHYAZQBsAG8A
+								cABtAGUAbgB0
+								AAoATQBhAHgA
+								IABTAGUAZQBs
+								AGUAbQBhAG4A
+								bgAKADwAcwBl
+								AGUAbABlAG0A
+								YQBuAG4AQABi
+								AGwAdQBlAC0A
+								dABlAGMALgBj
+								AG8AbQA+AAoA
+								CgBJAGMAbwBu
+								ACAARABlAHMA
+								aQBnAG4ACgBU
+								AG8AYgBpAGEA
+								cwAgAEgAbwBy
+								AHYAYQB0AGgA
+								CgA8AGgAbwBy
+								AHYAYQB0AGgA
+								QABiAGwAdQBl
+								AC0AdABlAGMA
+								LgBjAG8AbQA+
+								AAoACgBEAG8A
+								YwB1AG0AZQBu
+								AHQAYQB0AGkA
+								bwBuAAoARABh
+								AHYAaQBkACAA
+								RABhAHUAZQBy
+								AAoAPABkAGEA
+								dQBlAHIAQABi
+								AGwAdQBlAC0A
+								dABlAGMALgBj
+								AG8AbQA+AAoA
+								CgBCAGUAdABh
+								ACAAVABlAHMA
+								dABlAHIAcwAK
+								AEEAbABlAHgA
+								YQBuAGQAZQBy
+								ACAARwAuACAA
+								dgBvAG4AIABC
+								AGUAbABvAHcA
+								CgBBAG4AZABy
+								AGUAYQBzACAA
+								UABhAHIAZABl
+								AGkAawBlAAoA
+								QQBuAGQAcgBl
+								AHcAIABaAGEA
+								bQBsAGUAcgAt
+								AEMAYQByAGgA
+								YQByAHQACgBE
+								AGEAdgBpAGQA
+								IABEAGEAdQBl
+								AHIACgBFAG0A
+								bQBhAG4AdQBl
+								AGwAIABDAOEA
+								YwBlAHIAZQBz
+								ACAAZABlACAA
+								SwBlAHIAYwBo
+								AG8AdgBlAAoA
+								RQB2AGEAbgAg
+								AFMAYwBoAG8A
+								ZQBuAGIAZQBy
+								AGcACgBGAGUA
+								bABpAHAAIABB
+								AGwAZgByAGUA
+								ZAAgAEcAYQBs
+								AGkAdABvACAA
+								SQAgAFQAcgBp
+								AGwAbABhAAoA
+								TQBhAHgAIABT
+								AGUAZQBsAGUA
+								bQBhAG4AbgAK
+								AE0AaQBjAGgA
+								YQBlAGwAIABG
+								AGUAbgBzAGsA
+								ZQAKAE0AaQBj
+								AGgAYQBlAGwA
+								IABUAHMAYQBp
+								AAoAUwB0AGUA
+								cABoAGEAbgAg
+								AEIAdQByAGwA
+								bwB0AAoAUwB2
+								AGUAbgAgAEoA
+								YQBuAHMAcwBl
+								AG4ACgBUAGoA
+								YQByAGsAIABE
+								AGUAcgBsAGkA
+								ZQBuAAoACgBC
+								AGEAcwBlAGQA
+								IABvAG4AIAB0
+								AGgAZQAKAEIA
+								bAB1AGUATABv
+								AGMAYQBsAGkA
+								egBhAHQAaQBv
+								AG4AIABGAHIA
+								YQBtAGUAdwBv
+								AHIAawAKAAoA
+								VwBlAGIAcwBp
+								AHQAZQAKAGgA
+								dAB0AHAAOgAv
+								AC8AdwB3AHcA
+								LgBiAGwAdQBl
+								AC0AdABlAGMA
+								LgBjAG8AbQAv
+								AGwAbwBjAHMA
+								dQBpAHQAZQAv
+								AAoACgBDAG8A
+								bgB0AGEAYwB0
+								AAoAcwB1AHAA
+								cABvAHIAdABA
+								AGIAbAB1AGUA
+								LQB0AGUAYwAu
+								AGMAbwBt0hcQ
+								GB1aTlMub2Jq
+								ZWN0c6QZGhsc
+								gASAHYAggCSA
+								JdMfFxAgIyZX
+								TlMua2V5c6Ih
+								IoAFgAaiJCWA
+								B4AZgBxfEBBO
+								U1BhcmFncmFw
+								aFN0eWxlVk5T
+								Rm9udNYqKywQ
+								LS4vMDEyMzRa
+								TlNUYWJTdG9w
+								c1tOU0FsaWdu
+								bWVudFtOU1Rl
+								eHRMaXN0c18Q
+								H05TQWxsb3dz
+								VGlnaHRlbmlu
+								Z0ZvclRydW5j
+								YXRpb25fEBRO
+								U0xpbmVIZWln
+								aHRNdWx0aXBs
+								ZYAIEASAF4AY
+								EAEjP/GZmZmZ
+								mZnSFxA2Q6w3
+								ODk6Ozw9Pj9A
+								QUKACYALgAyA
+								DYAOgA+AEIAR
+								gBKAE4AUgBWA
+								FtIQRUZHWk5T
+								TG9jYXRpb26A
+								CiNAPEzMzMzM
+								zdJJSktMWiRj
+								bGFzc25hbWVY
+								JGNsYXNzZXNZ
+								TlNUZXh0VGFi
+								oktNWE5TT2Jq
+								ZWN00hBFRlCA
+								CiNATFMzMzMz
+								M9IQRUZTgAoj
+								QFVAAAAAAADS
+								EEVGVoAKI0Bc
+								VmZmZmZm0hBF
+								RlmACiNAYbZm
+								ZmZmZtIQRUZc
+								gAojQGVBmZmZ
+								mZrSEEVGX4AK
+								I0BozMzMzMzN
+								0hBFRmKACiNA
+								bFgAAAAAANIQ
+								RUZlgAojQG/j
+								MzMzMzPSEEVG
+								aIAKI0BxtzMz
+								MzMz0hBFRmuA
+								CiNAc3zMzMzM
+								zdIQRUZugAoj
+								QHVCZmZmZmbS
+								SUpwcVdOU0Fy
+								cmF5onBN0hcQ
+								c0OggBbSSUp2
+								d18QF05TTXV0
+								YWJsZVBhcmFn
+								cmFwaFN0eWxl
+								o3Z4TV8QEE5T
+								UGFyYWdyYXBo
+								U3R5bGXUent8
+								EH1+f4BWTlNT
+								aXplWE5TZkZs
+								YWdzVk5TTmFt
+								ZSNAJgAAAAAA
+								ABAQgBqAG15I
+								ZWx2ZXRpY2Et
+								Qm9sZNJJSoOE
+								Vk5TRm9udKKD
+								TdJJSoaHXE5T
+								RGljdGlvbmFy
+								eaKGTdMfFxCJ
+								jCaiISKABYAG
+								oiSOgAeAHoAc
+								1Hp7fBB9fpGA
+								gB+AG1lIZWx2
+								ZXRpY2HTHxcQ
+								lZgmoiEigAWA
+								BqKZmoAhgCOA
+								HNUqKxAtLJ0w
+								MjMxgCKAGIAX
+								0hcQoUOsNzg5
+								Ojs8PT4/QEFC
+								gAmAC4AMgA2A
+								DoAPgBCAEYAS
+								gBOAFIAVgBbU
+								ent8ELB+kYAj
+								QCIAAAAAAACA
+								H4Ab0x8XELS3
+								JqIhIoAFgAai
+								mY6AIYAegBzS
+								SUq8vV5OU011
+								dGFibGVBcnJh
+								eaO8cE3SvxDA
+								wVdOUy5kYXRh
+								TxAvFQAPARgC
+								AQMBAQsAEAEW
+								AgEDAQENAA0B
+								FAIBAwEBDADq
+								AQEnAAIBBwAk
+								AQcAFQGAJ9JJ
+								SsPEXU5TTXV0
+								YWJsZURhdGGj
+								w8VNVk5TRGF0
+								YdJJSsfIXxAS
+								TlNBdHRyaWJ1
+								dGVkU3RyaW5n
+								oslNXxASTlNB
+								dHRyaWJ1dGVk
+								U3RyaW5nAAgA
+								EQAaACQAKQAy
+								ADcASQBMAFEA
+								UwB/AIUAjgCX
+								AKkAtgC9AL8A
+								wQDDAMUE1wTc
+								BOcE7ATuBPAE
+								8gT0BPYE/QUF
+								BQgFCgUMBQ8F
+								EQUTBRUFKAUv
+								BTwFRwVTBV8F
+								gQWYBZoFnAWe
+								BaAFogWrBbAF
+								vQW/BcEFwwXF
+								BccFyQXLBc0F
+								zwXRBdMF1QXX
+								BdwF5wXpBfIF
+								9wYCBgsGFQYY
+								BiEGJgYoBjEG
+								NgY4BkEGRgZI
+								BlEGVgZYBmEG
+								ZgZoBnEGdgZ4
+								BoEGhgaIBpEG
+								lgaYBqEGpgao
+								BrEGtga4BsEG
+								xgbIBtEG1gbe
+								BuEG5gbnBukG
+								7gcIBwwHHwco
+								By8HOAc/B0gH
+								SgdMB04HXQdi
+								B2kHbAdxB34H
+								gQeIB4sHjQeP
+								B5IHlAeWB5gH
+								oQejB6UHrwe2
+								B7kHuwe9B8AH
+								wgfEB8YH0QfT
+								B9UH1wfcB+kH
+								6wftB+8H8Qfz
+								B/UH9wf5B/sH
+								/Qf/CAEIAwgM
+								CBUIFwgZCCAI
+								IwglCCcIKggs
+								CC4IMAg1CEQI
+								SAhNCFUIhwiJ
+								CI4InAigCKcI
+								rAjBCMQAAAAA
+								AAACAQAAAAAA
+								AADKAAAAAAAA
+								AAAAAAAAAAAI
+								2Q==
+								</data>
+							</dict>
+						</dict>
+					</array>
+					<key>old objects</key>
+					<array/>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict/>
+					<key>change date</key>
+					<date>2021-11-10T09:38:15Z</date>
+					<key>class</key>
+					<string>BLStringsFileObject</string>
+					<key>hash</key>
+					<string>7aab836cd131f9e5fbafd98bf21b8eb0
+</string>
+					<key>name</key>
+					<string>FileContent.strings</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSWindow"; title = "File"; ObjectID = "5";</string>
+							<key>key</key>
+							<string>5.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>File</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSMenu"; title = "OtherViews"; ObjectID = "92";</string>
+							<key>flags</key>
+							<integer>2</integer>
+							<key>key</key>
+							<string>92.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>OtherViews</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSMenuItem"; title = "Item2"; ObjectID = "93";</string>
+							<key>key</key>
+							<string>93.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Item2</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSMenuItem"; title = "Item3"; ObjectID = "94";</string>
+							<key>key</key>
+							<string>94.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Item3</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSMenuItem"; title = "Item1"; ObjectID = "95";</string>
+							<key>key</key>
+							<string>95.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Item1</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Mark as:"; ObjectID = "424";</string>
+							<key>key</key>
+							<string>424.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Mark as:</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSSearchFieldCell"; placeholderString = "Search"; ObjectID = "425";</string>
+							<key>key</key>
+							<string>425.placeholderString</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Search</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSSegmentedCell"; 426.ibShadowedLabels[0] = "Active"; ObjectID = "426";</string>
+							<key>key</key>
+							<string>426.ibShadowedLabels[0]</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Active</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSSegmentedCell"; 426.ibShadowedLabels[1] = "Not Active"; ObjectID = "426";</string>
+							<key>key</key>
+							<string>426.ibShadowedLabels[1]</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Not Active</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSSegmentedCell"; 427.ibShadowedLabels[0] = "Updated"; ObjectID = "427";</string>
+							<key>key</key>
+							<string>427.ibShadowedLabels[0]</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Updated</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSSegmentedCell"; 427.ibShadowedLabels[1] = "Not Updated"; ObjectID = "427";</string>
+							<key>key</key>
+							<string>427.ibShadowedLabels[1]</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Not Updated</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSTextFieldCell"; title = "Language:"; ObjectID = "429";</string>
+							<key>key</key>
+							<string>429.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Language:</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSButtonCell"; title = "Show removed strings"; ObjectID = "430";</string>
+							<key>key</key>
+							<string>430.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Show removed strings</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSButtonCell"; title = "Show empty strings"; ObjectID = "431";</string>
+							<key>key</key>
+							<string>431.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Show empty strings</string>
+							</dict>
+						</dict>
+						<dict>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Class = "NSButtonCell"; title = "Show comments"; ObjectID = "432";</string>
+							<key>key</key>
+							<string>432.title</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Show comments</string>
+							</dict>
+						</dict>
+					</array>
+					<key>old objects</key>
+					<array/>
+					<key>plist file</key>
+					<false/>
+				</dict>
+			</array>
+			<key>name</key>
+			<string>Manager/Interface</string>
+			<key>naming style</key>
+			<integer>1</integer>
+			<key>referencing style</key>
+			<integer>1</integer>
+			<key>user name</key>
+			<string>Interface</string>
+		</dict>
+	</array>
+	<key>languages</key>
+	<array>
+		<string>en</string>
+		<string>de</string>
+	</array>
+	<key>preferences</key>
+	<dict>
+		<key>XcodeAddMissingFiles</key>
+		<true/>
+		<key>XcodeFileLimit</key>
+		<real>75</real>
+		<key>XcodeHasFileLimit</key>
+		<true/>
+		<key>XcodeHasLanguageLimit</key>
+		<true/>
+		<key>XcodeLanguageLimit</key>
+		<real>90</real>
+		<key>XcodeRemoveNotMatchingFiles</key>
+		<false/>
+		<key>autotranslateNewStrings</key>
+		<false/>
+		<key>compressLocalizationFiles</key>
+		<false/>
+		<key>deactivateEmptyStrings</key>
+		<true/>
+		<key>deactivatePlaceholderStrings</key>
+		<true/>
+		<key>defaultBundleNaming</key>
+		<integer>1</integer>
+		<key>defaultBundleReferencing</key>
+		<integer>1</integer>
+		<key>embedDictionary</key>
+		<true/>
+		<key>embedDictionaryGuesses</key>
+		<false/>
+		<key>importEmptyStrings</key>
+		<true/>
+		<key>includeInterfacePreview</key>
+		<false/>
+		<key>markAutotranslatedAsNotChanged</key>
+		<true/>
+		<key>rescanXcodeProjects</key>
+		<false/>
+		<key>saveCompressed</key>
+		<false/>
+		<key>updateXcodeProjects</key>
+		<false/>
+		<key>valueChangesResetStrings</key>
+		<false/>
+	</dict>
+	<key>reference language</key>
+	<string>en</string>
+	<key>version</key>
+	<integer>6</integer>
+</dict>
+</plist>

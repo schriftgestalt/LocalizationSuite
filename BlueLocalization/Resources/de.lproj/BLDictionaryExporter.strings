@@ -1,0 +1,21 @@
+
+/* Class = "NSButtonCell"; title = "Normalize on language:"; ObjectID = "5"; */
+"5.title" = "Normalize on language:";
+
+/* Class = "NSButtonCell"; title = "Limit languages to selected ones"; ObjectID = "11"; */
+"11.title" = "Limit languages to selected ones";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "31"; */
+"31.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "32"; */
+"32.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "33"; */
+"33.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "34"; */
+"34.title" = "Item 3";
+
+/* Class = "NSTextFieldCell"; title = "German, English"; ObjectID = "36"; */
+"36.title" = "German, English";

@@ -224,6 +224,18 @@
 		56320EB0230EBFA0002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resources/Base.lproj/LIPreviewWindow.xib; sourceTree = "<group>"; };
 		56320EB1230EBFA0002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resources/Base.lproj/LIProcessDisplay.xib; sourceTree = "<group>"; };
 		56320EB2230EBFA0002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resources/Base.lproj/LIStatusDisplay.xib; sourceTree = "<group>"; };
+		56AEB2CF273BCB60008F3EAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/LIContent.strings; sourceTree = "<group>"; };
+		56AEB2D1273BCB61008F3EAE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/LIContent.strings; sourceTree = "<group>"; };
+		56AEB2D2273BCB63008F3EAE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/LIContent.strings; sourceTree = "<group>"; };
+		56AEB2D4273BCB64008F3EAE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/LIContent.strings; sourceTree = "<group>"; };
+		56AEB2DE273BCB95008F3EAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/LIProcessDisplay.strings; sourceTree = "<group>"; };
+		56AEB2E0273BCB95008F3EAE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/LIProcessDisplay.strings; sourceTree = "<group>"; };
+		56AEB2E2273BCB96008F3EAE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/LIProcessDisplay.strings; sourceTree = "<group>"; };
+		56AEB2E4273BCB96008F3EAE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/LIProcessDisplay.strings; sourceTree = "<group>"; };
+		56AEB2E6273BCBA5008F3EAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/LIStatusDisplay.strings; sourceTree = "<group>"; };
+		56AEB2E8273BCBA5008F3EAE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/LIStatusDisplay.strings; sourceTree = "<group>"; };
+		56AEB2EA273BCBA5008F3EAE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/LIStatusDisplay.strings; sourceTree = "<group>"; };
+		56AEB2EC273BCBA6008F3EAE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/LIStatusDisplay.strings; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* LocInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -611,7 +623,6 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Localization Suite";
 			};
@@ -749,6 +760,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				56320EAB230EBF9F002A5878 /* Base */,
+				56AEB2CF273BCB60008F3EAE /* en */,
+				56AEB2D1273BCB61008F3EAE /* fr */,
+				56AEB2D2273BCB63008F3EAE /* de */,
+				56AEB2D4273BCB64008F3EAE /* ja */,
 			);
 			name = LIContent.xib;
 			sourceTree = "<group>";
@@ -789,6 +804,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				56320EB1230EBFA0002A5878 /* Base */,
+				56AEB2DE273BCB95008F3EAE /* en */,
+				56AEB2E0273BCB95008F3EAE /* fr */,
+				56AEB2E2273BCB96008F3EAE /* de */,
+				56AEB2E4273BCB96008F3EAE /* ja */,
 			);
 			name = LIProcessDisplay.xib;
 			sourceTree = "<group>";
@@ -805,6 +824,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				56320EB2230EBFA0002A5878 /* Base */,
+				56AEB2E6273BCBA5008F3EAE /* en */,
+				56AEB2E8273BCBA5008F3EAE /* fr */,
+				56AEB2EA273BCBA5008F3EAE /* de */,
+				56AEB2EC273BCBA6008F3EAE /* ja */,
 			);
 			name = LIStatusDisplay.xib;
 			sourceTree = "<group>";

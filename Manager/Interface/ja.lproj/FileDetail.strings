@@ -1,0 +1,111 @@
+
+/* Class = "NSWindow"; title = "File"; ObjectID = "5"; */
+"5.title" = "File";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Select a new Location for this File, if it was moved externally. Adds the old Bundle and Path to File History."; ObjectID = "11"; */
+"11.ibShadowedToolTip" = "Select a new Location for this File, if it was moved externally. Adds the old Bundle and Path to File History.";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{title1}@/%{title2}@"; ObjectID = "49"; */
+"49.ibShadowedDisplayPattern" = "%{title1}@/%{title2}@";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{title1}@/%{title2}@"; ObjectID = "52"; */
+"52.ibShadowedDisplayPattern" = "%{title1}@/%{title2}@";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedIsNilPlaceholder = "Same Folder as Localization Database"; ObjectID = "87"; */
+"87.ibShadowedIsNilPlaceholder" = "Same Folder as Localization Database";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Move and/or Rename this File. Adds the old Bundle and Path to File History."; ObjectID = "88"; */
+"88.ibShadowedToolTip" = "Move and/or Rename this File. Adds the old Bundle and Path to File History.";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "286"; */
+"286.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "287"; */
+"287.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "288"; */
+"288.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "289"; */
+"289.title" = "Radio";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedDisplayPattern = "%{value1}@ keys"; ObjectID = "309"; */
+"309.ibShadowedDisplayPattern" = "%{value1}@ keys";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Reveals this File in Finder."; ObjectID = "466"; */
+"466.ibShadowedToolTip" = "Reveals this File in Finder.";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "471"; */
+"471.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "472"; */
+"472.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "473"; */
+"473.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "474"; */
+"474.title" = "Item1";
+
+/* Class = "CocoaBindingsConnection"; ibShadowedIsNilPlaceholder = "<none>"; ObjectID = "489"; */
+"489.ibShadowedIsNilPlaceholder" = "<none>";
+
+/* Class = "NSTextFieldCell"; title = "Full Path:"; ObjectID = "557"; */
+"557.title" = "Full Path:";
+
+/* Class = "NSButtonCell"; title = "Choose…"; ObjectID = "558"; */
+"558.title" = "Choose…";
+
+/* Class = "NSTextFieldCell"; title = "somepath"; ObjectID = "559"; */
+"559.title" = "somepath";
+
+/* Class = "NSTextFieldCell"; title = "Statistics:"; ObjectID = "560"; */
+"560.title" = "Statistics:";
+
+/* Class = "NSTextFieldCell"; title = "Activity:"; ObjectID = "561"; */
+"561.title" = "Activity:";
+
+/* Class = "NSButtonCell"; title = "Include in Localizer files"; ObjectID = "562"; */
+"562.title" = "Include in Localizer files";
+
+/* Class = "NSTextFieldCell"; title = "2000 keys"; ObjectID = "563"; */
+"563.title" = "2000 keys";
+
+/* Class = "NSButtonCell"; title = "Move…"; ObjectID = "564"; */
+"564.title" = "Move…";
+
+/* Class = "NSTextFieldCell"; title = "Referencing Path:"; ObjectID = "565"; */
+"565.title" = "Referencing Path:";
+
+/* Class = "NSTextFieldCell"; title = "somepath"; ObjectID = "566"; */
+"566.title" = "somepath";
+
+/* Class = "NSTextFieldCell"; title = "Changes:"; ObjectID = "567"; */
+"567.title" = "Changes:";
+
+/* Class = "NSTextFieldCell"; title = "somename"; ObjectID = "570"; */
+"570.title" = "somename";
+
+/* Class = "NSTextFieldCell"; title = "Bundle:"; ObjectID = "571"; */
+"571.title" = "Bundle:";
+
+/* Class = "NSButtonCell"; title = "Reveal"; ObjectID = "572"; */
+"572.title" = "Reveal";
+
+/* Class = "NSTextFieldCell"; title = "File type:"; ObjectID = "573"; */
+"573.title" = "File type:";
+
+/* Class = "NSTextFieldCell"; title = "{current error}"; ObjectID = "575"; */
+"575.title" = "{current error}";
+
+/* Class = "NSTextFieldCell"; title = "Current errors:"; ObjectID = "576"; */
+"576.title" = "Current errors:";
+
+/* Class = "NSTextFieldCell"; title = "{file format info}"; ObjectID = "577"; */
+"577.title" = "{file format info}";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "578"; */
+"578.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Reference file"; ObjectID = "585"; */
+"585.title" = "Reference file";

@@ -1,0 +1,6 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "If enabled, rich text (RTF) strings will not be filtered from the exported file(s)."; ObjectID = "4"; */
+"4.ibShadowedToolTip" = "If enabled, rich text (RTF) strings will not be filtered from the exported file(s).";
+
+/* Class = "NSButtonCell"; title = "Include rich text (RTF) values"; ObjectID = "5"; */
+"5.title" = "Include rich text (RTF) values";

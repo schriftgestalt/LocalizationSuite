@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "File"; ObjectID = "5"; */
+"5.title" = "File";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "92"; */
+"92.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "93"; */
+"93.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "94"; */
+"94.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "95"; */
+"95.title" = "Item1";
+
+/* Class = "NSTextFieldCell"; title = "Mark as:"; ObjectID = "424"; */
+"424.title" = "Mark as:";
+
+/* Class = "NSSearchFieldCell"; placeholderString = "Search"; ObjectID = "425"; */
+"425.placeholderString" = "Search";
+
+/* Class = "NSSegmentedCell"; 426.ibShadowedLabels[0] = "Active"; ObjectID = "426"; */
+"426.ibShadowedLabels[0]" = "Active";
+
+/* Class = "NSSegmentedCell"; 426.ibShadowedLabels[1] = "Not Active"; ObjectID = "426"; */
+"426.ibShadowedLabels[1]" = "Not Active";
+
+/* Class = "NSSegmentedCell"; 427.ibShadowedLabels[0] = "Updated"; ObjectID = "427"; */
+"427.ibShadowedLabels[0]" = "Updated";
+
+/* Class = "NSSegmentedCell"; 427.ibShadowedLabels[1] = "Not Updated"; ObjectID = "427"; */
+"427.ibShadowedLabels[1]" = "Not Updated";
+
+/* Class = "NSTextFieldCell"; title = "Language:"; ObjectID = "429"; */
+"429.title" = "Language:";
+
+/* Class = "NSButtonCell"; title = "Show removed strings"; ObjectID = "430"; */
+"430.title" = "Show removed strings";
+
+/* Class = "NSButtonCell"; title = "Show empty strings"; ObjectID = "431"; */
+"431.title" = "Show empty strings";
+
+/* Class = "NSButtonCell"; title = "Show comments"; ObjectID = "432"; */
+"432.title" = "Show comments";
