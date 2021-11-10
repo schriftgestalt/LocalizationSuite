@@ -24,14 +24,6 @@
 		5031E63E0F43625800A0DA35 /* FileContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5031E61B0F43625800A0DA35 /* FileContent.m */; };
 		5031E6410F43625800A0DA35 /* LanguageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5031E6220F43625800A0DA35 /* LanguageObject.m */; };
 		503B3E4C1195974000884CB7 /* FilteredBundleProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B3E4B1195974000884CB7 /* FilteredBundleProxy.m */; };
-		504E098D13005776006B5F4B /* BlueLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E098C13005776006B5F4B /* BlueLocalization.framework */; };
-		504E098E1300578B006B5F4B /* BlueLocalization.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E098C13005776006B5F4B /* BlueLocalization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		504E0992130057AB006B5F4B /* NibPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E098F130057AB006B5F4B /* NibPreview.framework */; };
-		504E0993130057AB006B5F4B /* LocTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E0990130057AB006B5F4B /* LocTools.framework */; };
-		504E0994130057AB006B5F4B /* LocInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E0991130057AB006B5F4B /* LocInterface.framework */; };
-		504E0995130057B1006B5F4B /* NibPreview.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E098F130057AB006B5F4B /* NibPreview.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		504E0996130057B1006B5F4B /* LocTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E0990130057AB006B5F4B /* LocTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		504E0997130057B1006B5F4B /* LocInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E0991130057AB006B5F4B /* LocInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5052607405D5C3C200429FDF /* Localization Manager.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5052607305D5C3C200429FDF /* Localization Manager.icns */; };
 		506E805710566762005BAB74 /* MultiActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 506E805610566762005BAB74 /* MultiActionButton.m */; };
 		506E81721057BCE5005BAB74 /* MultiActionWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 506E81711057BCE5005BAB74 /* MultiActionWindow.m */; };
@@ -55,9 +47,83 @@
 		50D111FF0FB85023006FCF8C /* loc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 50D111FC0FB85023006FCF8C /* loc.icns */; };
 		50E8D83108C9C8B2003F43C3 /* TableHeaders.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50E8D82F08C9C8B2003F43C3 /* TableHeaders.strings */; };
 		56528DB12459F20C0030395E /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C3D10A0FC37358005AEF1A /* Sparkle.framework */; };
+		56AEB26F273B2E81008F3EAE /* NibPreview.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56AEB24E273B2E57008F3EAE /* NibPreview.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56AEB270273B2E88008F3EAE /* BlueLocalization.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56AEB26A273B2E70008F3EAE /* BlueLocalization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56AEB271273B2E90008F3EAE /* LocTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56AEB260273B2E68008F3EAE /* LocTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56AEB272273B2E9A008F3EAE /* LocInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56AEB257273B2E5F008F3EAE /* LocInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56AEB273273B2FB2008F3EAE /* BlueLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AEB26A273B2E70008F3EAE /* BlueLocalization.framework */; };
+		56AEB274273B2FB2008F3EAE /* LocInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AEB257273B2E5F008F3EAE /* LocInterface.framework */; };
+		56AEB275273B2FB2008F3EAE /* LocTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AEB260273B2E68008F3EAE /* LocTools.framework */; };
+		56AEB276273B2FB2008F3EAE /* NibPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AEB24E273B2E57008F3EAE /* NibPreview.framework */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56AEB24D273B2E57008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB248273B2E57008F3EAE /* NibPreview.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 50CE95AD0F5BC41500026BB5;
+			remoteInfo = NibPreview;
+		};
+		56AEB24F273B2E57008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB248273B2E57008F3EAE /* NibPreview.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 503E127D1404DA30009FA279;
+			remoteInfo = "NibPreview Tests";
+		};
+		56AEB256273B2E5F008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB251273B2E5F008F3EAE /* LocInterface.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = LocInterface;
+		};
+		56AEB258273B2E5F008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB251273B2E5F008F3EAE /* LocInterface.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 50F209B60F88DA5900751057;
+			remoteInfo = InterfaceTester;
+		};
+		56AEB25F273B2E68008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB25A273B2E68008F3EAE /* LocTools.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = LocTools;
+		};
+		56AEB261273B2E68008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB25A273B2E68008F3EAE /* LocTools.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 503E12591404D62E009FA279;
+			remoteInfo = "LocTools Tests";
+		};
+		56AEB269273B2E70008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB263273B2E6F008F3EAE /* BlueLocalization.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = BlueLocalization;
+		};
+		56AEB26B273B2E70008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB263273B2E6F008F3EAE /* BlueLocalization.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5054D2C71404D04900434EAC;
+			remoteInfo = "BlueLocalization Tests";
+		};
+		56AEB26D273B2E70008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB263273B2E6F008F3EAE /* BlueLocalization.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 507F05B51404E3A00008D824;
+			remoteInfo = TestHost;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		50F03C780FA63C6100FDB765 /* CopyFiles */ = {
@@ -66,11 +132,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				504E0995130057B1006B5F4B /* NibPreview.framework in CopyFiles */,
-				504E0996130057B1006B5F4B /* LocTools.framework in CopyFiles */,
-				504E0997130057B1006B5F4B /* LocInterface.framework in CopyFiles */,
+				56AEB272273B2E9A008F3EAE /* LocInterface.framework in CopyFiles */,
+				56AEB271273B2E90008F3EAE /* LocTools.framework in CopyFiles */,
+				56AEB270273B2E88008F3EAE /* BlueLocalization.framework in CopyFiles */,
+				56AEB26F273B2E81008F3EAE /* NibPreview.framework in CopyFiles */,
 				50C3D1140FC37361005AEF1A /* Sparkle.framework in CopyFiles */,
-				504E098E1300578B006B5F4B /* BlueLocalization.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,10 +176,6 @@
 		5031E6220F43625800A0DA35 /* LanguageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageObject.m; sourceTree = "<group>"; };
 		503B3E4A1195974000884CB7 /* FilteredBundleProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilteredBundleProxy.h; sourceTree = "<group>"; };
 		503B3E4B1195974000884CB7 /* FilteredBundleProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilteredBundleProxy.m; sourceTree = "<group>"; };
-		504E098C13005776006B5F4B /* BlueLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BlueLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		504E098F130057AB006B5F4B /* NibPreview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NibPreview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		504E0990130057AB006B5F4B /* LocTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LocTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		504E0991130057AB006B5F4B /* LocInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LocInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5052607305D5C3C200429FDF /* Localization Manager.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "Localization Manager.icns"; path = "Icons/Localization Manager.icns"; sourceTree = "<group>"; };
 		506E805510566762005BAB74 /* MultiActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiActionButton.h; sourceTree = "<group>"; };
 		506E805610566762005BAB74 /* MultiActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiActionButton.m; sourceTree = "<group>"; };
@@ -143,6 +205,10 @@
 		56320E98230EBF83002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Interface/Base.lproj/FileDetail.xib; sourceTree = "<group>"; };
 		56320E99230EBF83002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Interface/Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		56320E9A230EBF83002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Interface/Base.lproj/Preferences.xib; sourceTree = "<group>"; };
+		56AEB248273B2E57008F3EAE /* NibPreview.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NibPreview.xcodeproj; path = ../NibPreview/NibPreview.xcodeproj; sourceTree = "<group>"; };
+		56AEB251273B2E5F008F3EAE /* LocInterface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LocInterface.xcodeproj; path = ../LocInterface/LocInterface.xcodeproj; sourceTree = "<group>"; };
+		56AEB25A273B2E68008F3EAE /* LocTools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LocTools.xcodeproj; path = ../LocTools/LocTools.xcodeproj; sourceTree = "<group>"; };
+		56AEB263273B2E6F008F3EAE /* BlueLocalization.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlueLocalization.xcodeproj; path = ../BlueLocalization/BlueLocalization.xcodeproj; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* Localization Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Localization Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -152,13 +218,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56AEB273273B2FB2008F3EAE /* BlueLocalization.framework in Frameworks */,
+				56AEB274273B2FB2008F3EAE /* LocInterface.framework in Frameworks */,
+				56AEB275273B2FB2008F3EAE /* LocTools.framework in Frameworks */,
+				56AEB276273B2FB2008F3EAE /* NibPreview.framework in Frameworks */,
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
 				56528DB12459F20C0030395E /* Sparkle.framework in Frameworks */,
 				501193F31152936600E54DF2 /* Quartz.framework in Frameworks */,
-				504E098D13005776006B5F4B /* BlueLocalization.framework in Frameworks */,
-				504E0992130057AB006B5F4B /* NibPreview.framework in Frameworks */,
-				504E0993130057AB006B5F4B /* LocTools.framework in Frameworks */,
-				504E0994130057AB006B5F4B /* LocInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,10 +296,10 @@
 				501193F21152936600E54DF2 /* Quartz.framework */,
 				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
 				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
-				504E098C13005776006B5F4B /* BlueLocalization.framework */,
-				504E098F130057AB006B5F4B /* NibPreview.framework */,
-				504E0990130057AB006B5F4B /* LocTools.framework */,
-				504E0991130057AB006B5F4B /* LocInterface.framework */,
+				56AEB263273B2E6F008F3EAE /* BlueLocalization.xcodeproj */,
+				56AEB248273B2E57008F3EAE /* NibPreview.xcodeproj */,
+				56AEB25A273B2E68008F3EAE /* LocTools.xcodeproj */,
+				56AEB251273B2E5F008F3EAE /* LocInterface.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -366,6 +432,43 @@
 			name = Interface;
 			sourceTree = "<group>";
 		};
+		56AEB249273B2E57008F3EAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56AEB24E273B2E57008F3EAE /* NibPreview.framework */,
+				56AEB250273B2E57008F3EAE /* NibPreview Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56AEB252273B2E5F008F3EAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56AEB257273B2E5F008F3EAE /* LocInterface.framework */,
+				56AEB259273B2E5F008F3EAE /* InterfaceTester.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56AEB25B273B2E68008F3EAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56AEB260273B2E68008F3EAE /* LocTools.framework */,
+				56AEB262273B2E68008F3EAE /* LocTools Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56AEB264273B2E6F008F3EAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56AEB26A273B2E70008F3EAE /* BlueLocalization.framework */,
+				56AEB26C273B2E70008F3EAE /* BlueLocalization Tests.octest */,
+				56AEB26E273B2E70008F3EAE /* TestHost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -394,7 +497,6 @@
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Localization Suite";
 				TargetAttributes = {
@@ -417,12 +519,96 @@
 			);
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* Localization Manager */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 56AEB264273B2E6F008F3EAE /* Products */;
+					ProjectRef = 56AEB263273B2E6F008F3EAE /* BlueLocalization.xcodeproj */;
+				},
+				{
+					ProductGroup = 56AEB252273B2E5F008F3EAE /* Products */;
+					ProjectRef = 56AEB251273B2E5F008F3EAE /* LocInterface.xcodeproj */;
+				},
+				{
+					ProductGroup = 56AEB25B273B2E68008F3EAE /* Products */;
+					ProjectRef = 56AEB25A273B2E68008F3EAE /* LocTools.xcodeproj */;
+				},
+				{
+					ProductGroup = 56AEB249273B2E57008F3EAE /* Products */;
+					ProjectRef = 56AEB248273B2E57008F3EAE /* NibPreview.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D15AC270486D014006FF6A4 /* LocalizationManager */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		56AEB24E273B2E57008F3EAE /* NibPreview.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NibPreview.framework;
+			remoteRef = 56AEB24D273B2E57008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB250273B2E57008F3EAE /* NibPreview Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "NibPreview Tests.octest";
+			remoteRef = 56AEB24F273B2E57008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB257273B2E5F008F3EAE /* LocInterface.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LocInterface.framework;
+			remoteRef = 56AEB256273B2E5F008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB259273B2E5F008F3EAE /* InterfaceTester.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = InterfaceTester.app;
+			remoteRef = 56AEB258273B2E5F008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB260273B2E68008F3EAE /* LocTools.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LocTools.framework;
+			remoteRef = 56AEB25F273B2E68008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB262273B2E68008F3EAE /* LocTools Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "LocTools Tests.octest";
+			remoteRef = 56AEB261273B2E68008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB26A273B2E70008F3EAE /* BlueLocalization.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BlueLocalization.framework;
+			remoteRef = 56AEB269273B2E70008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB26C273B2E70008F3EAE /* BlueLocalization Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "BlueLocalization Tests.octest";
+			remoteRef = 56AEB26B273B2E70008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB26E273B2E70008F3EAE /* TestHost.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TestHost.app;
+			remoteRef = 56AEB26D273B2E70008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D15AC2B0486D014006FF6A4 /* Resources */ = {
