@@ -2,12 +2,12 @@
  @header
  BLLocalizerFile.m
  Created by Max on 29.11.04.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
-#import "BLFileInternal.h"
 #import "BLLocalizerFile.h"
+#import "BLFileInternal.h"
 
 NSString *BLLocalizerFilePathExtension = @"loc";
 NSString *BLLocalizerFileContentsFileName = @"Contents.plist";
@@ -19,7 +19,7 @@ NSString *BLDictionaryPropertyName = @"dictionary";
 
 /*!
  @abstract Version History
- 
+
  Version 1:		Transition form arbitrary language names to standardized language identifiers.
  Version 2:		Drops support for non-bundle (file) localizer files, includes preview files for all kind of files.
  Version 3:		Adds support for embedded dictionaries.

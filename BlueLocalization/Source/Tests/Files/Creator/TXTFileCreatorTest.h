@@ -8,11 +8,10 @@
 
 //  Logic unit tests contain unit test code that is designed to be linked into an independent test executable.
 
-@interface TXTFileCreatorTest : SenTestCase
-{
-	BLFileCreator		*creator;
-	BLFileInterpreter	*interpreter;
-	NSString			*tmpRootPath;
+@interface TXTFileCreatorTest : SenTestCase {
+	BLFileCreator *creator;
+	BLFileInterpreter *interpreter;
+	NSString *tmpRootPath;
 }
 
 @end

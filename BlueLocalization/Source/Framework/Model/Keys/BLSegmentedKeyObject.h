@@ -2,7 +2,7 @@
  @header
  BLSegmentedKeyObject.h
  Created by Max on 17.02.10.
- 
+
  @copyright 2010 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -11,12 +11,11 @@
 /*!
  @abstract A transparent class that adds segmentation to key objects.
  */
-@interface BLSegmentedKeyObject : BLKeyObject
-{
-	NSArray				*_delimiters;
-	NSMutableDictionary	*_languages;
-	NSArray				*_keyObjects;
-	BLKeyObject			*_original;
+@interface BLSegmentedKeyObject : BLKeyObject {
+	NSArray *_delimiters;
+	NSMutableDictionary *_languages;
+	NSArray *_keyObjects;
+	BLKeyObject *_original;
 }
 
 /*!

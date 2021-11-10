@@ -11,7 +11,6 @@
 #import "Document.h"
 #import "GSStringToAttributedValueTransformer.h"
 
-
 @implementation Controller
 
 #pragma mark - Setup

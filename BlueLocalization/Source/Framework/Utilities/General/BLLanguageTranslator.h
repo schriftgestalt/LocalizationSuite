@@ -2,7 +2,7 @@
  @header
  BLLanguageTranslator.h
  Created by Max Seelemann on 04.08.06.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -63,7 +63,6 @@
 
 @end
 
-
 /*!
  @abstract Additons to NSString by BLLanguageTranslator.
  */
@@ -73,17 +72,15 @@
  @abstract Convenience method treating the string as a language and returning it's description.
  @discussion Basically this is just a forward to -descriptionForLanguage: of BLLanguageTranslator.
  */
-@property(readonly) NSString *languageDescription;
+@property (readonly) NSString *languageDescription;
 
 /*!
  @abstract Convenience method treating the string as a language and returning it's identifier.
  @discussion Basically this is just a forward to -identifierForLanguage: of BLLanguageTranslator.
  */
-@property(readonly) NSString *languageIdentifier;
+@property (readonly) NSString *languageIdentifier;
 
 @end
-
-
 
 /*!
  @abstract The registered names of the value transformers with which it can be used in bindings.
@@ -98,7 +95,6 @@ extern NSString *BLLanguageIdentifierValueTransformerName;
  */
 @interface BLLanguageValueTransformer : NSValueTransformer
 
-@property(nonatomic) BOOL isReversed;
+@property (nonatomic) BOOL isReversed;
 
 @end
-

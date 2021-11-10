@@ -53,8 +53,8 @@
 
 - (void)beginSheetModalForWindow:(NSWindow *)window completionHandler:(NSAlertSheetCompletionHandler)completionHandler;
 {
-    _NSAlertSheetCompletionHandlerRunner *runner = [[_NSAlertSheetCompletionHandlerRunner alloc] initWithAlert:self completionHandler:completionHandler];
-    [runner startOnWindow:window];
+	_NSAlertSheetCompletionHandlerRunner *runner = [[_NSAlertSheetCompletionHandlerRunner alloc] initWithAlert:self completionHandler:completionHandler];
+	[runner startOnWindow:window];
 }
 
 @end

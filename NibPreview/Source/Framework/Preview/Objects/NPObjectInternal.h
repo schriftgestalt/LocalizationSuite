@@ -2,7 +2,7 @@
  @header
  NPObjectInternal.h
  Created by max on 09.03.10.
- 
+
  @copyright 2010 Localization Suite. All rights reserved.
  */
 

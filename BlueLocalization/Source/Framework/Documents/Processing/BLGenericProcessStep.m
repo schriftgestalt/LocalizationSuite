@@ -8,35 +8,30 @@
 
 #import "BLGenericProcessStep.h"
 
-
 @interface BLGenericProcessStep ()
 
 - (id)initWithBlock:(BLGenericBlock)block;
 
 @end
 
-
 @implementation BLGenericProcessStep
 
-+ (id)genericStepWithBlock:(BLGenericBlock)block
-{
-	return [[self alloc] initWithBlock: block];
++ (id)genericStepWithBlock:(BLGenericBlock)block {
+	return [[self alloc] initWithBlock:block];
 }
 
-- (id)initWithBlock:(BLGenericBlock)block
-{
+- (id)initWithBlock:(BLGenericBlock)block {
 	self = [super init];
-	
+
 	if (self) {
-		self.action = NSLocalizedStringFromTableInBundle(@"Processing", @"BLProcessStep", [NSBundle bundleForClass: [self class]], nil);
+		self.action = NSLocalizedStringFromTableInBundle(@"Processing", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil);
 		_block = [block copy];
 	}
-	
+
 	return self;
 }
 
-- (void)perform
-{
+- (void)perform {
 	_block();
 }
 

@@ -2,7 +2,7 @@
  @header
  BLDocument.h
  Created by Max Seelemann on 07.05.10.
- 
+
  @copyright 2010 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -26,26 +26,24 @@ extern NSString *BLDocumentLastSavePathKey;
  */
 extern NSString *BLDocumentOpenFolderKey;
 
-
 @class BLDocumentPreferences;
 
 /*!
  @abstract Abstract base class for all concrete document classes in BlueLocalization framework.
  @discussion Features a abstract dummy implementation of BLDocumentProtocol and customizes the way the documents are written to disk.
  */
-@interface BLDocument : NSDocument <BLDocumentProtocol>
-{
-    NSMutableDictionary		*_preferences;
-    NSMutableDictionary		*_userPreferences;
-	
-	BLDocumentPreferences	*_preferencesProxy;
+@interface BLDocument : NSDocument <BLDocumentProtocol> {
+	NSMutableDictionary *_preferences;
+	NSMutableDictionary *_userPreferences;
+
+	BLDocumentPreferences *_preferencesProxy;
 }
 
 /*!
  @abstract Settings of the user that affect the working of some methods.
  @discussion This will actually return a proxy object that automatically splits between project and user settings.
  */
-@property(weak, readonly) NSMutableDictionary *preferences;
+@property (weak, readonly) NSMutableDictionary *preferences;
 
 /*!
  @abstract The default settings when creating a new document.

@@ -2,7 +2,7 @@
  @header
  BLArrayExtensions.h
  Created by Max on 11.12.05.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 

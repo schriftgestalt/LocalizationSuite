@@ -6,12 +6,10 @@
 //  Copyright 2009 Blue Technologies Group. All rights reserved.
 //
 
-
-@interface MultipleKeyMatcherTest : SenTestCase
-{
-	id						delegate;
-	NSMutableArray			*keyObjects;
-	LTMultipleKeyMatcher	*matcher;
+@interface MultipleKeyMatcherTest : SenTestCase {
+	id delegate;
+	NSMutableArray *keyObjects;
+	LTMultipleKeyMatcher *matcher;
 }
 
 @end

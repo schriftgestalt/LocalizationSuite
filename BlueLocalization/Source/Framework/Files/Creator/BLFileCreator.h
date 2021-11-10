@@ -2,7 +2,7 @@
  @header
  BLFileCreator.h
  Created by Max on 29.11.04.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -12,7 +12,7 @@
 /*!
  @enum BLFileCreator options
  @abstract The flags that can be set for the BLFileCreator's options.
- 
+
  @const BLFileCreatorNoOptions					Setting options to this constant will disable all options.
  @const BLFileCreatorReinject					If set, files will be recreated freshly from the reference language.
  @const BLFileCreatorWriteActiveKeysOnly		If set, only active keys will be written. Inactive keys will be simply omitted.
@@ -23,22 +23,21 @@
  @const BLFileCreatorSlaveMode					File creator is used by a other creator and might adjust it's behavior, like not print any warnings.
  */
 enum {
-	BLFileCreatorNoOptions					= 0,
-	
-	BLFileCreatorReinject					= 1<<0,
-	BLFileCreatorWriteActiveKeysOnly		= 1<<1,
-	BLFileCreatorInactiveKeysAsReference	= 1<<2,
-	
-	BLFileCreatorSlaveMode					= 1<<10
+	BLFileCreatorNoOptions = 0,
+
+	BLFileCreatorReinject = 1 << 0,
+	BLFileCreatorWriteActiveKeysOnly = 1 << 1,
+	BLFileCreatorInactiveKeysAsReference = 1 << 2,
+
+	BLFileCreatorSlaveMode = 1 << 10
 };
 
 /*!
  @abstract The primitive abstract superclass for all file creations.
  @discussion A file creator is a one-shot object. You have it created, set it up and use it - afterwards it is gone. Subclasses should override the _writeFileToPath:fromObject:withLanguage:referenceLanguage: method to actually do the heavy lifting.
- */ 
-@interface BLFileCreator : NSObject
-{
-	NSUInteger	_options;
+ */
+@interface BLFileCreator : NSObject {
+	NSUInteger _options;
 }
 
 /*!
@@ -100,10 +99,9 @@ enum {
 /*!
  @abstract Writes a file object to a given path.
  @discussion Creates a new file at the given path, taking localization data from object for language language, replacing missing values with the values of the reference language. The reference language might have bigger influence on the final result than just replacing missing data. The reference file might be used and just modified to create a localized variant.
- @return YES if the file was successfully created, NO otherwise. 
+ @return YES if the file was successfully created, NO otherwise.
  */
 - (BOOL)writeFileToPath:(NSString *)path fromObject:(BLFileObject *)object withLanguage:(NSString *)language referenceLanguage:(NSString *)reference;
-
 
 @end
 
@@ -125,4 +123,3 @@ enum {
 - (BOOL)_writeFileToPath:(NSString *)path fromObject:(BLFileObject *)object withLanguage:(NSString *)language referenceLanguage:(NSString *)reference;
 
 @end
-

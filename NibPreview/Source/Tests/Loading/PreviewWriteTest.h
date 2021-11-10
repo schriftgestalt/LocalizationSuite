@@ -6,12 +6,11 @@
 //  Copyright 2010 The Soulmen. All rights reserved.
 //
 
-@interface PreviewWriteTest : SenTestCase
-{
-	BLFileObject	*fileObject;
-	NPPreview		*preview;
-	NSString		*outPath;
-	NSString		*srcPath;
+@interface PreviewWriteTest : SenTestCase {
+	BLFileObject *fileObject;
+	NPPreview *preview;
+	NSString *outPath;
+	NSString *srcPath;
 }
 
 @end

@@ -2,7 +2,7 @@
  @header
  BLXcodeExportUpdateStep.h
  Created by max on 24.11.10.
- 
+
  @copyright 2004-2010 the Localization Suite Foundation. All rights reserved.
  */
 

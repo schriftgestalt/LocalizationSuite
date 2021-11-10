@@ -2,7 +2,7 @@
  @header
  BLDatabaseDocumentActions.h
  Created by Max Seelemann on 28.04.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -24,7 +24,6 @@
  @discussion Will be read from the resource file BLDefaultPlaceholders.plist.
  */
 + (NSArray *)defaultIgnoredPlaceholderStrings;
-
 
 /*!
  @abstract Returns a file object with the given path, adding it if none with that path exists.
@@ -70,7 +69,6 @@
  */
 - (BLFileObject *)createFileObjectWithPath:(NSString *)path;
 
-
 /*!
  @abstract Rescan the reference language and import any changes.
  @discussion This will spawn a new action to the process manager, first evaluating the amount of work to do and then importing any changed files.
@@ -88,7 +86,7 @@
 /*!
  @abstract Add the given files to the database.
  @discussion This will spawn a new action to the process manager: first all reference language files will be imported, adding files and bundles as neccessary. Second all other languages will be imported, adding localization values only.
- 
+
  Developer note: This action is safe to be used inside other actions. It enqueues the actions for immediate execution before every other enqueued step.
  */
 - (void)addFiles:(NSArray *)filenames;
@@ -123,4 +121,3 @@
 - (void)importLocalizerFiles:(NSArray *)files withOptions:(NSUInteger)options;
 
 @end
-

@@ -6,23 +6,21 @@
 //  Copyright 2005 The Blue Technologies Group. All rights reserved.
 //
 
+@interface Document : BLDictionaryDocument {
+	IBOutlet LIContentController *content;
+	IBOutlet NSPanel *filterSettingsPanel;
 
-@interface Document : BLDictionaryDocument
-{
-	IBOutlet LIContentController	*content;
-	IBOutlet NSPanel				*filterSettingsPanel;
-
-	NSMutableDictionary	*_viewOptions;
-	LIProcessDisplay	*_processDisplay;
-	BLKeyObject			*_selectedObject;
+	NSMutableDictionary *_viewOptions;
+	LIProcessDisplay *_processDisplay;
+	BLKeyObject *_selectedObject;
 }
 
-@property(strong) NSDictionary *viewOptions;
-@property(strong) BLKeyObject *selectedObject;
+@property (strong) NSDictionary *viewOptions;
+@property (strong) BLKeyObject *selectedObject;
 
 - (NSString *)filterDescription;
 
-//Actions
+// Actions
 - (IBAction)selectNext:(id)sender;
 - (IBAction)selectPrevious:(id)sender;
 - (IBAction)addKey:(id)sender;

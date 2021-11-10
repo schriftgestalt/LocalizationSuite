@@ -6,8 +6,7 @@
 //  Copyright 2009 Localization Suite. All rights reserved.
 //
 
-@interface BundleLoaderTest : SenTestCase
-{
+@interface BundleLoaderTest : SenTestCase {
 }
 
 @end

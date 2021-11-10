@@ -2,22 +2,21 @@
  @header
  BLLocalizerDocument.h
  Created by Max Seelemann on 28.05.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
-#import <BlueLocalization/BLDocument.h>
 #import <BlueLocalization/BLDictionaryDocument.h>
+#import <BlueLocalization/BLDocument.h>
 
 /*!
  @abstract A basic localizer storage document that does all the data handling but has no interface support whatsoever.
  @discussion This document basically acts as read-only version. Which means, changes to data like localizations can be made, but no root properties (like bundles, languages, etc) should be changed. To add user interaction or other custom functionality, override this class.
  */
-@interface BLLocalizerDocument : BLDocument
-{
-    NSArray				*_bundles;
-	BLProcessManager	*_processManager;
-	NSDictionary		*_properties;
+@interface BLLocalizerDocument : BLDocument {
+	NSArray *_bundles;
+	BLProcessManager *_processManager;
+	NSDictionary *_properties;
 }
 
 /*!

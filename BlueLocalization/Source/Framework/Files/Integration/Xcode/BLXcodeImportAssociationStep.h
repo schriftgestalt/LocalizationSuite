@@ -2,7 +2,7 @@
  @header
  BLXcodeImportAssociationStep.h
  Created by max on 23.11.10.
- 
+
  @copyright 2004-2010 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -12,11 +12,10 @@
  @abstract Internal class used by BLXcodeImporter to set the associated Xcode projects after importing the files.
  @discussion Do not use directly, use BLXcodeImporter instead!
  */
-@interface BLXcodeImportAssociationStep : BLProcessStep
-{
-	BLDatabaseDocument	*_document;
-	NSArray				*_files;
-	NSString			*_path;
+@interface BLXcodeImportAssociationStep : BLProcessStep {
+	BLDatabaseDocument *_document;
+	NSArray *_files;
+	NSString *_path;
 }
 
 /*!

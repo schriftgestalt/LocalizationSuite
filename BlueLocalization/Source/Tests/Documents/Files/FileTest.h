@@ -6,12 +6,11 @@
 //  Copyright 2010 The Soulmen. All rights reserved.
 //
 
-@interface FileTest : SenTestCase
-{
-	BLBundleObject	*bundle;
-	BLFileObject	*file;
-	NSString		*path;
-	NSString		*tmpPath;
+@interface FileTest : SenTestCase {
+	BLBundleObject *bundle;
+	BLFileObject *file;
+	NSString *path;
+	NSString *tmpPath;
 }
 
 @end

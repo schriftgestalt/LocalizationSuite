@@ -2,7 +2,7 @@
  @header
  LIHighlightTextFieldCell.m
  Created by max on 27.08.09.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
@@ -21,57 +21,53 @@
 
 @end
 
-
 @implementation LIHighlightTextFieldCell
 
-@synthesize highlightedString=_highlight;
+@synthesize highlightedString = _highlight;
 
-- (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
-{
+- (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
 	id value = [self objectValue];
-	
+
 	if ([_highlight length])
-		[self setObjectValue: [self highlightTermInObject: value]];
+		[self setObjectValue:[self highlightTermInObject:value]];
 	[super drawInteriorWithFrame:cellFrame inView:controlView];
-	
-	[self setObjectValue: value];
+
+	[self setObjectValue:value];
 }
 
-- (id)highlightTermInObject:(id)object
-{
+- (id)highlightTermInObject:(id)object {
 	NSMutableAttributedString *attrString;
 	NSString *string;
 	NSRange range;
-	
+
 	// Extract string if needed
-	if ([object isKindOfClass: [NSAttributedString class]])
+	if ([object isKindOfClass:[NSAttributedString class]])
 		object = [object string];
-	if (![object isKindOfClass: [NSString class]])
+	if (![object isKindOfClass:[NSString class]])
 		return nil;
 	string = object;
-	
+
 	// Get range
-	range = [string rangeOfString:_highlight options:NSCaseInsensitiveSearch|NSLiteralSearch];
+	range = [string rangeOfString:_highlight options:NSCaseInsensitiveSearch | NSLiteralSearch];
 	if (range.length == 0)
 		return object;
-	
+
 	// Convert object
-	if ([object isKindOfClass: [NSAttributedString class]])
-		attrString = [[NSMutableAttributedString alloc] initWithAttributedString: object];
+	if ([object isKindOfClass:[NSAttributedString class]])
+		attrString = [[NSMutableAttributedString alloc] initWithAttributedString:object];
 	else
-		attrString = [[NSMutableAttributedString alloc] initWithString: string];
-	
+		attrString = [[NSMutableAttributedString alloc] initWithString:string];
+
 	// Get all ranges and add attributes
 	do {
-		[attrString addAttribute:NSBackgroundColorAttributeName value:[NSColor colorWithDeviceRed:242./255. green:225./255. blue:77./255. alpha:1.0] range:range];
-		
+		[attrString addAttribute:NSBackgroundColorAttributeName value:[NSColor colorWithDeviceRed:242. / 255. green:225. / 255. blue:77. / 255. alpha:1.0] range:range];
+
 		// Find next
 		range.location = NSMaxRange(range);
 		range.length = [string length] - range.location;
 		range = [string rangeOfString:_highlight options:NSCaseInsensitiveSearch range:range];
-	}
-	while (range.location != NSNotFound);
-	
+	} while (range.location != NSNotFound);
+
 	return attrString;
 }
 

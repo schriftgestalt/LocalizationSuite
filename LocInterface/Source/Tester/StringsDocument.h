@@ -6,15 +6,13 @@
 //  Copyright 2009 Localization Suite. All rights reserved.
 //
 
+@interface StringsDocument : NSDocument {
+	IBOutlet LIContentController *contentController;
+	IBOutlet NSView *contentView;
 
-@interface StringsDocument : NSDocument
-{
-	IBOutlet LIContentController	*contentController;
-	IBOutlet NSView					*contentView;
-	
-	BLFileObject	*_file;
+	BLFileObject *_file;
 }
 
-@property(readonly) NSArray *content;
+@property (readonly) NSArray *content;
 
 @end

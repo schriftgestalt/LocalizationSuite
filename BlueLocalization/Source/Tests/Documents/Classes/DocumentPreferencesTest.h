@@ -8,9 +8,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-
-@interface DocumentPreferencesTest : SenTestCase
-{
+@interface DocumentPreferencesTest : SenTestCase {
 	BLDocument *document;
 	NSMutableDictionary *preferences;
 	NSDictionary *userPrefs;

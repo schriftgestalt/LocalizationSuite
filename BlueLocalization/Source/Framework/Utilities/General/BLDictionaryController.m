@@ -2,16 +2,14 @@
  @header
  BLDictionaryController.m
  Created by max on 16.08.06.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
 #import "BLDictionaryController.h"
 
-
-NSString *LTDictionaryControllerDictionaryURLsKey	= @"LTDictionaryControllerDictionaryURLs";
-NSString *LTDictionaryControllerUseDocumentsKey		= @"LTDictionaryControllerUseDocuments";
-
+NSString *LTDictionaryControllerDictionaryURLsKey = @"LTDictionaryControllerDictionaryURLs";
+NSString *LTDictionaryControllerUseDocumentsKey = @"LTDictionaryControllerUseDocuments";
 
 /*!
  @abstract Internal methods of LTDictionaryController
@@ -43,123 +41,107 @@ NSString *LTDictionaryControllerUseDocumentsKey		= @"LTDictionaryControllerUseDo
 
 @end
 
-
-
 @implementation BLDictionaryController
 
 id __sharedDictionaryController = nil;
 
-- (id)init
-{
+- (id)init {
 	self = [super init];
-	
+
 	_dictionaries = [[NSMutableArray alloc] init];
 	_documents = [[NSMutableArray alloc] init];
 	_keys = [[NSMutableArray alloc] init];
 	_useDocuments = NO;
-	
+
 	__sharedDictionaryController = self;
-	
+
 	[self loadSettings];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillTerminate:) name:NSApplicationWillTerminateNotification object:NSApp];
-	
+
 	return self;
 }
 
-- (void)dealloc
-{
-	
+- (void)dealloc {
+
 	__sharedDictionaryController = nil;
-	
 }
 
-+ (id)sharedInstance
-{
++ (id)sharedInstance {
 	if (!__sharedDictionaryController)
 		__sharedDictionaryController = [[self alloc] init];
-	
+
 	return __sharedDictionaryController;
 }
 
-
 #pragma mark - Persistent Settings
 
-- (void)loadSettings
-{
+- (void)loadSettings {
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	
-	[self registerDictionariesAtPathURLs: [defaults objectForKey: LTDictionaryControllerDictionaryURLsKey]];
-	[self setUseDocuments: [defaults boolForKey: LTDictionaryControllerUseDocumentsKey]];
+
+	[self registerDictionariesAtPathURLs:[defaults objectForKey:LTDictionaryControllerDictionaryURLsKey]];
+	[self setUseDocuments:[defaults boolForKey:LTDictionaryControllerUseDocumentsKey]];
 }
 
-- (void)applicationWillTerminate:(NSNotification *)notification
-{
+- (void)applicationWillTerminate:(NSNotification *)notification {
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	
-	[defaults setObject:[_dictionaries valueForKeyPath: @"fileURL.absoluteString"] forKey:LTDictionaryControllerDictionaryURLsKey];
+
+	[defaults setObject:[_dictionaries valueForKeyPath:@"fileURL.absoluteString"] forKey:LTDictionaryControllerDictionaryURLsKey];
 	[defaults setBool:[self useDocuments] forKey:LTDictionaryControllerUseDocumentsKey];
 }
 
-
 #pragma mark - Keys
 
-- (NSArray *)availableKeys
-{
-	return [NSArray arrayWithArray: _keys];
+- (NSArray *)availableKeys {
+	return [NSArray arrayWithArray:_keys];
 }
 
-- (void)updateKeys
-{	
+- (void)updateKeys {
 	// Clean up
-	[self willChangeValueForKey: @"availableKeys"];
+	[self willChangeValueForKey:@"availableKeys"];
 	[_keys removeAllObjects];
-	
+
 	// Add the dictionary keys
 	for (BLDictionaryDocument *dict in _dictionaries)
-		[_keys addObjectsFromArray: [dict keys]];
-	
+		[_keys addObjectsFromArray:[dict keys]];
+
 	// Add the document keys
 	for (BLLocalizerDocument *doc in _documents) {
-		if ([doc respondsToSelector: @selector(embeddedDictionary)])
-			[_keys addObjectsFromArray: [[doc embeddedDictionary] keys]];
+		if ([doc respondsToSelector:@selector(embeddedDictionary)])
+			[_keys addObjectsFromArray:[[doc embeddedDictionary] keys]];
 		if (_useDocuments)
-			[_keys addObjectsFromArray: [BLObject keyObjectsFromArray: [doc bundles]]];
+			[_keys addObjectsFromArray:[BLObject keyObjectsFromArray:[doc bundles]]];
 	}
-	
+
 	// Notify
-	[self didChangeValueForKey: @"availableKeys"];
+	[self didChangeValueForKey:@"availableKeys"];
 }
 
 #pragma mark - Dictionaries
 
-- (NSArray *)loadedDictionaries
-{
+- (NSArray *)loadedDictionaries {
 	return _dictionaries;
 }
 
-- (void)registerDictionaryAtURL:(NSURL *)url
-{
-	[self registerDictionariesAtURLs: [NSArray arrayWithObject: url]];
+- (void)registerDictionaryAtURL:(NSURL *)url {
+	[self registerDictionariesAtURLs:[NSArray arrayWithObject:url]];
 }
 
-- (void)registerDictionariesAtPathURLs:(NSArray *)paths
-{
+- (void)registerDictionariesAtPathURLs:(NSArray *)paths {
 	NSMutableArray *urls;
-	
-	urls = [NSMutableArray arrayWithCapacity: [paths count]];
+
+	urls = [NSMutableArray arrayWithCapacity:[paths count]];
 	for (NSString *path in paths)
-		[urls addObject: [NSURL URLWithString: path]];
-	
-	[self registerDictionariesAtURLs: urls];
+		[urls addObject:[NSURL URLWithString:path]];
+
+	[self registerDictionariesAtURLs:urls];
 }
 
-- (void)registerDictionariesAtURLs:(NSArray *)urls
-{
+- (void)registerDictionariesAtURLs:(NSArray *)urls {
 	BLDictionaryDocument *document;
 	NSError *error = nil;
-	
-	[self willChangeValueForKey: @"loadedDictionaries"];
-	
+
+	[self willChangeValueForKey:@"loadedDictionaries"];
+
 	for (NSURL *url in urls) {
 		// Try to open the dictionary
 		document = [[BLDictionaryDocument alloc] initWithContentsOfURL:url ofType:nil error:&error];
@@ -167,67 +149,60 @@ id __sharedDictionaryController = nil;
 			BLLog(BLLogError, [error localizedDescription]);
 			continue;
 		}
-		
-		[_dictionaries addObject: document];
+
+		[_dictionaries addObject:document];
 	}
-	
-	[self didChangeValueForKey: @"loadedDictionaries"];
-	
+
+	[self didChangeValueForKey:@"loadedDictionaries"];
+
 	// Update the keys
 	[self updateKeys];
 }
 
-- (void)unregisterDictionary:(BLDictionaryDocument *)aDocument
-{
-	[self willChangeValueForKey: @"loadedDictionaries"];
-	[_dictionaries removeObject: aDocument];
-	[self didChangeValueForKey: @"loadedDictionaries"];
-	
+- (void)unregisterDictionary:(BLDictionaryDocument *)aDocument {
+	[self willChangeValueForKey:@"loadedDictionaries"];
+	[_dictionaries removeObject:aDocument];
+	[self didChangeValueForKey:@"loadedDictionaries"];
+
 	[self updateKeys];
 }
 
-
 #pragma mark - Documents
 
-- (BOOL)useDocuments
-{
+- (BOOL)useDocuments {
 	return _useDocuments;
 }
 
-- (void)setUseDocuments:(BOOL)flag
-{
+- (void)setUseDocuments:(BOOL)flag {
 	if (_useDocuments != flag) {
 		_useDocuments = flag;
 		[self updateKeys];
 	}
 }
 
-- (NSArray *)loadedDocuments
-{
+- (NSArray *)loadedDocuments {
 	return _documents;
 }
 
-- (void)registerDocument:(id)aDocument
-{
-	if (![aDocument conformsToProtocol: @protocol(BLDocumentProtocol)] || ![aDocument respondsToSelector: @selector(bundles)])
+- (void)registerDocument:(id)aDocument {
+	if (![aDocument conformsToProtocol:@protocol(BLDocumentProtocol)] || ![aDocument respondsToSelector:@selector(bundles)])
 		[NSException raise:NSInternalInconsistencyException format:@"Passed document %@ does not qualify! Check documentation.", aDocument];
-	
-	if (![_documents containsObject: aDocument]) {
-		[self willChangeValueForKey: @"loadedDocuments"];
-		[_documents addObject: aDocument];
-		[self didChangeValueForKey: @"loadedDocuments"];
-		
+
+	if (![_documents containsObject:aDocument]) {
+		[self willChangeValueForKey:@"loadedDocuments"];
+		[_documents addObject:aDocument];
+		[self didChangeValueForKey:@"loadedDocuments"];
+
 		[self updateKeys];
 	}
 }
 
-- (void)unregisterDocument:(id)aDocument
-{
-	if ([_documents containsObject: aDocument]) {
-		[self willChangeValueForKey: @"loadedDocuments"];
-		[_documents removeObject: aDocument];
-		[self didChangeValueForKey: @"loadedDocuments"];
-		
+- (void)unregisterDocument:(id)aDocument {
+	if ([_documents containsObject:aDocument]) {
+		[self willChangeValueForKey:@"loadedDocuments"];
+		[_documents removeObject:aDocument];
+		[self didChangeValueForKey:@"loadedDocuments"];
+
 		[self updateKeys];
 	}
 }

@@ -321,7 +321,7 @@ NSString *kStringsPathExtension = @"strings";
 
 - (void)updateChangeCount:(NSDocumentChangeType)change {
 	[super updateChangeCount:change];
-	[languageCoordinator updateStatus];
+	[self->languageCoordinator updateStatus];
 }
 
 - (void)languageChanged:(NSString *)language {

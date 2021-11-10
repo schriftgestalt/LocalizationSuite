@@ -2,7 +2,7 @@
  @header
  BLPathCreator.h
  Created by Max on 14.11.04.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -17,16 +17,15 @@ extern NSString *BLLanguageFolderPathExtension;
 /*!
  @abstract An object that transfroms paths, but mainly creates the paths needed to access the files referenced by a document.
  @discussion Here will follow several definitions that will be used in the following method descriptions.
- 
+
  <b>Language Name</b>: Depending on the namingStyle property of a bundle, the name of a language is the name of the language's ".lproj" folder in the given bundle. Example: Given the brazilian portuguese langauge, in the short naming style the name would be "pt_BR". In the long naming style it would be "Brazilian Portuguese". However, these long names are not only discouraged but also more unspecific. Therefore, in the mixed naming style, long names which contain either spaces (" ") or underscores ("_") are abbreviated to identifiers. In the case of brazillian portuguese, the short identifier would be used.
- 
+
  <b>File Path</b>: A file path basically consists of three parts: the bundle portion, the language folder and the file portion. The bundle path is just the path to the folder which contains the .lproj folders, the relative file path is the path of the file inside this .lproj folder (and therefor most of the time just a single path component). Note that the language folder name is not contained in both paths. This is because when giving a language, the folder name can be generated.
- 
+
  <b>Bundle Path</b>: The bundle path is the bundle portion of a file path. All objects in BlueLocalization are organized with a bundle as root, it is the major splitting of projects. However, when not contained in a file path, the bundle path can come in two flavours. Either it is relative or absolute. The latter one is always the case woth file paths. The first one is a standard relative path as seen from the document it belongs to.
  */
-@interface BLPathCreator : NSObject
-{
-    NSDocument<BLDocumentProtocol> *_document;
+@interface BLPathCreator : NSObject {
+	NSDocument<BLDocumentProtocol> *_document;
 }
 
 /*!
@@ -34,7 +33,6 @@ extern NSString *BLLanguageFolderPathExtension;
  @discussion Use this method if you want to return a path creator for a BLDocumentProtocol object.
  */
 - (id)initWithDocument:(NSDocument<BLDocumentProtocol> *)document;
-
 
 /*!
  @abstract Returns the language of a path.
@@ -64,7 +62,7 @@ extern NSString *BLLanguageFolderPathExtension;
  @abstract Replaces the occurence of a language in a path with another language.
  @discussion This method tries to find an occurrence of the given old language, using both its identifier and description. If one is found, it is replaced with the new languages name as set in the bundle settings. See languageNameForLanguage:inBundle: for more details. See class description for details about paths.
  */
-+ (NSString *)replaceLanguage:(NSString *)oldLanguage inPath:(NSString *)path withLanguage:(NSString *)newLanguage bundle:(BLBundleObject *)bundle; 
++ (NSString *)replaceLanguage:(NSString *)oldLanguage inPath:(NSString *)path withLanguage:(NSString *)newLanguage bundle:(BLBundleObject *)bundle;
 
 /*!
  @abstract Returns the bundle file path portion of a full path.
@@ -89,7 +87,6 @@ extern NSString *BLLanguageFolderPathExtension;
  @discussion Returns the full path that would result if the relative path "relPath" was traversed originating at "fromPath".
  */
 + (NSString *)fullPathWithRelativePath:(NSString *)relPath fromPath:(NSString *)fromPath;
-
 
 /*!
  @abstract Returns the absolute path of a bundle.

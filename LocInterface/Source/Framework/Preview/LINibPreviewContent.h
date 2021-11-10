@@ -2,7 +2,7 @@
  @header
  LINibPreviewContent.h
  Created by max on 06.04.09.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 

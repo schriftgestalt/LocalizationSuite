@@ -2,15 +2,14 @@
  @header
  NPBundleLoader.h
  Created by max on 09.03.09.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
 /*!
  @abstract Loads all bundles in Interface Builder's (IB) default path.
  */
-@interface NPBundleLoader : NSObject
-{
+@interface NPBundleLoader : NSObject {
 }
 
 /*!

@@ -2,7 +2,7 @@
  @header
  BLFileInternal.h
  Created by Max Seelemann on 24.01.10.
- 
+
  @copyright 2004-2010 the Localization Suite Foundation. All rights reserved.
  */
 

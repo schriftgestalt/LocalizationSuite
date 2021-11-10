@@ -2,7 +2,7 @@
  @header
  BLStringsDictionary.h
  Created by Max on 10.08.05.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -59,4 +59,3 @@
 - (BOOL)writeToPath:(NSString *)path mimicingFileAtPath:(NSString *)original;
 
 @end
-

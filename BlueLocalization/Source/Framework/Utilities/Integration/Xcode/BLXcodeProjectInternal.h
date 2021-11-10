@@ -2,7 +2,7 @@
  @header
  BLXcodeProjectInternal.h
  Created by max on 02.07.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -36,9 +36,8 @@ extern NSString *BLXcodeProjectFileTypeRTF;
 extern NSString *BLXcodeProjectFileTypeStrings;
 extern NSString *BLXcodeProjectFileTypeXib;
 
-
 /*!
- @abstract Internal methods of BLXcodeProjectParser. 
+ @abstract Internal methods of BLXcodeProjectParser.
  */
 @interface BLXcodeProjectParser ()
 
@@ -123,4 +122,3 @@ extern NSString *BLXcodeProjectFileTypeXib;
 - (NSMutableDictionary *)dictionary;
 
 @end
-

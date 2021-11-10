@@ -2,7 +2,7 @@
  @header
  NPObjectInterfaceExtensions.h
  Created by max on 06.08.09.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 

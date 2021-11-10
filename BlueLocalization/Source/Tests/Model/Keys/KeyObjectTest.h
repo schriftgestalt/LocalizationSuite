@@ -6,9 +6,7 @@
 //  Copyright 2009 The Soulmen. All rights reserved.
 //
 
-
-@interface KeyObjectTest : SenTestCase
-{
+@interface KeyObjectTest : SenTestCase {
 }
 
 @end

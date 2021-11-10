@@ -2,7 +2,7 @@
  @header
  BLDatabaseDocument.h
  Created by Max Seelemann on 28.04.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -14,14 +14,13 @@
  @abstract A basic database storage document that does all the data handling but has no interface support whatsoever.
  @discussion To add user interaction or other custom functionality, override this class.
  */
-@interface BLDatabaseDocument : BLDocument
-{
-    BLPathCreator       *_pathCreator;
-	BLProcessManager	*_processManager;
-	
-    NSArray				*_bundles;
-    NSArray				*_languages;
-    NSString            *_referenceLanguage;
+@interface BLDatabaseDocument : BLDocument {
+	BLPathCreator *_pathCreator;
+	BLProcessManager *_processManager;
+
+	NSArray *_bundles;
+	NSArray *_languages;
+	NSString *_referenceLanguage;
 }
 
 /*!
@@ -37,7 +36,7 @@
 /*!
  @abstract The bundle objects of the document.
  */
-@property(strong) NSArray *bundles;
+@property (strong) NSArray *bundles;
 
 /*!
  @abstract Add the bundle to the document.
@@ -53,7 +52,7 @@
 /*!
  @abstract The languages contained in the document.
  */
-@property(strong) NSArray *languages;
+@property (strong) NSArray *languages;
 
 /*!
  @abstract Add the given language.
@@ -73,6 +72,6 @@
  If no reference language is set, this method returns the defualt reference language, namely @"en".
  When setting, only the language will be changed, no data is affected. However, there is a huge difference in changing the reference language. This method will also add the language to the languages array if it is not yet contained in the document.
  */
-@property(strong) NSString *referenceLanguage;
+@property (strong) NSString *referenceLanguage;
 
 @end

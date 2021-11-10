@@ -8,9 +8,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-
-@interface SegmentedKeyObjectTest : SenTestCase
-{
+@interface SegmentedKeyObjectTest : SenTestCase {
 }
 
 @end

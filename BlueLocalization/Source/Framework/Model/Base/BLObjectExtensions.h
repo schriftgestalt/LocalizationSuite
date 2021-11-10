@@ -2,7 +2,7 @@
  @header
  BLObjectExtensions.h
  Created by max on 27.02.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -87,7 +87,7 @@
 
 /*!
  @abstract Types of counters for the statistics methods.
- 
+
  @const BLObjectStatisticsSentences		Count the number of sentences in a set of key objects.
  @const BLObjectStatisticsWords			Count the number of words in a set of key objects.
  @const BLObjectStatisticsCharacters	Count the number of characters including whitespace in a set of key objects.
@@ -97,7 +97,6 @@ typedef enum {
 	BLObjectStatisticsWords,
 	BLObjectStatisticsCharacters
 } BLObjectStatisticsType;
-
 
 /*!
  @abstract Convenience to countForStatistic:forLanguage: for an array of objects.
@@ -112,5 +111,3 @@ typedef enum {
 - (NSUInteger)countForStatistic:(BLObjectStatisticsType)type forLanguage:(NSString *)language;
 
 @end
-
-

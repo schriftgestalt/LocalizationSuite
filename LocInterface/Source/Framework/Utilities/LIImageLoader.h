@@ -2,7 +2,7 @@
  @header
  LIImageLoader.h
  Created by Max Seelemann on 19.05.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -21,8 +21,7 @@ extern NSString *LIWarningImageName;
 /*!
  @abstract Loads images and registers them as for a name, because they're often used or need to be cached.
  */
-@interface LIImageLoader : NSObject
-{
+@interface LIImageLoader : NSObject {
 }
 
 /*!

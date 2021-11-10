@@ -2,7 +2,7 @@
  @header
  LIPreviewContent.h
  Created by max on 05.04.09.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
@@ -10,13 +10,12 @@
  @abstract The content object for previewing. Abstract Class.
  @discussion These objects are responsible for loading and storing all data necessary for a preview, including creating the view in which it will be hosted.
  */
-@interface LIPreviewContent : NSObject
-{
-	id				_document;
-	BLFileObject	*_fileObject;
-	BLKeyObject		*_keyObject;
-	NSString		*_language;
-	NSString		*_referenceLanguage;
+@interface LIPreviewContent : NSObject {
+	id _document;
+	BLFileObject *_fileObject;
+	BLKeyObject *_keyObject;
+	NSString *_language;
+	NSString *_referenceLanguage;
 }
 
 /*!
@@ -35,7 +34,7 @@
  @abstract Creates a new preview content object for the given file object.
  @discussion Building a cache is highly recomended, as creating a preview may be quite time-consuming.
  */
-+ (LIPreviewContent *)contentWithFileObject:(BLFileObject *)object inDocument:(id <BLDocumentProtocol>)document;
++ (LIPreviewContent *)contentWithFileObject:(BLFileObject *)object inDocument:(id<BLDocumentProtocol>)document;
 
 /*!
  @abstract Designated Initializer.
@@ -47,18 +46,18 @@
  @abstract The file object whose contents are to be prepared for previewing.
  @discussion Must be set before loading the preview using -load. Should not be changed afterwards.
  */
-@property(strong) BLFileObject *fileObject;
+@property (strong) BLFileObject *fileObject;
 
 /*!
  @abstract The language in which the contents are to be prepared for previewing.
  */
-@property(strong) NSString *language;
+@property (strong) NSString *language;
 
 /*!
  @abstract The document the file object is hosted in. Required as the path creator gives the path to load.
  @discussion Must be set before loading the preview using -load. Should not be changed afterwards.
  */
-@property(strong) id <BLDocumentProtocol> document;
+@property (strong) id<BLDocumentProtocol> document;
 
 /*!
  @abstract Notifies the subclass when to load the preview.
@@ -96,7 +95,7 @@
  @abstract The key object that is currently focussed.
  @discussion Basically this should - if possible - move the passed key object into the user's focus (whatever this means in respect to the content). If, during setting the focus, the rootView needs to be changed, just do so but send a kvo message of it's change.
  */
-@property(strong) BLKeyObject *focussedKeyObject;
+@property (strong) BLKeyObject *focussedKeyObject;
 
 /*!
  @abstract The rectangle in which the focussed key object is visible.
@@ -111,5 +110,3 @@
 - (BLKeyObject *)keyObjectAtPoint:(NSPoint)point;
 
 @end
-
-

@@ -2,7 +2,7 @@
  @header
  BLObject.m
  Created by Max Seelemann on 24.07.06.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 

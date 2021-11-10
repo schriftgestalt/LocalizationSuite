@@ -2,7 +2,7 @@
  @header
  LICopyingOutlineView.h
  Created by Max Seelemann on 19.05.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -10,8 +10,7 @@
  @abstract A simple outline view that enables users to copy selected rows.
  @discussion This is done using an extension of the outline view delgate protocol, see LICopyingOutlineView for details.
  */
-@interface LICopyingOutlineView : NSOutlineView
-{
+@interface LICopyingOutlineView : NSOutlineView {
 }
 
 @end
@@ -28,4 +27,3 @@
 - (void)copySelectionInOutlineView:(NSOutlineView *)view toPasteboard:(NSPasteboard *)pasteboard;
 
 @end
-

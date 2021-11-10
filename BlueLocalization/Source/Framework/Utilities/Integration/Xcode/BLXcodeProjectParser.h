@@ -2,7 +2,7 @@
  @header
  BLXcodeProjectParser.h
  Created by max on 01.07.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -46,13 +46,13 @@
 
 /*!
  @abstract Returns whether the project has already been loaded or not.
- */	
-@property(readonly) BOOL projectIsLoaded;
+ */
+@property (readonly) BOOL projectIsLoaded;
 
 /*!
  @abstract Returns whether the project was modified after loading.
- */	
-@property(readonly) BOOL projectWasChanged;
+ */
+@property (readonly) BOOL projectWasChanged;
 
 /*!
  @abstract Writes the optionally changed project back to disk.
@@ -61,5 +61,3 @@
 - (BOOL)writeProject;
 
 @end
-
-

@@ -10,18 +10,18 @@
 
 NSString *LIStatusDisplayNibName = @"LIStatusDisplay";
 
-NSString *LIStatusDisplayVisibilityPreferencesKey	= @"LIStatusDisplayVsibility";
-NSString *LIStatusDisplayVisibilityInfoKey			= @"info";
-NSString *LIStatusDisplayVisibilityCountersKey		= @"counters";
-NSString *LIStatusDisplayVisibilityStatisticsKey	= @"statistics";
+NSString *LIStatusDisplayVisibilityPreferencesKey = @"LIStatusDisplayVsibility";
+NSString *LIStatusDisplayVisibilityInfoKey = @"info";
+NSString *LIStatusDisplayVisibilityCountersKey = @"counters";
+NSString *LIStatusDisplayVisibilityStatisticsKey = @"statistics";
 
 /*!
  @abstract Internal interface of LIStatusDisplay.
  */
 @interface LIStatusDisplay ()
 
-@property(nonatomic, readwrite, assign) BOOL isCalculatingStatistics;
-@property(nonatomic, readwrite, assign) NSUInteger statisticsCalculationProgress;
+@property (nonatomic, readwrite, assign) BOOL isCalculatingStatistics;
+@property (nonatomic, readwrite, assign) NSUInteger statisticsCalculationProgress;
 
 /*!
  @abstract Notification when statistics calculation is finished.
@@ -35,15 +35,13 @@ NSString *LIStatusDisplayVisibilityStatisticsKey	= @"statistics";
 
 @end
 
-
 @implementation LIStatusDisplay
 
 id __sharedStatusDisplay;
 
-- (id)init
-{
-    self = [super init];
-	
+- (id)init {
+	self = [super init];
+
 	_calculating = NO;
 	_calculationProgress = 0;
 	_currentResponder = nil;
@@ -51,225 +49,206 @@ id __sharedStatusDisplay;
 	_statistics = nil;
 	_selectionInfo = nil;
 	_visibility = [[NSMutableDictionary alloc] init];
-	
+
 	return self;
 }
 
-- (void)dealloc
-{
-	[[NSNotificationCenter defaultCenter] removeObserver: self];
-	
-	
-    __sharedStatusDisplay = nil;
-	
+- (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+
+	__sharedStatusDisplay = nil;
 }
 
-+ (id)statusDisplay
-{
-    if (!__sharedStatusDisplay)
-        __sharedStatusDisplay = [[self alloc] init];
-    
-    return __sharedStatusDisplay;
-}
++ (id)statusDisplay {
+	if (!__sharedStatusDisplay)
+		__sharedStatusDisplay = [[self alloc] init];
 
+	return __sharedStatusDisplay;
+}
 
 #pragma mark - Languages
 
-- (NSString *)firstLanguage
-{
+- (NSString *)firstLanguage {
 	NSArray *languages = nil;
-	if ([_currentResponder respondsToSelector: @selector(currentLanguages)])
+	if ([_currentResponder respondsToSelector:@selector(currentLanguages)])
 		languages = [_currentResponder currentLanguages];
 	if ([languages count] > 0)
-		return [languages objectAtIndex: 0];
+		return [languages objectAtIndex:0];
 	else
 		return nil;
 }
 
-+ (NSSet *)keyPathsForValuesAffectingFirstLanguage
-{
-	return [NSSet setWithObject: @"currentResponder"];
++ (NSSet *)keyPathsForValuesAffectingFirstLanguage {
+	return [NSSet setWithObject:@"currentResponder"];
 }
 
-- (NSString *)secondLanguage
-{
+- (NSString *)secondLanguage {
 	NSArray *languages = nil;
-	if ([_currentResponder respondsToSelector: @selector(currentLanguages)])
+	if ([_currentResponder respondsToSelector:@selector(currentLanguages)])
 		languages = [_currentResponder currentLanguages];
 	if ([languages count] > 1)
-		return [languages objectAtIndex: 1];
+		return [languages objectAtIndex:1];
 	else
 		return nil;
 }
 
-+ (NSSet *)keyPathsForValuesAffectingSecondLanguage
-{
-	return [NSSet setWithObject: @"currentResponder"];
++ (NSSet *)keyPathsForValuesAffectingSecondLanguage {
+	return [NSSet setWithObject:@"currentResponder"];
 }
-
 
 #pragma mark - Selection Info
 
-@synthesize selectionInfo=_selectionInfo;
+@synthesize selectionInfo = _selectionInfo;
 
-- (void)updateSelectionInfo
-{
-	
+- (void)updateSelectionInfo {
+
 	// Get the objects
 	NSArray *objects = nil;
-	if ([_currentResponder respondsToSelector: @selector(currentObjects)])
+	if ([_currentResponder respondsToSelector:@selector(currentObjects)])
 		objects = [_currentResponder currentObjects];
 	if (!objects) {
 		_selectionInfo = nil;
 		return;
 	}
-	
+
 	// Count
 	NSUInteger bundles = 0;
 	NSUInteger files = 0;
 	NSUInteger keys = 0;
-	
+
 	for (BLObject *object in objects) {
-		if ([object isKindOfClass: [BLBundleObject class]])
+		if ([object isKindOfClass:[BLBundleObject class]])
 			bundles++;
 	}
-	
-	files = [[BLObject fileObjectsFromArray: objects] count];
-	keys = [BLObject numberOfKeysInObjects: objects];
-	
+
+	files = [[BLObject fileObjectsFromArray:objects] count];
+	keys = [BLObject numberOfKeysInObjects:objects];
+
 	// Create info
 	_selectionInfo = [[NSDictionary alloc] initWithObjectsAndKeys:
-					  [NSNumber numberWithInt: bundles], @"bundles",
-					  [NSNumber numberWithInt: files], @"files",
-					  [NSNumber numberWithInt: keys], @"keys", nil];
+											   [NSNumber numberWithInt:bundles], @"bundles",
+											   [NSNumber numberWithInt:files], @"files",
+											   [NSNumber numberWithInt:keys], @"keys", nil];
 }
 
-+ (NSSet *)keyPathsForValuesAffectingSelectionInfo
-{
-	return [NSSet setWithObject: @"currentResponder"];
++ (NSSet *)keyPathsForValuesAffectingSelectionInfo {
+	return [NSSet setWithObject:@"currentResponder"];
 }
-
 
 #pragma mark - Counters
 
-@synthesize counters=_counters;
+@synthesize counters = _counters;
 
-+ (NSSet *)keyPathsForValuesAffectingCounters
-{
-	return [NSSet setWithObjects: @"currentResponder", @"firstLanguage", @"secondLanguage", nil];
++ (NSSet *)keyPathsForValuesAffectingCounters {
+	return [NSSet setWithObjects:@"currentResponder", @"firstLanguage", @"secondLanguage", nil];
 }
 
-- (void)updateCounters
-{
+- (void)updateCounters {
 	NSMutableDictionary *newCounters = [NSMutableDictionary dictionary];
 	NSString *language;
-	
+
 	// Get the objects
 	NSArray *objects = nil;
-	if ([_currentResponder respondsToSelector: @selector(currentObjects)])
+	if ([_currentResponder respondsToSelector:@selector(currentObjects)])
 		objects = [_currentResponder currentObjects];
 	if (!objects)
 		return;
-	
+
 	// First statistic
 	if ((language = self.firstLanguage)) {
 		NSDictionary *counter = [[NSDictionary alloc] initWithObjectsAndKeys:
-								 [NSNumber numberWithInteger: [BLObject countForStatistic:BLObjectStatisticsSentences forLanguage:language inObjects:objects]], @"sentences",
-								 [NSNumber numberWithInteger: [BLObject countForStatistic:BLObjectStatisticsWords forLanguage:language inObjects:objects]], @"words",
-								 [NSNumber numberWithInteger: [BLObject countForStatistic:BLObjectStatisticsCharacters forLanguage:language inObjects:objects]], @"characters",
-								 nil];
+														  [NSNumber numberWithInteger:[BLObject countForStatistic:BLObjectStatisticsSentences forLanguage:language inObjects:objects]], @"sentences",
+														  [NSNumber numberWithInteger:[BLObject countForStatistic:BLObjectStatisticsWords forLanguage:language inObjects:objects]], @"words",
+														  [NSNumber numberWithInteger:[BLObject countForStatistic:BLObjectStatisticsCharacters forLanguage:language inObjects:objects]], @"characters",
+														  nil];
 		[newCounters setObject:counter forKey:@"first"];
 	}
-	
+
 	// Second statistic
 	if ((language = self.secondLanguage)) {
 		NSDictionary *counter = [[NSDictionary alloc] initWithObjectsAndKeys:
-								 [NSNumber numberWithInteger: [BLObject countForStatistic:BLObjectStatisticsSentences forLanguage:language inObjects:objects]], @"sentences",
-								 [NSNumber numberWithInteger: [BLObject countForStatistic:BLObjectStatisticsWords forLanguage:language inObjects:objects]], @"words",
-								 [NSNumber numberWithInteger: [BLObject countForStatistic:BLObjectStatisticsCharacters forLanguage:language inObjects:objects]], @"characters",
-								 nil];
+														  [NSNumber numberWithInteger:[BLObject countForStatistic:BLObjectStatisticsSentences forLanguage:language inObjects:objects]], @"sentences",
+														  [NSNumber numberWithInteger:[BLObject countForStatistic:BLObjectStatisticsWords forLanguage:language inObjects:objects]], @"words",
+														  [NSNumber numberWithInteger:[BLObject countForStatistic:BLObjectStatisticsCharacters forLanguage:language inObjects:objects]], @"characters",
+														  nil];
 		[newCounters setObject:counter forKey:@"second"];
 	}
-	
+
 	// Update counters
 	_counters = newCounters;
 }
 
 #pragma mark - Statistics
 
-@synthesize statistics=_statistics;
-@synthesize isCalculatingStatistics=_calculating;
-@synthesize statisticsCalculationProgress=_calculationProgress;
+@synthesize statistics = _statistics;
+@synthesize isCalculatingStatistics = _calculating;
+@synthesize statisticsCalculationProgress = _calculationProgress;
 
-- (void)updateStatistics
-{
+- (void)updateStatistics {
 	// Abort any calculation
 	_abortCalculation = YES;
-	
+
 	// Update state
-	[self willChangeValueForKey: @"statistics"];
+	[self willChangeValueForKey:@"statistics"];
 	_statistics = nil;
-	[self didChangeValueForKey: @"statistics"];
+	[self didChangeValueForKey:@"statistics"];
 }
 
-- (IBAction)calculateStatistics:(id)sender
-{
+- (IBAction)calculateStatistics:(id)sender {
 	// Check languages
 	if (!self.firstLanguage || !self.secondLanguage) {
-		[self statisticsCalculationFinished: nil];
+		[self statisticsCalculationFinished:nil];
 		return;
 	}
-	
+
 	// Start calculation
 	self.statisticsCalculationProgress = 0;
 	self.isCalculatingStatistics = YES;
 	_abortCalculation = NO;
-	
+
 	NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
-							 [_currentResponder currentObjects], @"objects",
-							 self.firstLanguage, @"sourceLanguage", 
-							 self.secondLanguage, @"targetLanguage", nil];
+											  [_currentResponder currentObjects], @"objects",
+											  self.firstLanguage, @"sourceLanguage",
+											  self.secondLanguage, @"targetLanguage", nil];
 	[NSThread detachNewThreadSelector:@selector(calculateStatisticsThread:) toTarget:self withObject:options];
 }
 
-- (void)statisticsCalculationFinished:(NSDictionary *)newStatistics
-{
+- (void)statisticsCalculationFinished:(NSDictionary *)newStatistics {
 	// Update state
-	[self willChangeValueForKey: @"statistics"];
+	[self willChangeValueForKey:@"statistics"];
 	_statistics = newStatistics;
-	[self didChangeValueForKey: @"statistics"];
-	
+	[self didChangeValueForKey:@"statistics"];
+
 	self.isCalculatingStatistics = NO;
 	self.statisticsCalculationProgress = 0;
 }
 
-- (void)calculateStatisticsThread:(NSDictionary *)options
-{
+- (void)calculateStatisticsThread:(NSDictionary *)options {
 	@autoreleasepool {
 		// Init new statistics
 		NSMutableDictionary *newStats = [NSMutableDictionary dictionary];
 		[newStats setObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:
-							 [NSNumber numberWithInt: 0], @"translated",
-							 [NSNumber numberWithInt: 0], @"exact",
-							 [NSNumber numberWithInt: 0], @"above75",
-							 [NSNumber numberWithInt: 0], @"above50",
-							 [NSNumber numberWithInt: 0], @"noMatch",
-							 nil]
+													 [NSNumber numberWithInt:0], @"translated",
+													 [NSNumber numberWithInt:0], @"exact",
+													 [NSNumber numberWithInt:0], @"above75",
+													 [NSNumber numberWithInt:0], @"above50",
+													 [NSNumber numberWithInt:0], @"noMatch",
+													 nil]
 					 forKey:@"keys"];
-		[newStats setObject:[NSMutableDictionary dictionaryWithDictionary: [newStats objectForKey: @"keys"]] forKey:@"words"];
-		
+		[newStats setObject:[NSMutableDictionary dictionaryWithDictionary:[newStats objectForKey:@"keys"]] forKey:@"words"];
+
 		// Get objects
-		NSArray *objects = [options objectForKey: @"objects"];
-		objects = [objects objectsContainingValue:[NSNumber numberWithBool: YES] forKeyPath:@"isActive"];
-		objects = [BLObject keyObjectsFromArray: objects];
-		objects = [objects objectsContainingValue:[NSNumber numberWithBool: YES] forKeyPath:@"isActive"];
-		
-		NSString *sourceLang = [options objectForKey: @"sourceLanguage"];
-		NSString *targetLang = [options objectForKey: @"targetLanguage"];
-		
+		NSArray *objects = [options objectForKey:@"objects"];
+		objects = [objects objectsContainingValue:[NSNumber numberWithBool:YES] forKeyPath:@"isActive"];
+		objects = [BLObject keyObjectsFromArray:objects];
+		objects = [objects objectsContainingValue:[NSNumber numberWithBool:YES] forKeyPath:@"isActive"];
+
+		NSString *sourceLang = [options objectForKey:@"sourceLanguage"];
+		NSString *targetLang = [options objectForKey:@"targetLanguage"];
+
 		// Create the collector
 		LTKeyMatchCollector *collector = [LTKeyMatchCollector collector];
-		
+
 		// Set up matching engine
 		LTSingleKeyMatcher *matcher = [[LTSingleKeyMatcher alloc] init];
 		matcher.matchLanguage = sourceLang;
@@ -277,24 +256,24 @@ id __sharedStatusDisplay;
 		matcher.matchingKeyObjects = [[BLDictionaryController sharedInstance] availableKeys];
 		matcher.guessingIsEnabled = YES;
 		matcher.delegate = collector;
-		
+
 		// Process
 		NSUInteger done = 0;
 		for (BLKeyObject *keyObject in objects) {
 			@autoreleasepool {
 				NSString *statKey = nil;
-				
+
 				// Already translated objects
-				if (![keyObject isEmptyForLanguage: targetLang]) {
+				if (![keyObject isEmptyForLanguage:targetLang]) {
 					statKey = @"translated";
 				}
 				// Missing translation
 				else {
-					// Find matching keys 
+					// Find matching keys
 					matcher.targetKeyObject = keyObject;
 					[matcher start];
 					[matcher waitUntilFinished];
-					
+
 					// Find the match percentage
 					CGFloat matchPct = 0.0;
 					for (LTKeyMatch *match in [collector matches])
@@ -307,157 +286,146 @@ id __sharedStatusDisplay;
 						statKey = @"above50";
 					else
 						statKey = @"noMatch";
-					
+
 					// Reset the collector
 					[collector reset];
 				}
-				
+
 				// Update keys
-				NSNumber *keyCount = [[newStats objectForKey: @"keys"] objectForKey: statKey];
-				keyCount = [NSNumber numberWithInt: [keyCount intValue] + 1];
-				[[newStats objectForKey: @"keys"] setObject:keyCount forKey:statKey];
-				
+				NSNumber *keyCount = [[newStats objectForKey:@"keys"] objectForKey:statKey];
+				keyCount = [NSNumber numberWithInt:[keyCount intValue] + 1];
+				[[newStats objectForKey:@"keys"] setObject:keyCount forKey:statKey];
+
 				// Update Words
 				NSUInteger words = [keyObject countForStatistic:BLObjectStatisticsWords forLanguage:sourceLang];
-				
-				NSNumber *wordCount = [[newStats objectForKey: @"words"] objectForKey: statKey];
-				wordCount = [NSNumber numberWithInt: [wordCount intValue] + words];
-				[[newStats objectForKey: @"words"] setObject:wordCount forKey:statKey];
-				
+
+				NSNumber *wordCount = [[newStats objectForKey:@"words"] objectForKey:statKey];
+				wordCount = [NSNumber numberWithInt:[wordCount intValue] + words];
+				[[newStats objectForKey:@"words"] setObject:wordCount forKey:statKey];
+
 				// Update status
 				if (done % 10 == 0) {
 					NSUInteger progess = (done * 100) / [objects count];
-					[self performSelectorOnMainThread:@selector(statsCalculationProgress:) withObject:[NSNumber numberWithInt: progess] waitUntilDone:NO];
+					[self performSelectorOnMainThread:@selector(statsCalculationProgress:) withObject:[NSNumber numberWithInt:progess] waitUntilDone:NO];
 				}
-				
+
 				done++;
 			}
-			
+
 			if (_abortCalculation)
 				break;
 		}
-		
+
 		// Finished
 		[self performSelectorOnMainThread:@selector(statisticsCalculationFinished:)
 							   withObject:(_abortCalculation) ? nil : newStats
 							waitUntilDone:NO];
-		
 	}
 }
 
-- (void)statsCalculationProgress:(NSNumber *)number
-{
+- (void)statsCalculationProgress:(NSNumber *)number {
 	self.statisticsCalculationProgress = [number intValue];
 }
 
-
 #pragma mark - Interface
 
-- (void)loadPanel
-{
+- (void)loadPanel {
 	// Load Prefs
-	NSMutableDictionary *visi = [NSMutableDictionary dictionaryWithDictionary: [[NSUserDefaults standardUserDefaults] objectForKey: LIStatusDisplayVisibilityPreferencesKey]];
-	
-	if (![visi objectForKey: LIStatusDisplayVisibilityInfoKey])
-		[visi setObject:[NSNumber numberWithBool: YES] forKey:LIStatusDisplayVisibilityInfoKey];
-	if (![visi objectForKey: LIStatusDisplayVisibilityCountersKey])
-		[visi setObject:[NSNumber numberWithBool: YES] forKey:LIStatusDisplayVisibilityCountersKey];
-	if (![visi objectForKey: LIStatusDisplayVisibilityStatisticsKey])
-		[visi setObject:[NSNumber numberWithBool: NO] forKey:LIStatusDisplayVisibilityStatisticsKey];
-	
+	NSMutableDictionary *visi = [NSMutableDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:LIStatusDisplayVisibilityPreferencesKey]];
+
+	if (![visi objectForKey:LIStatusDisplayVisibilityInfoKey])
+		[visi setObject:[NSNumber numberWithBool:YES] forKey:LIStatusDisplayVisibilityInfoKey];
+	if (![visi objectForKey:LIStatusDisplayVisibilityCountersKey])
+		[visi setObject:[NSNumber numberWithBool:YES] forKey:LIStatusDisplayVisibilityCountersKey];
+	if (![visi objectForKey:LIStatusDisplayVisibilityStatisticsKey])
+		[visi setObject:[NSNumber numberWithBool:NO] forKey:LIStatusDisplayVisibilityStatisticsKey];
+
 	self.visibility = visi;
-	
+
 	// Load Panel
 	[NSBundle loadNibNamed:LIStatusDisplayNibName owner:self];
 }
 
-@synthesize visibility=_visibility;
+@synthesize visibility = _visibility;
 
-- (void)setVisibility:(NSDictionary *)newVisibility
-{
-	[_visibility setDictionary: newVisibility];
+- (void)setVisibility:(NSDictionary *)newVisibility {
+	[_visibility setDictionary:newVisibility];
 }
-
 
 #pragma mark - Actions, Delegates
 
-- (void)show
-{
+- (void)show {
 	if (!panel)
 		[self loadPanel];
-	
+
 	// Closing
 	if ([panel isKeyWindow]) {
 		[panel close];
 		return;
 	}
-	
+
 	// Opening
 	if (![panel isVisible]) {
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowDidBecomeMain:) name:NSWindowDidBecomeMainNotification object:nil];
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowDidResignMain:) name:NSWindowDidResignMainNotification object:nil];
-	
+
 		[[NSApp mainWindow] addObserver:self forKeyPath:@"firstResponder" options:NSKeyValueObservingOptionInitial context:@"firstResponder"];
 	}
-	
+
 	// Bring to front
-    [panel makeKeyAndOrderFront: self];
+	[panel makeKeyAndOrderFront:self];
 }
 
-- (void)windowWillClose:(NSNotification *)notification
-{
+- (void)windowWillClose:(NSNotification *)notification {
 	// Can only be statistics window
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowDidBecomeMainNotification object:nil];
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowDidResignMainNotification object:nil];
 	[[NSApp mainWindow] removeObserver:self forKeyPath:@"firstResponder"];
-	
+
 	// Save visibility
 	[[NSUserDefaults standardUserDefaults] setObject:_visibility forKey:LIStatusDisplayVisibilityPreferencesKey];
 }
 
-- (void)windowDidBecomeMain:(NSNotification *)notification
-{
+- (void)windowDidBecomeMain:(NSNotification *)notification {
 	[[notification object] addObserver:self forKeyPath:@"firstResponder" options:NSKeyValueObservingOptionInitial context:@"firstResponder"];
 }
 
-- (void)windowDidResignMain:(NSNotification *)notification
-{
+- (void)windowDidResignMain:(NSNotification *)notification {
 	[[notification object] removeObserver:self forKeyPath:@"firstResponder"];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if (context == @"firstResponder") {
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+	if (context == @"firstResponder") {
 		// Find the new current responder
 		id responder = [object firstResponder];
-		while (responder && ![responder conformsToProtocol: @protocol(LIStatusObjects)])
+		while (responder && ![responder conformsToProtocol:@protocol(LIStatusObjects)])
 			responder = [responder nextResponder];
-		
+
 		// Begin notify
-		[self willChangeValueForKey: @"currentResponder"];
-		
+		[self willChangeValueForKey:@"currentResponder"];
+
 		// Forget old responder
 		[_currentResponder removeObserver:self forKeyPath:@"currentObjects"];
-		
+
 		// Update responder
 		_currentResponder = responder;
 		[_currentResponder addObserver:self forKeyPath:@"currentObjects" options:0 context:@"currentObjects"];
-		
+
 		// Update counters
 		[self updateSelectionInfo];
 		[self updateCounters];
 		[self updateStatistics];
-		
+
 		// End notify
-		[self didChangeValueForKey: @"currentResponder"];
+		[self didChangeValueForKey:@"currentResponder"];
 	}
 	else if (context == @"currentObjects") {
 		// Just update statistics
-		[self willChangeValueForKey: @"currentResponder"];
+		[self willChangeValueForKey:@"currentResponder"];
 		[self updateSelectionInfo];
 		[self updateCounters];
 		[self updateStatistics];
-		[self didChangeValueForKey: @"currentResponder"];
+		[self didChangeValueForKey:@"currentResponder"];
 	}
 	else {
 		[super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
@@ -468,28 +436,23 @@ id __sharedStatusDisplay;
 
 @implementation NSTableView (LIStatusObjects)
 
-- (void)updateCurrentObjects
-{
-	[self willChangeValueForKey: @"currentObjects"];
-	[self didChangeValueForKey: @"currentObjects"];
+- (void)updateCurrentObjects {
+	[self willChangeValueForKey:@"currentObjects"];
+	[self didChangeValueForKey:@"currentObjects"];
 }
 
-- (NSArray *)currentObjects
-{
-	if ([[self delegate] respondsToSelector: @selector(currentObjectsInTableView:)])
-		return [(id)[self delegate] currentObjectsInTableView: self];
+- (NSArray *)currentObjects {
+	if ([[self delegate] respondsToSelector:@selector(currentObjectsInTableView:)])
+		return [(id)[self delegate] currentObjectsInTableView:self];
 	else
 		return nil;
 }
 
-- (NSArray *)currentLanguages
-{
-	if ([[self delegate] respondsToSelector: @selector(currentLanguagesInTableView:)])
-		return [(id)[self delegate] currentLanguagesInTableView: self];
+- (NSArray *)currentLanguages {
+	if ([[self delegate] respondsToSelector:@selector(currentLanguagesInTableView:)])
+		return [(id)[self delegate] currentLanguagesInTableView:self];
 	else
 		return nil;
 }
 
 @end
-
-

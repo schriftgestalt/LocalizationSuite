@@ -2,7 +2,7 @@
  @header
  BLNibConverterStep.h
  Created by Max on 07.05.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -13,10 +13,9 @@
 /*!
  @abstract A step that upgrades nib files to a newer format. Currently (Leopard & Snow Leopard) this converts nib files to the new xib format, updating the database.
  */
-@interface BLNibConverterStep : BLProcessStep
-{
-	BLNibFileObject	*_fileObject;
-	NSString		*_language;
+@interface BLNibConverterStep : BLProcessStep {
+	BLNibFileObject *_fileObject;
+	NSString *_language;
 }
 
 /*!

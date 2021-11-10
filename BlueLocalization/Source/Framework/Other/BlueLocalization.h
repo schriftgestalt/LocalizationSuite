@@ -14,24 +14,24 @@
 #import <BlueLocalization/BLBundleObject.h>
 #import <BlueLocalization/BLFileObject.h>
 
-#import <BlueLocalization/BLKeyObject.h>
 #import <BlueLocalization/BLGroupedKeyObject.h>
+#import <BlueLocalization/BLKeyObject.h>
 #import <BlueLocalization/BLSegmentedKeyObject.h>
 
 // IMPORT / EXPORT
+#import <BlueLocalization/BLCreatorStep.h>
+#import <BlueLocalization/BLFileCreator.h>
 #import <BlueLocalization/BLFileInterpreter.h>
 #import <BlueLocalization/BLInterpreterStep.h>
-#import <BlueLocalization/BLFileCreator.h>
-#import <BlueLocalization/BLCreatorStep.h>
 
-#import <BlueLocalization/BLStringsImporter.h>
 #import <BlueLocalization/BLStringsExporter.h>
+#import <BlueLocalization/BLStringsImporter.h>
 
-#import <BlueLocalization/BLXcodeImporter.h>
 #import <BlueLocalization/BLXcodeExporter.h>
+#import <BlueLocalization/BLXcodeImporter.h>
 
-#import <BlueLocalization/BLXLIFFImporter.h>
 #import <BlueLocalization/BLXLIFFExporter.h>
+#import <BlueLocalization/BLXLIFFImporter.h>
 
 #import <BlueLocalization/BLDictionaryExporter.h>
 #import <BlueLocalization/BLTMXExporter.h>
@@ -43,8 +43,8 @@
 #import <BlueLocalization/BLDatabaseFile.h>
 
 #import <BlueLocalization/BLLocalizerDocument.h>
-#import <BlueLocalization/BLLocalizerFile.h>
 #import <BlueLocalization/BLLocalizerExportStep.h>
+#import <BlueLocalization/BLLocalizerFile.h>
 #import <BlueLocalization/BLLocalizerImportStep.h>
 
 #import <BlueLocalization/BLDictionaryDocument.h>
@@ -52,38 +52,37 @@
 #import <BlueLocalization/BLDictionaryFile.h>
 
 // PROCESSING
+#import <BlueLocalization/BLGenericProcessStep.h>
 #import <BlueLocalization/BLProcessManager.h>
 #import <BlueLocalization/BLProcessStep.h>
-#import <BlueLocalization/BLGenericProcessStep.h>
 
 // TOOLS
-#import <BlueLocalization/BLNibFileConverter.h>
 #import <BlueLocalization/BLNibConverterStep.h>
+#import <BlueLocalization/BLNibFileConverter.h>
 
 // OTHERS
 #import <BlueLocalization/BLDocumentProtocol.h>
 
 // UTILS
+#import <BlueLocalization/BLDictionaryController.h>
 #import <BlueLocalization/BLLanguageTranslator.h>
 #import <BlueLocalization/BLPathCreator.h>
 #import <BlueLocalization/BLProcessLog.h>
-#import <BlueLocalization/BLDictionaryController.h>
 
 // INTEGRATION
 #import <BlueLocalization/BLToolPath.h>
-#import <BlueLocalization/BLXcodeProjectParser.h>
 #import <BlueLocalization/BLXcodeProjectItem.h>
 #import <BlueLocalization/BLXcodeProjectLocalization.h>
+#import <BlueLocalization/BLXcodeProjectParser.h>
 
 // STRING UTILS
+#import <BlueLocalization/BLStringComparison.h>
 #import <BlueLocalization/BLStringReplacement.h>
+#import <BlueLocalization/BLStringSegmentation.h>
 #import <BlueLocalization/BLStringsDictionary.h>
 #import <BlueLocalization/BLStringsScanner.h>
-#import <BlueLocalization/BLStringComparison.h>
-#import <BlueLocalization/BLStringSegmentation.h>
 
 // EXTENSIONS
 #import <BlueLocalization/BLArrayExtensions.h>
 #import <BlueLocalization/BLFileManagerAdditions.h>
 #import <BlueLocalization/BLSecurityExtensions.h>
-

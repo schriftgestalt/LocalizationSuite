@@ -7,17 +7,16 @@
 //
 //
 
-
-#import <LocTools/LTDifferenceEngine.h>
 #import <LocTools/LTDifference.h>
+#import <LocTools/LTDifferenceEngine.h>
 
 #import <LocTools/LTTranslationChecker.h>
 #import <LocTools/LTTranslationProblem.h>
 
 #import <LocTools/LTAutotranslationStep.h>
 
-#import <LocTools/LTKeyMatcher.h>
-#import <LocTools/LTSingleKeyMatcher.h>
-#import <LocTools/LTMultipleKeyMatcher.h>
 #import <LocTools/LTKeyMatch.h>
 #import <LocTools/LTKeyMatchCollector.h>
+#import <LocTools/LTKeyMatcher.h>
+#import <LocTools/LTMultipleKeyMatcher.h>
+#import <LocTools/LTSingleKeyMatcher.h>

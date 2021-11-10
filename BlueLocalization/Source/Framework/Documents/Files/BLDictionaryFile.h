@@ -2,7 +2,7 @@
  @header
  BLDictionaryFile.h
  Created by Max Seelemann on 31.07.06.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 

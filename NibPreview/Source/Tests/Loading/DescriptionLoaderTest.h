@@ -6,8 +6,7 @@
 //  Copyright 2009 Localization Suite. All rights reserved.
 //
 
-@interface DescriptionLoaderTest : SenTestCase
-{
+@interface DescriptionLoaderTest : SenTestCase {
 }
 
 @end

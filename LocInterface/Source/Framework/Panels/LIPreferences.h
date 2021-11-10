@@ -31,21 +31,20 @@
  */
 - (void)close;
 
-
 /*!
  @abstract An array that contains all currently open documents. Bindable.
  */
-@property(strong, readonly) NSArray *openDocuments;
+@property (strong, readonly) NSArray *openDocuments;
 
 /*!
  @abstract Whether more than one document is currently open. Bindable.
  */
-@property(readonly) BOOL multipleOpenDocuments;
+@property (readonly) BOOL multipleOpenDocuments;
 
 /*!
  @abstract If any documents are open, the selected one. Bindable.
  */
-@property(strong) BLDocument *selectedDocument;
+@property (strong) BLDocument *selectedDocument;
 
 /*!
  @abstract Copies default settings into the document.
@@ -62,12 +61,11 @@
  */
 - (void)unregisterDocument:(BLDocument *)document;
 
-
 /*!
  @abstract An array of all installed developer tools.
  @discussion Returns an array of dictionaries: "path" the path of the developer directory, "displayPath" the path to show, "version" the Developer tools version.
  Requesting the value of this property for the first time might retrun an empty array. However, a spotlight query is started, updating this value continuously as it finds new installs. It is thus wise to directly bind to this property instead of fetching it just once.
  */
-@property(nonatomic, strong, readonly) NSArray *availableDeveloperTools;
+@property (nonatomic, strong, readonly) NSArray *availableDeveloperTools;
 
 @end

@@ -2,7 +2,7 @@
  @header
  BLProcessManager.h
  Created by Max on 27.04.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -12,27 +12,26 @@
  @abstract Manages all long duration processings.
  @discussion Basically this is a wrapper around a processing queue for BLProcessStep objects.
  */
-@interface BLProcessManager : NSObject
-{
-	BLProcessStep					*_currentStep;
-	NSDocument <BLDocumentProtocol>	*_document;
-	NSMutableArray					*_groups;
-	BOOL							_running;
-	NSOperationQueue				*_queue;
-	NSUInteger						_steps;
-	NSUInteger						_stepsCompleted;
+@interface BLProcessManager : NSObject {
+	BLProcessStep *_currentStep;
+	NSDocument<BLDocumentProtocol> *_document;
+	NSMutableArray *_groups;
+	BOOL _running;
+	NSOperationQueue *_queue;
+	NSUInteger _steps;
+	NSUInteger _stepsCompleted;
 }
 
 /*!
  @abstract Designated initializer.
  */
-- (id)initWithDocument:(NSDocument <BLDocumentProtocol> *)document;
+- (id)initWithDocument:(NSDocument<BLDocumentProtocol> *)document;
 
 /*!
  @abstract Returns the document the process manager belongs to.
  @discussion Due to the importance of this method to most steps, this one throws if no document has been set beforehand!
  */
-@property(weak) NSDocument <BLDocumentProtocol> *document;
+@property (weak) NSDocument<BLDocumentProtocol> *document;
 
 /*!
  @abstract Start the processing queue.
@@ -55,7 +54,7 @@
 /*!
  @abstract Returns whether the queue is currently running.
  */
-@property(readonly, getter=isRunning) BOOL running;
+@property (readonly, getter=isRunning) BOOL running;
 
 /*!
  @abstract Enqueues a new step.
@@ -87,18 +86,18 @@
  @abstract Returns the number of steps in the current run.
  @discussion Updates only happen on the main thread so it's save to bind to this property for interface updates.
  */
-@property(readonly) NSUInteger steps;
+@property (readonly) NSUInteger steps;
 
 /*!
  @abstract Returns the number of steps completed in the current run.
  @discussion Updates only happen on the main thread so it's save to bind to this property for interface updates.
  */
-@property(readonly) NSUInteger completedSteps;
+@property (readonly) NSUInteger completedSteps;
 
 /*!
  @abstract Returns any of the currently running steps.
  @discussion Can be used to display some interface status information or likewise.
  */
-@property(strong, readonly) BLProcessStep *currentStep;
+@property (strong, readonly) BLProcessStep *currentStep;
 
 @end

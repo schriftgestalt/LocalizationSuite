@@ -7,7 +7,7 @@
 //
 //
 
-#include <NibPreview/NPPreview.h>
 #include <NibPreview/NPObject.h>
+#include <NibPreview/NPPreview.h>
 
 #include <NibPreview/NPKeyObjectAdditions.h>

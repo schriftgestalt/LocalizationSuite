@@ -2,16 +2,15 @@
  @header
  LIDictionarySettings.h
  Created by max on 28.06.09.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
 /*!
  @abstract Window controller hosting a interface for dictionary controller settings
  */
-@interface LIDictionarySettings : NSWindowController
-{
-	IBOutlet NSArrayController	*dictsController;
+@interface LIDictionarySettings : NSWindowController {
+	IBOutlet NSArrayController *dictsController;
 }
 
 /*!

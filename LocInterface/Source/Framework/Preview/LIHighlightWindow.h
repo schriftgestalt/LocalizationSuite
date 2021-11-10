@@ -2,7 +2,7 @@
  @header
  LIHighlightWindow.h
  Created by max on 01.09.09.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
@@ -10,10 +10,9 @@
  @abstract Window class used to highlight preview parts.
  @discussion A window that displays a transparent gray overlay with a blank, free spot in it.
  */
-@interface LIHighlightWindow : NSWindow
-{
-	NSRect		_highlight;
-	NSWindow	*_parent;
+@interface LIHighlightWindow : NSWindow {
+	NSRect _highlight;
+	NSWindow *_parent;
 }
 
 /*!
@@ -25,13 +24,13 @@
  @abstract The window the highlight is attached to.
  @discussion Highlight windows will move alongside their parents. Any events will be forwarded to the parent window.
  */
-@property(readonly) NSWindow *parentWindow;
+@property (readonly) NSWindow *parentWindow;
 
 /*!
  @abstract The rectangle to be highlighted.
  @discussion Setting this to NSZeroRect will show no highlight.
  */
-@property(assign) NSRect highlightRect;
+@property (assign) NSRect highlightRect;
 
 @end
 

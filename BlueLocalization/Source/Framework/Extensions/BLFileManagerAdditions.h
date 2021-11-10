@@ -2,7 +2,7 @@
  @header
  BLFileManagerAdditions.h
  Created by Max on 29.11.04.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -11,13 +11,12 @@
  */
 typedef enum {
 	BLFileManagerNoCompression,
-	
+
 	BLFileManagerGzipCompression,
 	BLFileManagerTarCompression,
 	BLFileManagerTarGzipCompression,
 	BLFileManagerTarBzip2Compression
 } BLFileManagerCompression;
-
 
 /*!
  @abstract Extensions to NSFileManager used by some parts of the Framework.
@@ -28,7 +27,6 @@ typedef enum {
  @abstract Tries to determine the kind of compression applied to the file.
  */
 - (BLFileManagerCompression)compressionOfFile:(NSString *)path;
-
 
 /*!
  @abstract Returns the file name of the result of a compression.
@@ -43,7 +41,6 @@ typedef enum {
  @return YES if successfull, NO otherwise.
  */
 - (BOOL)compressFileAtPath:(NSString *)path usingCompression:(BLFileManagerCompression)compression keepOriginal:(BOOL)keepOriginal;
-
 
 /*!
  @abstract Returns the file name of the result of a compression.

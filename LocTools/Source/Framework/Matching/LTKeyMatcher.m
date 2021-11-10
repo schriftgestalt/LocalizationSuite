@@ -2,25 +2,22 @@
  @header
  LTKeyMatcher.m
  Created by max on 06.06.09.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
 #import "LTKeyMatcher.h"
 
-
 @implementation LTKeyMatcher
 
-+ (NSString *)baseLanguageForLanguage:(NSString *)language
-{
-	NSCharacterSet *splitter = [NSCharacterSet characterSetWithCharactersInString: @"-_"];
-	return [[language componentsSeparatedByCharactersInSet: splitter] firstObject];
++ (NSString *)baseLanguageForLanguage:(NSString *)language {
+	NSCharacterSet *splitter = [NSCharacterSet characterSetWithCharactersInString:@"-_"];
+	return [[language componentsSeparatedByCharactersInSet:splitter] firstObject];
 }
 
-- (id)init
-{
+- (id)init {
 	self = [super init];
-	
+
 	if (self != nil) {
 		_matchLanguage = nil;
 		_targetLanguage = nil;
@@ -29,55 +26,44 @@
 		_abort = NO;
 		_running = NO;
 	}
-	
+
 	return self;
 }
 
-
-
 #pragma mark - Accessors
 
-@synthesize matchLanguage=_matchLanguage;
-@synthesize targetLanguage=_targetLanguage;
-@synthesize matchingKeyObjects=_matchingObjects;
-@synthesize delegate=_delegate;
+@synthesize matchLanguage = _matchLanguage;
+@synthesize targetLanguage = _targetLanguage;
+@synthesize matchingKeyObjects = _matchingObjects;
+@synthesize delegate = _delegate;
 
-- (BOOL)isRunning
-{
+- (BOOL)isRunning {
 	return _running;
 }
 
-- (void)waitUntilFinished
-{
+- (void)waitUntilFinished {
 	while (_running)
-		[NSThread sleepUntilDate: [NSDate dateWithTimeIntervalSinceNow: 0.001]];
+		[NSThread sleepUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.001]];
 }
 
 #pragma mark - Actions
 
-- (void)start
-{
+- (void)start {
 	if (_running)
 		[self stop];
-	
+
 	_running = YES;
 	_abort = NO;
 	[self matchingThread];
 }
 
-- (void)stop
-{
+- (void)stop {
 	_abort = YES;
 	[self waitUntilFinished];
 }
 
-- (void)matchingThread
-{
+- (void)matchingThread {
 	[NSException raise:NSInternalInconsistencyException format:@"Started matching on abstract superclass!!"];
 }
 
-
-
 @end
-
-

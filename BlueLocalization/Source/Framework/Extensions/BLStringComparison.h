@@ -2,7 +2,7 @@
  @header
  BLStringComparisson.h
  Created by Max on 13.05.09.
- 
+
  @copyright 2004-2009 Localization Suite. All rights reserved.
  */
 

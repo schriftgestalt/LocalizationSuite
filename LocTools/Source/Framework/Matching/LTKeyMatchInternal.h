@@ -2,7 +2,7 @@
  @header
  LTKeyMatchInternal.h
  Created by max on 26.06.09.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 

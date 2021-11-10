@@ -2,28 +2,27 @@
  @header
  LIStatusDisplay.h
  Created by Max Seelemann on 18.11.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
 /*!
  @abstract Shows a little modal panel with information about currently displayed content.
  */
-@interface LIStatusDisplay : NSObject
-{
-	IBOutlet NSView	*calcStatsView;
-	IBOutlet NSPanel		*panel;
-	IBOutlet NSView	*splitView;
-	IBOutlet NSView	*statsView;
-	
-	BOOL				_abortCalculation;
-	BOOL				_calculating;
-	NSUInteger			_calculationProgress;
-	id					_currentResponder;
-	NSDictionary		*_counters;
-	NSDictionary		*_selectionInfo;
-	NSDictionary		*_statistics;
-	NSMutableDictionary	*_visibility;
+@interface LIStatusDisplay : NSObject {
+	IBOutlet NSView *calcStatsView;
+	IBOutlet NSPanel *panel;
+	IBOutlet NSView *splitView;
+	IBOutlet NSView *statsView;
+
+	BOOL _abortCalculation;
+	BOOL _calculating;
+	NSUInteger _calculationProgress;
+	id _currentResponder;
+	NSDictionary *_counters;
+	NSDictionary *_selectionInfo;
+	NSDictionary *_statistics;
+	NSMutableDictionary *_visibility;
 }
 
 /*!
@@ -39,24 +38,24 @@
 /*!
  @abstract The first language which statistics are being displayed.
  */
-@property(nonatomic, strong, readonly) NSString *firstLanguage;
+@property (nonatomic, strong, readonly) NSString *firstLanguage;
 
 /*!
  @abstract The second language which statistics are being displayed.
  */
-@property(nonatomic, strong, readonly) NSString *secondLanguage;
+@property (nonatomic, strong, readonly) NSString *secondLanguage;
 
 /*!
  @abstract A dictionary defining which parts of the statistics panel are visible.
  @discussion Holds three keys, "info", "counters" and "statistics", each refering to a boolean NSNumber for the visibility.
  */
-@property(nonatomic, strong) NSDictionary *visibility;
+@property (nonatomic, strong) NSDictionary *visibility;
 
 /*!
  @abstract Returns a dictionary containing statistics about the current selection.
  @discussion Precisely, the dictionary contains three keys, "bundles", "files" and "keys", each refereing to an NSNumber object with an integer value of the respective count of selected objects.
  */
-@property(nonatomic, readonly) NSDictionary *selectionInfo;
+@property (nonatomic, readonly) NSDictionary *selectionInfo;
 
 /*!
  @abstract Returns a dictionary containing the statistics of the first language.
@@ -66,7 +65,7 @@
 	- "characters" (the number of characters in the keys)
  Each of them is refering to an NSNumber object with an integer value of the respective statistical value of the selected objects.
  */
-@property(nonatomic, readonly) NSDictionary *counters;
+@property (nonatomic, readonly) NSDictionary *counters;
 
 /*!
  @abstract Returns a dictionary containing the statistics of the second language.
@@ -78,7 +77,7 @@
 	- "noMatch" (keys for with no match was found).
  Each of them keys refers to a NSNumber with an integer value of the respective statistical value of the selected objects. Matches are calculated with the first as source and the second being the target language.
  */
-@property(nonatomic, readonly) NSDictionary *statistics;
+@property (nonatomic, readonly) NSDictionary *statistics;
 
 /*!
  @abstract Interface action when user wants the statistics to be calculated.
@@ -88,15 +87,14 @@
 /*!
  @abstract Information whether the stistics are currently being calculated.
  */
-@property(nonatomic, readonly) BOOL isCalculatingStatistics;
+@property (nonatomic, readonly) BOOL isCalculatingStatistics;
 
 /*!
  @abstract The progess of the statistics calculation in percent.
  */
-@property(nonatomic, readonly) NSUInteger statisticsCalculationProgress;
+@property (nonatomic, readonly) NSUInteger statisticsCalculationProgress;
 
 @end
-
 
 /*!
  @abstract The status display goes up the reponder chain and checks for objects implementing this protocol. If no object is found, a "no selection" placeholder is shown.
@@ -146,5 +144,3 @@
 - (NSArray *)currentLanguagesInTableView:(NSTableView *)tableView;
 
 @end
-
-

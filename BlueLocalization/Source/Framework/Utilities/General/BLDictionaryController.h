@@ -2,16 +2,15 @@
  @header
  BLDictionaryController.h
  Created by max on 16.08.06.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
-@interface BLDictionaryController : NSObject
-{
-	NSMutableArray	*_dictionaries;
-	NSMutableArray	*_documents;
-	NSMutableArray	*_keys;
-	BOOL			_useDocuments;
+@interface BLDictionaryController : NSObject {
+	NSMutableArray *_dictionaries;
+	NSMutableArray *_documents;
+	NSMutableArray *_keys;
+	BOOL _useDocuments;
 }
 
 /*!

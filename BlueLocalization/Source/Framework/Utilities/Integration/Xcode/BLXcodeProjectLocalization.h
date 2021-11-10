@@ -2,12 +2,11 @@
  @header
  BLXcodeProjectLocalization.h
  Created by max on 17.07.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
 #import <BlueLocalization/BLXcodeProjectItem.h>
-
 
 /*!
  @abstract Additions BLXcodeProjectItem used to manage localizations.
@@ -22,13 +21,13 @@
 
 /*!
  @abstract The localizations contained in a variant group.
- @discussion The returned array holds the identifiers of the contained languages. The item must have a item type BLXcodeItemTypeVariantGroup, throws otherwise. 
+ @discussion The returned array holds the identifiers of the contained languages. The item must have a item type BLXcodeItemTypeVariantGroup, throws otherwise.
  */
 - (NSArray *)localizations;
 
 /*!
  @abstract The exact localizations contained in a variant group.
- @discussion The returned array holds the exact names of the languages folders for all the contained languages. The item must have a item type BLXcodeItemTypeVariantGroup, throws otherwise. 
+ @discussion The returned array holds the exact names of the languages folders for all the contained languages. The item must have a item type BLXcodeItemTypeVariantGroup, throws otherwise.
  */
 - (NSArray *)exactLocalizations;
 

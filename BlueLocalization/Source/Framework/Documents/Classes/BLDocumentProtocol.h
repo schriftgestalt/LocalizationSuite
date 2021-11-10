@@ -2,7 +2,7 @@
  @header
  BLDocumentProtocol.h
  Created by Max on 29.11.04.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -16,25 +16,24 @@
 /*!
  @abstract Returns a path creator suited for this document.
  */
-@property(readonly) BLPathCreator *pathCreator;
+@property (readonly) BLPathCreator *pathCreator;
 
 /*!
  @abstract The reference language of the document.
  @discussion Return nil, if there is no such language.
  */
-@property(readonly) NSString *referenceLanguage;
+@property (readonly) NSString *referenceLanguage;
 
 /*!
  @abstract All languages occuring in the document.
  */
-@property(readonly) NSArray *languages;
-
+@property (readonly) NSArray *languages;
 
 @optional
 /*!
  @abstract Returns a process manager allowing assynchronous actions on the document.
  */
-@property(readonly) BLProcessManager *processManager;
+@property (readonly) BLProcessManager *processManager;
 
 /*!
  @abstract Returns a file object with the given path.

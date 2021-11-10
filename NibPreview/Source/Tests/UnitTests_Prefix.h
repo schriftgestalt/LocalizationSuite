@@ -3,9 +3,9 @@
 //
 
 #ifdef __OBJC__
-	#import <Cocoa/Cocoa.h>
-	#import <BlueLocalization/BlueLocalization.h>
-	#import <NibPreview/NibPreview.h>
-	#import <SenTestingKit/SenTestingKit.h>
-	#import <OCMock/OCMock.h>
+#import <BlueLocalization/BlueLocalization.h>
+#import <Cocoa/Cocoa.h>
+#import <NibPreview/NibPreview.h>
+#import <OCMock/OCMock.h>
+#import <SenTestingKit/SenTestingKit.h>
 #endif

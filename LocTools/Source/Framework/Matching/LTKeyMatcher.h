@@ -2,7 +2,7 @@
  @header
  LTKeyMatcher.h
  Created by max on 06.06.09.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
@@ -12,14 +12,13 @@
  @abstract Abstract superclass of all key matchers.
  @discussion Basically this class hosts everything that all matchers have in common, with the differneces only being quite small.
  */
-@interface LTKeyMatcher : NSObject
-{
-	BOOL		_abort;
-	id			_delegate;
-	NSString	*_matchLanguage;
-	NSArray		*_matchingObjects;
-	BOOL		_running;
-	NSString	*_targetLanguage;
+@interface LTKeyMatcher : NSObject {
+	BOOL _abort;
+	id _delegate;
+	NSString *_matchLanguage;
+	NSArray *_matchingObjects;
+	BOOL _running;
+	NSString *_targetLanguage;
 }
 
 /*!
@@ -31,26 +30,25 @@
 /*!
  @abstract The language the matching is to be performed on.
  */
-@property(strong) NSString *matchLanguage;
+@property (strong) NSString *matchLanguage;
 
 /*!
  @abstract The language for which the matches are to be found.
  @discussion All matching key objects must have a non-empty value for this language.
  */
-@property(strong) NSString *targetLanguage;
+@property (strong) NSString *targetLanguage;
 
 /*!
  @abstract The key objects to match with.
  @discussion The contained objects are of class BLKeyObjects.
  */
-@property(strong) NSArray *matchingKeyObjects;
+@property (strong) NSArray *matchingKeyObjects;
 
 /*!
  @abstract The delegate of the matcher.
  @discussion While this can be any arbitrary object, if will only be sent the messages defined in LTDictionaryMatcherDelegate.
  */
-@property(strong) id delegate;
-
+@property (strong) id delegate;
 
 /*!
  @abstract Start the matching.
@@ -96,4 +94,3 @@
 - (void)keyMatcher:(LTKeyMatcher *)matcher foundMatch:(LTKeyMatch *)match forKeyObject:(BLKeyObject *)target;
 
 @end
-

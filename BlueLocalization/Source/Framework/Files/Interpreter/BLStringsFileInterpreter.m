@@ -2,7 +2,7 @@
  @header
  BLStringsFileInterpreter.m
  Created by Max on 13.11.04.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -15,13 +15,11 @@
  */
 @implementation BLStringsFileInterpreter
 
-+ (void)load
-{
++ (void)load {
 	[super registerInterpreterClass:self forFileType:@"strings"];
 }
 
-+ (NSUInteger)defaultOptions
-{
++ (NSUInteger)defaultOptions {
 	return BLFileInterpreterImportComments | BLFileInterpreterEnableShadowComments | BLFileInterpreterReferenceImportCreatesBackup | BLFileInterpreterImportNonReferenceValuesOnly;
 }
 
@@ -30,40 +28,39 @@
 /*!
  @discussion If the file turns out to be a plist file, it is passed on to a plist file interpreter to do the heavy lifting.
  */
-- (BOOL)_interpreteFile:(NSString *)path
-{
-    NSDictionary *contents, *leadingComments, *inlineComments;
-    BOOL isPlistFile;
-    NSArray *keys;
-    
-    // Check for plist string files
-    isPlistFile = [[NSString stringWithContentsOfFile:path usedEncoding:NULL error:NULL] hasPrefix: @"<?xml"];
-    if ([_fileObject isKindOfClass: [BLStringsFileObject class]])
-        [(BLStringsFileObject *)_fileObject setIsPlistStringsFile: isPlistFile];
-	
+- (BOOL)_interpreteFile:(NSString *)path {
+	NSDictionary *contents, *leadingComments, *inlineComments;
+	BOOL isPlistFile;
+	NSArray *keys;
+
+	// Check for plist string files
+	isPlistFile = [[NSString stringWithContentsOfFile:path usedEncoding:NULL error:NULL] hasPrefix:@"<?xml"];
+	if ([_fileObject isKindOfClass:[BLStringsFileObject class]])
+		[(BLStringsFileObject *)_fileObject setIsPlistStringsFile:isPlistFile];
+
 	// Plist strings-files will be imported by a plist interpreter
-    if (isPlistFile) {
+	if (isPlistFile) {
 		BLFileInterpreter *interpreter;
-		
-		interpreter = [BLFileInterpreter interpreterForFileType: @"plist"];
-		[interpreter _setForwardsToInterpreter: self];
-		
-		return [interpreter _interpreteFile: path];
+
+		interpreter = [BLFileInterpreter interpreterForFileType:@"plist"];
+		[interpreter _setForwardsToInterpreter:self];
+
+		return [interpreter _interpreteFile:path];
 	}
-    
+
 	// Import the strings file
 	contents = [NSDictionary dictionaryWithStringsAtPath:path scannedLeadingComments:&leadingComments scannedInlineComments:&inlineComments scannedKeyOrder:&keys];
-	
+
 	// The file can't be imported, there was an error
 	if (!contents)
 		return NO;
-	
+
 	// Process all keys
-	for (NSUInteger i=0; i<[keys count]; i++) {
-		NSString *key = [keys objectAtIndex: i];
-		[self _emitKey:key value:[contents objectForKey: key] leadingComment:[leadingComments objectForKey:key] inlineComment:[inlineComments objectForKey:key]];
+	for (NSUInteger i = 0; i < [keys count]; i++) {
+		NSString *key = [keys objectAtIndex:i];
+		[self _emitKey:key value:[contents objectForKey:key] leadingComment:[leadingComments objectForKey:key] inlineComment:[inlineComments objectForKey:key]];
 	}
-	
+
 	return YES;
 }
 

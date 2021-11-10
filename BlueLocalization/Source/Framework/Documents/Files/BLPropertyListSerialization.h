@@ -2,7 +2,7 @@
  @header
  BLPropertyListSerialization.h
  Created by Max Seelemann on 24.01.10.
- 
+
  @copyright 2004-2010 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -74,11 +74,10 @@ extern NSString *BLLanguagesSerializationKey;
 /*!
  @abstract A handle for passing file wrappers in and out of the property list serialization.
  */
-@interface BLWrapperHandle : NSObject <BLPropertyListSerialization>
-{
-	NSString		*_path;
-	NSString		*_prefPath;
-	NSFileWrapper	*_wrapper;
+@interface BLWrapperHandle : NSObject <BLPropertyListSerialization> {
+	NSString *_path;
+	NSString *_prefPath;
+	NSFileWrapper *_wrapper;
 }
 
 /*!
@@ -89,19 +88,16 @@ extern NSString *BLLanguagesSerializationKey;
 /*!
  @abstract The (full) path the wrapper was stored at.
  */
-@property(strong,readonly) NSString *path;
+@property (strong, readonly) NSString *path;
 
 /*!
  @abstract The path of the folder the wrapper should be stored in.
  */
-@property(strong) NSString *preferredPath;
+@property (strong) NSString *preferredPath;
 
 /*!
  @abstract The file wrapper that should be stored or has been read.
  */
-@property(strong) NSFileWrapper *wrapper;
+@property (strong) NSFileWrapper *wrapper;
 
 @end
-
-
-

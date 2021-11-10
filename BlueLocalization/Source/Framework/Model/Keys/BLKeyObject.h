@@ -2,7 +2,7 @@
  @header
  BLKeyObject.h
  Created by Max on 13.11.04.
- 
+
  @copyright 2004-2010 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -12,27 +12,26 @@
 
 /*!
  @abstract Additional flags for key objects.
- 
+
  @const BLKeyObjectAutotranslatedFlag		A flag signaling that the key object was translated using an autotranlation algorithm.
  */
 enum {
-	BLKeyObjectAutotranslatedFlag	= 1 << 2
+	BLKeyObjectAutotranslatedFlag = 1 << 2
 };
 
 /*!
  @abstract Represents the basic unit of translation, a key/value pair.
  @discussion Each key object can hold a number of localizations for a string. No primary localization is stored inside of the key, but might appear outside. In addition to that, a key object also holds an identification string, named "key" (thus the name key object), and a comment.
- 
+
  Subclasses must implement the following six methods: -objectForLanguage:, -stringForLanguage:, -setObject:forLanguage:, -languages, +isEmptyValue:, +classOfObjects.
  */
-@interface BLKeyObject : BLObject
-{
-	NSFileWrapper		*_attachedMedia;
-    NSString			*_comment;
-    BLFileObject		*_fileObject;
-    NSString			*_key;
-    NSMutableDictionary *_objects;
-    NSMutableDictionary *_snapshot;
+@interface BLKeyObject : BLObject {
+	NSFileWrapper *_attachedMedia;
+	NSString *_comment;
+	BLFileObject *_fileObject;
+	NSString *_key;
+	NSMutableDictionary *_objects;
+	NSMutableDictionary *_snapshot;
 }
 
 /*!
@@ -51,20 +50,18 @@ enum {
  @abstract The key of the object.
  @discussion The primary (if not only) identification method to retrieve a specific object form a set of key objects. Appart from that, the key might also be empty in some special cases. Examples for this are the occurrence in a dictionary or in a class of files having only a single key to be translated.
  */
-@property(strong) NSString *key;
+@property (strong) NSString *key;
 
 /*!
  @abstract The comment associated with the object.
  @discussion While this has no technical importance, it is widely used to transport additional information to a key object.
  */
-@property(strong) NSString *comment;
+@property (strong) NSString *comment;
 
 /*!
  @abstract The file object containing the key object.
  */
-@property(strong) BLFileObject *fileObject;
-
-
+@property (strong) BLFileObject *fileObject;
 
 /*!
  @abstract All languages that this object knows.
@@ -95,7 +92,6 @@ enum {
  */
 - (void)removeObjectForLanguage:(NSString *)language;
 
-
 /*!
  @abstract Will create a snapshot of object for the language, replacing any older snapshot.
  */
@@ -106,7 +102,6 @@ enum {
  @discussion Returns nil if no snapshot was created previously.
  */
 - (id)snapshotForLanguage:(NSString *)language;
-
 
 /*!
  @abstract Determines whether all languages of the object are empty.
@@ -122,7 +117,7 @@ enum {
 
 /*!
  @abstract Returns whether the passed value is empty or not.
- @discussion This is to be seen in the context of possible objects for languages only. This method should decide upon the object being "empty" as having no localization-relevant content. As such, a string of length zero might be interpreted as empty. 
+ @discussion This is to be seen in the context of possible objects for languages only. This method should decide upon the object being "empty" as having no localization-relevant content. As such, a string of length zero might be interpreted as empty.
  */
 + (BOOL)isEmptyValue:(id)value;
 
@@ -144,18 +139,16 @@ enum {
  */
 - (void)setValue:(id)value forKey:(NSString *)key;
 
-
-
 /*!
  @abstract Direct access to all localized variants in the form of a dictionary.
  @discussion The returned dictionary has the language identifiers as keys and holds the objects for the values. Depending on the class of objects attribute of the class, the objects may be NSStrings or NSAttributedStrings.
  */
-@property(weak, readonly) NSDictionary *strings;
+@property (weak, readonly) NSDictionary *strings;
 
 /*!
  @abstract A media file attached to the key for being presented to the user.
  @discussion Objects that are attached to multiple keys will only be persisted once.
  */
-@property(strong) NSFileWrapper *attachedMedia;
+@property (strong) NSFileWrapper *attachedMedia;
 
 @end

@@ -2,7 +2,7 @@
  @header
  NPLazyStringValue.h
  Created by max on 18.07.08.
- 
+
  @copyright 2008-2009 Localization Suite. All rights reserved.
  */
 
@@ -15,8 +15,7 @@
  points, sizes and rectangles, lazily. This means, depending on what the caller
  is expecting, a valid value is always returned without throwing exceptions.
  */
-@interface NPLazyStringValue : NSValue
-{
+@interface NPLazyStringValue : NSValue {
 	NSString *_string;
 }
 

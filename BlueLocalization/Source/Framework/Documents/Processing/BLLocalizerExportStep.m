@@ -2,7 +2,7 @@
  @header
  BLLocalizerExportStep.m
  Created by Max on 08.05.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 

@@ -2,7 +2,7 @@
  @header
  BLStringSegmentation.h
  Created by Max on 17.02.10.
- 
+
  @copyright 2010 Localization Suite. All rights reserved.
  */
 
@@ -13,17 +13,17 @@
 
 /*!
  @abstract Constants defining the kind of segmentation to be applied.
- 
+
  @const BLParagraphSegmentation		Strings are split by paragraphs, namely newline characters.
  @const BLSentenceSegmentation		Strings are split by sentcences, denoted by punctuation characters.
  @const BLWordSegmentation			Strings are split by words, delimited by whitespace characters. Words DO include punctuation characters such as sentence marks. If you do not want this binding, use BLDetailedSegmentation.
  @const BLDetailedSegmentation		Strings are split by detailled words. This is similar to BLWordSegmentation, except that punctuation characters are separate segments.
  */
 typedef enum {
-	BLParagraphSegmentation	= 1,
-	BLSentenceSegmentation	= 2,
-	BLWordSegmentation		= 3,
-	BLDetailedSegmentation	= 4
+	BLParagraphSegmentation = 1,
+	BLSentenceSegmentation = 2,
+	BLWordSegmentation = 3,
+	BLDetailedSegmentation = 4
 } BLSegmentationType;
 
 /*!

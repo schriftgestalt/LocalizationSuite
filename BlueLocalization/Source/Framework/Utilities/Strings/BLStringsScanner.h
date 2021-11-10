@@ -2,15 +2,14 @@
  @header
  BLStringsScanner.h
  Created by Max Seelemann on 07.04.09.
- 
+
  @copyright 2009 The Blue Technologies Group. All rights reserved.
  */
 
 /*!
  @abstract A sophisticated strings scanner working on NSStrings.
  */
-@interface BLStringsScanner : NSObject
-{
+@interface BLStringsScanner : NSObject {
 }
 
 /*!
@@ -44,4 +43,3 @@
 - (NSUInteger)currentOffsetInLine;
 
 @end
-

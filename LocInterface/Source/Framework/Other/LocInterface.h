@@ -7,8 +7,8 @@
 //
 //
 
-#import <LocInterface/LIContentController.h>
 #import <LocInterface/LIContentArrayController.h>
+#import <LocInterface/LIContentController.h>
 #import <LocInterface/LICustomColumnTableView.h>
 #import <LocInterface/LICustomLanguageSelection.h>
 #import <LocInterface/LIDictionarySettings.h>

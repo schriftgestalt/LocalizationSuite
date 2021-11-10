@@ -2,7 +2,7 @@
  @header
  BLObject.h
  Created by Max Seelemann on 24.07.06.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -20,42 +20,40 @@ extern NSString *BLObjectFileUnimportableError;
 
 // And-Masks for the flags property
 enum {
-	BLObjectUpdatedFlag		= 1 << 0,
-	BLObjectDeactivatedFlag	= 1 << 1
+	BLObjectUpdatedFlag = 1 << 0,
+	BLObjectDeactivatedFlag = 1 << 1
 };
-
 
 /*!
  @abstract The abstract base class for all objects (bundles, files, keys) in a localization file.
  */
-@interface BLObject : NSObject <NSCopying, BLPropertyListSerialization>
-{
-    NSDate          *_changeDate;
-    NSMutableArray  *_changedValues;
-    NSMutableArray  *_errors;
-    NSUInteger		_flags;
+@interface BLObject : NSObject <NSCopying, BLPropertyListSerialization> {
+	NSDate *_changeDate;
+	NSMutableArray *_changedValues;
+	NSMutableArray *_errors;
+	NSUInteger _flags;
 }
 
 /*!
  @abstract Returns wether the array of changed values is empty or not.
  */
-@property(readonly) BOOL didChange;
+@property (readonly) BOOL didChange;
 
 /*!
  @abstract The values (properties) that were changed of the object.
  @discussion Currently this includes among others the language identifiers and BLObjectReferenceChangedKey.
  */
-@property(strong) NSArray *changedValues;
+@property (strong) NSArray *changedValues;
 
 /*!
  @abstract Convenience access to whether the changed values contain BLObjectReferenceChangedKey or not.
  */
-@property(assign) BOOL referenceChanged;
+@property (assign) BOOL referenceChanged;
 
 /*!
  @abstract Convenience access to the languages in the changed values of an object.
  */
-@property(strong) NSArray *changedLanguages;
+@property (strong) NSArray *changedLanguages;
 
 /*!
  @abstract Set multiple values as changed.
@@ -89,17 +87,17 @@ enum {
  @abstract A user-presentable string of the changed values.
  @discussion This behavior is overridden when the object has errors, which are printen instead then.
  */
-@property(weak, readonly) NSString *changeDescription;
+@property (weak, readonly) NSString *changeDescription;
 
 /*!
  @abstract The date of the last object's change.
  */
-@property(strong) NSDate *changeDate;
+@property (strong) NSDate *changeDate;
 
 /*!
  @abstract The errors currently recognized for the object.
  */
-@property(strong) NSArray *errors;
+@property (strong) NSArray *errors;
 
 /*!
  @abstract Convenience accessor for adding object to the objects errors.
@@ -110,17 +108,17 @@ enum {
  @abstract The objects flags, denoting a state.
  @discussion The single flags ar logically or-ed together. Possible flags include: BLObjectUpdatedFlag and BLObjectDeactivatedFlag
  */
-@property(assign) NSUInteger flags;
+@property (assign) NSUInteger flags;
 
 /*!
  @abstract Convenience access to whether the BLObjectDeactivatedFlag is not set in the object's flags.
  */
-@property(assign) BOOL isActive;
+@property (assign) BOOL isActive;
 
 /*!
  @abstract Convenience access to whether the BLObjectUpdatedFlag is set in the object's flags or not.
  */
-@property(assign) BOOL wasUpdated;
+@property (assign) BOOL wasUpdated;
 
 /*!
  @abstract Common means of accessing the children in the tree of objects.

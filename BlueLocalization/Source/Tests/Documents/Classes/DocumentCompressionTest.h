@@ -8,9 +8,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-
-@interface DocumentCompressionTest : SenTestCase
-{
+@interface DocumentCompressionTest : SenTestCase {
 }
 
 @end

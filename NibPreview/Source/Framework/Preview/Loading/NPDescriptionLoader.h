@@ -2,15 +2,14 @@
  @header
  NPDescriptionLoader.h
  Created by max on 02.03.09.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
 /*!
  @abstract Runs ibtool and extracts an plist output of nib files.
  */
-@interface NPDescriptionLoader : NSObject
-{
+@interface NPDescriptionLoader : NSObject {
 }
 
 /*!

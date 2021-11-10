@@ -2,7 +2,7 @@
  @header
  BLXcodeImporter.h
  Created by max on 01.07.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -11,9 +11,8 @@
 /*!
  @abstract An interface to reading and importing file-paths from Xcode projects.
  */
-@interface BLXcodeImporter : NSObject
-{
-	IBOutlet NSView		*optionsView;
+@interface BLXcodeImporter : NSObject {
+	IBOutlet NSView *optionsView;
 }
 
 /*!
@@ -22,15 +21,14 @@
  */
 + (void)importXcodeProjectToDatabaseDocument:(BLDatabaseDocument *)document;
 
-
 /*!
  @enum BLXcodeImporterSettings
  @abstract The options that can be given to a Xcode importer.
- 
+
  @const BLXcodeImporterRescanExistingFiles	Files that are already contained in an database will be rescanned.
  */
 typedef enum {
-	BLXcodeImporterRescanExistingFiles	= 1<<0
+	BLXcodeImporterRescanExistingFiles = 1 << 0
 } BLXcodeImporterSettings;
 
 /*!
@@ -47,5 +45,3 @@ typedef enum {
 + (NSArray *)pathsToImportFromXcodeProjectAtPath:(NSString *)path toDatabaseDocument:(BLDatabaseDocument *)document withOptions:(NSUInteger)options;
 
 @end
-
-

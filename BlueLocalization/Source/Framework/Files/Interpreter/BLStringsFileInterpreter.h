@@ -2,7 +2,7 @@
  @header
  BLStringsFileInterpreter.h
  Created by Max on 13.11.04.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -11,8 +11,7 @@
 /*!
  @abstract A file interpreter implementation for strings files.
  */
-@interface BLStringsFileInterpreter : BLFileInterpreter
-{
+@interface BLStringsFileInterpreter : BLFileInterpreter {
 }
 
 @end

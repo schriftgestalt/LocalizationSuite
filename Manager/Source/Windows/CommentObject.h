@@ -8,14 +8,13 @@
 
 @class Document;
 
-@interface CommentObject : NSObject
-{
-    IBOutlet NSOutlineView  *outlineView;
-    IBOutlet NSWindow       *window;
-    
-    NSMutableArray  *_keyArray;
-    NSString        *_language;
-    Document        *_parentDocument;
+@interface CommentObject : NSObject {
+	IBOutlet NSOutlineView *outlineView;
+	IBOutlet NSWindow *window;
+
+	NSMutableArray *_keyArray;
+	NSString *_language;
+	Document *_parentDocument;
 }
 
 // Interface

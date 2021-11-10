@@ -2,7 +2,7 @@
  @header
  LTMultipleKeyMatcher.h
  Created by max on 26.06.09.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
@@ -14,16 +14,15 @@
  During matching, at most one match per key object is returned, even if there would be multiple translations.
  For matching single key objects or guessing support, please refer to LTSingleKeyMatcher.
  */
-@interface LTMultipleKeyMatcher : LTKeyMatcher
-{
-	NSArray	*_keyObjects;
-	BOOL	_keysAreSorted;
-	BOOL	_matchesAreSorted;
+@interface LTMultipleKeyMatcher : LTKeyMatcher {
+	NSArray *_keyObjects;
+	BOOL _keysAreSorted;
+	BOOL _matchesAreSorted;
 }
 
 /*!
  @abstract The key objects for which matches should be found.
  */
-@property(nonatomic, strong) NSArray *targetKeyObjects;
+@property (nonatomic, strong) NSArray *targetKeyObjects;
 
 @end

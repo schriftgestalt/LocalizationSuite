@@ -2,7 +2,7 @@
  @header
  BLStringsFileCreator.h
  Created by Max on 29.11.04.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -11,8 +11,7 @@
 /*!
  @abstract A file creator implementation for strings files.
  */
-@interface BLStringsFileCreator : BLFileCreator
-{
+@interface BLStringsFileCreator : BLFileCreator {
 }
 
 /*!

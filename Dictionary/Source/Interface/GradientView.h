@@ -9,8 +9,7 @@
 /*!
  @abstract Simple view that draws a gradient as background.
  */
-@interface GradientView : NSView
-{
+@interface GradientView : NSView {
 }
 
 @end

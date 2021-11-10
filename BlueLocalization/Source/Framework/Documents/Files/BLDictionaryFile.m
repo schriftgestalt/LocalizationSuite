@@ -2,7 +2,7 @@
  @header
  BLDictionaryFile.m
  Created by Max Seelemann on 31.07.06.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -16,7 +16,7 @@ NSString *BLFilterSettingsPropertyName = @"filterSettings";
 
 /*!
  @abstract Version History
- 
+
  Version 1:		Initial version.
  Version 2:		Adds filtering support to file structure.
  */
@@ -56,7 +56,6 @@ NSString *BLFilterSettingsPropertyName = @"filterSettings";
 	NSArray *archivedKeys = [BLPropertyListSerializer serializeObject:keys withAttributes:attributes outWrappers:NULL];
 
 	archivedKeys = [archivedKeys sortedArrayUsingComparator:^NSComparisonResult(NSDictionary *_Nonnull obj1, NSDictionary *_Nonnull obj2) {
-		
 		NSString *key1 = obj1[@"localizations"][@"en"];
 		NSString *key2 = obj2[@"localizations"][@"en"];
 		NSComparisonResult result = [key1 compare:key2];
@@ -66,7 +65,7 @@ NSString *BLFilterSettingsPropertyName = @"filterSettings";
 		NSLog(@"%@ == %@", obj1, obj2);
 		return result;
 	}];
-	
+
 	// Create Contents.plist
 	NSMutableDictionary *contents = [NSMutableDictionary dictionary];
 	[contents setObject:archivedKeys forKey:BLFileKeysKey];

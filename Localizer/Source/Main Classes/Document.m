@@ -9,7 +9,7 @@
 #import "Document.h"
 
 #import "Editor.h"
-
+#define OBJC_OLD_DISPATCH_PROTOTYPES 0
 #import <objc/message.h>
 
 BOOL(*objc_msgSendPerform)

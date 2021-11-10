@@ -2,7 +2,7 @@
  @header
  BLProcessStep.h
  Created by Max on 27.04.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -17,7 +17,7 @@
 /*!
  @abstract The process manager the operation is performed by.
  */
-@property(unsafe_unretained) BLProcessManager *manager;
+@property (unsafe_unretained) BLProcessManager *manager;
 
 /*!
  @abstract Perform the desired action.
@@ -29,13 +29,13 @@
  @abstract Returns a user-presentable general action description of the step.
  @discussion Will be shown to the user once the step has started processing.
  */
-@property(nonatomic, copy) NSString *action;
+@property (nonatomic, copy) NSString *action;
 
 /*!
  @abstract Returns a user-presentable description of the step.
  @discussion Will be shown to the user once the step has started processing.
  */
-@property(nonatomic, copy) NSString *description;
+@property (nonatomic, copy) NSString *description;
 
 /*!
  @abstract Designated override point to update the steps description if needed.

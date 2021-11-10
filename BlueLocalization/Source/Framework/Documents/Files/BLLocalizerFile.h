@@ -2,7 +2,7 @@
  @header
  BLLocalizerFile.h
  Created by Max on 29.11.04.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -10,11 +10,11 @@
 
 /*!
  @abstract Additional options allowed for a BLLocalizerFile.
- 
+
  @const BLFileIncludePreviewOption			The localizer file should be built to include a preview. This will copy all reference file into the bundle.
  */
 typedef enum {
-	BLFileIncludePreviewOption		= 1<<16
+	BLFileIncludePreviewOption = 1 << 16
 } BLLocalizerFileExportOptions;
 
 /*!
@@ -28,7 +28,6 @@ extern NSString *BLIncludesPreviewPropertyName;
  @discussion (readwrite) Represented by a BLDictionaryDocument, an embedded dictionary in the Localizer file.
  */
 extern NSString *BLDictionaryPropertyName;
-
 
 /*!
  @abstract A concrete implementation of the BLFile class, creating and reading Localizer files.
@@ -48,4 +47,3 @@ extern NSString *BLDictionaryPropertyName;
 + (NSArray *)objectsFromFile:(NSFileWrapper *)wrapper readingProperties:(NSDictionary **)properties;
 
 @end
-

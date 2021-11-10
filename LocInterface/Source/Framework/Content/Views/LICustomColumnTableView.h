@@ -2,7 +2,7 @@
  @header
  LICustomColumnTableView.h
  Created by max on 11.03.05.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
@@ -10,8 +10,7 @@
  @abstract A table view that allows the user to hide and show columns using a context menu in it's header view.
  @discussion In addition it allows to save and restore the column state.
  */
-@interface LICustomColumnTableView : NSTableView
-{
+@interface LICustomColumnTableView : NSTableView {
 }
 
 /*!
@@ -38,4 +37,3 @@
 - (NSString *)tableView:(NSTableView *)tableView customNameForColumn:(NSTableColumn *)column;
 
 @end
-

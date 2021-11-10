@@ -6,8 +6,7 @@
 //  Copyright 2009 Blue Technologies Group. All rights reserved.
 //
 
-@interface CustomPathCreator : BLPathCreator
-{
+@interface CustomPathCreator : BLPathCreator {
 }
 
 @end

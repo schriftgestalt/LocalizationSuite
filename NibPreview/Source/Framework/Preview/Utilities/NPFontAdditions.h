@@ -2,7 +2,7 @@
  @header
  NPFontAdditions.h
  Created by max on 18.07.08.
- 
+
  @copyright 2008-2009 Localization Suite. All rights reserved.
  */
 

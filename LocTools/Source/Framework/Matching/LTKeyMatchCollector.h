@@ -2,17 +2,16 @@
  @header
  LTKeyMatchCollector.h
  Created by max on 19.02.10.
- 
+
  @copyright 2010 Localization Suite. All rights reserved.
  */
 
 /*!
  @abstract An object that can be used as the delegate of a LTKeyMatcher to collect all matches.
  */
-@interface LTKeyMatchCollector : NSObject
-{
-	NSMutableArray	*_matches;
-	NSMutableSet	*_keyObjects;
+@interface LTKeyMatchCollector : NSObject {
+	NSMutableArray *_matches;
+	NSMutableSet *_keyObjects;
 }
 
 /*!

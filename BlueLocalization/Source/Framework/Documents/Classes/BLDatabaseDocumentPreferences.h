@@ -2,7 +2,7 @@
  @header
  BLDatabaseDocumentPreferences.h
  Created by Max Seelemann on 28.10.2010.
- 
+
  @copyright 2010 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -42,8 +42,6 @@ extern NSString *BLDatabaseDocumentLocalizerFilesPathKey;
  */
 extern NSString *BLDatabaseDocumentLocalizerFilesSaveToOneFileKey;
 
-
-
 /*!
  @abstract BLDatabaseDocument preference key: Default bundle naming style.
  @discussion NSNumber containing a BLNamingStyle. The default naming style for newly created bundle objects in the document.
@@ -55,8 +53,6 @@ extern NSString *BLDatabaseDocumentBundleNamingStyleKey;
  @discussion NSNumber containing a BLReferencingStyle. The default referencing style for newly created bundle objects in the document.
  */
 extern NSString *BLDatabaseDocumentBundleReferencingStyleKey;
-
-
 
 /*!
  @abstract BLDatabaseDocument preference key: Import empty strings.
@@ -94,13 +90,11 @@ extern NSString *BLDatabaseDocumentAutotranslateNewStringsKey;
  */
 extern NSString *BLDatabaseDocumentMarkAutotranslatedAsNotChangedKey;
 
-
 /*!
  @abstract BLDatabaseDocument preference key: Value changes should reset strings.
  @discussion NSNumber containing a BOOL. Whether the default interpreter options should contain BLFileInterpreterValueChangesResetKeys or not.
  */
 extern NSString *BLDatabaseDocumentValueChangesResetStringsKey;
-
 
 /*!
  @abstract BLDatabaseDocument preference key: Automatically import Xcode projects when rescanning files.
@@ -149,5 +143,3 @@ extern NSString *BLDatabaseDocumentUpdateXcodeHasFileLimitKey;
  @discussion NSNumber containing a float between 0 and 100. The percentage of localization required for a file to be included.
  */
 extern NSString *BLDatabaseDocumentUpdateXcodeFileLimitKey;
-
-

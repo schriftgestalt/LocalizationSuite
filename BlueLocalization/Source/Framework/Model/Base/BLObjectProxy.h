@@ -2,18 +2,17 @@
  @header
  BLObjectProxy.h
  Created by Max Seelemann on 07.05.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
 /*!
  @abstract A simple proxy object for a BLObject that performs all actions on the main thread.
  */
-@interface BLObjectProxy : NSProxy
-{
-	NSMapTable	*_cache;
-	Class		_class;
-	BLObject	*_object;
+@interface BLObjectProxy : NSProxy {
+	NSMapTable *_cache;
+	Class _class;
+	BLObject *_object;
 }
 
 /*!

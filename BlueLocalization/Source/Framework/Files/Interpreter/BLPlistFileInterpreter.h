@@ -2,7 +2,7 @@
  @header
  BLPlistFileInterpreter.h
  Created by Max Seelemann on 04.09.06.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -11,8 +11,7 @@
 /*!
  @abstract A file interpreter implementation for property list files.
  */
-@interface BLPlistFileInterpreter : BLFileInterpreter
-{
+@interface BLPlistFileInterpreter : BLFileInterpreter {
 }
 
 @end

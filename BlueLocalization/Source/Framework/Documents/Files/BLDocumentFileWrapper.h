@@ -2,17 +2,17 @@
  @header
  BLDocumentFileWrapper.h
  Created by Max Seelemann on 07.05.10.
- 
+
  @copyright 2010 the Localization Suite Foundation. All rights reserved.
  */
 
 /*!
  @abstract Additional options over NSFileWrapper for BLDocumentFileWrapper.
- 
+
  @const BLDocumentFileWrapperSaveCompressedOption	The resulting file should be compressed.
  */
 enum {
-	BLDocumentFileWrapperSaveCompressedOption	= 1 << 10
+	BLDocumentFileWrapperSaveCompressedOption = 1 << 10
 };
 
 /*!

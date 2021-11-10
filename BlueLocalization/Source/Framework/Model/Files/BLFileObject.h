@@ -2,7 +2,7 @@
  @header
  BLFileObject.h
  Created by Max on 27.10.04.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -20,16 +20,15 @@ extern NSString *BLBackupAttachmentKey;
  @abstract Represents a file in a localization context.
  @discussion Some behaviours depend on the type of the file, especially the extension. This class represents a class cluster. If you want to subclass it, call +registerClass:forPathExtension: registerung your class to be recognized in the process of creating objects.
  */
-@interface BLFileObject : BLObject
-{
-	NSDictionary			*_attachments;
-    BLBundleObject		*_bundleObject;
-    NSString			*_customType;
-    NSString			*_hashValue;
-    NSArray				*_objects;
-    NSArray				*_oldObjects;
-    NSString			*_path;
-	NSDictionary			*_snapshots;
+@interface BLFileObject : BLObject {
+	NSDictionary *_attachments;
+	BLBundleObject *_bundleObject;
+	NSString *_customType;
+	NSString *_hashValue;
+	NSArray *_objects;
+	NSArray *_oldObjects;
+	NSString *_path;
+	NSDictionary *_snapshots;
 }
 
 /*!
@@ -57,8 +56,6 @@ extern NSString *BLBackupAttachmentKey;
  */
 - (id)initWithPathExtension:(NSString *)extension;
 
-
-
 /*!
  @abstract Returns the subclass of BLKeyObject to be used when creating keys.
  */
@@ -81,46 +78,42 @@ extern NSString *BLBackupAttachmentKey;
  */
 + (void)registerClass:(Class)fileClass forPathExtension:(NSString *)extension;
 
-
-
 /*!
  @abstract The bundle containing the file object.
  */
-@property(strong) BLBundleObject *bundleObject;
+@property (strong) BLBundleObject *bundleObject;
 
 /*!
  @abstract If the file is to be handled differently, this is the path extension.
  @discussion Bein either nil or a path extension, the custom file type overrides the path extension of the file's path. As such, e.g. a file interpreter or a file creator will trat this file object as if it was of a different type.
  */
-@property(strong) NSString *customFileType;
+@property (strong) NSString *customFileType;
 
 /*!
  @abstract The md5 hash value used to notice when the contents of the source file changed.
  */
-@property(strong) NSString *hashValue;
+@property (strong) NSString *hashValue;
 
 /*!
  @abstract The path of the file inside a language project folder.
  */
-@property(strong) NSString *path;
+@property (strong) NSString *path;
 
 /*!
  @abstract A user-presentable string hosting information about the format of the file.
  */
-@property(weak, readonly) NSString *fileFormatInfo;
-
-
+@property (weak, readonly) NSString *fileFormatInfo;
 
 /*!
  @abstract The key objects belonging to the file object.
  */
-@property(strong) NSArray *objects;
+@property (strong) NSArray *objects;
 
 /*!
  @abstract Key objects that used to belong to the file object, but no longer make up it's content.
  @discussion These objects are kept to not loose their localized values. They may be (and acutally are) used to pretranslate newly imported strings.
  */
-@property(strong) NSArray *oldObjects;
+@property (strong) NSArray *oldObjects;
 
 /*!
  @abstract Adds a key object to the set of objects.
@@ -140,7 +133,7 @@ extern NSString *BLBackupAttachmentKey;
  */
 - (id)objectForKey:(NSString *)key;
 
-@property (nonatomic, readonly)NSString *key;
+@property (nonatomic, readonly) NSString *key;
 
 /*!
  @abstract Returns the key object for a given key, creating it if wished.
@@ -159,7 +152,6 @@ extern NSString *BLBackupAttachmentKey;
  @discussion Removed objects will be placed in the old objects array. Returns the number of affected objects.
  */
 - (NSUInteger)removeObjectsWithKeyNotInArray:(NSArray *)limitedKeys;
-
 
 /*!
  @abstract Will create a snapshot of the file for a given language.
@@ -186,5 +178,3 @@ extern NSString *BLBackupAttachmentKey;
 - (void)setAttachedObject:(id)object forKey:(NSString *)key;
 
 @end
-
-

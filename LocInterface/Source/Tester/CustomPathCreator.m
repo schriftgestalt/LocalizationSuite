@@ -8,11 +8,9 @@
 
 #import "CustomPathCreator.h"
 
-
 @implementation CustomPathCreator
 
-- (NSString *)absolutePathForFile:(BLFileObject *)file andLanguage:(NSString *)language
-{
+- (NSString *)absolutePathForFile:(BLFileObject *)file andLanguage:(NSString *)language {
 	return [[_document fileURL] path];
 }
 

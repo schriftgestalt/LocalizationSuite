@@ -2,21 +2,20 @@
  @header
  LIProcessDisplay.h
  Created by Max Seelemann on 29.04.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
 /*!
  @abstract A simple class that attaches to a process manager and shows a status sheet while it's running.
  */
-@interface LIProcessDisplay : NSObject
-{
-	IBOutlet NSButton	*cancelButton;
-	IBOutlet NSPanel	*panel;
-	
-	BLProcessManager	*_manager;
-	NSTimer				*_openTimer;
-	NSWindow			*_window;
+@interface LIProcessDisplay : NSObject {
+	IBOutlet NSButton *cancelButton;
+	IBOutlet NSPanel *panel;
+
+	BLProcessManager *_manager;
+	NSTimer *_openTimer;
+	NSWindow *_window;
 }
 
 /*!
@@ -49,8 +48,8 @@
 
 /*!
  @abstract The window the process display sheet will be attached too.
- @discussion If this is nil (which is the default), then the sheet will be attached to the process manager's document's window for sheet. 
+ @discussion If this is nil (which is the default), then the sheet will be attached to the process manager's document's window for sheet.
  */
-@property(strong) NSWindow *windowForSheet;
+@property (strong) NSWindow *windowForSheet;
 
 @end

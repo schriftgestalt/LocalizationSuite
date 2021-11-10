@@ -2,7 +2,7 @@
  @header
  BLRTFFileInterpreter.h
  Created by Max on 13.11.04.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -16,8 +16,7 @@ extern NSString *BLRTFFileContentKeyName;
 /*!
  @abstract A file interpreter implementation for rich text files.
  */
-@interface BLRTFFileInterpreter : BLFileInterpreter
-{
+@interface BLRTFFileInterpreter : BLFileInterpreter {
 }
 
 @end

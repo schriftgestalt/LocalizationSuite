@@ -2,7 +2,7 @@
  @header
  LIObjectColorValueTransformer.m
  Created by max on 09.05.09.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 

@@ -6,11 +6,10 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-@interface StringsFileCreatorTest : SenTestCase
-{
-	BLFileCreator		*creator;
-	BLFileInterpreter	*interpreter;
-	NSString			*tmpRootPath;
+@interface StringsFileCreatorTest : SenTestCase {
+	BLFileCreator *creator;
+	BLFileInterpreter *interpreter;
+	NSString *tmpRootPath;
 }
 
 @end

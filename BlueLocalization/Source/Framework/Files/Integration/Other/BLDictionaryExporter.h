@@ -2,17 +2,15 @@
  @header
  BLDictionaryExporter.h
  Created by max on 20.02.10.
- 
+
  @copyright 2004-2010 the Localization Suite. All rights reserved.
  */
-
 
 /*!
  @abstract Exports objects as a dictionary.
  */
-@interface BLDictionaryExporter : NSObject
-{
-	IBOutlet NSView	*optionsView;
+@interface BLDictionaryExporter : NSObject {
+	IBOutlet NSView *optionsView;
 }
 
 /*!

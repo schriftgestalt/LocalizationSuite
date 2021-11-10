@@ -2,20 +2,19 @@
  @header
  LTKeyMatch.h
  Created by max on 16.08.06.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 
 /*!
  @abstract An object representing a match result with a key object from a dictionary.
  */
-@interface LTKeyMatch : NSObject
-{
-    NSString    *_actualTargetLanguage;
-    NSString    *_targetLanguage;
-    BLKeyObject *_object;
-    float       _percentage;
-    NSString    *_matchLanguage;
+@interface LTKeyMatch : NSObject {
+	NSString *_actualTargetLanguage;
+	NSString *_targetLanguage;
+	BLKeyObject *_object;
+	float _percentage;
+	NSString *_matchLanguage;
 }
 
 /*!

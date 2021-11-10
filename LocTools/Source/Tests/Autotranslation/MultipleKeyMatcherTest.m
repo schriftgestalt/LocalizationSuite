@@ -11,255 +11,240 @@
 #import <BlueLocalization/BLStringKeyObject.h>
 
 #define HC_SHORTHAND
-#import <hamcrest/hamcrest.h>
 #import "KeyValueMatcher.h"
+#import <hamcrest/hamcrest.h>
 
 @implementation MultipleKeyMatcherTest
 
-- (void)setUp
-{
+- (void)setUp {
 	NSArray *matchKeyObjects;
 	NSFileWrapper *wrapper;
-	
-	NSLog(@"%@", [NSBundle bundleForClass: [self class]]);
+
+	NSLog(@"%@", [NSBundle bundleForClass:[self class]]);
 	// Load Dictionary
-	wrapper = [[NSFileWrapper alloc] initWithPath: [[NSBundle bundleForClass: [self class]] pathForResource:@"AppKit-de" ofType:@"lod" inDirectory:@"Test Data/Autotranslation"]];
+	wrapper = [[NSFileWrapper alloc] initWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"AppKit-de" ofType:@"lod" inDirectory:@"Test Data/Autotranslation"]];
 	matchKeyObjects = [BLDictionaryFile objectsFromFile:wrapper readingProperties:NULL];
 	STAssertTrue([matchKeyObjects count] > 0, @"Dictionary not loaded");
-	
+
 	// Init Matcher
 	matcher = [LTMultipleKeyMatcher new];
-	[matcher setMatchingKeyObjects: matchKeyObjects];
-	[matcher setMatchLanguage: @"en"];
-	[matcher setTargetLanguage: @"de"];
-	
+	[matcher setMatchingKeyObjects:matchKeyObjects];
+	[matcher setMatchLanguage:@"en"];
+	[matcher setTargetLanguage:@"de"];
+
 	// Init Key objects
 	keyObjects = [NSMutableArray array];
-	[matcher setTargetKeyObjects: keyObjects];
-	
+	[matcher setTargetKeyObjects:keyObjects];
+
 	// Init delegate
 	BOOL value = YES;
-	delegate = [OCMockObject mockForClass: [self class]];
-	[[[delegate stub] andReturnValue: [NSValue value:(const void *)&value withObjCType:@encode(BOOL)]] respondsToSelector: (__bridge void*)OCMOCK_ANY];
-	[matcher setDelegate: delegate];
+	delegate = [OCMockObject mockForClass:[self class]];
+	[[[delegate stub] andReturnValue:[NSValue value:(const void *)&value withObjCType:@encode(BOOL)]] respondsToSelector:(__bridge void *)OCMOCK_ANY];
+	[matcher setDelegate:delegate];
 }
 
-- (void)testDelegate
-{
+- (void)testDelegate {
 	BLKeyObject *keyObject;
-	
+
 	// Setup
-	keyObject = [BLStringKeyObject keyObjectWithKey: @"test"];
+	keyObject = [BLStringKeyObject keyObjectWithKey:@"test"];
 	[keyObject setObject:@"Apple" forLanguage:@"en"];
-	[keyObjects addObject: keyObject];
-	[matcher setTargetKeyObjects: keyObjects];
-	
+	[keyObjects addObject:keyObject];
+	[matcher setTargetKeyObjects:keyObjects];
+
 	// Set delegate
-	[[delegate expect] keyMatcherBeganMatching: matcher];
+	[[delegate expect] keyMatcherBeganMatching:matcher];
 	[[delegate expect] keyMatcher:matcher foundMatch:OCMOCK_ANY forKeyObject:keyObject];
-	[[delegate expect] keyMatcherFinishedMatching: matcher];
-	
+	[[delegate expect] keyMatcherFinishedMatching:matcher];
+
 	// Run and verify
 	[matcher start];
 	[matcher waitUntilFinished];
 	[delegate verify];
 }
 
-- (void)testDoubleKey
-{
+- (void)testDoubleKey {
 	BLKeyObject *keyObject;
-	
+
 	// Expect start
-	[[delegate expect] keyMatcherBeganMatching: matcher];
-	
+	[[delegate expect] keyMatcherBeganMatching:matcher];
+
 	// Setup objects
-	keyObject = [BLStringKeyObject keyObjectWithKey: @"test"];
+	keyObject = [BLStringKeyObject keyObjectWithKey:@"test"];
 	[keyObject setObject:@"Apple" forLanguage:@"en"];
-	[keyObjects addObject: keyObject];
+	[keyObjects addObject:keyObject];
 	[[delegate expect] keyMatcher:matcher foundMatch:OCMOCK_ANY forKeyObject:keyObject];
-	
-	keyObject = [BLStringKeyObject keyObjectWithKey: @"test"];
+
+	keyObject = [BLStringKeyObject keyObjectWithKey:@"test"];
 	[keyObject setObject:@"Apple" forLanguage:@"en"];
-	[keyObjects addObject: keyObject];
+	[keyObjects addObject:keyObject];
 	[[delegate expect] keyMatcher:matcher foundMatch:OCMOCK_ANY forKeyObject:keyObject];
-	
+
 	// Expect finish
-	[[delegate expect] keyMatcherFinishedMatching: matcher];
-	[matcher setTargetKeyObjects: keyObjects];
-	
+	[[delegate expect] keyMatcherFinishedMatching:matcher];
+	[matcher setTargetKeyObjects:keyObjects];
+
 	// Run and verify
 	[matcher start];
 	[matcher waitUntilFinished];
 	[delegate verify];
 }
 
-- (void)testManyKeys
-{
+- (void)testManyKeys {
 	BLKeyObject *keyObject;
-	
+
 	// Expect start
-	[[delegate expect] keyMatcherBeganMatching: matcher];
-	
+	[[delegate expect] keyMatcherBeganMatching:matcher];
+
 	// Setup objects
-	keyObject = [BLStringKeyObject keyObjectWithKey: @"test"];
+	keyObject = [BLStringKeyObject keyObjectWithKey:@"test"];
 	[keyObject setObject:@"Apple" forLanguage:@"en"];
-	[keyObjects addObject: keyObject];
+	[keyObjects addObject:keyObject];
 	[[delegate expect] keyMatcher:matcher foundMatch:OCMOCK_ANY forKeyObject:keyObject];
-	
-	keyObject = [BLStringKeyObject keyObjectWithKey: @"test"];
+
+	keyObject = [BLStringKeyObject keyObjectWithKey:@"test"];
 	[keyObject setObject:@"Blue" forLanguage:@"en"];
-	[keyObjects addObject: keyObject];
+	[keyObjects addObject:keyObject];
 	[[delegate expect] keyMatcher:matcher foundMatch:OCMOCK_ANY forKeyObject:keyObject];
-	
-	keyObject = [BLStringKeyObject keyObjectWithKey: @"test"];
+
+	keyObject = [BLStringKeyObject keyObjectWithKey:@"test"];
 	[keyObject setObject:@"Correct" forLanguage:@"en"];
-	[keyObjects addObject: keyObject];
+	[keyObjects addObject:keyObject];
 	[[delegate expect] keyMatcher:matcher foundMatch:OCMOCK_ANY forKeyObject:keyObject];
-	
-	keyObject = [BLStringKeyObject keyObjectWithKey: @"test"];
+
+	keyObject = [BLStringKeyObject keyObjectWithKey:@"test"];
 	[keyObject setObject:@"Error" forLanguage:@"en"];
-	[keyObjects addObject: keyObject];
+	[keyObjects addObject:keyObject];
 	[[delegate expect] keyMatcher:matcher foundMatch:OCMOCK_ANY forKeyObject:keyObject];
-	
-	keyObject = [BLStringKeyObject keyObjectWithKey: @"test"];
+
+	keyObject = [BLStringKeyObject keyObjectWithKey:@"test"];
 	[keyObject setObject:@"Green" forLanguage:@"en"];
-	[keyObjects addObject: keyObject];
+	[keyObjects addObject:keyObject];
 	[[delegate expect] keyMatcher:matcher foundMatch:OCMOCK_ANY forKeyObject:keyObject];
-	
+
 	// Expect finish
-	[[delegate expect] keyMatcherFinishedMatching: matcher];
-	[matcher setTargetKeyObjects: keyObjects];
-	
+	[[delegate expect] keyMatcherFinishedMatching:matcher];
+	[matcher setTargetKeyObjects:keyObjects];
+
 	// Run and verify
 	[matcher start];
 	[matcher waitUntilFinished];
 	[delegate verify];
 }
 
-- (void)testNoMatch
-{
+- (void)testNoMatch {
 	BLKeyObject *keyObject;
-	
+
 	// Setup
-	keyObject = [BLStringKeyObject keyObjectWithKey: @"test"];
+	keyObject = [BLStringKeyObject keyObjectWithKey:@"test"];
 	[keyObject setObject:@"Non-existent-word" forLanguage:@"en"];
-	[keyObjects addObject: keyObject];
-	
+	[keyObjects addObject:keyObject];
+
 	// Set delegate
-	[[delegate expect] keyMatcherBeganMatching: matcher];
-	[[delegate expect] keyMatcherFinishedMatching: matcher];
-	
+	[[delegate expect] keyMatcherBeganMatching:matcher];
+	[[delegate expect] keyMatcherFinishedMatching:matcher];
+
 	// Run and verify
 	[matcher start];
 	[matcher waitUntilFinished];
 	[delegate verify];
 }
 
-- (void)testAborting
-{
+- (void)testAborting {
 	BLKeyObject *keyObject;
-	
+
 	// Setup
-	keyObject = [BLStringKeyObject keyObjectWithKey: @"test"];
+	keyObject = [BLStringKeyObject keyObjectWithKey:@"test"];
 	[keyObject setObject:@"Undo" forLanguage:@"en"];
-	[keyObjects addObject: keyObject];
-	
+	[keyObjects addObject:keyObject];
+
 	// Set delegate
-	[[delegate expect] keyMatcherBeganMatching: matcher];
+	[[delegate expect] keyMatcherBeganMatching:matcher];
 	// This should actually find 1 match now (see -testDelegate:), but hopefully we abort beforehand...
-	[[delegate expect] keyMatcherFinishedMatching: matcher];
-	
+	[[delegate expect] keyMatcherFinishedMatching:matcher];
+
 	// Run and verify
 	[matcher start];
 	[matcher stop];
 	[delegate verify];
 }
 
-- (void)testBaseLanguage
-{
+- (void)testBaseLanguage {
 	BLKeyObject *keyObject;
-	
+
 	// Expect start
-	[[delegate expect] keyMatcherBeganMatching: matcher];
-	
+	[[delegate expect] keyMatcherBeganMatching:matcher];
+
 	// Setup objects
-	keyObject = [BLStringKeyObject keyObjectWithKey: @"test"];
+	keyObject = [BLStringKeyObject keyObjectWithKey:@"test"];
 	[keyObject setObject:@"Cell" forLanguage:@"en"];
-	[keyObjects addObject: keyObject];
+	[keyObjects addObject:keyObject];
 	[[delegate expect] keyMatcher:matcher
 					   foundMatch:allOf(
-										valueForKey(@"targetLanguage", equalTo(@"de_DE")),
-										valueForKey(@"actualTargetLanguage", equalTo(@"de")), nil
-										)
+									  valueForKey(@"targetLanguage", equalTo(@"de_DE")),
+									  valueForKey(@"actualTargetLanguage", equalTo(@"de")), nil)
 					 forKeyObject:keyObject];
-	
-	keyObject = [BLStringKeyObject keyObjectWithKey: @"test"];
+
+	keyObject = [BLStringKeyObject keyObjectWithKey:@"test"];
 	[keyObject setObject:@"Apple" forLanguage:@"en"];
-	[keyObjects addObject: keyObject];
+	[keyObjects addObject:keyObject];
 	[[delegate expect] keyMatcher:matcher
 					   foundMatch:allOf(
-										valueForKey(@"targetLanguage", equalTo(@"de_DE")),
-										valueForKey(@"actualTargetLanguage", equalTo(@"de")), nil
-										)
+									  valueForKey(@"targetLanguage", equalTo(@"de_DE")),
+									  valueForKey(@"actualTargetLanguage", equalTo(@"de")), nil)
 					 forKeyObject:keyObject];
-	
+
 	// Expect finish
-	[[delegate expect] keyMatcherFinishedMatching: matcher];
-	[matcher setTargetKeyObjects: keyObjects];
-	[matcher setTargetLanguage: @"de_DE"];
-	
+	[[delegate expect] keyMatcherFinishedMatching:matcher];
+	[matcher setTargetKeyObjects:keyObjects];
+	[matcher setTargetLanguage:@"de_DE"];
+
 	// Run and verify
 	[matcher start];
 	[matcher waitUntilFinished];
 	[delegate verify];
 }
 
-- (void)testNoMatchingKeys
-{
+- (void)testNoMatchingKeys {
 	matcher.matchingKeyObjects = nil;
-	
+
 	// Setup
-	BLKeyObject *keyObject = [BLStringKeyObject keyObjectWithKey: @"test"];
+	BLKeyObject *keyObject = [BLStringKeyObject keyObjectWithKey:@"test"];
 	[keyObject setObject:@"Apple" forLanguage:@"en"];
-	[keyObjects addObject: keyObject];
-	[matcher setTargetKeyObjects: keyObjects];
-	
+	[keyObjects addObject:keyObject];
+	[matcher setTargetKeyObjects:keyObjects];
+
 	// Set delegate
-	[[delegate expect] keyMatcherBeganMatching: matcher];
-	[[delegate expect] keyMatcherFinishedMatching: matcher];
-	
+	[[delegate expect] keyMatcherBeganMatching:matcher];
+	[[delegate expect] keyMatcherFinishedMatching:matcher];
+
 	// Run and verify
 	[matcher start];
 	[matcher waitUntilFinished];
 	[delegate verify];
 }
 
-- (void)testNoMatchingNoTargetKeys
-{
+- (void)testNoMatchingNoTargetKeys {
 	matcher.matchingKeyObjects = nil;
-	[matcher setTargetKeyObjects: nil];
-	
+	[matcher setTargetKeyObjects:nil];
+
 	// Set delegate
-	[[delegate expect] keyMatcherBeganMatching: matcher];
-	[[delegate expect] keyMatcherFinishedMatching: matcher];
-	
+	[[delegate expect] keyMatcherBeganMatching:matcher];
+	[[delegate expect] keyMatcherFinishedMatching:matcher];
+
 	// Run and verify
 	[matcher start];
 	[matcher waitUntilFinished];
 	[delegate verify];
 }
-
 
 #pragma mark - Dummy Delegate
 
-- (void)keyMatcherBeganMatching:(LTKeyMatcher *)matcher
-{
+- (void)keyMatcherBeganMatching:(LTKeyMatcher *)matcher {
 }
-- (void)keyMatcherFinishedMatching:(LTKeyMatcher *)matcher
-{
+- (void)keyMatcherFinishedMatching:(LTKeyMatcher *)matcher {
 }
-- (void)keyMatcher:(LTKeyMatcher *)matcher foundMatch:(LTKeyMatch *)match forKeyObject:(BLKeyObject *)target
-{
+- (void)keyMatcher:(LTKeyMatcher *)matcher foundMatch:(LTKeyMatch *)match forKeyObject:(BLKeyObject *)target {
 }
 
 @end

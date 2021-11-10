@@ -6,10 +6,9 @@
 //  Copyright 2009 Blue Technologies Group. All rights reserved.
 //
 
-@interface XcodeProjectParserTest : SenTestCase
-{
-	BLXcodeProjectParser	*parser;
-	NSString				*projectPath;
+@interface XcodeProjectParserTest : SenTestCase {
+	BLXcodeProjectParser *parser;
+	NSString *projectPath;
 }
 
 @end

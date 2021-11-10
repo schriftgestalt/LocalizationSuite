@@ -8,11 +8,10 @@
 
 @class CustomPathCreator;
 
-@interface NibDocument : NSDocument <BLDocumentProtocol>
-{
+@interface NibDocument : NSDocument <BLDocumentProtocol> {
 	LIPreviewController *_controller;
-	BLFileObject		*_fileObject;
-	CustomPathCreator	*_pathCreator;
+	BLFileObject *_fileObject;
+	CustomPathCreator *_pathCreator;
 }
 
 @end

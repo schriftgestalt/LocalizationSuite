@@ -2,7 +2,7 @@
  @header
  NPKeyObjectAdditions.h
  Created by max on 02.09.09.
- 
+
  @copyright 2009 Localization Suite. All rights reserved.
  */
 

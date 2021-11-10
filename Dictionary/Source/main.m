@@ -8,10 +8,9 @@
 
 #import "Controller.h"
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
 #ifdef DEBUG
 	NSZombiesEnabled = YES;
 #endif
-    return NSApplicationMain(argc, (const char **) argv);
+	return NSApplicationMain(argc, (const char **)argv);
 }

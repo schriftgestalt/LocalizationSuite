@@ -8,8 +8,7 @@
 
 #import <Sparkle/Sparkle.h>
 
-@interface Controller : NSObject <SUVersionComparison> {
-}
+@interface Controller : NSObject <SUVersionComparison>
 
 // Application Boot
 + (Controller *)sharedInstance;

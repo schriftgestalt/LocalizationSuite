@@ -2,17 +2,15 @@
  @header
  BLTMXExporter.h
  Created by max on 22.01.10.
- 
+
  @copyright 2004-2010 the Localization Suite Foundation. All rights reserved.
  */
-
 
 /*!
  @abstract Exports file objects to a TMX (XML Localization Interchange File Format) files.
  */
-@interface BLTMXExporter : NSObject
-{
-	IBOutlet NSView					*optionsView;
+@interface BLTMXExporter : NSObject {
+	IBOutlet NSView *optionsView;
 }
 
 /*!
@@ -21,15 +19,14 @@
  */
 + (void)exportTMXFromObjects:(NSArray *)objects inDocument:(NSDocument<BLDocumentProtocol> *)document;
 
-
 /*!
  @enum BLTMXExporterSettings
  @abstract The options that can be given to the TMX exporter.
- 
+
  @const BLTMXExporterAllowRichText	RichText (RTF) contents will be included in the exported files.
  */
 typedef enum {
-	BLTMXExporterAllowRichText	= 1<<0
+	BLTMXExporterAllowRichText = 1 << 0
 } BLTMXExporterSettings;
 
 /*!

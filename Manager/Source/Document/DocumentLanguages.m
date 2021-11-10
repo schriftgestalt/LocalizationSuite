@@ -22,27 +22,27 @@
 	[languageCoordinator addLanguages];
 }
 
-- (IBAction)beginAddLanguage:(id)sender
-{
+- (IBAction)beginAddLanguage:(id)sender {
 	LILanguageSelection *selection = [LILanguageSelection languageSelection];
 	// Display
-	[selection setMessageText: NSLocalizedString(@"AddLanguagesTitle", nil)];
-	[selection setInformativeText: NSLocalizedString(@"AddLanguagesText", nil)];
-	[selection addButtonWithTitle: NSLocalizedString(@"Add", nil)];
-	[selection addButtonWithTitle: NSLocalizedString(@"Cancel", nil)];
-	
+	[selection setMessageText:NSLocalizedString(@"AddLanguagesTitle", nil)];
+	[selection setInformativeText:NSLocalizedString(@"AddLanguagesText", nil)];
+	[selection addButtonWithTitle:NSLocalizedString(@"Add", nil)];
+	[selection addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
+
 	// Languages
-	NSMutableArray *languages = [NSMutableArray arrayWithArray: [BLLanguageTranslator allLanguageIdentifiers]];
-	[languages removeObjectsInArray: self.languages];
+	NSMutableArray *languages = [NSMutableArray arrayWithArray:[BLLanguageTranslator allLanguageIdentifiers]];
+	[languages removeObjectsInArray:self.languages];
 	selection.availableLanguages = languages;
 	selection.allowMultipleSelection = YES;
-	
-	[selection beginSheetModalForWindow:[self windowForSheet] completionHandler:^(NSInteger result) {
-		if (result != NSAlertFirstButtonReturn)
-			return;
-		
-		[self addLanguage:selection.selectedLanguages.firstObject];
-	}];
+
+	[selection beginSheetModalForWindow:[self windowForSheet]
+					  completionHandler:^(NSInteger result) {
+						  if (result != NSAlertFirstButtonReturn)
+							  return;
+
+						  [self addLanguage:selection.selectedLanguages.firstObject];
+					  }];
 }
 
 - (IBAction)addCustomLanguage:(id)sender {

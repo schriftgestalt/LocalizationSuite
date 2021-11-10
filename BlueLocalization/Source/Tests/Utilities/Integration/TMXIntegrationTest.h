@@ -6,8 +6,7 @@
 //  Copyright 2010 The Soulmen. All rights reserved.
 //
 
-@interface TMXIntegrationTest : SenTestCase
-{
+@interface TMXIntegrationTest : SenTestCase {
 	NSString *tmpPath;
 }
 

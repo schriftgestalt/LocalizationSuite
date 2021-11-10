@@ -6,11 +6,10 @@
 //  Copyright 2009 Blue Technologies Group. All rights reserved.
 //
 
-@interface XcodeProjectModificationTest : SenTestCase
-{
-	BLXcodeProjectItem		*mainGroup;
-	NSMutableDictionary		*objectsDict;
-	BLXcodeProjectParser	*parser;
+@interface XcodeProjectModificationTest : SenTestCase {
+	BLXcodeProjectItem *mainGroup;
+	NSMutableDictionary *objectsDict;
+	BLXcodeProjectParser *parser;
 }
 
 @end

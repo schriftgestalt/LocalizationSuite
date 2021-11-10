@@ -2,7 +2,7 @@
  @header
  BLDatabaseDocumentActions.m
  Created by Max Seelemann on 28.04.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 

@@ -8,7 +8,7 @@
 
 /*!
  @abstract Available constants for tools.
- 
+
  @const BLToolIBTool		The ibtool command line utility.
  */
 typedef enum {

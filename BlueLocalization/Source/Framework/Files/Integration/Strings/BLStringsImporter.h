@@ -2,7 +2,7 @@
  @header
  BLStringsImporter.h
  Created by max on 27.02.09.
- 
+
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
@@ -10,9 +10,8 @@
  @abstract An importer class that reads files mapping one language to another into file objects.
  @discussion Basically this is the inverse operation of BLStringsExporter.
  */
-@interface BLStringsImporter : NSObject
-{
-	NSDocument<BLDocumentProtocol>	*_document;
+@interface BLStringsImporter : NSObject {
+	NSDocument<BLDocumentProtocol> *_document;
 }
 
 /*!

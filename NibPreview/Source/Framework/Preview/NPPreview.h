@@ -2,7 +2,7 @@
  @header
  NPPreview.h
  Created by max on 07.06.08.
- 
+
  @copyright 2008-2009 Localization Suite. All rights reserved.
  */
 
@@ -14,14 +14,13 @@
  @see NPDescriptionLoader NPDescriptionLoader
  @see NPPreviewBuilder NPPreviewBuilder
  */
-@interface NPPreview : NSObject
-{
-	NPPreviewBuilder		*_builder;
-	BLFileObject			*_fileObject;
-	NSString				*_language;
-	NPDescriptionLoader	*_loader;
-	NSString				*_path;
-	BOOL					_snapshot;
+@interface NPPreview : NSObject {
+	NPPreviewBuilder *_builder;
+	BLFileObject *_fileObject;
+	NSString *_language;
+	NPDescriptionLoader *_loader;
+	NSString *_path;
+	BOOL _snapshot;
 }
 
 /*!
@@ -37,16 +36,16 @@
 
 /*!
  @abstract The options that can (and should) be set when updating a nib file.
- 
+
  @const NPPreviewWriteFrames	Write the current frames of all NSView's in the preview.
  @const NPPreviewWriteStrings	Write the current localizable string values of all preview elements - this requires the preview to have been associated with a file object beforehand. Otherwise nothing happens.
  @const NPPreviewUpdateFile		Instead of creating a copy of the original preview object, just update the file at the target path.
  */
 typedef enum {
-	NPPreviewWriteFrames	= 1<<0,
-	NPPreviewWriteStrings	= 1<<1,
-	
-	NPPreviewUpdateFile		= 1<<16
+	NPPreviewWriteFrames = 1 << 0,
+	NPPreviewWriteStrings = 1 << 1,
+
+	NPPreviewUpdateFile = 1 << 16
 } NPPreviewWriteActions;
 
 /*!
@@ -60,7 +59,7 @@ typedef enum {
  @discussion Instances are of the class NPObject.
  @see NPObject NPObject
  */
-@property(strong, readonly) NSArray *rootObjects;
+@property (strong, readonly) NSArray *rootObjects;
 
 /*!
  @abstract Returns a preview object for a interface element with a given id.
@@ -72,14 +71,14 @@ typedef enum {
  @abstract The file object associated with the preview.
  @discussion Changing this property will recursively associate contained key objects with NPObjects.
  */
-@property(nonatomic, strong) BLFileObject *associatedFileObject;
+@property (nonatomic, strong) BLFileObject *associatedFileObject;
 
 /*!
  @abstract The language the preview is to be displayed in.
  @discussion Setting a language will load the localization of the associatedFileObject into the preview object tree.
  Defaults to nil.
  */
-@property(nonatomic, strong) NSString *displayLanguage;
+@property (nonatomic, strong) NSString *displayLanguage;
 
 /*!
  @abstract Sets the display language as usual, but sets values from the snapshot instead.
@@ -88,4 +87,3 @@ typedef enum {
 - (void)setDisplayLanguage:(NSString *)language useSnapshot:(BOOL)snapshot;
 
 @end
-
