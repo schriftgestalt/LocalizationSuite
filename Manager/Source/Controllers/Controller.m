@@ -166,13 +166,6 @@ id __sharedControllerInstance;
 		[(FileContent *)controller deleteTranslation:sender];
 }
 
-- (IBAction)autotranslate:(id)sender {
-	NSWindowController *controller = [[NSApp keyWindow] windowController];
-
-	if ([controller isKindOfClass:[FileContent class]])
-		[(FileContent *)controller autotranslate:sender];
-}
-
 #pragma mark -
 
 - (IBAction)addLanguage:(id)sender {

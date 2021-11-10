@@ -433,7 +433,7 @@ CA
                             <menuItem title="Autotranslation…" id="644">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="autotranslate:" target="210" id="646"/>
+                                    <action selector="autotranslate:" target="-1" id="KpD-5S-k6C"/>
                                 </connections>
                             </menuItem>
                         </items>

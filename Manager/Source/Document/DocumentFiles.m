@@ -14,7 +14,7 @@
 #import "FileDetail.h"
 #import "FilePreview.h"
 #import "Preferences.h"
-
+#import <BlueLocalization/BLStringsFileObject.h>
 #import "NSAlert-Extensions.h"
 
 @implementation Document (DocumentFiles)
@@ -258,6 +258,24 @@
 		}
 
 		[[NSWorkspace sharedWorkspace] selectFile:filePath inFileViewerRootedAtPath:folderPath];
+	}
+}
+
+- (IBAction)autotranslate:(id)sender {
+	if (!_processManager)
+		_processManager = [[BLProcessManager alloc] initWithDocument:self];
+//	if (!_processDisplay) {
+//		_processDisplay = [[LIProcessDisplay alloc] initWithProcessManager:_processManager];
+//		_processDisplay.windowForSheet = [self window];
+//	}
+	[_processManager startWithName:@"Autotranslating"];
+	for (BLStringsFileObject *file in [self getSelectedObjects:YES]) {
+		for (NSString *language in self.languages) {
+			if ([[self referenceLanguage] isEqualToString:language]) {
+				continue;
+			}
+			[_processManager enqueueStep:[LTAutotranslationStep stepForAutotranslatingObjects:file.objects forLanguage:language andReferenceLanguage:[self referenceLanguage]]];
+		}
 	}
 }
 

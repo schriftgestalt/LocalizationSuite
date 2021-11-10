@@ -41,7 +41,6 @@
 
 - (IBAction)copyFromReference:(id)sender;
 - (IBAction)deleteTranslation:(id)sender;
-- (IBAction)autotranslate:(id)sender;
 
 // Languages menu
 - (IBAction)addLanguage:(id)sender;
