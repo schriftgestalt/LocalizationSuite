@@ -62,7 +62,7 @@
 	
 	_running = YES;
 	_abort = NO;
-	[NSThread detachNewThreadSelector:@selector(matchingThread) toTarget:self withObject:nil];
+	[self matchingThread];
 }
 
 - (void)stop

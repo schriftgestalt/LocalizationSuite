@@ -42,7 +42,7 @@
 - (void)matchingThread
 {
 	@autoreleasepool {
-		NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+		NSOperationQueue *queue = [NSOperationQueue mainQueue];
 		
 		// Init
 		NSString *targetString = [_keyObject stringForLanguage: _matchLanguage];
