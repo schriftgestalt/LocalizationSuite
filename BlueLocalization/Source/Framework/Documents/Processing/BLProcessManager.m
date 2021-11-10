@@ -141,9 +141,9 @@
 		currentStep = [executingOperations objectAtIndex: 0];
 	else if ([allOperations count])
 		currentStep = [allOperations objectAtIndex: 0];
-	
-	dispatch_async(dispatch_get_main_queue(), ^{ self.currentStep = currentStep; });
-	
+	if ([currentStep respondsToSelector:@selector(action)]) {
+		dispatch_async(dispatch_get_main_queue(), ^{ self.currentStep = currentStep; });
+	}
 	// Update the UI
 	NSMutableArray *stepsDone = [NSMutableArray arrayWithArray: [change valueForKey: NSKeyValueChangeOldKey]];
 	[stepsDone removeObjectsInArray: [change valueForKey: NSKeyValueChangeNewKey]];
