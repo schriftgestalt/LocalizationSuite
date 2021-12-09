@@ -14,14 +14,6 @@
 		50241EA70EC35D8300122C6F /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50241EA50EC35D8300122C6F /* Document.xib */; };
 		50241EAD0EC35DA700122C6F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50241EAB0EC35DA700122C6F /* MainMenu.xib */; };
 		504333A51049FD4D005BD65F /* Editor.m in Sources */ = {isa = PBXBuildFile; fileRef = 504333A41049FD4D005BD65F /* Editor.m */; };
-		504E099C130057EF006B5F4B /* BlueLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E0998130057EF006B5F4B /* BlueLocalization.framework */; };
-		504E099D130057EF006B5F4B /* NibPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E0999130057EF006B5F4B /* NibPreview.framework */; };
-		504E099E130057EF006B5F4B /* LocTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E099A130057EF006B5F4B /* LocTools.framework */; };
-		504E099F130057EF006B5F4B /* LocInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E099B130057EF006B5F4B /* LocInterface.framework */; };
-		504E09A0130057F4006B5F4B /* BlueLocalization.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E0998130057EF006B5F4B /* BlueLocalization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		504E09A1130057F4006B5F4B /* NibPreview.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E0999130057EF006B5F4B /* NibPreview.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		504E09A2130057F4006B5F4B /* LocTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E099A130057EF006B5F4B /* LocTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		504E09A3130057F4006B5F4B /* LocInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E099B130057EF006B5F4B /* LocInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		50515A0F03EDBE3000749D6B /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 50515A0D03EDBE3000749D6B /* Controller.m */; };
 		5052605705D5C32300429FDF /* Localizer.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5052605505D5C32300429FDF /* Localizer.icns */; };
 		50597F010FCE8FF7001275A5 /* Window.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50597EFF0FCE8FF7001275A5 /* Window.strings */; };
@@ -37,9 +29,83 @@
 		56370B451D42136B0024CD02 /* GSGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56370B441D42136B0024CD02 /* GSGroupView.m */; };
 		56370B481D4221700024CD02 /* GSLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 56370B471D4221700024CD02 /* GSLine.m */; };
 		565DBF2F1D42066C000513F0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565DBF2E1D42066C000513F0 /* Cocoa.framework */; };
+		56AEB321273BD7C1008F3EAE /* BlueLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AEB2F4273BD774008F3EAE /* BlueLocalization.framework */; };
+		56AEB322273BD7C1008F3EAE /* LocInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AEB311273BD79F008F3EAE /* LocInterface.framework */; };
+		56AEB323273BD7C1008F3EAE /* LocTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AEB308273BD78D008F3EAE /* LocTools.framework */; };
+		56AEB324273BD7C1008F3EAE /* NibPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AEB2FF273BD780008F3EAE /* NibPreview.framework */; };
+		56AEB325273BD7D1008F3EAE /* BlueLocalization.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56AEB2F4273BD774008F3EAE /* BlueLocalization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56AEB326273BD7D1008F3EAE /* NibPreview.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56AEB2FF273BD780008F3EAE /* NibPreview.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56AEB327273BD7D1008F3EAE /* LocTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56AEB308273BD78D008F3EAE /* LocTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56AEB328273BD7D1008F3EAE /* LocInterface.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56AEB311273BD79F008F3EAE /* LocInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8D15AC310486D014006FF6A4 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* Document.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56AEB2F3273BD774008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB2ED273BD774008F3EAE /* BlueLocalization.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = BlueLocalization;
+		};
+		56AEB2F5273BD774008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB2ED273BD774008F3EAE /* BlueLocalization.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5054D2C71404D04900434EAC;
+			remoteInfo = "BlueLocalization Tests";
+		};
+		56AEB2F7273BD774008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB2ED273BD774008F3EAE /* BlueLocalization.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 507F05B51404E3A00008D824;
+			remoteInfo = TestHost;
+		};
+		56AEB2FE273BD780008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB2F9273BD780008F3EAE /* NibPreview.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 50CE95AD0F5BC41500026BB5;
+			remoteInfo = NibPreview;
+		};
+		56AEB300273BD780008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB2F9273BD780008F3EAE /* NibPreview.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 503E127D1404DA30009FA279;
+			remoteInfo = "NibPreview Tests";
+		};
+		56AEB307273BD78D008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB302273BD78D008F3EAE /* LocTools.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = LocTools;
+		};
+		56AEB309273BD78D008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB302273BD78D008F3EAE /* LocTools.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 503E12591404D62E009FA279;
+			remoteInfo = "LocTools Tests";
+		};
+		56AEB310273BD79F008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB30B273BD79F008F3EAE /* LocInterface.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = LocInterface;
+		};
+		56AEB312273BD79F008F3EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AEB30B273BD79F008F3EAE /* LocInterface.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 50F209B60F88DA5900751057;
+			remoteInfo = InterfaceTester;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		5017C9B0072C0A7A002C21A7 /* CopyFiles */ = {
@@ -48,11 +114,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				56AEB325273BD7D1008F3EAE /* BlueLocalization.framework in CopyFiles */,
+				56AEB326273BD7D1008F3EAE /* NibPreview.framework in CopyFiles */,
+				56AEB327273BD7D1008F3EAE /* LocTools.framework in CopyFiles */,
+				56AEB328273BD7D1008F3EAE /* LocInterface.framework in CopyFiles */,
 				50C3D1A70FC37A3D005AEF1A /* Sparkle.framework in CopyFiles */,
-				504E09A0130057F4006B5F4B /* BlueLocalization.framework in CopyFiles */,
-				504E09A1130057F4006B5F4B /* NibPreview.framework in CopyFiles */,
-				504E09A2130057F4006B5F4B /* LocTools.framework in CopyFiles */,
-				504E09A3130057F4006B5F4B /* LocInterface.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,10 +138,6 @@
 		5021C2A0113155600057F2D9 /* Localizer.help */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Localizer.help; path = Resources/Localizer.help; sourceTree = "<group>"; };
 		504333A31049FD4D005BD65F /* Editor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Editor.h; sourceTree = "<group>"; };
 		504333A41049FD4D005BD65F /* Editor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Editor.m; sourceTree = "<group>"; };
-		504E0998130057EF006B5F4B /* BlueLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BlueLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		504E0999130057EF006B5F4B /* NibPreview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NibPreview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		504E099A130057EF006B5F4B /* LocTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LocTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		504E099B130057EF006B5F4B /* LocInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LocInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50515A0C03EDBE3000749D6B /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		50515A0D03EDBE3000749D6B /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
 		5052605505D5C32300429FDF /* Localizer.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Localizer.icns; path = Icons/Localizer.icns; sourceTree = "<group>"; };
@@ -100,8 +162,14 @@
 		56370B441D42136B0024CD02 /* GSGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGroupView.m; sourceTree = "<group>"; };
 		56370B461D4221700024CD02 /* GSLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLine.h; sourceTree = "<group>"; };
 		56370B471D4221700024CD02 /* GSLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLine.m; sourceTree = "<group>"; };
+		56378E5C2761F12D0045ADD7 /* common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = common.xcconfig; path = ../Shared/Source/common.xcconfig; sourceTree = "<group>"; };
+		56378E662761F12D0045ADD7 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = debug.xcconfig; path = ../Shared/Source/debug.xcconfig; sourceTree = "<group>"; };
 		56528DB02459867D0030395E /* Localizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Localizer.entitlements; sourceTree = "<group>"; };
 		565DBF2E1D42066C000513F0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		56AEB2ED273BD774008F3EAE /* BlueLocalization.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlueLocalization.xcodeproj; path = ../BlueLocalization/BlueLocalization.xcodeproj; sourceTree = "<group>"; };
+		56AEB2F9273BD780008F3EAE /* NibPreview.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NibPreview.xcodeproj; path = ../NibPreview/NibPreview.xcodeproj; sourceTree = "<group>"; };
+		56AEB302273BD78D008F3EAE /* LocTools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LocTools.xcodeproj; path = ../LocTools/LocTools.xcodeproj; sourceTree = "<group>"; };
+		56AEB30B273BD79F008F3EAE /* LocInterface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LocInterface.xcodeproj; path = ../LocInterface/LocInterface.xcodeproj; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* Localizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Localizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,13 +179,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56AEB321273BD7C1008F3EAE /* BlueLocalization.framework in Frameworks */,
+				56AEB322273BD7C1008F3EAE /* LocInterface.framework in Frameworks */,
+				56AEB323273BD7C1008F3EAE /* LocTools.framework in Frameworks */,
+				56AEB324273BD7C1008F3EAE /* NibPreview.framework in Frameworks */,
 				565DBF2F1D42066C000513F0 /* Cocoa.framework in Frameworks */,
 				50C3D1A60FC37A32005AEF1A /* Sparkle.framework in Frameworks */,
 				501195EC1152E76100E54DF2 /* Quartz.framework in Frameworks */,
-				504E099C130057EF006B5F4B /* BlueLocalization.framework in Frameworks */,
-				504E099D130057EF006B5F4B /* NibPreview.framework in Frameworks */,
-				504E099E130057EF006B5F4B /* LocTools.framework in Frameworks */,
-				504E099F130057EF006B5F4B /* LocInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +250,8 @@
 				50597EFF0FCE8FF7001275A5 /* Window.strings */,
 				5021C2A0113155600057F2D9 /* Localizer.help */,
 				50C3D25B0FC37D40005AEF1A /* dsa_pub.pem */,
+				56378E5C2761F12D0045ADD7 /* common.xcconfig */,
+				56378E662761F12D0045ADD7 /* debug.xcconfig */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -195,10 +265,10 @@
 				501195EB1152E76100E54DF2 /* Quartz.framework */,
 				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
 				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
-				504E0998130057EF006B5F4B /* BlueLocalization.framework */,
-				504E0999130057EF006B5F4B /* NibPreview.framework */,
-				504E099A130057EF006B5F4B /* LocTools.framework */,
-				504E099B130057EF006B5F4B /* LocInterface.framework */,
+				56AEB2ED273BD774008F3EAE /* BlueLocalization.xcodeproj */,
+				56AEB2F9273BD780008F3EAE /* NibPreview.xcodeproj */,
+				56AEB302273BD78D008F3EAE /* LocTools.xcodeproj */,
+				56AEB30B273BD79F008F3EAE /* LocInterface.xcodeproj */,
 				505665A0138417A800E8AB31 /* BWToolkitFramework.framework */,
 			);
 			name = Frameworks;
@@ -251,6 +321,43 @@
 			path = Source/Interface;
 			sourceTree = "<group>";
 		};
+		56AEB2EE273BD774008F3EAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56AEB2F4273BD774008F3EAE /* BlueLocalization.framework */,
+				56AEB2F6273BD774008F3EAE /* BlueLocalization Tests.octest */,
+				56AEB2F8273BD774008F3EAE /* TestHost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56AEB2FA273BD780008F3EAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56AEB2FF273BD780008F3EAE /* NibPreview.framework */,
+				56AEB301273BD780008F3EAE /* NibPreview Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56AEB303273BD78D008F3EAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56AEB308273BD78D008F3EAE /* LocTools.framework */,
+				56AEB30A273BD78D008F3EAE /* LocTools Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56AEB30C273BD79F008F3EAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56AEB311273BD79F008F3EAE /* LocInterface.framework */,
+				56AEB313273BD79F008F3EAE /* InterfaceTester.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,8 +386,7 @@
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = "Localization Suite";
 			};
 			buildConfigurationList = 501EBC8B0855AE8600FBC27B /* Build configuration list for PBXProject "Localizer" */;
@@ -296,12 +402,96 @@
 			);
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* Localizer */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 56AEB2EE273BD774008F3EAE /* Products */;
+					ProjectRef = 56AEB2ED273BD774008F3EAE /* BlueLocalization.xcodeproj */;
+				},
+				{
+					ProductGroup = 56AEB30C273BD79F008F3EAE /* Products */;
+					ProjectRef = 56AEB30B273BD79F008F3EAE /* LocInterface.xcodeproj */;
+				},
+				{
+					ProductGroup = 56AEB303273BD78D008F3EAE /* Products */;
+					ProjectRef = 56AEB302273BD78D008F3EAE /* LocTools.xcodeproj */;
+				},
+				{
+					ProductGroup = 56AEB2FA273BD780008F3EAE /* Products */;
+					ProjectRef = 56AEB2F9273BD780008F3EAE /* NibPreview.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D15AC270486D014006FF6A4 /* Localizer */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		56AEB2F4273BD774008F3EAE /* BlueLocalization.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BlueLocalization.framework;
+			remoteRef = 56AEB2F3273BD774008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB2F6273BD774008F3EAE /* BlueLocalization Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "BlueLocalization Tests.octest";
+			remoteRef = 56AEB2F5273BD774008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB2F8273BD774008F3EAE /* TestHost.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TestHost.app;
+			remoteRef = 56AEB2F7273BD774008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB2FF273BD780008F3EAE /* NibPreview.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NibPreview.framework;
+			remoteRef = 56AEB2FE273BD780008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB301273BD780008F3EAE /* NibPreview Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "NibPreview Tests.octest";
+			remoteRef = 56AEB300273BD780008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB308273BD78D008F3EAE /* LocTools.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LocTools.framework;
+			remoteRef = 56AEB307273BD78D008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB30A273BD78D008F3EAE /* LocTools Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "LocTools Tests.octest";
+			remoteRef = 56AEB309273BD78D008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB311273BD79F008F3EAE /* LocInterface.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LocInterface.framework;
+			remoteRef = 56AEB310273BD79F008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56AEB313273BD79F008F3EAE /* InterfaceTester.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = InterfaceTester.app;
+			remoteRef = 56AEB312273BD79F008F3EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D15AC2B0486D014006FF6A4 /* Resources */ = {
@@ -390,24 +580,17 @@
 		501EBC880855AE8600FBC27B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: Georg Seifert (X2L8375ZQ7)";
 				CODE_SIGN_STYLE = Manual;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = X2L8375ZQ7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Localizer_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MARKETING_VERSION = 14.2;
-				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.loc-suite.localizer";
 				PRODUCT_NAME = Localizer;
-				WARNING_CFLAGS = "-Wmost";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -416,108 +599,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Localizer.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 21;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = X2L8375ZQ7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Localizer_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MARKETING_VERSION = 14.2;
-				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.loc-suite.localizer";
 				PRODUCT_NAME = Localizer;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				WARNING_CFLAGS = "-Wmost";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 		501EBC8C0855AE8600FBC27B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56378E662761F12D0045ADD7 /* debug.xcconfig */;
 			buildSettings = {
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks/;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				OBJC_OLD_DISPATCH_PROTOTYPES = 1;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
 		501EBC8D0855AE8600FBC27B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56378E5C2761F12D0045ADD7 /* common.xcconfig */;
 			buildSettings = {
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks/;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				OBJC_OLD_DISPATCH_PROTOTYPES = 1;
-				SDKROOT = macosx;
-				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};

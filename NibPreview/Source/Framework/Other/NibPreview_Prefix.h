@@ -3,7 +3,7 @@
 //
 
 #ifdef __OBJC__
-#import <BlueLocalization/BlueLocalization.h>
 #import <Cocoa/Cocoa.h>
+#import <BlueLocalization/BlueLocalization.h>
 #import <NibPreview/NibPreview.h>
 #endif

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50234D061404DC3F0069676A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50234D051404DC3F0069676A /* Cocoa.framework */; };
 		503E127F1404DA30009FA279 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503E127E1404DA30009FA279 /* SenTestingKit.framework */; };
 		503E12801404DA30009FA279 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		503E12921404DAB8009FA279 /* DescriptionLoaderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 509255880F5C7BF700146257 /* DescriptionLoaderTest.m */; };
@@ -48,6 +47,7 @@
 		5051124511D56F21003A53D7 /* NPWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5051122A11D56F21003A53D7 /* NPWindowView.m */; };
 		508C547114054B3100D354A0 /* Text.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 508C547014054B3100D354A0 /* Text.rtf */; };
 		509254F40F5C68F000146257 /* NibPreview.h in Headers */ = {isa = PBXBuildFile; fileRef = 509254E30F5C68F000146257 /* NibPreview.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56D9C36F2761E8B300EC3FDF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50234D051404DC3F0069676A /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +116,8 @@
 		509257FE0F5CC06B00146257 /* PreviewBuilderTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewBuilderTest.h; sourceTree = "<group>"; };
 		509257FF0F5CC06B00146257 /* PreviewBuilderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewBuilderTest.m; sourceTree = "<group>"; };
 		50CE95AD0F5BC41500026BB5 /* NibPreview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NibPreview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56378E6B2761F1A80045ADD7 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = debug.xcconfig; path = ../Shared/Source/debug.xcconfig; sourceTree = "<group>"; };
+		56378E6C2761F1A80045ADD7 /* common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = common.xcconfig; path = ../Shared/Source/common.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50234D061404DC3F0069676A /* Cocoa.framework in Frameworks */,
+				56D9C36F2761E8B300EC3FDF /* Cocoa.framework in Frameworks */,
 				504E09B113005832006B5F4B /* BlueLocalization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +174,8 @@
 				509255A70F5C7D1F00146257 /* Test Data */,
 				509257C30F5CBBC900146257 /* Unit Tests-Info.plist */,
 				508C547014054B3100D354A0 /* Text.rtf */,
+				56378E6C2761F1A80045ADD7 /* common.xcconfig */,
+				56378E6B2761F1A80045ADD7 /* debug.xcconfig */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -554,21 +558,12 @@
 		50CE95AF0F5BC41600026BB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)\"";
 				FRAMEWORK_VERSION = A;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Framework/Other/NibPreview_Prefix.h;
 				INFOPLIST_FILE = "Resources/NibPreview-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks/";
-				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks;
 				PRODUCT_BUNDLE_IDENTIFIER = org.locsuite.nibpreview;
 				PRODUCT_NAME = NibPreview;
 				SKIP_INSTALL = YES;
@@ -578,21 +573,12 @@
 		50CE95B00F5BC41600026BB5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)\"";
 				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Framework/Other/NibPreview_Prefix.h;
 				INFOPLIST_FILE = "Resources/NibPreview-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks/";
-				LD_RUNPATH_SEARCH_PATHS = /Developer/Library/PrivateFrameworks;
 				PRODUCT_BUNDLE_IDENTIFIER = org.locsuite.nibpreview;
 				PRODUCT_NAME = NibPreview;
 				SKIP_INSTALL = YES;
@@ -601,80 +587,15 @@
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56378E6B2761F1A80045ADD7 /* debug.xcconfig */;
 			buildSettings = {
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56378E6C2761F1A80045ADD7 /* common.xcconfig */;
 			buildSettings = {
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};

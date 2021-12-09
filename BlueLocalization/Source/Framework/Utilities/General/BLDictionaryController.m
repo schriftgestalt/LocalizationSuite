@@ -130,10 +130,14 @@ id __sharedDictionaryController = nil;
 	NSMutableArray *urls;
 
 	urls = [NSMutableArray arrayWithCapacity:[paths count]];
-	for (NSString *path in paths)
-		[urls addObject:[NSURL URLWithString:path]];
-
-	[self registerDictionariesAtURLs:urls];
+	for (NSString *path in paths) {
+		if ([NSFileManager.defaultManager isReadableFileAtPath:path]) {
+			[urls addObject:[NSURL URLWithString:path]];
+		}
+	}
+	if (urls.count > 0) {
+		[self registerDictionariesAtURLs:urls];
+	}
 }
 
 - (void)registerDictionariesAtURLs:(NSArray *)urls {

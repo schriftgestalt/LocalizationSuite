@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -205,6 +205,7 @@
 		56320E98230EBF83002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Interface/Base.lproj/FileDetail.xib; sourceTree = "<group>"; };
 		56320E99230EBF83002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Interface/Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		56320E9A230EBF83002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Interface/Base.lproj/Preferences.xib; sourceTree = "<group>"; };
+		56378E532761F0CF0045ADD7 /* common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = common.xcconfig; path = ../Shared/Source/common.xcconfig; sourceTree = "<group>"; };
 		56AEB248273B2E57008F3EAE /* NibPreview.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NibPreview.xcodeproj; path = ../NibPreview/NibPreview.xcodeproj; sourceTree = "<group>"; };
 		56AEB251273B2E5F008F3EAE /* LocInterface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LocInterface.xcodeproj; path = ../LocInterface/LocInterface.xcodeproj; sourceTree = "<group>"; };
 		56AEB25A273B2E68008F3EAE /* LocTools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LocTools.xcodeproj; path = ../LocTools/LocTools.xcodeproj; sourceTree = "<group>"; };
@@ -233,6 +234,7 @@
 		56AEB2A2273BCACD008F3EAE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Interface/fr.lproj/Preferences.strings; sourceTree = "<group>"; };
 		56AEB2A4273BCACE008F3EAE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Interface/de.lproj/Preferences.strings; sourceTree = "<group>"; };
 		56AEB2A6273BCACE008F3EAE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Interface/ja.lproj/Preferences.strings; sourceTree = "<group>"; };
+		56D9C37A2761EC5C00EC3FDF /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = debug.xcconfig; path = ../Shared/Source/debug.xcconfig; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* Localization Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Localization Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -307,6 +309,8 @@
 				5042FE82075E395D006EB926 /* Interface */,
 				50A6BD7E1131538E00928AD7 /* Manager.help */,
 				50C3D1260FC374A7005AEF1A /* dsa_pub.pem */,
+				56378E532761F0CF0045ADD7 /* common.xcconfig */,
+				56D9C37A2761EC5C00EC3FDF /* debug.xcconfig */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -531,7 +535,7 @@
 				};
 			};
 			buildConfigurationList = 50B00B8B0881BF5300E66B22 /* Build configuration list for PBXProject "Localization Manager" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -796,23 +800,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = X2L8375ZQ7;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Other/Localization Manager_Prefix.pch";
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MARKETING_VERSION = 14.1;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.loc-suite.manager";
 				PRODUCT_NAME = "Localization Manager";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				WARNING_CFLAGS = "-Wmost";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -821,102 +818,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 19;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = X2L8375ZQ7;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Other/Localization Manager_Prefix.pch";
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MARKETING_VERSION = 14.1;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.loc-suite.manager";
 				PRODUCT_NAME = "Localization Manager";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				WARNING_CFLAGS = "-Wmost";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 		50B00B8C0881BF5300E66B22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56D9C37A2761EC5C00EC3FDF /* debug.xcconfig */;
 			buildSettings = {
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IBC_NOTICES = NO;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		50B00B8D0881BF5300E66B22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56378E532761F0CF0045ADD7 /* common.xcconfig */;
 			buildSettings = {
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IBC_NOTICES = NO;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};

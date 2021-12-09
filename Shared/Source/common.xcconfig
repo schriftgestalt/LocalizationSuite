@@ -1,0 +1,33 @@
+//
+//  default.xcconfig
+//  Localization Manager
+//
+//  Created by Georg Seifert on 09.12.21.
+//  Copyright © 2021 Localization Suite. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+CODE_SIGN_IDENTITY = Developer ID Application
+OTHER_CODE_SIGN_FLAGS = --timestamp=none
+
+CURRENT_PROJECT_VERSION = 19
+MARKETING_VERSION = 14.1
+
+SDKROOT = macosx
+MACOSX_DEPLOYMENT_TARGET = 10.11
+PRODUCT_NAME = $(TARGET_NAME)
+
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+GCC_C_LANGUAGE_STANDARD = gnu99
+
+COMBINE_HIDPI_IMAGES = YES
+GCC_PRECOMPILE_PREFIX_HEADER = YES
+
+CLANG_ENABLE_OBJC_ARC = YES
+ENABLE_STRICT_OBJC_MSGSEND = YES
+
+IBC_NOTICES = NO
+

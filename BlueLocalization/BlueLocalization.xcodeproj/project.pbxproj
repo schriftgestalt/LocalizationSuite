@@ -24,7 +24,6 @@
 		5048BF2D1279D3D0006FFAC2 /* BLDatabaseDocumentPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 5048BF2C1279D3D0006FFAC2 /* BLDatabaseDocumentPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5048BF65127A1D98006FFAC2 /* BLDocumentPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 5048BF63127A1D98006FFAC2 /* BLDocumentPreferences.h */; };
 		5048BF66127A1D98006FFAC2 /* BLDocumentPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5048BF64127A1D98006FFAC2 /* BLDocumentPreferences.m */; };
-		5054D2C91404D04900434EAC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5054D2C81404D04900434EAC /* SenTestingKit.framework */; };
 		5054D2CA1404D04900434EAC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 		5054D2DE1404D1E100434EAC /* ObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247AB0F979D7D003B3522 /* ObjectTest.m */; };
 		5054D2E01404D1E100434EAC /* ObjectProxyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5014B98D0FB3360300DC2EC3 /* ObjectProxyTest.m */; };
@@ -289,7 +288,6 @@
 		5048BF90127A3323006FFAC2 /* DocumentPreferencesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentPreferencesTest.h; sourceTree = "<group>"; };
 		5048BF91127A3323006FFAC2 /* DocumentPreferencesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentPreferencesTest.m; sourceTree = "<group>"; };
 		5054D2C71404D04900434EAC /* BlueLocalization Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BlueLocalization Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5054D2C81404D04900434EAC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5055576B0FB4E20F0008BE20 /* BLLocalizerExportStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLLocalizerExportStep.h; path = ../Processing/BLLocalizerExportStep.h; sourceTree = "<group>"; };
 		5055576C0FB4E20F0008BE20 /* BLLocalizerExportStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLLocalizerExportStep.m; path = ../Processing/BLLocalizerExportStep.m; sourceTree = "<group>"; };
 		505557770FB4F8B40008BE20 /* BLGenericProcessStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLGenericProcessStep.h; sourceTree = "<group>"; };
@@ -511,6 +509,8 @@
 		56320E7E230EBF2E002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BLProcessStep.strings; sourceTree = "<group>"; };
 		56320E7F230EBF2E002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		56320E80230EBF2E002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		56378E692761F1820045ADD7 /* common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = common.xcconfig; path = ../../Shared/Source/common.xcconfig; sourceTree = "<group>"; };
+		56378E6A2761F1820045ADD7 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = debug.xcconfig; path = ../../Shared/Source/debug.xcconfig; sourceTree = "<group>"; };
 		56AEB2A8273BCADE008F3EAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/BLDictionaryExporter.strings; sourceTree = "<group>"; };
 		56AEB2AA273BCADE008F3EAE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/BLDictionaryExporter.strings; sourceTree = "<group>"; };
 		56AEB2AC273BCADE008F3EAE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/BLDictionaryExporter.strings; sourceTree = "<group>"; };
@@ -540,7 +540,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5054D3141404D24D00434EAC /* BlueLocalization.framework in Frameworks */,
-				5054D2C91404D04900434EAC /* SenTestingKit.framework in Frameworks */,
 				5054D2CA1404D04900434EAC /* Cocoa.framework in Frameworks */,
 				5054D3121404D20A00434EAC /* OCMock.framework in Frameworks */,
 				5054D3131404D20A00434EAC /* hamcrest.framework in Frameworks */,
@@ -596,7 +595,6 @@
 				5014BB5A0FB4A3CC00DC2EC3 /* hamcrest.framework */,
 				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
 				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
-				5054D2C81404D04900434EAC /* SenTestingKit.framework */,
 				507F05B81404E3A00008D824 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -1232,6 +1230,8 @@
 				502148FD101605F900A8180B /* BLXcodeExporter.xib */,
 				50F6BA3110144B84008C8727 /* BLXcodeImporter.xib */,
 				507981F4110A142F00CB5D70 /* BLXLIFFExporter.xib */,
+				56378E692761F1820045ADD7 /* common.xcconfig */,
+				56378E6A2761F1820045ADD7 /* debug.xcconfig */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
@@ -1801,69 +1801,21 @@
 		501EBC3D0854F27900FBC27B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = Source/Framework/Other/BlueLocalization_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_PREPROCESS = YES;
 				INSTALL_PATH = "@executable_path/../Frameworks/";
 				MACH_O_TYPE = mh_dylib;
-				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_NAME = BlueLocalization;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		501EBC410854F27900FBC27B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56378E6A2761F1820045ADD7 /* debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = "";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -1887,70 +1839,22 @@
 		};
 		5058362A1406F62000762666 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56378E692761F1820045ADD7 /* common.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = "";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		5058362B1406F62000762666 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = Source/Framework/Other/BlueLocalization_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_PREPROCESS = YES;
 				INSTALL_PATH = "@executable_path/../Frameworks/";
 				MACH_O_TYPE = mh_dylib;
-				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_NAME = BlueLocalization;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
