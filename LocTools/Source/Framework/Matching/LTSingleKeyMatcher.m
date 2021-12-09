@@ -36,7 +36,9 @@
 
 - (void)matchingThread {
 	@autoreleasepool {
-		NSOperationQueue *queue = [NSOperationQueue mainQueue];
+		NSOperationQueue *queue = [NSOperationQueue new];
+		NSUInteger CPUs = [[NSProcessInfo processInfo] activeProcessorCount];
+		[queue setMaxConcurrentOperationCount:MAX(round((float)CPUs / 2.0), 2)];
 
 		// Init
 		NSString *targetString = [_keyObject stringForLanguage:_matchLanguage];
