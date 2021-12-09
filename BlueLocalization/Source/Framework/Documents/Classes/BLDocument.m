@@ -53,10 +53,7 @@ NSString *BLDocumentSaveCompressedKey = @"saveCompressed";
 - (BOOL)readFromURL:(NSURL *)absoluteURL ofType:(NSString *)typeName error:(NSError **)outError {
 	BLDocumentFileWrapper *wrapper;
 
-	if (NSAppKitVersionNumber < NSAppKitVersionNumber10_6)
-		wrapper = [[BLDocumentFileWrapper alloc] initWithPath:[absoluteURL path]];
-	else
-		wrapper = [[BLDocumentFileWrapper alloc] initWithURL:absoluteURL options:0 error:outError];
+	wrapper = [[BLDocumentFileWrapper alloc] initWithURL:absoluteURL options:0 error:outError];
 
 	if (wrapper) {
 		BOOL result = [self readFromFileWrapper:wrapper ofType:typeName error:outError];
