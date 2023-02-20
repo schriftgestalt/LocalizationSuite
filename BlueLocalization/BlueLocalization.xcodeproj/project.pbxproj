@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1725382F299FDF9500039B9C /* DatabaseEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725382E299FDF9500039B9C /* DatabaseEncoder.swift */; };
 		500C5819140FB36600DD5F0E /* BLXcodeImportUpdateStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 500C5817140FB36600DD5F0E /* BLXcodeImportUpdateStep.h */; };
 		500C581A140FB36600DD5F0E /* BLXcodeImportUpdateStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C5818140FB36600DD5F0E /* BLXcodeImportUpdateStep.m */; };
 		5010B76B129C8D6E0044A488 /* BLXcodeExportUpdateStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 5010B769129C8D6E0044A488 /* BLXcodeExportUpdateStep.h */; };
@@ -262,6 +263,7 @@
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1725382E299FDF9500039B9C /* DatabaseEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseEncoder.swift; sourceTree = "<group>"; };
 		5006929812804F3500470F3D /* DocumentCompressionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentCompressionTest.h; sourceTree = "<group>"; };
 		5006929912804F3500470F3D /* DocumentCompressionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentCompressionTest.m; sourceTree = "<group>"; };
 		500C5817140FB36600DD5F0E /* BLXcodeImportUpdateStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXcodeImportUpdateStep.h; sourceTree = "<group>"; };
@@ -1241,6 +1243,7 @@
 			children = (
 				50EF075C114A9E7A002DBB02 /* BLDatabaseFile.h */,
 				50EF075D114A9E7A002DBB02 /* BLDatabaseFile.m */,
+				1725382E299FDF9500039B9C /* DatabaseEncoder.swift */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -1453,6 +1456,7 @@
 				ORGANIZATIONNAME = "Localization Suite";
 				TargetAttributes = {
 					8DC2EF4F0486A6940098B216 = {
+						LastSwiftMigration = 1410;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -1633,6 +1637,7 @@
 				50C247970F979D58003B3522 /* BLStringsScanner.m in Sources */,
 				50F03BDA0FA5EB5300FDB765 /* BLObject.m in Sources */,
 				50F03BFA0FA60CEA00FDB765 /* BLProcessManager.m in Sources */,
+				1725382F299FDF9500039B9C /* DatabaseEncoder.swift in Sources */,
 				50F03BFE0FA60F5C00FDB765 /* BLProcessStep.m in Sources */,
 				50F03C020FA61F7D00FDB765 /* BLInterpreterStep.m in Sources */,
 				50F03C110FA627AC00FDB765 /* BLInterpretationStep.m in Sources */,
@@ -1801,6 +1806,8 @@
 		501EBC3D0854F27900FBC27B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -1808,7 +1815,11 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_PREPROCESS = YES;
 				INSTALL_PATH = "@executable_path/../Frameworks/";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1847,6 +1858,8 @@
 		5058362B1406F62000762666 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -1854,7 +1867,10 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_PREPROCESS = YES;
 				INSTALL_PATH = "@executable_path/../Frameworks/";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1879,6 +1895,7 @@
 		5058362D1406F62000762666 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1894,6 +1911,7 @@
 		507F05CE1404E3A00008D824 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;

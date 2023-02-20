@@ -6,6 +6,8 @@
  @copyright 2004-2010 the Localization Suite Foundation. All rights reserved.
  */
 
+#import <Foundation/Foundation.h>
+
 /*!
  @abstract Whether only active objects should be archived or not.
  @discussion Represented by a NSNumber object hosting a BOOL. The value YES means "do not archive inactive objects".

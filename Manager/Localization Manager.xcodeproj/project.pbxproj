@@ -806,6 +806,7 @@
 				GCC_PREFIX_HEADER = "Source/Other/Localization Manager_Prefix.pch";
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.loc-suite.manager";
 				PRODUCT_NAME = "Localization Manager";
@@ -824,6 +825,7 @@
 				GCC_PREFIX_HEADER = "Source/Other/Localization Manager_Prefix.pch";
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp=none";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.loc-suite.manager";
 				PRODUCT_NAME = "Localization Manager";

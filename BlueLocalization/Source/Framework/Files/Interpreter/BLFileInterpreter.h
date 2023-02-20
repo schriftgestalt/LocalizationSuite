@@ -6,6 +6,8 @@
  @copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
  */
 
+#import <Cocoa/Cocoa.h>
+
 @class BLFileObject;
 @protocol BLDocumentProtocol;
 

@@ -11,6 +11,7 @@
 #import "BLFileInternal.h"
 #import "BLNibFileObject.h"
 #import "BLStringsFileObject.h"
+#import <BlueLocalization/BlueLocalization-Swift.h>
 
 NSString *BLDatabaseFilePathExtension = @"ldb";
 NSString *BLDatabaseFileContentsFileName = @"Contents.plist";
@@ -108,8 +109,9 @@ NSString *BLUserPreferencesPropertyName = @"userPreferences";
 	[contents secureSetObject:[properties objectForKey:BLLanguagesPropertyName] forKey:BLFileLanguagesKey];
 	[contents secureSetObject:[properties objectForKey:BLPreferencesPropertyName] forKey:BLFilePreferencesKey];
 	[contents setObject:[NSNumber numberWithInt:BLDatabaseFileVersionNumber] forKey:BLFileVersionKey];
-
-	wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:[NSPropertyListSerialization dataFromPropertyList:contents format:NSPropertyListXMLFormat_v1_0 errorDescription:nil]];
+	
+	NSData *contentsData = [DatabaseEncoder encode:contents];
+	wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:contentsData];
 	[fileWrappers setObject:wrapper forKey:BLDatabaseFileContentsFileName];
 
 	// Create per-user settings
@@ -118,7 +120,7 @@ NSString *BLUserPreferencesPropertyName = @"userPreferences";
 		NSDictionary *settings = [userPreferences objectForKey:username];
 		NSString *filename = [username stringByAppendingPathExtension:BLFileUserFileExtension];
 
-		wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:[NSPropertyListSerialization dataFromPropertyList:settings format:NSPropertyListXMLFormat_v1_0 errorDescription:nil]];
+		wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:[NSPropertyListSerialization dataWithPropertyList:settings format:NSPropertyListXMLFormat_v1_0 options:0 error:nil]];
 		[fileWrappers setObject:wrapper forKey:filename];
 	}
 
@@ -148,7 +150,90 @@ NSString *BLUserPreferencesPropertyName = @"userPreferences";
 		NSDictionary *fileWrappers = [wrapper fileWrappers];
 
 		// Unarchive contents
-		contents = [NSPropertyListSerialization propertyListFromData:[[fileWrappers objectForKey:BLDatabaseFileContentsFileName] regularFileContents] mutabilityOption:NSPropertyListMutableContainersAndLeaves format:nil errorDescription:nil];
+		contents = [NSPropertyListSerialization propertyListWithData:[[fileWrappers objectForKey:BLDatabaseFileContentsFileName] regularFileContents] options:NSPropertyListMutableContainersAndLeaves format:nil error:nil];
+		
+		// restore types unsupported by OpenStep property list
+		Class nsstringClass = [NSString class];
+		contents[BLFileVersionKey] = @([contents[BLFileVersionKey] integerValue]);
+		
+		NSISO8601DateFormatter *dateFormatter = [NSISO8601DateFormatter new];
+		for (NSMutableDictionary *bundle in contents[BLFileBundlesKey]) {
+			if ([bundle[BLFileNamingStyleKey] isKindOfClass:nsstringClass]) {
+				bundle[BLFileNamingStyleKey] = @([bundle[BLFileNamingStyleKey] integerValue]);
+			}
+			if ([bundle[BLFileReferencingStyleKey] isKindOfClass:nsstringClass]) {
+				bundle[BLFileReferencingStyleKey] = @([bundle[BLFileReferencingStyleKey] integerValue]);
+			}
+			
+			for (NSMutableDictionary *file in bundle[BLFileFilesKey]) {
+				if ([file[BLFileChangeDateKey] isKindOfClass:nsstringClass]) {
+					file[BLFileChangeDateKey] = [dateFormatter dateFromString:file[BLFileChangeDateKey]];
+				}
+				if ([file[BLFileIsPlistFileKey] isKindOfClass:nsstringClass]) {
+					file[BLFileIsPlistFileKey] = @([file[BLFileIsPlistFileKey] boolValue]);
+				}
+				if ([file[BLFileFlagsKey] isKindOfClass:nsstringClass]) {
+					file[BLFileFlagsKey] = @([file[BLFileFlagsKey] integerValue]);
+				}
+				
+				for (NSMutableDictionary *object in file[BLFileObjectsKey]) {
+					if ([object[BLFileFlagsKey] isKindOfClass:nsstringClass]) {
+						object[BLFileFlagsKey] = @([object[BLFileFlagsKey] integerValue]);
+					}
+				}
+				for (NSMutableDictionary *object in file[BLFileOldObjectsKey]) {
+					if ([object[BLFileFlagsKey] isKindOfClass:nsstringClass]) {
+						object[BLFileFlagsKey] = @([object[BLFileFlagsKey] integerValue]);
+					}
+				}
+			}
+		}
+		NSMutableDictionary *preferences = contents[BLFilePreferencesKey];
+		NSArray<NSString *> *boolPreferences = @[
+			BLDatabaseDocumentUpdateXcodeAddMissingFilesKey,
+			BLDatabaseDocumentUpdateXcodeHasFileLimitKey,
+			BLDatabaseDocumentUpdateXcodeHasLanguageLimitKey,
+			BLDatabaseDocumentUpdateXcodeRemoveNotMatchingFilesKey,
+			BLDatabaseDocumentAutotranslateNewStringsKey,
+			BLDatabaseDocumentLocalizerFilesCompressionKey,
+			BLDatabaseDocumentDeactivateEmptyStringsKey,
+			BLDatabaseDocumentDeactivatePlaceholderStringsKey,
+			BLDatabaseDocumentLocalizerFilesEmbedDictionaryKey,
+			BLDatabaseDocumentLocalizerFilesEmbedDictionaryGuessesKey,
+			BLDatabaseDocumentImportEmptyStringsKey,
+			BLDatabaseDocumentLocalizerFilesIncludePreviewKey,
+			BLDatabaseDocumentMarkAutotranslatedAsNotChangedKey,
+			BLDatabaseDocumentRescanXcodeProjectsEnabledKey,
+			BLDocumentSaveCompressedKey,
+			BLDatabaseDocumentUpdateXcodeProjectsEnabledKey,
+			BLDatabaseDocumentValueChangesResetStringsKey,
+		];
+		NSArray<NSString *> *integerPreferences = @[
+			BLDatabaseDocumentBundleNamingStyleKey,
+			BLDatabaseDocumentBundleReferencingStyleKey,
+		];
+		NSArray<NSString *> *doublePreferences = @[
+			BLDatabaseDocumentUpdateXcodeFileLimitKey,
+			BLDatabaseDocumentUpdateXcodeLanguageLimitKey,
+		];
+		for (NSString *key in boolPreferences) {
+			if ([preferences[key] isKindOfClass:nsstringClass]) {
+				preferences[key] = @([preferences[key] boolValue]);
+			}
+		}
+		for (NSString *key in integerPreferences) {
+			if ([preferences[key] isKindOfClass:nsstringClass]) {
+				preferences[key] = @([preferences[key] integerValue]);
+			}
+		}
+		for (NSString *key in doublePreferences) {
+			if ([preferences[key] isKindOfClass:nsstringClass]) {
+				preferences[key] = @([preferences[key] doubleValue]);
+			}
+		}
+		
+		[contents writeToFile:@"/Users/Florian/Downloads/Stage/make.plist" atomically:NO];
+		
 		if (![self updateDatabaseFile:contents]) {
 			BLLogEndGroup();
 			return nil;
@@ -170,7 +255,7 @@ NSString *BLUserPreferencesPropertyName = @"userPreferences";
 			if (![[file pathExtension] isEqual:BLFileUserFileExtension])
 				continue;
 
-			[userPrefs setObject:[NSPropertyListSerialization propertyListFromData:[[fileWrappers objectForKey:file] regularFileContents] mutabilityOption:NSPropertyListMutableContainersAndLeaves format:nil errorDescription:nil] forKey:[file stringByDeletingPathExtension]];
+			[userPrefs setObject:[NSPropertyListSerialization propertyListWithData:[[fileWrappers objectForKey:file] regularFileContents] options:NSPropertyListMutableContainersAndLeaves format:nil error:nil] forKey:[file stringByDeletingPathExtension]];
 		}
 	}
 

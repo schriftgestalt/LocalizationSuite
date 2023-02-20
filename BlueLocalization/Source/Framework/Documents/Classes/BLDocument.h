@@ -6,6 +6,7 @@
  @copyright 2010 the Localization Suite Foundation. All rights reserved.
  */
 
+#import <Cocoa/Cocoa.h>
 #import <BlueLocalization/BLDocumentProtocol.h>
 
 /*!
