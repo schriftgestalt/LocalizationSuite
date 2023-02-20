@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,18 +14,18 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="File" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="filedetail" animationBehavior="default" id="5" userLabel="Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="441" y="281" width="611" height="296"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1440"/>
             <value key="minSize" type="size" width="500" height="296"/>
             <view key="contentView" id="6">
                 <rect key="frame" x="0.0" y="0.0" width="611" height="296"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" id="9">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9">
                         <rect key="frame" x="61" y="216" width="54" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Full Path:" id="557">
@@ -34,7 +34,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button toolTip="Select a new Location for this File, if it was moved externally. Adds the old Bundle and Path to File History." verticalHuggingPriority="750" imageHugsTitle="YES" id="11">
+                    <button toolTip="Select a new Location for this File, if it was moved externally. Adds the old Bundle and Path to File History." verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="11">
                         <rect key="frame" x="226" y="165" width="80" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Choose…" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="558">
@@ -45,7 +45,7 @@
                             <action selector="choosePath:" target="-2" id="41"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" id="12">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="12">
                         <rect key="frame" x="120" y="238" width="474" height="14"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="somepath" id="559">
@@ -61,7 +61,7 @@
                             </binding>
                         </connections>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="21">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="21">
                         <rect key="frame" x="59" y="67" width="56" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Statistics:" id="560">
@@ -70,7 +70,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="22">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="22">
                         <rect key="frame" x="68" y="89" width="47" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Activity:" id="561">
@@ -79,7 +79,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button imageHugsTitle="YES" id="23">
+                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23">
                         <rect key="frame" x="117" y="87" width="151" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Include in Localizer files" bezelStyle="regularSquare" imagePosition="leading" alignment="left" controlSize="small" inset="2" id="562">
@@ -90,7 +90,7 @@
                             <binding destination="20" name="value" keyPath="selection.isActive" id="27"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" id="24">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24">
                         <rect key="frame" x="120" y="67" width="474" height="14"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="2000 keys" id="563">
@@ -106,7 +106,7 @@
                             </binding>
                         </connections>
                     </textField>
-                    <button toolTip="Move and/or Rename this File. Adds the old Bundle and Path to File History." verticalHuggingPriority="750" imageHugsTitle="YES" id="88">
+                    <button toolTip="Move and/or Rename this File. Adds the old Bundle and Path to File History." verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88">
                         <rect key="frame" x="304" y="165" width="80" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Move…" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="564">
@@ -117,7 +117,7 @@
                             <action selector="moveFile:" target="-2" id="180"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" id="91">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="91">
                         <rect key="frame" x="17" y="238" width="98" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Referencing Path:" id="565">
@@ -126,7 +126,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="92">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="92">
                         <rect key="frame" x="120" y="202" width="474" height="28"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="somepath" id="566">
@@ -138,7 +138,7 @@
                             <binding destination="35" name="value" keyPath="selection.fullPath" id="177"/>
                         </connections>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="93">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="93">
                         <rect key="frame" x="61" y="44" width="54" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Changes:" id="567">
@@ -147,7 +147,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <matrix verticalHuggingPriority="750" mode="highlight" selectionByRect="NO" allowsEmptySelection="NO" id="94" customClass="LanguageNameMatrix">
+                    <matrix verticalHuggingPriority="750" fixedFrame="YES" mode="highlight" selectionByRect="NO" allowsEmptySelection="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94" customClass="LanguageNameMatrix">
                         <rect key="frame" x="117" y="20" width="476" height="16"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -184,11 +184,11 @@
                             </column>
                         </cells>
                         <connections>
-                            <binding destination="43" name="content" keyPath="selection.languages" id="456"/>
                             <binding destination="20" name="selectedValues" keyPath="selection.changedLanguages" previousBinding="456" id="587"/>
+                            <binding destination="43" name="content" keyPath="selection.languages" id="456"/>
                         </connections>
                     </matrix>
-                    <textField verticalHuggingPriority="750" id="461">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="461">
                         <rect key="frame" x="120" y="260" width="474" height="14"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="somename" id="570">
@@ -200,7 +200,7 @@
                             <binding destination="20" name="value" keyPath="selection.bundleObject.name" id="464"/>
                         </connections>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="462">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="462">
                         <rect key="frame" x="71" y="260" width="44" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Bundle:" id="571">
@@ -209,7 +209,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button toolTip="Reveals this File in Finder." verticalHuggingPriority="750" imageHugsTitle="YES" id="466">
+                    <button toolTip="Reveals this File in Finder." verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="466">
                         <rect key="frame" x="115" y="165" width="80" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Reveal" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="572">
@@ -220,7 +220,7 @@
                             <action selector="showFile:" target="-2" id="467"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" id="469">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="469">
                         <rect key="frame" x="62" y="143" width="53" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="File type:" id="573">
@@ -229,7 +229,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="470">
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="470">
                         <rect key="frame" x="117" y="138" width="220" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="push" title="Item1" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="474" id="574">
@@ -247,7 +247,7 @@
                             <binding destination="35" name="selectedObject" keyPath="selection.customFileType" id="485"/>
                         </connections>
                     </popUpButton>
-                    <textField verticalHuggingPriority="750" id="475">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="475">
                         <rect key="frame" x="120" y="121" width="474" height="14"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="{current error}" id="575">
@@ -263,7 +263,7 @@
                             </binding>
                         </connections>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="476">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="476">
                         <rect key="frame" x="31" y="121" width="84" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Current errors:" id="576">
@@ -272,7 +272,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="486">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="486">
                         <rect key="frame" x="339" y="143" width="255" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="{file format info}" id="577">
@@ -284,7 +284,7 @@
                             <binding destination="20" name="value" keyPath="selection.fileFormatInfo" id="488"/>
                         </connections>
                     </textField>
-                    <button imageHugsTitle="YES" id="584">
+                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="584">
                         <rect key="frame" x="117" y="42" width="95" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Reference file" bezelStyle="regularSquare" imagePosition="leading" alignment="left" controlSize="small" state="on" inset="2" id="585">
@@ -310,6 +310,7 @@
                 </binding>
                 <outlet property="delegate" destination="-2" id="42"/>
             </connections>
+            <point key="canvasLocation" x="140" y="10"/>
         </window>
         <objectController id="20" userLabel="FileObject">
             <declaredKeys>

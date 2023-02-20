@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -92,7 +92,7 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Window" customClass="MultiActionWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <rect key="contentRect" x="387" y="177" width="649" height="546"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1728" height="1079"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1440"/>
             <value key="minSize" type="size" width="649" height="548"/>
             <view key="contentView" misplaced="YES" id="6">
                 <rect key="frame" x="0.0" y="0.0" width="649" height="546"/>
@@ -503,7 +503,7 @@ Applies to everything if nothing selected.</string>
                         <nil key="toolTip"/>
                         <button key="view" verticalHuggingPriority="750" id="tDb-Dg-CHb" customClass="MultiActionButton">
                             <rect key="frame" x="0.0" y="14" width="95" height="32"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <string key="toolTip">Rescan Reference Files
 Checks the selected development language files for changes and imports them. Applies to the whole database when nothing is selected.
 · Pressing "alt" will force a rescan even when nothing changed.
@@ -525,7 +525,7 @@ Checks the selected development language files for changes and imports them. App
                         <nil key="toolTip"/>
                         <button key="view" verticalHuggingPriority="750" id="MS3-hD-VX3">
                             <rect key="frame" x="0.0" y="14" width="95" height="32"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <string key="toolTip">Re-Inject Files
 Removes all localized versions of the selected files/bundles and re-creates them using the development language files.</string>
                             <buttonCell key="cell" type="push" title="Re-Inject" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="aqj-ac-7uA">
@@ -544,7 +544,7 @@ Removes all localized versions of the selected files/bundles and re-creates them
                         <nil key="toolTip"/>
                         <button key="view" verticalHuggingPriority="750" id="vIR-su-Lcj" customClass="MultiActionButton">
                             <rect key="frame" x="0.0" y="14" width="108" height="32"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <string key="toolTip">Synchronize Files
 Updates all localized versions of the selected files. Applies to whole database if nothing selected or "shift" pressed. </string>
                             <buttonCell key="cell" type="push" title="Synchronize" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="SlJ-4K-n5C">
@@ -564,7 +564,7 @@ Updates all localized versions of the selected files. Applies to whole database 
                         <nil key="toolTip"/>
                         <searchField key="view" wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" id="YLl-n7-37u">
                             <rect key="frame" x="0.0" y="14" width="136" height="22"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search" bezelStyle="round" recentsAutosaveName="" id="w4L-6r-ggu">
                                 <font key="font" metaFont="system"/>
                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -734,7 +734,7 @@ Updates all localized versions of the selected files. Applies to whole database 
         </view>
     </objects>
     <resources>
-        <image name="NSAddTemplate" width="14" height="13"/>
-        <image name="NSRemoveTemplate" width="14" height="4"/>
+        <image name="NSAddTemplate" width="18" height="17"/>
+        <image name="NSRemoveTemplate" width="18" height="5"/>
     </resources>
 </document>
