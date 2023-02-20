@@ -97,9 +97,11 @@
 
 - (NSArray *)arrangeObjects:(NSArray *)srcObjects {
 	NSPredicate *filter = [self filterPredicate];
-
+	BOOL exactKeyMatchesOnly = [NSUserDefaults.standardUserDefaults boolForKey:@"SearchMatchesExactKeyOnly"];
+	NSArray<NSString *> *searchPaths = exactKeyMatchesOnly ? @[@"key"] : _searchPaths;
+	
 	// Perform search and preflight filtering
-	if (([_search length] && [_searchPaths count] > 0) || filter) {
+	if (([_search length] && [searchPaths count] > 0) || filter) {
 		NSMutableArray *objects = [NSMutableArray arrayWithCapacity:[srcObjects count]];
 
 		for (NSObject *object in srcObjects) {
@@ -111,7 +113,7 @@
 			if (_search) {
 				BOOL success = NO;
 
-				for (NSString *keyPath in _searchPaths) {
+				for (NSString *keyPath in searchPaths) {
 					id value;
 
 					// Extract the value and check for consistency
@@ -122,7 +124,12 @@
 						continue;
 
 					// Search
-					success = ([value rangeOfString:_search options:NSCaseInsensitiveSearch | NSLiteralSearch].length != 0);
+					if (exactKeyMatchesOnly) {
+						success = [value isEqual:_search];
+					}
+					else {
+						success = ([value rangeOfString:_search options:NSCaseInsensitiveSearch | NSLiteralSearch].length != 0);
+					}
 					if (success)
 						break;
 				}
