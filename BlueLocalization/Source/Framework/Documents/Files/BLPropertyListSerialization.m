@@ -20,6 +20,9 @@ NSString *BLLanguagesSerializationKey = @"languages";
 + (id)serializeObject:(id)object withAttributes:(NSDictionary *)attributes outWrappers:(NSDictionary **)fileWrappers {
 	// Array
 	if ([object isKindOfClass:[NSArray class]]) {
+		if ([object count] == 0) {
+			return nil;
+		}
 		NSMutableArray *array = [NSMutableArray array];
 
 		// Convert contained objects
@@ -31,6 +34,9 @@ NSString *BLLanguagesSerializationKey = @"languages";
 
 	// Dictionary
 	if ([object isKindOfClass:[NSDictionary class]]) {
+		if ([object count] == 0) {
+			return nil;
+		}
 		NSMutableDictionary *dict = [NSMutableDictionary dictionary];
 
 		// Convert contained objects
