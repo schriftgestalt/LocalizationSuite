@@ -8,6 +8,7 @@
 
 #import "BLLocalizerFile.h"
 #import "BLFileInternal.h"
+#import <BlueLocalization/BlueLocalization-Swift.h>
 
 NSString *BLLocalizerFilePathExtension = @"loc";
 NSString *BLLocalizerFileContentsFileName = @"Contents.plist";
@@ -89,7 +90,10 @@ NSString *BLDictionaryPropertyName = @"dictionary";
 	[contents setObject:@(BLLocalizerFileVersionNumber) forKey:BLFileVersionKey];
 
 	// Create file wrapper for contents.plist file
-	wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:[NSPropertyListSerialization dataWithPropertyList:contents format:NSPropertyListXMLFormat_v1_0 options:0 error:nil]];
+
+	NSData *contentsData = [DatabaseEncoder encode:contents];
+	wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:contentsData];
+
 	[fileWrappers setObject:wrapper forKey:BLLocalizerFileContentsFileName];
 
 	// Embedded dictionary

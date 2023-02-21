@@ -9,6 +9,7 @@
 #import "BLDictionaryFile.h"
 #import "BLFileInternal.h"
 #import "BLStringKeyObject.h"
+#import <BlueLocalization/BlueLocalization-Swift.h>
 
 NSString *BLDictionaryFilePathExtension = @"lod";
 
@@ -76,8 +77,8 @@ NSString *BLFilterSettingsPropertyName = @"filterSettings";
 	[contents setObject:@(BLDictionaryFileVersionNumber) forKey:BLFileVersionKey];
 
 	// Create file wrapper
-	NSFileWrapper *wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:[NSPropertyListSerialization dataWithPropertyList:contents format:NSPropertyListXMLFormat_v1_0 options:0 error:nil]];
-
+	NSData *contentsData = [DatabaseEncoder encode:contents];
+	NSFileWrapper *wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:contentsData];
 	BLLogEndGroup();
 	return wrapper;
 }
