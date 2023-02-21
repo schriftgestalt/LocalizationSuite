@@ -16,7 +16,7 @@ public class DatabaseEncoder: NSObject {
 	
 	@objc public static func encode(_ database: [String: AnyObject]) -> Data {
 		let context = Context(isInline: false)
-		let contents =  encode(dictionary: database, context: context) + "\n"
+		let contents = encode(dictionary: database, context: context) + "\n"
 		return contents.data(using: .utf8)!
 	}
 	
