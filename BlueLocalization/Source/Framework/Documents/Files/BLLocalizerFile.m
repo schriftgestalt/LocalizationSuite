@@ -76,10 +76,12 @@ NSString *BLDictionaryPropertyName = @"dictionary";
 	NSDictionary *resources = [NSDictionary dictionary];
 	NSArray *archivedBundles = [BLPropertyListSerializer serializeObject:[BLObject bundleObjectsFromArray:bundles] withAttributes:attributes outWrappers:&resources];
 
+	NSFileWrapper *wrapper;
 	// Create Resources directory
-	NSFileWrapper *wrapper = [[NSFileWrapper alloc] initDirectoryWithFileWrappers:resources];
-	[fileWrappers setObject:wrapper forKey:BLLocalizerFileResourcesDirectory];
-
+	if (resources.count > 0) {
+		wrapper = [[NSFileWrapper alloc] initDirectoryWithFileWrappers:resources];
+		[fileWrappers setObject:wrapper forKey:BLLocalizerFileResourcesDirectory];
+	}
 	// Create Contents.plist
 	NSMutableDictionary *contents = [NSMutableDictionary dictionary];
 	[contents setObject:archivedBundles forKey:BLFileBundlesKey];

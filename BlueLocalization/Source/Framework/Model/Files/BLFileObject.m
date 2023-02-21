@@ -214,11 +214,15 @@ NSMutableDictionary *__fileObjectClasses = nil;
 	[dict secureSetObject:[self path] forKey:BLFileNameKey];
 	[dict secureSetObject:archivedObjects forKey:BLFileObjectsKey];
 
-	if (!activeOnly)
-		[dict secureSetObject:[self oldObjects] forKey:BLFileOldObjectsKey];
-	if ([self customFileType])
+	if (!activeOnly) {
+		id oldObjects = [self oldObjects];
+		if (oldObjects) {
+			[dict secureSetObject:oldObjects forKey:BLFileOldObjectsKey];
+		}
+	}
+	if ([self customFileType]) {
 		[dict setObject:[self customFileType] forKey:BLFileCustomTypeKey];
-
+	}
 	[dict setObject:attachments forKey:BLFileAttachmentsKey];
 
 	if (!noBackups && _snapshots)
