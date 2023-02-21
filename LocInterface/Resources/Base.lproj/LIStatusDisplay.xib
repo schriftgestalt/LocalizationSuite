@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -10,7 +10,6 @@
             <connections>
                 <outlet property="calcStatsView" destination="266" id="267"/>
                 <outlet property="panel" destination="1" id="77"/>
-                <outlet property="splitView" destination="127" id="222"/>
                 <outlet property="statsView" destination="133" id="221"/>
             </connections>
         </customObject>
@@ -68,664 +67,648 @@
         <window title="Statistics" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="LIStatusDisplay" animationBehavior="default" id="1" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES" utility="YES" nonactivatingPanel="YES"/>
             <windowPositionMask key="initialPositionMask" rightStrut="YES" topStrut="YES"/>
-            <rect key="contentRect" x="1057" y="651" width="225" height="350"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1728" height="1079"/>
+            <rect key="contentRect" x="1057" y="651" width="225" height="413"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
             <value key="minSize" type="size" width="175" height="200"/>
-            <view key="contentView" misplaced="YES" id="2">
-                <rect key="frame" x="0.0" y="0.0" width="225" height="350"/>
-                <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2">
+                <rect key="frame" x="0.0" y="0.0" width="225" height="432"/>
                 <subviews>
-                    <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="127">
-                        <rect key="frame" x="0.0" y="0.0" width="225" height="350"/>
+                    <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="1000" verticalStackHuggingPriority="1000" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WW0-lj-eew">
+                        <rect key="frame" x="0.0" y="0.0" width="225" height="432"/>
                         <subviews>
-                            <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="1000" verticalStackHuggingPriority="249.99998474121094" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WW0-lj-eew">
-                                <rect key="frame" x="0.0" y="0.0" width="223" height="350"/>
+                            <customView verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="128">
+                                <rect key="frame" x="0.0" y="382" width="225" height="50"/>
                                 <subviews>
-                                    <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="128">
-                                        <rect key="frame" x="0.0" y="331" width="223" height="19"/>
-                                        <subviews>
-                                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="119">
-                                                <rect key="frame" x="8" y="7" width="13" height="13"/>
-                                                <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="above" alignment="left" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="120">
-                                                    <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <binding destination="75" name="value" keyPath="selection.visibility.info" id="213"/>
-                                                </connections>
-                                            </button>
-                                            <textField verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3">
-                                                <rect key="frame" x="27" y="6" width="178" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Objects" id="4">
-                                                    <font key="font" metaFont="smallSystemBold"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="119" firstAttribute="leading" secondItem="128" secondAttribute="leading" constant="8" id="6HF-hm-yH4"/>
-                                            <constraint firstItem="3" firstAttribute="top" secondItem="128" secondAttribute="top" constant="4" id="CW6-S6-mvO"/>
-                                            <constraint firstItem="3" firstAttribute="leading" secondItem="119" secondAttribute="trailing" constant="8" symbolic="YES" id="CvJ-k6-cBK"/>
-                                            <constraint firstItem="3" firstAttribute="centerY" secondItem="119" secondAttribute="centerY" id="U9W-6l-gEi"/>
-                                            <constraint firstAttribute="trailing" secondItem="3" secondAttribute="trailing" constant="20" id="Zu5-aY-hXr"/>
-                                            <constraint firstAttribute="bottom" secondItem="3" secondAttribute="bottom" constant="4" id="i3L-W7-xEt"/>
-                                        </constraints>
-                                    </customView>
-                                    <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="129">
-                                        <rect key="frame" x="0.0" y="279" width="223" height="52"/>
-                                        <subviews>
-                                            <textField verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="11">
-                                                <rect key="frame" x="18" y="6" width="187" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="10 Key(s)" id="12">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <connections>
-                                                    <binding destination="75" name="displayPatternValue1" keyPath="selection.selectionInfo.keys" id="118">
-                                                        <dictionary key="options">
-                                                            <string key="NSDisplayPattern">%{value1}@ Key(s)</string>
-                                                            <string key="NSNoSelectionPlaceholder">0</string>
-                                                            <string key="NSNullPlaceholder">0</string>
-                                                        </dictionary>
-                                                    </binding>
-                                                </connections>
-                                            </textField>
-                                            <textField verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="9">
-                                                <rect key="frame" x="18" y="22" width="187" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="10 File(s)" id="10">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <connections>
-                                                    <binding destination="75" name="displayPatternValue1" keyPath="selection.selectionInfo.files" id="117">
-                                                        <dictionary key="options">
-                                                            <string key="NSDisplayPattern">%{value1}@ File(s)</string>
-                                                            <string key="NSNoSelectionPlaceholder">0</string>
-                                                            <string key="NSNullPlaceholder">0</string>
-                                                        </dictionary>
-                                                    </binding>
-                                                </connections>
-                                            </textField>
-                                            <textField verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="5">
-                                                <rect key="frame" x="18" y="38" width="187" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="10 Bundle(s)" id="6">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <connections>
-                                                    <binding destination="75" name="displayPatternValue1" keyPath="selection.selectionInfo.bundles" id="116">
-                                                        <dictionary key="options">
-                                                            <string key="NSDisplayPattern">%{value1}@ Bundle(s)</string>
-                                                            <string key="NSNoSelectionPlaceholder">0</string>
-                                                            <string key="NSNullPlaceholder">0</string>
-                                                        </dictionary>
-                                                    </binding>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="11" secondAttribute="bottom" constant="6" id="1Ah-Kv-vAv"/>
-                                            <constraint firstAttribute="trailing" secondItem="5" secondAttribute="trailing" constant="20" id="4ZO-aP-Sno"/>
-                                            <constraint firstItem="5" firstAttribute="leading" secondItem="129" secondAttribute="leading" constant="20" id="C13-Pu-5d6"/>
-                                            <constraint firstItem="11" firstAttribute="leading" secondItem="5" secondAttribute="leading" id="FAs-nA-vOA"/>
-                                            <constraint firstItem="11" firstAttribute="top" secondItem="9" secondAttribute="bottom" constant="2" id="KUg-dy-V3P"/>
-                                            <constraint firstItem="9" firstAttribute="top" secondItem="5" secondAttribute="bottom" constant="2" id="Mp8-8b-orU"/>
-                                            <constraint firstItem="9" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" id="QCD-pl-T0V"/>
-                                            <constraint firstItem="9" firstAttribute="leading" secondItem="5" secondAttribute="leading" id="Ycb-BB-AqE"/>
-                                            <constraint firstItem="5" firstAttribute="top" secondItem="129" secondAttribute="top" id="baJ-ax-9ni"/>
-                                            <constraint firstItem="11" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" id="d08-dn-wWw"/>
-                                        </constraints>
+                                    <button horizontalHuggingPriority="750" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="119">
+                                        <rect key="frame" x="8" y="19" width="13" height="13"/>
+                                        <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="above" alignment="left" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="120">
+                                            <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="smallSystem"/>
+                                        </buttonCell>
                                         <connections>
-                                            <binding destination="75" name="hidden" keyPath="selection.visibility.info" id="212">
-                                                <dictionary key="options">
-                                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                                </dictionary>
-                                            </binding>
+                                            <binding destination="75" name="value" keyPath="selection.visibility.info" id="213"/>
                                         </connections>
-                                    </customView>
-                                    <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="130">
-                                        <rect key="frame" x="0.0" y="256" width="223" height="23"/>
-                                        <subviews>
-                                            <box autoresizesSubviews="NO" verticalHuggingPriority="750" ambiguous="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="125">
-                                                <rect key="frame" x="0.0" y="20" width="223" height="5"/>
-                                            </box>
-                                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="134">
-                                                <rect key="frame" x="8" y="5" width="13" height="13"/>
-                                                <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="above" alignment="left" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="135">
-                                                    <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <binding destination="75" name="value" keyPath="selection.visibility.counters" id="210"/>
-                                                </connections>
-                                            </button>
-                                            <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="123">
-                                                <rect key="frame" x="27" y="4" width="178" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Counters" id="124">
-                                                    <font key="font" metaFont="smallSystemBold"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="125" secondAttribute="trailing" id="CkF-HX-SNx"/>
-                                            <constraint firstItem="123" firstAttribute="centerY" secondItem="134" secondAttribute="centerY" id="Ngk-v7-pOT"/>
-                                            <constraint firstItem="123" firstAttribute="leading" secondItem="134" secondAttribute="trailing" constant="8" symbolic="YES" id="YYd-qY-eiS"/>
-                                            <constraint firstItem="134" firstAttribute="leading" secondItem="130" secondAttribute="leading" constant="8" id="bFr-kh-Mbn"/>
-                                            <constraint firstItem="123" firstAttribute="top" secondItem="125" secondAttribute="bottom" constant="4" id="iQd-4c-cZg"/>
-                                            <constraint firstAttribute="trailing" secondItem="123" secondAttribute="trailing" constant="20" id="k6P-lL-uGM"/>
-                                            <constraint firstAttribute="bottom" secondItem="123" secondAttribute="bottom" constant="4" id="nca-OU-QkM"/>
-                                            <constraint firstItem="125" firstAttribute="top" secondItem="130" secondAttribute="top" id="rVL-z4-rGO"/>
-                                            <constraint firstItem="125" firstAttribute="leading" secondItem="130" secondAttribute="leading" id="wN7-f6-bwQ"/>
-                                        </constraints>
-                                    </customView>
-                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="131">
-                                        <rect key="frame" x="0.0" y="184" width="223" height="72"/>
-                                        <subviews>
-                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="73">
-                                                <rect key="frame" x="21" y="10" width="64" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Characters:" id="74">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="71">
-                                                <rect key="frame" x="21" y="26" width="64" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Words:" id="72">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="67">
-                                                <rect key="frame" x="21" y="42" width="64" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Sentences:" id="68">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                            <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37">
-                                                <rect key="frame" x="91" y="10" width="112" height="62"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                <size key="cellSize" width="54" height="14"/>
-                                                <size key="intercellSpacing" width="4" height="2"/>
-                                                <textFieldCell key="prototype" controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Text" id="63">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <cells>
-                                                    <column>
-                                                        <textFieldCell controlSize="small" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" state="on" alignment="left" title="English" id="41">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.firstLanguage" id="89">
-                                                                    <dictionary key="options">
-                                                                        <string key="NSValueTransformerName">LanguageName</string>
-                                                                    </dictionary>
-                                                                </binding>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" title="1" id="44">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.counters.first.sentences" id="246"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="2" id="53">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.counters.first.words" id="247"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="3" id="64">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.counters.first.characters" id="248"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                    </column>
-                                                    <column>
-                                                        <textFieldCell controlSize="small" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="German" id="54">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.secondLanguage" id="91">
-                                                                    <dictionary key="options">
-                                                                        <string key="NSValueTransformerName">LanguageName</string>
-                                                                    </dictionary>
-                                                                </binding>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="4" id="56">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.counters.second.sentences" id="249"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="5" id="57">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.counters.second.words" id="250"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="6" id="65">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.counters.second.characters" id="251"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                    </column>
-                                                </cells>
-                                            </matrix>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="73" firstAttribute="leading" secondItem="67" secondAttribute="leading" id="3Nc-eG-6tX"/>
-                                            <constraint firstItem="67" firstAttribute="top" secondItem="131" secondAttribute="top" constant="16" id="D4U-X3-Qam"/>
-                                            <constraint firstItem="71" firstAttribute="leading" secondItem="67" secondAttribute="leading" id="FUC-MC-gtB"/>
-                                            <constraint firstItem="71" firstAttribute="trailing" secondItem="67" secondAttribute="trailing" id="HUR-n8-Krc"/>
-                                            <constraint firstItem="71" firstAttribute="top" secondItem="67" secondAttribute="bottom" constant="2" id="HWx-Be-OPr"/>
-                                            <constraint firstItem="73" firstAttribute="top" secondItem="71" secondAttribute="bottom" constant="2" id="PUm-US-68E"/>
-                                            <constraint firstAttribute="bottom" secondItem="37" secondAttribute="bottom" constant="10" id="Uxa-SA-kv6"/>
-                                            <constraint firstItem="73" firstAttribute="trailing" secondItem="67" secondAttribute="trailing" id="Wcw-K4-wiQ"/>
-                                            <constraint firstItem="37" firstAttribute="top" secondItem="131" secondAttribute="top" id="YSa-LM-Kom"/>
-                                            <constraint firstItem="37" firstAttribute="leading" secondItem="67" secondAttribute="trailing" constant="8" symbolic="YES" id="dJ8-SG-RYy"/>
-                                            <constraint firstAttribute="bottom" secondItem="73" secondAttribute="bottom" constant="10" id="lRo-Iz-nDj"/>
-                                            <constraint firstItem="67" firstAttribute="leading" secondItem="131" secondAttribute="leading" constant="23" id="m7r-v0-y4J"/>
-                                            <constraint firstAttribute="trailing" secondItem="37" secondAttribute="trailing" constant="20" symbolic="YES" id="zVE-3N-Mnk"/>
-                                        </constraints>
-                                        <connections>
-                                            <binding destination="75" name="hidden" keyPath="selection.visibility.counters" id="211">
-                                                <dictionary key="options">
-                                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                                </dictionary>
-                                            </binding>
-                                        </connections>
-                                    </customView>
-                                    <customView id="132">
-                                        <rect key="frame" x="0.0" y="158" width="223" height="26"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <subviews>
-                                            <box autoresizesSubviews="NO" verticalHuggingPriority="750" ambiguous="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="140">
-                                                <rect key="frame" x="0.0" y="23" width="223" height="5"/>
-                                            </box>
-                                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="137">
-                                                <rect key="frame" x="8" y="7" width="13" height="13"/>
-                                                <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="above" alignment="left" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="138">
-                                                    <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <binding destination="75" name="value" keyPath="selection.visibility.statistics" id="150"/>
-                                                </connections>
-                                            </button>
-                                            <textField verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="136">
-                                                <rect key="frame" x="27" y="6" width="178" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Statistics" id="139">
-                                                    <font key="font" metaFont="smallSystemBold"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="136" firstAttribute="leading" secondItem="137" secondAttribute="trailing" constant="8" symbolic="YES" id="9Dq-W0-CB4"/>
-                                            <constraint firstItem="140" firstAttribute="top" secondItem="132" secondAttribute="top" id="BFI-UI-3Fu"/>
-                                            <constraint firstItem="140" firstAttribute="leading" secondItem="132" secondAttribute="leading" id="E3e-eP-0N3"/>
-                                            <constraint firstAttribute="bottom" secondItem="136" secondAttribute="bottom" constant="4" id="P5R-Ac-r2Y"/>
-                                            <constraint firstAttribute="trailing" secondItem="136" secondAttribute="trailing" constant="20" id="XRG-sS-nEx"/>
-                                            <constraint firstItem="136" firstAttribute="centerY" secondItem="137" secondAttribute="centerY" id="ad7-1l-YAO"/>
-                                            <constraint firstItem="136" firstAttribute="top" secondItem="140" secondAttribute="bottom" constant="4" id="gqA-gz-Qgm"/>
-                                            <constraint firstAttribute="trailing" secondItem="140" secondAttribute="trailing" id="qmw-dR-ycT"/>
-                                            <constraint firstItem="137" firstAttribute="leading" secondItem="132" secondAttribute="leading" constant="8" id="wFh-Dd-Rb4"/>
-                                        </constraints>
-                                    </customView>
-                                    <customView verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="133">
-                                        <rect key="frame" x="0.0" y="50" width="223" height="108"/>
-                                        <subviews>
-                                            <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="233">
-                                                <rect key="frame" x="13" y="78" width="87" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Translated:" id="234">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                            <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="177">
-                                                <rect key="frame" x="13" y="14" width="87" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="No Matches:" id="178">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                            <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="156">
-                                                <rect key="frame" x="13" y="30" width="87" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Guesses ≥50%:" id="157">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                            <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="155">
-                                                <rect key="frame" x="13" y="46" width="87" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Guesses ≥75%:" id="158">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                            <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="154">
-                                                <rect key="frame" x="13" y="62" width="87" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Exact Matches:" id="159">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                            <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" translatesAutoresizingMaskIntoConstraints="NO" id="153">
-                                                <rect key="frame" x="106" y="14" width="96" height="94"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                <size key="cellSize" width="46" height="14"/>
-                                                <size key="intercellSpacing" width="4" height="2"/>
-                                                <textFieldCell key="prototype" controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Text" id="162">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <cells>
-                                                    <column>
-                                                        <textFieldCell controlSize="small" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" state="on" alignment="left" title="Keys" id="168">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" title="1" id="167">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.statistics.keys.translated" id="240"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="2" id="166">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.statistics.keys.exact" id="239"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="3" id="161">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.statistics.keys.above75" id="238"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="4" id="184">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.statistics.keys.above50" id="237"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="5" id="231">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.statistics.keys.noMatch" id="236"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                    </column>
-                                                    <column>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Words" id="181">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="5" id="180">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.statistics.words.translated" id="245"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="6" id="182">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.statistics.words.exact" id="244"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="7" id="179">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.statistics.words.above75" id="243"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="8" id="183">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.statistics.words.above50" id="242"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                        <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="9" id="232">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <connections>
-                                                                <binding destination="75" name="value" keyPath="selection.statistics.words.noMatch" id="241"/>
-                                                            </connections>
-                                                        </textFieldCell>
-                                                    </column>
-                                                </cells>
-                                            </matrix>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="177" secondAttribute="bottom" constant="14" id="0Ic-du-QGm"/>
-                                            <constraint firstItem="177" firstAttribute="trailing" secondItem="233" secondAttribute="trailing" id="2OW-4a-O5x"/>
-                                            <constraint firstItem="154" firstAttribute="trailing" secondItem="233" secondAttribute="trailing" id="2uy-OE-zgH"/>
-                                            <constraint firstItem="177" firstAttribute="leading" secondItem="233" secondAttribute="leading" id="9WR-rE-Fsz"/>
-                                            <constraint firstItem="155" firstAttribute="leading" secondItem="233" secondAttribute="leading" id="DZ6-GU-CL9"/>
-                                            <constraint firstItem="155" firstAttribute="trailing" secondItem="233" secondAttribute="trailing" id="F0S-8w-sQF"/>
-                                            <constraint firstItem="156" firstAttribute="top" secondItem="155" secondAttribute="bottom" constant="2" id="G0d-7o-u8l"/>
-                                            <constraint firstItem="233" firstAttribute="leading" secondItem="133" secondAttribute="leading" constant="15" id="GvP-l3-lmQ"/>
-                                            <constraint firstItem="177" firstAttribute="top" secondItem="156" secondAttribute="bottom" constant="2" id="I80-NT-S2h"/>
-                                            <constraint firstItem="156" firstAttribute="trailing" secondItem="233" secondAttribute="trailing" id="JqU-Pj-IMS"/>
-                                            <constraint firstItem="154" firstAttribute="top" secondItem="233" secondAttribute="bottom" constant="2" id="MPM-r0-W2B"/>
-                                            <constraint firstItem="153" firstAttribute="top" secondItem="133" secondAttribute="top" id="NQe-3b-KZy"/>
-                                            <constraint firstItem="153" firstAttribute="leading" secondItem="233" secondAttribute="trailing" constant="8" symbolic="YES" id="T1f-Cc-t9P"/>
-                                            <constraint firstItem="156" firstAttribute="leading" secondItem="233" secondAttribute="leading" id="Uby-d1-aaG"/>
-                                            <constraint firstItem="233" firstAttribute="top" secondItem="133" secondAttribute="top" constant="16" id="XQF-tw-eXz"/>
-                                            <constraint firstItem="155" firstAttribute="top" secondItem="154" secondAttribute="bottom" constant="2" id="ZLB-OT-bad"/>
-                                            <constraint firstAttribute="bottom" secondItem="153" secondAttribute="bottom" constant="14" id="adM-7c-Gcu"/>
-                                            <constraint firstAttribute="trailing" secondItem="153" secondAttribute="trailing" constant="21" id="jZP-7b-SFk"/>
-                                            <constraint firstItem="154" firstAttribute="leading" secondItem="233" secondAttribute="leading" id="kaZ-1n-7gD"/>
-                                        </constraints>
-                                        <connections>
-                                            <binding destination="75" name="hidden" keyPath="selection.statistics" id="277">
-                                                <dictionary key="options">
-                                                    <string key="NSValueTransformerName">NSIsNil</string>
-                                                </dictionary>
-                                            </binding>
-                                            <binding destination="75" name="hidden2" keyPath="selection.visibility.statistics" previousBinding="277" id="278">
-                                                <dictionary key="options">
-                                                    <integer key="NSMultipleValuesPlaceholder" value="-1"/>
-                                                    <integer key="NSNoSelectionPlaceholder" value="-1"/>
-                                                    <integer key="NSNotApplicablePlaceholder" value="-1"/>
-                                                    <integer key="NSNullPlaceholder" value="-1"/>
-                                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                                </dictionary>
-                                            </binding>
-                                        </connections>
-                                    </customView>
-                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="266">
-                                        <rect key="frame" x="0.0" y="0.0" width="223" height="50"/>
-                                        <subviews>
-                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="262">
-                                                <rect key="frame" x="30" y="19" width="175" height="11"/>
-                                                <textFieldCell key="cell" controlSize="mini" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="This may take some time." id="263">
-                                                    <font key="font" metaFont="miniSystem"/>
-                                                    <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <connections>
-                                                    <binding destination="75" name="hidden" keyPath="selection.isCalculatingStatistics" id="265"/>
-                                                </connections>
-                                            </textField>
-                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="193">
-                                                <rect key="frame" x="97" y="35" width="108" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="100%" id="194">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <connections>
-                                                    <binding destination="75" name="hidden" keyPath="selection.isCalculatingStatistics" id="257">
-                                                        <dictionary key="options">
-                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                                        </dictionary>
-                                                    </binding>
-                                                    <binding destination="75" name="displayPatternValue1" keyPath="selection.statisticsCalculationProgress" id="255">
-                                                        <dictionary key="options">
-                                                            <string key="NSDisplayPattern">%{value1}@%</string>
-                                                        </dictionary>
-                                                    </binding>
-                                                </connections>
-                                            </textField>
-                                            <progressIndicator wantsLayer="YES" verticalHuggingPriority="750" maxValue="100" bezeled="NO" controlSize="small" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="192">
-                                                <rect key="frame" x="27" y="12" width="176" height="15"/>
-                                                <connections>
-                                                    <binding destination="75" name="hidden" keyPath="selection.isCalculatingStatistics" id="256">
-                                                        <dictionary key="options">
-                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                                        </dictionary>
-                                                    </binding>
-                                                    <binding destination="75" name="value" keyPath="selection.statisticsCalculationProgress" id="253"/>
-                                                </connections>
-                                            </progressIndicator>
-                                            <button horizontalHuggingPriority="1000" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="191">
-                                                <rect key="frame" x="28" y="33" width="63" height="17"/>
-                                                <buttonCell key="cell" type="roundRect" title="Calculate" bezelStyle="roundedRect" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="195">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="calculateStatistics:" target="-2" id="252"/>
-                                                    <binding destination="75" name="enabled" keyPath="selection.isCalculatingStatistics" id="258">
-                                                        <dictionary key="options">
-                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                                        </dictionary>
-                                                    </binding>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="262" firstAttribute="top" secondItem="191" secondAttribute="bottom" constant="4" id="4op-0M-teb"/>
-                                            <constraint firstAttribute="trailing" secondItem="192" secondAttribute="trailing" constant="20" id="5E3-yH-JPr"/>
-                                            <constraint firstItem="192" firstAttribute="leading" secondItem="266" secondAttribute="leading" constant="27" id="5bh-Py-26x"/>
-                                            <constraint firstItem="191" firstAttribute="top" secondItem="266" secondAttribute="top" id="6V5-T4-ZCO"/>
-                                            <constraint firstAttribute="trailing" secondItem="193" secondAttribute="trailing" constant="20" id="7dO-jn-iD3"/>
-                                            <constraint firstItem="191" firstAttribute="leading" secondItem="266" secondAttribute="leading" constant="28" id="8q0-TT-9jY"/>
-                                            <constraint firstItem="192" firstAttribute="top" secondItem="191" secondAttribute="bottom" constant="7" id="SBH-xC-xqW"/>
-                                            <constraint firstItem="193" firstAttribute="leading" secondItem="191" secondAttribute="trailing" constant="8" symbolic="YES" id="WKt-NI-fhj"/>
-                                            <constraint firstItem="193" firstAttribute="firstBaseline" secondItem="191" secondAttribute="firstBaseline" id="Xjq-1p-MEh"/>
-                                            <constraint firstAttribute="bottom" secondItem="192" secondAttribute="bottom" constant="12" id="bx3-um-3v6"/>
-                                            <constraint firstAttribute="trailing" secondItem="262" secondAttribute="trailing" constant="20" id="iyh-7e-2fm"/>
-                                            <constraint firstItem="262" firstAttribute="leading" secondItem="266" secondAttribute="leading" constant="32" id="qvn-d6-fsF"/>
-                                        </constraints>
-                                        <connections>
-                                            <binding destination="75" name="hidden" keyPath="selection.statistics" id="270">
-                                                <dictionary key="options">
-                                                    <string key="NSValueTransformerName">NSIsNotNil</string>
-                                                </dictionary>
-                                            </binding>
-                                            <binding destination="75" name="hidden2" keyPath="selection.visibility.statistics" previousBinding="270" id="272">
-                                                <dictionary key="options">
-                                                    <integer key="NSMultipleValuesPlaceholder" value="-1"/>
-                                                    <integer key="NSNoSelectionPlaceholder" value="-1"/>
-                                                    <integer key="NSNotApplicablePlaceholder" value="-1"/>
-                                                    <integer key="NSNullPlaceholder" value="-1"/>
-                                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                                </dictionary>
-                                            </binding>
-                                        </connections>
-                                    </customView>
+                                    </button>
+                                    <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="3">
+                                        <rect key="frame" x="27" y="4" width="180" height="42"/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Objects" id="4">
+                                            <font key="font" metaFont="smallSystemBold"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="119" firstAttribute="leading" secondItem="128" secondAttribute="leading" constant="8" id="6HF-hm-yH4"/>
+                                    <constraint firstItem="3" firstAttribute="top" secondItem="128" secondAttribute="top" constant="4" id="CW6-S6-mvO"/>
+                                    <constraint firstItem="3" firstAttribute="leading" secondItem="119" secondAttribute="trailing" constant="8" symbolic="YES" id="CvJ-k6-cBK"/>
+                                    <constraint firstItem="3" firstAttribute="centerY" secondItem="119" secondAttribute="centerY" id="U9W-6l-gEi"/>
+                                    <constraint firstAttribute="trailing" secondItem="3" secondAttribute="trailing" constant="20" id="Zu5-aY-hXr"/>
+                                    <constraint firstAttribute="bottom" secondItem="3" secondAttribute="bottom" constant="4" id="i3L-W7-xEt"/>
+                                </constraints>
+                            </customView>
+                            <customView verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="129">
+                                <rect key="frame" x="0.0" y="330" width="225" height="52"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                                        <rect key="frame" x="18" y="6" width="189" height="14"/>
+                                        <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="10 Key(s)" id="12">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <binding destination="75" name="displayPatternValue1" keyPath="selection.selectionInfo.keys" id="118">
+                                                <dictionary key="options">
+                                                    <string key="NSDisplayPattern">%{value1}@ Key(s)</string>
+                                                    <string key="NSNoSelectionPlaceholder">0</string>
+                                                    <string key="NSNullPlaceholder">0</string>
+                                                </dictionary>
+                                            </binding>
+                                        </connections>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="9">
+                                        <rect key="frame" x="18" y="22" width="189" height="14"/>
+                                        <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="10 File(s)" id="10">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <binding destination="75" name="displayPatternValue1" keyPath="selection.selectionInfo.files" id="117">
+                                                <dictionary key="options">
+                                                    <string key="NSDisplayPattern">%{value1}@ File(s)</string>
+                                                    <string key="NSNoSelectionPlaceholder">0</string>
+                                                    <string key="NSNullPlaceholder">0</string>
+                                                </dictionary>
+                                            </binding>
+                                        </connections>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                                        <rect key="frame" x="18" y="38" width="189" height="14"/>
+                                        <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="10 Bundle(s)" id="6">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <binding destination="75" name="displayPatternValue1" keyPath="selection.selectionInfo.bundles" id="116">
+                                                <dictionary key="options">
+                                                    <string key="NSDisplayPattern">%{value1}@ Bundle(s)</string>
+                                                    <string key="NSNoSelectionPlaceholder">0</string>
+                                                    <string key="NSNullPlaceholder">0</string>
+                                                </dictionary>
+                                            </binding>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="11" secondAttribute="bottom" constant="6" id="1Ah-Kv-vAv"/>
+                                    <constraint firstAttribute="trailing" secondItem="5" secondAttribute="trailing" constant="20" id="4ZO-aP-Sno"/>
+                                    <constraint firstItem="5" firstAttribute="leading" secondItem="129" secondAttribute="leading" constant="20" id="C13-Pu-5d6"/>
+                                    <constraint firstItem="11" firstAttribute="leading" secondItem="5" secondAttribute="leading" id="FAs-nA-vOA"/>
+                                    <constraint firstItem="11" firstAttribute="top" secondItem="9" secondAttribute="bottom" constant="2" id="KUg-dy-V3P"/>
+                                    <constraint firstItem="9" firstAttribute="top" secondItem="5" secondAttribute="bottom" constant="2" id="Mp8-8b-orU"/>
+                                    <constraint firstItem="9" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" id="QCD-pl-T0V"/>
+                                    <constraint firstItem="9" firstAttribute="leading" secondItem="5" secondAttribute="leading" id="Ycb-BB-AqE"/>
+                                    <constraint firstItem="5" firstAttribute="top" secondItem="129" secondAttribute="top" id="baJ-ax-9ni"/>
+                                    <constraint firstItem="11" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" id="d08-dn-wWw"/>
+                                </constraints>
+                                <connections>
+                                    <binding destination="75" name="hidden" keyPath="selection.visibility.info" id="212">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </customView>
+                            <customView verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="130">
+                                <rect key="frame" x="0.0" y="280" width="225" height="50"/>
+                                <subviews>
+                                    <box autoresizesSubviews="NO" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="125">
+                                        <rect key="frame" x="0.0" y="20" width="225" height="32"/>
+                                    </box>
+                                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="134">
+                                        <rect key="frame" x="8" y="5" width="13" height="13"/>
+                                        <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="above" alignment="left" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="135">
+                                            <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="smallSystem"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <binding destination="75" name="value" keyPath="selection.visibility.counters" id="210"/>
+                                        </connections>
+                                    </button>
+                                    <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="123">
+                                        <rect key="frame" x="27" y="4" width="180" height="14"/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Counters" id="124">
+                                            <font key="font" metaFont="smallSystemBold"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="125" secondAttribute="trailing" id="CkF-HX-SNx"/>
+                                    <constraint firstItem="123" firstAttribute="centerY" secondItem="134" secondAttribute="centerY" id="Ngk-v7-pOT"/>
+                                    <constraint firstItem="123" firstAttribute="leading" secondItem="134" secondAttribute="trailing" constant="8" symbolic="YES" id="YYd-qY-eiS"/>
+                                    <constraint firstItem="134" firstAttribute="leading" secondItem="130" secondAttribute="leading" constant="8" id="bFr-kh-Mbn"/>
+                                    <constraint firstItem="123" firstAttribute="top" secondItem="125" secondAttribute="bottom" constant="4" id="iQd-4c-cZg"/>
+                                    <constraint firstAttribute="trailing" secondItem="123" secondAttribute="trailing" constant="20" id="k6P-lL-uGM"/>
+                                    <constraint firstAttribute="bottom" secondItem="123" secondAttribute="bottom" constant="4" id="nca-OU-QkM"/>
+                                    <constraint firstItem="125" firstAttribute="top" secondItem="130" secondAttribute="top" id="rVL-z4-rGO"/>
+                                    <constraint firstItem="125" firstAttribute="leading" secondItem="130" secondAttribute="leading" id="wN7-f6-bwQ"/>
+                                </constraints>
+                            </customView>
+                            <customView verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="131">
+                                <rect key="frame" x="0.0" y="208" width="225" height="72"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="999" translatesAutoresizingMaskIntoConstraints="NO" id="73">
+                                        <rect key="frame" x="21" y="10" width="65" height="14"/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Characters:" id="74">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="71">
+                                        <rect key="frame" x="21" y="26" width="65" height="14"/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Words:" id="72">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="67">
+                                        <rect key="frame" x="21" y="42" width="65" height="14"/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Sentences:" id="68">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <matrix verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" allowsEmptySelection="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37">
+                                        <rect key="frame" x="92" y="10" width="113" height="62"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        <size key="cellSize" width="54" height="14"/>
+                                        <size key="intercellSpacing" width="4" height="2"/>
+                                        <textFieldCell key="prototype" controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Text" id="63">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <cells>
+                                            <column>
+                                                <textFieldCell controlSize="small" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" state="on" alignment="left" title="English" id="41">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.firstLanguage" id="89">
+                                                            <dictionary key="options">
+                                                                <string key="NSValueTransformerName">LanguageName</string>
+                                                            </dictionary>
+                                                        </binding>
+                                                    </connections>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" title="1" id="44">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.counters.first.sentences" id="246"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="2" id="53">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.counters.first.words" id="247"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="3" id="64">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.counters.first.characters" id="248"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                            </column>
+                                            <column>
+                                                <textFieldCell controlSize="small" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="German" id="54">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.secondLanguage" id="91">
+                                                            <dictionary key="options">
+                                                                <string key="NSValueTransformerName">LanguageName</string>
+                                                            </dictionary>
+                                                        </binding>
+                                                    </connections>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="4" id="56">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.counters.second.sentences" id="249"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="5" id="57">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.counters.second.words" id="250"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="6" id="65">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.counters.second.characters" id="251"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                            </column>
+                                        </cells>
+                                    </matrix>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="73" firstAttribute="leading" secondItem="67" secondAttribute="leading" id="3Nc-eG-6tX"/>
+                                    <constraint firstItem="67" firstAttribute="top" secondItem="131" secondAttribute="top" constant="16" id="D4U-X3-Qam"/>
+                                    <constraint firstItem="71" firstAttribute="leading" secondItem="67" secondAttribute="leading" id="FUC-MC-gtB"/>
+                                    <constraint firstItem="71" firstAttribute="trailing" secondItem="67" secondAttribute="trailing" id="HUR-n8-Krc"/>
+                                    <constraint firstItem="71" firstAttribute="top" secondItem="67" secondAttribute="bottom" constant="2" id="HWx-Be-OPr"/>
+                                    <constraint firstItem="73" firstAttribute="top" secondItem="71" secondAttribute="bottom" constant="2" id="PUm-US-68E"/>
+                                    <constraint firstAttribute="bottom" secondItem="37" secondAttribute="bottom" constant="10" id="Uxa-SA-kv6"/>
+                                    <constraint firstItem="73" firstAttribute="trailing" secondItem="67" secondAttribute="trailing" id="Wcw-K4-wiQ"/>
+                                    <constraint firstItem="37" firstAttribute="top" secondItem="131" secondAttribute="top" id="YSa-LM-Kom"/>
+                                    <constraint firstItem="37" firstAttribute="leading" secondItem="67" secondAttribute="trailing" constant="8" symbolic="YES" id="dJ8-SG-RYy"/>
+                                    <constraint firstAttribute="bottom" secondItem="73" secondAttribute="bottom" constant="10" id="lRo-Iz-nDj"/>
+                                    <constraint firstItem="67" firstAttribute="leading" secondItem="131" secondAttribute="leading" constant="23" id="m7r-v0-y4J"/>
+                                    <constraint firstAttribute="trailing" secondItem="37" secondAttribute="trailing" constant="20" symbolic="YES" id="zVE-3N-Mnk"/>
+                                </constraints>
+                                <connections>
+                                    <binding destination="75" name="hidden" keyPath="selection.visibility.counters" id="211">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </customView>
+                            <customView verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="132">
+                                <rect key="frame" x="0.0" y="158" width="225" height="50"/>
+                                <subviews>
+                                    <box autoresizesSubviews="NO" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="140">
+                                        <rect key="frame" x="0.0" y="20" width="225" height="32"/>
+                                    </box>
+                                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="137">
+                                        <rect key="frame" x="8" y="5" width="13" height="13"/>
+                                        <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="above" alignment="left" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="138">
+                                            <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="smallSystem"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <binding destination="75" name="value" keyPath="selection.visibility.statistics" id="150"/>
+                                        </connections>
+                                    </button>
+                                    <textField verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="136">
+                                        <rect key="frame" x="27" y="4" width="180" height="14"/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Statistics" id="139">
+                                            <font key="font" metaFont="smallSystemBold"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="136" firstAttribute="leading" secondItem="137" secondAttribute="trailing" constant="8" symbolic="YES" id="9Dq-W0-CB4"/>
+                                    <constraint firstItem="140" firstAttribute="top" secondItem="132" secondAttribute="top" id="BFI-UI-3Fu"/>
+                                    <constraint firstItem="140" firstAttribute="leading" secondItem="132" secondAttribute="leading" id="E3e-eP-0N3"/>
+                                    <constraint firstAttribute="bottom" secondItem="136" secondAttribute="bottom" constant="4" id="P5R-Ac-r2Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="136" secondAttribute="trailing" constant="20" id="XRG-sS-nEx"/>
+                                    <constraint firstItem="136" firstAttribute="centerY" secondItem="137" secondAttribute="centerY" id="ad7-1l-YAO"/>
+                                    <constraint firstItem="136" firstAttribute="top" secondItem="140" secondAttribute="bottom" constant="4" id="gqA-gz-Qgm"/>
+                                    <constraint firstAttribute="trailing" secondItem="140" secondAttribute="trailing" id="qmw-dR-ycT"/>
+                                    <constraint firstItem="137" firstAttribute="leading" secondItem="132" secondAttribute="leading" constant="8" id="wFh-Dd-Rb4"/>
+                                </constraints>
+                            </customView>
+                            <customView verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="133">
+                                <rect key="frame" x="0.0" y="50" width="225" height="108"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="233">
+                                        <rect key="frame" x="13" y="78" width="87" height="14"/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Translated:" id="234">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="177">
+                                        <rect key="frame" x="13" y="14" width="87" height="14"/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="No Matches:" id="178">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="156">
+                                        <rect key="frame" x="13" y="30" width="87" height="14"/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Guesses ≥50%:" id="157">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="155">
+                                        <rect key="frame" x="13" y="46" width="87" height="14"/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Guesses ≥75%:" id="158">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="154">
+                                        <rect key="frame" x="13" y="62" width="87" height="14"/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Exact Matches:" id="159">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" translatesAutoresizingMaskIntoConstraints="NO" id="153">
+                                        <rect key="frame" x="106" y="14" width="98" height="94"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        <size key="cellSize" width="47" height="14"/>
+                                        <size key="intercellSpacing" width="4" height="2"/>
+                                        <textFieldCell key="prototype" controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Text" id="162">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <cells>
+                                            <column>
+                                                <textFieldCell controlSize="small" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" state="on" alignment="left" title="Keys" id="168">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" title="1" id="167">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.statistics.keys.translated" id="240"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="2" id="166">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.statistics.keys.exact" id="239"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="3" id="161">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.statistics.keys.above75" id="238"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="4" id="184">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.statistics.keys.above50" id="237"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="5" id="231">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.statistics.keys.noMatch" id="236"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                            </column>
+                                            <column>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Words" id="181">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="5" id="180">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.statistics.words.translated" id="245"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="6" id="182">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.statistics.words.exact" id="244"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="7" id="179">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.statistics.words.above75" id="243"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="8" id="183">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.statistics.words.above50" id="242"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                                <textFieldCell controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="9" id="232">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="75" name="value" keyPath="selection.statistics.words.noMatch" id="241"/>
+                                                    </connections>
+                                                </textFieldCell>
+                                            </column>
+                                        </cells>
+                                    </matrix>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="177" secondAttribute="bottom" constant="14" id="0Ic-du-QGm"/>
+                                    <constraint firstItem="177" firstAttribute="trailing" secondItem="233" secondAttribute="trailing" id="2OW-4a-O5x"/>
+                                    <constraint firstItem="154" firstAttribute="trailing" secondItem="233" secondAttribute="trailing" id="2uy-OE-zgH"/>
+                                    <constraint firstItem="177" firstAttribute="leading" secondItem="233" secondAttribute="leading" id="9WR-rE-Fsz"/>
+                                    <constraint firstItem="155" firstAttribute="leading" secondItem="233" secondAttribute="leading" id="DZ6-GU-CL9"/>
+                                    <constraint firstItem="155" firstAttribute="trailing" secondItem="233" secondAttribute="trailing" id="F0S-8w-sQF"/>
+                                    <constraint firstItem="156" firstAttribute="top" secondItem="155" secondAttribute="bottom" constant="2" id="G0d-7o-u8l"/>
+                                    <constraint firstItem="233" firstAttribute="leading" secondItem="133" secondAttribute="leading" constant="15" id="GvP-l3-lmQ"/>
+                                    <constraint firstItem="177" firstAttribute="top" secondItem="156" secondAttribute="bottom" constant="2" id="I80-NT-S2h"/>
+                                    <constraint firstItem="156" firstAttribute="trailing" secondItem="233" secondAttribute="trailing" id="JqU-Pj-IMS"/>
+                                    <constraint firstItem="154" firstAttribute="top" secondItem="233" secondAttribute="bottom" constant="2" id="MPM-r0-W2B"/>
+                                    <constraint firstItem="153" firstAttribute="top" secondItem="133" secondAttribute="top" id="NQe-3b-KZy"/>
+                                    <constraint firstItem="153" firstAttribute="leading" secondItem="233" secondAttribute="trailing" constant="8" symbolic="YES" id="T1f-Cc-t9P"/>
+                                    <constraint firstItem="156" firstAttribute="leading" secondItem="233" secondAttribute="leading" id="Uby-d1-aaG"/>
+                                    <constraint firstItem="233" firstAttribute="top" secondItem="133" secondAttribute="top" constant="16" id="XQF-tw-eXz"/>
+                                    <constraint firstItem="155" firstAttribute="top" secondItem="154" secondAttribute="bottom" constant="2" id="ZLB-OT-bad"/>
+                                    <constraint firstAttribute="bottom" secondItem="153" secondAttribute="bottom" constant="14" id="adM-7c-Gcu"/>
+                                    <constraint firstAttribute="trailing" secondItem="153" secondAttribute="trailing" constant="21" id="jZP-7b-SFk"/>
+                                    <constraint firstItem="154" firstAttribute="leading" secondItem="233" secondAttribute="leading" id="kaZ-1n-7gD"/>
+                                </constraints>
+                                <connections>
+                                    <binding destination="75" name="hidden" keyPath="selection.statistics" id="277">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSIsNil</string>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="75" name="hidden2" keyPath="selection.visibility.statistics" previousBinding="277" id="278">
+                                        <dictionary key="options">
+                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </customView>
+                            <customView verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="266">
+                                <rect key="frame" x="0.0" y="0.0" width="225" height="50"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="262">
+                                        <rect key="frame" x="30" y="19" width="177" height="11"/>
+                                        <textFieldCell key="cell" controlSize="mini" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="This may take some time." id="263">
+                                            <font key="font" metaFont="miniSystem"/>
+                                            <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <binding destination="75" name="hidden" keyPath="selection.isCalculatingStatistics" id="265"/>
+                                        </connections>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="193">
+                                        <rect key="frame" x="97" y="35" width="110" height="14"/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="100%" id="194">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <binding destination="75" name="hidden" keyPath="selection.isCalculatingStatistics" id="257">
+                                                <dictionary key="options">
+                                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                </dictionary>
+                                            </binding>
+                                            <binding destination="75" name="displayPatternValue1" keyPath="selection.statisticsCalculationProgress" id="255">
+                                                <dictionary key="options">
+                                                    <string key="NSDisplayPattern">%{value1}@%</string>
+                                                </dictionary>
+                                            </binding>
+                                        </connections>
+                                    </textField>
+                                    <progressIndicator wantsLayer="YES" verticalHuggingPriority="750" maxValue="100" bezeled="NO" controlSize="small" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="192">
+                                        <rect key="frame" x="27" y="12" width="178" height="15"/>
+                                        <connections>
+                                            <binding destination="75" name="hidden" keyPath="selection.isCalculatingStatistics" id="256">
+                                                <dictionary key="options">
+                                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                </dictionary>
+                                            </binding>
+                                            <binding destination="75" name="value" keyPath="selection.statisticsCalculationProgress" id="253"/>
+                                        </connections>
+                                    </progressIndicator>
+                                    <button horizontalHuggingPriority="1000" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="191">
+                                        <rect key="frame" x="28" y="33" width="63" height="17"/>
+                                        <buttonCell key="cell" type="roundRect" title="Calculate" bezelStyle="roundedRect" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="195">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="smallSystem"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="calculateStatistics:" target="-2" id="252"/>
+                                            <binding destination="75" name="enabled" keyPath="selection.isCalculatingStatistics" id="258">
+                                                <dictionary key="options">
+                                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                </dictionary>
+                                            </binding>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="262" firstAttribute="top" secondItem="191" secondAttribute="bottom" constant="4" id="4op-0M-teb"/>
+                                    <constraint firstAttribute="trailing" secondItem="192" secondAttribute="trailing" constant="20" id="5E3-yH-JPr"/>
+                                    <constraint firstItem="192" firstAttribute="leading" secondItem="266" secondAttribute="leading" constant="27" id="5bh-Py-26x"/>
+                                    <constraint firstItem="191" firstAttribute="top" secondItem="266" secondAttribute="top" id="6V5-T4-ZCO"/>
+                                    <constraint firstAttribute="trailing" secondItem="193" secondAttribute="trailing" constant="20" id="7dO-jn-iD3"/>
+                                    <constraint firstItem="191" firstAttribute="leading" secondItem="266" secondAttribute="leading" constant="28" id="8q0-TT-9jY"/>
+                                    <constraint firstItem="192" firstAttribute="top" secondItem="191" secondAttribute="bottom" constant="7" id="SBH-xC-xqW"/>
+                                    <constraint firstItem="193" firstAttribute="leading" secondItem="191" secondAttribute="trailing" constant="8" symbolic="YES" id="WKt-NI-fhj"/>
+                                    <constraint firstItem="193" firstAttribute="firstBaseline" secondItem="191" secondAttribute="firstBaseline" id="Xjq-1p-MEh"/>
+                                    <constraint firstAttribute="bottom" secondItem="192" secondAttribute="bottom" constant="12" id="bx3-um-3v6"/>
+                                    <constraint firstAttribute="trailing" secondItem="262" secondAttribute="trailing" constant="20" id="iyh-7e-2fm"/>
+                                    <constraint firstItem="262" firstAttribute="leading" secondItem="266" secondAttribute="leading" constant="32" id="qvn-d6-fsF"/>
+                                </constraints>
+                                <connections>
+                                    <binding destination="75" name="hidden" keyPath="selection.statistics" id="270">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSIsNotNil</string>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="75" name="hidden2" keyPath="selection.visibility.statistics" previousBinding="270" id="272">
+                                        <dictionary key="options">
+                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </customView>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="WW0-lj-eew" secondAttribute="trailing" id="06g-lV-8qT"/>
-                            <constraint firstAttribute="bottom" secondItem="WW0-lj-eew" secondAttribute="bottom" id="5e7-3C-Zu8"/>
-                            <constraint firstItem="WW0-lj-eew" firstAttribute="top" secondItem="127" secondAttribute="top" id="fWl-xQ-cYN"/>
-                            <constraint firstItem="WW0-lj-eew" firstAttribute="leading" secondItem="127" secondAttribute="leading" id="lFQ-0n-0Jc"/>
-                        </constraints>
-                        <connections>
-                            <outlet property="delegate" destination="-2" id="259"/>
-                        </connections>
-                    </customView>
+                        <visibilityPriorities>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                        </visibilityPriorities>
+                        <customSpacing>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                        </customSpacing>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="127" secondAttribute="bottom" id="84d-Si-dou"/>
-                    <constraint firstItem="127" firstAttribute="top" secondItem="2" secondAttribute="top" id="Yy8-uf-OkX"/>
-                    <constraint firstItem="127" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="tzf-nv-uY3"/>
-                    <constraint firstAttribute="trailing" secondItem="127" secondAttribute="trailing" id="yB8-t5-RBT"/>
+                    <constraint firstItem="WW0-lj-eew" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="8jQ-QR-oZe"/>
+                    <constraint firstItem="WW0-lj-eew" firstAttribute="top" secondItem="2" secondAttribute="top" id="Ibe-V8-rBH"/>
+                    <constraint firstAttribute="trailing" secondItem="WW0-lj-eew" secondAttribute="trailing" id="VsK-bu-9Mb"/>
+                    <constraint firstAttribute="bottom" secondItem="WW0-lj-eew" secondAttribute="bottom" id="uT7-Qa-ao5"/>
                 </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="115"/>
             </connections>
-            <point key="canvasLocation" x="139" y="151"/>
+            <point key="canvasLocation" x="138.5" y="142.5"/>
         </window>
     </objects>
 </document>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,8 +15,9 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <arrayController objectClassName="NSString" editable="NO" automaticallyPreparesContent="YES" clearsFilterPredicateOnInsertion="NO" id="13" userLabel="Languages">
+            <classReference key="objectClass" className="NSString"/>
             <connections>
                 <binding destination="-2" name="contentArray" keyPath="availableLanguages" id="14"/>
             </connections>
@@ -25,23 +26,21 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView autohidesScrollers="YES" horizontalLineScroll="16" horizontalPageScroll="10" verticalLineScroll="16" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="2">
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="16" horizontalPageScroll="10" verticalLineScroll="16" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2">
                     <rect key="frame" x="0.0" y="0.0" width="300" height="173"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <clipView key="contentView" id="TFG-k9-p5t">
                         <rect key="frame" x="1" y="1" width="298" height="171"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="14" id="5">
                                 <rect key="frame" x="0.0" y="0.0" width="298" height="171"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
                                     <tableColumn editable="NO" width="220" minWidth="40" maxWidth="1000" id="8">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                         </tableHeaderCell>
@@ -60,9 +59,8 @@
                                             </binding>
                                         </connections>
                                     </tableColumn>
-                                    <tableColumn editable="NO" width="72" minWidth="10" maxWidth="1000" id="9">
+                                    <tableColumn editable="NO" width="63" minWidth="10" maxWidth="1000" id="9">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                         </tableHeaderCell>
@@ -97,9 +95,8 @@
                         <outlet property="nextKeyView" destination="3" id="37"/>
                     </connections>
                 </scrollView>
-                <searchField verticalHuggingPriority="750" textCompletion="NO" id="3">
+                <searchField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3">
                     <rect key="frame" x="0.0" y="181" width="300" height="19"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <searchFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Language Name" bezelStyle="round" id="4">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -111,6 +108,16 @@
                     </connections>
                 </searchField>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="GtA-TO-aD8"/>
+                <constraint firstAttribute="trailing" secondItem="2" secondAttribute="trailing" id="Igw-Vw-XVj"/>
+                <constraint firstItem="3" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="IsF-0n-QQa"/>
+                <constraint firstItem="2" firstAttribute="top" secondItem="3" secondAttribute="bottom" constant="8" symbolic="YES" id="J56-DS-rpP"/>
+                <constraint firstItem="3" firstAttribute="top" secondItem="1" secondAttribute="top" id="LWJ-d9-84T"/>
+                <constraint firstItem="2" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="O8z-i1-zWP"/>
+                <constraint firstAttribute="bottom" secondItem="2" secondAttribute="bottom" id="crj-lE-XYy"/>
+            </constraints>
+            <point key="canvasLocation" x="75" y="154"/>
         </customView>
     </objects>
 </document>

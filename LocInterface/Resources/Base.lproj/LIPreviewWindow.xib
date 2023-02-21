@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,24 +15,24 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
-        <window title="LIPreview" allowsToolTipsWhenApplicationIsInactive="NO" deferred="NO" oneShot="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="LIPreview" animationBehavior="default" id="1" userLabel="Window">
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="LIPreview" allowsToolTipsWhenApplicationIsInactive="NO" deferred="NO" visibleAtLaunch="NO" frameAutosaveName="LIPreview" animationBehavior="default" id="1" userLabel="Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="409" y="232" width="600" height="420"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
             <view key="contentView" id="2">
                 <rect key="frame" x="0.0" y="0.0" width="600" height="420"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="22">
+                    <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="420"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="aON-wP-g9j">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="420"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <customView id="25" customClass="LIPreviewContentView">
+                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25" customClass="LIPreviewContentView">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="420"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </customView>
@@ -50,6 +50,7 @@
                     </scrollView>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="75" y="144"/>
         </window>
         <objectController objectClassName="LIPreviewController" id="20" userLabel="Controller">
             <declaredKeys>
@@ -59,17 +60,17 @@
                 <string>availableRootItems.label</string>
                 <string>currentRootItem</string>
             </declaredKeys>
+            <classReference key="objectClass" className="LIPreviewController"/>
             <connections>
                 <outlet property="content" destination="-2" id="21"/>
             </connections>
         </objectController>
         <customView id="11" userLabel="Language Selector">
-            <rect key="frame" x="0.0" y="0.0" width="203" height="21"/>
+            <rect key="frame" x="0.0" y="0.0" width="203" height="18"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="14">
-                    <rect key="frame" x="59" y="-2" width="144" height="25"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="14">
+                    <rect key="frame" x="63" y="-3" width="140" height="22"/>
                     <popUpButtonCell key="cell" type="roundTextured" title="&lt;do not localize&gt;" bezelStyle="texturedRounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="17" id="15">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystem"/>
@@ -80,21 +81,20 @@
                         </menu>
                     </popUpButtonCell>
                     <connections>
-                        <binding destination="20" name="content" keyPath="selection.languages" id="39">
+                        <binding destination="20" name="selectedObject" keyPath="selection.currentLanguage" previousBinding="39" id="41">
                             <dictionary key="options">
                                 <string key="NSValueTransformerName">LanguageName</string>
                             </dictionary>
                         </binding>
-                        <binding destination="20" name="selectedObject" keyPath="selection.currentLanguage" previousBinding="39" id="41">
+                        <binding destination="20" name="content" keyPath="selection.languages" id="39">
                             <dictionary key="options">
                                 <string key="NSValueTransformerName">LanguageName</string>
                             </dictionary>
                         </binding>
                     </connections>
                 </popUpButton>
-                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="12">
-                    <rect key="frame" x="-1" y="4" width="59" height="14"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                    <rect key="frame" x="2" y="3" width="59" height="14"/>
                     <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Language:" id="13">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -102,14 +102,22 @@
                     </textFieldCell>
                 </textField>
             </subviews>
+            <constraints>
+                <constraint firstItem="14" firstAttribute="top" secondItem="11" secondAttribute="top" constant="1" id="CHD-db-KBF"/>
+                <constraint firstItem="12" firstAttribute="leading" secondItem="11" secondAttribute="leading" constant="4" id="Inw-rL-jz6"/>
+                <constraint firstItem="14" firstAttribute="leading" secondItem="12" secondAttribute="trailing" constant="8" symbolic="YES" id="Iqq-oc-4KC"/>
+                <constraint firstItem="14" firstAttribute="firstBaseline" secondItem="12" secondAttribute="firstBaseline" id="gFC-zT-kh6"/>
+                <constraint firstAttribute="trailing" secondItem="14" secondAttribute="trailing" constant="4" id="hVS-I2-ada"/>
+                <constraint firstAttribute="bottom" secondItem="14" secondAttribute="bottom" constant="1" id="xPN-42-8jT"/>
+            </constraints>
+            <point key="canvasLocation" x="-6" y="445"/>
         </customView>
         <customView id="52" userLabel="Object Selector">
-            <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
+            <rect key="frame" x="0.0" y="0.0" width="150" height="18"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="53">
-                    <rect key="frame" x="0.0" y="-2" width="150" height="25"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53">
+                    <rect key="frame" x="0.0" y="-3" width="150" height="22"/>
                     <popUpButtonCell key="cell" type="roundTextured" title="&lt;do not localize&gt;" bezelStyle="texturedRounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="58" id="56">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystem"/>
@@ -126,6 +134,13 @@
                     </connections>
                 </popUpButton>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="53" secondAttribute="bottom" constant="1" id="jgC-FF-73X"/>
+                <constraint firstAttribute="trailing" secondItem="53" secondAttribute="trailing" constant="4" id="lzP-PT-Dgh"/>
+                <constraint firstItem="53" firstAttribute="top" secondItem="52" secondAttribute="top" constant="1" id="m7P-Qp-2IN"/>
+                <constraint firstItem="53" firstAttribute="leading" secondItem="52" secondAttribute="leading" constant="4" id="yvt-Y6-Wtj"/>
+            </constraints>
+            <point key="canvasLocation" x="-5" y="-173"/>
         </customView>
     </objects>
 </document>
