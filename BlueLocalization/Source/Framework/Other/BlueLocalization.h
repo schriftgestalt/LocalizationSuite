@@ -86,3 +86,27 @@
 #import <BlueLocalization/BLArrayExtensions.h>
 #import <BlueLocalization/BLFileManagerAdditions.h>
 #import <BlueLocalization/BLSecurityExtensions.h>
+
+#import <BlueLocalization/BLAppleGlotDocument.h>
+#import <BlueLocalization/BLCreationStep.h>
+#import <BlueLocalization/BLDictionaryFileImportStep.h>
+#import <BlueLocalization/BLInterpretationStep.h>
+#import <BlueLocalization/BLNibFileCreator.h>
+#import <BlueLocalization/BLNibFileInterpreter.h>
+#import <BlueLocalization/BLNibFileObject.h>
+#import <BlueLocalization/BLPlistFileCreator.h>
+#import <BlueLocalization/BLPlistFileInterpreter.h>
+#import <BlueLocalization/BLPlistFileObject.h>
+#import <BlueLocalization/BLRTFDKeyObject.h>
+#import <BlueLocalization/BLRTFFileCreator.h>
+#import <BlueLocalization/BLRTFFileInterpreter.h>
+#import <BlueLocalization/BLRTFFileObject.h>
+#import <BlueLocalization/BLStringKeyObject.h>
+#import <BlueLocalization/BLStringsFileCreator.h>
+#import <BlueLocalization/BLStringsFileInterpreter.h>
+#import <BlueLocalization/BLStringsFileObject.h>
+#import <BlueLocalization/BLTMXDocument.h>
+#import <BlueLocalization/BLTXTFileCreator.h>
+#import <BlueLocalization/BLTXTFileInterpreter.h>
+#import <BlueLocalization/BLTXTFileObject.h>
+#import <BlueLocalization/BLXLIFFDocument.h>
