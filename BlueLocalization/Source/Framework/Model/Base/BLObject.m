@@ -236,6 +236,14 @@ NSString *BLObjectFileUnimportableError = @"File cannot be imported";
 }
 
 - (void)setChangeDate:(NSDate *)date {
+	if (date && [date isKindOfClass:[NSString class]]) {
+		static NSISO8601DateFormatter *dateFormat;
+		static dispatch_once_t onceToken;
+		dispatch_once(&onceToken, ^{
+			dateFormat = [NSISO8601DateFormatter new];
+		});
+		date = [dateFormat dateFromString:(NSString *)date];
+	}
 	_changeDate = date;
 }
 
