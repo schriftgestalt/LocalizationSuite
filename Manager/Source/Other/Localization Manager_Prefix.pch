@@ -8,6 +8,5 @@
 	#import <BlueLocalization/BlueLocalization.h>
 	#import <LocTools/LocTools.h>
 	#import <LocInterface/LocInterface.h>
-	#import <BWToolkitFramework/BWToolkitFramework.h>
 #endif
 

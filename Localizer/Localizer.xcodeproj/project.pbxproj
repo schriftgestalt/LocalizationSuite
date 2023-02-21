@@ -144,7 +144,6 @@
 		5052605505D5C32300429FDF /* Localizer.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Localizer.icns; path = Icons/Localizer.icns; sourceTree = "<group>"; };
 		5056659D1384161300E8AB31 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
 		5056659E1384161300E8AB31 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
-		505665A0138417A800E8AB31 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = ../Shared/Frameworks/BWToolkitFramework.framework; sourceTree = "<group>"; };
 		506FE7B31194720B009A67A8 /* lod.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = lod.icns; path = ../Shared/Icons/lod.icns; sourceTree = SOURCE_ROOT; };
 		507A482805D6BFD90044A3E3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		50BB659D10B5C61A00A1AD4C /* StatisticsTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsTextView.h; sourceTree = "<group>"; };
@@ -274,7 +273,6 @@
 				56AEB2F9273BD780008F3EAE /* NibPreview.xcodeproj */,
 				56AEB302273BD78D008F3EAE /* LocTools.xcodeproj */,
 				56AEB30B273BD79F008F3EAE /* LocInterface.xcodeproj */,
-				505665A0138417A800E8AB31 /* BWToolkitFramework.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
