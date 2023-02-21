@@ -14,7 +14,12 @@
 	[super drawRect:dirtyRect];
 	[[NSColor textBackgroundColor] set];
 	NSRectFill(dirtyRect);
-	[[NSColor tertiaryLabelColor] set];
+	if (@available(macOS 10.14, *)) {
+		[[NSColor separatorColor] set];
+	}
+	else {
+		[[NSColor tertiaryLabelColor] set];
+	}
 	NSRect bounds = [self bounds];
 	NSRect rect = bounds;
 	rect.origin.y += NSHeight(rect) - 1;

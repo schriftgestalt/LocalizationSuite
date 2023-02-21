@@ -101,8 +101,7 @@ NSColor *BackgroundColorNotEditable;
 				[oldObject removeObserver:self forKeyPath:[[document preferences] objectForKey:DocumentViewOptionLeftLanguage]];
 				[oldObject removeObserver:self forKeyPath:[[document preferences] objectForKey:DocumentViewOptionRightLanguage]];
 			}
-			@catch (NSException *e) {
-			}
+			@catch (NSException *e) {}
 		}
 
 		// Save changes

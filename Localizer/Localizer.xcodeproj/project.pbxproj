@@ -25,9 +25,10 @@
 		50C3D1A60FC37A32005AEF1A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C3D1A50FC37A32005AEF1A /* Sparkle.framework */; };
 		50C3D1A70FC37A3D005AEF1A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50C3D1A50FC37A32005AEF1A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		50C3D25C0FC37D40005AEF1A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 50C3D25B0FC37D40005AEF1A /* dsa_pub.pem */; };
+		5619C40C29A4F30A0079893A /* GSSplitViewWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5619C40B29A4F30A0079893A /* GSSplitViewWindowController.m */; };
+		5619C40F29A51F200079893A /* GSMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5619C40E29A51F200079893A /* GSMenuButton.m */; };
 		56320E74230EA988002A5878 /* GSStringToAttributedValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56320E73230EA988002A5878 /* GSStringToAttributedValueTransformer.m */; };
 		56370B451D42136B0024CD02 /* GSGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56370B441D42136B0024CD02 /* GSGroupView.m */; };
-		56370B481D4221700024CD02 /* GSLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 56370B471D4221700024CD02 /* GSLine.m */; };
 		565DBF2F1D42066C000513F0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565DBF2E1D42066C000513F0 /* Cocoa.framework */; };
 		56AEB321273BD7C1008F3EAE /* BlueLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AEB2F4273BD774008F3EAE /* BlueLocalization.framework */; };
 		56AEB322273BD7C1008F3EAE /* LocInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AEB311273BD79F008F3EAE /* LocInterface.framework */; };
@@ -151,6 +152,10 @@
 		50C3D18E0FC3792D005AEF1A /* loc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = loc.icns; path = ../Shared/Icons/loc.icns; sourceTree = SOURCE_ROOT; };
 		50C3D1A50FC37A32005AEF1A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../Shared/Frameworks/Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		50C3D25B0FC37D40005AEF1A /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = ../Shared/Updates/dsa_pub.pem; sourceTree = SOURCE_ROOT; };
+		5619C40129A4F30A0079893A /* GSSplitViewWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSplitViewWindowController.h; sourceTree = "<group>"; };
+		5619C40B29A4F30A0079893A /* GSSplitViewWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSplitViewWindowController.m; sourceTree = "<group>"; };
+		5619C40D29A51F200079893A /* GSMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMenuButton.h; sourceTree = "<group>"; };
+		5619C40E29A51F200079893A /* GSMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMenuButton.m; sourceTree = "<group>"; };
 		56320E72230EA988002A5878 /* GSStringToAttributedValueTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSStringToAttributedValueTransformer.h; sourceTree = "<group>"; };
 		56320E73230EA988002A5878 /* GSStringToAttributedValueTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSStringToAttributedValueTransformer.m; sourceTree = "<group>"; };
 		56320E86230EBF66002A5878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Interface/Base.lproj/Document.xib; sourceTree = "<group>"; };
@@ -160,8 +165,6 @@
 		56320E8B230EBF6C002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Interface/en.lproj/Window.strings; sourceTree = "<group>"; };
 		56370B431D42136B0024CD02 /* GSGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGroupView.h; sourceTree = "<group>"; };
 		56370B441D42136B0024CD02 /* GSGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGroupView.m; sourceTree = "<group>"; };
-		56370B461D4221700024CD02 /* GSLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLine.h; sourceTree = "<group>"; };
-		56370B471D4221700024CD02 /* GSLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLine.m; sourceTree = "<group>"; };
 		56378E5C2761F12D0045ADD7 /* common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = common.xcconfig; path = ../Shared/Source/common.xcconfig; sourceTree = "<group>"; };
 		56378E662761F12D0045ADD7 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = debug.xcconfig; path = ../Shared/Source/debug.xcconfig; sourceTree = "<group>"; };
 		56528DB02459867D0030395E /* Localizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Localizer.entitlements; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				504333A41049FD4D005BD65F /* Editor.m */,
 				5056659D1384161300E8AB31 /* Preferences.h */,
 				5056659E1384161300E8AB31 /* Preferences.m */,
+				5619C40129A4F30A0079893A /* GSSplitViewWindowController.h */,
+				5619C40B29A4F30A0079893A /* GSSplitViewWindowController.m */,
 			);
 			name = Controllers;
 			path = "Source/Main Classes";
@@ -314,8 +319,8 @@
 				50BB659E10B5C61A00A1AD4C /* StatisticsTextView.m */,
 				56370B431D42136B0024CD02 /* GSGroupView.h */,
 				56370B441D42136B0024CD02 /* GSGroupView.m */,
-				56370B461D4221700024CD02 /* GSLine.h */,
-				56370B471D4221700024CD02 /* GSLine.m */,
+				5619C40D29A51F200079893A /* GSMenuButton.h */,
+				5619C40E29A51F200079893A /* GSMenuButton.m */,
 			);
 			name = Interface;
 			path = Source/Interface;
@@ -520,8 +525,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC310486D014006FF6A4 /* Document.m in Sources */,
+				5619C40F29A51F200079893A /* GSMenuButton.m in Sources */,
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
-				56370B481D4221700024CD02 /* GSLine.m in Sources */,
+				5619C40C29A4F30A0079893A /* GSSplitViewWindowController.m in Sources */,
 				56370B451D42136B0024CD02 /* GSGroupView.m in Sources */,
 				50515A0F03EDBE3000749D6B /* Controller.m in Sources */,
 				504333A51049FD4D005BD65F /* Editor.m in Sources */,

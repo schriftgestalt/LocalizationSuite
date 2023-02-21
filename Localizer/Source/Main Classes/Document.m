@@ -12,6 +12,8 @@
 #define OBJC_OLD_DISPATCH_PROTOTYPES 0
 #import <objc/message.h>
 
+#import "GSSplitViewWindowController.h"
+
 BOOL(*objc_msgSendPerform)
 (id self, SEL _cmd, NSString *referenceLanguage, NSString *targetLanguage) = (void *)objc_msgSend;
 
@@ -82,7 +84,7 @@ typedef enum {
 	}
 
 	// Main window
-	_windowController = [[NSWindowController allocWithZone:nil] initWithWindowNibName:DocumentNibName owner:self];
+	_windowController = [[GSSplitViewWindowController alloc] initWithWindowNibName:DocumentNibName owner:self];
 	[self addWindowController:_windowController];
 	[_windowController setWindowFrameAutosaveName:DocumentWindowAutosaveName];
 	[_windowController setShouldCloseDocument:YES];
@@ -134,6 +136,10 @@ typedef enum {
 
 	[[BLDictionaryController sharedInstance] registerDocument:self];
 	[[LIPreferences sharedInstance] registerDocument:self];
+
+	if (self.languages.count <= 2) {
+		self.languageSelectionView.hidden = YES;
+	}
 }
 
 - (void)showWindows {
@@ -157,14 +163,15 @@ typedef enum {
 #pragma mark - File Loading / Saving
 
 - (BOOL)readFromFileWrapper:(NSFileWrapper *)fileWrapper ofType:(NSString *)typeName error:(NSError **)outError {
-	NSArray *languages;
-	BOOL result;
 
-	result = [super readFromFileWrapper:fileWrapper ofType:typeName error:outError];
+	BOOL result = [super readFromFileWrapper:fileWrapper ofType:typeName error:outError];
+	if (!result) {
+		return NO;
+	}
 	[self setSelectedObject:nil];
 
 	// Process languages
-	languages = [self languages];
+	NSArray *languages = [self languages];
 	[self.preferences setObject:[languages objectAtIndex:0] forKey:DocumentViewOptionLeftLanguage];
 
 	if ([languages count] > 1)

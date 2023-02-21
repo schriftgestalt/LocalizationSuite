@@ -24,12 +24,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="589" height="352"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <splitView fixedFrame="YES" dividerStyle="paneSplitter" translatesAutoresizingMaskIntoConstraints="NO" id="BNq-WS-4PW">
-                        <rect key="frame" x="0.0" y="-2" width="589" height="354"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <splitView dividerStyle="paneSplitter" translatesAutoresizingMaskIntoConstraints="NO" id="BNq-WS-4PW">
+                        <rect key="frame" x="0.0" y="0.0" width="589" height="352"/>
                         <subviews>
                             <customView id="53">
-                                <rect key="frame" x="0.0" y="0.0" width="589" height="212"/>
+                                <rect key="frame" x="0.0" y="0.0" width="589" height="211"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="22">
@@ -62,20 +61,20 @@
                                         </connections>
                                     </button>
                                     <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="38" horizontalPageScroll="10" verticalLineScroll="38" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7">
-                                        <rect key="frame" x="20" y="38" width="549" height="154"/>
+                                        <rect key="frame" x="20" y="38" width="549" height="153"/>
                                         <clipView key="contentView" id="Bki-cH-RVG">
-                                            <rect key="frame" x="1" y="1" width="547" height="152"/>
+                                            <rect key="frame" x="1" y="1" width="547" height="151"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="36" id="10">
-                                                    <rect key="frame" x="0.0" y="0.0" width="547" height="152"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="547" height="151"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn editable="NO" width="535" minWidth="40" maxWidth="1000" id="12">
+                                                        <tableColumn editable="NO" width="506" minWidth="40" maxWidth="1000" id="12">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -133,11 +132,11 @@
                                 </constraints>
                             </customView>
                             <customView id="52">
-                                <rect key="frame" x="0.0" y="222" width="589" height="132"/>
+                                <rect key="frame" x="0.0" y="221" width="589" height="131"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button horizontalHuggingPriority="249" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="30">
-                                        <rect key="frame" x="18" y="107" width="551" height="18"/>
+                                        <rect key="frame" x="18" y="106" width="551" height="18"/>
                                         <buttonCell key="cell" type="check" title="Use open Documents" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="31">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -147,20 +146,20 @@
                                         </connections>
                                     </button>
                                     <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="38" horizontalPageScroll="10" verticalLineScroll="38" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24">
-                                        <rect key="frame" x="20" y="20" width="549" height="80"/>
+                                        <rect key="frame" x="20" y="20" width="549" height="79"/>
                                         <clipView key="contentView" id="S4Q-Uv-xaH">
-                                            <rect key="frame" x="1" y="1" width="547" height="78"/>
+                                            <rect key="frame" x="1" y="1" width="547" height="77"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="36" id="25">
-                                                    <rect key="frame" x="0.0" y="0.0" width="547" height="78"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="547" height="77"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn editable="NO" width="535" minWidth="40" maxWidth="1000" id="28">
+                                                        <tableColumn editable="NO" width="506" minWidth="40" maxWidth="1000" id="28">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -206,6 +205,12 @@
                         </holdingPriorities>
                     </splitView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="BNq-WS-4PW" firstAttribute="leading" secondItem="59" secondAttribute="leading" id="54e-XO-d8R"/>
+                    <constraint firstAttribute="trailing" secondItem="BNq-WS-4PW" secondAttribute="trailing" id="6vd-Po-soD"/>
+                    <constraint firstItem="BNq-WS-4PW" firstAttribute="top" secondItem="59" secondAttribute="top" id="9XU-0Z-3vG"/>
+                    <constraint firstAttribute="bottom" secondItem="BNq-WS-4PW" secondAttribute="bottom" id="Uq9-5J-PfP"/>
+                </constraints>
             </view>
             <point key="canvasLocation" x="75" y="144"/>
         </window>
