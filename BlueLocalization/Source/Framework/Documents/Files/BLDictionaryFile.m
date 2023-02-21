@@ -49,9 +49,11 @@ NSString *BLFilterSettingsPropertyName = @"filterSettings";
 	}
 
 	// Archive all keys
-	NSDictionary *attributes = @{BLActiveObjectsOnlySerializationKey: @((options & BLFileActiveObjectsOnlyOption) != 0),
-								 BLClearChangeInformationSerializationKey: @((options & BLFileClearChangedValuesOption) != 0),
-								 BLLanguagesSerializationKey: [properties objectForKey:BLLanguagesPropertyName]};
+	NSDictionary *attributes = @{
+		BLActiveObjectsOnlySerializationKey: @((options & BLFileActiveObjectsOnlyOption) != 0),
+		BLClearChangeInformationSerializationKey: @((options & BLFileClearChangedValuesOption) != 0),
+		BLLanguagesSerializationKey: [properties objectForKey:BLLanguagesPropertyName]
+	};
 
 	NSArray *archivedKeys = [BLPropertyListSerializer serializeObject:keys withAttributes:attributes outWrappers:NULL];
 

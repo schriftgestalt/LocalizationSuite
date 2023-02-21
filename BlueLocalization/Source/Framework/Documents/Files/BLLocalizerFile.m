@@ -65,10 +65,12 @@ NSString *BLDictionaryPropertyName = @"dictionary";
 	NSMutableDictionary *fileWrappers = [NSMutableDictionary dictionary];
 
 	// Archive all bundles
-	NSDictionary *attributes = @{BLActiveObjectsOnlySerializationKey: @((options & BLFileActiveObjectsOnlyOption) != 0),
-								 BLClearChangeInformationSerializationKey: @((options & BLFileClearChangedValuesOption) != 0),
-								 BLClearAllBackupsSerializationKey: @((options & BLFileIncludePreviewOption) == 0),
-								 BLLanguagesSerializationKey: [properties objectForKey:BLLanguagesPropertyName]};
+	NSDictionary *attributes = @{
+		BLActiveObjectsOnlySerializationKey: @((options & BLFileActiveObjectsOnlyOption) != 0),
+		BLClearChangeInformationSerializationKey: @((options & BLFileClearChangedValuesOption) != 0),
+		BLClearAllBackupsSerializationKey: @((options & BLFileIncludePreviewOption) == 0),
+		BLLanguagesSerializationKey: [properties objectForKey:BLLanguagesPropertyName]
+	};
 
 	NSDictionary *resources = [NSDictionary dictionary];
 	NSArray *archivedBundles = [BLPropertyListSerializer serializeObject:[BLObject bundleObjectsFromArray:bundles] withAttributes:attributes outWrappers:&resources];
