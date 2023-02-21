@@ -34,6 +34,7 @@ extern NSString *DocumentViewOptionFilter;
 @property (strong) BLKeyObject *selectedObject;
 
 @property (weak) IBOutlet NSView *languageSelectionView;
+@property (weak) IBOutlet NSOutlineView *bundleListTableView;
 
 - (NSArray *)filteredKeys;
 - (NSUInteger)progress;

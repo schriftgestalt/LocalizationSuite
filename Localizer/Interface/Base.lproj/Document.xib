@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="Document">
             <connections>
+                <outlet property="bundleListTableView" destination="450" id="NHL-Vj-2bO"/>
                 <outlet property="bundlesController" destination="842" id="845"/>
                 <outlet property="content" destination="737" id="738"/>
                 <outlet property="editor" destination="601" id="860"/>
@@ -189,14 +190,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="279" height="509"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" tableStyle="sourceList" selectionHighlightStyle="sourceList" columnReordering="NO" columnResizing="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="20" indentationPerLevel="13" outlineTableColumn="451" id="450">
+                            <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" tableStyle="plain" selectionHighlightStyle="sourceList" columnReordering="NO" columnResizing="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="20" indentationPerLevel="13" outlineTableColumn="451" id="450">
                                 <rect key="frame" x="0.0" y="0.0" width="279" height="509"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <size key="intercellSpacing" width="3" height="4"/>
                                 <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
-                                    <tableColumn identifier="name" editable="NO" width="219" minWidth="16" maxWidth="1000" id="451">
+                                    <tableColumn identifier="name" editable="NO" width="222" minWidth="16" maxWidth="1000" id="451">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Bundles and Files">
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>

@@ -140,6 +140,9 @@ typedef enum {
 	if (self.languages.count <= 2) {
 		self.languageSelectionView.hidden = YES;
 	}
+	if (@available(macOS 11, *)) {
+		self.bundleListTableView.style = NSTableViewStyleSourceList;
+	}
 }
 
 - (void)showWindows {
