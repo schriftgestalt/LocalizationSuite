@@ -11,7 +11,6 @@
 /*!
  @abstract A file creator implementation for plain text files.
  */
-@interface BLTXTFileCreator : BLFileCreator {
-}
+@interface BLTXTFileCreator : BLFileCreator
 
 @end

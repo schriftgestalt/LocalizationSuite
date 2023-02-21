@@ -388,7 +388,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0730;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "Localization Suite";
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NibPreview" */;

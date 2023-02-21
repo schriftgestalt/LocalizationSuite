@@ -176,30 +176,30 @@ NSString *BLDatabaseDocumentUpdateXcodeFileLimitKey = @"XcodeFileLimit";
 + (NSDictionary *)defaultPreferences {
 	NSMutableDictionary *prefs = [NSMutableDictionary dictionaryWithDictionary:[super defaultPreferences]];
 
-	[prefs setObject:[NSNumber numberWithInt:BLIdentifiersNamingStyle] forKey:BLDatabaseDocumentBundleNamingStyleKey];
-	[prefs setObject:[NSNumber numberWithInt:BLRelativeReferencingStyle] forKey:BLDatabaseDocumentBundleReferencingStyleKey];
+	[prefs setObject:@(BLIdentifiersNamingStyle) forKey:BLDatabaseDocumentBundleNamingStyleKey];
+	[prefs setObject:@(BLRelativeReferencingStyle) forKey:BLDatabaseDocumentBundleReferencingStyleKey];
 
-	[prefs setObject:[NSNumber numberWithBool:NO] forKey:BLDatabaseDocumentLocalizerFilesSaveToOneFileKey];
-	[prefs setObject:[NSNumber numberWithBool:YES] forKey:BLDatabaseDocumentLocalizerFilesIncludePreviewKey];
-	[prefs setObject:[NSNumber numberWithBool:NO] forKey:BLDatabaseDocumentLocalizerFilesEmbedDictionaryKey];
-	[prefs setObject:[NSNumber numberWithBool:NO] forKey:BLDatabaseDocumentLocalizerFilesEmbedDictionaryGuessesKey];
-	[prefs setObject:[NSNumber numberWithBool:NO] forKey:BLDatabaseDocumentLocalizerFilesCompressionKey];
+	[prefs setObject:@NO forKey:BLDatabaseDocumentLocalizerFilesSaveToOneFileKey];
+	[prefs setObject:@YES forKey:BLDatabaseDocumentLocalizerFilesIncludePreviewKey];
+	[prefs setObject:@NO forKey:BLDatabaseDocumentLocalizerFilesEmbedDictionaryKey];
+	[prefs setObject:@NO forKey:BLDatabaseDocumentLocalizerFilesEmbedDictionaryGuessesKey];
+	[prefs setObject:@NO forKey:BLDatabaseDocumentLocalizerFilesCompressionKey];
 
-	[prefs setObject:[NSNumber numberWithBool:YES] forKey:BLDatabaseDocumentImportEmptyStringsKey];
-	[prefs setObject:[NSNumber numberWithBool:YES] forKey:BLDatabaseDocumentDeactivateEmptyStringsKey];
-	[prefs setObject:[NSNumber numberWithBool:YES] forKey:BLDatabaseDocumentDeactivatePlaceholderStringsKey];
-	[prefs setObject:[NSNumber numberWithBool:YES] forKey:BLDatabaseDocumentAutotranslateNewStringsKey];
-	[prefs setObject:[NSNumber numberWithBool:YES] forKey:BLDatabaseDocumentMarkAutotranslatedAsNotChangedKey];
-	[prefs setObject:[NSNumber numberWithBool:NO] forKey:BLDatabaseDocumentValueChangesResetStringsKey];
+	[prefs setObject:@YES forKey:BLDatabaseDocumentImportEmptyStringsKey];
+	[prefs setObject:@YES forKey:BLDatabaseDocumentDeactivateEmptyStringsKey];
+	[prefs setObject:@YES forKey:BLDatabaseDocumentDeactivatePlaceholderStringsKey];
+	[prefs setObject:@YES forKey:BLDatabaseDocumentAutotranslateNewStringsKey];
+	[prefs setObject:@YES forKey:BLDatabaseDocumentMarkAutotranslatedAsNotChangedKey];
+	[prefs setObject:@NO forKey:BLDatabaseDocumentValueChangesResetStringsKey];
 
-	[prefs setObject:[NSNumber numberWithBool:NO] forKey:BLDatabaseDocumentRescanXcodeProjectsEnabledKey];
-	[prefs setObject:[NSNumber numberWithBool:NO] forKey:BLDatabaseDocumentUpdateXcodeProjectsEnabledKey];
-	[prefs setObject:[NSNumber numberWithBool:YES] forKey:BLDatabaseDocumentUpdateXcodeAddMissingFilesKey];
-	[prefs setObject:[NSNumber numberWithBool:NO] forKey:BLDatabaseDocumentUpdateXcodeRemoveNotMatchingFilesKey];
-	[prefs setObject:[NSNumber numberWithBool:YES] forKey:BLDatabaseDocumentUpdateXcodeHasLanguageLimitKey];
-	[prefs setObject:[NSNumber numberWithFloat:90.0] forKey:BLDatabaseDocumentUpdateXcodeLanguageLimitKey];
-	[prefs setObject:[NSNumber numberWithBool:YES] forKey:BLDatabaseDocumentUpdateXcodeHasFileLimitKey];
-	[prefs setObject:[NSNumber numberWithFloat:75.0] forKey:BLDatabaseDocumentUpdateXcodeFileLimitKey];
+	[prefs setObject:@NO forKey:BLDatabaseDocumentRescanXcodeProjectsEnabledKey];
+	[prefs setObject:@NO forKey:BLDatabaseDocumentUpdateXcodeProjectsEnabledKey];
+	[prefs setObject:@YES forKey:BLDatabaseDocumentUpdateXcodeAddMissingFilesKey];
+	[prefs setObject:@NO forKey:BLDatabaseDocumentUpdateXcodeRemoveNotMatchingFilesKey];
+	[prefs setObject:@YES forKey:BLDatabaseDocumentUpdateXcodeHasLanguageLimitKey];
+	[prefs setObject:@90.0 forKey:BLDatabaseDocumentUpdateXcodeLanguageLimitKey];
+	[prefs setObject:@YES forKey:BLDatabaseDocumentUpdateXcodeHasFileLimitKey];
+	[prefs setObject:@75.0 forKey:BLDatabaseDocumentUpdateXcodeFileLimitKey];
 
 	return prefs;
 }

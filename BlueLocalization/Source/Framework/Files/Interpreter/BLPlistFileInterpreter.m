@@ -22,16 +22,15 @@
 
 - (BOOL)_interpreteFile:(NSString *)path {
 	NSDictionary *dict;
-	NSString *error;
+	NSError *error = nil;
 	NSArray *keys;
 	NSData *data;
 	id plist;
 
 	// Get the localization dictionary
 	data = [NSData dataWithContentsOfFile:path];
-	error = nil;
 
-	plist = [NSPropertyListSerialization propertyListFromData:data mutabilityOption:NSPropertyListImmutable format:nil errorDescription:&error];
+	plist = [NSPropertyListSerialization propertyListWithData:data options:NSPropertyListImmutable format:nil error:&error];
 	if (!plist) {
 		BLLog(BLLogError, @"Failed to parse plist. Reason: %@", error);
 		return NO;

@@ -6,7 +6,6 @@
 //  Copyright 2010 The Soulmen. All rights reserved.
 //
 
-@interface FileObjectTest : SenTestCase {
-}
+@interface FileObjectTest : XCTestCase
 
 @end

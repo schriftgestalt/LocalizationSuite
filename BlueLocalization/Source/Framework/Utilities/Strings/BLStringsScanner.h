@@ -9,8 +9,7 @@
 /*!
  @abstract A sophisticated strings scanner working on NSStrings.
  */
-@interface BLStringsScanner : NSObject {
-}
+@interface BLStringsScanner : NSObject
 
 /*!
  @abstract Scans strings and comments from an given string.

@@ -6,7 +6,6 @@
 //  Copyright 2009 The Soulmen. All rights reserved.
 //
 
-@interface StringsImporterTest : SenTestCase {
-}
+@interface StringsImporterTest : XCTestCase
 
 @end

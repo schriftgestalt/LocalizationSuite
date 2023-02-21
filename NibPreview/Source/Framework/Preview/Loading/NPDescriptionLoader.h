@@ -9,9 +9,7 @@
 /*!
  @abstract Runs ibtool and extracts an plist output of nib files.
  */
-@interface NPDescriptionLoader : NSObject {
-}
-
+@interface NPDescriptionLoader : NSObject
 /*!
  @abstract Retruns the single shared instance.
  */

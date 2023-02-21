@@ -61,39 +61,39 @@ id __sharedTMXExporter;
 	[panel setAllowedFileTypes:[BLTMXDocument pathExtensions]];
 	[panel setAccessoryView:optionsView];
 	[[panel defaultButtonCell] setTitle:NSLocalizedStringFromTableInBundle(@"Export", @"Localizable", [NSBundle bundleForClass:[self class]], nil)];
-
+	
 	[panel beginSheetModalForWindow:[document windowForSheet]
 				  completionHandler:^(NSInteger returnCode) {
-					  [panel close];
-
-					  // User aborted
-					  if (returnCode != NSFileHandlingPanelOKButton)
-						  return;
-
-					  // Create options
-					  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-					  NSUInteger options = 0;
-
-					  if ([defaults boolForKey:BLTMXExporterAllowRichTextKeyPath])
-						  options |= BLTMXExporterAllowRichText;
-
-					  // Create Step
-					  BLGenericProcessStep *step = [BLGenericProcessStep genericStepWithBlock:^{
-						  [[self class] exportTMXFromObjects:objects withOptions:options toPath:[[panel URL] path]];
-					  }];
-
-					  [step setAction:NSLocalizedStringFromTableInBundle(@"ExportingTMX", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil)];
-					  [step setDescription:NSLocalizedStringFromTableInBundle(@"ExportingTMXText", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil)];
-
-					  // Schedule or execute
-					  if ([document respondsToSelector:@selector(processManager)] && [document processManager]) {
-						  [[document processManager] enqueueStep:step];
-						  [[document processManager] startWithName:@"Exporting TMX files…"];
-					  }
-					  else {
-						  [step perform];
-					  }
-				  }];
+		[panel close];
+		
+		// User aborted
+		if (returnCode != NSModalResponseOK)
+			return;
+		
+		// Create options
+		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		NSUInteger options = 0;
+		
+		if ([defaults boolForKey:BLTMXExporterAllowRichTextKeyPath])
+			options |= BLTMXExporterAllowRichText;
+		
+		// Create Step
+		BLGenericProcessStep *step = [BLGenericProcessStep genericStepWithBlock:^{
+			[[self class] exportTMXFromObjects:objects withOptions:options toPath:[[panel URL] path]];
+		}];
+		
+		[step setAction:NSLocalizedStringFromTableInBundle(@"ExportingTMX", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil)];
+		[step setDescription:NSLocalizedStringFromTableInBundle(@"ExportingTMXText", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil)];
+		
+		// Schedule or execute
+		if ([document respondsToSelector:@selector(processManager)] && [document processManager]) {
+			[[document processManager] enqueueStep:step];
+			[[document processManager] startWithName:@"Exporting TMX files…"];
+		}
+		else {
+			[step perform];
+		}
+	}];
 }
 
 #pragma mark - Export

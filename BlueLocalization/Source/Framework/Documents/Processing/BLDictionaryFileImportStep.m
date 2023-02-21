@@ -114,7 +114,7 @@
 	NSDictionary *properties = nil;
 
 	// Open file
-	NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithPath:_path];
+	NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithURL:[NSURL fileURLWithPath:_path] options:0 error:nil];
 	NSArray *keyObjects = [BLDictionaryFile objectsFromFile:wrapper readingProperties:&properties];
 
 	// Update document
@@ -128,7 +128,7 @@
 	NSDictionary *properties = nil;
 
 	// Open file
-	NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithPath:_path];
+	NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithURL:[NSURL fileURLWithPath:_path] options:0 error:nil];
 	NSArray *fileObjects = [BLLocalizerFile objectsFromFile:wrapper readingProperties:&properties];
 
 	// Update document

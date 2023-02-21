@@ -171,7 +171,7 @@ NSString *BLTMXDocumentRTFDatatype = @"rtf";
 	_body = [NSXMLElement elementWithName:@"body"];
 	[tmx addChild:_body];
 
-	_keyObjectMap = [NSMapTable mapTableWithWeakToWeakObjects];
+	_keyObjectMap = [NSMapTable weakToWeakObjectsMapTable];
 	_keyObjects = [[NSMutableArray alloc] init];
 }
 
@@ -223,7 +223,7 @@ NSString *BLTMXDocumentRTFDatatype = @"rtf";
 
 	// Clear data structures
 
-	_keyObjectMap = [NSMapTable mapTableWithWeakToWeakObjects];
+	_keyObjectMap = [NSMapTable weakToWeakObjectsMapTable];
 	_keyObjects = [[NSMutableArray alloc] init];
 
 	// Read the key objects

@@ -96,7 +96,7 @@
 
 	// Clear data structures
 
-	_keyObjectMap = [NSMapTable mapTableWithWeakToWeakObjects];
+	_keyObjectMap = [NSMapTable weakToWeakObjectsMapTable];
 	_keyObjects = [[NSMutableArray alloc] init];
 
 	// Read the key objects

@@ -11,8 +11,7 @@
 /*!
  @abstract A file creator implementation for strings files.
  */
-@interface BLStringsFileCreator : BLFileCreator {
-}
+@interface BLStringsFileCreator : BLFileCreator
 
 /*!
  @discussion BLStringsFileCreator just forwards the standard method -_writeFileToPath:fromObject:withLanguage:referenceLanguage: to this one, passing NSUnicodeStringEncoding as encoding.

@@ -37,8 +37,7 @@
 	[[NSException exceptionWithName:NSGenericException reason:@"-perform called on abstract superclass BLProcessStep" userInfo:nil] raise];
 }
 
-- (void)updateDescription {
-}
+- (void)updateDescription {}
 
 #pragma mark - Accessors
 

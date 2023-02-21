@@ -54,9 +54,9 @@
 
 - (BOOL)sendAction:(SEL)theAction to:(id)theTarget {
 	// Inject custom actions
-	if ((_lastFlags & NSAlternateKeyMask) && _altAction)
+	if ((_lastFlags & NSEventModifierFlagOption) && _altAction)
 		theAction = _altAction;
-	if ((_lastFlags & NSShiftKeyMask) && _shiftAction)
+	if ((_lastFlags & NSEventModifierFlagShift) && _shiftAction)
 		theAction = _shiftAction;
 
 	return [super sendAction:theAction to:theTarget];
@@ -66,9 +66,9 @@
 	NSString *title = [self title];
 
 	// Inject custom titles
-	if ((_lastFlags & NSAlternateKeyMask) && [_altTitle length])
+	if ((_lastFlags & NSEventModifierFlagOption) && [_altTitle length])
 		[self setTitle:_altTitle];
-	if ((_lastFlags & NSShiftKeyMask) && [_shiftTitle length])
+	if ((_lastFlags & NSEventModifierFlagShift) && [_shiftTitle length])
 		[self setTitle:_shiftTitle];
 
 	[super drawRect:rect];

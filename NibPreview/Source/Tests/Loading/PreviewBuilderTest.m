@@ -15,7 +15,7 @@
 
 - (void)testCreation {
 	NPPreviewBuilder *builder = [[NPPreviewBuilder alloc] init];
-	STAssertNotNil(builder, @"can't create builder");
+	XCTAssertNotNil(builder, @"can't create builder");
 }
 
 - (void)testComponent:(NSString *)type forKey:(NSString *)key {
@@ -25,28 +25,28 @@
 	NSString *outPath = [[NSBundle bundleForClass:[self class]] pathForResource:key ofType:@"out" inDirectory:directory];
 	NSString *xibPath = [[NSBundle bundleForClass:[self class]] pathForResource:key ofType:@"nib" inDirectory:directory];
 
-	STAssertNotNil(outPath, @"out file not found for %@/%@", type, key);
-	STAssertNotNil(xibPath, @"nib file not found for %@/%@", type, key);
+	XCTAssertNotNil(outPath, @"out file not found for %@/%@", type, key);
+	XCTAssertNotNil(xibPath, @"nib file not found for %@/%@", type, key);
 
 	NSDictionary *contents = [NSDictionary dictionaryWithContentsOfFile:outPath];
-	STAssertNotNil(contents, @"can't load out file for %@/%@", type, key);
+	XCTAssertNotNil(contents, @"can't load out file for %@/%@", type, key);
 
 	NSMutableArray *originals = [NSMutableArray array];
 	BOOL result = [NSBundle loadNibFile:xibPath externalNameTable:[NSDictionary dictionaryWithObjectsAndKeys:originals, NSNibTopLevelObjects, nil] withZone:nil];
-	STAssertTrue(result, @"can't load nib file for %@/%@", type, key);
+	XCTAssertTrue(result, @"can't load nib file for %@/%@", type, key);
 
 	[originals removeObject:NSApp];
-	STAssertTrue(originals.count > 0, @"nib file seems to be empty for %@/%@", type, key);
+	XCTAssertTrue(originals.count > 0, @"nib file seems to be empty for %@/%@", type, key);
 
 	NPPreviewBuilder *builder = [[NPPreviewBuilder alloc] init];
 	[builder buildPreviewFromDescription:contents];
-	STAssertTrue(builder.classes.count > 0, @"Builder loaded no classes for %@/%@", type, key);
-	STAssertTrue(builder.objects.count > 0, @"Builder loaded no objects for %@/%@", type, key);
-	STAssertTrue(builder.rootObjects.count > 0, @"Builder made no hierarchies for %@/%@", type, key);
+	XCTAssertTrue(builder.classes.count > 0, @"Builder loaded no classes for %@/%@", type, key);
+	XCTAssertTrue(builder.objects.count > 0, @"Builder loaded no objects for %@/%@", type, key);
+	XCTAssertTrue(builder.rootObjects.count > 0, @"Builder made no hierarchies for %@/%@", type, key);
 
 	NSArray *loaded = [builder.rootObjects valueForKey:@"original"];
-	STAssertEquals(loaded.count, builder.rootObjects.count, @"Original count mismatches root count for %@/%@", type, key);
-	STAssertEquals(loaded.count, originals.count, @"Differing number of originals vs. loaded roots for %@/%@", type, key);
+	XCTAssertEqual(loaded.count, builder.rootObjects.count, @"Original count mismatches root count for %@/%@", type, key);
+	XCTAssertEqual(loaded.count, originals.count, @"Differing number of originals vs. loaded roots for %@/%@", type, key);
 
 	for (NSUInteger i = 0; i < loaded.count; i++) {
 		NSView *load, *orig;
@@ -56,11 +56,11 @@
 
 		// Orig may prove to be a window, which the loader always skips
 		if ([orig isKindOfClass:[NSWindow class]]) {
-			STAssertTrue([load isKindOfClass:[NSWindow class]], @"Loaded original should also be a window for %@/%@", type, key);
+			XCTAssertTrue([load isKindOfClass:[NSWindow class]], @"Loaded original should also be a window for %@/%@", type, key);
 			if (![load isKindOfClass:[NSWindow class]])
 				continue;
 
-			STAssertEquals(load.frame, orig.frame, @"Frames differ for %i. object for %@/%@", i + 1, type, key);
+			XCTAssertEqual(load.frame, orig.frame, @"Frames differ for %i. object for %@/%@", i + 1, type, key);
 
 			load = [(NSWindow *)load contentView];
 			[[load window] setContentView:nil];
@@ -69,8 +69,8 @@
 			[[orig window] setContentView:nil];
 		}
 
-		STAssertEqualObjects([load class], [orig class], @"Classes do not match!");
-		STAssertEquals(load.frame, orig.frame, @"Frames differ for %i-th object for %@/%@", i, type, key);
+		XCTAssertEqualObjects([load class], [orig class], @"Classes do not match!");
+		XCTAssertEqual(load.frame, orig.frame, @"Frames differ for %i-th object for %@/%@", i, type, key);
 
 		NSBitmapImageRep *oRep = [load bitmapImageRepForCachingDisplayInRect:load.bounds];
 		[load cacheDisplayInRect:load.bounds toBitmapImageRep:oRep];
@@ -78,7 +78,7 @@
 		NSBitmapImageRep *rRep = [orig bitmapImageRepForCachingDisplayInRect:orig.bounds];
 		[orig cacheDisplayInRect:orig.bounds toBitmapImageRep:rRep];
 
-		STAssertTrue([[oRep TIFFRepresentation] isEqualTo:[rRep TIFFRepresentation]], @"Renderings differ for %i. object for %@/%@, output will be written", i + 1, type, key);
+		XCTAssertTrue([[oRep TIFFRepresentation] isEqualTo:[rRep TIFFRepresentation]], @"Renderings differ for %i. object for %@/%@, output will be written", i + 1, type, key);
 
 		if (![[oRep TIFFRepresentation] isEqualTo:[rRep TIFFRepresentation]]) {
 			[[NSFileManager defaultManager] createDirectoryAtPath:@"Errors" withIntermediateDirectories:YES attributes:nil error:NULL];
@@ -133,17 +133,17 @@
 
 - (void)testClassMapping {
 	NSString *outPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"unknown-1" ofType:@"out" inDirectory:@"Test Data/Builder/other"];
-	STAssertNotNil(outPath, @"out file not found");
+	XCTAssertNotNil(outPath, @"out file not found");
 
 	NSDictionary *contents = [NSDictionary dictionaryWithContentsOfFile:outPath];
-	STAssertNotNil(contents, @"can't load out file");
+	XCTAssertNotNil(contents, @"can't load out file");
 
 	NPPreviewBuilder *builder = [[NPPreviewBuilder alloc] init];
 	[builder buildPreviewFromDescription:contents];
 
 	Class class = [builder.classes objectForKey:@"DRMSFFormatter"];
-	STAssertTrue([class isKindOfClass:[NSObject class]], @"Class has not been found");
-	STAssertTrue(class == [NSFormatter class], @"Class %@ has not been remapped", NSStringFromClass(class));
+	XCTAssertTrue([class isKindOfClass:[NSObject class]], @"Class has not been found");
+	XCTAssertTrue(class == [NSFormatter class], @"Class %@ has not been remapped", NSStringFromClass(class));
 }
 
 @end

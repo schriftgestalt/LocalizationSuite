@@ -6,7 +6,7 @@
 //  Copyright 2009 Blue Technologies Group. All rights reserved.
 //
 
-@interface SingleKeyMatcherTest : SenTestCase {
+@interface SingleKeyMatcherTest : XCTestCase {
 	id delegate;
 	BLKeyObject *keyObject;
 	LTSingleKeyMatcher *matcher;

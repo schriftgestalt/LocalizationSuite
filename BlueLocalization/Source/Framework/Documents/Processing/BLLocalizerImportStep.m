@@ -76,7 +76,7 @@
 	}
 
 	// Read in the file
-	wrapper = [[BLDocumentFileWrapper alloc] initWithPath:_path];
+	wrapper = [[BLDocumentFileWrapper alloc] initWithURL:[NSURL fileURLWithPath:_path] options:0 error:nil];
 	objects = [BLLocalizerFile objectsFromFile:wrapper readingProperties:&properties];
 
 	if (!objects)

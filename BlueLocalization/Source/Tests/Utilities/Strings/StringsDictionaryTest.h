@@ -6,7 +6,6 @@
 //  Copyright 2009 The Blue Technologies Group. All rights reserved.
 //
 
-@interface StringsDictionaryTest : SenTestCase {
-}
+@interface StringsDictionaryTest : XCTestCase
 
 @end

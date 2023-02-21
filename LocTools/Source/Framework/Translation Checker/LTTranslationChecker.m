@@ -296,7 +296,7 @@ CGFloat LTTranslationCheckerMaxLengthDeviation = 50;
 		character = [translated substringWithRange:NSMakeRange(i, 1)];
 
 		if ([LTTranslationCheckerSingleQuoteCharacters containsObject:character] || [LTTranslationCheckerDoubleQuoteCharacters containsObject:character])
-			[quoteChars addObject:[NSDictionary dictionaryWithObjectsAndKeys:character, @"character", [NSNumber numberWithInt:i], @"index", nil]];
+			[quoteChars addObject:[NSDictionary dictionaryWithObjectsAndKeys:character, @"character", @(i), @"index", nil]];
 	}
 
 	// No quotes
@@ -319,7 +319,7 @@ CGFloat LTTranslationCheckerMaxLengthDeviation = 50;
 		}
 		else {
 			// Quote ended
-			[quotes addObject:[NSDictionary dictionaryWithObjectsAndKeys:[stack lastObject], @"begin", [quoteChars objectAtIndex:i], @"end", [NSNumber numberWithInt:[stack count]], @"level", nil]];
+			[quotes addObject:[NSDictionary dictionaryWithObjectsAndKeys:[stack lastObject], @"begin", [quoteChars objectAtIndex:i], @"end", @([stack count]), @"level", nil]];
 			[stack removeLastObject];
 		}
 	}

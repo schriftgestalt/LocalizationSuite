@@ -148,7 +148,7 @@ id __sharedDictionaryController = nil;
 
 	for (NSURL *url in urls) {
 		// Try to open the dictionary
-		document = [[BLDictionaryDocument alloc] initWithContentsOfURL:url ofType:nil error:&error];
+		document = [[BLDictionaryDocument alloc] initWithContentsOfURL:url ofType:@"" error:&error];
 		if (!document) {
 			BLLog(BLLogError, [error localizedDescription]);
 			continue;

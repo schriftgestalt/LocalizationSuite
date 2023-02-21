@@ -12,8 +12,7 @@
  @abstract A key object holding rich text content.
  @discussion The content is stored in NSAttributedString objects.
  */
-@interface BLRTFDKeyObject : BLKeyObject {
-}
+@interface BLRTFDKeyObject : BLKeyObject
 
 /*!
   @abstract Convenience allocator.

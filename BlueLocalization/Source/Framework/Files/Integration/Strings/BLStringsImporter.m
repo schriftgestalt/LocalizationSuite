@@ -68,49 +68,49 @@ id __sharedStringsImporter;
 
 	[panel beginSheetModalForWindow:[document windowForSheet]
 				  completionHandler:^(NSInteger returnCode) {
-					  [panel close];
+		[panel close];
 
-					  // User aborted
-					  if (returnCode != NSFileHandlingPanelOKButton)
-						  return;
+		// User aborted
+		if (returnCode != NSModalResponseOK)
+			return;
 
-					  // Create Step
-					  NSArray *paths = [[panel URLs] valueForKey:@"path"];
+		// Create Step
+		NSArray *paths = [[panel URLs] valueForKey:@"path"];
 
-					  BLGenericProcessStep *step = [BLGenericProcessStep genericStepWithBlock:^{
-						  [[self class] importStringsFromFiles:paths forReferenceLanguage:[document referenceLanguage] toObjects:objects];
-					  }];
+		BLGenericProcessStep *step = [BLGenericProcessStep genericStepWithBlock:^{
+			[[self class] importStringsFromFiles:paths forReferenceLanguage:[document referenceLanguage] toObjects:objects];
+		}];
 
-					  [step setAction:NSLocalizedStringFromTableInBundle(@"ImportingStrings", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil)];
-					  [step setDescription:[NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"ImportingStringsText", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil), [paths count], [[paths valueForKey:@"lastPathComponent"] componentsJoinedByString:@"“, “"]]];
+		[step setAction:NSLocalizedStringFromTableInBundle(@"ImportingStrings", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil)];
+		[step setDescription:[NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"ImportingStringsText", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil), [paths count], [[paths valueForKey:@"lastPathComponent"] componentsJoinedByString:@"“, “"]]];
 
-					  // Enqueue or execute
-					  if ([document respondsToSelector:@selector(processManager)] && [document processManager]) {
-						  [[document processManager] enqueueStep:step];
-						  [[document processManager] startWithName:@"Importing strings files…"];
-					  }
-					  else {
-						  [step perform];
-					  }
+		// Enqueue or execute
+		if ([document respondsToSelector:@selector(processManager)] && [document processManager]) {
+			[[document processManager] enqueueStep:step];
+			[[document processManager] startWithName:@"Importing strings files…"];
+		}
+		else {
+			[step perform];
+		}
 
-					  [document updateChangeCount:NSChangeDone];
+		[document updateChangeCount:NSChangeDone];
 
-					  // Clean up
-					  _document = nil;
-				  }];
+		// Clean up
+		self->_document = nil;
+	}];
 }
 
-- (BOOL)panel:(id)sender shouldShowFilename:(NSString *)filename {
+- (BOOL)panel:(id)sender shouldEnableURL:(NSURL *)fileURL {
 	NSDictionary *attributes;
 
-	attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:filename error:NULL];
+	attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:fileURL.path error:NULL];
 
 	if (![[attributes objectForKey:NSFileType] isEqual:NSFileTypeRegular]) {
 		return YES;
 	}
 	else {
-		NSString *language = [[self class] languageForExportPath:filename];
-		return ([[filename pathExtension] isEqual:kStringsPathExtension] && language && [[_document languages] containsObject:language]);
+		NSString *language = [[self class] languageForExportPath:fileURL.path];
+		return ([[fileURL pathExtension] isEqual:kStringsPathExtension] && language && [[_document languages] containsObject:language]);
 	}
 }
 

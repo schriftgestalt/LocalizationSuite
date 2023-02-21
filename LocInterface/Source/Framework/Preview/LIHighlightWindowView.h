@@ -9,7 +9,6 @@
 /*!
  @abstract The content view of a LIHighlightWindow.
  */
-@interface LIHighlightWindowView : NSView {
-}
+@interface LIHighlightWindowView : NSView
 
 @end

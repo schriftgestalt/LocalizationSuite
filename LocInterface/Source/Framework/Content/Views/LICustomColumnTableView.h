@@ -10,8 +10,7 @@
  @abstract A table view that allows the user to hide and show columns using a context menu in it's header view.
  @discussion In addition it allows to save and restore the column state.
  */
-@interface LICustomColumnTableView : NSTableView {
-}
+@interface LICustomColumnTableView : NSTableView
 
 /*!
  @abstract The autosave data for the table column setup.

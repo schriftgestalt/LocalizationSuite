@@ -3,18 +3,6 @@
 //
 
 #ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-    #import <BlueLocalization/BlueLocalization.h>
-#endif
-
-#ifndef NSAppKitVersionNumber10_5
-	#define NSAppKitVersionNumber10_5 949
-#endif
-
-#ifndef NSAppKitVersionNumber10_6
-	#define NSAppKitVersionNumber10_6 1038
-#endif
-
-#ifndef NSAppKitVersionNumber10_7
-	#define NSAppKitVersionNumber10_7 1138
+	#import <Cocoa/Cocoa.h>
+	#import <BlueLocalization/BlueLocalization.h>
 #endif

@@ -18,16 +18,16 @@
 }
 
 - (void)testProjectLoading {
-	STAssertFalse([parser projectIsLoaded], @"The project should not yet be loaded");
-	STAssertNil([parser mainGroup], @"No item root should exist created");
+	XCTAssertFalse([parser projectIsLoaded], @"The project should not yet be loaded");
+	XCTAssertNil([parser mainGroup], @"No item root should exist created");
 
 	[parser loadProject];
 
-	STAssertTrue([parser projectIsLoaded], @"There was an error during loading the project");
-	STAssertNotNil([parser mainGroup], @"No item root was created");
+	XCTAssertTrue([parser projectIsLoaded], @"There was an error during loading the project");
+	XCTAssertNotNil([parser mainGroup], @"No item root was created");
 
-	STAssertEqualObjects([parser projectPath], [projectPath stringByDeletingLastPathComponent], @"Project path wrong");
-	STAssertEqualObjects([parser projectName], [projectPath lastPathComponent], @"Project name wrong");
+	XCTAssertEqualObjects([parser projectPath], [projectPath stringByDeletingLastPathComponent], @"Project path wrong");
+	XCTAssertEqualObjects([parser projectName], [projectPath lastPathComponent], @"Project name wrong");
 }
 
 - (void)testMainGroup {
@@ -36,9 +36,9 @@
 	[parser loadProject];
 	item = [parser mainGroup];
 
-	STAssertEquals([item itemType], BLXcodeItemTypeGroup, @"Root is no group");
-	STAssertEqualObjects([item name], @"Testproject", @"Root has wrong name");
-	STAssertEquals([[item children] count], (NSUInteger)2, @"Wrong child count for root");
+	XCTAssertEqual([item itemType], BLXcodeItemTypeGroup, @"Root is no group");
+	XCTAssertEqualObjects([item name], @"Testproject", @"Root has wrong name");
+	XCTAssertEqual([[item children] count], (NSUInteger)2, @"Wrong child count for root");
 }
 
 - (void)testItemStructure {
@@ -46,29 +46,29 @@
 
 	[parser loadProject];
 	item = [parser mainGroup];
-	STAssertEqualObjects([item name], @"Testproject", @"Item has wrong name");
-	STAssertEqualObjects([item path], nil, @"Item has wrong path");
-	STAssertEquals([item itemType], BLXcodeItemTypeGroup, @"Item has wrong type");
-	STAssertEquals([[item children] count], (NSUInteger)2, @"Too few children");
+	XCTAssertEqualObjects([item name], @"Testproject", @"Item has wrong name");
+	XCTAssertEqualObjects([item path], nil, @"Item has wrong path");
+	XCTAssertEqual([item itemType], BLXcodeItemTypeGroup, @"Item has wrong type");
+	XCTAssertEqual([[item children] count], (NSUInteger)2, @"Too few children");
 
 	item = [[item children] objectAtIndex:0];
-	STAssertEqualObjects([item name], @"Resources", @"Item has wrong name");
-	STAssertEqualObjects([item path], @"Resources", @"Item has wrong path");
-	STAssertEquals([item itemType], BLXcodeItemTypeGroup, @"Item has wrong type");
-	STAssertEquals([[item children] count], (NSUInteger)3, @"Too few children");
+	XCTAssertEqualObjects([item name], @"Resources", @"Item has wrong name");
+	XCTAssertEqualObjects([item path], @"Resources", @"Item has wrong path");
+	XCTAssertEqual([item itemType], BLXcodeItemTypeGroup, @"Item has wrong type");
+	XCTAssertEqual([[item children] count], (NSUInteger)3, @"Too few children");
 
 	NSArray *names = [NSArray arrayWithObjects:@"InfoPlist.strings", @"MainMenu.xib", @"Localizable.strings", nil];
 
 	for (subitem in [item children]) {
-		STAssertTrue([names containsObject:[subitem name]], @"Unknown subitem name");
-		STAssertEquals([subitem parent], item, @"Wrong parentat relations");
-		STAssertEquals([subitem itemType], BLXcodeItemTypeVariantGroup, @"Item has wrong type");
+		XCTAssertTrue([names containsObject:[subitem name]], @"Unknown subitem name");
+		XCTAssertEqual([subitem parent], item, @"Wrong parentat relations");
+		XCTAssertEqual([subitem itemType], BLXcodeItemTypeVariantGroup, @"Item has wrong type");
 
 		BLXcodeProjectItem *subsubitem = [[subitem children] objectAtIndex:0];
 
-		STAssertTrue([[subsubitem name] isEqual:@"English"], @"Subitem has no subitem named \"English\"");
-		STAssertEquals([subsubitem itemType], BLXcodeItemTypeFile, @"Item has wrong type");
-		STAssertEquals([subsubitem children], (NSArray *)nil, @"Files should return no children");
+		XCTAssertTrue([[subsubitem name] isEqual:@"English"], @"Subitem has no subitem named \"English\"");
+		XCTAssertEqual([subsubitem itemType], BLXcodeItemTypeFile, @"Item has wrong type");
+		XCTAssertEqual([subsubitem children], (NSArray *)nil, @"Files should return no children");
 	}
 }
 
@@ -80,19 +80,19 @@
 
 	item = [parser mainGroup];
 	path = [parser projectPath];
-	STAssertEqualObjects([item fullPath], path, @"Wrong path for root group");
+	XCTAssertEqualObjects([item fullPath], path, @"Wrong path for root group");
 
 	item = [[item children] objectAtIndex:0];
 	path = [path stringByAppendingPathComponent:@"Resources"];
-	STAssertEqualObjects([item fullPath], path, @"Wrong path for group");
+	XCTAssertEqualObjects([item fullPath], path, @"Wrong path for group");
 
 	item = [[item children] objectAtIndex:0];
 	path = path;
-	STAssertEqualObjects([item fullPath], path, @"Wrong path for group");
+	XCTAssertEqualObjects([item fullPath], path, @"Wrong path for group");
 
 	item = [[item children] objectAtIndex:0];
 	path = [path stringByAppendingPathComponent:@"English.lproj/InfoPlist.strings"];
-	STAssertEqualObjects([item fullPath], path, @"Wrong path for file");
+	XCTAssertEqualObjects([item fullPath], path, @"Wrong path for file");
 }
 
 - (void)testOtherPathGeneration {
@@ -103,23 +103,23 @@
 
 	item = [parser mainGroup];
 	path = [parser projectPath];
-	STAssertEqualObjects([item fullPath], path, @"Wrong path for root group");
+	XCTAssertEqualObjects([item fullPath], path, @"Wrong path for root group");
 
 	item = [[item children] objectAtIndex:1];
 	path = [path stringByAppendingPathComponent:@"Folder"];
-	STAssertEqualObjects([item fullPath], path, @"Wrong path for group");
+	XCTAssertEqualObjects([item fullPath], path, @"Wrong path for group");
 
 	aItem = [[item children] objectAtIndex:0];
-	STAssertEqualObjects([aItem fullPath], [path stringByAppendingPathComponent:@"Localizable.strings"], @"Wrong path for file");
+	XCTAssertEqualObjects([aItem fullPath], [path stringByAppendingPathComponent:@"Localizable.strings"], @"Wrong path for file");
 	aItem = [[item children] objectAtIndex:1];
-	STAssertEqualObjects([aItem fullPath], [path stringByAppendingPathComponent:@"Localizable2.strings"], @"Wrong path for file");
+	XCTAssertEqualObjects([aItem fullPath], [path stringByAppendingPathComponent:@"Localizable2.strings"], @"Wrong path for file");
 
 	aItem = [[item children] objectAtIndex:2];
-	STAssertNil([aItem fullPath], @"Unknow referencing type should not return any path...");
+	XCTAssertNil([aItem fullPath], @"Unknow referencing type should not return any path...");
 	aItem = [[item children] objectAtIndex:3];
-	STAssertNil([aItem fullPath], @"Unknow referencing type should not return any path...");
+	XCTAssertNil([aItem fullPath], @"Unknow referencing type should not return any path...");
 	aItem = [[item children] objectAtIndex:4];
-	STAssertNil([aItem fullPath], @"Unknow referencing type should not return any path...");
+	XCTAssertNil([aItem fullPath], @"Unknow referencing type should not return any path...");
 }
 
 @end

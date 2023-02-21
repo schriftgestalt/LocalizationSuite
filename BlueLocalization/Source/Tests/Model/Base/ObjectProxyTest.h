@@ -8,7 +8,7 @@
 
 #import <BlueLocalization/BLObjectProxy.h>
 
-@interface ObjectProxyTest : SenTestCase {
+@interface ObjectProxyTest : XCTestCase {
 	BLFileObject *object1, *object2, *pObject;
 	BLObjectProxy *proxy;
 	NSString *path;

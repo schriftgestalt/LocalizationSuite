@@ -10,8 +10,7 @@
  @abstract A simple outline view that enables users to copy selected rows.
  @discussion This is done using an extension of the outline view delgate protocol, see LICopyingOutlineView for details.
  */
-@interface LICopyingOutlineView : NSOutlineView {
-}
+@interface LICopyingOutlineView : NSOutlineView
 
 @end
 

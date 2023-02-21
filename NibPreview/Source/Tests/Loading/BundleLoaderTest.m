@@ -16,21 +16,21 @@
 	// The paths returned should be the paths actually stored in IB's preferences
 
 	NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Preferences/com.apple.InterfaceBuilder3.plist"];
-	STAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:path], @"IB Preferences file does not exist");
+	XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:path], @"IB Preferences file does not exist");
 
 	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
-	STAssertNotNil(dict, @"Can't load preferences file");
+	XCTAssertNotNil(dict, @"Can't load preferences file");
 
 	NSString *pathsKey = [[[[dict keysOfEntriesPassingTest:^BOOL(id key, id obj, BOOL *stop) {
 		return [key hasPrefix:@"IBKnownPluginPaths"];
 	}] allObjects] sortedArrayUsingSelector:@selector(compare:)] lastObject];
 
-	STAssertTrue([[NSSet setWithArray:[[dict objectForKey:pathsKey] allValues]] isEqualToSet:[NSSet setWithArray:[NPBundleLoader interfaceBuilderKnownPluginPaths]]], @"Loaded Bundle paths don't match");
+	XCTAssertTrue([[NSSet setWithArray:[[dict objectForKey:pathsKey] allValues]] isEqualToSet:[NSSet setWithArray:[NPBundleLoader interfaceBuilderKnownPluginPaths]]], @"Loaded Bundle paths don't match");
 }
 
 - (void)testFrameworkPath {
 	NSString *path = [NPBundleLoader interfaceBuilderFrameworkPath];
-	STAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:path], @"IB Framework does not exist at path: %@", path);
+	XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:path], @"IB Framework does not exist at path: %@", path);
 }
 
 /*
@@ -41,10 +41,10 @@
 	id instance1, instance2;
 
 	instance1 = [NPBundleLoader sharedInstance];
-	STAssertNotNil(instance1, @"No shared description loader");
+	XCTAssertNotNil(instance1, @"No shared description loader");
 
 	instance2 = [NPBundleLoader sharedInstance];
-	STAssertTrue([instance1 isEqual:instance2], @"Amibigious shared instance");
+	XCTAssertTrue([instance1 isEqual:instance2], @"Amibigious shared instance");
 }
 
 /*
@@ -54,27 +54,27 @@
 	NPBundleLoader *loader = [NPBundleLoader sharedInstance];
 	NSString *path = @"some/arbitrary/path/that/does_not_exist";
 
-	STAssertThrowsSpecificNamed([loader loadBundle:path], NSException, NSInvalidArgumentException, @"Does not throw on non-existent bundle");
-	STAssertNoThrow([loader loadBundles:[NSArray arrayWithObject:path]], @"Should not throw on non-existent bundle!");
+	XCTAssertThrowsSpecificNamed([loader loadBundle:path], NSException, NSInvalidArgumentException, @"Does not throw on non-existent bundle");
+	XCTAssertNoThrow([loader loadBundles:[NSArray arrayWithObject:path]], @"Should not throw on non-existent bundle!");
 }
 
 /*
  Check whether successfull bundle load actually loads classes
  */
 - (void)testLoadedBundle {
-	STAssertNil(NSClassFromString(@"RBSplitView"), @"Class not loaded!");
-	STAssertNil(NSClassFromString(@"RBSplitSubview"), @"Class not loaded!");
+	XCTAssertNil(NSClassFromString(@"RBSplitView"), @"Class not loaded!");
+	XCTAssertNil(NSClassFromString(@"RBSplitSubview"), @"Class not loaded!");
 
 	// Find bundle
 	NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"RBSplitView" ofType:@"ibplugin" inDirectory:@"Test Data/Loader"];
-	STAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:path], @"Can't find example bundle to load");
+	XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:path], @"Can't find example bundle to load");
 
 	// Load the bundle
 	[[NPBundleLoader sharedInstance] loadBundle:path];
 
 	// Check for the classes
-	STAssertNotNil(NSClassFromString(@"RBSplitView"), @"Class not loaded!");
-	STAssertNotNil(NSClassFromString(@"RBSplitSubview"), @"Class not loaded!");
+	XCTAssertNotNil(NSClassFromString(@"RBSplitView"), @"Class not loaded!");
+	XCTAssertNotNil(NSClassFromString(@"RBSplitSubview"), @"Class not loaded!");
 }
 
 @end

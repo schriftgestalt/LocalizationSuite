@@ -38,11 +38,11 @@
 
 	[selection beginSheetModalForWindow:[self windowForSheet]
 					  completionHandler:^(NSInteger result) {
-						  if (result != NSAlertFirstButtonReturn)
-							  return;
+		if (result != NSAlertFirstButtonReturn)
+			return;
 
-						  [self addLanguage:selection.selectedLanguages.firstObject];
-					  }];
+		[self addLanguage:selection.selectedLanguages.firstObject];
+	}];
 }
 
 - (IBAction)addCustomLanguage:(id)sender {
@@ -62,33 +62,33 @@
 }
 
 - (IBAction)resetLanguage:(id)sender {
-	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"ResetLanguagesTitle", nil)
-									 defaultButton:NSLocalizedString(@"Yes", nil)
-								   alternateButton:NSLocalizedString(@"No", nil)
-									   otherButton:nil
-						 informativeTextWithFormat:NSLocalizedString(@"ResetLanguagesText", nil)];
+	NSAlert *alert = [NSAlert new];
+	[alert setMessageText:NSLocalizedString(@"ResetLanguagesTitle", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"Yes", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"No", nil)];
+	[alert setInformativeText:NSLocalizedString(@"ResetLanguagesText", nil)];
 	[alert beginSheetModalForWindow:[self windowForSheet]
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSAlertDefaultReturn)
-						  return;
+		if (result != NSAlertFirstButtonReturn)
+			return;
 
-					  [self synchronizeObjects:_bundles forLanguages:[self selectedLanguages] reinject:YES];
-				  }];
+		[self synchronizeObjects:_bundles forLanguages:[self selectedLanguages] reinject:YES];
+	}];
 }
 
 - (IBAction)reimportLanguage:(id)sender {
-	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"ReimportLanguagesTitle", nil)
-									 defaultButton:NSLocalizedString(@"Yes", nil)
-								   alternateButton:NSLocalizedString(@"No", nil)
-									   otherButton:nil
-						 informativeTextWithFormat:NSLocalizedString(@"ReimportLanguagesText", nil)];
+	NSAlert *alert = [NSAlert new];
+	[alert setMessageText:NSLocalizedString(@"ReimportLanguagesTitle", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"Yes", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"No", nil)];
+	[alert setInformativeText:NSLocalizedString(@"ReimportLanguagesText", nil)];
 	[alert beginSheetModalForWindow:[self windowForSheet]
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSAlertDefaultReturn)
-						  return;
+		if (result != NSAlertFirstButtonReturn)
+			return;
 
-					  [self reimportFiles:[self bundles] forLanguages:[self selectedLanguages]];
-				  }];
+		[self reimportFiles:[self bundles] forLanguages:[self selectedLanguages]];
+	}];
 }
 
 #pragma mark -
@@ -104,15 +104,15 @@
 
 	// Languages
 	selection.availableLanguages = self.languages;
-
+	
 	[selection beginSheetModalForWindow:[self windowForSheet]
 					  completionHandler:^(NSInteger result) {
-						  if (result != NSAlertFirstButtonReturn)
-							  return;
-
-						  if ([selection.selectedLanguages count])
-							  [self setReferenceLanguage:[selection.selectedLanguages lastObject]];
-					  }];
+		if (result != NSAlertFirstButtonReturn)
+			return;
+		
+		if ([selection.selectedLanguages count])
+			[self setReferenceLanguage:[selection.selectedLanguages lastObject]];
+	}];
 }
 
 @end

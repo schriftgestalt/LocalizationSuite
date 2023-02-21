@@ -52,22 +52,22 @@ static id __sharedDictionarySettings = nil;
 
 	[panel setAllowsMultipleSelection:YES];
 	[panel setAllowedFileTypes:[NSArray arrayWithObject:[BLDictionaryFile pathExtension]]];
-
+	
 	[panel beginSheetModalForWindow:[self window]
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSFileHandlingPanelOKButton)
-						  return;
-
-					  BLDictionaryController *controller = [BLDictionaryController sharedInstance];
-					  for (NSURL *url in [panel URLs])
-						  [controller registerDictionaryAtURL:url];
-				  }];
+		if (result != NSModalResponseOK)
+			return;
+		
+		BLDictionaryController *controller = [BLDictionaryController sharedInstance];
+		for (NSURL *url in [panel URLs])
+			[controller registerDictionaryAtURL:url];
+	}];
 }
 
 - (IBAction)removeDictionaries:(id)sender {
 	BLDictionaryController *controller = [BLDictionaryController sharedInstance];
 	NSArray *dicts = [dictsController selectedObjects];
-
+	
 	for (BLDictionaryDocument *dict in dicts)
 		[controller unregisterDictionary:dict];
 }

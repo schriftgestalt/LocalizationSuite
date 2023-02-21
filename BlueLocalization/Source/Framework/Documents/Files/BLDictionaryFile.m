@@ -71,10 +71,10 @@ NSString *BLFilterSettingsPropertyName = @"filterSettings";
 	[contents setObject:archivedKeys forKey:BLFileKeysKey];
 	[contents secureSetObject:[properties objectForKey:BLLanguagesPropertyName] forKey:BLFileLanguagesKey];
 	[contents setObject:[properties objectForKey:BLFilterSettingsPropertyName] forKey:BLFileFilterSettingsKey];
-	[contents setObject:[NSNumber numberWithInt:BLDictionaryFileVersionNumber] forKey:BLFileVersionKey];
+	[contents setObject:@(BLDictionaryFileVersionNumber) forKey:BLFileVersionKey];
 
 	// Create file wrapper
-	NSFileWrapper *wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:[NSPropertyListSerialization dataFromPropertyList:contents format:NSPropertyListXMLFormat_v1_0 errorDescription:nil]];
+	NSFileWrapper *wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:[NSPropertyListSerialization dataWithPropertyList:contents format:NSPropertyListXMLFormat_v1_0 options:0 error:nil]];
 
 	BLLogEndGroup();
 	return wrapper;
@@ -84,7 +84,7 @@ NSString *BLFilterSettingsPropertyName = @"filterSettings";
 	BLLogBeginGroup(@"Reading Dictionary File");
 
 	// Unarchive contents
-	NSMutableDictionary *contents = [NSPropertyListSerialization propertyListFromData:[wrapper regularFileContents] mutabilityOption:NSPropertyListMutableContainersAndLeaves format:nil errorDescription:nil];
+	NSMutableDictionary *contents = [NSPropertyListSerialization propertyListWithData:[wrapper regularFileContents] options:NSPropertyListMutableContainersAndLeaves format:nil error:nil];
 	if (![self updateDictionaryFile:contents]) {
 		BLLogEndGroup();
 		return nil;

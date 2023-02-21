@@ -6,7 +6,7 @@
 //  Copyright 2010 The Soulmen. All rights reserved.
 //
 
-@interface XLIFFIntegrationTest : SenTestCase {
+@interface XLIFFIntegrationTest : XCTestCase {
 	NSString *tmpPath;
 }
 

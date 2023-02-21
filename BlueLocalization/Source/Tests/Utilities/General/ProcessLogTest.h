@@ -8,7 +8,7 @@
 
 #import <BlueLocalization/BLProcessLog.h>
 
-@interface ProcessLogTest : SenTestCase {
+@interface ProcessLogTest : XCTestCase {
 	BLProcessLog *_log;
 }
 

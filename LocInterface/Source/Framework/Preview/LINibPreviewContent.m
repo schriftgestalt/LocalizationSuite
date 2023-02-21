@@ -68,7 +68,7 @@
 	NSString *path = [@"/tmp" stringByAppendingPathComponent:[file preferredFilename]];
 
 	// Fall back to the path creator if file cannot be written
-	if (![file writeToFile:path atomically:YES updateFilenames:NO]) {
+	if (![file writeToURL:[NSURL fileURLWithPath:path] options:NSFileWrapperWritingAtomic originalContentsURL:nil error:nil]) {
 		BLLog(BLLogInfo, @"No backup available for file %@", [self.fileObject name]);
 
 		path = [[self.document pathCreator] absolutePathForFile:self.fileObject andLanguage:[self.document referenceLanguage]];

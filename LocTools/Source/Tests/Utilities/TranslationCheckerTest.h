@@ -6,7 +6,7 @@
 //  Copyright 2010 The Soulmen. All rights reserved.
 //
 
-@interface TranslationCheckerTest : SenTestCase {
+@interface TranslationCheckerTest : XCTestCase {
 	BLKeyObject *keyObject;
 }
 

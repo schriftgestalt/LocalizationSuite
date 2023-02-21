@@ -6,6 +6,6 @@
 	#import <Cocoa/Cocoa.h>
 	#import <BlueLocalization/BlueLocalization.h>
 	#import <LocTools/LocTools.h>
-	#import <SenTestingKit/SenTestingKit.h>
+	#import <XCTest/XCTest.h>
 	#import <OCMock/OCMock.h>
 #endif

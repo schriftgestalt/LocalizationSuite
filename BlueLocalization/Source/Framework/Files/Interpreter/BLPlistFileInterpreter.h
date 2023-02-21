@@ -11,8 +11,7 @@
 /*!
  @abstract A file interpreter implementation for property list files.
  */
-@interface BLPlistFileInterpreter : BLFileInterpreter {
-}
+@interface BLPlistFileInterpreter : BLFileInterpreter
 
 @end
 

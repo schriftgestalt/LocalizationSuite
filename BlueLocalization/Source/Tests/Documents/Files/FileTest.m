@@ -27,15 +27,15 @@
 }
 
 - (void)testSetUp {
-	STAssertNotNil(file, @"No file");
-	STAssertNotNil(bundle, @"No bundle");
-	STAssertTrue([[file objects] count] > 0, @"Empty file");
+	XCTAssertNotNil(file, @"No file");
+	XCTAssertNotNil(bundle, @"No bundle");
+	XCTAssertTrue([[file objects] count] > 0, @"Empty file");
 }
 
 - (void)testErrorHandling {
-	STAssertThrows([BLDatabaseFile createFileForObjects:nil withOptions:0 andProperties:nil], @"Missing properties should throw!");
-	STAssertThrows([BLLocalizerFile createFileForObjects:nil withOptions:0 andProperties:nil], @"Missing properties should throw!");
-	STAssertThrows([BLDictionaryFile createFileForObjects:nil withOptions:0 andProperties:nil], @"Missing properties should throw!");
+	XCTAssertThrows([BLDatabaseFile createFileForObjects:nil withOptions:0 andProperties:nil], @"Missing properties should throw!");
+	XCTAssertThrows([BLLocalizerFile createFileForObjects:nil withOptions:0 andProperties:nil], @"Missing properties should throw!");
+	XCTAssertThrows([BLDictionaryFile createFileForObjects:nil withOptions:0 andProperties:nil], @"Missing properties should throw!");
 }
 
 - (void)testDatabaseFile {
@@ -49,8 +49,8 @@
 												   nil];
 	NSFileWrapper *outWrapper = [BLDatabaseFile createFileForObjects:inObjects withOptions:0 andProperties:inProperties];
 
-	STAssertNotNil(outWrapper, @"No wrapper created!");
-	STAssertTrue([outWrapper writeToFile:tmpPath atomically:YES updateFilenames:NO], @"Writing failed");
+	XCTAssertNotNil(outWrapper, @"No wrapper created!");
+	XCTAssertTrue([outWrapper writeToURL:[NSURL fileURLWithPath:tmpPath] options:NSFileWrapperWritingAtomic originalContentsURL:nil error:nil], @"Writing failed");
 
 	// Read in
 	NSFileWrapper *inWrapper = [[NSFileWrapper alloc] initWithPath:tmpPath];
@@ -58,8 +58,8 @@
 	NSArray *outObjects = [BLDatabaseFile objectsFromFile:inWrapper readingProperties:&outProperties];
 
 	// Check equality
-	STAssertEqualObjects(outProperties, inProperties, @"Properties do not match");
-	STAssertEqualObjects(outObjects, inObjects, @"Objects do not match");
+	XCTAssertEqualObjects(outProperties, inProperties, @"Properties do not match");
+	XCTAssertEqualObjects(outObjects, inObjects, @"Objects do not match");
 }
 
 - (void)testLegacyDatabaseFile {
@@ -71,28 +71,28 @@
 	NSArray *objects1 = [BLDatabaseFile objectsFromFile:wrapper1 readingProperties:&properties1];
 
 	// Check bundles and files
-	STAssertTrue([objects1 count] == 1, @"Wrong number of bundles");
+	XCTAssertTrue([objects1 count] == 1, @"Wrong number of bundles");
 	BLBundleObject *aBundle = [objects1 objectAtIndex:0];
-	STAssertTrue([[aBundle files] count] == 7, @"Wrong number of files");
+	XCTAssertTrue([[aBundle files] count] == 7, @"Wrong number of files");
 	for (BLFileObject *aFile in aBundle.files)
-		STAssertTrue([[aFile objects] count] > 0, @"Wrong number of keys");
+		XCTAssertTrue([[aFile objects] count] > 0, @"Wrong number of keys");
 
 	// Check properties
-	STAssertEqualObjects([properties1 objectForKey:BLReferenceLanguagePropertyName], @"en", @"Wrong reference language");
-	STAssertEqualObjects([properties1 objectForKey:BLLanguagesPropertyName], ([NSArray arrayWithObjects:@"en", @"fr", @"de", nil]), @"Wrong reference language");
-	STAssertNotNil([properties1 objectForKey:BLPreferencesPropertyName], @"Missing preferences");
+	XCTAssertEqualObjects([properties1 objectForKey:BLReferenceLanguagePropertyName], @"en", @"Wrong reference language");
+	XCTAssertEqualObjects([properties1 objectForKey:BLLanguagesPropertyName], ([NSArray arrayWithObjects:@"en", @"fr", @"de", nil]), @"Wrong reference language");
+	XCTAssertNotNil([properties1 objectForKey:BLPreferencesPropertyName], @"Missing preferences");
 
 	// Write and read in
 	NSFileWrapper *outWrapper = [BLDatabaseFile createFileForObjects:objects1 withOptions:0 andProperties:properties1];
-	STAssertTrue([outWrapper writeToFile:tmpPath atomically:YES updateFilenames:NO], @"Writing failed");
+	XCTAssertTrue([outWrapper writeToURL:[NSURL fileURLWithPath:tmpPath] options:NSFileWrapperWritingAtomic originalContentsURL:nil error:nil], @"Writing failed");
 
 	NSFileWrapper *wrapper2 = [[NSFileWrapper alloc] initWithPath:tmpPath];
 	NSDictionary *properties2 = nil;
 	NSArray *objects2 = [BLDatabaseFile objectsFromFile:wrapper2 readingProperties:&properties2];
 
 	// Compare
-	STAssertEqualObjects(properties1, properties2, @"Properties do not match");
-	STAssertEqualObjects(objects1, objects2, @"Objects do not match");
+	XCTAssertEqualObjects(properties1, properties2, @"Properties do not match");
+	XCTAssertEqualObjects(objects1, objects2, @"Objects do not match");
 }
 
 - (void)testLocalizerFile {
@@ -105,8 +105,8 @@
 												   nil];
 	NSFileWrapper *outWrapper = [BLLocalizerFile createFileForObjects:inObjects withOptions:0 andProperties:inProperties];
 
-	STAssertNotNil(outWrapper, @"No wrapper created!");
-	STAssertTrue([outWrapper writeToFile:tmpPath atomically:YES updateFilenames:NO], @"Writing failed");
+	XCTAssertNotNil(outWrapper, @"No wrapper created!");
+	XCTAssertTrue([outWrapper writeToURL:[NSURL fileURLWithPath:tmpPathoptions:NSFileWrapperWritingAtomic originalContentsURL:nil error:nil], @"Writing failed");
 
 	// Read in
 	NSFileWrapper *inWrapper = [[NSFileWrapper alloc] initWithPath:tmpPath];
@@ -115,8 +115,8 @@
 
 	// Check equality
 	for (NSString *key in inProperties)
-		STAssertEqualObjects([outProperties objectForKey:key], [inProperties objectForKey:key], @"Properties do not match");
-	STAssertEqualObjects(outObjects, inObjects, @"Objects do not match");
+		XCTAssertEqualObjects([outProperties objectForKey:key], [inProperties objectForKey:key], @"Properties do not match");
+	XCTAssertEqualObjects(outObjects, inObjects, @"Objects do not match");
 }
 
 - (void)testDictionaryFile {
@@ -128,27 +128,28 @@
 												   nil];
 	NSFileWrapper *outWrapper = [BLDictionaryFile createFileForObjects:inObjects withOptions:0 andProperties:inProperties];
 
-	STAssertNotNil(outWrapper, @"No wrapper created!");
-	STAssertTrue([outWrapper writeToFile:tmpPath atomically:YES updateFilenames:NO], @"Writing failed");
+	XCTAssertNotNil(outWrapper, @"No wrapper created!");
+	XCTAssertTrue([outWrapper writeToURL:[NSURL fileURLWithPath:tmpPathoptions:NSFileWrapperWritingAtomic originalContentsURL:nil error:nil], @"Writing failed");
 
 	// Read in
-	NSFileWrapper *inWrapper = [[NSFileWrapper alloc] initWithPath:tmpPath];
+	NSFileWrapper *inWrapper = [[NSFileWrapper alloc] initWithURL:[NSURL fileURLWithPath:tmpPath] options:0 error:nil];
 	NSDictionary *outProperties = nil;
 	NSArray *outObjects = [BLDictionaryFile objectsFromFile:inWrapper readingProperties:&outProperties];
 
 	// Check equality
-	STAssertEqualObjects(outProperties, inProperties, @"Properties do not match");
+	XCTAssertEqualObjects(outProperties, inProperties, @"Properties do not match");
 
 	NSComparator comp = ^(BLKeyObject *obj1, BLKeyObject *obj2) { return [obj1.key compare:obj2.key]; };
 	inObjects = [inObjects sortedArrayUsingComparator:comp];
 	outObjects = [outObjects sortedArrayUsingComparator:comp];
-	STAssertEqualObjects(outObjects, inObjects, @"Objects do not match");
+	XCTAssertEqualObjects(outObjects, inObjects, @"Objects do not match");
 }
 
 - (void)testAttachments {
-	NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithPath:path];
+	NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithURL:[NSURL fileURLWithPath:path] options:0 error:nil];
 	NSString *string = @"Hello World!";
-
+	XCTAssertTrue(NO); // The tested API is not available. Why?
+#if 0
 	// Attachments
 	[file setAttachedObject:wrapper forKey:@"test1" version:2];
 	[file setAttachedObject:string forKey:@"test2" version:1];
@@ -157,23 +158,24 @@
 
 	// Write
 	NSDictionary *properties = [NSDictionary dictionaryWithObjectsAndKeys:
-												 @"en", BLReferenceLanguagePropertyName,
-												 [NSArray arrayWithObjects:@"en", @"fr", @"cz", nil], BLLanguagesPropertyName,
-												 [NSDictionary dictionary], BLPreferencesPropertyName,
-												 nil];
+								@"en", BLReferenceLanguagePropertyName,
+								[NSArray arrayWithObjects:@"en", @"fr", @"cz", nil], BLLanguagesPropertyName,
+								[NSDictionary dictionary], BLPreferencesPropertyName,
+								nil];
 	NSFileWrapper *outWrapper = [BLLocalizerFile createFileForObjects:[NSArray arrayWithObject:bundle] withOptions:0 andProperties:properties];
-	STAssertTrue([outWrapper writeToFile:tmpPath atomically:YES updateFilenames:NO], @"Writing failed");
-
+	XCTAssertTrue([outWrapper writeToURL:[NSURL fileURLWithPath:tmpPathoptions:NSFileWrapperWritingAtomic originalContentsURL:nil error:nil], @"Writing failed");
+	
 	// Read
 	NSFileWrapper *inWrapper = [[NSFileWrapper alloc] initWithPath:tmpPath];
 	NSArray *outObjects = [BLLocalizerFile objectsFromFile:inWrapper readingProperties:NULL];
 	BLFileObject *outFile = [[[outObjects lastObject] files] lastObject];
 
 	// Check attachments
-	STAssertEquals([file versionForLanguage:@"fr"], [outFile versionForLanguage:@"fr"], @"Versions differ");
-	STAssertEquals([file versionForLanguage:@"cz"], [outFile versionForLanguage:@"cz"], @"Versions differ");
-	STAssertEqualObjects([file attachedObjectForKey:@"test2" version:1], [outFile attachedObjectForKey:@"test2" version:1], @"attachments differ");
-	STAssertEqualObjects([[file attachedObjectForKey:@"test1" version:2] regularFileContents], [[outFile attachedObjectForKey:@"test1" version:2] regularFileContents], @"attachments differ");
+	XCTAssertEqual([file versionForLanguage:@"fr"], [outFile versionForLanguage:@"fr"], @"Versions differ");
+	XCTAssertEqual([file versionForLanguage:@"cz"], [outFile versionForLanguage:@"cz"], @"Versions differ");
+	XCTAssertEqualObjects([file attachedObjectForKey:@"test2" version:1], [outFile attachedObjectForKey:@"test2" version:1], @"attachments differ");
+	XCTAssertEqualObjects([[file attachedObjectForKey:@"test1" version:2] regularFileContents], [[outFile attachedObjectForKey:@"test1" version:2] regularFileContents], @"attachments differ");
+#endif
 }
 
 @end

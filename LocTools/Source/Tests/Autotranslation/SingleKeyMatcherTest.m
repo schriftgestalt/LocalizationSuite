@@ -23,7 +23,7 @@
 	// Load Dictionary
 	wrapper = [[NSFileWrapper alloc] initWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"AppKit-de" ofType:@"lod" inDirectory:@"Test Data/Autotranslation"]];
 	keyObjects = [BLDictionaryFile objectsFromFile:wrapper readingProperties:NULL];
-	STAssertTrue([keyObjects count] > 0, @"Dictionary not loaded");
+	XCTAssertTrue([keyObjects count] > 0, @"Dictionary not loaded");
 
 	// Init Matcher
 	matcher = [LTSingleKeyMatcher new];
@@ -138,11 +138,5 @@
 
 #pragma mark - Dummy Delegate
 
-- (void)keyMatcherBeganMatching:(LTKeyMatcher *)matcher {
-}
-- (void)keyMatcherFinishedMatching:(LTKeyMatcher *)matcher {
-}
-- (void)keyMatcher:(LTKeyMatcher *)matcher foundMatch:(LTKeyMatch *)match forKeyObject:(BLKeyObject *)target {
-}
-
+- (void)keyMatcherBeganMatching:(LTKeyMatcher *)matcher- (void)keyMatcherFinishedMatching:(LTKeyMatcher *)matcher- (void)keyMatcher:(LTKeyMatcher *)matcher foundMatch:(LTKeyMatch *)match forKeyObject:(BLKeyObject *)target
 @end

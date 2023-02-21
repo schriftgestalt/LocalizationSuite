@@ -6,7 +6,7 @@
 //  Copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
 //
 
-@interface StringsFileInterpreterTest : SenTestCase {
+@interface StringsFileInterpreterTest : XCTestCase {
 	BLFileInterpreter *interpreter;
 }
 

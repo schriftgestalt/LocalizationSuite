@@ -9,9 +9,7 @@
 /*!
  @abstract Loads all bundles in Interface Builder's (IB) default path.
  */
-@interface NPBundleLoader : NSObject {
-}
-
+@interface NPBundleLoader : NSObject
 /*!
  @abstract Retruns the single shared instance.
  */

@@ -130,7 +130,7 @@
 		[_parser noteProjectWasChanged];
 
 	if (encoding > 0)
-		[_dictionary setObject:[NSNumber numberWithUnsignedInteger:encoding] forKey:BLXcodeProjectItemEncodingKey];
+		[_dictionary setObject:@(encoding) forKey:BLXcodeProjectItemEncodingKey];
 	else
 		[_dictionary removeObjectForKey:BLXcodeProjectItemEncodingKey];
 }

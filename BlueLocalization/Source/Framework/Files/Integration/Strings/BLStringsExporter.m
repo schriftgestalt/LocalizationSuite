@@ -99,68 +99,68 @@ id __sharedStringsExporter;
 	[panel setCanCreateDirectories:YES];
 	[panel setAccessoryView:optionsView];
 	[[panel defaultButtonCell] setTitle:NSLocalizedStringFromTableInBundle(@"Export", @"Localizable", [NSBundle bundleForClass:[self class]], nil)];
-
+	
 	[panel beginSheetModalForWindow:[document windowForSheet]
 				  completionHandler:^(NSInteger returnCode) {
-					  [panel close];
-
-					  if (returnCode != NSFileHandlingPanelOKButton)
-						  return;
-
-					  // Read options
-					  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-					  NSUInteger options = 0;
-
-					  if ([defaults boolForKey:BLStringsExporterIncludeCommentsKeyPath])
-						  options |= BLStringsExporterIncludeComments;
-					  if ([defaults boolForKey:BLStringsExporterMissingStringsOnlyKeyPath])
-						  options |= BLStringsExporterMissingStringsOnly;
-					  if ([defaults boolForKey:BLStringsExporterSeparateFilesKeyPath])
-						  options |= BLStringsExporterSeparateFiles;
-					  if ([defaults boolForKey:BLStringsExporterIncludeOthersKeyPath])
-						  options |= BLStringsExporterIncludeOthers;
-					  if ([defaults boolForKey:BLStringsExporterGroupByBundleKeyPath])
-						  options |= BLStringsExporterGroupByBundle;
-
-					  BOOL exportReference = [defaults boolForKey:BLStringsExporterExportReferenceKeyPath];
-					  BOOL exportAllFiles = [defaults boolForKey:BLStringsExporterExportAllFilesKeyPath];
-
-					  // Preprocess arguments
-					  NSArray *exportObjects = objects;
-					  if (exportAllFiles) {
-						  if ([document respondsToSelector:@selector(bundles)])
-							  exportObjects = [(id)document bundles];
-					  }
-
-					  // Enqueue process steps
-					  NSMutableArray *steps = [NSMutableArray array];
-					  NSString *reference = [document referenceLanguage];
-					  NSString *path = [[panel URL] path];
-
-					  for (NSString *language in languages) {
-						  if ([language isEqual:reference] && !exportReference)
-							  continue;
-
-						  // Create Step
-						  BLGenericProcessStep *step = [BLGenericProcessStep genericStepWithBlock:^{
-							  [[self class] exportStringsFromObjects:exportObjects forLanguage:language andReferenceLanguage:reference withOptions:options toPath:path];
-						  }];
-
-						  [step setAction:NSLocalizedStringFromTableInBundle(@"ExportingStrings", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil)];
-						  [step setDescription:[NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"ExportingStringsText", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil), [BLLanguageTranslator descriptionForLanguage:language]]];
-
-						  [steps addObject:step];
-					  }
-
-					  if ([document respondsToSelector:@selector(processManager)] && [document processManager]) {
-						  [[document processManager] enqueueStepGroup:steps];
-						  [[document processManager] startWithName:@"Exporting strings files…"];
-					  }
-					  else {
-						  [steps makeObjectsPerformSelector:@selector(perform)];
-					  }
-				  }];
-
+		[panel close];
+		
+		if (returnCode != NSModalResponseOK)
+			return;
+		
+		// Read options
+		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		NSUInteger options = 0;
+		
+		if ([defaults boolForKey:BLStringsExporterIncludeCommentsKeyPath])
+			options |= BLStringsExporterIncludeComments;
+		if ([defaults boolForKey:BLStringsExporterMissingStringsOnlyKeyPath])
+			options |= BLStringsExporterMissingStringsOnly;
+		if ([defaults boolForKey:BLStringsExporterSeparateFilesKeyPath])
+			options |= BLStringsExporterSeparateFiles;
+		if ([defaults boolForKey:BLStringsExporterIncludeOthersKeyPath])
+			options |= BLStringsExporterIncludeOthers;
+		if ([defaults boolForKey:BLStringsExporterGroupByBundleKeyPath])
+			options |= BLStringsExporterGroupByBundle;
+		
+		BOOL exportReference = [defaults boolForKey:BLStringsExporterExportReferenceKeyPath];
+		BOOL exportAllFiles = [defaults boolForKey:BLStringsExporterExportAllFilesKeyPath];
+		
+		// Preprocess arguments
+		NSArray *exportObjects = objects;
+		if (exportAllFiles) {
+			if ([document respondsToSelector:@selector(bundles)])
+				exportObjects = [(id)document bundles];
+		}
+		
+		// Enqueue process steps
+		NSMutableArray *steps = [NSMutableArray array];
+		NSString *reference = [document referenceLanguage];
+		NSString *path = [[panel URL] path];
+		
+		for (NSString *language in languages) {
+			if ([language isEqual:reference] && !exportReference)
+				continue;
+			
+			// Create Step
+			BLGenericProcessStep *step = [BLGenericProcessStep genericStepWithBlock:^{
+				[[self class] exportStringsFromObjects:exportObjects forLanguage:language andReferenceLanguage:reference withOptions:options toPath:path];
+			}];
+			
+			[step setAction:NSLocalizedStringFromTableInBundle(@"ExportingStrings", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil)];
+			[step setDescription:[NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"ExportingStringsText", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil), [BLLanguageTranslator descriptionForLanguage:language]]];
+			
+			[steps addObject:step];
+		}
+		
+		if ([document respondsToSelector:@selector(processManager)] && [document processManager]) {
+			[[document processManager] enqueueStepGroup:steps];
+			[[document processManager] startWithName:@"Exporting strings files…"];
+		}
+		else {
+			[steps makeObjectsPerformSelector:@selector(perform)];
+		}
+	}];
+	
 	// Clean up
 	_languages = nil;
 	_document = nil;

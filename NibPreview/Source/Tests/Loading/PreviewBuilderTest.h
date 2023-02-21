@@ -6,7 +6,6 @@
 //  Copyright 2009 Localization Suite. All rights reserved.
 //
 
-@interface PreviewBuilderTest : SenTestCase {
-}
+@interface PreviewBuilderTest : XCTestCase
 
 @end

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -223,6 +223,7 @@
 		50F03C100FA627AC00FDB765 /* BLInterpretationStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 50F03C0E0FA627AC00FDB765 /* BLInterpretationStep.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50F03C110FA627AC00FDB765 /* BLInterpretationStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F03C0F0FA627AC00FDB765 /* BLInterpretationStep.m */; };
 		50F6BA3310144B84008C8727 /* BLXcodeImporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F6BA3110144B84008C8727 /* BLXcodeImporter.xib */; };
+		5680096029A43642004C46CB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5680095F29A43642004C46CB /* XCTest.framework */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -513,6 +514,7 @@
 		56320E80230EBF2E002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		56378E692761F1820045ADD7 /* common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = common.xcconfig; path = ../../Shared/Source/common.xcconfig; sourceTree = "<group>"; };
 		56378E6A2761F1820045ADD7 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = debug.xcconfig; path = ../../Shared/Source/debug.xcconfig; sourceTree = "<group>"; };
+		5680095F29A43642004C46CB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		56AEB2A8273BCADE008F3EAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/BLDictionaryExporter.strings; sourceTree = "<group>"; };
 		56AEB2AA273BCADE008F3EAE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/BLDictionaryExporter.strings; sourceTree = "<group>"; };
 		56AEB2AC273BCADE008F3EAE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/BLDictionaryExporter.strings; sourceTree = "<group>"; };
@@ -541,6 +543,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5680096029A43642004C46CB /* XCTest.framework in Frameworks */,
 				5054D3141404D24D00434EAC /* BlueLocalization.framework in Frameworks */,
 				5054D2CA1404D04900434EAC /* Cocoa.framework in Frameworks */,
 				5054D3121404D20A00434EAC /* OCMock.framework in Frameworks */,
@@ -592,6 +595,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5680095F29A43642004C46CB /* XCTest.framework */,
 				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
 				5014BB0C0FB49C6600DC2EC3 /* OCMock.framework */,
 				5014BB5A0FB4A3CC00DC2EC3 /* hamcrest.framework */,
@@ -1514,7 +1518,8 @@
 /* Begin PBXShellScriptBuildPhase section */
 		50293194075BD547009FEC06 /* Update Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -1522,9 +1527,9 @@
 			name = "Update Build Number";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "echo \"Updating build number\"\n\ncd \"$PROJECT_DIR/../Shared/Tools\"\n./buildnumber -d \"$PRODUCT_SETTINGS_PATH\"\n\necho \"Done\"";
+			shellScript = "echo \"Updating build number\"\n\ncd \"$PROJECT_DIR/../Shared/Tools\"\n./buildnumber -d \"$PRODUCT_SETTINGS_PATH\"\n\necho \"Done\"\n";
 		};
 		5054D2C51404D04900434EAC /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1815,7 +1820,11 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_PREPROCESS = YES;
 				INSTALL_PATH = "@executable_path/../Frameworks/";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = mh_dylib;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1867,7 +1876,11 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_PREPROCESS = YES;
 				INSTALL_PATH = "@executable_path/../Frameworks/";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = mh_dylib;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SWIFT_VERSION = 5.0;

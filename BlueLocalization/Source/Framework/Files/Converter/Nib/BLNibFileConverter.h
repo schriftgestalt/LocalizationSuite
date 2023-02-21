@@ -8,8 +8,7 @@
 
 @class BLNibFileObject, BLDocumentProtocol;
 
-@interface BLNibFileConverter : NSObject {
-}
+@interface BLNibFileConverter : NSObject
 
 + (BOOL)upgradeFileForObject:(BLNibFileObject *)object fromDocument:(NSDocument<BLDocumentProtocol> *)document withLanguages:(NSArray *)languages;
 + (BOOL)upgradeFileForObject:(BLNibFileObject *)object fromDocument:(NSDocument<BLDocumentProtocol> *)document withLanguage:(NSString *)language;

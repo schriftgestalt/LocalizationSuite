@@ -59,19 +59,19 @@ NSString *DocumentImportLocalizerWeakImportKeyPath = @"localizerImport.weakImpor
 #pragma mark - Tools
 
 - (IBAction)convertFilesToXIB:(id)sender {
-	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"ConvertToXibTitle", nil)
-									 defaultButton:NSLocalizedString(@"Continue", nil)
-								   alternateButton:NSLocalizedString(@"Cancel", nil)
-									   otherButton:nil
-						 informativeTextWithFormat:NSLocalizedString(@"ConvertToXibText", nil)];
+	NSAlert *alert = [NSAlert new];
+	[alert setMessageText:NSLocalizedString(@"ConvertToXibTitle", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"Continue", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
+	[alert setInformativeText:NSLocalizedString(@"ConvertToXibText", nil)];
 	[alert beginSheetModalForWindow:[self windowForSheet]
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSAlertDefaultReturn)
-						  return;
+		if (result != NSAlertFirstButtonReturn)
+			return;
 
-					  [[self processManager] enqueueStepGroup:[BLNibConverterStep stepGroupForUpgradingObjects:[self getSelectedObjects:YES]]];
-					  [[self processManager] start];
-				  }];
+		[[self processManager] enqueueStepGroup:[BLNibConverterStep stepGroupForUpgradingObjects:[self getSelectedObjects:YES]]];
+		[[self processManager] start];
+	}];
 }
 
 #pragma mark - Localization Documents
@@ -111,21 +111,21 @@ NSString *DocumentImportLocalizerWeakImportKeyPath = @"localizerImport.weakImpor
 
 	[panel beginSheetModalForWindow:[self windowForSheet]
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSFileHandlingPanelOKButton)
-						  return;
+		if (result != NSModalResponseOK)
+			return;
 
-					  [self.preferences setObject:[[[panel URL] path] stringByDeletingLastPathComponent] forKey:BLDocumentOpenFolderKey];
+		[self.preferences setObject:[[[panel URL] path] stringByDeletingLastPathComponent] forKey:BLDocumentOpenFolderKey];
 
-					  NSUInteger options = 0;
-					  if ([[NSUserDefaults standardUserDefaults] boolForKey:DocumentImportLocalizerChangesOnlyKeyPath])
-						  options |= BLLocalizerImportStepChangesOnlyOption;
-					  if ([[NSUserDefaults standardUserDefaults] boolForKey:DocumentImportLocalizerMissingOnlyKeyPath])
-						  options |= BLLocalizerImportStepMissingOnlyOption;
-					  if ([[NSUserDefaults standardUserDefaults] boolForKey:DocumentImportLocalizerWeakImportKeyPath])
-						  options |= BLLocalizerImportStepMatchKeysByValueOption;
+		NSUInteger options = 0;
+		if ([[NSUserDefaults standardUserDefaults] boolForKey:DocumentImportLocalizerChangesOnlyKeyPath])
+			options |= BLLocalizerImportStepChangesOnlyOption;
+		if ([[NSUserDefaults standardUserDefaults] boolForKey:DocumentImportLocalizerMissingOnlyKeyPath])
+			options |= BLLocalizerImportStepMissingOnlyOption;
+		if ([[NSUserDefaults standardUserDefaults] boolForKey:DocumentImportLocalizerWeakImportKeyPath])
+			options |= BLLocalizerImportStepMatchKeysByValueOption;
 
-					  [self importLocalizerFiles:[[panel URLs] valueForKey:@"path"] withOptions:options];
-				  }];
+		[self importLocalizerFiles:[[panel URLs] valueForKey:@"path"] withOptions:options];
+	}];
 }
 
 - (IBAction)importLocalizerFilesDirectly:(id)sender {

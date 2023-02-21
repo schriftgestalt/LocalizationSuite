@@ -6,7 +6,7 @@
 //  Copyright 2004-2009 the Localization Suite Foundation. All rights reserved.
 //
 
-@interface ObjectTest : SenTestCase {
+@interface ObjectTest : XCTestCase {
 	BLObject *bundle;
 }
 

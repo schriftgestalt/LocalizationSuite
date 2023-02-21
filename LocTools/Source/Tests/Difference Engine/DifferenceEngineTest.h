@@ -6,7 +6,7 @@
 //  Copyright 2009 Blue Technologies Group. All rights reserved.
 //
 
-@interface DifferenceEngineTest : SenTestCase {
+@interface DifferenceEngineTest : XCTestCase {
 	LTDifferenceEngine *engine;
 }
 

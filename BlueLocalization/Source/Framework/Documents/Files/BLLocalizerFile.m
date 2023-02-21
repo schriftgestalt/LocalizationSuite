@@ -36,12 +36,6 @@ NSString *BLDictionaryPropertyName = @"dictionary";
 
 @end
 
-@interface BLObject (BLLocalizerFileUtilities)
-
-- (void)fixLanguages;
-
-@end
-
 @implementation BLLocalizerFile
 
 + (NSString *)pathExtension {
@@ -89,11 +83,11 @@ NSString *BLDictionaryPropertyName = @"dictionary";
 	[contents secureSetObject:[properties objectForKey:BLReferenceLanguagePropertyName] forKey:BLFileReferenceLanguageKey];
 	[contents secureSetObject:[properties objectForKey:BLLanguagesPropertyName] forKey:BLFileLanguagesKey];
 	[contents secureSetObject:[properties objectForKey:BLPreferencesPropertyName] forKey:BLFilePreferencesKey];
-	[contents setObject:[NSNumber numberWithBool:(options & BLFileIncludePreviewOption) != 0] forKey:BLFileIncludesPreviewKey];
-	[contents setObject:[NSNumber numberWithInt:BLLocalizerFileVersionNumber] forKey:BLFileVersionKey];
+	[contents setObject:@((options & BLFileIncludePreviewOption) != 0) forKey:BLFileIncludesPreviewKey];
+	[contents setObject:@(BLLocalizerFileVersionNumber) forKey:BLFileVersionKey];
 
 	// Create file wrapper for contents.plist file
-	wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:[NSPropertyListSerialization dataFromPropertyList:contents format:NSPropertyListXMLFormat_v1_0 errorDescription:nil]];
+	wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:[NSPropertyListSerialization dataWithPropertyList:contents format:NSPropertyListXMLFormat_v1_0 options:0 error:nil]];
 	[fileWrappers setObject:wrapper forKey:BLLocalizerFileContentsFileName];
 
 	// Embedded dictionary
@@ -109,7 +103,7 @@ NSString *BLDictionaryPropertyName = @"dictionary";
 		NSDictionary *settings = [userPreferences objectForKey:username];
 		NSString *filename = [username stringByAppendingPathExtension:BLFileUserFileExtension];
 
-		wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:[NSPropertyListSerialization dataFromPropertyList:settings format:NSPropertyListXMLFormat_v1_0 errorDescription:nil]];
+		wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:[NSPropertyListSerialization dataWithPropertyList:settings format:NSPropertyListXMLFormat_v1_0 options:0 error:nil]];
 		[fileWrappers setObject:wrapper forKey:filename];
 	}
 
@@ -123,7 +117,7 @@ NSString *BLDictionaryPropertyName = @"dictionary";
 	NSDictionary *fileWrappers = [wrapper fileWrappers];
 
 	// Unarchive contents
-	NSMutableDictionary *contents = [NSPropertyListSerialization propertyListFromData:[[fileWrappers objectForKey:BLLocalizerFileContentsFileName] regularFileContents] mutabilityOption:NSPropertyListMutableContainersAndLeaves format:nil errorDescription:nil];
+	NSMutableDictionary *contents = [NSPropertyListSerialization propertyListWithData:[[fileWrappers objectForKey:BLLocalizerFileContentsFileName] regularFileContents] options:NSPropertyListMutableContainersAndLeaves format:nil error:nil];
 	if (![self updateLocalizerFile:contents]) {
 		BLLogEndGroup();
 		return nil;
@@ -146,7 +140,7 @@ NSString *BLDictionaryPropertyName = @"dictionary";
 		if (![[file pathExtension] isEqual:BLFileUserFileExtension])
 			continue;
 
-		[userPrefs setObject:[NSPropertyListSerialization propertyListFromData:[[fileWrappers objectForKey:file] regularFileContents] mutabilityOption:NSPropertyListMutableContainersAndLeaves format:nil errorDescription:nil] forKey:[file stringByDeletingPathExtension]];
+		[userPrefs setObject:[NSPropertyListSerialization propertyListWithData:[[fileWrappers objectForKey:file] regularFileContents] options:NSPropertyListMutableContainersAndLeaves format:nil error:nil] forKey:[file stringByDeletingPathExtension]];
 	}
 
 	// Generate properties
@@ -162,7 +156,7 @@ NSString *BLDictionaryPropertyName = @"dictionary";
 		// Load dictionary
 		NSFileWrapper *dictionaryWrapper = [fileWrappers objectForKey:BLLocalizerFileDictionaryFileName];
 		BLDictionaryDocument *dictionary = [[BLDictionaryDocument alloc] init];
-		if (dictionaryWrapper && [dictionary readFromFileWrapper:dictionaryWrapper ofType:nil error:NULL])
+		if (dictionaryWrapper && [dictionary readFromFileWrapper:dictionaryWrapper ofType:@"" error:NULL])
 			[properties secureSetObject:dictionary forKey:BLDictionaryPropertyName];
 
 		(*outProperties) = properties;
@@ -185,7 +179,7 @@ NSString *BLDictionaryPropertyName = @"dictionary";
 	}
 	if (version < 4) {
 		if ([[dict objectForKey:BLFileIncludesPreviewKey] boolValue]) {
-			[dict setObject:[NSNumber numberWithBool:NO] forKey:BLFileIncludesPreviewKey];
+			[dict setObject:@NO forKey:BLFileIncludesPreviewKey];
 			BLLog(BLLogWarning, @"Interface preview not supported for legacy Localizer files. Please re-create it.");
 		}
 	}

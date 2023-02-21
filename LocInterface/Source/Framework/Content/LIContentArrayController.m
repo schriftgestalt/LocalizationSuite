@@ -40,8 +40,8 @@
 
 	if (self) {
 		_editAttachments = YES;
-		_columnCounts = [NSMapTable mapTableWithWeakToStrongObjects];
-		_rowCache = [NSMapTable mapTableWithWeakToStrongObjects];
+		_columnCounts = [NSMapTable weakToStrongObjectsMapTable];
+		_rowCache = [NSMapTable weakToStrongObjectsMapTable];
 	}
 
 	return self;
@@ -188,11 +188,11 @@
 
 	// Create cache it if needed
 	if (!cache) {
-		cache = [NSMapTable mapTableWithWeakToStrongObjects];
+		cache = [NSMapTable weakToStrongObjectsMapTable];
 		[_rowCache setObject:cache forKey:tableView];
 
 		NSInteger count = [tableView numberOfColumns];
-		[_columnCounts setObject:[NSNumber numberWithInt:count] forKey:tableView];
+		[_columnCounts setObject:@(count) forKey:tableView];
 
 		// Register observals
 		[tableView addObserver:self forKeyPath:@"numberOfColumns" options:0 context:@"invalidateRows"];
@@ -270,7 +270,7 @@
 	if ([cell isKindOfClass:[LIAttachmentCell class]]) {
 		[cell setEditable:_editAttachments];
 		[cell setFileWrapper:[[[self arrangedObjects] objectAtIndex:row] attachedMedia]];
-		[cell setRepresentedObject:[NSNumber numberWithInt:row]];
+		[cell setRepresentedObject:@(row)];
 
 		[cell setTarget:self];
 		[cell setAction:@selector(deleteAttachedMedia:)];
@@ -291,7 +291,7 @@
 
 	if ([pboard propertyListForType:NSFilenamesPboardType]) {
 		NSString *filename = [[pboard propertyListForType:NSFilenamesPboardType] lastObject];
-		wrapper = [[NSFileWrapper alloc] initWithPath:filename];
+		wrapper = [[NSFileWrapper alloc] initWithURL:[NSURL fileURLWithPath:filename] options:0 error:nil];
 	}
 	if ([pboard dataForType:LIAttachmentPasteboardType]) {
 		wrapper = (__bridge_transfer NSFileWrapper *)(void *)[[pboard propertyListForType:LIAttachmentPasteboardType] integerValue];
@@ -328,7 +328,7 @@
 	// Reset cache
 	if (columnCount != [tableView numberOfColumns]) {
 		columnCount = [tableView numberOfColumns];
-		[_columnCounts setObject:[NSNumber numberWithInt:columnCount] forKey:tableView];
+		[_columnCounts setObject:@(columnCount) forKey:tableView];
 
 		[rowHeights removeAllObjects];
 	}
@@ -341,7 +341,7 @@
 	}
 	else {
 		height = [self calculateHeightOfRow:row inTableView:tableView];
-		[rowHeights setObject:[NSNumber numberWithFloat:height] forKey:object];
+		[rowHeights setObject:@(height) forKey:object];
 	}
 
 	return height;

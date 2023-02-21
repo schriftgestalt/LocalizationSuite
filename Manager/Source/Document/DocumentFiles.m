@@ -30,9 +30,9 @@
 
 	[openPanel beginSheetModalForWindow:[self windowForSheet]
 					  completionHandler:^(NSInteger result) {
-						  if (result == NSAlertDefaultReturn)
-							  [self addFiles:[[openPanel URLs] valueForKey:@"path"]];
-					  }];
+		if (result == NSAlertFirstButtonReturn)
+			[self addFiles:[[openPanel URLs] valueForKey:@"path"]];
+	}];
 }
 
 - (IBAction)removeFile:(id)sender {
@@ -104,41 +104,42 @@
 	// Get objects
 	BOOL all = NO;
 	if ([sender isKindOfClass:[NSView class]])
-		all = (([[[sender window] currentEvent] modifierFlags] & NSAlternateKeyMask) != 0);
+		all = (([[[sender window] currentEvent] modifierFlags] & NSEventModifierFlagOption) != 0);
 	NSArray *objects = (all) ? [self bundles] : [self getSelectedObjects:YES];
 
 	// Show warning
-	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"ResetFilesTitle", nil)
-									 defaultButton:NSLocalizedString(@"Yes", nil)
-								   alternateButton:NSLocalizedString(@"No", nil)
-									   otherButton:nil
-						 informativeTextWithFormat:NSLocalizedString(@"ResetFilesText", nil)];
+	NSAlert *alert = [NSAlert new];
+	[alert setMessageText:NSLocalizedString(@"ResetFilesTitle", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"Yes", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"No", nil)];
+	[alert setInformativeText:NSLocalizedString(@"ResetFilesText", nil)];
 	[alert beginSheetModalForWindow:[self windowForSheet]
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSAlertDefaultReturn)
-						  return;
+		if (result != NSAlertFirstButtonReturn)
+			return;
 
-					  // Perform reinject
-					  [self synchronizeObjects:objects forLanguages:[self languages] reinject:YES];
-				  }];
+		// Perform reinject
+		[self synchronizeObjects:objects forLanguages:[self languages] reinject:YES];
+	}];
 }
 
 - (IBAction)reinjectFilesForLanguage:(id)sender {
 	NSString *language = [sender representedObject];
 	NSString *languageName = [BLLanguageTranslator descriptionForLanguage:language];
 
-	NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:NSLocalizedString(@"ResetFilesLanguageTitle", nil), languageName]
-									 defaultButton:NSLocalizedString(@"Yes", nil)
-								   alternateButton:NSLocalizedString(@"No", nil)
-									   otherButton:nil
-						 informativeTextWithFormat:NSLocalizedString(@"ResetFilesLanguageText", nil), languageName];
+	NSAlert *alert = [NSAlert new];
+	[alert setMessageText:[NSString stringWithFormat:NSLocalizedString(@"ResetFilesLanguageTitle", nil), languageName]];
+	[alert addButtonWithTitle:NSLocalizedString(@"Yes", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"No", nil)];
+	[alert setInformativeText:[NSString stringWithFormat:NSLocalizedString(@"ResetFilesLanguageText", nil), languageName]];
+
 	[alert beginSheetModalForWindow:[self windowForSheet]
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSAlertDefaultReturn)
-						  return;
+		if (result != NSAlertFirstButtonReturn)
+			return;
 
-					  [self synchronizeObjects:[self getSelectedObjects:YES] forLanguages:[NSArray arrayWithObject:language] reinject:YES];
-				  }];
+		[self synchronizeObjects:[self getSelectedObjects:YES] forLanguages:[NSArray arrayWithObject:language] reinject:YES];
+	}];
 }
 
 #pragma mark - File Detail Windows

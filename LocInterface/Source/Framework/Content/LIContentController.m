@@ -440,7 +440,7 @@ NSString *LIContentMediaColumnIdentifier = @"media";
 	}
 	if (media) {
 		_previewPath = [@"/tmp/" stringByAppendingPathComponent:[media preferredFilename]];
-		[media writeToFile:_previewPath atomically:YES updateFilenames:NO];
+		[media writeToURL:[NSURL fileURLWithPath:_previewPath] options:NSFileWrapperWritingAtomic originalContentsURL:nil error:nil];
 
 		return [NSURL fileURLWithPath:_previewPath];
 	}

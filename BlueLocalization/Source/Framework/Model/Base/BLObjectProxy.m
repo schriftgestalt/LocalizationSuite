@@ -44,7 +44,7 @@
 }
 
 - (void)_init {
-	_cache = [NSMapTable mapTableWithWeakToWeakObjects];
+	_cache = [NSMapTable weakToWeakObjectsMapTable];
 }
 
 #pragma mark - Actions
@@ -135,7 +135,7 @@
 
 	[invocation retainArguments];
 
-	if (dispatch_get_current_queue() == dispatch_get_main_queue()) {
+	if (NSThread.isMainThread) {
 		[invocation invokeWithTarget:_object];
 	}
 	else {
@@ -154,7 +154,7 @@
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-	if (dispatch_get_current_queue() == dispatch_get_main_queue()) {
+	if (NSThread.isMainThread) {
 		return [_class instanceMethodSignatureForSelector:sel];
 	}
 	else {

@@ -9,8 +9,7 @@
 /*!
  @abstract A class that checks translations of strings and returns errors and warning that have been found.
  */
-@interface LTTranslationChecker : NSObject {
-}
+@interface LTTranslationChecker : NSObject
 
 /*!
  @abstract Calculates all translation problems for the given key object and language.

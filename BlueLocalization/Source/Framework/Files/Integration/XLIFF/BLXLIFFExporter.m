@@ -82,64 +82,64 @@ id __sharedXLIFFExporter;
 	[panel setCanCreateDirectories:YES];
 	[panel setAccessoryView:optionsView];
 	[[panel defaultButtonCell] setTitle:NSLocalizedStringFromTableInBundle(@"Export", @"Localizable", [NSBundle bundleForClass:[self class]], nil)];
-
+	
 	[panel beginSheetModalForWindow:[document windowForSheet]
 				  completionHandler:^(NSInteger returnCode) {
-					  [panel close];
-
-					  // User aborted
-					  if (returnCode != NSFileHandlingPanelOKButton)
-						  return;
-
-					  // Read options
-					  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-					  NSUInteger options = 0;
-
-					  if ([defaults boolForKey:BLXLIFFExporterAllowRichTextKeyPath])
-						  options |= BLXLIFFExporterAllowRichText;
-					  if ([defaults boolForKey:BLXLIFFExporterIncludeCommentsKeyPath])
-						  options |= BLXLIFFExporterIncludeComments;
-
-					  BOOL exportReference = [defaults boolForKey:BLXLIFFExporterExportReferenceKeyPath];
-					  BOOL exportAllFiles = [defaults boolForKey:BLXLIFFExporterExportAllFilesKeyPath];
-
-					  // Preprocess arguments
-					  NSArray *exportObjects = objects;
-
-					  if (exportAllFiles) {
-						  if ([document respondsToSelector:@selector(bundles)])
-							  exportObjects = [(id)document bundles];
-					  }
-
-					  // Enqueue process steps
-					  NSMutableArray *steps = [NSMutableArray array];
-					  NSString *reference = [document referenceLanguage];
-					  NSString *path = [[panel URL] path];
-
-					  for (NSString *language in languages) {
-						  if ([language isEqual:reference] && !exportReference)
-							  continue;
-
-						  // Create Step
-						  BLGenericProcessStep *step = [BLGenericProcessStep genericStepWithBlock:^{
-							  [[self class] exportXLIFFFromObjects:exportObjects forLanguage:language andReferenceLanguage:reference withOptions:options toPath:path];
-						  }];
-
-						  [step setAction:NSLocalizedStringFromTableInBundle(@"ExportingXLIFF", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil)];
-						  [step setDescription:[NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"ExportingXLIFFText", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil), [BLLanguageTranslator descriptionForLanguage:language]]];
-
-						  [steps addObject:step];
-					  }
-
-					  // Enqueue or execute
-					  if ([document respondsToSelector:@selector(processManager)] && [document processManager]) {
-						  [[document processManager] enqueueStepGroup:steps];
-						  [[document processManager] startWithName:@"Exporting XLIFF files…"];
-					  }
-					  else {
-						  [steps makeObjectsPerformSelector:@selector(perform)];
-					  }
-				  }];
+		[panel close];
+		
+		// User aborted
+		if (returnCode != NSModalResponseOK)
+			return;
+		
+		// Read options
+		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		NSUInteger options = 0;
+		
+		if ([defaults boolForKey:BLXLIFFExporterAllowRichTextKeyPath])
+			options |= BLXLIFFExporterAllowRichText;
+		if ([defaults boolForKey:BLXLIFFExporterIncludeCommentsKeyPath])
+			options |= BLXLIFFExporterIncludeComments;
+		
+		BOOL exportReference = [defaults boolForKey:BLXLIFFExporterExportReferenceKeyPath];
+		BOOL exportAllFiles = [defaults boolForKey:BLXLIFFExporterExportAllFilesKeyPath];
+		
+		// Preprocess arguments
+		NSArray *exportObjects = objects;
+		
+		if (exportAllFiles) {
+			if ([document respondsToSelector:@selector(bundles)])
+				exportObjects = [(id)document bundles];
+		}
+		
+		// Enqueue process steps
+		NSMutableArray *steps = [NSMutableArray array];
+		NSString *reference = [document referenceLanguage];
+		NSString *path = [[panel URL] path];
+		
+		for (NSString *language in languages) {
+			if ([language isEqual:reference] && !exportReference)
+				continue;
+			
+			// Create Step
+			BLGenericProcessStep *step = [BLGenericProcessStep genericStepWithBlock:^{
+				[[self class] exportXLIFFFromObjects:exportObjects forLanguage:language andReferenceLanguage:reference withOptions:options toPath:path];
+			}];
+			
+			[step setAction:NSLocalizedStringFromTableInBundle(@"ExportingXLIFF", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil)];
+			[step setDescription:[NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"ExportingXLIFFText", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil), [BLLanguageTranslator descriptionForLanguage:language]]];
+			
+			[steps addObject:step];
+		}
+		
+		// Enqueue or execute
+		if ([document respondsToSelector:@selector(processManager)] && [document processManager]) {
+			[[document processManager] enqueueStepGroup:steps];
+			[[document processManager] startWithName:@"Exporting XLIFF files…"];
+		}
+		else {
+			[steps makeObjectsPerformSelector:@selector(perform)];
+		}
+	}];
 }
 
 - (BOOL)includesReferenceLanguage {

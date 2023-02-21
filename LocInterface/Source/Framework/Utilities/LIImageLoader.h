@@ -21,8 +21,7 @@ extern NSString *LIWarningImageName;
 /*!
  @abstract Loads images and registers them as for a name, because they're often used or need to be cached.
  */
-@interface LIImageLoader : NSObject {
-}
+@interface LIImageLoader : NSObject
 
 /*!
  @abstract Loads the image with the given name from the LocInterface bundle (only!) and registers it using name.

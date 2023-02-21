@@ -41,7 +41,7 @@
 	NSString *referencePath = [[path stringByDeletingPathExtension] stringByAppendingFormat:@".r.%@", [path pathExtension]];
 
 	NSFileWrapper *reference = [object attachedObjectForKey:BLBackupAttachmentKey];
-	[reference writeToFile:referencePath atomically:YES updateFilenames:NO];
+	[reference writeToURL:[NSURL fileURLWithPath:referencePath] options:NSFileWrapperWritingAtomic originalContentsURL:nil error:nil];
 
 	// Try to get the encoding of the reference file
 	NSStringEncoding encoding = NSUnicodeStringEncoding;

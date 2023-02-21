@@ -33,7 +33,7 @@ NSString *TXTFileCreatorExtension = @"txt";
 	// Read in
 	BLFileObject *fileObject = [BLFileObject fileObjectWithPathExtension:TXTFileCreatorExtension];
 	BOOL result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:TXTFileCreatorTestLanguage referenceLanguage:TXTFileCreatorTestLanguage];
-	STAssertTrue(result, @"Interpreter failed with no result for file %@", path);
+	XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 	// Write out
 	NSString *outPath = [tmpRootPath stringByAppendingPathComponent:[path lastPathComponent]];
@@ -41,11 +41,11 @@ NSString *TXTFileCreatorExtension = @"txt";
 
 	// Compare encodings
 	NSStringEncoding encoding;
-	STAssertNotNil([NSString stringWithContentsOfFile:path usedEncoding:&encoding error:NULL], @"Reading failed");
-	STAssertEquals(encoding, (NSStringEncoding)NSUTF8StringEncoding, @"Wrong input encoding");
+	XCTAssertNotNil([NSString stringWithContentsOfFile:path usedEncoding:&encoding error:NULL], @"Reading failed");
+	XCTAssertEqual(encoding, (NSStringEncoding)NSUTF8StringEncoding, @"Wrong input encoding");
 
-	STAssertNotNil([NSString stringWithContentsOfFile:outPath usedEncoding:&encoding error:NULL], @"Reading failed");
-	STAssertEquals(encoding, (NSStringEncoding)NSUTF8StringEncoding, @"Wrong output encoding");
+	XCTAssertNotNil([NSString stringWithContentsOfFile:outPath usedEncoding:&encoding error:NULL], @"Reading failed");
+	XCTAssertEqual(encoding, (NSStringEncoding)NSUTF8StringEncoding, @"Wrong output encoding");
 
 	// Read utf-16
 	path = [[NSBundle bundleForClass:[self class]] pathForResource:@"utf16" ofType:TXTFileCreatorExtension inDirectory:@"Test Data/Text"];
@@ -53,18 +53,18 @@ NSString *TXTFileCreatorExtension = @"txt";
 	// Read in
 	fileObject = [BLFileObject fileObjectWithPathExtension:TXTFileCreatorExtension];
 	result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:TXTFileCreatorTestLanguage referenceLanguage:TXTFileCreatorTestLanguage];
-	STAssertTrue(result, @"Interpreter failed with no result for file %@", path);
+	XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 	// Write out
 	outPath = [tmpRootPath stringByAppendingPathComponent:[path lastPathComponent]];
 	[creator writeFileToPath:outPath fromObject:fileObject withLanguage:TXTFileCreatorTestLanguage referenceLanguage:TXTFileCreatorTestLanguage];
 
 	// Compare encodings
-	STAssertNotNil([NSString stringWithContentsOfFile:path usedEncoding:&encoding error:NULL], @"Reading failed");
-	STAssertEquals(encoding, (NSStringEncoding)NSUnicodeStringEncoding, @"Wrong input encoding");
+	XCTAssertNotNil([NSString stringWithContentsOfFile:path usedEncoding:&encoding error:NULL], @"Reading failed");
+	XCTAssertEqual(encoding, (NSStringEncoding)NSUnicodeStringEncoding, @"Wrong input encoding");
 
-	STAssertNotNil([NSString stringWithContentsOfFile:outPath usedEncoding:&encoding error:NULL], @"Reading failed");
-	STAssertEquals(encoding, (NSStringEncoding)NSUnicodeStringEncoding, @"Wrong output encoding");
+	XCTAssertNotNil([NSString stringWithContentsOfFile:outPath usedEncoding:&encoding error:NULL], @"Reading failed");
+	XCTAssertEqual(encoding, (NSStringEncoding)NSUnicodeStringEncoding, @"Wrong output encoding");
 }
 
 @end

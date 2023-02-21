@@ -6,9 +6,6 @@
 //  Copyright 2010 The Soulmen. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
-
-@interface DocumentCompressionTest : SenTestCase {
-}
+@interface DocumentCompressionTest : XCTestCase
 
 @end

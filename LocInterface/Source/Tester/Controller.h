@@ -6,8 +6,7 @@
 //  Copyright 2009 Blue Technologies Group. All rights reserved.
 //
 
-@interface Controller : NSObject {
-}
+@interface Controller : NSObject
 
 - (IBAction)showLog:(id)sender;
 - (IBAction)showStats:(id)sender;

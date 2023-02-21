@@ -27,15 +27,6 @@ NSArray *BLDocumentFileWrapperIgnoredNames = nil;
 
 #pragma mark -
 
-- (id)initWithPath:(NSString *)path {
-	if ([[NSFileManager defaultManager] compressionOfFile:path] != BLFileManagerNoCompression) {
-		return (id)[self decompressedFileWrapperFromPath:path];
-	}
-	else {
-		return [super initWithPath:path];
-	}
-}
-
 - (id)initWithURL:(NSURL *)url options:(NSFileWrapperReadingOptions)options error:(NSError **)outError {
 	if ([[NSFileManager defaultManager] compressionOfFile:[url path]] != BLFileManagerNoCompression) {
 		return (id)[self decompressedFileWrapperFromPath:[url path]];
@@ -76,7 +67,7 @@ NSArray *BLDocumentFileWrapperIgnoredNames = nil;
 
 	NSString *outPath = nil;
 	if ([[NSFileManager defaultManager] decompressFileAtPath:tmpPath usedCompression:NULL resultPath:&outPath keepOriginal:NO]) {
-		NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithPath:outPath];
+		NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithURL:[NSURL fileURLWithPath:outPath] options:0 error:nil];
 		[[NSFileManager defaultManager] removeItemAtPath:outPath error:NULL];
 
 		return wrapper;
@@ -155,14 +146,6 @@ NSArray *BLDocumentFileWrapperIgnoredNames = nil;
 	}
 
 	return YES;
-}
-
-- (BOOL)writeToFile:(NSString *)path atomically:(BOOL)atomicFlag updateFilenames:(BOOL)updateFilenamesFlag {
-	NSFileWrapperWritingOptions options = 0;
-	options |= (atomicFlag) ? NSFileWrapperWritingAtomic : 0;
-	options |= (updateFilenamesFlag) ? NSFileWrapperWritingWithNameUpdating : 0;
-
-	return [self writeFileWrapper:self toURL:[NSURL fileURLWithPath:path] withOptions:options error:NULL];
 }
 
 - (BOOL)writeToURL:(NSURL *)url options:(NSFileWrapperWritingOptions)options originalContentsURL:(NSURL *)originalContentsURL error:(NSError **)outError {

@@ -7,6 +7,7 @@
 //
 
 #import "StringsDictionaryTest.h"
+#import "BLStringsDictionary.h"
 
 @implementation StringsDictionaryTest
 
@@ -14,16 +15,16 @@
 	NSArray *paths;
 
 	paths = [[NSBundle bundleForClass:[self class]] pathsForResourcesOfType:@"strings" inDirectory:[NSString stringWithFormat:@"Test Data/Strings/%@", subdir]];
-	STAssertTrue([paths count] > 0, @"Found no test files");
+	XCTAssertTrue([paths count] > 0, @"Found no test files");
 
 	for (NSString *path in paths) {
 		NSDictionary *data, *dict;
 
 		dict = [NSDictionary dictionaryWithStringsAtPath:path];
-		STAssertNotNil(dict, @"Interpreter failed with no result for file %@", path);
+		XCTAssertNotNil(dict, @"Interpreter failed with no result for file %@", path);
 
 		data = [NSDictionary dictionaryWithContentsOfFile:path];
-		STAssertTrue((data != nil) || [dict count] == 0, @"NSDictionary can't open file %@", path);
+		XCTAssertTrue((data != nil) || [dict count] == 0, @"NSDictionary can't open file %@", path);
 
 		for (NSString *key in [data allKeys]) {
 			id orig, import;
@@ -31,8 +32,8 @@
 			orig = [data objectForKey:key];
 			import = [dict objectForKey:key];
 
-			STAssertNotNil(import, @"Missing key object for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
-			STAssertEqualObjects(orig, import, @"Values don't match for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
+			XCTAssertNotNil(import, @"Missing key object for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
+			XCTAssertEqualObjects(orig, import, @"Values don't match for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
 		}
 	}
 }
@@ -46,20 +47,20 @@
 	NSArray *paths;
 
 	paths = [[NSBundle bundleForClass:[self class]] pathsForResourcesOfType:@"strings" inDirectory:[NSString stringWithFormat:@"Test Data/Strings/%@", subdir]];
-	STAssertTrue([paths count] > 0, @"Found no test files");
+	XCTAssertTrue([paths count] > 0, @"Found no test files");
 
 	for (NSString *path in paths) {
 		NSDictionary *data, *dict, *comments;
 
 		comments = nil;
 		dict = [NSDictionary dictionaryWithStringsAtPath:path scannedComments:&comments scannedKeyOrder:NULL];
-		STAssertNotNil(dict, @"Interpreter failed with no result for file %@", path);
-		STAssertNotNil(comments, @"Interpreter failed with no comments for file %@", path);
+		XCTAssertNotNil(dict, @"Interpreter failed with no result for file %@", path);
+		XCTAssertNotNil(comments, @"Interpreter failed with no comments for file %@", path);
 
 		NSString *commentsPath;
 		commentsPath = [[path stringByDeletingPathExtension] stringByAppendingPathExtension:@"comments"];
 		data = [NSDictionary dictionaryWithContentsOfFile:commentsPath];
-		STAssertNotNil(data, @"NSDictionary can't open comments file %@", path);
+		XCTAssertNotNil(data, @"NSDictionary can't open comments file %@", path);
 
 		for (NSString *key in [data allKeys]) {
 			id orig, import;
@@ -67,8 +68,8 @@
 			orig = [data objectForKey:key];
 			import = [comments objectForKey:key];
 
-			STAssertNotNil([dict objectForKey:key], @"Missing key object for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
-			STAssertTrue([orig isEqual:import], @"Comment values don't match for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
+			XCTAssertNotNil([dict objectForKey:key], @"Missing key object for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
+			XCTAssertTrue([orig isEqual:import], @"Comment values don't match for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
 		}
 	}
 }
@@ -81,17 +82,17 @@
 	NSArray *paths;
 
 	paths = [[NSBundle bundleForClass:[self class]] pathsForResourcesOfType:@"strings" inDirectory:[NSString stringWithFormat:@"Test Data/Strings/%@", subdir]];
-	STAssertTrue([paths count] > 0, @"Found no test files");
+	XCTAssertTrue([paths count] > 0, @"Found no test files");
 
 	for (NSString *path in paths) {
 		NSDictionary *data, *dict;
 
 		// Write unchanged
 		data = [NSDictionary dictionaryWithContentsOfFile:path];
-		STAssertNotNil(data, @"Interpreter failed with no result for file %@", path);
+		XCTAssertNotNil(data, @"Interpreter failed with no result for file %@", path);
 
 		NSString *tmpPath = [@"/tmp/" stringByAppendingPathComponent:[path lastPathComponent]];
-		STAssertTrue([data writeToPath:tmpPath mimicingFileAtPath:path], @"Writing failed at path %@", tmpPath);
+		XCTAssertTrue([data writeToPath:tmpPath mimicingFileAtPath:path], @"Writing failed at path %@", tmpPath);
 
 		// Compare files
 		NSString *writePath = [[path stringByDeletingPathExtension] stringByAppendingPathExtension:@"write"];
@@ -101,23 +102,23 @@
 		NSString *old = [NSString stringWithContentsOfFile:writePath usedEncoding:NULL error:NULL];
 		NSString *new = [NSString stringWithContentsOfFile : tmpPath usedEncoding : NULL error : NULL];
 
-		STAssertEqualObjects(old, new, @"Unchanged dict should create same file");
+		XCTAssertEqualObjects(old, new, @"Unchanged dict should create same file");
 
 		// Write changes
 		NSString *deltaPath = [[path stringByDeletingPathExtension] stringByAppendingPathExtension:@"replace"];
 		dict = [NSDictionary dictionaryWithContentsOfFile:deltaPath];
-		STAssertNotNil(dict, @"Interpreter failed with no result for file %@", deltaPath);
+		XCTAssertNotNil(dict, @"Interpreter failed with no result for file %@", deltaPath);
 
-		STAssertTrue([dict writeToPath:tmpPath mimicingFileAtPath:path], @"Writing failed at path %@", tmpPath);
+		XCTAssertTrue([dict writeToPath:tmpPath mimicingFileAtPath:path], @"Writing failed at path %@", tmpPath);
 
 		NSString *resultPath = [[path stringByDeletingPathExtension] stringByAppendingPathExtension:@"result"];
 		old = [NSString stringWithContentsOfFile:resultPath usedEncoding:NULL error:NULL];
 		new = [NSString stringWithContentsOfFile : tmpPath usedEncoding : NULL error : NULL];
 
-		STAssertEqualObjects(old, new, @"Changed dict should create result file");
+		XCTAssertEqualObjects(old, new, @"Changed dict should create result file");
 
 		// Clean up
-		STAssertTrue([[NSFileManager defaultManager] removeItemAtPath:tmpPath error:NULL], @"Cannot remove tmp file");
+		XCTAssertTrue([[NSFileManager defaultManager] removeItemAtPath:tmpPath error:NULL], @"Cannot remove tmp file");
 	}
 }
 

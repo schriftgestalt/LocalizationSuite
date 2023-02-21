@@ -101,39 +101,39 @@ id __sharedDictionaryExporter;
 	// Present panel
 	[panel beginSheetModalForWindow:[document windowForSheet]
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSFileHandlingPanelOKButton)
-						  return;
+		if (result != NSModalResponseOK)
+			return;
 
-					  // Create/open dictionary
-					  BLDictionaryDocument *dictionary = [[BLDictionaryDocument alloc] init];
+		// Create/open dictionary
+		BLDictionaryDocument *dictionary = [[BLDictionaryDocument alloc] init];
 
-					  if (updating) {
-						  // Open the existing file
-						  [dictionary readFromURL:[panel URL] ofType:nil error:NULL];
-						  [dictionary addLanguages:_languages ignoreFilter:NO];
-					  }
-					  else {
-						  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		if (updating) {
+			// Open the existing file
+			[dictionary readFromURL:[panel URL] ofType:@"" error:NULL];
+			[dictionary addLanguages:self->_languages ignoreFilter:NO];
+		}
+		else {
+			NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
-						  // Set the language
-						  if ([defaults boolForKey:BLDictionaryExporterLimitLanguagesKeyPath])
-							  [dictionary addLanguages:_languages ignoreFilter:YES];
-						  else
-							  [dictionary addLanguages:[document languages] ignoreFilter:YES];
+			// Set the language
+			if ([defaults boolForKey:BLDictionaryExporterLimitLanguagesKeyPath])
+				[dictionary addLanguages:self->_languages ignoreFilter:YES];
+			else
+				[dictionary addLanguages:[document languages] ignoreFilter:YES];
 
-						  // Set the filter settings
-						  NSDictionary *filter = [NSDictionary dictionaryWithObjectsAndKeys:
-																   [defaults objectForKey:BLDictionaryExporterNormalizeKeyPath], BLDictionaryNormalizeFilterSetting,
-																   [defaults objectForKey:BLDictionaryExporterNormLanguageKeyPath], BLDictionaryNormLanguageFilterSetting,
-																   [defaults objectForKey:BLDictionaryExporterLimitLanguagesKeyPath], BLDictionaryLimitLanguagesFilterSetting,
-																   nil];
-						  dictionary.filterSettings = filter;
-					  }
+			// Set the filter settings
+			NSDictionary *filter = [NSDictionary dictionaryWithObjectsAndKeys:
+									[defaults objectForKey:BLDictionaryExporterNormalizeKeyPath], BLDictionaryNormalizeFilterSetting,
+									[defaults objectForKey:BLDictionaryExporterNormLanguageKeyPath], BLDictionaryNormLanguageFilterSetting,
+									[defaults objectForKey:BLDictionaryExporterLimitLanguagesKeyPath], BLDictionaryLimitLanguagesFilterSetting,
+									nil];
+			dictionary.filterSettings = filter;
+		}
 
-					  // Add keys and save
-					  [dictionary addKeys:[BLObject keyObjectsFromArray:objects]];
-					  [dictionary writeToURL:[panel URL] ofType:nil error:NULL];
-				  }];
+		// Add keys and save
+		[dictionary addKeys:[BLObject keyObjectsFromArray:objects]];
+		[dictionary writeToURL:[panel URL] ofType:@"" error:NULL];
+	}];
 }
 
 #pragma mark - Interface

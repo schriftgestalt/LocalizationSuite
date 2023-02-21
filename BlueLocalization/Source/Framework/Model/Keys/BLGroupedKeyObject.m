@@ -62,8 +62,7 @@
 	return [[_keyObjects lastObject] key];
 }
 
-- (void)setKey:(NSString *)key {
-}
+- (void)setKey:(NSString *)key {}
 
 - (NSString *)comment {
 	return [[_keyObjects lastObject] comment];
@@ -77,8 +76,7 @@
 	return [[_keyObjects lastObject] fileObject];
 }
 
-- (void)setFileObject:(BLFileObject *)object {
-}
+- (void)setFileObject:(BLFileObject *)object {}
 
 - (BOOL)isEmpty {
 	return [[_keyObjects lastObject] isEmpty];

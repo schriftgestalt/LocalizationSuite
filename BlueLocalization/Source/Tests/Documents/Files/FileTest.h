@@ -6,7 +6,7 @@
 //  Copyright 2010 The Soulmen. All rights reserved.
 //
 
-@interface FileTest : SenTestCase {
+@interface FileTest : XCTestCase {
 	BLBundleObject *bundle;
 	BLFileObject *file;
 	NSString *path;

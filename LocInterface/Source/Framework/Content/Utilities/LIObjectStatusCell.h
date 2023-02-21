@@ -9,8 +9,7 @@
 /*!
  @abstract A custom cell that displays a colored badge representing a key's status.
  */
-@interface LIObjectStatusCell : NSTextFieldCell {
-}
+@interface LIObjectStatusCell : NSTextFieldCell
 
 - (NSString *)toolTip;
 

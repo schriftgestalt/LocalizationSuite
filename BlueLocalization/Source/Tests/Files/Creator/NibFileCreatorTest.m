@@ -50,11 +50,11 @@
 
 	// Compare files
 	path = [tmpPath stringByAppendingPathComponent:@"de.lproj/output.xib"];
-	STAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:outPath], @"Missing outfile");
-	STAssertTrue([[NSFileManager defaultManager] contentsEqualAtPath:path andPath:outPath], @"Incremental localization failed!");
+	XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:outPath], @"Missing outfile");
+	XCTAssertTrue([[NSFileManager defaultManager] contentsEqualAtPath:path andPath:outPath], @"Incremental localization failed!");
 
 	// Check versions
-	STAssertTrue([fileObject versionForLanguage:@"de"] == 2, @"Version should be upgraded");
+	XCTAssertTrue([fileObject versionForLanguage:@"de"] == 2, @"Version should be upgraded");
 }
 
 @end

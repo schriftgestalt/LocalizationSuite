@@ -56,7 +56,7 @@ NSString *BLNibFileCreatorIBLoadedPluginIdentifiersKey = @"IBLoadedPluginIdentif
 	NSString *referencePath = [[targetPath stringByDeletingPathExtension] stringByAppendingFormat:@".r.%@", [targetPath pathExtension]];
 
 	NSFileWrapper *reference = [object attachedObjectForKey:BLBackupAttachmentKey];
-	[reference writeToFile:referencePath atomically:YES updateFilenames:NO];
+	[reference writeToURL:[NSURL fileURLWithPath:referencePath] options:0 originalContentsURL:nil error:nil];
 
 	if (![fileManager fileExistsAtPath:referencePath]) {
 		// Copy original if no reference version available
@@ -79,7 +79,7 @@ NSString *BLNibFileCreatorIBLoadedPluginIdentifiersKey = @"IBLoadedPluginIdentif
 	if (![self optionIsActive:BLFileCreatorReinject] && ![language isEqual:referenceLanguage] && [fileManager fileExistsAtPath:targetPath]) {
 		// Write previous file
 		NSFileWrapper *previous = [object attachedObjectForKey:BLBackupAttachmentKey];
-		[previous writeToFile:previousPath atomically:YES updateFilenames:NO];
+		[previous writeToURL:[NSURL fileURLWithPath:previousPath] options:0 originalContentsURL:nil error:nil];
 
 		if (![fileManager fileExistsAtPath:previousPath])
 			[fileManager copyItemAtPath:referencePath toPath:previousPath error:NULL];

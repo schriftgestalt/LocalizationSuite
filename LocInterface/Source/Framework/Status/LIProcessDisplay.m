@@ -67,7 +67,7 @@ NSTimeInterval LIProcessDisplayOpenDelay = 0.2;
 		[NSBundle loadNibNamed:LIProcessDisplayNibName owner:self];
 
 	[cancelButton setEnabled:YES];
-	[NSApp beginSheet:panel modalForWindow:window modalDelegate:nil didEndSelector:nil contextInfo:NULL];
+	[window beginSheet:panel completionHandler:nil];
 }
 
 - (void)closeSheet {

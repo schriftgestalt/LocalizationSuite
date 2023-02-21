@@ -37,10 +37,10 @@ NSString *LICustomColumnTableViewSettingsVisibleKey = @"visible";
 
 	for (NSTableColumn *column in [self tableColumns]) {
 		NSDictionary *setting = [NSDictionary dictionaryWithObjectsAndKeys:
-												  [column identifier], LICustomColumnTableViewSettingsIdentifierKey,
-												  [NSNumber numberWithFloat:[column width]], LICustomColumnTableViewSettingsWidthKey,
-												  [NSNumber numberWithBool:![column isHidden]], LICustomColumnTableViewSettingsVisibleKey,
-												  nil];
+								 [column identifier], LICustomColumnTableViewSettingsIdentifierKey,
+								 @([column width]), LICustomColumnTableViewSettingsWidthKey,
+								 @(![column isHidden]), LICustomColumnTableViewSettingsVisibleKey,
+								 nil];
 		[settings addObject:setting];
 	}
 

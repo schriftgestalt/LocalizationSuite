@@ -151,8 +151,8 @@
 
 		// Filter and normalize the dict
 		NSDictionary *filter = [NSDictionary dictionaryWithObjectsAndKeys:
-												 [NSNumber numberWithBool:YES], BLDictionaryLimitLanguagesFilterSetting,
-												 [NSNumber numberWithBool:YES], BLDictionaryNormalizeFilterSetting,
+								@YES, BLDictionaryLimitLanguagesFilterSetting,
+								@YES, BLDictionaryNormalizeFilterSetting,
 												 referenceLanguage, BLDictionaryNormLanguageFilterSetting,
 												 nil];
 
@@ -195,15 +195,9 @@
 	// Write
 	BLLog(BLLogInfo, @"Writing Localizer File to path: %@", path);
 
-	if (NSAppKitVersionNumber < NSAppKitVersionNumber10_6) {
-		success = [wrapper writeToFile:path atomically:NO updateFilenames:NO];
-	}
-	else {
-		wrapper = [[BLDocumentFileWrapper alloc] initWithFileWrapper:wrapper];
-
-		NSUInteger options = (_options & BLLocalizerExportStepCompressFilesOption) ? BLDocumentFileWrapperSaveCompressedOption : 0;
-		success = [wrapper writeToURL:[NSURL fileURLWithPath:path] options:options originalContentsURL:nil error:NULL];
-	}
+	wrapper = [[BLDocumentFileWrapper alloc] initWithFileWrapper:wrapper];
+	options = (_options & BLLocalizerExportStepCompressFilesOption) ? BLDocumentFileWrapperSaveCompressedOption : 0;
+	success = [wrapper writeToURL:[NSURL fileURLWithPath:path] options:options originalContentsURL:nil error:NULL];
 
 	if (!success) {
 		BLLog(BLLogError, @"Error writing localizer file!");
@@ -213,22 +207,22 @@
 	// Open Folder
 	if (_options & BLLocalizerExportStepOpenFolderOption) {
 		[[self manager] enqueueStep:[BLGenericProcessStep genericStepWithBlock:^{
-							NSString *showPath;
+			NSString *showPath;
 
-							if (self->_options & BLLocalizerExportStepCompressFilesOption)
-								showPath = [[NSFileManager defaultManager] pathOfFile:path compressedUsing:BLFileManagerTarGzipCompression];
-							else
-								showPath = path;
+			if (self->_options & BLLocalizerExportStepCompressFilesOption)
+				showPath = [[NSFileManager defaultManager] pathOfFile:path compressedUsing:BLFileManagerTarGzipCompression];
+			else
+				showPath = path;
 
-							[[NSWorkspace sharedWorkspace] selectFile:showPath inFileViewerRootedAtPath:_basePath];
-						}]];
+			[[NSWorkspace sharedWorkspace] selectFile:showPath inFileViewerRootedAtPath:self->_basePath];
+		}]];
 	}
 
 	// Open in Localizer
 	if ((_options & BLLocalizerExportStepOpenInLocalizerOption) == BLLocalizerExportStepOpenInLocalizerOption) {
 		[[self manager] enqueueStep:[BLGenericProcessStep genericStepWithBlock:^{
-							[[NSWorkspace sharedWorkspace] openFile:path];
-						}]];
+			[[NSWorkspace sharedWorkspace] openFile:path];
+		}]];
 	}
 
 	// Done

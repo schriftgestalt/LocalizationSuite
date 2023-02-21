@@ -160,7 +160,7 @@ NSString *BLXLIFFDocumentRTFDatatype = @"rtf";
 	[_document addChild:_xliff];
 
 	// Create the content
-	_fileObjectMap = [NSMapTable mapTableWithWeakToWeakObjects];
+	_fileObjectMap = [NSMapTable weakToWeakObjectsMapTable];
 	_fileObjects = [[NSMutableArray alloc] init];
 }
 
@@ -192,7 +192,7 @@ NSString *BLXLIFFDocumentRTFDatatype = @"rtf";
 
 	// Clear data structures
 
-	_fileObjectMap = [NSMapTable mapTableWithWeakToWeakObjects];
+	_fileObjectMap = [NSMapTable weakToWeakObjectsMapTable];
 	_fileObjects = [[NSMutableArray alloc] init];
 
 	// Read the file objects
@@ -336,7 +336,7 @@ NSString *BLXLIFFDocumentRTFDatatype = @"rtf";
 
 - (void)updateFileNode:(NSXMLElement *)fileNode withFileObject:(BLFileObject *)fileObject {
 	// Clean
-	[fileNode setAttributesAsDictionary:nil];
+	[fileNode setAttributes:nil];
 	[fileNode setChildren:nil];
 
 	// Set path

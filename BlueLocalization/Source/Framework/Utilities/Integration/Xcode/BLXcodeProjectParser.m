@@ -95,9 +95,9 @@ NSString *BLXcodeProjectFileTypePlist = @"text.plist.xml";
 	}
 
 	// Get the contents
-	NSString *error;
+	NSError *error;
 
-	_contents = [NSPropertyListSerialization propertyListFromData:[NSData dataWithContentsOfFile:path] mutabilityOption:NSPropertyListMutableContainersAndLeaves format:NULL errorDescription:&error];
+	_contents = [NSPropertyListSerialization propertyListWithData:[NSData dataWithContentsOfFile:path] options:NSPropertyListMutableContainersAndLeaves format:NULL error:&error];
 	if (!_contents) {
 		BLLog(BLLogError, @"Unable to read Xcode project file at path \"%@\". Error: %@", _path, error);
 		return;
@@ -153,8 +153,8 @@ NSString *BLXcodeProjectFileTypePlist = @"text.plist.xml";
 	}
 
 	// Encode the contents
-	NSString *error;
-	NSData *data = [NSPropertyListSerialization dataFromPropertyList:_contents format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
+	NSError *error;
+	NSData *data = [NSPropertyListSerialization dataWithPropertyList:_contents format:NSPropertyListXMLFormat_v1_0 options:0 error:&error];
 	if (!data) {
 		BLLog(BLLogError, @"Unable to encode Xcode project file. Error: %@", error);
 		return NO;

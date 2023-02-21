@@ -31,7 +31,7 @@ NSString *StringsFileCreatorExtension = @"strings";
 	NSArray *paths;
 
 	paths = [[NSBundle bundleForClass:[self class]] pathsForResourcesOfType:StringsFileCreatorExtension inDirectory:@"Test Data/Strings/specific"];
-	STAssertTrue([paths count] > 0, @"Found no test files");
+	XCTAssertTrue([paths count] > 0, @"Found no test files");
 
 	for (NSString *path in paths) {
 		BLFileObject *fileObject, *secondFileObject;
@@ -42,7 +42,7 @@ NSString *StringsFileCreatorExtension = @"strings";
 
 		// Read in
 		BOOL result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:StringsFileCreatorTestLanguage referenceLanguage:nil];
-		STAssertTrue(result, @"Interpreter failed with no result for file %@", path);
+		XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 		// Write out
 		NSString *outPath = [tmpRootPath stringByAppendingPathComponent:[path lastPathComponent]];
@@ -50,7 +50,7 @@ NSString *StringsFileCreatorExtension = @"strings";
 
 		// Read in again
 		data = [NSDictionary dictionaryWithContentsOfFile:outPath];
-		STAssertTrue(data != nil || [fileObject numberOfKeys] == 0, @"NSDictionary can't open file %@", path);
+		XCTAssertTrue(data != nil || [fileObject numberOfKeys] == 0, @"NSDictionary can't open file %@", path);
 
 		for (NSString *key in [data allKeys]) {
 			id orig, import;
@@ -61,9 +61,9 @@ NSString *StringsFileCreatorExtension = @"strings";
 
 			empty = !orig || ![orig length] || [orig rangeOfCharacterFromSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length == [orig length];
 
-			STAssertNotNil([fileObject objectForKey:key], @"Missing key object for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
-			STAssertTrue((empty || import), @"Missing value for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
-			STAssertTrue((empty && !import) || [orig isEqual:import], @"Values don't match for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
+			XCTAssertNotNil([fileObject objectForKey:key], @"Missing key object for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
+			XCTAssertTrue((empty || import), @"Missing value for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
+			XCTAssertTrue((empty && !import) || [orig isEqual:import], @"Values don't match for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
 		}
 	}
 }
@@ -74,7 +74,7 @@ NSString *StringsFileCreatorExtension = @"strings";
 	// Read in
 	BLFileObject *fileObject = [BLFileObject fileObjectWithPathExtension:StringsFileCreatorExtension];
 	BOOL result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:StringsFileCreatorTestLanguage referenceLanguage:StringsFileCreatorTestLanguage];
-	STAssertTrue(result, @"Interpreter failed with no result for file %@", path);
+	XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 	// Write out
 	NSString *outPath = [tmpRootPath stringByAppendingPathComponent:[path lastPathComponent]];
@@ -82,11 +82,11 @@ NSString *StringsFileCreatorExtension = @"strings";
 
 	// Compare encodings
 	NSStringEncoding encoding;
-	STAssertNotNil([NSString stringWithContentsOfFile:path usedEncoding:&encoding error:NULL], @"Reading failed");
-	STAssertEquals(encoding, (NSStringEncoding)NSUTF8StringEncoding, @"Wrong input encoding");
+	XCTAssertNotNil([NSString stringWithContentsOfFile:path usedEncoding:&encoding error:NULL], @"Reading failed");
+	XCTAssertEqual(encoding, (NSStringEncoding)NSUTF8StringEncoding, @"Wrong input encoding");
 
-	STAssertNotNil([NSString stringWithContentsOfFile:outPath usedEncoding:&encoding error:NULL], @"Reading failed");
-	STAssertEquals(encoding, (NSStringEncoding)NSUTF8StringEncoding, @"Wrong output encoding");
+	XCTAssertNotNil([NSString stringWithContentsOfFile:outPath usedEncoding:&encoding error:NULL], @"Reading failed");
+	XCTAssertEqual(encoding, (NSStringEncoding)NSUTF8StringEncoding, @"Wrong output encoding");
 
 	// REad utf-16
 	path = [[NSBundle bundleForClass:[self class]] pathForResource:@"utf16" ofType:StringsFileCreatorExtension inDirectory:@"Test Data/Strings/specific"];
@@ -94,18 +94,18 @@ NSString *StringsFileCreatorExtension = @"strings";
 	// Read in
 	fileObject = [BLFileObject fileObjectWithPathExtension:StringsFileCreatorExtension];
 	result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:StringsFileCreatorTestLanguage referenceLanguage:nil];
-	STAssertTrue(result, @"Interpreter failed with no result for file %@", path);
+	XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 	// Write out
 	outPath = [tmpRootPath stringByAppendingPathComponent:[path lastPathComponent]];
 	[creator writeFileToPath:outPath fromObject:fileObject withLanguage:StringsFileCreatorTestLanguage referenceLanguage:StringsFileCreatorTestLanguage];
 
 	// Compare encodings
-	STAssertNotNil([NSString stringWithContentsOfFile:path usedEncoding:&encoding error:NULL], @"Reading failed");
-	STAssertEquals(encoding, (NSStringEncoding)NSUnicodeStringEncoding, @"Wrong input encoding");
+	XCTAssertNotNil([NSString stringWithContentsOfFile:path usedEncoding:&encoding error:NULL], @"Reading failed");
+	XCTAssertEqual(encoding, (NSStringEncoding)NSUnicodeStringEncoding, @"Wrong input encoding");
 
-	STAssertNotNil([NSString stringWithContentsOfFile:outPath usedEncoding:&encoding error:NULL], @"Reading failed");
-	STAssertEquals(encoding, (NSStringEncoding)NSUnicodeStringEncoding, @"Wrong output encoding");
+	XCTAssertNotNil([NSString stringWithContentsOfFile:outPath usedEncoding:&encoding error:NULL], @"Reading failed");
+	XCTAssertEqual(encoding, (NSStringEncoding)NSUnicodeStringEncoding, @"Wrong output encoding");
 }
 
 @end

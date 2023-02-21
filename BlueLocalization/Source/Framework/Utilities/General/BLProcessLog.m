@@ -105,7 +105,7 @@ BLProcessLog *__sharedProcessLog;
 		[_itemRoot addObserver:self forKeyPath:@"items" options:NSKeyValueObservingOptionPrior context:NULL];
 
 		_rootGroup = nil;
-		_threads = [NSMapTable mapTableWithStrongToStrongObjects];
+		_threads = [NSMapTable strongToStrongObjectsMapTable];
 
 		__sharedProcessLog = self;
 	}
@@ -350,7 +350,7 @@ BLProcessLog *__sharedProcessLog;
 	id plist;
 
 	// Convert
-	plist = [NSPropertyListSerialization propertyListFromData:data mutabilityOption:NSPropertyListImmutable format:NULL errorDescription:NULL];
+	plist = [NSPropertyListSerialization propertyListWithData:data options:NSPropertyListImmutable format:NULL error:NULL];
 	if (!plist)
 		return NO;
 

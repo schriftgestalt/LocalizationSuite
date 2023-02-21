@@ -12,19 +12,12 @@
  */
 @interface LIHighlightWindow : NSWindow {
 	NSRect _highlight;
-	NSWindow *_parent;
 }
 
 /*!
  @abstract Designated intializer.
  */
 - (id)initWithParent:(NSWindow *)parent;
-
-/*!
- @abstract The window the highlight is attached to.
- @discussion Highlight windows will move alongside their parents. Any events will be forwarded to the parent window.
- */
-@property (readonly) NSWindow *parentWindow;
 
 /*!
  @abstract The rectangle to be highlighted.

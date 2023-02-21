@@ -41,7 +41,7 @@ NSString *BLDocumentSaveCompressedKey = @"saveCompressed";
 
 + (NSDictionary *)defaultPreferences {
 	return [NSDictionary dictionaryWithObjectsAndKeys:
-							 [NSNumber numberWithBool:NO], BLDocumentSaveCompressedKey, nil];
+			@NO, BLDocumentSaveCompressedKey, nil];
 }
 
 + (NSArray *)userPreferenceKeys {
@@ -61,7 +61,7 @@ NSString *BLDocumentSaveCompressedKey = @"saveCompressed";
 		// Determine if compression was used
 		BOOL isDirectory;
 		[[NSFileManager defaultManager] fileExistsAtPath:[absoluteURL path] isDirectory:&isDirectory];
-		[self.preferences setObject:[NSNumber numberWithBool:!isDirectory] forKey:BLDocumentSaveCompressedKey];
+		[self.preferences setObject:@(!isDirectory) forKey:BLDocumentSaveCompressedKey];
 
 		return result;
 	}
@@ -94,8 +94,7 @@ NSString *BLDocumentSaveCompressedKey = @"saveCompressed";
 		if (!wrapper)
 			return NO;
 
-		if (NSAppKitVersionNumber >= NSAppKitVersionNumber10_7)
-			[self unblockUserInteraction];
+		[self unblockUserInteraction];
 
 		// Create a special document wrapper out of it
 		BLDocumentFileWrapper *documentWrapper = [[BLDocumentFileWrapper alloc] initWithFileWrapper:wrapper];
@@ -103,16 +102,8 @@ NSString *BLDocumentSaveCompressedKey = @"saveCompressed";
 		// Save
 		BOOL success = NO;
 
-		if (NSAppKitVersionNumber < NSAppKitVersionNumber10_6) {
-			if (outError)
-				*outError = nil;
-			success = [documentWrapper writeToFile:[absoluteURL path] atomically:YES updateFilenames:YES];
-		}
-		else {
-			// Save compressed or not
-			NSUInteger options = ([[self.preferences objectForKey:BLDocumentSaveCompressedKey] boolValue]) ? BLDocumentFileWrapperSaveCompressedOption : 0;
-			success = [documentWrapper writeToURL:absoluteURL options:options originalContentsURL:nil error:outError];
-		}
+		NSUInteger options = ([[self.preferences objectForKey:BLDocumentSaveCompressedKey] boolValue]) ? BLDocumentFileWrapperSaveCompressedOption : 0;
+		success = [documentWrapper writeToURL:absoluteURL options:options originalContentsURL:nil error:outError];
 
 		// Done
 		BLLogEndGroup();

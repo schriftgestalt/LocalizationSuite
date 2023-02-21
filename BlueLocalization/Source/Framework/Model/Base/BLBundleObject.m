@@ -96,8 +96,8 @@
 
 	[dict secureSetObject:[self path] forKey:BLFileNameKey];
 	[dict secureSetObject:[self name] forKey:BLFileUserNameKey];
-	[dict secureSetObject:[NSNumber numberWithInt:[self namingStyle]] forKey:BLFileNamingStyleKey];
-	[dict secureSetObject:[NSNumber numberWithInt:[self referencingStyle]] forKey:BLFileReferencingStyleKey];
+	[dict secureSetObject:@([self namingStyle]) forKey:BLFileNamingStyleKey];
+	[dict secureSetObject:@([self referencingStyle]) forKey:BLFileReferencingStyleKey];
 	[dict secureSetObject:archivedObjects forKey:BLFileFilesKey];
 	[dict secureSetObject:[self associatedXcodeProjects] forKey:BLFileXcodeProjectsKey];
 

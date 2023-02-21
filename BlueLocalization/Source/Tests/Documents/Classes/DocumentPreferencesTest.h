@@ -6,9 +6,7 @@
 //  Copyright 2010 The Soulmen. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
-
-@interface DocumentPreferencesTest : SenTestCase {
+@interface DocumentPreferencesTest : XCTestCase {
 	BLDocument *document;
 	NSMutableDictionary *preferences;
 	NSDictionary *userPrefs;

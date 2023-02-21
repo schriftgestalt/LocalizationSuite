@@ -65,12 +65,12 @@
 	selection.availableLanguages = [self unusedLanguages];
 	[selection beginSheetModalForWindow:[document windowForSheet]
 					  completionHandler:^(NSInteger result) {
-						  if (result != NSAlertFirstButtonReturn)
-							  return;
+		if (result != NSAlertFirstButtonReturn)
+			return;
 
-						  for (NSString *language in selection.selectedLanguages)
-							  [self->document addLanguage:[BLLanguageTranslator identifierForLanguage:language]];
-					  }];
+		for (NSString *language in selection.selectedLanguages)
+			[self->document addLanguage:[BLLanguageTranslator identifierForLanguage:language]];
+	}];
 }
 
 - (void)addCustomLanguage {
@@ -82,14 +82,14 @@
 	[selection setInformativeText:NSLocalizedString(@"AddCustomLanguageText", nil)];
 	[selection addButtonWithTitle:NSLocalizedString(@"Add", nil)];
 	[selection addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
-
+	
 	[selection beginSheetModalForWindow:[document windowForSheet]
 					  completionHandler:^(NSInteger result) {
-						  if (result != NSAlertFirstButtonReturn)
-							  return;
-
-						  [self->document addLanguage:selection.language];
-					  }];
+		if (result != NSAlertFirstButtonReturn)
+			return;
+		
+		[self->document addLanguage:selection.language];
+	}];
 }
 
 #pragma mark - Observation

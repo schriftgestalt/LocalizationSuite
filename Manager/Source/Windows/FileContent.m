@@ -85,7 +85,7 @@ NSString *FileContentWindowNibName = @"FileContent";
 	// Add active and updated columns
 	NSButtonCell *cell = [[NSButtonCell alloc] init];
 	[cell setImagePosition:NSImageOnly];
-	[cell setControlSize:NSMiniControlSize];
+	[cell setControlSize:NSControlSizeMini];
 	[cell setButtonType:NSSwitchButton];
 
 	[content removeColumnWithIdentifier:LIContentFileColumnIdentifier];
@@ -187,7 +187,7 @@ NSString *FileContentWindowNibName = @"FileContent";
 		return;
 
 	_showRemovedStrings = flag;
-	[self.parentDocument.preferences setObject:[NSNumber numberWithBool:_showRemovedStrings] forKey:PreferencesShowRemovedStringsKey];
+	[self.parentDocument.preferences setObject:@(_showRemovedStrings) forKey:PreferencesShowRemovedStringsKey];
 
 	if (!flag) {
 		[removedStringsView removeFromSuperview];
@@ -221,12 +221,12 @@ NSString *FileContentWindowNibName = @"FileContent";
 #pragma mark - Actions
 
 - (IBAction)markAsActive:(id)sender {
-	[content.selectedObjects setValue:[NSNumber numberWithBool:![sender selectedSegment]] forKeyPath:@"isActive"];
+	[content.selectedObjects setValue:@(![sender selectedSegment]) forKeyPath:@"isActive"];
 	[self.parentDocument updateChangeCount:NSChangeDone];
 }
 
 - (IBAction)markAsUpdated:(id)sender {
-	[content.selectedObjects setValue:[NSNumber numberWithBool:![sender selectedSegment]] forKeyPath:@"wasUpdated"];
+	[content.selectedObjects setValue:@(![sender selectedSegment]) forKeyPath:@"wasUpdated"];
 	[self.parentDocument updateChangeCount:NSChangeDone];
 }
 

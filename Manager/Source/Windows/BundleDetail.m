@@ -122,58 +122,56 @@ NSString *BundleDetailWindowNibName = @"BundleDetail";
 
 	[openPanel beginSheetModalForWindow:self.window
 					  completionHandler:^(NSInteger result) {
-						  if (result != NSFileHandlingPanelOKButton)
-							  return;
-						  [self setBundlePath:[[openPanel URL] path]];
-					  }];
+		if (result != NSModalResponseOK)
+			return;
+		[self setBundlePath:[[openPanel URL] path]];
+	}];
 }
 
 - (IBAction)moveBundle:(id)sender {
 	// Issue a warning first
-	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"MoveBundleTitle", nil)
-									 defaultButton:NSLocalizedString(@"OK", nil)
-								   alternateButton:NSLocalizedString(@"Cancel", nil)
-									   otherButton:nil
-						 informativeTextWithFormat:NSLocalizedString(@"MoveBundleText", nil), [_bundle name]];
-
+	NSAlert *alert = [NSAlert new];
+	[alert setMessageText:NSLocalizedString(@"MoveBundleTitle", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"OK", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
+	[alert setInformativeText:[NSString stringWithFormat:NSLocalizedString(@"MoveBundleText", nil), [_bundle name]]];
 	[alert beginSheetModalForWindow:self.window
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSAlertDefaultReturn)
-						  return;
+		if (result != NSAlertFirstButtonReturn)
+			return;
 
-					  // Then allow to select a new path
-					  NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+		// Then allow to select a new path
+		NSOpenPanel *openPanel = [NSOpenPanel openPanel];
 
-					  [openPanel setCanChooseFiles:NO];
-					  [openPanel setCanChooseDirectories:YES];
-					  [openPanel setCanCreateDirectories:YES];
-					  [openPanel setDirectoryURL:[NSURL fileURLWithPath:[[self fullPath] stringByDeletingLastPathComponent]]];
+		[openPanel setCanChooseFiles:NO];
+		[openPanel setCanChooseDirectories:YES];
+		[openPanel setCanCreateDirectories:YES];
+		[openPanel setDirectoryURL:[NSURL fileURLWithPath:[[self fullPath] stringByDeletingLastPathComponent]]];
 
-					  [openPanel beginSheetModalForWindow:self.window
-										completionHandler:^(NSInteger result) {
-											if (result != NSFileHandlingPanelOKButton)
-												return;
+		[openPanel beginSheetModalForWindow:self.window
+						  completionHandler:^(NSInteger result) {
+			if (result != NSModalResponseOK)
+				return;
 
-											// On success, move the bundle
-											[self moveBundleToPath:[[openPanel URL] path]];
-										}];
-				  }];
+			// On success, move the bundle
+			[self moveBundleToPath:[[openPanel URL] path]];
+		}];
+	}];
 }
 
 - (IBAction)renameFolders:(id)sender {
-	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"RenameFoldersTitle", nil)
-									 defaultButton:NSLocalizedString(@"OK", nil)
-								   alternateButton:NSLocalizedString(@"Cancel", nil)
-									   otherButton:nil
-						 informativeTextWithFormat:NSLocalizedString(@"RenameFoldersText", nil), [_bundle name]];
-
+	NSAlert *alert = [NSAlert new];
+	[alert setMessageText:NSLocalizedString(@"RenameFoldersTitle", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"OK", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
+	[alert setInformativeText:[NSString stringWithFormat:NSLocalizedString(@"RenameFoldersText", nil), [_bundle name]]];
 	[alert beginSheetModalForWindow:self.window
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSAlertDefaultReturn)
-						  return;
+		if (result != NSAlertFirstButtonReturn)
+			return;
 
-					  [self updateLanguageFolderNames];
-				  }];
+		[self updateLanguageFolderNames];
+	}];
 }
 
 - (IBAction)showBundle:(id)sender {
@@ -191,17 +189,17 @@ NSString *BundleDetailWindowNibName = @"BundleDetail";
 
 	[openPanel beginSheetModalForWindow:self.window
 					  completionHandler:^(NSInteger result) {
-						  if (result != NSFileHandlingPanelOKButton)
-							  return;
+		if (result != NSModalResponseOK)
+			return;
 
-						  BLPathCreator *pathCreator = [self.parentDocument pathCreator];
-						  NSString *bundlePath = [pathCreator fullPathForBundle:_bundle];
+		BLPathCreator *pathCreator = [self.parentDocument pathCreator];
+		NSString *bundlePath = [pathCreator fullPathForBundle:_bundle];
 
-						  for (NSURL *url in [openPanel URLs])
-							  [_bundle addAssociatedXcodeProject:[BLPathCreator relativePathFromPath:bundlePath toPath:[url path]]];
+		for (NSURL *url in [openPanel URLs])
+			[_bundle addAssociatedXcodeProject:[BLPathCreator relativePathFromPath:bundlePath toPath:[url path]]];
 
-						  [self.parentDocument updateChangeCount:NSChangeDone];
-					  }];
+		[self.parentDocument updateChangeCount:NSChangeDone];
+	}];
 }
 
 #pragma mark - Internal Actions

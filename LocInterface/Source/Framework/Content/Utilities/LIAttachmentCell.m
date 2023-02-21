@@ -56,18 +56,14 @@ NSString *LIAttachmentPasteboardType = @"LIAttachment";
 
 - (NSImage *)deleteImageWithColor:(NSColor *)color {
 	NSImage *delete = [NSImage imageNamed:NSImageNameStopProgressFreestandingTemplate];
-	NSImage *image = [[NSImage alloc] initWithSize:NSMakeSize(kDeleteButtonSize, kDeleteButtonSize)];
-
-	[delete setSize:[image size]];
-
-	[image lockFocus];
-
-	[color set];
-	[NSBezierPath fillRect:NSMakeRect(0, 0, kDeleteButtonSize, kDeleteButtonSize)];
-	[delete compositeToPoint:NSZeroPoint operation:NSCompositeDestinationAtop];
-
-	[image unlockFocus];
-
+	NSSize imageSize = NSMakeSize(kDeleteButtonSize, kDeleteButtonSize);
+	NSImage *image = [NSImage imageWithSize:imageSize flipped:NO drawingHandler:^BOOL(NSRect dstRect) {
+		[delete setSize:imageSize];
+		[color set];
+		[NSBezierPath fillRect:NSMakeRect(0, 0, kDeleteButtonSize, kDeleteButtonSize)];
+		[delete drawAtPoint:NSZeroPoint fromRect:NSZeroRect operation:NSCompositeDestinationAtop fraction:0];
+		return YES;
+	}];
 	return image;
 }
 
@@ -138,7 +134,10 @@ NSString *LIAttachmentPasteboardType = @"LIAttachment";
 
 	// Deleting the attachment
 	if ([theEvent type] == NSLeftMouseUp && isDeleting && delete) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 		[[self target] performSelector:[self action] withObject:self];
+#pragma clang diagnostic pop
 		return YES;
 	}
 
@@ -147,7 +146,7 @@ NSString *LIAttachmentPasteboardType = @"LIAttachment";
 		NSPasteboard *pboard = [NSPasteboard pasteboardWithName:NSDragPboard];
 		[pboard declareTypes:[NSArray arrayWithObjects:NSFilesPromisePboardType, LIAttachmentPasteboardType, nil] owner:self];
 
-		[pboard setPropertyList:[NSNumber numberWithInteger:(NSUInteger)((__bridge_retained void *)fileWrapper)] forType:LIAttachmentPasteboardType];
+		[pboard setPropertyList:@((NSUInteger)((__bridge_retained void *)fileWrapper)) forType:LIAttachmentPasteboardType];
 		[pboard setPropertyList:[NSArray arrayWithObject:[[fileWrapper preferredFilename] pathExtension]] forType:NSFilesPromisePboardType];
 
 		NSPoint dragPosition = [controlView convertPoint:[theEvent locationInWindow] fromView:nil];
@@ -167,7 +166,7 @@ NSString *LIAttachmentPasteboardType = @"LIAttachment";
 - (NSArray *)namesOfPromisedFilesDroppedAtDestination:(NSURL *)dropDestination {
 	NSString *path = [dropDestination path];
 	path = [path stringByAppendingPathComponent:[fileWrapper preferredFilename]];
-	[fileWrapper writeToFile:path atomically:YES updateFilenames:NO];
+	[fileWrapper writeToURL:[NSURL fileURLWithPath:path] options:NSFileWrapperWritingAtomic originalContentsURL:nil error:nil];
 
 	return [NSArray arrayWithObject:[fileWrapper preferredFilename]];
 }

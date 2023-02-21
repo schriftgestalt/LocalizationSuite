@@ -22,7 +22,7 @@ NSString *PlistFileInterpreterExtension = @"plist";
 	NSArray *paths;
 
 	paths = [[NSBundle bundleForClass:[self class]] pathsForResourcesOfType:PlistFileInterpreterExtension inDirectory:@"Test Data/Interpreter/plist"];
-	STAssertTrue([paths count] > 0, @"Found no test files");
+	XCTAssertTrue([paths count] > 0, @"Found no test files");
 
 	for (NSString *path in paths) {
 		BLFileObject *fileObject;
@@ -30,10 +30,10 @@ NSString *PlistFileInterpreterExtension = @"plist";
 
 		fileObject = [BLFileObject fileObjectWithPathExtension:PlistFileInterpreterExtension];
 		BOOL result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:PlistFileInterpreterTestLanguage referenceLanguage:nil];
-		STAssertTrue(result, @"Interpreter failed with no result for file %@", path);
+		XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 		data = [NSDictionary dictionaryWithContentsOfFile:[[path stringByDeletingPathExtension] stringByAppendingPathExtension:@"strings"]];
-		STAssertNotNil(data, @"NSDictionary can't open file %@", path);
+		XCTAssertNotNil(data, @"NSDictionary can't open file %@", path);
 
 		for (NSString *key in [data allKeys]) {
 			id orig, import;
@@ -41,9 +41,9 @@ NSString *PlistFileInterpreterExtension = @"plist";
 			orig = [data objectForKey:key];
 			import = [[fileObject objectForKey:key] stringForLanguage:PlistFileInterpreterTestLanguage];
 
-			STAssertNotNil([fileObject objectForKey:key], @"Missing key object for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
-			STAssertTrue((![orig length] || import), @"Missing value for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
-			STAssertTrue((![orig length] && !import) || [orig isEqual:import], @"Values don't match for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
+			XCTAssertNotNil([fileObject objectForKey:key], @"Missing key object for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
+			XCTAssertTrue((![orig length] || import), @"Missing value for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
+			XCTAssertTrue((![orig length] && !import) || [orig isEqual:import], @"Values don't match for key \"%@\" in file \"%@\"", key, [path lastPathComponent]);
 		}
 	}
 }

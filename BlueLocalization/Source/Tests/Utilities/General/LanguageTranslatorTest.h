@@ -6,7 +6,6 @@
 //  Copyright 2009 Blue Technologies Group. All rights reserved.
 //
 
-@interface LanguageTranslatorTest : SenTestCase {
-}
+@interface LanguageTranslatorTest : XCTestCase
 
 @end

@@ -17,8 +17,8 @@
 		NSButtonCell *prototype;
 		prototype = [[LanguageNameButtonCell alloc] init];
 		[prototype setButtonType:NSSwitchButton];
-		[prototype setControlSize:NSSmallControlSize];
-		[prototype setFont:[NSFont systemFontOfSize:[NSFont systemFontSizeForControlSize:NSSmallControlSize]]];
+		[prototype setControlSize:NSControlSizeSmall];
+		[prototype setFont:[NSFont systemFontOfSize:[NSFont systemFontSizeForControlSize:NSControlSizeSmall]]];
 		[prototype setLineBreakMode:NSLineBreakByTruncatingTail];
 		[self setPrototype:prototype];
 	}

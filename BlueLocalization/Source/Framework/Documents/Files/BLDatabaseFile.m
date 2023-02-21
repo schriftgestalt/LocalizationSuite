@@ -87,11 +87,11 @@ NSString *BLUserPreferencesPropertyName = @"userPreferences";
 
 	// Archive all bundles
 	NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-												 [NSNumber numberWithBool:(options & BLFileActiveObjectsOnlyOption) != 0], BLActiveObjectsOnlySerializationKey,
-												 [NSNumber numberWithBool:(options & BLFileClearChangedValuesOption) != 0], BLClearChangeInformationSerializationKey,
-												 [properties objectForKey:BLLanguagesPropertyName], BLLanguagesSerializationKey,
-												 [NSNumber numberWithBool:YES], BLClearAllBackupsSerializationKey,
-												 nil];
+								@((options & BLFileActiveObjectsOnlyOption) != 0), BLActiveObjectsOnlySerializationKey,
+								@((options & BLFileClearChangedValuesOption) != 0), BLClearChangeInformationSerializationKey,
+								[properties objectForKey:BLLanguagesPropertyName], BLLanguagesSerializationKey,
+								@YES, BLClearAllBackupsSerializationKey,
+								nil];
 
 	NSDictionary *resources = [NSDictionary dictionary];
 	NSArray *archivedBundles = [BLPropertyListSerializer serializeObject:bundles withAttributes:attributes outWrappers:&resources];
@@ -108,7 +108,7 @@ NSString *BLUserPreferencesPropertyName = @"userPreferences";
 	[contents secureSetObject:[properties objectForKey:BLReferenceLanguagePropertyName] forKey:BLFileReferenceLanguageKey];
 	[contents secureSetObject:[properties objectForKey:BLLanguagesPropertyName] forKey:BLFileLanguagesKey];
 	[contents secureSetObject:[properties objectForKey:BLPreferencesPropertyName] forKey:BLFilePreferencesKey];
-	[contents setObject:[NSNumber numberWithInt:BLDatabaseFileVersionNumber] forKey:BLFileVersionKey];
+	[contents setObject:@(BLDatabaseFileVersionNumber) forKey:BLFileVersionKey];
 	
 	NSData *contentsData = [DatabaseEncoder encode:contents];
 	wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:contentsData];
@@ -232,7 +232,7 @@ NSString *BLUserPreferencesPropertyName = @"userPreferences";
 			}
 		}
 		
-		[contents writeToFile:@"/Users/Florian/Downloads/Stage/make.plist" atomically:NO];
+		//[contents writeToFile:@"/Users/Florian/Downloads/Stage/make.plist" atomically:NO];
 		
 		if (![self updateDatabaseFile:contents]) {
 			BLLogEndGroup();
@@ -478,11 +478,11 @@ NSString *BLUserPreferencesPropertyName = @"userPreferences";
 	self = [super initWithCoder:aDecoder];
 
 	if (self) {
-		// Stage backup and re-import it as fiel wrapper
+		// Stage backup and re-import it as file wrapper
 		NSString *tmpPath = @"/tmp/locsuitetmp";
 		[self writeBackup:[aDecoder decodeObjectForKey:@"NibFileObjectBackup"] toFile:tmpPath];
 
-		NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithPath:tmpPath];
+		NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithURL:[NSURL fileURLWithPath:tmpPath] options:0 error:nil];
 		[[NSFileManager defaultManager] removeItemAtPath:tmpPath error:NULL];
 		[wrapper setPreferredFilename:[[self name] lastPathComponent]];
 

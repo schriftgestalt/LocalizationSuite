@@ -8,7 +8,6 @@
 
 #import <BlueLocalization/BLFileObject.h>
 
-@interface BLRTFFileObject : BLFileObject {
-}
+@interface BLRTFFileObject : BLFileObject
 
 @end

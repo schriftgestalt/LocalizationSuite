@@ -41,9 +41,9 @@ NSString *kStringsPathExtension = @"strings";
 	self = [super init];
 
 	if (self) {
-		_fileContentWindows = [NSMapTable mapTableWithStrongToWeakObjects];
-		_fileDetailWindows = [NSMapTable mapTableWithStrongToWeakObjects];
-		_filePreviewWindows = [NSMapTable mapTableWithStrongToWeakObjects];
+		_fileContentWindows = [NSMapTable strongToWeakObjectsMapTable];
+		_fileDetailWindows = [NSMapTable strongToWeakObjectsMapTable];
+		_filePreviewWindows = [NSMapTable strongToWeakObjectsMapTable];
 
 		_processDisplay = [[LIProcessDisplay alloc] initWithProcessManager:[self processManager]];
 
@@ -110,22 +110,22 @@ NSString *kStringsPathExtension = @"strings";
 
 	// Check for moved file
 	NSString *lastSavePath = [self.preferences objectForKey:BLDocumentLastSavePathKey];
-	if (lastSavePath && ![lastSavePath isEqual:[[self fileURL] path]] && (NSAppKitVersionNumber < NSAppKitVersionNumber10_7 || [self isInViewingMode])) {
+	if (lastSavePath && ![lastSavePath isEqual:[[self fileURL] path]] && [self isInViewingMode]) {
 		// File has been moved, mark dirty and show error
 		[self updateChangeCount:NSChangeDone];
-
-		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"ProjectMovedTitle", nil)
-										 defaultButton:NSLocalizedString(@"CheckBundlePaths", nil)
-									   alternateButton:nil
-										   otherButton:NSLocalizedString(@"Ignore", nil)
-							 informativeTextWithFormat:NSLocalizedString(@"ProjectMovedText", nil)];
+		
+		NSAlert *alert = [NSAlert new];
+		[alert setMessageText:NSLocalizedString(@"ProjectMovedTitle", nil)];
+		[alert addButtonWithTitle:NSLocalizedString(@"CheckBundlePaths", nil)];
+		[alert addButtonWithTitle:NSLocalizedString(@"Ignore", nil)];
+		[alert setInformativeText:NSLocalizedString(@"ProjectMovedText", nil)];
 		[alert beginSheetModalForWindow:[self windowForSheet]
 					  completionHandler:^(NSInteger result) {
-						  if (result != NSAlertDefaultReturn)
-							  return;
-
-						  [self checkBundlePaths];
-					  }];
+			if (result != NSAlertFirstButtonReturn)
+				return;
+			
+			[self checkBundlePaths];
+		}];
 	}
 }
 
@@ -201,7 +201,7 @@ NSString *kStringsPathExtension = @"strings";
 }
 
 - (void)bundlesChangedSheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
-	if (returnCode == NSAlertAlternateReturn)
+	if (returnCode == NSAlertFirstButtonReturn)
 		[self performSelector:@selector(close) withObject:nil afterDelay:0.1];
 }
 
@@ -332,10 +332,10 @@ NSString *kStringsPathExtension = @"strings";
 + (NSDictionary *)defaultPreferences {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:[super defaultPreferences]];
 
-	[dict setObject:[NSNumber numberWithBool:NO] forKey:PreferencesOpenFolderAfterWriteoutKey];
-	[dict setObject:[NSNumber numberWithBool:YES] forKey:PreferencesShowCommentsKey];
-	[dict setObject:[NSNumber numberWithBool:YES] forKey:PreferencesShowEmptyStringsKey];
-	[dict setObject:[NSNumber numberWithBool:NO] forKey:PreferencesShowRemovedStringsKey];
+	[dict setObject:@NO forKey:PreferencesOpenFolderAfterWriteoutKey];
+	[dict setObject:@YES forKey:PreferencesShowCommentsKey];
+	[dict setObject:@YES forKey:PreferencesShowEmptyStringsKey];
+	[dict setObject:@NO forKey:PreferencesShowRemovedStringsKey];
 
 	return dict;
 }

@@ -77,7 +77,7 @@ NSString *LIPreviewRootViewToolbarItem = @"rootView";
 
 	if (self != nil) {
 		_content = nil;
-		_contentCache = [NSMapTable mapTableWithStrongToStrongObjects];
+		_contentCache = [NSMapTable strongToStrongObjectsMapTable];
 		_currentLanguage = nil;
 		_file = nil;
 		_key = nil;

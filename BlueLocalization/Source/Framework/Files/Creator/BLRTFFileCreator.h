@@ -11,7 +11,6 @@
 /*!
  @abstract A file creator implementation for rich text files.
  */
-@interface BLRTFFileCreator : BLFileCreator {
-}
+@interface BLRTFFileCreator : BLFileCreator
 
 @end

@@ -40,7 +40,7 @@
 	[[NSFileManager defaultManager] createDirectoryAtPath:[path stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:NULL];
 
 	if ([[path pathExtension] isEqual:@"rtfd"])
-		return [[string RTFDFileWrapperFromRange:NSMakeRange(0, [string length]) documentAttributes:nil] writeToFile:path atomically:YES updateFilenames:NO];
+		return [[string RTFDFileWrapperFromRange:NSMakeRange(0, [string length]) documentAttributes:nil] writeToURL:[NSURL fileURLWithPath:path] options:0 originalContentsURL:nil error:nil];
 	else
 		return [[string RTFFromRange:NSMakeRange(0, [string length]) documentAttributes:nil] writeToFile:path atomically:YES];
 }

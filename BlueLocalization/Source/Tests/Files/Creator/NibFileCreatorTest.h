@@ -6,7 +6,7 @@
 //  Copyright 2010 The Soulmen. All rights reserved.
 //
 
-@interface NibFileCreatorTest : SenTestCase {
+@interface NibFileCreatorTest : XCTestCase {
 	NSString *tmpPath;
 }
 

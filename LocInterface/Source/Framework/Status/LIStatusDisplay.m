@@ -126,9 +126,9 @@ id __sharedStatusDisplay;
 
 	// Create info
 	_selectionInfo = [[NSDictionary alloc] initWithObjectsAndKeys:
-											   [NSNumber numberWithInt:bundles], @"bundles",
-											   [NSNumber numberWithInt:files], @"files",
-											   [NSNumber numberWithInt:keys], @"keys", nil];
+					  @(bundles), @"bundles",
+					  @(files), @"files",
+					  @(keys), @"keys", nil];
 }
 
 + (NSSet *)keyPathsForValuesAffectingSelectionInfo {
@@ -157,20 +157,20 @@ id __sharedStatusDisplay;
 	// First statistic
 	if ((language = self.firstLanguage)) {
 		NSDictionary *counter = [[NSDictionary alloc] initWithObjectsAndKeys:
-														  [NSNumber numberWithInteger:[BLObject countForStatistic:BLObjectStatisticsSentences forLanguage:language inObjects:objects]], @"sentences",
-														  [NSNumber numberWithInteger:[BLObject countForStatistic:BLObjectStatisticsWords forLanguage:language inObjects:objects]], @"words",
-														  [NSNumber numberWithInteger:[BLObject countForStatistic:BLObjectStatisticsCharacters forLanguage:language inObjects:objects]], @"characters",
-														  nil];
+								 @([BLObject countForStatistic:BLObjectStatisticsSentences forLanguage:language inObjects:objects]), @"sentences",
+								 @([BLObject countForStatistic:BLObjectStatisticsWords forLanguage:language inObjects:objects]), @"words",
+								 @([BLObject countForStatistic:BLObjectStatisticsCharacters forLanguage:language inObjects:objects]), @"characters",
+								 nil];
 		[newCounters setObject:counter forKey:@"first"];
 	}
 
 	// Second statistic
 	if ((language = self.secondLanguage)) {
 		NSDictionary *counter = [[NSDictionary alloc] initWithObjectsAndKeys:
-														  [NSNumber numberWithInteger:[BLObject countForStatistic:BLObjectStatisticsSentences forLanguage:language inObjects:objects]], @"sentences",
-														  [NSNumber numberWithInteger:[BLObject countForStatistic:BLObjectStatisticsWords forLanguage:language inObjects:objects]], @"words",
-														  [NSNumber numberWithInteger:[BLObject countForStatistic:BLObjectStatisticsCharacters forLanguage:language inObjects:objects]], @"characters",
-														  nil];
+								 @([BLObject countForStatistic:BLObjectStatisticsSentences forLanguage:language inObjects:objects]), @"sentences",
+								 @([BLObject countForStatistic:BLObjectStatisticsWords forLanguage:language inObjects:objects]), @"words",
+								 @([BLObject countForStatistic:BLObjectStatisticsCharacters forLanguage:language inObjects:objects]), @"characters",
+								 nil];
 		[newCounters setObject:counter forKey:@"second"];
 	}
 
@@ -228,20 +228,20 @@ id __sharedStatusDisplay;
 		// Init new statistics
 		NSMutableDictionary *newStats = [NSMutableDictionary dictionary];
 		[newStats setObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:
-													 [NSNumber numberWithInt:0], @"translated",
-													 [NSNumber numberWithInt:0], @"exact",
-													 [NSNumber numberWithInt:0], @"above75",
-													 [NSNumber numberWithInt:0], @"above50",
-													 [NSNumber numberWithInt:0], @"noMatch",
-													 nil]
+							 @0, @"translated",
+							 @0, @"exact",
+							 @0, @"above75",
+							 @0, @"above50",
+							 @0, @"noMatch",
+							 nil]
 					 forKey:@"keys"];
 		[newStats setObject:[NSMutableDictionary dictionaryWithDictionary:[newStats objectForKey:@"keys"]] forKey:@"words"];
 
 		// Get objects
 		NSArray *objects = [options objectForKey:@"objects"];
-		objects = [objects objectsContainingValue:[NSNumber numberWithBool:YES] forKeyPath:@"isActive"];
+		objects = [objects objectsContainingValue:@YES forKeyPath:@"isActive"];
 		objects = [BLObject keyObjectsFromArray:objects];
-		objects = [objects objectsContainingValue:[NSNumber numberWithBool:YES] forKeyPath:@"isActive"];
+		objects = [objects objectsContainingValue:@YES forKeyPath:@"isActive"];
 
 		NSString *sourceLang = [options objectForKey:@"sourceLanguage"];
 		NSString *targetLang = [options objectForKey:@"targetLanguage"];
@@ -293,20 +293,20 @@ id __sharedStatusDisplay;
 
 				// Update keys
 				NSNumber *keyCount = [[newStats objectForKey:@"keys"] objectForKey:statKey];
-				keyCount = [NSNumber numberWithInt:[keyCount intValue] + 1];
+				keyCount = @([keyCount intValue] + 1);
 				[[newStats objectForKey:@"keys"] setObject:keyCount forKey:statKey];
 
 				// Update Words
 				NSUInteger words = [keyObject countForStatistic:BLObjectStatisticsWords forLanguage:sourceLang];
 
 				NSNumber *wordCount = [[newStats objectForKey:@"words"] objectForKey:statKey];
-				wordCount = [NSNumber numberWithInt:[wordCount intValue] + words];
+				wordCount = @([wordCount intValue] + words);
 				[[newStats objectForKey:@"words"] setObject:wordCount forKey:statKey];
 
 				// Update status
 				if (done % 10 == 0) {
 					NSUInteger progess = (done * 100) / [objects count];
-					[self performSelectorOnMainThread:@selector(statsCalculationProgress:) withObject:[NSNumber numberWithInt:progess] waitUntilDone:NO];
+					[self performSelectorOnMainThread:@selector(statsCalculationProgress:) withObject:@(progess) waitUntilDone:NO];
 				}
 
 				done++;
@@ -334,11 +334,11 @@ id __sharedStatusDisplay;
 	NSMutableDictionary *visi = [NSMutableDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:LIStatusDisplayVisibilityPreferencesKey]];
 
 	if (![visi objectForKey:LIStatusDisplayVisibilityInfoKey])
-		[visi setObject:[NSNumber numberWithBool:YES] forKey:LIStatusDisplayVisibilityInfoKey];
+		[visi setObject:@YES forKey:LIStatusDisplayVisibilityInfoKey];
 	if (![visi objectForKey:LIStatusDisplayVisibilityCountersKey])
-		[visi setObject:[NSNumber numberWithBool:YES] forKey:LIStatusDisplayVisibilityCountersKey];
+		[visi setObject:@YES forKey:LIStatusDisplayVisibilityCountersKey];
 	if (![visi objectForKey:LIStatusDisplayVisibilityStatisticsKey])
-		[visi setObject:[NSNumber numberWithBool:NO] forKey:LIStatusDisplayVisibilityStatisticsKey];
+		[visi setObject:@NO forKey:LIStatusDisplayVisibilityStatisticsKey];
 
 	self.visibility = visi;
 

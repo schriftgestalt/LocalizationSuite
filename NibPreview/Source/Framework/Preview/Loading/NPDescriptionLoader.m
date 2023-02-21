@@ -80,7 +80,7 @@ id __sharedDescriptionLoader = nil;
 	}
 
 	// Parse output
-	NSDictionary *dict = [NSPropertyListSerialization propertyListFromData:fullData mutabilityOption:NSPropertyListImmutable format:nil errorDescription:nil];
+	NSDictionary *dict = [NSPropertyListSerialization propertyListWithData:fullData options:NSPropertyListImmutable format:nil error:nil];
 
 	// Check for errors
 	if ([dict objectForKey:IBToolWarningsKey] || [dict objectForKey:IBToolErrorsKey]) {
@@ -137,7 +137,7 @@ id __sharedDescriptionLoader = nil;
 	}
 
 	// Parse output
-	NSDictionary *dict = [NSPropertyListSerialization propertyListFromData:fullData mutabilityOption:NSPropertyListImmutable format:nil errorDescription:nil];
+	NSDictionary *dict = [NSPropertyListSerialization propertyListWithData:fullData options:NSPropertyListImmutable format:nil error:nil];
 
 	// Check for errors
 	if ([dict objectForKey:IBToolWarningsKey] || [dict objectForKey:IBToolErrorsKey]) {

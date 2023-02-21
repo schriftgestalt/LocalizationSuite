@@ -6,7 +6,7 @@
 //  Copyright 2009 Blue Technologies Group. All rights reserved.
 //
 
-@interface XcodeProjectLocalizationTest : SenTestCase {
+@interface XcodeProjectLocalizationTest : XCTestCase {
 	BLXcodeProjectItem *mainGroup;
 	BLXcodeProjectParser *parser;
 }

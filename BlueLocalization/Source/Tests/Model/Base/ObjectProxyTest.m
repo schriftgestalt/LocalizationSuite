@@ -32,28 +32,28 @@
 }
 
 - (void)testCreation {
-	STAssertTrue([proxy class] == [BLStringsFileObject class], @"Direct question should NOT reveal identity");
-	STAssertTrue(object_getClass(proxy) == [BLObjectProxy class], @"Only runtime should reveal identity");
-	STAssertTrue([proxy isKindOfClass:[BLFileObject class]], @"Should pose as a file object");
-	STAssertFalse([proxy isKindOfClass:[BLKeyObject class]], @"Should not pose as a key object");
+	XCTAssertTrue([proxy class] == [BLStringsFileObject class], @"Direct question should NOT reveal identity");
+	XCTAssertTrue(object_getClass(proxy) == [BLObjectProxy class], @"Only runtime should reveal identity");
+	XCTAssertTrue([proxy isKindOfClass:[BLFileObject class]], @"Should pose as a file object");
+	XCTAssertFalse([proxy isKindOfClass:[BLKeyObject class]], @"Should not pose as a key object");
 }
 
 - (void)testAccessors {
 	[pObject setBundleObject:[BLBundleObject bundleObject]];
 	[pObject setFlags:0];
 
-	STAssertTrue([[pObject bundleObject] isKindOfClass:[BLBundleObject class]], @"returned bundle of wrong class");
-	STAssertTrue(object_getClass([pObject bundleObject]) == [BLObjectProxy class], @"returned bundle should actually be a proxy again");
+	XCTAssertTrue([[pObject bundleObject] isKindOfClass:[BLBundleObject class]], @"returned bundle of wrong class");
+	XCTAssertTrue(object_getClass([pObject bundleObject]) == [BLObjectProxy class], @"returned bundle should actually be a proxy again");
 
 	for (NSUInteger i = 0; i < 4; i++) {
 		id object = [pObject objectForKey:[NSString stringWithFormat:@"blah%lu", i] createIfNeeded:YES];
-		STAssertTrue([object isKindOfClass:[BLKeyObject class]], @"key of wrong class");
-		STAssertTrue(object_getClass(object) == [BLObjectProxy class], @"key should actually be a proxy again");
+		XCTAssertTrue([object isKindOfClass:[BLKeyObject class]], @"key of wrong class");
+		XCTAssertTrue(object_getClass(object) == [BLObjectProxy class], @"key should actually be a proxy again");
 	}
 
 	for (id object in [pObject objects]) {
-		STAssertTrue([object isKindOfClass:[BLKeyObject class]], @"key of wrong class");
-		STAssertTrue(object_getClass(object) == [BLObjectProxy class], @"key should actually be a proxy again");
+		XCTAssertTrue([object isKindOfClass:[BLKeyObject class]], @"key of wrong class");
+		XCTAssertTrue(object_getClass(object) == [BLObjectProxy class], @"key should actually be a proxy again");
 	}
 }
 
@@ -62,8 +62,8 @@
 	[[BLFileInterpreter interpreterForFileType:@"string"] interpreteFile:path intoObject:pObject withLanguage:@"en" referenceLanguage:nil];
 
 	for (BLKeyObject *keyObject in [object2 objects]) {
-		STAssertNotNil([pObject objectForKey:[keyObject key]], @"Key object does not exist");
-		STAssertEquals([[pObject objectForKey:[keyObject key]] objectForLanguage:@"en"], [keyObject objectForLanguage:@"en"], @"String values don't match");
+		XCTAssertNotNil([pObject objectForKey:[keyObject key]], @"Key object does not exist");
+		XCTAssertEqual([[pObject objectForKey:[keyObject key]] objectForLanguage:@"en"], [keyObject objectForLanguage:@"en"], @"String values don't match");
 	}
 }
 
@@ -104,17 +104,17 @@
 	[[BLBundleObject bundleObject] setFiles:[NSArray arrayWithObject:object1]];
 	[object1 objectForKey:@"hups" createIfNeeded:YES];
 
-	STAssertTrue(object_getClass(pObject) == [BLObjectProxy class], @"object should be a proxy");
-	STAssertTrue(object_getClass([pObject bundleObject]) == [BLObjectProxy class], @"object should actually be a proxy again");
-	STAssertTrue(object_getClass([[pObject bundleObject] files].lastObject) == [BLObjectProxy class], @"object should actually be a proxy again");
-	STAssertTrue(object_getClass(((BLKeyObject *)pObject.objects.lastObject).fileObject) == [BLObjectProxy class], @"object should actually be a proxy again");
-	STAssertTrue(object_getClass(((BLObject *)pObject.bundleObject.files.lastObject).objects.lastObject) == [BLObjectProxy class], @"object should actually be a proxy again");
-	STAssertTrue(object_getClass(((BLKeyObject *)((BLObject *)pObject.bundleObject.files.lastObject).objects.lastObject).fileObject) == [BLObjectProxy class], @"object should actually be a proxy again");
+	XCTAssertTrue(object_getClass(pObject) == [BLObjectProxy class], @"object should be a proxy");
+	XCTAssertTrue(object_getClass([pObject bundleObject]) == [BLObjectProxy class], @"object should actually be a proxy again");
+	XCTAssertTrue(object_getClass([[pObject bundleObject] files].lastObject) == [BLObjectProxy class], @"object should actually be a proxy again");
+	XCTAssertTrue(object_getClass(((BLKeyObject *)pObject.objects.lastObject).fileObject) == [BLObjectProxy class], @"object should actually be a proxy again");
+	XCTAssertTrue(object_getClass(((BLObject *)pObject.bundleObject.files.lastObject).objects.lastObject) == [BLObjectProxy class], @"object should actually be a proxy again");
+	XCTAssertTrue(object_getClass(((BLKeyObject *)((BLObject *)pObject.bundleObject.files.lastObject).objects.lastObject).fileObject) == [BLObjectProxy class], @"object should actually be a proxy again");
 }
 
 - (void)testOrdinaryObjects {
-	STAssertNil([BLObjectProxy proxyWithObject:nil], @"No proxy for no object");
-	STAssertThrows([BLObjectProxy proxyWithObject:(BLObject *)@"hallo"], @"Should throw for non-BLObject arguments");
+	XCTAssertNil([BLObjectProxy proxyWithObject:nil], @"No proxy for no object");
+	XCTAssertThrows([BLObjectProxy proxyWithObject:(BLObject *)@"hallo"], @"Should throw for non-BLObject arguments");
 }
 
 @end

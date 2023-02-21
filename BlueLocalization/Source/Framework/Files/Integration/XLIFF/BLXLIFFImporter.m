@@ -48,40 +48,40 @@ id __sharedXLIFFImporter;
 	[panel setAllowsMultipleSelection:YES];
 	[panel setAllowedFileTypes:[BLXLIFFDocument pathExtensions]];
 	[[panel defaultButtonCell] setTitle:NSLocalizedStringFromTableInBundle(@"Import", @"Localizable", [NSBundle bundleForClass:[self class]], nil)];
-
+	
 	[panel beginSheetModalForWindow:[document windowForSheet]
 				  completionHandler:^(NSInteger returnCode) {
-					  [panel close];
-
-					  // User aborted
-					  if (returnCode != NSFileHandlingPanelOKButton)
-						  return;
-
-					  // Enqueue process steps
-					  NSMutableArray *steps = [NSMutableArray array];
-					  for (NSURL *url in [panel URLs]) {
-						  BLGenericProcessStep *step = [BLGenericProcessStep genericStepWithBlock:^{
-							  [[self class] importXLIFFFromFile:[url path] toObjects:objects];
-						  }];
-
-						  [step setAction:NSLocalizedStringFromTableInBundle(@"ImportingXLIFF", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil)];
-						  [step setDescription:[NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"ImportingXLIFFText", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil), [url lastPathComponent]]];
-
-						  [steps addObject:step];
-					  }
-
-					  // Run in process manager
-					  if ([document respondsToSelector:@selector(processManager)] && [document processManager]) {
-						  [[document processManager] enqueueStepGroup:steps];
-						  [[document processManager] startWithName:@"Importing XLIFF files…"];
-					  }
-					  else {
-						  [steps makeObjectsPerformSelector:@selector(perform)];
-					  }
-
-					  if ([steps count])
-						  [document updateChangeCount:NSChangeDone];
-				  }];
+		[panel close];
+		
+		// User aborted
+		if (returnCode != NSModalResponseOK)
+			return;
+		
+		// Enqueue process steps
+		NSMutableArray *steps = [NSMutableArray array];
+		for (NSURL *url in [panel URLs]) {
+			BLGenericProcessStep *step = [BLGenericProcessStep genericStepWithBlock:^{
+				[[self class] importXLIFFFromFile:[url path] toObjects:objects];
+			}];
+			
+			[step setAction:NSLocalizedStringFromTableInBundle(@"ImportingXLIFF", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil)];
+			[step setDescription:[NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"ImportingXLIFFText", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil), [url lastPathComponent]]];
+			
+			[steps addObject:step];
+		}
+		
+		// Run in process manager
+		if ([document respondsToSelector:@selector(processManager)] && [document processManager]) {
+			[[document processManager] enqueueStepGroup:steps];
+			[[document processManager] startWithName:@"Importing XLIFF files…"];
+		}
+		else {
+			[steps makeObjectsPerformSelector:@selector(perform)];
+		}
+		
+		if ([steps count])
+			[document updateChangeCount:NSChangeDone];
+	}];
 }
 
 #pragma mark - Actions

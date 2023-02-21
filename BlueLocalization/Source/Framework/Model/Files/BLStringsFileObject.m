@@ -45,7 +45,7 @@
 	NSMutableDictionary *dict;
 
 	dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-									[NSNumber numberWithBool:[self isPlistStringsFile]], BLFileIsPlistFileKey, nil];
+			@([self isPlistStringsFile]), BLFileIsPlistFileKey, nil];
 	[dict addEntriesFromDictionary:[super propertyListWithAttributes:attributes]];
 
 	return dict;

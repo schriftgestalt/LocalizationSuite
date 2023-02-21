@@ -35,7 +35,7 @@
 	NSString *referencePath = [[path stringByDeletingPathExtension] stringByAppendingFormat:@".r.%@", [path pathExtension]];
 
 	NSFileWrapper *reference = [object attachedObjectForKey:BLBackupAttachmentKey];
-	[reference writeToFile:referencePath atomically:YES updateFilenames:NO];
+	[reference writeToURL:[NSURL fileURLWithPath:referencePath] options:0 originalContentsURL:nil error:nil];
 
 	// Copy original if no reference version available
 	if (![fileManager fileExistsAtPath:referencePath]) {
@@ -55,8 +55,8 @@
 	[fileManager removeItemAtPath:referencePath error:NULL];
 
 	// Load property list
-	NSString *error;
-	id plist = [NSPropertyListSerialization propertyListFromData:data mutabilityOption:NSPropertyListMutableContainersAndLeaves format:nil errorDescription:&error];
+	NSError *error;
+	id plist = [NSPropertyListSerialization propertyListWithData:data options:NSPropertyListMutableContainersAndLeaves format:nil error:&error];
 	if (!plist) {
 		BLLog(BLLogError, @"Failed to parse plist. Reason: %@", error);
 		BLLogEndGroup();

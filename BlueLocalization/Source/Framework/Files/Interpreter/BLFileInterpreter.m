@@ -280,7 +280,7 @@ NSMutableDictionary *__fileInterpreterClasses = nil;
 		}
 
 		if ([self optionIsActive:BLFileInterpreterReferenceImportCreatesBackup] && (![newHash isEqual:oldHash] || ![_fileObject attachedObjectForKey:BLBackupAttachmentKey])) {
-			NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithPath:path];
+			NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithURL:[NSURL fileURLWithPath:path] options:0 error:nil];
 
 			[_fileObject setAttachedObject:wrapper forKey:BLBackupAttachmentKey];
 		}

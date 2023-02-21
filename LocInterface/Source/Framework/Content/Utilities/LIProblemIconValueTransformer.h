@@ -15,7 +15,6 @@ extern NSString *LIProblemIconValueTransformerName;
  @abstract A value transformer that returns an image according to a translation problem type (LTTranslationProblemType).
  @discussion Currently this is a LIError image for LTTranslationProblemError and a LIWarning image forLTTranslationProblemWarning.
  */
-@interface LIProblemIconValueTransformer : NSValueTransformer {
-}
+@interface LIProblemIconValueTransformer : NSValueTransformer
 
 @end

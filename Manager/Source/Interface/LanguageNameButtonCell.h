@@ -6,7 +6,5 @@
 //  Copyright 2007 The Blue Technologies Group. All rights reserved.
 //
 
-@interface LanguageNameButtonCell : NSButtonCell {
-}
-
+@interface LanguageNameButtonCell : NSButtonCell
 @end

@@ -61,7 +61,7 @@
 
 	NSString *refTxtPath = [self path:[NSString stringWithFormat:@"ImportTest%@_%@.txt", name, [BLLanguageTranslator RFCLanguageFromLanguageIdentifier:target]]];
 	NSString *refText = [NSString stringWithContentsOfFile:refTxtPath usedEncoding:NULL error:NULL];
-	STAssertEqualObjects(text, refText, @"Translation failed!");
+	XCTAssertEqualObjects(text, refText, @"Translation failed!");
 
 	// RTF test still missing
 }
@@ -82,7 +82,7 @@
 	// Import a file
 	NSString *tmxPath = [self path:@"ImportTest1J_many.tmx"];
 	BLTMXDocument *document = [[BLTMXDocument alloc] initWithFileAtPath:tmxPath];
-	STAssertEquals([document.keyObjects count], (NSUInteger)3, @"3 objects should be imported");
+	XCTAssertEqual([document.keyObjects count], (NSUInteger)3, @"3 objects should be imported");
 
 	// Remove a key
 	NSMutableArray *objects = [NSMutableArray arrayWithArray:document.keyObjects];
@@ -90,64 +90,64 @@
 	document.keyObjects = objects;
 
 	// Write out
-	STAssertTrue([document writeToPath:tmpPath error:NULL], @"Write should not fail");
+	XCTAssertTrue([document writeToPath:tmpPath error:NULL], @"Write should not fail");
 
 	// Read in again
 	BLTMXDocument *document2 = [[BLTMXDocument alloc] initWithFileAtPath:tmpPath];
-	STAssertEqualObjects(document.keyObjects, document2.keyObjects, @"The key objects should be the same!");
+	XCTAssertEqualObjects(document.keyObjects, document2.keyObjects, @"The key objects should be the same!");
 
 	// Read in reference
 	NSString *tmxPath2 = [self path:@"ImportTest1J.tmx"];
 	BLTMXDocument *document3 = [[BLTMXDocument alloc] initWithFileAtPath:tmxPath2];
-	STAssertEqualObjects(document3.keyObjects, document2.keyObjects, @"The key objects should be the same!");
+	XCTAssertEqualObjects(document3.keyObjects, document2.keyObjects, @"The key objects should be the same!");
 }
 
 - (void)testImport1K {
 	NSString *tmxPath = [self path:@"ImportTest1K.tmx"];
 	BLTMXDocument *document = [[BLTMXDocument alloc] initWithFileAtPath:tmxPath];
-	STAssertEquals([document.keyObjects count], (NSUInteger)2, @"2 objects should be imported");
+	XCTAssertEqual([document.keyObjects count], (NSUInteger)2, @"2 objects should be imported");
 }
 
 - (void)testImport1L {
 	// Import a file
 	NSString *tmxPath = [self path:@"ImportTest1L.tmx"];
 	BLTMXDocument *document = [[BLTMXDocument alloc] initWithFileAtPath:tmxPath];
-	STAssertEquals([document.keyObjects count], (NSUInteger)1, @"1 object should be imported");
+	XCTAssertEqual([document.keyObjects count], (NSUInteger)1, @"1 object should be imported");
 
 	// Write out
-	STAssertTrue([document writeToPath:tmpPath error:NULL], @"Write should not fail");
+	XCTAssertTrue([document writeToPath:tmpPath error:NULL], @"Write should not fail");
 
 	// Read in again
 	BLTMXDocument *document2 = [[BLTMXDocument alloc] initWithFileAtPath:tmpPath];
-	STAssertEqualObjects(document.keyObjects, document2.keyObjects, @"The key objects should be the same!");
+	XCTAssertEqualObjects(document.keyObjects, document2.keyObjects, @"The key objects should be the same!");
 }
 
 - (void)testCreation {
 	// Import a file
 	NSString *tmxPath = [self path:@"ImportTest1J_many.tmx"];
 	BLTMXDocument *document = [[BLTMXDocument alloc] initWithFileAtPath:tmxPath];
-	STAssertEquals([document.keyObjects count], (NSUInteger)3, @"3 objects should be imported");
+	XCTAssertEqual([document.keyObjects count], (NSUInteger)3, @"3 objects should be imported");
 
 	// Create a new
 	BLTMXDocument *newDocument = [[BLTMXDocument alloc] initBlankDocument];
 	newDocument.keyObjects = document.keyObjects;
-	STAssertTrue([newDocument writeToPath:tmpPath error:NULL], @"Write should not fail");
+	XCTAssertTrue([newDocument writeToPath:tmpPath error:NULL], @"Write should not fail");
 
 	// Read in again
 	BLTMXDocument *document2 = [[BLTMXDocument alloc] initWithFileAtPath:tmpPath];
-	STAssertEqualObjects(document.keyObjects, document2.keyObjects, @"The key objects should be the same!");
+	XCTAssertEqualObjects(document.keyObjects, document2.keyObjects, @"The key objects should be the same!");
 }
 
 - (void)testImportLegacy {
 	// Import a file
 	NSString *tmxPath = [self path:@"Legacy.tmx"];
 	BLTMXDocument *document = [[BLTMXDocument alloc] initWithFileAtPath:tmxPath];
-	STAssertEquals([document.keyObjects count], (NSUInteger)3, @"3 objects should be imported");
+	XCTAssertEqual([document.keyObjects count], (NSUInteger)3, @"3 objects should be imported");
 
 	for (BLKeyObject *keyObject in document.keyObjects) {
-		STAssertTrue([keyObject isKindOfClass:[BLRTFDKeyObject class]], @"Wrong class of keys");
-		STAssertTrue([[keyObject stringForLanguage:@"en_GB"] length] > 0, @"No english string found");
-		STAssertTrue([[keyObject stringForLanguage:@"de_DE"] length] > 0, @"No german string found");
+		XCTAssertTrue([keyObject isKindOfClass:[BLRTFDKeyObject class]], @"Wrong class of keys");
+		XCTAssertTrue([[keyObject stringForLanguage:@"en_GB"] length] > 0, @"No english string found");
+		XCTAssertTrue([[keyObject stringForLanguage:@"de_DE"] length] > 0, @"No german string found");
 	}
 }
 
@@ -160,11 +160,11 @@
 	// Create a document and write it
 	BLTMXDocument *document = [[BLTMXDocument alloc] initBlankDocument];
 	document.keyObjects = [NSArray arrayWithObject:keyObject];
-	STAssertTrue([document writeToPath:tmpPath error:NULL], @"Write should not fail");
+	XCTAssertTrue([document writeToPath:tmpPath error:NULL], @"Write should not fail");
 
 	// Read in again
 	BLTMXDocument *document2 = [[BLTMXDocument alloc] initWithFileAtPath:tmpPath];
-	STAssertEqualObjects(document.keyObjects, document2.keyObjects, @"The key objects should be the same!");
+	XCTAssertEqualObjects(document.keyObjects, document2.keyObjects, @"The key objects should be the same!");
 }
 
 @end

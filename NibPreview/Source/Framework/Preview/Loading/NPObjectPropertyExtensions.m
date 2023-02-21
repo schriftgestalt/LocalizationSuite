@@ -29,11 +29,9 @@
 	[self setValue:value forKey:key];
 }
 
-- (void)initialize {
-}
+- (void)initialize {}
 
-- (void)finished {
-}
+- (void)finished {}
 
 @end
 
@@ -116,7 +114,7 @@
 				break;
 		}
 
-		value = [NSNumber numberWithInt:(int)type];
+		value = @((int)type);
 	}
 
 	if ([key isEqual:@"gButtonBehavior"])

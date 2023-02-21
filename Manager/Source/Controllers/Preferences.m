@@ -103,17 +103,17 @@ NSString *PreferencesFilesViewIdentifier = @"files";
 	// Show
 	[panel beginSheetModalForWindow:self.window
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSFileHandlingPanelOKButton)
-						  return;
-
-					  NSString *path = [[self.selectedDocument pathCreator] documentRelativePathOfFullPath:[[panel URL] path]];
-					  if ([path length])
-						  [self.selectedDocument.preferences setObject:path forKey:BLDatabaseDocumentLocalizerFilesPathKey];
-					  else
-						  [self.selectedDocument.preferences removeObjectForKey:BLDatabaseDocumentLocalizerFilesPathKey];
-
-					  [self.selectedDocument updateChangeCount:NSChangeDone];
-				  }];
+		if (result != NSModalResponseOK)
+			return;
+		
+		NSString *path = [[self.selectedDocument pathCreator] documentRelativePathOfFullPath:[[panel URL] path]];
+		if ([path length])
+			[self.selectedDocument.preferences setObject:path forKey:BLDatabaseDocumentLocalizerFilesPathKey];
+		else
+			[self.selectedDocument.preferences removeObjectForKey:BLDatabaseDocumentLocalizerFilesPathKey];
+		
+		[self.selectedDocument updateChangeCount:NSChangeDone];
+	}];
 }
 
 - (IBAction)showDictionaries:(id)sender {
@@ -126,10 +126,10 @@ NSString *PreferencesFilesViewIdentifier = @"files";
 		[self.selectedDocument.preferences setObject:[BLDatabaseDocument defaultIgnoredPlaceholderStrings] forKey:BLDatabaseDocumentIgnoredPlaceholderStringsKey];
 
 	// Show placeholder setup
-	[placeholdersTableView selectRowIndexes:nil byExtendingSelection:NO];
+	[placeholdersTableView deselectAll:nil];
 	[placeholdersTableView reloadData];
 
-	[NSApp beginSheet:placeholdersSheet modalForWindow:self.window modalDelegate:nil didEndSelector:nil contextInfo:NULL];
+	[self.window beginSheet:placeholdersSheet completionHandler:nil];
 }
 
 - (IBAction)closePlaceholdersSheet:(id)sender {
@@ -162,7 +162,7 @@ NSString *PreferencesFilesViewIdentifier = @"files";
 
 	// Remove and update view
 	[mutablePlaceholders removeObjectsAtIndexes:placeholdersTableView.selectedRowIndexes];
-	[placeholdersTableView selectRowIndexes:nil byExtendingSelection:NO];
+	[placeholdersTableView deselectAll:nil];
 	[placeholdersTableView reloadData];
 
 	// Update change state

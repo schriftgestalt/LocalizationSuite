@@ -17,9 +17,9 @@ NSString *StringsImporterTestExtension = @"strings";
 	NSString *enPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"unicode_en" ofType:StringsImporterTestExtension inDirectory:@"Test Data/Importer"];
 	NSString *dePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"unicode_de" ofType:StringsImporterTestExtension inDirectory:@"Test Data/Importer"];
 	NSString *frPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"unicode fr" ofType:StringsImporterTestExtension inDirectory:@"Test Data/Importer"];
-	STAssertNotNil(enPath, @"Found no test file");
-	STAssertNotNil(dePath, @"Found no test file");
-	STAssertNotNil(frPath, @"Found no test file");
+	XCTAssertNotNil(enPath, @"Found no test file");
+	XCTAssertNotNil(dePath, @"Found no test file");
+	XCTAssertNotNil(frPath, @"Found no test file");
 
 	// Create file and interpreter
 	BLFileObject *fileObject = [BLFileObject fileObjectWithPathExtension:StringsImporterTestExtension];
@@ -28,17 +28,17 @@ NSString *StringsImporterTestExtension = @"strings";
 
 	// Import english
 	BOOL result = [interpreter interpreteFile:enPath intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
-	STAssertTrue(result, @"Interpreter failed with no result for file %@", enPath);
+	XCTAssertTrue(result, @"Interpreter failed with no result for file %@", enPath);
 	result = [interpreter interpreteFile:dePath intoObject:fileObject withLanguage:@"de" referenceLanguage:nil];
-	STAssertTrue(result, @"Interpreter failed with no result for file %@", dePath);
-	STAssertTrue([[fileObject objects] count] > 0, @"Nothing imported");
+	XCTAssertTrue(result, @"Interpreter failed with no result for file %@", dePath);
+	XCTAssertTrue([[fileObject objects] count] > 0, @"Nothing imported");
 
 	// Import german
 	[BLStringsImporter importStringsFromFiles:[NSArray arrayWithObject:frPath] forReferenceLanguage:@"en" toObjects:[NSArray arrayWithObject:fileObject]];
 
 	// Both languages should now be the same
 	for (BLKeyObject *keyObject in [fileObject objects])
-		STAssertEqualObjects([keyObject objectForLanguage:@"de"], [keyObject objectForLanguage:@"fr"], @"Values do not match!");
+		XCTAssertEqualObjects([keyObject objectForLanguage:@"de"], [keyObject objectForLanguage:@"fr"], @"Values do not match!");
 }
 
 @end

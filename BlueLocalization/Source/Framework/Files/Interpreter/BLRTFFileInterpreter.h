@@ -16,7 +16,6 @@ extern NSString *BLRTFFileContentKeyName;
 /*!
  @abstract A file interpreter implementation for rich text files.
  */
-@interface BLRTFFileInterpreter : BLFileInterpreter {
-}
+@interface BLRTFFileInterpreter : BLFileInterpreter
 
 @end

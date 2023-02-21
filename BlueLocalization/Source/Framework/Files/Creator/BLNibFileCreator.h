@@ -11,7 +11,6 @@
 /*!
  @abstract A file creator implementation for nib files.
  */
-@interface BLNibFileCreator : BLFileCreator {
-}
+@interface BLNibFileCreator : BLFileCreator
 
 @end

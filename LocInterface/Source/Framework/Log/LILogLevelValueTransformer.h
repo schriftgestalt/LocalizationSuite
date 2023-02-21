@@ -14,7 +14,6 @@ extern NSString *LILogLevelValueTransformerName;
 /*!
  @abstract Transforms BLProcessLogLevel to an according NSImage.
  */
-@interface LILogLevelValueTransformer : NSObject {
-}
+@interface LILogLevelValueTransformer : NSObject
 
 @end

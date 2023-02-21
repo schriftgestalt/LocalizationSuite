@@ -47,3 +47,9 @@ extern NSString *BLDictionaryPropertyName;
 + (NSArray *)objectsFromFile:(NSFileWrapper *)wrapper readingProperties:(NSDictionary **)properties;
 
 @end
+
+@interface BLObject (BLLocalizerFileUtilities)
+
+- (void)fixLanguages;
+
+@end

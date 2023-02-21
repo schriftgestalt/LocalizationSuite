@@ -195,7 +195,7 @@
 	if ([key isEqual:@"comment"])
 		return [self comment];
 	if ([key isEqual:@"didChange"])
-		return [NSNumber numberWithBool:[self didChange]];
+		return @([self didChange]);
 	if ([key isEqual:@"key"])
 		return [self key];
 	if ([[self languages] containsObject:key])

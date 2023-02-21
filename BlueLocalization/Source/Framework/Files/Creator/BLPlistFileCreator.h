@@ -11,7 +11,6 @@
 /*!
  @abstract A file creator implementation for plist files.
  */
-@interface BLPlistFileCreator : BLFileCreator {
-}
+@interface BLPlistFileCreator : BLFileCreator
 
 @end

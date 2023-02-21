@@ -6,7 +6,7 @@
 //  Copyright 2010 The Soulmen. All rights reserved.
 //
 
-@interface PreviewWriteTest : SenTestCase {
+@interface PreviewWriteTest : XCTestCase {
 	BLFileObject *fileObject;
 	NPPreview *preview;
 	NSString *outPath;

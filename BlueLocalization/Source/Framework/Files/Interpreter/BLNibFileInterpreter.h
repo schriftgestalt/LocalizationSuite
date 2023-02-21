@@ -11,7 +11,6 @@
 /*!
  @abstract A file interpreter implementation for interface files.
  */
-@interface BLNibFileInterpreter : BLFileInterpreter {
-}
+@interface BLNibFileInterpreter : BLFileInterpreter
 
 @end

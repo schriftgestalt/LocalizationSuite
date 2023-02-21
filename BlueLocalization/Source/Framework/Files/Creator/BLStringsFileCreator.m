@@ -78,7 +78,7 @@
 	NSString *referencePath = [[path stringByDeletingPathExtension] stringByAppendingFormat:@".r.%@", [path pathExtension]];
 
 	NSFileWrapper *reference = [object attachedObjectForKey:BLBackupAttachmentKey];
-	[reference writeToFile:referencePath atomically:YES updateFilenames:NO];
+	[reference writeToURL:[NSURL fileURLWithPath:referencePath] options:NSFileWrapperWritingAtomic originalContentsURL:nil error:nil];
 
 	if (![fileManager fileExistsAtPath:referencePath]) {
 		// Copy original if no reference version available

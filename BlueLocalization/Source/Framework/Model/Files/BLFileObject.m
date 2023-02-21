@@ -17,8 +17,8 @@ NSString *BLBackupAttachmentKey = @"backup";
 NSMutableDictionary *__fileObjectClasses = nil;
 
 // Class Cluster Placeholder Object
-@interface BLPlaceholderFileObject : BLFileObject {
-}
+@interface BLPlaceholderFileObject : BLFileObject
+
 @end
 
 @implementation BLFileObject

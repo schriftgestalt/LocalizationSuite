@@ -9,8 +9,7 @@
 /*!
  @abstract The custom header view of a LICustomColumnTableView.
  */
-@interface LICustomColumnTableViewHeaderView : NSTableHeaderView {
-}
+@interface LICustomColumnTableViewHeaderView : NSTableHeaderView
 
 - (void)showMenu:(NSEvent *)theEvent;
 

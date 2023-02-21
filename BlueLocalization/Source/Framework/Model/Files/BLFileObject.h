@@ -177,4 +177,6 @@ extern NSString *BLBackupAttachmentKey;
  */
 - (void)setAttachedObject:(id)object forKey:(NSString *)key;
 
+
+- (NSUInteger)versionForLanguage:(NSString *)language;
 @end

@@ -121,7 +121,7 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
 	// Update displayed Operation
 	NSArray *allOperations = [_queue operations];
-	NSArray *executingOperations = [allOperations objectsContainingValue:[NSNumber numberWithBool:YES] forKeyPath:@"isExecuting"];
+	NSArray *executingOperations = [allOperations objectsContainingValue:@YES forKeyPath:@"isExecuting"];
 	BLProcessStep *currentStep = nil;
 
 	if ([executingOperations count])

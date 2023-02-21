@@ -21,13 +21,13 @@
 
 	// No snapshot
 	NSArray *keys = [NSArray arrayWithObjects:@"a", @"c", @"b", @"d", nil];
-	STAssertEqualObjects([[file objects] valueForKey:@"key"], keys, @"wrong keys");
-	STAssertEqualObjects([[file snapshotForLanguage:@"en"] valueForKey:@"key"], keys, @"wrong snapshot keys");
+	XCTAssertEqualObjects([[file objects] valueForKey:@"key"], keys, @"wrong keys");
+	XCTAssertEqualObjects([[file snapshotForLanguage:@"en"] valueForKey:@"key"], keys, @"wrong snapshot keys");
 
 	// Equal snapshot
 	[file snapshotLanguage:@"en"];
-	STAssertEqualObjects([[file objects] valueForKey:@"key"], keys, @"wrong keys");
-	STAssertEqualObjects([[file snapshotForLanguage:@"en"] valueForKey:@"key"], keys, @"wrong snapshot keys");
+	XCTAssertEqualObjects([[file objects] valueForKey:@"key"], keys, @"wrong keys");
+	XCTAssertEqualObjects([[file snapshotForLanguage:@"en"] valueForKey:@"key"], keys, @"wrong snapshot keys");
 
 	// Do some changes
 	[file objectForKey:@"k"];
@@ -35,20 +35,20 @@
 
 	keys = [NSArray arrayWithObjects:@"a", @"b", @"d", @"k", nil];
 	NSArray *snap = [NSArray arrayWithObjects:@"a", @"b", @"d", @"c", nil];
-	STAssertEqualObjects([[file objects] valueForKey:@"key"], keys, @"wrong keys");
-	STAssertEqualObjects([[file snapshotForLanguage:@"en"] valueForKey:@"key"], snap, @"wrong snapshot keys");
+	XCTAssertEqualObjects([[file objects] valueForKey:@"key"], keys, @"wrong keys");
+	XCTAssertEqualObjects([[file snapshotForLanguage:@"en"] valueForKey:@"key"], snap, @"wrong snapshot keys");
 
 	// Snapshot
 	[file snapshotLanguage:@"en"];
-	STAssertEqualObjects([[file objects] valueForKey:@"key"], keys, @"wrong keys");
-	STAssertEqualObjects([[file snapshotForLanguage:@"en"] valueForKey:@"key"], keys, @"wrong snapshot keys");
+	XCTAssertEqualObjects([[file objects] valueForKey:@"key"], keys, @"wrong keys");
+	XCTAssertEqualObjects([[file snapshotForLanguage:@"en"] valueForKey:@"key"], keys, @"wrong snapshot keys");
 
 	// Hard change
 	[file setObjects:@[]];
 	keys = @[];
 	snap = [NSArray arrayWithObjects:@"a", @"b", @"d", @"k", nil];
-	STAssertEqualObjects([[file objects] valueForKey:@"key"], keys, @"wrong keys");
-	STAssertEqualObjects([[file snapshotForLanguage:@"en"] valueForKey:@"key"], keys, @"wrong snapshot keys");
+	XCTAssertEqualObjects([[file objects] valueForKey:@"key"], keys, @"wrong keys");
+	XCTAssertEqualObjects([[file snapshotForLanguage:@"en"] valueForKey:@"key"], keys, @"wrong snapshot keys");
 }
 
 @end

@@ -167,42 +167,42 @@ NSString *FileDetailPathHistoryFullPath = @"fullPath";
 
 	[openPanel beginSheetModalForWindow:self.window
 					  completionHandler:^(NSInteger result) {
-						  if (result != NSFileHandlingPanelOKButton)
-							  return;
+		if (result != NSModalResponseOK)
+			return;
 
-						  [self setFilePath:[[openPanel URL] path]];
-					  }];
+		[self setFilePath:[[openPanel URL] path]];
+	}];
 }
 
 - (IBAction)moveFile:(id)sender {
 	// Issue a warning
-	NSAlert *sheet = [NSAlert alertWithMessageText:NSLocalizedString(@"MoveFileTitle", nil)
-									 defaultButton:NSLocalizedString(@"OK", nil)
-								   alternateButton:NSLocalizedString(@"Cancel", nil)
-									   otherButton:nil
-						 informativeTextWithFormat:NSLocalizedString(@"MoveFileText", nil), [_fileObject name]];
+	NSAlert *sheet = [NSAlert new];
+	[sheet setMessageText:NSLocalizedString(@"MoveFileTitle", nil)];
+	[sheet addButtonWithTitle:NSLocalizedString(@"OK", nil)];
+	[sheet addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
+	[sheet setInformativeText:[NSString stringWithFormat:NSLocalizedString(@"MoveFileText", nil), [_fileObject name]]];
 
 	[sheet beginSheetModalForWindow:self.window
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSAlertDefaultReturn)
-						  return;
+		if (result != NSAlertFirstButtonReturn)
+			return;
 
-					  // Ask for the new name
-					  NSSavePanel *savePanel = [NSSavePanel savePanel];
+		// Ask for the new name
+		NSSavePanel *savePanel = [NSSavePanel savePanel];
 
-					  [savePanel setCanCreateDirectories:YES];
-					  [savePanel setAllowedFileTypes:[NSArray arrayWithObject:[[self fullPath] pathExtension]]];
-					  [savePanel setDirectoryURL:[NSURL fileURLWithPath:[[self fullPath] stringByDeletingLastPathComponent]]];
+		[savePanel setCanCreateDirectories:YES];
+		[savePanel setAllowedFileTypes:[NSArray arrayWithObject:[[self fullPath] pathExtension]]];
+		[savePanel setDirectoryURL:[NSURL fileURLWithPath:[[self fullPath] stringByDeletingLastPathComponent]]];
 
-					  [savePanel beginSheetModalForWindow:self.window
-										completionHandler:^(NSInteger result) {
-											if (result != NSFileHandlingPanelOKButton)
-												return;
+		[savePanel beginSheetModalForWindow:self.window
+						  completionHandler:^(NSInteger result) {
+			if (result != NSModalResponseOK)
+				return;
 
-											// Perform the move
-											[self moveFileToPath:[[savePanel URL] path]];
-										}];
-				  }];
+			// Perform the move
+			[self moveFileToPath:[[savePanel URL] path]];
+		}];
+	}];
 }
 
 - (IBAction)showFile:(id)sender {

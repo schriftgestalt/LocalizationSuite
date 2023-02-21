@@ -76,35 +76,35 @@ id __sharedXcodeExporter;
 	[panel setAccessoryView:optionsView];
 	[panel setMessage:NSLocalizedStringFromTableInBundle(@"BLXcodeExportText", @"Localizable", [NSBundle bundleForClass:[self class]], nil)];
 	[[panel defaultButtonCell] setTitle:NSLocalizedStringFromTableInBundle(@"Export", @"Localizable", [NSBundle bundleForClass:[self class]], nil)];
-
+	
 	[panel beginSheetModalForWindow:[document windowForSheet]
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSFileHandlingPanelOKButton)
-						  return;
-
-					  // Create the options
-					  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-					  NSUInteger options = 0;
-					  if ([defaults boolForKey:BLXcodeExporterAddMissingFilesKeyPath])
-						  options |= BLXcodeExporterAddMissingFiles;
-					  if ([defaults boolForKey:BLXcodeExporterRemoveOldFilesKeyPath])
-						  options |= BLXcodeExporterRemoveOldFiles;
-
-					  // Get the limits
-					  float langLimit = BLXcodeExporterNoLanguageLimit;
-					  if ([defaults boolForKey:BLXcodeExporterHasLanguageLimitKeyPath])
-						  langLimit = [defaults floatForKey:BLXcodeExporterLanguageLimitKeyPath] / 100.;
-					  float fileLimit = BLXcodeExporterNoLanguageLimit;
-					  if ([defaults boolForKey:BLXcodeExporterHasFileLimitKeyPath])
-						  fileLimit = [defaults floatForKey:BLXcodeExporterFileLimitKeyPath] / 100.;
-
-					  // Export
-					  for (NSURL *url in [panel URLs]) {
-						  if ([[url pathExtension] isEqual:@"xcodeproj"])
-							  [[self class] exportToXcodeProjectAtPath:[url path] fromDatabaseDocument:document withOptions:options languageLimit:langLimit fileLimit:fileLimit];
-					  }
-				  }];
+		if (result != NSModalResponseOK)
+			return;
+		
+		// Create the options
+		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		
+		NSUInteger options = 0;
+		if ([defaults boolForKey:BLXcodeExporterAddMissingFilesKeyPath])
+			options |= BLXcodeExporterAddMissingFiles;
+		if ([defaults boolForKey:BLXcodeExporterRemoveOldFilesKeyPath])
+			options |= BLXcodeExporterRemoveOldFiles;
+		
+		// Get the limits
+		float langLimit = BLXcodeExporterNoLanguageLimit;
+		if ([defaults boolForKey:BLXcodeExporterHasLanguageLimitKeyPath])
+			langLimit = [defaults floatForKey:BLXcodeExporterLanguageLimitKeyPath] / 100.;
+		float fileLimit = BLXcodeExporterNoLanguageLimit;
+		if ([defaults boolForKey:BLXcodeExporterHasFileLimitKeyPath])
+			fileLimit = [defaults floatForKey:BLXcodeExporterFileLimitKeyPath] / 100.;
+		
+		// Export
+		for (NSURL *url in [panel URLs]) {
+			if ([[url pathExtension] isEqual:@"xcodeproj"])
+				[[self class] exportToXcodeProjectAtPath:[url path] fromDatabaseDocument:document withOptions:options languageLimit:langLimit fileLimit:fileLimit];
+		}
+	}];
 }
 
 #pragma mark - Export

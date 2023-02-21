@@ -60,25 +60,25 @@ id __sharedXcodeImporter;
 	[panel setAccessoryView:optionsView];
 	[panel setMessage:NSLocalizedStringFromTableInBundle(@"BLXcodeImportText", @"Localizable", [NSBundle bundleForClass:[self class]], nil)];
 	[[panel defaultButtonCell] setTitle:NSLocalizedStringFromTableInBundle(@"Import", @"Localizable", [NSBundle bundleForClass:[self class]], nil)];
-
+	
 	[panel beginSheetModalForWindow:[document windowForSheet]
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSFileHandlingPanelOKButton)
-						  return;
-
-					  // Get options
-					  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-					  NSUInteger options = 0;
-					  if ([defaults boolForKey:BLXcodeImporterRescanExistingKeyPath])
-						  options |= BLXcodeImporterRescanExistingFiles;
-
-					  // Import
-					  for (NSURL *url in [panel URLs]) {
-						  if ([[url pathExtension] isEqual:@"xcodeproj"])
-							  [[self class] importXcodeProjectAtPath:[url path] toDatabaseDocument:document withOptions:options];
-					  }
-				  }];
+		if (result != NSModalResponseOK)
+			return;
+		
+		// Get options
+		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		
+		NSUInteger options = 0;
+		if ([defaults boolForKey:BLXcodeImporterRescanExistingKeyPath])
+			options |= BLXcodeImporterRescanExistingFiles;
+		
+		// Import
+		for (NSURL *url in [panel URLs]) {
+			if ([[url pathExtension] isEqual:@"xcodeproj"])
+				[[self class] importXcodeProjectAtPath:[url path] toDatabaseDocument:document withOptions:options];
+		}
+	}];
 }
 
 #pragma mark - Import

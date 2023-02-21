@@ -85,8 +85,7 @@ NSMutableDictionary *__previewContentClasses = nil;
 	return nil;
 }
 
-- (void)changeRootItem:(NSObject<LIPreviewRootItem> *)item {
-}
+- (void)changeRootItem:(NSObject<LIPreviewRootItem> *)item {}
 
 - (NSView *)rootView {
 	return nil;

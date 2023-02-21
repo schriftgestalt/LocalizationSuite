@@ -11,7 +11,6 @@
 /*!
  @abstract A file interpreter implementation for strings files.
  */
-@interface BLStringsFileInterpreter : BLFileInterpreter {
-}
+@interface BLStringsFileInterpreter : BLFileInterpreter
 
 @end
