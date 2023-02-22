@@ -479,7 +479,7 @@ typedef enum {
 	}
 
 	// Apply segmentation
-	NSUInteger segmentation = [[self.preferences objectForKey:DocumentViewOptionSegmentation] intValue];
+	BLSegmentationType segmentation = [[self.preferences objectForKey:DocumentViewOptionSegmentation] intValue];
 	if (segmentation > 0) {
 		NSMutableArray *newObjects = [NSMutableArray arrayWithCapacity:[keyObjects count]];
 
