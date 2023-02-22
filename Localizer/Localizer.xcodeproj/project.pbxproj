@@ -585,7 +585,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_HARDENED_RUNTIME = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/../**",
+					"\"$(SRCROOT)/../Shared/Frameworks\"",
+				);
 				GCC_PREFIX_HEADER = Source/Localizer_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
@@ -600,7 +603,10 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Localizer.entitlements;
 				ENABLE_HARDENED_RUNTIME = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Shared/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/../**",
+					"\"$(SRCROOT)/../Shared/Frameworks\"",
+				);
 				GCC_PREFIX_HEADER = Source/Localizer_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";

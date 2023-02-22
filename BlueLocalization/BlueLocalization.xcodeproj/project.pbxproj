@@ -1839,23 +1839,14 @@
 		501EBC3D0854F27900FBC27B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PREFIX_HEADER = Source/Framework/Other/BlueLocalization_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_PREPROCESS = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = mh_dylib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				INSTALL_PATH = "@executable_path/../Frameworks/";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -1863,6 +1854,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 56378E6A2761F1820045ADD7 /* debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 			};
 			name = Debug;
 		};
@@ -1888,28 +1880,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 56378E692761F1820045ADD7 /* common.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 			};
 			name = Release;
 		};
 		5058362B1406F62000762666 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PREFIX_HEADER = Source/Framework/Other/BlueLocalization_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_PREPROCESS = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = mh_dylib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				SWIFT_VERSION = 5.0;
+				INSTALL_PATH = "@executable_path/../Frameworks/";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};

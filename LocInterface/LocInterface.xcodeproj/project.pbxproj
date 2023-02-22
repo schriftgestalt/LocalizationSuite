@@ -882,8 +882,7 @@
 				GCC_PREFIX_HEADER = Source/Framework/Other/LocInterface_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks/";
-				PRODUCT_NAME = LocInterface;
-				WRAPPER_EXTENSION = framework;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -911,8 +910,7 @@
 				GCC_PREFIX_HEADER = Source/Framework/Other/LocInterface_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks/";
-				PRODUCT_NAME = LocInterface;
-				WRAPPER_EXTENSION = framework;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
