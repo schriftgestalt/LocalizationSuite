@@ -1819,7 +1819,6 @@
 				GCC_PREFIX_HEADER = Source/Framework/Other/BlueLocalization_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_PREPROCESS = YES;
-				INSTALL_PATH = "@executable_path/../Frameworks/";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1875,7 +1874,6 @@
 				GCC_PREFIX_HEADER = Source/Framework/Other/BlueLocalization_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_PREPROCESS = YES;
-				INSTALL_PATH = "@executable_path/../Frameworks/";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
