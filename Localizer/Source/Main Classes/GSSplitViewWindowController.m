@@ -59,17 +59,7 @@
 		[_splitViewController setValue:@[_sidebarItem, _contentItem] forKey:@"splitViewItems"];
 		[self.window setContentViewController:_splitViewController];
 	}
-	else {
-		[self window];
-	}
-	if (@available(macOS 10.16, *)) {
-		[self.window.toolbar removeItemAtIndex:0];
-	}
-	else {
-		self.window.titleVisibility = NSWindowTitleHidden;
-		NSToolbarItem *titleItem = self.window.toolbar.visibleItems.firstObject;
-		[(NSTextField *)titleItem.view setStringValue:self.window.title];
-	}
+
 	[owner windowControllerDidLoadNib:self];
 	return self;
 }

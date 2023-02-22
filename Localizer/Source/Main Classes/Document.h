@@ -35,6 +35,8 @@ extern NSString *DocumentViewOptionFilter;
 
 @property (weak) IBOutlet NSView *languageSelectionView;
 @property (weak) IBOutlet NSOutlineView *bundleListTableView;
+// needed for UI in pre Big Sur
+@property (weak) IBOutlet NSView *legacySearchView;
 
 - (NSArray *)filteredKeys;
 - (NSUInteger)progress;

@@ -13,6 +13,7 @@
                 <outlet property="content" destination="737" id="738"/>
                 <outlet property="editor" destination="601" id="860"/>
                 <outlet property="languageSelectionView" destination="829" id="7sg-CW-pvk"/>
+                <outlet property="legacySearchView" destination="fZd-30-5dC" id="Eba-bD-fOV"/>
                 <outlet property="window" destination="420" id="537"/>
             </connections>
         </customObject>
@@ -185,13 +186,13 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="449">
-                    <rect key="frame" x="0.0" y="197" width="279" height="509"/>
+                    <rect key="frame" x="0.0" y="244" width="279" height="462"/>
                     <clipView key="contentView" drawsBackground="NO" id="wbK-GI-PJm">
-                        <rect key="frame" x="0.0" y="0.0" width="279" height="509"/>
+                        <rect key="frame" x="0.0" y="0.0" width="279" height="462"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" tableStyle="plain" selectionHighlightStyle="sourceList" columnReordering="NO" columnResizing="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="20" indentationPerLevel="13" outlineTableColumn="451" id="450">
-                                <rect key="frame" x="0.0" y="0.0" width="279" height="509"/>
+                                <rect key="frame" x="0.0" y="0.0" width="279" height="462"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <size key="intercellSpacing" width="3" height="4"/>
                                 <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -235,11 +236,39 @@
                     </scroller>
                 </scrollView>
                 <visualEffectView blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="geC-zE-p5x">
-                    <rect key="frame" x="0.0" y="0.0" width="279" height="197"/>
+                    <rect key="frame" x="0.0" y="0.0" width="279" height="244"/>
                     <subviews>
                         <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="1000" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xpt-Pz-p89">
-                            <rect key="frame" x="0.0" y="0.0" width="279" height="197"/>
+                            <rect key="frame" x="0.0" y="0.0" width="279" height="244"/>
                             <subviews>
+                                <customView identifier="filter" translatesAutoresizingMaskIntoConstraints="NO" id="fZd-30-5dC">
+                                    <rect key="frame" x="0.0" y="197" width="279" height="47"/>
+                                    <subviews>
+                                        <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="h8n-NV-Imk">
+                                            <rect key="frame" x="0.0" y="44" width="279" height="5"/>
+                                        </box>
+                                        <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuk-oJ-nit">
+                                            <rect key="frame" x="20" y="12" width="239" height="22"/>
+                                            <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="QXQ-HM-hWb">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </searchFieldCell>
+                                            <connections>
+                                                <binding destination="244" name="value" keyPath="selection.search" id="znc-80-9o7"/>
+                                            </connections>
+                                        </searchField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Vuk-oJ-nit" secondAttribute="bottom" constant="12" id="2UA-UN-1My"/>
+                                        <constraint firstItem="h8n-NV-Imk" firstAttribute="top" secondItem="fZd-30-5dC" secondAttribute="top" id="5Jd-mH-HL9"/>
+                                        <constraint firstItem="Vuk-oJ-nit" firstAttribute="top" secondItem="h8n-NV-Imk" secondAttribute="bottom" constant="12" id="BCI-C9-lB3"/>
+                                        <constraint firstAttribute="trailing" secondItem="Vuk-oJ-nit" secondAttribute="trailing" constant="20" symbolic="YES" id="Sfa-c0-KRu"/>
+                                        <constraint firstAttribute="trailing" secondItem="h8n-NV-Imk" secondAttribute="trailing" id="cU2-cT-tSC"/>
+                                        <constraint firstItem="h8n-NV-Imk" firstAttribute="leading" secondItem="fZd-30-5dC" secondAttribute="leading" id="gAV-61-gth"/>
+                                        <constraint firstItem="Vuk-oJ-nit" firstAttribute="leading" secondItem="fZd-30-5dC" secondAttribute="leading" constant="20" symbolic="YES" id="m1V-uP-bBI"/>
+                                    </constraints>
+                                </customView>
                                 <customView identifier="filter" translatesAutoresizingMaskIntoConstraints="NO" id="826">
                                     <rect key="frame" x="0.0" y="125" width="279" height="72"/>
                                     <subviews>
@@ -449,8 +478,10 @@
                                 <integer value="1000"/>
                                 <integer value="1000"/>
                                 <integer value="1000"/>
+                                <integer value="1000"/>
                             </visibilityPriorities>
                             <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>

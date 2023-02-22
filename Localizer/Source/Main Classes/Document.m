@@ -142,6 +142,10 @@ typedef enum {
 	}
 	if (@available(macOS 11, *)) {
 		self.bundleListTableView.style = NSTableViewStyleSourceList;
+		self.legacySearchView.hidden = YES;
+	}
+	else {
+		aController.window.toolbar = nil;
 	}
 }
 
