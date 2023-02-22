@@ -792,7 +792,7 @@
                                                     </binding>
                                                 </connections>
                                             </tableColumn>
-                                            <tableColumn identifier="button" editable="NO" width="48" minWidth="48" maxWidth="48" id="593">
+                                            <tableColumn identifier="button" editable="NO" width="51" minWidth="51" maxWidth="51" id="593">
                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
