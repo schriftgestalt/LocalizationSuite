@@ -6,10 +6,7 @@
 //  Copyright (c) 2003-2005 The Blue Technologies Group. All rights reserved.
 //
 
-#import <Sparkle/Sparkle.h>
-
-@interface Controller : NSObject <SUVersionComparison> {
-}
+@interface Controller : NSObject
 
 //// Localizer menu
 //- (IBAction)showPreferences:(id)sender;

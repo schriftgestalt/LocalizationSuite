@@ -612,7 +612,7 @@
             </items>
         </menu>
         <customObject id="210" userLabel="Controller" customClass="Controller"/>
-        <customObject id="392" customClass="SUUpdater"/>
+        <customObject id="392" customClass="SPUStandardUpdaterController"/>
         <customObject id="471" customClass="NSFontManager"/>
     </objects>
 </document>

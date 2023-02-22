@@ -65,8 +65,8 @@
 	<true/>
 	<key>SUFeedURL</key>
 	<string>https://schriftgestalt.github.io/LocalizationSuite/localizer/appcast.xml</string>
-	<key>SUPublicDSAKeyFile</key>
-	<string>dsa_pub.pem</string>
+	<key>SUPublicEDKey</key>
+	<string>/knL40iCECw6J8jhImfZSgN7J+0UlKLtxx1RrFqWRbQ=</string>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
