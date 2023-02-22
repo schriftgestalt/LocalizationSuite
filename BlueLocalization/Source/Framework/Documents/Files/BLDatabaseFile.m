@@ -11,7 +11,7 @@
 #import "BLFileInternal.h"
 #import "BLNibFileObject.h"
 #import "BLStringsFileObject.h"
-#import <BlueLocalization/BlueLocalization-Swift.h>
+#import "CFPropertyListWriter_vintage.h"
 
 NSString *BLDatabaseFilePathExtension = @"ldb";
 NSString *BLDatabaseFileContentsFileName = @"Contents.plist";
@@ -110,7 +110,7 @@ NSString *BLUserPreferencesPropertyName = @"userPreferences";
 	[contents secureSetObject:[properties objectForKey:BLPreferencesPropertyName] forKey:BLFilePreferencesKey];
 	[contents setObject:@(BLDatabaseFileVersionNumber) forKey:BLFileVersionKey];
 	
-	NSData *contentsData = [DatabaseEncoder encode:contents];
+	NSData *contentsData = dataWithPropertyList(contents);
 	wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:contentsData];
 	[fileWrappers setObject:wrapper forKey:BLDatabaseFileContentsFileName];
 

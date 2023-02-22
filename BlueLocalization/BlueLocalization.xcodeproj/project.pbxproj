@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1725382F299FDF9500039B9C /* DatabaseEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725382E299FDF9500039B9C /* DatabaseEncoder.swift */; };
 		500C5819140FB36600DD5F0E /* BLXcodeImportUpdateStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 500C5817140FB36600DD5F0E /* BLXcodeImportUpdateStep.h */; };
 		500C581A140FB36600DD5F0E /* BLXcodeImportUpdateStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C5818140FB36600DD5F0E /* BLXcodeImportUpdateStep.m */; };
 		5010B76B129C8D6E0044A488 /* BLXcodeExportUpdateStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 5010B769129C8D6E0044A488 /* BLXcodeExportUpdateStep.h */; };
@@ -224,6 +223,14 @@
 		50F03C110FA627AC00FDB765 /* BLInterpretationStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F03C0F0FA627AC00FDB765 /* BLInterpretationStep.m */; };
 		50F6BA3310144B84008C8727 /* BLXcodeImporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F6BA3110144B84008C8727 /* BLXcodeImporter.xib */; };
 		5680096029A43642004C46CB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5680095F29A43642004C46CB /* XCTest.framework */; };
+		569A024629A64DC9009CD8C4 /* CFPropertyListWriter_vintage.h in Headers */ = {isa = PBXBuildFile; fileRef = 569A024429A64DC9009CD8C4 /* CFPropertyListWriter_vintage.h */; };
+		569A024729A64DC9009CD8C4 /* CFPropertyListWriter_vintage.m in Sources */ = {isa = PBXBuildFile; fileRef = 569A024529A64DC9009CD8C4 /* CFPropertyListWriter_vintage.m */; };
+		569A024A29A64EB9009CD8C4 /* utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = 569A024829A64EB9009CD8C4 /* utf8.c */; };
+		569A024B29A64EB9009CD8C4 /* utf8.h in Headers */ = {isa = PBXBuildFile; fileRef = 569A024929A64EB9009CD8C4 /* utf8.h */; };
+		569A024E29A64EDD009CD8C4 /* NSStringHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 569A024C29A64EDD009CD8C4 /* NSStringHelpers.m */; };
+		569A024F29A64EDD009CD8C4 /* NSStringHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 569A024D29A64EDD009CD8C4 /* NSStringHelpers.h */; };
+		569A025229A64FB6009CD8C4 /* NSData_Conversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 569A025029A64FB6009CD8C4 /* NSData_Conversion.h */; };
+		569A025329A64FB6009CD8C4 /* NSData_Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 569A025129A64FB6009CD8C4 /* NSData_Conversion.m */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -264,7 +271,6 @@
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		1725382E299FDF9500039B9C /* DatabaseEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseEncoder.swift; sourceTree = "<group>"; };
 		5006929812804F3500470F3D /* DocumentCompressionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentCompressionTest.h; sourceTree = "<group>"; };
 		5006929912804F3500470F3D /* DocumentCompressionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentCompressionTest.m; sourceTree = "<group>"; };
 		500C5817140FB36600DD5F0E /* BLXcodeImportUpdateStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXcodeImportUpdateStep.h; sourceTree = "<group>"; };
@@ -515,6 +521,14 @@
 		56378E692761F1820045ADD7 /* common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = common.xcconfig; path = ../../Shared/Source/common.xcconfig; sourceTree = "<group>"; };
 		56378E6A2761F1820045ADD7 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = debug.xcconfig; path = ../../Shared/Source/debug.xcconfig; sourceTree = "<group>"; };
 		5680095F29A43642004C46CB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		569A024429A64DC9009CD8C4 /* CFPropertyListWriter_vintage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFPropertyListWriter_vintage.h; sourceTree = "<group>"; };
+		569A024529A64DC9009CD8C4 /* CFPropertyListWriter_vintage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFPropertyListWriter_vintage.m; sourceTree = "<group>"; };
+		569A024829A64EB9009CD8C4 /* utf8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utf8.c; sourceTree = "<group>"; };
+		569A024929A64EB9009CD8C4 /* utf8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf8.h; sourceTree = "<group>"; };
+		569A024C29A64EDD009CD8C4 /* NSStringHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringHelpers.m; sourceTree = "<group>"; };
+		569A024D29A64EDD009CD8C4 /* NSStringHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringHelpers.h; sourceTree = "<group>"; };
+		569A025029A64FB6009CD8C4 /* NSData_Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSData_Conversion.h; sourceTree = "<group>"; };
+		569A025129A64FB6009CD8C4 /* NSData_Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSData_Conversion.m; sourceTree = "<group>"; };
 		56AEB2A8273BCADE008F3EAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/BLDictionaryExporter.strings; sourceTree = "<group>"; };
 		56AEB2AA273BCADE008F3EAE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/BLDictionaryExporter.strings; sourceTree = "<group>"; };
 		56AEB2AC273BCADE008F3EAE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/BLDictionaryExporter.strings; sourceTree = "<group>"; };
@@ -1247,7 +1261,14 @@
 			children = (
 				50EF075C114A9E7A002DBB02 /* BLDatabaseFile.h */,
 				50EF075D114A9E7A002DBB02 /* BLDatabaseFile.m */,
-				1725382E299FDF9500039B9C /* DatabaseEncoder.swift */,
+				569A024429A64DC9009CD8C4 /* CFPropertyListWriter_vintage.h */,
+				569A024529A64DC9009CD8C4 /* CFPropertyListWriter_vintage.m */,
+				569A024829A64EB9009CD8C4 /* utf8.c */,
+				569A024929A64EB9009CD8C4 /* utf8.h */,
+				569A024D29A64EDD009CD8C4 /* NSStringHelpers.h */,
+				569A024C29A64EDD009CD8C4 /* NSStringHelpers.m */,
+				569A025029A64FB6009CD8C4 /* NSData_Conversion.h */,
+				569A025129A64FB6009CD8C4 /* NSData_Conversion.m */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -1298,11 +1319,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				569A024629A64DC9009CD8C4 /* CFPropertyListWriter_vintage.h in Headers */,
 				50C2473F0F979D58003B3522 /* BLDictionaryFile.h in Headers */,
 				50C247420F979D58003B3522 /* BLLocalizerFile.h in Headers */,
 				50C247440F979D58003B3522 /* BLArrayExtensions.h in Headers */,
+				569A025229A64FB6009CD8C4 /* NSData_Conversion.h in Headers */,
 				50C247480F979D58003B3522 /* BLFileManagerAdditions.h in Headers */,
 				50C2474A0F979D58003B3522 /* BLSecurityExtensions.h in Headers */,
+				569A024B29A64EB9009CD8C4 /* utf8.h in Headers */,
 				50C2474E0F979D58003B3522 /* BLFileCreator.h in Headers */,
 				50C247500F979D58003B3522 /* BLNibFileCreator.h in Headers */,
 				50C247520F979D58003B3522 /* BLPlistFileCreator.h in Headers */,
@@ -1336,6 +1360,7 @@
 				50F03BF90FA60CEA00FDB765 /* BLProcessManager.h in Headers */,
 				50F03BFD0FA60F5C00FDB765 /* BLProcessStep.h in Headers */,
 				50F03C010FA61F7D00FDB765 /* BLInterpreterStep.h in Headers */,
+				569A024F29A64EDD009CD8C4 /* NSStringHelpers.h in Headers */,
 				50F03C100FA627AC00FDB765 /* BLInterpretationStep.h in Headers */,
 				50AE891A0FA674CD00CE3EFF /* BLDatabaseDocument.h in Headers */,
 				50AE891E0FA676EC00CE3EFF /* BLDatabaseDocumentActions.h in Headers */,
@@ -1608,9 +1633,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				50C247400F979D58003B3522 /* BLDictionaryFile.m in Sources */,
+				569A024729A64DC9009CD8C4 /* CFPropertyListWriter_vintage.m in Sources */,
 				50C247430F979D58003B3522 /* BLLocalizerFile.m in Sources */,
 				50C247450F979D58003B3522 /* BLArrayExtensions.m in Sources */,
 				50C247490F979D58003B3522 /* BLFileManagerAdditions.m in Sources */,
+				569A024E29A64EDD009CD8C4 /* NSStringHelpers.m in Sources */,
 				50C2474B0F979D58003B3522 /* BLSecurityExtensions.m in Sources */,
 				50C2474F0F979D58003B3522 /* BLFileCreator.m in Sources */,
 				50C247510F979D58003B3522 /* BLNibFileCreator.m in Sources */,
@@ -1642,7 +1669,6 @@
 				50C247970F979D58003B3522 /* BLStringsScanner.m in Sources */,
 				50F03BDA0FA5EB5300FDB765 /* BLObject.m in Sources */,
 				50F03BFA0FA60CEA00FDB765 /* BLProcessManager.m in Sources */,
-				1725382F299FDF9500039B9C /* DatabaseEncoder.swift in Sources */,
 				50F03BFE0FA60F5C00FDB765 /* BLProcessStep.m in Sources */,
 				50F03C020FA61F7D00FDB765 /* BLInterpreterStep.m in Sources */,
 				50F03C110FA627AC00FDB765 /* BLInterpretationStep.m in Sources */,
@@ -1650,6 +1676,7 @@
 				50AE891F0FA676EC00CE3EFF /* BLDatabaseDocumentActions.m in Sources */,
 				50AE893D0FA8461E00CE3EFF /* BLCreatorStep.m in Sources */,
 				50AE89410FA849AA00CE3EFF /* BLCreationStep.m in Sources */,
+				569A025329A64FB6009CD8C4 /* NSData_Conversion.m in Sources */,
 				5014B9920FB3362200DC2EC3 /* BLObjectProxy.m in Sources */,
 				5055576E0FB4E20F0008BE20 /* BLLocalizerExportStep.m in Sources */,
 				5055577A0FB4F8B40008BE20 /* BLGenericProcessStep.m in Sources */,
@@ -1661,6 +1688,7 @@
 				50A9B6490FF7CC0400B24D7A /* BLDictionaryDocument.m in Sources */,
 				50BB617E10B483DE00A1AD4C /* BLToolPath.m in Sources */,
 				50B1A70F11070E3F00551CA7 /* BLStringsExporter.m in Sources */,
+				569A024A29A64EB9009CD8C4 /* utf8.c in Sources */,
 				50B1A71111070E3F00551CA7 /* BLStringsImporter.m in Sources */,
 				50B1A71311070E3F00551CA7 /* BLXcodeExporter.m in Sources */,
 				50B1A71511070E3F00551CA7 /* BLXcodeImporter.m in Sources */,
@@ -1906,7 +1934,6 @@
 		5058362D1406F62000762666 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1922,7 +1949,6 @@
 		507F05CE1404E3A00008D824 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;

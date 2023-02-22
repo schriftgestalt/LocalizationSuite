@@ -8,7 +8,7 @@
 
 #import "BLLocalizerFile.h"
 #import "BLFileInternal.h"
-#import <BlueLocalization/BlueLocalization-Swift.h>
+#import "CFPropertyListWriter_vintage.h"
 
 NSString *BLLocalizerFilePathExtension = @"loc";
 NSString *BLLocalizerFileContentsFileName = @"Contents.plist";
@@ -93,7 +93,7 @@ NSString *BLDictionaryPropertyName = @"dictionary";
 
 	// Create file wrapper for contents.plist file
 
-	NSData *contentsData = [DatabaseEncoder encode:contents];
+	NSData *contentsData = dataWithPropertyList(contents);
 	wrapper = [[NSFileWrapper alloc] initRegularFileWithContents:contentsData];
 
 	[fileWrappers setObject:wrapper forKey:BLLocalizerFileContentsFileName];
