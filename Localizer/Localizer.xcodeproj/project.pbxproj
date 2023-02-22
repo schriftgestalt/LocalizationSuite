@@ -907,6 +907,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 56378E662761F12D0045ADD7 /* debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Localizer.entitlements;
+				ENABLE_HARDENED_RUNTIME = YES;
 			};
 			name = Debug;
 		};
@@ -914,6 +916,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 56378E5C2761F12D0045ADD7 /* common.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Localizer.entitlements;
+				ENABLE_HARDENED_RUNTIME = YES;
 			};
 			name = Release;
 		};
