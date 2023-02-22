@@ -15,7 +15,6 @@
 		50241EAD0EC35DA700122C6F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50241EAB0EC35DA700122C6F /* MainMenu.xib */; };
 		504333A51049FD4D005BD65F /* Editor.m in Sources */ = {isa = PBXBuildFile; fileRef = 504333A41049FD4D005BD65F /* Editor.m */; };
 		50515A0F03EDBE3000749D6B /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 50515A0D03EDBE3000749D6B /* Controller.m */; };
-		5052605705D5C32300429FDF /* Localizer.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5052605505D5C32300429FDF /* Localizer.icns */; };
 		50597F010FCE8FF7001275A5 /* Window.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50597EFF0FCE8FF7001275A5 /* Window.strings */; };
 		505C938E0AB1A3AE007AEB26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 505C938C0AB1A3AE007AEB26 /* Localizable.strings */; };
 		506FE7B41194720B009A67A8 /* lod.icns in Resources */ = {isa = PBXBuildFile; fileRef = 506FE7B31194720B009A67A8 /* lod.icns */; };
@@ -30,6 +29,7 @@
 		56320E74230EA988002A5878 /* GSStringToAttributedValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56320E73230EA988002A5878 /* GSStringToAttributedValueTransformer.m */; };
 		56370B451D42136B0024CD02 /* GSGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56370B441D42136B0024CD02 /* GSGroupView.m */; };
 		565DBF2F1D42066C000513F0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565DBF2E1D42066C000513F0 /* Cocoa.framework */; };
+		569A023729A645BD009CD8C4 /* Localizer.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569A023629A645BD009CD8C4 /* Localizer.xcassets */; };
 		56AEB321273BD7C1008F3EAE /* BlueLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AEB2F4273BD774008F3EAE /* BlueLocalization.framework */; };
 		56AEB322273BD7C1008F3EAE /* LocInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AEB311273BD79F008F3EAE /* LocInterface.framework */; };
 		56AEB323273BD7C1008F3EAE /* LocTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AEB308273BD78D008F3EAE /* LocTools.framework */; };
@@ -141,7 +141,7 @@
 		504333A41049FD4D005BD65F /* Editor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Editor.m; sourceTree = "<group>"; };
 		50515A0C03EDBE3000749D6B /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		50515A0D03EDBE3000749D6B /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
-		5052605505D5C32300429FDF /* Localizer.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Localizer.icns; path = Icons/Localizer.icns; sourceTree = "<group>"; };
+		5052605505D5C32300429FDF /* Localizer_old.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Localizer_old.icns; path = Icons/Localizer_old.icns; sourceTree = "<group>"; };
 		5056659D1384161300E8AB31 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
 		5056659E1384161300E8AB31 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
 		506FE7B31194720B009A67A8 /* lod.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = lod.icns; path = ../Shared/Icons/lod.icns; sourceTree = SOURCE_ROOT; };
@@ -168,6 +168,7 @@
 		56378E662761F12D0045ADD7 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = debug.xcconfig; path = ../Shared/Source/debug.xcconfig; sourceTree = "<group>"; };
 		56528DB02459867D0030395E /* Localizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Localizer.entitlements; sourceTree = "<group>"; };
 		565DBF2E1D42066C000513F0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		569A023629A645BD009CD8C4 /* Localizer.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Localizer.xcassets; path = Icons/Localizer.xcassets; sourceTree = "<group>"; };
 		56AEB2ED273BD774008F3EAE /* BlueLocalization.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlueLocalization.xcodeproj; path = ../BlueLocalization/BlueLocalization.xcodeproj; sourceTree = "<group>"; };
 		56AEB2F9273BD780008F3EAE /* NibPreview.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NibPreview.xcodeproj; path = ../NibPreview/NibPreview.xcodeproj; sourceTree = "<group>"; };
 		56AEB302273BD78D008F3EAE /* LocTools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LocTools.xcodeproj; path = ../LocTools/LocTools.xcodeproj; sourceTree = "<group>"; };
@@ -290,10 +291,11 @@
 		50C3D17E0FC37920005AEF1A /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				5052605505D5C32300429FDF /* Localizer.icns */,
+				5052605505D5C32300429FDF /* Localizer_old.icns */,
 				5006916E12803C4E00470F3D /* ldb.icns */,
 				50C3D18E0FC3792D005AEF1A /* loc.icns */,
 				506FE7B31194720B009A67A8 /* lod.icns */,
+				569A023629A645BD009CD8C4 /* Localizer.xcassets */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -501,9 +503,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5052605705D5C32300429FDF /* Localizer.icns in Resources */,
 				507A47E505D6A20D0044A3E3 /* InfoPlist.strings in Resources */,
 				505C938E0AB1A3AE007AEB26 /* Localizable.strings in Resources */,
+				569A023729A645BD009CD8C4 /* Localizer.xcassets in Resources */,
 				50241EA70EC35D8300122C6F /* Document.xib in Resources */,
 				50241EAD0EC35DA700122C6F /* MainMenu.xib in Resources */,
 				50C3D18F0FC3792D005AEF1A /* loc.icns in Resources */,
@@ -584,6 +586,8 @@
 		501EBC880855AE8600FBC27B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/../**",
@@ -601,6 +605,8 @@
 		501EBC890855AE8600FBC27B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Localizer.entitlements;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
