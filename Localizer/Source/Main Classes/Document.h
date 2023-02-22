@@ -18,7 +18,7 @@ extern NSString *DocumentViewOptionFilter;
 
 @class Editor, InterfacePreviewController, DataSource;
 
-@interface Document : BLLocalizerDocument {
+@interface Document : BLLocalizerDocument <NSSplitViewDelegate> {
 	IBOutlet NSTreeController *bundlesController;
 	IBOutlet LIContentController *content;
 	IBOutlet Editor *editor;

@@ -879,6 +879,9 @@
                 <real value="252"/>
                 <real value="252"/>
             </holdingPriorities>
+            <connections>
+                <outlet property="delegate" destination="-2" id="7gy-cm-Q7G"/>
+            </connections>
             <point key="canvasLocation" x="403" y="678"/>
         </splitView>
         <menu id="12Y-PC-iIb">

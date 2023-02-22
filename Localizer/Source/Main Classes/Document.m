@@ -611,4 +611,14 @@ typedef enum {
 	return YES;
 }
 
+#if 0 // TODO: it is not called and I don’t know why???
+- (NSRect)splitView:(NSSplitView *)splitView additionalEffectiveRectOfDividerAtIndex:(NSInteger)dividerIndex {
+	NSView *subView = splitView.subviews[dividerIndex];
+	if (subView) {
+		NSLog(@"___ %@ >> %@", subView, subView.subviews);
+	}
+	return NSZeroRect;
+}
+#endif
+
 @end
