@@ -43,10 +43,6 @@
 	return proxy;
 }
 
-- (void)_init {
-	_cache = [NSMapTable weakToWeakObjectsMapTable];
-}
-
 #pragma mark - Actions
 
 - (Class)class
@@ -88,8 +84,6 @@
 }
 
 - (id)_maskObject:(id)object {
-	id proxy;
-
 	if ([object_getClass(object) isSubclassOfClass:[NSArray class]]) {
 		NSMutableArray *maskedArray = [NSMutableArray arrayWithCapacity:[object count]];
 
@@ -104,7 +98,11 @@
 	if (![object_getClass(object) isSubclassOfClass:[BLObject class]])
 		return object;
 
-	if (!(proxy = [_cache objectForKey:object])) {
+	if (!_cache) {
+		_cache = [NSMapTable weakToWeakObjectsMapTable];
+	}
+	id proxy = [_cache objectForKey:object];
+	if (!proxy) {
 		proxy = [BLObjectProxy proxyWithObject:object];
 		[_cache setObject:proxy forKey:object];
 	}
@@ -148,8 +146,8 @@
 	type = [signature methodReturnType];
 	if (strcmp(type, @encode(id)) == 0) {
 		[invocation getReturnValue:&arg];
-		arg = [self _maskObject:arg];
-		[invocation setReturnValue:&arg];
+		BLObjectProxy *proxy = [self _maskObject:arg];
+		[invocation setReturnValue:&proxy];
 	}
 }
 
