@@ -21,7 +21,6 @@
 		507A47E505D6A20D0044A3E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 507A47E305D6A20D0044A3E3 /* InfoPlist.strings */; };
 		50BB659F10B5C61A00A1AD4C /* StatisticsTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BB659E10B5C61A00A1AD4C /* StatisticsTextView.m */; };
 		50C3D18F0FC3792D005AEF1A /* loc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 50C3D18E0FC3792D005AEF1A /* loc.icns */; };
-		50C3D25C0FC37D40005AEF1A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 50C3D25B0FC37D40005AEF1A /* dsa_pub.pem */; };
 		5619C40C29A4F30A0079893A /* GSSplitViewWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5619C40B29A4F30A0079893A /* GSSplitViewWindowController.m */; };
 		5619C40F29A51F200079893A /* GSMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5619C40E29A51F200079893A /* GSMenuButton.m */; };
 		56320E74230EA988002A5878 /* GSStringToAttributedValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56320E73230EA988002A5878 /* GSStringToAttributedValueTransformer.m */; };
@@ -275,7 +274,6 @@
 		50BB659D10B5C61A00A1AD4C /* StatisticsTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsTextView.h; sourceTree = "<group>"; };
 		50BB659E10B5C61A00A1AD4C /* StatisticsTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsTextView.m; sourceTree = "<group>"; };
 		50C3D18E0FC3792D005AEF1A /* loc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = loc.icns; path = ../Shared/Icons/loc.icns; sourceTree = SOURCE_ROOT; };
-		50C3D25B0FC37D40005AEF1A /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = ../Shared/Updates/dsa_pub.pem; sourceTree = SOURCE_ROOT; };
 		5619C40129A4F30A0079893A /* GSSplitViewWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSplitViewWindowController.h; sourceTree = "<group>"; };
 		5619C40B29A4F30A0079893A /* GSSplitViewWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSplitViewWindowController.m; sourceTree = "<group>"; };
 		5619C40D29A51F200079893A /* GSMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMenuButton.h; sourceTree = "<group>"; };
@@ -380,7 +378,6 @@
 				505C938C0AB1A3AE007AEB26 /* Localizable.strings */,
 				50597EFF0FCE8FF7001275A5 /* Window.strings */,
 				5021C2A0113155600057F2D9 /* Localizer.help */,
-				50C3D25B0FC37D40005AEF1A /* dsa_pub.pem */,
 				56378E5C2761F12D0045ADD7 /* common.xcconfig */,
 				56378E662761F12D0045ADD7 /* debug.xcconfig */,
 			);
@@ -790,7 +787,6 @@
 				50241EA70EC35D8300122C6F /* Document.xib in Resources */,
 				50241EAD0EC35DA700122C6F /* MainMenu.xib in Resources */,
 				50C3D18F0FC3792D005AEF1A /* loc.icns in Resources */,
-				50C3D25C0FC37D40005AEF1A /* dsa_pub.pem in Resources */,
 				50597F010FCE8FF7001275A5 /* Window.strings in Resources */,
 				5021C2AC113155600057F2D9 /* Localizer.help in Resources */,
 				506FE7B41194720B009A67A8 /* lod.icns in Resources */,
