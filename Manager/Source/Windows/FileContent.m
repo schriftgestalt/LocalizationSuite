@@ -297,13 +297,19 @@ NSString *FileContentWindowNibName = @"FileContent";
 - (BOOL)validateMenuItem:(NSMenuItem *)menuItem {
 	if ([menuItem action] == @selector(copyFromReference:) || [menuItem action] == @selector(deleteTranslation:))
 		return ([self.window firstResponder] == content.contentView && [content.selectedObjects count]);
-
+	if ([menuItem action] == @selector(serachMenuAction:)) {
+		menuItem.state = [NSUserDefaults.standardUserDefaults boolForKey:@"SearchMatchesExactKeyOnly"] ? NSOnState : NSOffState;
+	}
 	return YES;
 }
 
 - (void)windowWillClose:(NSNotification *)notification {
 	[[self window] makeFirstResponder:nil];
 	[content.contentView saveSortDescriptors];
+}
+
+- (IBAction)serachMenuAction:(NSMenuItem *)sender {
+	[NSUserDefaults.standardUserDefaults setBool:sender.state == NSOffState forKey:@"SearchMatchesExactKeyOnly"];
 }
 
 @end

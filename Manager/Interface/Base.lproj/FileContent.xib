@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -37,7 +37,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="294" y="311" width="660" height="387"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1440"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
             <value key="minSize" type="size" width="600" height="250"/>
             <view key="contentView" misplaced="YES" id="6">
                 <rect key="frame" x="0.0" y="0.0" width="660" height="387"/>
@@ -80,6 +80,7 @@
                         </searchFieldCell>
                         <connections>
                             <binding destination="203" name="value" keyPath="selection.searchString" id="309"/>
+                            <outlet property="searchMenuTemplate" destination="GvO-mg-SAR" id="wLK-ts-yAp"/>
                         </connections>
                     </searchField>
                     <segmentedControl horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="70">
@@ -172,16 +173,6 @@
                             <binding destination="203" name="value" keyPath="selection.showComments" id="409"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bta-Vc-eJ2">
-                        <rect key="frame" x="246" y="357" width="126" height="18"/>
-                        <buttonCell key="cell" type="check" title="Exact key match" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Jqd-DM-1tf">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <binding destination="Lww-1U-evV" name="value" keyPath="values.SearchMatchesExactKeyOnly" id="MmV-e7-eBJ"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="462" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="-1" id="07r-qq-3L7"/>
@@ -190,10 +181,8 @@
                     <constraint firstItem="46" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="10" id="22z-nF-A6m"/>
                     <constraint firstItem="310" firstAttribute="leading" secondItem="404" secondAttribute="trailing" constant="8" symbolic="YES" id="62a-v3-dKZ"/>
                     <constraint firstItem="462" firstAttribute="top" secondItem="55" secondAttribute="bottom" constant="10" id="6sj-Eq-sMf"/>
-                    <constraint firstItem="bta-Vc-eJ2" firstAttribute="firstBaseline" secondItem="97" secondAttribute="firstBaseline" id="A4h-dZ-ZkN"/>
                     <constraint firstItem="70" firstAttribute="leading" secondItem="46" secondAttribute="trailing" constant="8" symbolic="YES" id="FPb-Xi-otg"/>
                     <constraint firstItem="91" firstAttribute="centerY" secondItem="55" secondAttribute="centerY" id="H5F-Cx-SoI"/>
-                    <constraint firstItem="bta-Vc-eJ2" firstAttribute="leading" secondItem="55" secondAttribute="trailing" constant="8" symbolic="YES" id="I8L-AY-Dbe"/>
                     <constraint firstItem="97" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="55" secondAttribute="trailing" constant="8" symbolic="YES" id="J2J-0T-A2k"/>
                     <constraint firstItem="72" firstAttribute="leading" secondItem="70" secondAttribute="trailing" constant="8" symbolic="YES" id="JLy-pm-T9e"/>
                     <constraint firstItem="55" firstAttribute="top" secondItem="6" secondAttribute="top" constant="10" id="JiB-CZ-5Tu"/>
@@ -233,5 +222,24 @@
             </connections>
         </customObject>
         <userDefaultsController representsSharedInstance="YES" id="Lww-1U-evV"/>
+        <menu autoenablesItems="NO" id="GvO-mg-SAR" userLabel="Search Field Menu">
+            <items>
+                <menuItem title="Exact key match" id="0FP-Pj-DHX">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="serachMenuAction:" target="-2" id="fw6-Jf-djk"/>
+                        <binding destination="Lww-1U-evV" name="value" keyPath="values.SearchMatchesExactKeyOnly" id="Maq-Wt-eLv">
+                            <dictionary key="options">
+                                <bool key="NSValidatesImmediately" value="YES"/>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </menuItem>
+            </items>
+            <connections>
+                <outlet property="delegate" destination="-2" id="wIE-hr-Z65"/>
+            </connections>
+            <point key="canvasLocation" x="-135" y="467"/>
+        </menu>
     </objects>
 </document>
