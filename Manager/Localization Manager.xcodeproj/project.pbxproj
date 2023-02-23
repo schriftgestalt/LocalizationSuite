@@ -667,6 +667,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				563DDBBE29A6D5CD00CEDCCB /* PBXTargetDependency */,
 			);
 			name = LocalizationManager;
 			productInstallPath = "$(HOME)/Applications";
@@ -979,6 +980,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		563DDBBE29A6D5CD00CEDCCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BlueLocalization;
+			targetProxy = 563DDBBD29A6D5CD00CEDCCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
