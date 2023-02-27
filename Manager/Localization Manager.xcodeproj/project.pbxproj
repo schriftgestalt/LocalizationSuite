@@ -24,7 +24,6 @@
 		5031E63E0F43625800A0DA35 /* FileContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5031E61B0F43625800A0DA35 /* FileContent.m */; };
 		5031E6410F43625800A0DA35 /* LanguageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5031E6220F43625800A0DA35 /* LanguageObject.m */; };
 		503B3E4C1195974000884CB7 /* FilteredBundleProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B3E4B1195974000884CB7 /* FilteredBundleProxy.m */; };
-		5052607405D5C3C200429FDF /* Localization Manager.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5052607305D5C3C200429FDF /* Localization Manager.icns */; };
 		506E805710566762005BAB74 /* MultiActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 506E805610566762005BAB74 /* MultiActionButton.m */; };
 		506E81721057BCE5005BAB74 /* MultiActionWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 506E81711057BCE5005BAB74 /* MultiActionWindow.m */; };
 		506E82B81058D096005BAB74 /* BundleDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 506E82B71058D096005BAB74 /* BundleDetail.m */; };
@@ -44,6 +43,7 @@
 		50D111FE0FB85023006FCF8C /* ldb.icns in Resources */ = {isa = PBXBuildFile; fileRef = 50D111FB0FB85023006FCF8C /* ldb.icns */; };
 		50D111FF0FB85023006FCF8C /* loc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 50D111FC0FB85023006FCF8C /* loc.icns */; };
 		50E8D83108C9C8B2003F43C3 /* TableHeaders.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50E8D82F08C9C8B2003F43C3 /* TableHeaders.strings */; };
+		562F954029ACD37D00BA6526 /* Manager.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 562F953F29ACD37D00BA6526 /* Manager.xcassets */; };
 		563DDC0729A7715300CEDCCB /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 563DDBE429A7714600CEDCCB /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		563DDC2C29A772AA00CEDCCB /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563DDBE429A7714600CEDCCB /* Sparkle.framework */; };
 		56AEB26F273B2E81008F3EAE /* NibPreview.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56AEB24E273B2E57008F3EAE /* NibPreview.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -308,7 +308,6 @@
 		5031E6220F43625800A0DA35 /* LanguageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageObject.m; sourceTree = "<group>"; };
 		503B3E4A1195974000884CB7 /* FilteredBundleProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilteredBundleProxy.h; sourceTree = "<group>"; };
 		503B3E4B1195974000884CB7 /* FilteredBundleProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilteredBundleProxy.m; sourceTree = "<group>"; };
-		5052607305D5C3C200429FDF /* Localization Manager.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "Localization Manager.icns"; path = "Icons/Localization Manager.icns"; sourceTree = "<group>"; };
 		506E805510566762005BAB74 /* MultiActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiActionButton.h; sourceTree = "<group>"; };
 		506E805610566762005BAB74 /* MultiActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiActionButton.m; sourceTree = "<group>"; };
 		506E81701057BCE5005BAB74 /* MultiActionWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiActionWindow.h; sourceTree = "<group>"; };
@@ -326,6 +325,7 @@
 		50D10F580FB6FF77006FCF8C /* InfoButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InfoButton.png; path = Icons/InfoButton.png; sourceTree = "<group>"; };
 		50D111FB0FB85023006FCF8C /* ldb.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = ldb.icns; path = ../Shared/Icons/ldb.icns; sourceTree = SOURCE_ROOT; };
 		50D111FC0FB85023006FCF8C /* loc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = loc.icns; path = ../Shared/Icons/loc.icns; sourceTree = SOURCE_ROOT; };
+		562F953F29ACD37D00BA6526 /* Manager.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Manager.xcassets; path = Icons/Manager.xcassets; sourceTree = "<group>"; };
 		56320E92230EBF79002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Interface/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		56320E93230EBF79002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Interface/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		56320E94230EBF79002A5878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Interface/en.lproj/TableHeaders.strings; sourceTree = "<group>"; };
@@ -572,10 +572,10 @@
 		5042FE7F075E3951006EB926 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				5052607305D5C3C200429FDF /* Localization Manager.icns */,
 				50D111FB0FB85023006FCF8C /* ldb.icns */,
 				50D111FC0FB85023006FCF8C /* loc.icns */,
 				506FE7DB1194722A009A67A8 /* lod.icns */,
+				562F953F29ACD37D00BA6526 /* Manager.xcassets */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -931,9 +931,9 @@
 			files = (
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
 				508C820D03EBDD80006B6ECB /* Localizable.strings in Resources */,
-				5052607405D5C3C200429FDF /* Localization Manager.icns in Resources */,
 				50E8D83108C9C8B2003F43C3 /* TableHeaders.strings in Resources */,
 				5086C7B60DFAF288009662A8 /* FileContent.xib in Resources */,
+				562F954029ACD37D00BA6526 /* Manager.xcassets in Resources */,
 				5086C7B70DFAF288009662A8 /* Document.xib in Resources */,
 				5086C7B90DFAF288009662A8 /* MainMenu.xib in Resources */,
 				5086C7BA0DFAF288009662A8 /* FileDetail.xib in Resources */,
@@ -1092,6 +1092,7 @@
 		50B00B880881BF5300E66B22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = X2L8375ZQ7;
@@ -1113,6 +1114,7 @@
 		50B00B890881BF5300E66B22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = X2L8375ZQ7;
