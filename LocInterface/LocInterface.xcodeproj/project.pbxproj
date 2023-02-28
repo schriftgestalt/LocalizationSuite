@@ -227,17 +227,8 @@
 		56378E6F2761F1E40045ADD7 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = debug.xcconfig; path = ../Shared/Source/debug.xcconfig; sourceTree = "<group>"; };
 		56378E702761F1E40045ADD7 /* common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = common.xcconfig; path = ../Shared/Source/common.xcconfig; sourceTree = "<group>"; };
 		56AEB2CF273BCB60008F3EAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/LIContent.strings; sourceTree = "<group>"; };
-		56AEB2D1273BCB61008F3EAE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/LIContent.strings; sourceTree = "<group>"; };
-		56AEB2D2273BCB63008F3EAE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/LIContent.strings; sourceTree = "<group>"; };
-		56AEB2D4273BCB64008F3EAE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/LIContent.strings; sourceTree = "<group>"; };
 		56AEB2DE273BCB95008F3EAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/LIProcessDisplay.strings; sourceTree = "<group>"; };
-		56AEB2E0273BCB95008F3EAE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/LIProcessDisplay.strings; sourceTree = "<group>"; };
-		56AEB2E2273BCB96008F3EAE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/LIProcessDisplay.strings; sourceTree = "<group>"; };
-		56AEB2E4273BCB96008F3EAE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/LIProcessDisplay.strings; sourceTree = "<group>"; };
 		56AEB2E6273BCBA5008F3EAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/LIStatusDisplay.strings; sourceTree = "<group>"; };
-		56AEB2E8273BCBA5008F3EAE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/LIStatusDisplay.strings; sourceTree = "<group>"; };
-		56AEB2EA273BCBA5008F3EAE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/LIStatusDisplay.strings; sourceTree = "<group>"; };
-		56AEB2EC273BCBA6008F3EAE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/LIStatusDisplay.strings; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* LocInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -630,6 +621,16 @@
 			attributes = {
 				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "Localization Suite";
+				TargetAttributes = {
+					50F209B50F88DA5900751057 = {
+						DevelopmentTeam = X2L8375ZQ7;
+						ProvisioningStyle = Manual;
+					};
+					8DC2EF4F0486A6940098B216 = {
+						DevelopmentTeam = X2L8375ZQ7;
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "LocInterface" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -766,9 +767,6 @@
 			children = (
 				56320EAB230EBF9F002A5878 /* Base */,
 				56AEB2CF273BCB60008F3EAE /* en */,
-				56AEB2D1273BCB61008F3EAE /* fr */,
-				56AEB2D2273BCB63008F3EAE /* de */,
-				56AEB2D4273BCB64008F3EAE /* ja */,
 			);
 			name = LIContent.xib;
 			sourceTree = "<group>";
@@ -810,9 +808,6 @@
 			children = (
 				56320EB1230EBFA0002A5878 /* Base */,
 				56AEB2DE273BCB95008F3EAE /* en */,
-				56AEB2E0273BCB95008F3EAE /* fr */,
-				56AEB2E2273BCB96008F3EAE /* de */,
-				56AEB2E4273BCB96008F3EAE /* ja */,
 			);
 			name = LIProcessDisplay.xib;
 			sourceTree = "<group>";
@@ -830,9 +825,6 @@
 			children = (
 				56320EB2230EBFA0002A5878 /* Base */,
 				56AEB2E6273BCBA5008F3EAE /* en */,
-				56AEB2E8273BCBA5008F3EAE /* fr */,
-				56AEB2EA273BCBA5008F3EAE /* de */,
-				56AEB2EC273BCBA6008F3EAE /* ja */,
 			);
 			name = LIStatusDisplay.xib;
 			sourceTree = "<group>";
