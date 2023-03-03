@@ -41,7 +41,7 @@ NSString *BLObjectFileUnimportableError = @"File cannot be imported";
 
 	if (self) {
 		[self setChangeDate:[plist objectForKey:BLFileChangeDateKey]];
-		[self setFlags:[[plist objectForKey:BLFileFlagsKey] unsignedIntValue]];
+		[self setFlags:[(NSString *)[plist objectForKey:BLFileFlagsKey] integerValue]];
 		[self setErrors:[plist objectForKey:BLFileErrorsKey]];
 
 		[_changedValues setArray:[plist objectForKey:BLFileChangedValuesKey]];
