@@ -60,20 +60,30 @@ NSArray *BLDocumentFileWrapperIgnoredNames = nil;
 #pragma mark - Reading
 
 - (NSFileWrapper *)decompressedFileWrapperFromPath:(NSString *)path {
+	// This need to _replace_ the item at `path`, because that's where a Save operation will write an updated database back to!
 	NSString *tmpPath = [self temporaryPath];
 	tmpPath = [tmpPath stringByAppendingPathComponent:[path lastPathComponent]];
+
+	[[NSFileManager defaultManager] removeItemAtPath:tmpPath error:NULL];	// remove previously existing item so that copy operation won't fail
 
 	[[NSFileManager defaultManager] copyItemAtPath:path toPath:tmpPath error:NULL];
 
 	NSString *outPath = nil;
 	if ([[NSFileManager defaultManager] decompressFileAtPath:tmpPath usedCompression:NULL resultPath:&outPath keepOriginal:NO]) {
-		NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithURL:[NSURL fileURLWithPath:outPath] options:0 error:nil];
-		[[NSFileManager defaultManager] removeItemAtPath:outPath error:NULL];
-
+		// This operation has replaced the compressed file with a directory in its place. We now move that back into the original location at `path`.
+		tmpPath = [tmpPath stringByAppendingString:@".old"];
+		if (![[NSFileManager defaultManager] moveItemAtPath:path toPath:tmpPath error:NULL]) {
+			return nil;
+		}
+		if (![[NSFileManager defaultManager] moveItemAtPath:outPath toPath:path error:NULL]) {
+			[[NSFileManager defaultManager] moveItemAtPath:tmpPath toPath:path error:NULL];	// let's try to restore the original
+			return nil;
+		}
+		NSFileWrapper *wrapper = [[NSFileWrapper alloc] initWithURL:[NSURL fileURLWithPath:path] options:0 error:nil];
 		return wrapper;
 	}
 	else {
-		[[NSFileManager defaultManager] removeItemAtPath:path error:NULL];
+		[[NSFileManager defaultManager] removeItemAtPath:tmpPath error:NULL];
 		return nil;
 	}
 }

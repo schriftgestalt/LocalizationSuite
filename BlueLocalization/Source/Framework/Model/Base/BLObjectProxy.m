@@ -138,7 +138,7 @@
 	}
 	else {
 		dispatch_sync(dispatch_get_main_queue(), ^{
-			[invocation invokeWithTarget:_object];
+			[invocation invokeWithTarget:self->_object];
 		});
 	}
 
@@ -158,7 +158,7 @@
 	else {
 		__block NSMethodSignature *sig;
 		dispatch_sync(dispatch_get_main_queue(), ^{
-			sig = [_class instanceMethodSignatureForSelector:sel];
+			sig = [self->_class instanceMethodSignatureForSelector:sel];
 		});
 		return sig;
 	}
