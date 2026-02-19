@@ -32,7 +32,7 @@
 	NSRect source = {{0, 0}, {[icon size].width, [icon size].height}};
 	target = cellFrame;
 	target.size.width = target.size.height;
-	[icon setFlipped:YES];
+	//[icon setFlipped:YES];
 	[icon drawInRect:target fromRect:source operation:NSCompositeSourceOver fraction:1.0];
 
 	// Draw the file name
