@@ -502,6 +502,7 @@
 /* Begin XCBuildConfiguration section */
 		503E12901404DA30009FA279 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56378E6B2761F1A80045ADD7 /* debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TestHost.app/Contents/MacOS/TestHost";
@@ -532,6 +533,7 @@
 		};
 		503E12911404DA30009FA279 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56378E6C2761F1A80045ADD7 /* common.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TestHost.app/Contents/MacOS/TestHost";
@@ -557,6 +559,7 @@
 		};
 		50CE95AF0F5BC41600026BB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56378E6B2761F1A80045ADD7 /* debug.xcconfig */;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -572,6 +575,7 @@
 		};
 		50CE95B00F5BC41600026BB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56378E6C2761F1A80045ADD7 /* common.xcconfig */;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

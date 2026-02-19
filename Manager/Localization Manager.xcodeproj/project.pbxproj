@@ -1052,6 +1052,7 @@
 /* Begin XCBuildConfiguration section */
 		50B00B880881BF5300E66B22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56D9C37A2761EC5C00EC3FDF /* debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -1074,6 +1075,7 @@
 		};
 		50B00B890881BF5300E66B22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56378E532761F0CF0045ADD7 /* common.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;

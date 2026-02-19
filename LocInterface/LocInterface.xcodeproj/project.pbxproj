@@ -866,6 +866,7 @@
 /* Begin XCBuildConfiguration section */
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56378E6F2761F1E40045ADD7 /* debug.xcconfig */;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -894,6 +895,7 @@
 		};
 		5058362F1406F93400762666 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56378E702761F1E40045ADD7 /* common.xcconfig */;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
