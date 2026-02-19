@@ -193,10 +193,10 @@ NSString *BundleDetailWindowNibName = @"BundleDetail";
 			return;
 
 		BLPathCreator *pathCreator = [self.parentDocument pathCreator];
-		NSString *bundlePath = [pathCreator fullPathForBundle:_bundle];
+		NSString *bundlePath = [pathCreator fullPathForBundle:self->_bundle];
 
 		for (NSURL *url in [openPanel URLs])
-			[_bundle addAssociatedXcodeProject:[BLPathCreator relativePathFromPath:bundlePath toPath:[url path]]];
+			[self->_bundle addAssociatedXcodeProject:[BLPathCreator relativePathFromPath:bundlePath toPath:[url path]]];
 
 		[self.parentDocument updateChangeCount:NSChangeDone];
 	}];

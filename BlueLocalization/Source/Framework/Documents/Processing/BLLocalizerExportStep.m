@@ -138,7 +138,7 @@
 	[properties secureSetObject:_languages forKey:BLLanguagesPropertyName];
 	[properties secureSetObject:[NSDictionary dictionary] forKey:BLPreferencesPropertyName];
 
-	// Create the dictionary, if whished
+	// Create the dictionary, if wished
 	if (_options & BLLocalizerExportStepEmbedDictionaryOption) {
 		[self setDescriptionWithStatus:NSLocalizedStringFromTableInBundle(@"WritingLocalizerCompressing", @"BLProcessStep", [NSBundle bundleForClass:[self class]], nil)];
 
@@ -153,8 +153,8 @@
 		NSDictionary *filter = [NSDictionary dictionaryWithObjectsAndKeys:
 								@YES, BLDictionaryLimitLanguagesFilterSetting,
 								@YES, BLDictionaryNormalizeFilterSetting,
-												 referenceLanguage, BLDictionaryNormLanguageFilterSetting,
-												 nil];
+								referenceLanguage, BLDictionaryNormLanguageFilterSetting,
+								nil];
 
 		// Create the dict, filtering the keys
 		BLDictionaryDocument *dictionary = [[BLDictionaryDocument alloc] init];

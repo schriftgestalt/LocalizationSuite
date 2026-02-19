@@ -61,7 +61,7 @@ NSString *LIAttachmentPasteboardType = @"LIAttachment";
 		[delete setSize:imageSize];
 		[color set];
 		[NSBezierPath fillRect:NSMakeRect(0, 0, kDeleteButtonSize, kDeleteButtonSize)];
-		[delete drawAtPoint:NSZeroPoint fromRect:NSZeroRect operation:NSCompositeDestinationAtop fraction:0];
+		[delete drawAtPoint:NSZeroPoint fromRect:NSZeroRect operation:NSCompositingOperationDestinationAtop fraction:0];
 		return YES;
 	}];
 	return image;
@@ -96,14 +96,14 @@ NSString *LIAttachmentPasteboardType = @"LIAttachment";
 	NSImage *delete = [self deleteImageWithColor:(![self isHighlighted]) ? [NSColor textBackgroundColor] : [NSColor lightGrayColor]];
 	NSRect fromRect = NSMakeRect(0, 0, [delete size].width, [delete size].height);
 
-	[delete drawInRect:[self deleteButtonFrame:cellFrame] fromRect:fromRect operation:NSCompositeSourceOver fraction:1];
+	[delete drawInRect:[self deleteButtonFrame:cellFrame] fromRect:fromRect operation:NSCompositingOperationSourceOver fraction:1];
 }
 
 #pragma mark - Events
 
 - (BOOL)trackMouse:(NSEvent *)theEvent inRect:(NSRect)cellFrame ofView:(NSView *)controlView untilMouseUp:(BOOL)flag {
 	// Only left clicks
-	if ([theEvent type] != NSLeftMouseDown)
+	if ([theEvent type] != NSEventTypeLeftMouseDown)
 		return NO;
 
 	// Double click open preview panel
@@ -123,17 +123,17 @@ NSString *LIAttachmentPasteboardType = @"LIAttachment";
 
 	// Wait for next event
 	do {
-		theEvent = [[controlView window] nextEventMatchingMask:NSLeftMouseUpMask | NSLeftMouseDraggedMask | NSMouseMovedMask];
+		theEvent = [[controlView window] nextEventMatchingMask:NSEventMaskLeftMouseUp | NSEventMaskLeftMouseDragged | NSEventMaskMouseMoved];
 
 		position = [controlView convertPoint:[theEvent locationInWindow] fromView:nil];
 		delete = NSPointInRect(position, [self deleteButtonFrame:cellFrame]);
 
 		if (isDeleting)
 			[self setHighlighted:delete];
-	} while (isDeleting && [theEvent type] != NSLeftMouseUp);
+	} while (isDeleting && [theEvent type] != NSEventTypeLeftMouseUp);
 
 	// Deleting the attachment
-	if ([theEvent type] == NSLeftMouseUp && isDeleting && delete) {
+	if ([theEvent type] == NSEventTypeLeftMouseUp && isDeleting && delete) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 		[[self target] performSelector:[self action] withObject:self];
@@ -142,8 +142,8 @@ NSString *LIAttachmentPasteboardType = @"LIAttachment";
 	}
 
 	// Dragging the file
-	if ([theEvent type] == NSLeftMouseDragged) {
-		NSPasteboard *pboard = [NSPasteboard pasteboardWithName:NSDragPboard];
+	if ([theEvent type] == NSEventTypeLeftMouseDragged) {
+		NSPasteboard *pboard = [NSPasteboard pasteboardWithName:NSPasteboardNameDrag];
 		[pboard declareTypes:[NSArray arrayWithObjects:NSFilesPromisePboardType, LIAttachmentPasteboardType, nil] owner:self];
 
 		[pboard setPropertyList:@((NSUInteger)((__bridge_retained void *)fileWrapper)) forType:LIAttachmentPasteboardType];

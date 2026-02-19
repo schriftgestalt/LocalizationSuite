@@ -22,7 +22,7 @@
 - (NSArray *)dequeueStepGroup;
 
 /*!
- @abstract Dequeues the next group and performs it. Stopps if nothing left.
+ @abstract Dequeues the next group and performs it. Stops if nothing left.
  */
 - (void)runNextStepGroup;
 
@@ -35,20 +35,20 @@
 
 @implementation BLProcessManager
 
+@synthesize document = _document;
+
 - (id)initWithDocument:(NSDocument<BLDocumentProtocol> *)document {
 	self = [super init];
 
 	if (self != nil) {
 		_currentStep = nil;
-		_document = document;
+		self.document = document;
 		_groups = [[NSMutableArray alloc] init];
 		_queue = [NSOperationQueue mainQueue];
-		//		_queue.maxConcurrentOperationCount = 1;
 		_steps = 0;
 		_stepsCompleted = 0;
 
-		//		[_queue setMaxConcurrentOperationCount: 1];
-		[_queue setMaxConcurrentOperationCount:[NSProcessInfo processInfo].processorCount];
+		_queue.maxConcurrentOperationCount = [NSProcessInfo processInfo].processorCount / 2;
 		[_queue addObserver:self forKeyPath:@"operations" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NULL];
 	}
 
@@ -62,14 +62,10 @@
 #pragma mark - Accessors
 
 - (NSDocument<BLDocumentProtocol> *)document {
-	if (!_document)
+	if (!_document) {
 		[[NSException exceptionWithName:NSInternalInconsistencyException reason:@"No document was set before calling -document!" userInfo:nil] raise];
-
+	}
 	return _document;
-}
-
-- (void)setDocument:(NSDocument<BLDocumentProtocol> *)aDocument {
-	_document = aDocument;
 }
 
 #pragma mark - Run controls

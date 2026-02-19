@@ -79,7 +79,7 @@
 	[titleText setBordered:NO];
 	[titleText setSelectable:NO];
 	[titleText setDrawsBackground:NO];
-	[titleText setAlignment:NSCenterTextAlignment];
+	[titleText setAlignment:NSTextAlignmentCenter];
 	[titleText bind:@"value" toObject:_origWindow withKeyPath:@"title" options:nil];
 
 	NSShadow *shadow = [[NSShadow alloc] init];
@@ -117,13 +117,13 @@
 	// Bar
 	source.origin.x = source.size.width - 1;
 	source.size.width = 1;
-	[_titleBarImage drawInRect:target fromRect:source operation:NSCompositeSourceOver fraction:1.0];
+	[_titleBarImage drawInRect:target fromRect:source operation:NSCompositingOperationSourceOver fraction:1.0];
 
 	// Buttons
 	source.size.width = source.origin.x + 1;
 	source.origin.x = 0;
 	target.size.width = source.size.width;
-	[_titleBarImage drawInRect:target fromRect:source operation:NSCompositeSourceOver fraction:1.0];
+	[_titleBarImage drawInRect:target fromRect:source operation:NSCompositingOperationSourceOver fraction:1.0];
 }
 
 @end

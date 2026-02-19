@@ -93,9 +93,9 @@ id __sharedStringsExporter;
 	// Open the save panel
 	NSSavePanel *panel = [NSSavePanel savePanel];
 
-	if (!optionsView)
+	if (!optionsView) {
 		[NSBundle loadNibNamed:BLStringsExporterNibName owner:self];
-
+	}
 	[panel setCanCreateDirectories:YES];
 	[panel setAccessoryView:optionsView];
 	[[panel defaultButtonCell] setTitle:NSLocalizedStringFromTableInBundle(@"Export", @"Localizable", [NSBundle bundleForClass:[self class]], nil)];

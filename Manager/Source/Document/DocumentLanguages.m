@@ -72,7 +72,7 @@
 		if (result != NSAlertFirstButtonReturn)
 			return;
 
-		[self synchronizeObjects:_bundles forLanguages:[self selectedLanguages] reinject:YES];
+		[self synchronizeObjects:self->_bundles forLanguages:[self selectedLanguages] reinject:YES];
 	}];
 }
 

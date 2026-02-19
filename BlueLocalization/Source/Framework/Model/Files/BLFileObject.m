@@ -35,17 +35,21 @@ NSMutableDictionary *__fileObjectClasses = nil;
 #pragma mark - Class Cluster
 
 + (id)alloc {
-	if ([self isEqual:[BLFileObject class]])
+	if ([self isEqual:[BLFileObject class]]) {
 		return [BLPlaceholderFileObject alloc];
-	else
+	}
+	else {
 		return [super alloc];
+	}
 }
 
 + (id)allocWithZone:(NSZone *)zone {
-	if ([self isEqual:[BLFileObject class]])
+	if ([self isEqual:[BLFileObject class]]) {
 		return [BLPlaceholderFileObject allocWithZone:zone];
-	else
+	}
+	else {
 		return [super allocWithZone:zone];
+	}
 }
 
 #pragma mark - Initializers
@@ -125,8 +129,9 @@ NSMutableDictionary *__fileObjectClasses = nil;
 }
 
 + (void)registerClass:(Class)fileClass forPathExtension:(NSString *)extension {
-	if (!__fileObjectClasses)
+	if (!__fileObjectClasses) {
 		__fileObjectClasses = [[NSMutableDictionary alloc] init];
+	}
 
 	[__fileObjectClasses setObject:fileClass forKey:extension];
 }
@@ -180,8 +185,9 @@ NSMutableDictionary *__fileObjectClasses = nil;
 	// Serialize objects
 	NSMutableArray *archivedObjects = [NSMutableArray array];
 	for (BLKeyObject *key in [self objects]) {
-		if ([key isActive] || !activeOnly)
+		if ([key isActive] || !activeOnly) {
 			[archivedObjects addObject:key];
+		}
 	}
 
 	// Prepare attachments

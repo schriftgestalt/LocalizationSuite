@@ -66,7 +66,7 @@ void DiffEngine::set_from(const char *lines[], int n)
 	
 	// rescale
 	if (n > n_from) {
-		xchanged = (bool*) realloc(xchanged, sizeof(int) * n);
+		xchanged = (bool*) realloc(xchanged, sizeof(bool) * n);
 		xv = (const char **) realloc(xv, sizeof(const char*) * n);
 		xind = (int *) realloc(xind, sizeof(int) * n);
 	}
@@ -84,7 +84,7 @@ void DiffEngine::set_to(const char *lines[], int n)
 	
 	// rescale
 	if (n > n_to) {
-		ychanged = (bool*) realloc(ychanged, sizeof(int) * n);
+		ychanged = (bool*) realloc(ychanged, sizeof(bool) * n);
 		yv = (const char **) realloc(yv, sizeof(const char*) * n);
 		yind = (int *) realloc(yind, sizeof(int) * n);
 	}

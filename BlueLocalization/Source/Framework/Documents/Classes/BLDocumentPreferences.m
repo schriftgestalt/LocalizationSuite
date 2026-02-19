@@ -62,22 +62,24 @@
 - (void)removeObjectForKey:(id)aKey {
 	[self willChangeValueForKey:aKey];
 
-	if ([_userKeys containsObject:aKey])
+	if ([_userKeys containsObject:aKey]) {
 		[[self userPreferences] removeObjectForKey:aKey];
-	else
+	}
+	else {
 		[_preferences removeObjectForKey:aKey];
-
+	}
 	[self didChangeValueForKey:aKey];
 }
 
 - (void)setObject:(id)anObject forKey:(id)aKey {
 	[self willChangeValueForKey:aKey];
 
-	if ([_userKeys containsObject:aKey])
+	if ([_userKeys containsObject:aKey]) {
 		[[self userPreferences] setObject:anObject forKey:aKey];
-	else
+	}
+	else {
 		[_preferences setObject:anObject forKey:aKey];
-
+	}
 	[self didChangeValueForKey:aKey];
 }
 

@@ -9,11 +9,11 @@
 /*!
  @abstract An internal proxy dictionary mapping the project preferences and user preferences of a document into a single dictionary for easier use.
  */
-@interface BLDocumentPreferences : NSMutableDictionary {
-	NSMutableDictionary *_preferences;
-	NSArray *_userKeys;
-	NSMutableDictionary *_userPreferences;
-}
+@interface BLDocumentPreferences : NSMutableDictionary
+
+@property (strong, nonatomic) NSMutableDictionary *preferences;
+@property (strong, nonatomic) NSArray *userKeys;
+@property (strong, nonatomic) NSMutableDictionary *userPreferences;
 
 - (id)initWithDictionary:(NSMutableDictionary *)preferences userDictionary:(NSMutableDictionary *)userPreferences andUserKeys:(NSArray *)userKeys;
 

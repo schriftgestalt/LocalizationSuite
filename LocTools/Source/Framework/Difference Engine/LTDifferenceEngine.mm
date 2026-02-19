@@ -98,14 +98,14 @@
 
 	for (NSString *segment in _newSegments)
 		newObjects[index++] = [segment UTF8String];
-	((DiffEngine *)engine)->set_to(newObjects, [_newSegments count]);
+	((DiffEngine *)engine)->set_to(newObjects, (int)[_newSegments count]);
 
 	const char **oldObjects = (const char **)malloc(sizeof(const char *) * [_oldSegments count]);
 	index = 0;
 
 	for (NSString *segment in _oldSegments)
 		oldObjects[index++] = [segment UTF8String];
-	((DiffEngine *)engine)->set_from(oldObjects, [_oldSegments count]);
+	((DiffEngine *)engine)->set_from(oldObjects, (int)[_oldSegments count]);
 
 	// Run engine
 	diffs = ((DiffEngine *)engine)->diff();
@@ -136,12 +136,14 @@
 				NSUInteger k;
 
 				for (k = 0; k < newLines.size(); k++) {
-					if (![[[NSString stringWithUTF8String:newLines[k]] lowercaseString] isEqual:[[NSString stringWithUTF8String:oldLines[k]] lowercaseString]])
+					if (![[[NSString stringWithUTF8String:newLines[k]] lowercaseString] isEqual:[[NSString stringWithUTF8String:oldLines[k]] lowercaseString]]) {
 						break;
+					}
 				}
 
-				if (k == newLines.size())
+				if (k == newLines.size()) {
 					a += (newLines.size() + oldLines.size()) / 2;
+				}
 			}
 		}
 		else {
@@ -150,10 +152,12 @@
 		}
 	}
 
-	if (a > 0. || b > 0.)
+	if (a > 0. || b > 0.) {
 		_matchValue = a / (a + b / 2.);
-	else
+	}
+	else {
 		_matchValue = 0.;
+	}
 }
 
 - (NSArray *)differences {

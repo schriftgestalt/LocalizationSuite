@@ -14,7 +14,6 @@
  */
 @interface BLProcessManager : NSObject {
 	BLProcessStep *_currentStep;
-	NSDocument<BLDocumentProtocol> *_document;
 	NSMutableArray *_groups;
 	BOOL _running;
 	NSOperationQueue *_queue;
@@ -31,7 +30,7 @@
  @abstract Returns the document the process manager belongs to.
  @discussion Due to the importance of this method to most steps, this one throws if no document has been set beforehand!
  */
-@property (weak) NSDocument<BLDocumentProtocol> *document;
+@property (weak, nonatomic) NSDocument<BLDocumentProtocol> *document;
 
 /*!
  @abstract Start the processing queue.

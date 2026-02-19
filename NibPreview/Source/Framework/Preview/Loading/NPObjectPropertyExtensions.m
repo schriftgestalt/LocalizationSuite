@@ -615,8 +615,8 @@
 - (void)finished {
 	if (!self.string.length) {
 		NSAttributedString *str;
-
-		str = [[NSAttributedString alloc] initWithPath:[[NSBundle bundleForClass:[NPPreview class]] pathForResource:@"Text" ofType:@"rtf"] documentAttributes:nil];
+		NSURL *URL = [[NSBundle bundleForClass:[NPPreview class]] URLForResource:@"Text" withExtension:@"rtf"];
+		str = [[NSAttributedString alloc] initWithURL:URL options:@{} documentAttributes:nil error:nil];
 
 		if ([self isRichText]) {
 			if (![NSThread isMainThread])

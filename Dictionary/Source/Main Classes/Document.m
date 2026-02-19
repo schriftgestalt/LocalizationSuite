@@ -182,7 +182,7 @@ NSString *DocumentViewOptionSearch = @"search";
 
 	[panel beginSheetModalForWindow:[self windowForSheet]
 				  completionHandler:^(NSInteger result) {
-					  if (result != NSFileHandlingPanelOKButton)
+					  if (result != NSModalResponseOK)
 						  return;
 
 					  [self importFiles:[[panel URLs] valueForKey:@"path"]];

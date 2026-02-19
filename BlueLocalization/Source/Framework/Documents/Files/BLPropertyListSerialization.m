@@ -158,14 +158,15 @@ NSString *BLLanguagesSerializationKey = @"languages";
 		NSMutableDictionary *dict = [NSMutableDictionary dictionary];
 
 		// Convert contained objects
-		for (id key in [obj allKeys])
+		for (id key in [obj allKeys]) {
 			[dict secureSetObject:[self objectWithPropertyList:[obj objectForKey:key] fileWrappers:fileWrappers] forKey:key];
-
+		}
+		
 		// Find the class
 		Class class = NSClassFromString([obj objectForKey:BLFileClassKey]);
-		if (class == Nil)
+		if (class == Nil) {
 			return dict;
-
+		}
 		// Create an instance if possible
 		id object = [[class alloc] initWithPropertyList:dict];
 
@@ -174,10 +175,12 @@ NSString *BLLanguagesSerializationKey = @"languages";
 			NSFileWrapper *wrapper = nil;
 			@try {
 				for (NSString *part in [[object path] pathComponents]) {
-					if (wrapper)
+					if (wrapper) {
 						wrapper = [[wrapper fileWrappers] objectForKey:part];
-					else
+					}
+					else {
 						wrapper = [fileWrappers objectForKey:part];
+					}
 				}
 				[object setWrapper:wrapper];
 			}

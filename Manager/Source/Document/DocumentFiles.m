@@ -30,7 +30,7 @@
 
 	[openPanel beginSheetModalForWindow:[self windowForSheet]
 					  completionHandler:^(NSInteger result) {
-		if (result == NSAlertFirstButtonReturn)
+		if (result == NSModalResponseOK)
 			[self addFiles:[[openPanel URLs] valueForKey:@"path"]];
 	}];
 }
