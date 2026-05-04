@@ -6,6 +6,15 @@
 		<description>Most recent changes</description>
 		<language>en</language>
 		<item>
+			<title>15.0.2</title>
+			<sparkle:releaseNotesLink>https://schriftgestalt.github.io/LocalizationSuite/localizer/localizer.html</sparkle:releaseNotesLink>
+			<pubDate>Mon, 04 May 2026 23:27:50 +0200</pubDate>
+			<sparkle:version>24</sparkle:version>
+			<sparkle:shortVersionString>15.0.2</sparkle:shortVersionString>
+			<sparkle:minimumSystemVersion>12</sparkle:minimumSystemVersion>
+			<enclosure url="https://github.com/schriftgestalt/LocalizationSuite/releases/download/15.0.2/Localizer15.0.2-24.zip" length="2963045" type="application/octet-stream" sparkle:edSignature="fIANXfZGaiJorWBnPiumkJAQxnnjzH7xZavpEYftfNHHTSiyiEv/S5M9/Qt1Kq1J3RY0gHJEmznwFzjkME3yAQ=="/>
+		</item>
+		<!-- <item>
 			<title>15.0.1</title>
 			<sparkle:releaseNotesLink>https://schriftgestalt.github.io/LocalizationSuite/localizer/localizer.html</sparkle:releaseNotesLink>
 			<pubDate>Fri, 03 Mar 2023 13:47:35 +0100</pubDate>
@@ -18,6 +27,6 @@
 				type="application/octet-stream"
 				sparkle:edSignature="WaVOxJQDyjDcJ1pFXvUANOaXz3Qki4N8Pq6eUkAUYmn27fYd+4KhWcdlwNVeSq4DpnrvauS07BzNBWEtYrlMBw=="
 			/>
-		</item>
+		</item> -->
 	</channel>
 </rss>
