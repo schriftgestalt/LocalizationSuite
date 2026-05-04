@@ -33,8 +33,8 @@
 		506401250FC3179B00DF3069 /* LIImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 506401230FC3179B00DF3069 /* LIImageLoader.m */; };
 		506401500FC31AE700DF3069 /* LICopyingOutlineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5064014E0FC31AE700DF3069 /* LICopyingOutlineView.h */; };
 		506401510FC31AE700DF3069 /* LICopyingOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5064014F0FC31AE700DF3069 /* LICopyingOutlineView.m */; };
-		5064FDAB0FC173CC00DF3069 /* LIWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = 5064FDA90FC173CC00DF3069 /* LIWarning.png */; };
-		5064FDAC0FC173CC00DF3069 /* LIError.png in Resources */ = {isa = PBXBuildFile; fileRef = 5064FDAA0FC173CC00DF3069 /* LIError.png */; };
+		5064FDAB0FC173CC00DF3069 /* LIWarning.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5064FDA90FC173CC00DF3069 /* LIWarning.pdf */; };
+		5064FDAC0FC173CC00DF3069 /* LIError.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5064FDAA0FC173CC00DF3069 /* LIError.pdf */; };
 		5064FDBE0FC1742E00DF3069 /* LILogLevelValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5064FDBC0FC1742E00DF3069 /* LILogLevelValueTransformer.h */; };
 		5064FDBF0FC1742E00DF3069 /* LILogLevelValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5064FDBD0FC1742E00DF3069 /* LILogLevelValueTransformer.m */; };
 		507C42E7104DAF6100C94620 /* LIHighlightWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 507C42E5104DAF6100C94620 /* LIHighlightWindow.h */; };
@@ -149,8 +149,8 @@
 		506401230FC3179B00DF3069 /* LIImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIImageLoader.m; sourceTree = "<group>"; };
 		5064014E0FC31AE700DF3069 /* LICopyingOutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LICopyingOutlineView.h; sourceTree = "<group>"; };
 		5064014F0FC31AE700DF3069 /* LICopyingOutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LICopyingOutlineView.m; sourceTree = "<group>"; };
-		5064FDA90FC173CC00DF3069 /* LIWarning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LIWarning.png; path = ../Shared/Images/LIWarning.png; sourceTree = SOURCE_ROOT; };
-		5064FDAA0FC173CC00DF3069 /* LIError.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LIError.png; path = ../Shared/Images/LIError.png; sourceTree = SOURCE_ROOT; };
+		5064FDA90FC173CC00DF3069 /* LIWarning.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = LIWarning.pdf; path = ../Shared/Images/LIWarning.pdf; sourceTree = SOURCE_ROOT; };
+		5064FDAA0FC173CC00DF3069 /* LIError.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = LIError.pdf; path = ../Shared/Images/LIError.pdf; sourceTree = SOURCE_ROOT; };
 		5064FDBC0FC1742E00DF3069 /* LILogLevelValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LILogLevelValueTransformer.h; sourceTree = "<group>"; };
 		5064FDBD0FC1742E00DF3069 /* LILogLevelValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LILogLevelValueTransformer.m; sourceTree = "<group>"; };
 		507C42E5104DAF6100C94620 /* LIHighlightWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIHighlightWindow.h; sourceTree = "<group>"; };
@@ -331,8 +331,8 @@
 		5064FDAD0FC173CD00DF3069 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				5064FDA90FC173CC00DF3069 /* LIWarning.png */,
-				5064FDAA0FC173CC00DF3069 /* LIError.png */,
+				5064FDA90FC173CC00DF3069 /* LIWarning.pdf */,
+				5064FDAA0FC173CC00DF3069 /* LIError.pdf */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -674,8 +674,8 @@
 				50F20D2B0F8A473600751057 /* LIPreviewWindow.strings in Resources */,
 				50AE8BA30FA86F0C00CE3EFF /* LILogWindow.xib in Resources */,
 				50AE8C470FA8AF0800CE3EFF /* LIProcessDisplay.xib in Resources */,
-				5064FDAB0FC173CC00DF3069 /* LIWarning.png in Resources */,
-				5064FDAC0FC173CC00DF3069 /* LIError.png in Resources */,
+				5064FDAB0FC173CC00DF3069 /* LIWarning.pdf in Resources */,
+				5064FDAC0FC173CC00DF3069 /* LIError.pdf in Resources */,
 				50B7A38F1023570300F74FFB /* LIDictionarySettings.xib in Resources */,
 				50E80C851028A67C009A6A0B /* LIDictionarySettings.strings in Resources */,
 				50803E2110455F4800617CDB /* LIContent.xib in Resources */,

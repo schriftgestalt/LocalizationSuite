@@ -38,8 +38,6 @@
 		5086C7BD0DFAF288009662A8 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5086C7B20DFAF288009662A8 /* Preferences.xib */; };
 		508C820D03EBDD80006B6ECB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 508C820B03EBDD80006B6ECB /* Localizable.strings */; };
 		50A6BD891131538E00928AD7 /* Manager.help in Resources */ = {isa = PBXBuildFile; fileRef = 50A6BD7E1131538E00928AD7 /* Manager.help */; };
-		50D10F570FB6F61B006FCF8C /* DetailButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 50D10F560FB6F61B006FCF8C /* DetailButton.png */; };
-		50D10F590FB6FF77006FCF8C /* InfoButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 50D10F580FB6FF77006FCF8C /* InfoButton.png */; };
 		50D111FE0FB85023006FCF8C /* ldb.icns in Resources */ = {isa = PBXBuildFile; fileRef = 50D111FB0FB85023006FCF8C /* ldb.icns */; };
 		50D111FF0FB85023006FCF8C /* loc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 50D111FC0FB85023006FCF8C /* loc.icns */; };
 		50E8D83108C9C8B2003F43C3 /* TableHeaders.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50E8D82F08C9C8B2003F43C3 /* TableHeaders.strings */; };
@@ -321,8 +319,6 @@
 		506FE7DB1194722A009A67A8 /* lod.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = lod.icns; path = ../Shared/Icons/lod.icns; sourceTree = SOURCE_ROOT; };
 		507A48AB05D7037D0044A3E3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		50A6BD7E1131538E00928AD7 /* Manager.help */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Manager.help; path = Resources/Manager.help; sourceTree = "<group>"; };
-		50D10F560FB6F61B006FCF8C /* DetailButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DetailButton.png; path = Icons/DetailButton.png; sourceTree = "<group>"; };
-		50D10F580FB6FF77006FCF8C /* InfoButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InfoButton.png; path = Icons/InfoButton.png; sourceTree = "<group>"; };
 		50D111FB0FB85023006FCF8C /* ldb.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = ldb.icns; path = ../Shared/Icons/ldb.icns; sourceTree = SOURCE_ROOT; };
 		50D111FC0FB85023006FCF8C /* loc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = loc.icns; path = ../Shared/Icons/loc.icns; sourceTree = SOURCE_ROOT; };
 		562F953F29ACD37D00BA6526 /* Manager.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Manager.xcassets; path = Icons/Manager.xcassets; sourceTree = "<group>"; };
@@ -565,8 +561,6 @@
 		5042FE82075E395D006EB926 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				50D10F560FB6F61B006FCF8C /* DetailButton.png */,
-				50D10F580FB6FF77006FCF8C /* InfoButton.png */,
 				5010B747129C81DE0044A488 /* XcodeProject.png */,
 			);
 			name = Interface;
@@ -918,8 +912,6 @@
 				5086C7BA0DFAF288009662A8 /* FileDetail.xib in Resources */,
 				5086C7BB0DFAF288009662A8 /* BundleDetail.xib in Resources */,
 				5086C7BD0DFAF288009662A8 /* Preferences.xib in Resources */,
-				50D10F570FB6F61B006FCF8C /* DetailButton.png in Resources */,
-				50D10F590FB6FF77006FCF8C /* InfoButton.png in Resources */,
 				50D111FE0FB85023006FCF8C /* ldb.icns in Resources */,
 				50D111FF0FB85023006FCF8C /* loc.icns in Resources */,
 				50A6BD891131538E00928AD7 /* Manager.help in Resources */,

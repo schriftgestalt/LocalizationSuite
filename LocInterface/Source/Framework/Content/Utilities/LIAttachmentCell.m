@@ -83,14 +83,14 @@ NSString *LIAttachmentPasteboardType = @"LIAttachment";
 	}
 
 	// Contents
-	BOOL hightlighted = [self isHighlighted];
+	BOOL highlighted = [self isHighlighted];
 	[self setHighlighted:NO];
 
 	NSRect newFrame = cellFrame;
 	newFrame.size.width -= kDeleteButtonSize;
 	[super drawWithFrame:newFrame inView:controlView];
 
-	[self setHighlighted:hightlighted];
+	[self setHighlighted:highlighted];
 
 	// Delete mark
 	NSImage *delete = [self deleteImageWithColor:(![self isHighlighted]) ? [NSColor textBackgroundColor] : [NSColor lightGrayColor]];
