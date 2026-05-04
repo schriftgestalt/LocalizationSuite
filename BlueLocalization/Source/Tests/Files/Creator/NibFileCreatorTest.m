@@ -29,18 +29,18 @@
 
 	// Old reference
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects];
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"];
 
 	// Old translated
 	path = [tmpPath stringByAppendingPathComponent:@"de.lproj/incremental.xib"];
 	[interpreter deactivateOptions:BLFileInterpreterAllowChangesToKeyObjects];
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:@"de" referenceLanguage:nil];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:@"de" referenceLanguage:nil];
 	[fileObject setVersion:1 forLanguage:@"de"];
 
 	// New reference
 	path = [tmpPath stringByAppendingPathComponent:@"en.lproj/reference.xib"];
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects];
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"];
 
 	// Write out
 	BLFileCreator *creator = [BLFileCreator creatorForFileObject:fileObject];

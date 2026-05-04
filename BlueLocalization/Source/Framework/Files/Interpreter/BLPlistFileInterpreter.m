@@ -20,7 +20,7 @@
 
 #pragma mark -
 
-- (BOOL)_interpreteFile:(NSString *)path {
+- (BOOL)_interpretFile:(NSString *)path {
 	NSDictionary *dict;
 	NSError *error = nil;
 	NSArray *keys;

@@ -111,7 +111,6 @@
 			BLLog(BLLogWarning, @"Cannot find matching database file for imported file %@.", [import name]);
 			continue;
 		}
-		original = [BLObjectProxy proxyWithObject:original];
 
 		// Import the data
 		[self importFileObject:import toObject:original];

@@ -9,7 +9,6 @@
 // MODEL
 #import <BlueLocalization/BLObject.h>
 #import <BlueLocalization/BLObjectExtensions.h>
-#import <BlueLocalization/BLObjectProxy.h>
 
 #import <BlueLocalization/BLBundleObject.h>
 #import <BlueLocalization/BLFileObject.h>

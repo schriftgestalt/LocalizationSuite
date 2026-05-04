@@ -29,7 +29,7 @@ NSString *StringsFileInterpreterExtension = @"strings";
 		NSDictionary *data;
 
 		fileObject = [BLFileObject fileObjectWithPathExtension:StringsFileInterpreterExtension];
-		BOOL result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:StringsFileInterpreterTestLanguage referenceLanguage:nil];
+		BOOL result = [interpreter interpretFile:path intoObject:fileObject withLanguage:StringsFileInterpreterTestLanguage referenceLanguage:nil];
 		XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 		data = [NSDictionary dictionaryWithContentsOfFile:path];
@@ -62,7 +62,7 @@ NSString *StringsFileInterpreterExtension = @"strings";
 		NSDictionary *data;
 
 		fileObject = [BLFileObject fileObjectWithPathExtension:StringsFileInterpreterExtension];
-		BOOL result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:StringsFileInterpreterTestLanguage referenceLanguage:nil];
+		BOOL result = [interpreter interpretFile:path intoObject:fileObject withLanguage:StringsFileInterpreterTestLanguage referenceLanguage:nil];
 		XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 		NSString *commentsPath;
@@ -93,7 +93,7 @@ NSString *StringsFileInterpreterExtension = @"strings";
 		BLFileObject *fileObject;
 
 		fileObject = [BLFileObject fileObjectWithPathExtension:StringsFileInterpreterExtension];
-		BOOL result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:StringsFileInterpreterTestLanguage referenceLanguage:nil];
+		BOOL result = [interpreter interpretFile:path intoObject:fileObject withLanguage:StringsFileInterpreterTestLanguage referenceLanguage:nil];
 		XCTAssertFalse(result, @"Interpreter should fail with no result for file %@", path);
 	}
 }
@@ -107,7 +107,7 @@ NSString *StringsFileInterpreterExtension = @"strings";
 
 	// Test without placeholders being set
 	BLFileObject *fileObject1 = [BLFileObject fileObjectWithPathExtension:StringsFileInterpreterExtension];
-	XCTAssertTrue([interpreter interpreteFile:path intoObject:fileObject1 withLanguage:StringsFileInterpreterTestLanguage referenceLanguage:StringsFileInterpreterTestLanguage], @"Interpretation failed");
+	XCTAssertTrue([interpreter interpretFile:path intoObject:fileObject1 withLanguage:StringsFileInterpreterTestLanguage referenceLanguage:StringsFileInterpreterTestLanguage], @"Interpretation failed");
 
 	XCTAssertEqual([[fileObject1 objects] count], (NSUInteger)5, @"Wrong number of imported keys");
 	XCTAssertEqual([fileObject1 numberOfKeys], (NSUInteger)5, @"Wrong number of active keys");
@@ -117,7 +117,7 @@ NSString *StringsFileInterpreterExtension = @"strings";
 	interpreter.ignoredPlaceholderStrings = [NSArray arrayWithObjects:@"value2", @"<do not localize>", nil];
 
 	BLFileObject *fileObject2 = [BLFileObject fileObjectWithPathExtension:StringsFileInterpreterExtension];
-	XCTAssertTrue([interpreter interpreteFile:path intoObject:fileObject2 withLanguage:StringsFileInterpreterTestLanguage referenceLanguage:StringsFileInterpreterTestLanguage], @"Interpretation failed");
+	XCTAssertTrue([interpreter interpretFile:path intoObject:fileObject2 withLanguage:StringsFileInterpreterTestLanguage referenceLanguage:StringsFileInterpreterTestLanguage], @"Interpretation failed");
 
 	XCTAssertEqual([[fileObject2 objects] count], (NSUInteger)5, @"Wrong number of imported keys");
 	XCTAssertEqual([fileObject2 numberOfKeys], (NSUInteger)3, @"Wrong number of active keys");
@@ -126,7 +126,7 @@ NSString *StringsFileInterpreterExtension = @"strings";
 	[interpreter deactivateOptions:BLFileInterpreterDeactivatePlaceholderStrings];
 
 	BLFileObject *fileObject3 = [BLFileObject fileObjectWithPathExtension:StringsFileInterpreterExtension];
-	XCTAssertTrue([interpreter interpreteFile:path intoObject:fileObject3 withLanguage:StringsFileInterpreterTestLanguage referenceLanguage:StringsFileInterpreterTestLanguage], @"Interpretation failed");
+	XCTAssertTrue([interpreter interpretFile:path intoObject:fileObject3 withLanguage:StringsFileInterpreterTestLanguage referenceLanguage:StringsFileInterpreterTestLanguage], @"Interpretation failed");
 
 	XCTAssertEqual([[fileObject3 objects] count], (NSUInteger)5, @"Wrong number of imported keys");
 	XCTAssertEqual([fileObject3 numberOfKeys], (NSUInteger)5, @"Wrong number of active keys");

@@ -157,14 +157,14 @@ NSMutableDictionary *__fileInterpreterClasses = nil;
 
 #pragma mark - Common Implementations
 
-- (BOOL)interpreteFileObject:(BLFileObject *)object inDocument:(NSDocument<BLDocumentProtocol> *)document withLanguage:(NSString *)language {
+- (BOOL)interpretFileObject:(BLFileObject *)object inDocument:(NSDocument<BLDocumentProtocol> *)document withLanguage:(NSString *)language {
 	NSString *path = [[document pathCreator] absolutePathForFile:object andLanguage:language];
-	return [self interpreteFile:path intoObject:object withLanguage:language referenceLanguage:[document referenceLanguage]];
+	return [self interpretFile:path intoObject:object withLanguage:language referenceLanguage:[document referenceLanguage]];
 }
 
 #pragma mark -
 
-- (BOOL)willInterpreteFile:(NSString *)path intoObject:(BLFileObject *)object {
+- (BOOL)willInterpretFile:(NSString *)path intoObject:(BLFileObject *)object {
 	NSString *hash;
 
 	// Import no matter what's coming
@@ -184,16 +184,16 @@ NSMutableDictionary *__fileInterpreterClasses = nil;
 	return !hash || ![hash isEqualToString:[object hashValue]];
 }
 
-- (BOOL)willInterpreteFileObject:(BLFileObject *)object inDocument:(NSDocument<BLDocumentProtocol> *)document withLanguage:(NSString *)language {
+- (BOOL)willInterpretFileObject:(BLFileObject *)object inDocument:(NSDocument<BLDocumentProtocol> *)document withLanguage:(NSString *)language {
 	NSString *path;
 
 	path = [[document pathCreator] absolutePathForFile:object andLanguage:language];
-	return [self willInterpreteFile:path intoObject:object];
+	return [self willInterpretFile:path intoObject:object];
 }
 
 #pragma mark - Interpretation
 
-- (BOOL)interpreteFile:(NSString *)path intoObject:(BLFileObject *)object withLanguage:(NSString *)language referenceLanguage:(NSString *)reference {
+- (BOOL)interpretFile:(NSString *)path intoObject:(BLFileObject *)object withLanguage:(NSString *)language referenceLanguage:(NSString *)reference {
 	BOOL success;
 
 	_fileObject = object;
@@ -219,7 +219,7 @@ NSMutableDictionary *__fileInterpreterClasses = nil;
 	}
 
 	// Only import if a change was done or we never imported
-	if (![self willInterpreteFile:path intoObject:_fileObject])
+	if (![self willInterpretFile:path intoObject:_fileObject])
 		return NO;
 
 	// Init the keys array, it will probably be about the same size as before
@@ -227,7 +227,7 @@ NSMutableDictionary *__fileInterpreterClasses = nil;
 
 	// The heavy work is done here...
 	BLLogBeginGroup(@"Importing %@ file at path \"%@\"", [path pathExtension], path);
-	success = [self _interpreteFile:path];
+	success = [self _interpretFile:path];
 
 	// Abort on failure
 	if (!success) {
@@ -241,10 +241,10 @@ NSMutableDictionary *__fileInterpreterClasses = nil;
 	// Remove no longer present keys
 	if ([self optionIsActive:BLFileInterpreterAllowChangesToKeyObjects]) {
 		NSUInteger count = [_fileObject removeObjectsWithKeyNotInArray:_emittedKeys];
-		_changed = _changed || (count > 0);
+		_changed |= count > 0;
 	}
 
-	// Run the autotranslation
+	// Run the auto translation
 	if ([self optionIsActive:BLFileInterpreterAutotranslateNewKeys]) {
 		[self autotranslateUsingObjects:[_fileObject objects]];
 		[self autotranslateUsingObjects:[_fileObject oldObjects]];
@@ -304,7 +304,7 @@ NSMutableDictionary *__fileInterpreterClasses = nil;
 	return YES;
 }
 
-- (BOOL)_interpreteFile:(NSString *)path {
+- (BOOL)_interpretFile:(NSString *)path {
 	// Default implementation just throws an exception
 	[[NSException exceptionWithName:NSInternalInconsistencyException reason:@"Method should have been overridden by a subclass!" userInfo:nil] raise];
 

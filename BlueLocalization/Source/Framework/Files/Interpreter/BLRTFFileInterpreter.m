@@ -34,7 +34,7 @@ NSString *kRTFDHashSubpath = @"TXT.rtf";
 
 #pragma mark -
 
-- (BOOL)_interpreteFile:(NSString *)path {
+- (BOOL)_interpretFile:(NSString *)path {
 	NSAttributedString *string;
 
 	string = [[NSAttributedString alloc] initWithPath:path documentAttributes:nil];

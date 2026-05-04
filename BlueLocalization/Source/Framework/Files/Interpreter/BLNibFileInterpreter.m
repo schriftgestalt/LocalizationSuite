@@ -42,7 +42,7 @@ NSString *kOldNibHashSubpath = @"objects.nib";
 
 #pragma mark -
 
-- (BOOL)_interpreteFile:(NSString *)path {
+- (BOOL)_interpretFile:(NSString *)path {
 	// We'll export the strings to a temporary file
 	NSString *stringsPath = [[path.stringByDeletingPathExtension stringByAppendingPathExtension:[NSString stringWithFormat:@"%lX", random()]] stringByAppendingPathExtension:@"strings"];
 	[[NSFileManager defaultManager] createFileAtPath:stringsPath contents:nil attributes:nil];
@@ -74,7 +74,7 @@ NSString *kOldNibHashSubpath = @"objects.nib";
 	BLFileInterpreter *stringsInterpreter = [BLFileInterpreter interpreterForFileType:@"strings"];
 	[stringsInterpreter _setForwardsToInterpreter:self];
 
-	BOOL success = [stringsInterpreter _interpreteFile:stringsPath];
+	BOOL success = [stringsInterpreter _interpretFile:stringsPath];
 
 	// Remove the temporary file
 	[[NSFileManager defaultManager] removeItemAtPath:stringsPath error:NULL];

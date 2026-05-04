@@ -57,7 +57,7 @@
 
 	BLFileInterpreter *interpreter = [BLFileInterpreter interpreterForFileObject:_fileObject];
 	[interpreter setOptions:BLFileInterpreterAllowChangesToKeyObjects];
-	[interpreter interpreteFile:[absoluteURL path] intoObject:_fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[absoluteURL path] intoObject:_fileObject withLanguage:@"en" referenceLanguage:nil];
 
 	return (_fileObject != nil);
 }

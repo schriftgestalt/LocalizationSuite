@@ -9,7 +9,7 @@
 #import <BlueLocalization/BLProcessStep.h>
 
 /*!
- @abstract A step that determines the work to do on agiven set of objects for interpreation and enqueues groups to the manager accordingly.
+ @abstract A step that determines the work to do on a given set of objects for interpretation and enqueues groups to the manager accordingly.
  */
 @interface BLInterpreterStep : BLProcessStep
 
@@ -17,7 +17,7 @@
  @abstract Creates a step for interpreting the given set of objects.
  @discussion Options can be set with BLFileInterpreter options. The options are additive, which means you can only enable additional options! The options are always modified, i.e. reference language files are imported enabling the modification of keys, whereas other languages are not allowed to.
  */
-+ (id)stepForInterpertingObjects:(NSArray *)objects withOptions:(NSUInteger)options parameters:(NSDictionary *)parameters andLanguages:(NSArray *)languages;
++ (id)stepForInterpretingObjects:(NSArray *)objects withOptions:(NSUInteger)options parameters:(NSDictionary *)parameters andLanguages:(NSArray *)languages;
 
 /*!
  @abstract Creates a step for interpreting the given files.

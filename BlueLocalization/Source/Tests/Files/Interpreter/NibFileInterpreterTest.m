@@ -30,7 +30,7 @@ NSString *OldExtension = @"nib";
 		NSDictionary *data;
 
 		fileObject = [BLFileObject fileObjectWithPathExtension:Extension];
-		BOOL result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:TestLanguage referenceLanguage:nil];
+		BOOL result = [interpreter interpretFile:path intoObject:fileObject withLanguage:TestLanguage referenceLanguage:nil];
 		XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 		data = [NSDictionary dictionaryWithContentsOfFile:[[path stringByDeletingPathExtension] stringByAppendingPathExtension:@"strings"]];
@@ -60,7 +60,7 @@ NSString *OldExtension = @"nib";
 
 	// Interprete file
 	fileObject = [BLFileObject fileObjectWithPathExtension:Extension];
-	BOOL result = [interpreter interpreteFile:path intoObject:nil withLanguage:TestLanguage referenceLanguage:nil];
+	BOOL result = [interpreter interpretFile:path intoObject:nil withLanguage:TestLanguage referenceLanguage:nil];
 	XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 	// Check for tbz files
@@ -73,19 +73,19 @@ NSString *OldExtension = @"nib";
 
 	// Interprete original
 	NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"example" ofType:Extension inDirectory:@"Test Data/Interpreter/nib"];
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:TestLanguage referenceLanguage:TestLanguage];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:TestLanguage referenceLanguage:TestLanguage];
 
 	XCTAssertEqualObjects([fileObject changedValues], [NSArray arrayWithObject:BLObjectReferenceChangedKey], @"Reference should change");
 	[fileObject setNothingDidChange];
 	XCTAssertEqualObjects([fileObject changedValues], [NSArray array], @"Nothing should be changed");
 
 	// Interprete again
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:TestLanguage referenceLanguage:TestLanguage];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:TestLanguage referenceLanguage:TestLanguage];
 	XCTAssertEqualObjects([fileObject changedValues], [NSArray array], @"Nothing should be changed");
 
 	// Interprete moved version
 	path = [[NSBundle bundleForClass:[self class]] pathForResource:@"example-mv" ofType:Extension inDirectory:@"Test Data/Interpreter/nib"];
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:TestLanguage referenceLanguage:TestLanguage];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:TestLanguage referenceLanguage:TestLanguage];
 
 	XCTAssertEqualObjects([fileObject changedValues], [NSArray arrayWithObject:BLObjectReferenceChangedKey], @"Reference should change");
 	[fileObject setNothingDidChange];
@@ -93,7 +93,7 @@ NSString *OldExtension = @"nib";
 
 	// Re-interprete original
 	path = [[NSBundle bundleForClass:[self class]] pathForResource:@"example" ofType:Extension inDirectory:@"Test Data/Interpreter/nib"];
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:TestLanguage referenceLanguage:TestLanguage];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:TestLanguage referenceLanguage:TestLanguage];
 
 	XCTAssertEqualObjects([fileObject changedValues], [NSArray arrayWithObject:BLObjectReferenceChangedKey], @"Reference should change");
 	[fileObject setNothingDidChange];
@@ -101,7 +101,7 @@ NSString *OldExtension = @"nib";
 
 	// Interprete version with added strings
 	path = [[NSBundle bundleForClass:[self class]] pathForResource:@"example-ed" ofType:Extension inDirectory:@"Test Data/Interpreter/nib"];
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:TestLanguage referenceLanguage:TestLanguage];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:TestLanguage referenceLanguage:TestLanguage];
 
 	XCTAssertEqualObjects([fileObject changedValues], [NSArray arrayWithObject:BLObjectReferenceChangedKey], @"Reference should change");
 	[fileObject setNothingDidChange];

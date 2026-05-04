@@ -11,8 +11,6 @@
 		500C581A140FB36600DD5F0E /* BLXcodeImportUpdateStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C5818140FB36600DD5F0E /* BLXcodeImportUpdateStep.m */; };
 		5010B76B129C8D6E0044A488 /* BLXcodeExportUpdateStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 5010B769129C8D6E0044A488 /* BLXcodeExportUpdateStep.h */; };
 		5010B76C129C8D6E0044A488 /* BLXcodeExportUpdateStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 5010B76A129C8D6E0044A488 /* BLXcodeExportUpdateStep.m */; };
-		5014B9920FB3362200DC2EC3 /* BLObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5014B9900FB3362200DC2EC3 /* BLObjectProxy.m */; };
-		5014B9930FB3362200DC2EC3 /* BLObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 5014B9910FB3362200DC2EC3 /* BLObjectProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5015EA880FF1A21600239775 /* BLStringsExporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C247DA0F979F1B003B3522 /* BLStringsExporter.xib */; };
 		502148FF101605F900A8180B /* BLXcodeExporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 502148FD101605F900A8180B /* BLXcodeExporter.xib */; };
 		5024700D113002D3001DA94B /* BLDictionaryExporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5024700B113002D3001DA94B /* BLDictionaryExporter.xib */; };
@@ -26,7 +24,6 @@
 		5048BF66127A1D98006FFAC2 /* BLDocumentPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5048BF64127A1D98006FFAC2 /* BLDocumentPreferences.m */; };
 		5054D2CA1404D04900434EAC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 		5054D2DE1404D1E100434EAC /* ObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C247AB0F979D7D003B3522 /* ObjectTest.m */; };
-		5054D2E01404D1E100434EAC /* ObjectProxyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5014B98D0FB3360300DC2EC3 /* ObjectProxyTest.m */; };
 		5054D2E21404D1E100434EAC /* ObjectExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BB648810B5B62C00A1AD4C /* ObjectExtensionsTest.m */; };
 		5054D2E41404D1E100434EAC /* FileObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CC9B20115CE3D200AFC588 /* FileObjectTest.m */; };
 		5054D2E61404D1E100434EAC /* KeyObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5098629610D1743900614FFE /* KeyObjectTest.m */; };
@@ -277,10 +274,6 @@
 		500C5818140FB36600DD5F0E /* BLXcodeImportUpdateStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXcodeImportUpdateStep.m; sourceTree = "<group>"; };
 		5010B769129C8D6E0044A488 /* BLXcodeExportUpdateStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLXcodeExportUpdateStep.h; sourceTree = "<group>"; };
 		5010B76A129C8D6E0044A488 /* BLXcodeExportUpdateStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLXcodeExportUpdateStep.m; sourceTree = "<group>"; };
-		5014B98C0FB3360300DC2EC3 /* ObjectProxyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectProxyTest.h; sourceTree = "<group>"; };
-		5014B98D0FB3360300DC2EC3 /* ObjectProxyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectProxyTest.m; sourceTree = "<group>"; };
-		5014B9900FB3362200DC2EC3 /* BLObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLObjectProxy.m; sourceTree = "<group>"; };
-		5014B9910FB3362200DC2EC3 /* BLObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLObjectProxy.h; sourceTree = "<group>"; };
 		5014BB0C0FB49C6600DC2EC3 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = ../Shared/Frameworks/OCMock.framework; sourceTree = SOURCE_ROOT; };
 		5014BB5A0FB4A3CC00DC2EC3 /* hamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = hamcrest.framework; path = ../Shared/Frameworks/hamcrest.framework; sourceTree = SOURCE_ROOT; };
 		50244FFA1095B911000AF365 /* StringsFileCreatorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringsFileCreatorTest.h; sourceTree = "<group>"; };
@@ -990,8 +983,6 @@
 				50C2470F0F979D58003B3522 /* BLBundleObject.m */,
 				50C247120F979D58003B3522 /* BLObjectExtensions.h */,
 				50C247130F979D58003B3522 /* BLObjectExtensions.m */,
-				5014B9910FB3362200DC2EC3 /* BLObjectProxy.h */,
-				5014B9900FB3362200DC2EC3 /* BLObjectProxy.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1150,8 +1141,6 @@
 			children = (
 				50C247AA0F979D7D003B3522 /* ObjectTest.h */,
 				50C247AB0F979D7D003B3522 /* ObjectTest.m */,
-				5014B98C0FB3360300DC2EC3 /* ObjectProxyTest.h */,
-				5014B98D0FB3360300DC2EC3 /* ObjectProxyTest.m */,
 				50BB648710B5B62C00A1AD4C /* ObjectExtensionsTest.h */,
 				50BB648810B5B62C00A1AD4C /* ObjectExtensionsTest.m */,
 			);
@@ -1351,7 +1340,6 @@
 				50AE891E0FA676EC00CE3EFF /* BLDatabaseDocumentActions.h in Headers */,
 				50AE893C0FA8461E00CE3EFF /* BLCreatorStep.h in Headers */,
 				50AE89400FA849AA00CE3EFF /* BLCreationStep.h in Headers */,
-				5014B9930FB3362200DC2EC3 /* BLObjectProxy.h in Headers */,
 				5055576D0FB4E20F0008BE20 /* BLLocalizerExportStep.h in Headers */,
 				505557790FB4F8B40008BE20 /* BLGenericProcessStep.h in Headers */,
 				505558EA0FB521910008BE20 /* BLLocalizerImportStep.h in Headers */,
@@ -1576,7 +1564,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5054D2DE1404D1E100434EAC /* ObjectTest.m in Sources */,
-				5054D2E01404D1E100434EAC /* ObjectProxyTest.m in Sources */,
 				5054D2E21404D1E100434EAC /* ObjectExtensionsTest.m in Sources */,
 				5054D2E41404D1E100434EAC /* FileObjectTest.m in Sources */,
 				5054D2E61404D1E100434EAC /* KeyObjectTest.m in Sources */,
@@ -1662,7 +1649,6 @@
 				50AE893D0FA8461E00CE3EFF /* BLCreatorStep.m in Sources */,
 				50AE89410FA849AA00CE3EFF /* BLCreationStep.m in Sources */,
 				569A025329A64FB6009CD8C4 /* NSData_Conversion.m in Sources */,
-				5014B9920FB3362200DC2EC3 /* BLObjectProxy.m in Sources */,
 				5055576E0FB4E20F0008BE20 /* BLLocalizerExportStep.m in Sources */,
 				5055577A0FB4F8B40008BE20 /* BLGenericProcessStep.m in Sources */,
 				505558EB0FB521910008BE20 /* BLLocalizerImportStep.m in Sources */,

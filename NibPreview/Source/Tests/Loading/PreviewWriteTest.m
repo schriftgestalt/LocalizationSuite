@@ -18,7 +18,7 @@
 	fileObject = [BLFileObject fileObjectWithPath:srcPath];
 	BLFileInterpreter *interpreter = [BLFileInterpreter interpreterForFileObject:fileObject];
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects];
-	XCTAssertTrue([interpreter interpreteFile:srcPath intoObject:fileObject withLanguage:@"en" referenceLanguage:nil], @"Cannot import file!");
+	XCTAssertTrue([interpreter interpretFile:srcPath intoObject:fileObject withLanguage:@"en" referenceLanguage:nil], @"Cannot import file!");
 
 	// Load preview
 	preview = [[NPPreview alloc] initWithNibAtPath:srcPath];
@@ -63,7 +63,7 @@
 	BLFileObject *other = [BLFileObject fileObjectWithPath:outPath];
 	BLFileInterpreter *interpreter = [BLFileInterpreter interpreterForFileObject:other];
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects];
-	XCTAssertTrue([interpreter interpreteFile:outPath intoObject:other withLanguage:@"de" referenceLanguage:nil], @"Cannot import file!");
+	XCTAssertTrue([interpreter interpretFile:outPath intoObject:other withLanguage:@"de" referenceLanguage:nil], @"Cannot import file!");
 
 	for (BLKeyObject *key in other.objects) {
 		BLKeyObject *orig = [fileObject objectForKey:key.key];

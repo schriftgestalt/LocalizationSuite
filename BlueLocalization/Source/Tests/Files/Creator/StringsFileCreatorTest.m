@@ -41,7 +41,7 @@ NSString *StringsFileCreatorExtension = @"strings";
 		secondFileObject = [BLFileObject fileObjectWithPathExtension:StringsFileCreatorExtension];
 
 		// Read in
-		BOOL result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:StringsFileCreatorTestLanguage referenceLanguage:nil];
+		BOOL result = [interpreter interpretFile:path intoObject:fileObject withLanguage:StringsFileCreatorTestLanguage referenceLanguage:nil];
 		XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 		// Write out
@@ -73,7 +73,7 @@ NSString *StringsFileCreatorExtension = @"strings";
 
 	// Read in
 	BLFileObject *fileObject = [BLFileObject fileObjectWithPathExtension:StringsFileCreatorExtension];
-	BOOL result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:StringsFileCreatorTestLanguage referenceLanguage:StringsFileCreatorTestLanguage];
+	BOOL result = [interpreter interpretFile:path intoObject:fileObject withLanguage:StringsFileCreatorTestLanguage referenceLanguage:StringsFileCreatorTestLanguage];
 	XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 	// Write out
@@ -93,7 +93,7 @@ NSString *StringsFileCreatorExtension = @"strings";
 
 	// Read in
 	fileObject = [BLFileObject fileObjectWithPathExtension:StringsFileCreatorExtension];
-	result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:StringsFileCreatorTestLanguage referenceLanguage:nil];
+	result = [interpreter interpretFile:path intoObject:fileObject withLanguage:StringsFileCreatorTestLanguage referenceLanguage:nil];
 	XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 	// Write out

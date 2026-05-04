@@ -238,7 +238,7 @@ id __sharedStringsImporter;
 		NSArray *fileObjects = [BLObject fileObjectsWithName:[file lastPathComponent] inArray:objects];
 		BLLog(BLLogInfo, @"Importing regular file:%@ (%d found) language:%@ bundle:%@", [file lastPathComponent], [fileObjects count], language, [bundle name]);
 		for (BLFileObject *fileObject in fileObjects)
-			[[BLFileInterpreter interpreterForFileObject:fileObject] interpreteFile:file intoObject:fileObject withLanguage:language referenceLanguage:referenceLanguage];
+			[[BLFileInterpreter interpreterForFileObject:fileObject] interpretFile:file intoObject:fileObject withLanguage:language referenceLanguage:referenceLanguage];
 	}
 
 	// Import strings files

@@ -33,8 +33,6 @@
 
 	if (self != nil) {
 		objects = [BLObject fileObjectsFromArray:objects];
-		objects = [BLObject proxiesForObjects:objects];
-
 		_languages = languages;
 		_objects = objects;
 		_reinject = reinject;

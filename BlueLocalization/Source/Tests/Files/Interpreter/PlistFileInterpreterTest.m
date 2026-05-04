@@ -29,7 +29,7 @@ NSString *PlistFileInterpreterExtension = @"plist";
 		NSDictionary *data;
 
 		fileObject = [BLFileObject fileObjectWithPathExtension:PlistFileInterpreterExtension];
-		BOOL result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:PlistFileInterpreterTestLanguage referenceLanguage:nil];
+		BOOL result = [interpreter interpretFile:path intoObject:fileObject withLanguage:PlistFileInterpreterTestLanguage referenceLanguage:nil];
 		XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 		data = [NSDictionary dictionaryWithContentsOfFile:[[path stringByDeletingPathExtension] stringByAppendingPathExtension:@"strings"]];

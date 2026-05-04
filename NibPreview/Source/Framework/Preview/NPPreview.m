@@ -65,7 +65,6 @@
 	if (_fileObject)
 		[_fileObject removeObserver:self forKeyPath:@"objects"];
 
-	_fileObject = [fileObject _original];
 
 	if (_fileObject)
 		[_fileObject addObserver:self forKeyPath:@"objects" options:0 context:@"objects"];

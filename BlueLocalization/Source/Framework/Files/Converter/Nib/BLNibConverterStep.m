@@ -25,14 +25,13 @@
 	NSMutableArray *steps;
 
 	objects = [BLObject fileObjectsFromArray:objects];
-	objects = [BLObject proxiesForObjects:objects];
-
 	steps = [NSMutableArray arrayWithCapacity:[objects count]];
 
 	for (NSUInteger i = 0; i < [objects count]; i++) {
 		BLFileObject *object = [objects objectAtIndex:i];
-		if ([object isKindOfClass:[BLNibFileObject class]])
+		if ([object isKindOfClass:[BLNibFileObject class]]) {
 			[steps addObject:[[self alloc] initForConvertingObject:(BLNibFileObject *)object]];
+		}
 	}
 
 	return steps;

@@ -69,7 +69,6 @@ NSString *BLInterpretationStepIgnoredPlaceholderStringsKey = @"ignoredPlaceholde
 		if (!_fileObject)
 			return;
 
-		_fileObject = [BLObjectProxy proxyWithObject:_fileObject];
 		[self updateDescription];
 	}
 
@@ -81,7 +80,7 @@ NSString *BLInterpretationStepIgnoredPlaceholderStringsKey = @"ignoredPlaceholde
 	interpreter.ignoredPlaceholderStrings = [_parameters objectForKey:BLInterpretationStepIgnoredPlaceholderStringsKey];
 
 	// Interprete
-	success = [interpreter interpreteFile:_path intoObject:_fileObject withLanguage:_language referenceLanguage:[document referenceLanguage]];
+	success = [interpreter interpretFile:_path intoObject:_fileObject withLanguage:_language referenceLanguage:[document referenceLanguage]];
 
 	// Update the object status
 	if (success)

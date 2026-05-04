@@ -59,10 +59,10 @@
 
 	interpreter = [BLFileInterpreter interpreterForFileObject:_file];
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects];
-	[interpreter interpreteFile:path intoObject:_file withLanguage:@"en" referenceLanguage:@"en"];
+	[interpreter interpretFile:path intoObject:_file withLanguage:@"en" referenceLanguage:@"en"];
 
 	interpreter = [BLFileInterpreter interpreterForFileObject:_file];
-	[interpreter interpreteFile:path intoObject:_file withLanguage:@"de" referenceLanguage:nil];
+	[interpreter interpretFile:path intoObject:_file withLanguage:@"de" referenceLanguage:nil];
 
 	// Add some attachments
 	if ([_file.objects count] >= 2) {

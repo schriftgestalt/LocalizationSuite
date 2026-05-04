@@ -96,10 +96,10 @@
 }
 
 - (void)testErrorImport {
-	XCTAssertFalse([interpreter interpreteFile:@"any/nonexistent/path.strings" intoObject:fileObject withLanguage:@"en" referenceLanguage:nil], @"Should fail on not existing files");
+	XCTAssertFalse([interpreter interpretFile:@"any/nonexistent/path.strings" intoObject:fileObject withLanguage:@"en" referenceLanguage:nil], @"Should fail on not existing files");
 	XCTAssertTrue([[fileObject errors] containsObject:BLObjectFileNotFoundError], @"Should have set an not found error");
 
-	XCTAssertFalse([interpreter interpreteFile:[path stringByAppendingPathExtension:@"unknown"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil], @"Should fail on unknown file types");
+	XCTAssertFalse([interpreter interpretFile:[path stringByAppendingPathExtension:@"unknown"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil], @"Should fail on unknown file types");
 	XCTAssertTrue([[fileObject errors] containsObject:BLObjectFiletypeUnknownError], @"Should have set an unknwon type error");
 }
 
@@ -109,24 +109,24 @@
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects];
 
 	[interpreter deactivateOptions:BLFileInterpreterIgnoreFileChangeDates];
-	XCTAssertTrue([interpreter willInterpreteFile:path intoObject:fileObject], @"Should want to import never imported files.");
-	XCTAssertTrue([interpreter interpreteFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"], @"Initial import should not fail.");
+	XCTAssertTrue([interpreter willInterpretFile:path intoObject:fileObject], @"Should want to import never imported files.");
+	XCTAssertTrue([interpreter interpretFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"], @"Initial import should not fail.");
 
-	XCTAssertFalse([interpreter willInterpreteFile:path intoObject:fileObject], @"Should not want to import a just imported files.");
-	XCTAssertFalse([interpreter interpreteFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"], @"Second import should fail.");
+	XCTAssertFalse([interpreter willInterpretFile:path intoObject:fileObject], @"Should not want to import a just imported files.");
+	XCTAssertFalse([interpreter interpretFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"], @"Second import should fail.");
 
 	[interpreter activateOptions:BLFileInterpreterIgnoreFileChangeDates];
-	XCTAssertTrue([interpreter willInterpreteFile:path intoObject:fileObject], @"Should now want to import because its irgnoring dates.");
-	XCTAssertTrue([interpreter interpreteFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"], @"Second import should not fail when ignoring dates.");
+	XCTAssertTrue([interpreter willInterpretFile:path intoObject:fileObject], @"Should now want to import because its irgnoring dates.");
+	XCTAssertTrue([interpreter interpretFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"], @"Second import should not fail when ignoring dates.");
 }
 
 - (void)testChangesToKeyObjects {
 	[interpreter deactivateOptions:BLFileInterpreterAllowChangesToKeyObjects];
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	XCTAssertTrue([[fileObject objects] count] == 0, @"Should not have added any keys");
 
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects];
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	XCTAssertTrue([[fileObject objects] count] > 0, @"Should have added some keys");
 }
 
@@ -135,18 +135,18 @@
 
 	// Import the file one, no updated flag should be set
 	[interpreter deactivateOptions:BLFileInterpreterTrackValueChangesAsUpdate];
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	for (BLKeyObject *key in [fileObject objects])
 		XCTAssertFalse([key wasUpdated], @"No key object should have been set as updated");
 
 	// Import the file again, still no updated flag should be set, as nothing changed
 	[interpreter activateOptions:BLFileInterpreterTrackValueChangesAsUpdate];
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	for (BLKeyObject *key in [fileObject objects])
 		XCTAssertFalse([key wasUpdated], @"No key object should have been set as updated");
 
 	// Import a "different version", updated flag should be set to some keys
-	[interpreter interpreteFile:path2 intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:path2 intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	BOOL updated = NO;
 	for (BLKeyObject *key in [fileObject objects])
 		updated = updated || [key wasUpdated];
@@ -158,11 +158,11 @@
 
 	// Import english version
 	[interpreter deactivateOptions:BLFileInterpreterValueChangesResetKeys];
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 
 	// Import german version
 	[interpreter deactivateOptions:BLFileInterpreterAllowChangesToKeyObjects];
-	[interpreter interpreteFile:[self pathForFile:@"simple-de"] intoObject:fileObject withLanguage:@"de" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"simple-de"] intoObject:fileObject withLanguage:@"de" referenceLanguage:nil];
 
 	// Test for contents
 	for (BLKeyObject *key in [fileObject objects]) {
@@ -172,7 +172,7 @@
 
 	// Import "new version"
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects | BLFileInterpreterValueChangesResetKeys];
-	[interpreter interpreteFile:path2 intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:path2 intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	BOOL removed = NO;
 	for (BLKeyObject *key in [fileObject objects])
 		removed = removed || ([key objectForLanguage:@"de"] == nil);
@@ -183,13 +183,13 @@
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects | BLFileInterpreterIgnoreFileChangeDates];
 
 	[interpreter activateOptions:BLFileInterpreterImportEmptyKeys];
-	[interpreter interpreteFile:[self pathForFile:@"emptyValues"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"emptyValues"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 
 	NSUInteger oldCount = [[fileObject objects] count];
 	XCTAssertTrue(oldCount > 0, @"Should have imported several items");
 
 	[interpreter deactivateOptions:BLFileInterpreterImportEmptyKeys];
-	[interpreter interpreteFile:[self pathForFile:@"emptyValues"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"emptyValues"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	XCTAssertTrue([[fileObject objects] count] < oldCount, @"Empty keys should have been omitted");
 }
 
@@ -197,12 +197,12 @@
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects | BLFileInterpreterIgnoreFileChangeDates | BLFileInterpreterImportEmptyKeys];
 
 	[interpreter deactivateOptions:BLFileInterpreterDeactivateEmptyKeys];
-	[interpreter interpreteFile:[self pathForFile:@"emptyValues"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"emptyValues"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	for (BLKeyObject *key in [fileObject objects])
 		XCTAssertTrue([key isActive], @"No key object should have been deactivated");
 
 	[interpreter activateOptions:BLFileInterpreterDeactivateEmptyKeys];
-	[interpreter interpreteFile:[self pathForFile:@"emptyValues"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"emptyValues"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	BOOL deactivated = NO;
 	for (BLKeyObject *key in [fileObject objects])
 		deactivated = deactivated || ![key isActive];
@@ -213,12 +213,12 @@
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects | BLFileInterpreterIgnoreFileChangeDates];
 
 	[interpreter deactivateOptions:BLFileInterpreterImportComments];
-	[interpreter interpreteFile:[self pathForFile:@"simpleCommented"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"simpleCommented"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	for (BLKeyObject *key in [fileObject objects])
 		XCTAssertTrue([[key comment] length] == 0, @"No comment should have been imported");
 
 	[interpreter activateOptions:BLFileInterpreterImportComments];
-	[interpreter interpreteFile:[self pathForFile:@"simpleCommented"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"simpleCommented"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	for (BLKeyObject *key in [fileObject objects])
 		XCTAssertTrue([[key comment] length] != 0, @"All keys should have comments");
 }
@@ -229,13 +229,13 @@
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects | BLFileInterpreterIgnoreFileChangeDates | BLFileInterpreterImportComments];
 
 	[interpreter deactivateOptions:BLFileInterpreterEnableShadowComments];
-	[interpreter interpreteFile:[self pathForCommentFile:@"shadow" ofType:@"strings"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForCommentFile:@"shadow" ofType:@"strings"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	dict = [NSDictionary dictionaryWithContentsOfFile:[self pathForCommentFile:@"shadow" ofType:@"comments"]];
 	for (BLKeyObject *key in [fileObject objects])
 		XCTAssertEqualObjects([key comment], [dict objectForKey:[key key]], @"Standard comment import does not match for key %@", [key key]);
 
 	[interpreter activateOptions:BLFileInterpreterEnableShadowComments];
-	[interpreter interpreteFile:[self pathForCommentFile:@"shadow" ofType:@"strings"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForCommentFile:@"shadow" ofType:@"strings"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	dict = [NSDictionary dictionaryWithContentsOfFile:[self pathForCommentFile:@"shadow2" ofType:@"comments"]];
 	for (BLKeyObject *key in [fileObject objects])
 		XCTAssertEqualObjects([key comment], [dict objectForKey:[key key]], @"Shadowed comment import does not match for key %@", [key key]);
@@ -248,20 +248,20 @@
 	[interpreter deactivateOptions:BLFileInterpreterValueChangesResetKeys];
 
 	// Initial import of localized file
-	[interpreter interpreteFile:[self pathForFile:@"simple"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
-	[interpreter interpreteFile:[self pathForFile:@"simple-de"] intoObject:fileObject withLanguage:@"de" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"simple"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"simple-de"] intoObject:fileObject withLanguage:@"de" referenceLanguage:nil];
 	dict = [NSDictionary dictionaryWithContentsOfFile:[self pathForFile:@"simple-de"]];
 	for (BLKeyObject *key in [fileObject objects])
 		XCTAssertEqualObjects([key objectForLanguage:@"de"], [dict objectForKey:[key key]], @"Wrong german strings for key %@", [key key]);
 
 	// Overriding import of english
-	[interpreter interpreteFile:[self pathForFile:@"simple2"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"simple2"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	for (BLKeyObject *key in [fileObject objects])
 		XCTAssertEqualObjects([key objectForLanguage:@"de"], [dict objectForKey:[key key]], @"German strings should not have changed for key %@", [key key]);
 
 	// Another overriding import of english
-	[interpreter interpreteFile:[self pathForFile:@"simple"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
-	[interpreter interpreteFile:[self pathForFile:@"simple3"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"simple"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"simple3"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	dict = [NSDictionary dictionaryWithContentsOfFile:[self pathForFile:@"simple3-de"]];
 	for (BLKeyObject *key in [fileObject objects])
 		XCTAssertEqualObjects([key objectForLanguage:@"de"], [dict objectForKey:[key key]], @"German strings should not have changed for key %@", [key key]);
@@ -273,20 +273,20 @@
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects | BLFileInterpreterIgnoreFileChangeDates | BLFileInterpreterAutotranslateNewKeys | BLFileInterpreterValueChangesResetKeys];
 
 	// Initial import of localized file
-	[interpreter interpreteFile:[self pathForFile:@"simple"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
-	[interpreter interpreteFile:[self pathForFile:@"simple-de"] intoObject:fileObject withLanguage:@"de" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"simple"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"simple-de"] intoObject:fileObject withLanguage:@"de" referenceLanguage:nil];
 	dict = [NSDictionary dictionaryWithContentsOfFile:[self pathForFile:@"simple-de"]];
 	for (BLKeyObject *key in [fileObject objects])
 		XCTAssertEqualObjects([key objectForLanguage:@"de"], [dict objectForKey:[key key]], @"Wrong german strings for key %@", [key key]);
 
 	// Overriding import of english
-	[interpreter interpreteFile:[self pathForFile:@"simple2"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"simple2"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	dict = [NSDictionary dictionaryWithContentsOfFile:[self pathForFile:@"simple2-de"]];
 	for (BLKeyObject *key in [fileObject objects])
 		XCTAssertEqualObjects([key objectForLanguage:@"de"], [dict objectForKey:[key key]], @"German strings should not have changed for key %@", [key key]);
 
 	// Another overriding import of english
-	[interpreter interpreteFile:[self pathForFile:@"simple3"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"simple3"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	dict = [NSDictionary dictionaryWithContentsOfFile:[self pathForFile:@"simple3-de"]];
 	for (BLKeyObject *key in [fileObject objects])
 		XCTAssertEqualObjects([key objectForLanguage:@"de"], [dict objectForKey:[key key]], @"German strings should not have changed for key %@", [key key]);
@@ -296,7 +296,7 @@
 	// Import english version as reference
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects | BLFileInterpreterIgnoreFileChangeDates];
 	[interpreter deactivateOptions:BLFileInterpreterValueChangesResetKeys];
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"];
 
 	// Test file
 	XCTAssertTrue([[fileObject objects] count] > 0, @"No keys imported!");
@@ -312,7 +312,7 @@
 	// Import german version
 	[interpreter deactivateOptions:BLFileInterpreterAllowChangesToKeyObjects | BLFileInterpreterIgnoreFileChangeDates];
 	[interpreter deactivateOptions:BLFileInterpreterAllowChangesToKeyObjects];
-	[interpreter interpreteFile:[self pathForFile:@"simple-de"] intoObject:fileObject withLanguage:@"de" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"simple-de"] intoObject:fileObject withLanguage:@"de" referenceLanguage:nil];
 
 	// Test file
 	XCTAssertTrue([[fileObject objects] count] > 0, @"No keys imported!");
@@ -328,7 +328,7 @@
 
 	// Import differen english version NOT as reference
 	[interpreter deactivateOptions:BLFileInterpreterValueChangesResetKeys];
-	[interpreter interpreteFile:[self pathForFile:@"simple-de"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:[self pathForFile:@"simple-de"] intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 
 	// Test file
 	XCTAssertTrue([[fileObject objects] count] > 0, @"No keys imported!");
@@ -347,17 +347,17 @@
 	XCTAssertTrue(NO); // the tested API is not available. Why?
 #if 0
 	// Import w/o reference should not create backup
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	XCTAssertTrue([fileObject versionForLanguage:@"en"] == 0, @"No version should be present");
 	XCTAssertNil([fileObject attachedObjectForKey:BLBackupAttachmentKey version:[fileObject versionForLanguage:@"en"]], @"No backup should be present");
 
 	// Nothing should change -> file didn't change
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	XCTAssertTrue([fileObject versionForLanguage:@"en"] == 0, @"No version should be present");
 	XCTAssertNil([fileObject attachedObjectForKey:BLBackupAttachmentKey version:[fileObject versionForLanguage:@"en"]], @"No backup should be present");
 
 	// Ignore change dates, import as reference
-	[interpreter interpreteFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"];
+	[interpreter interpretFile:path intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"];
 	XCTAssertTrue([fileObject versionForLanguage:@"en"] == 1, @"Version not updated!");
 	XCTAssertNotNil([fileObject attachedObjectForKey:BLBackupAttachmentKey version:[fileObject versionForLanguage:@"en"]], @"backup missing");
 
@@ -367,7 +367,7 @@
 	XCTAssertEquals(backup1, [fileObject attachedObjectForKey:BLBackupAttachmentKey version:[fileObject versionForLanguage:@"de"]], @"Reference broken");
 
 	// Import new version
-	[interpreter interpreteFile:path2 intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"];
+	[interpreter interpretFile:path2 intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"];
 	XCTAssertTrue([fileObject versionForLanguage:@"en"] == 2, @"Version not updated!");
 	XCTAssertNotNil([fileObject attachedObjectForKey:BLBackupAttachmentKey version:[fileObject versionForLanguage:@"en"]], @"backup missing");
 
@@ -381,8 +381,8 @@
 	// Import non reference values
 	[interpreter deactivateOptions:BLFileInterpreterImportNonReferenceValuesOnly];
 
-	[interpreter interpreteFile:[self pathForFile:@"simple"] intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"];
-	[interpreter interpreteFile:[self pathForFile:@"simple-de"] intoObject:fileObject withLanguage:@"de" referenceLanguage:@"en"];
+	[interpreter interpretFile:[self pathForFile:@"simple"] intoObject:fileObject withLanguage:@"en" referenceLanguage:@"en"];
+	[interpreter interpretFile:[self pathForFile:@"simple-de"] intoObject:fileObject withLanguage:@"de" referenceLanguage:@"en"];
 
 	BLKeyObject *key = [fileObject objectForKey:@"first"];
 	XCTAssertEqualObjects([key objectForLanguage:@"en"], [key objectForLanguage:@"de"], @"Equal values should be imported");

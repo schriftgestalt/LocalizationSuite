@@ -171,7 +171,7 @@
 	// Rescan selected objects
 	NSUInteger options = [self defaultInterpreterOptions];
 	options |= (force) ? BLFileInterpreterIgnoreFileChangeDates : BLFileInterpreterNoOptions;
-	[[self processManager] enqueueStep:[BLInterpreterStep stepForInterpertingObjects:objects withOptions:options parameters:[self defaultInterpreterParameters] andLanguages:[NSArray arrayWithObject:_referenceLanguage]]];
+	[[self processManager] enqueueStep:[BLInterpreterStep stepForInterpretingObjects:objects withOptions:options parameters:[self defaultInterpreterParameters] andLanguages:[NSArray arrayWithObject:_referenceLanguage]]];
 
 	[[self processManager] startWithName:@"Rescanning…"];
 }
@@ -185,7 +185,7 @@
 	NSMutableArray *actualLanguages = [NSMutableArray arrayWithArray:languages];
 	[actualLanguages removeObject:[self referenceLanguage]];
 
-	[[self processManager] enqueueStep:[BLInterpreterStep stepForInterpertingObjects:files withOptions:[self defaultInterpreterOptions] | BLFileInterpreterIgnoreFileChangeDates parameters:[self defaultInterpreterParameters] andLanguages:actualLanguages]];
+	[[self processManager] enqueueStep:[BLInterpreterStep stepForInterpretingObjects:files withOptions:[self defaultInterpreterOptions] | BLFileInterpreterIgnoreFileChangeDates parameters:[self defaultInterpreterParameters] andLanguages:actualLanguages]];
 	[[self processManager] startWithName:@"Reimporting…"];
 }
 

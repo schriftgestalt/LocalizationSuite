@@ -27,7 +27,7 @@ NSString *BLTXTFileContentKeyName = @"content";
 
 #pragma mark -
 
-- (BOOL)_interpreteFile:(NSString *)path {
+- (BOOL)_interpretFile:(NSString *)path {
 	NSString *string = [NSString stringWithContentsOfFile:path usedEncoding:NULL error:NULL];
 	[self _emitKey:BLTXTFileContentKeyName value:string leadingComment:nil inlineComment:nil];
 

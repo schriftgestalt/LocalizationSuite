@@ -28,7 +28,7 @@
 /*!
  @discussion If the file turns out to be a plist file, it is passed on to a plist file interpreter to do the heavy lifting.
  */
-- (BOOL)_interpreteFile:(NSString *)path {
+- (BOOL)_interpretFile:(NSString *)path {
 	NSDictionary *contents, *leadingComments, *inlineComments;
 	BOOL isPlistFile;
 	NSArray *keys;
@@ -45,7 +45,7 @@
 		interpreter = [BLFileInterpreter interpreterForFileType:@"plist"];
 		[interpreter _setForwardsToInterpreter:self];
 
-		return [interpreter _interpreteFile:path];
+		return [interpreter _interpretFile:path];
 	}
 
 	// Import the strings file

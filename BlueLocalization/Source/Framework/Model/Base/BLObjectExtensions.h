@@ -49,12 +49,6 @@
  */
 + (NSArray *)fileObjectsWithName:(NSString *)name inArray:(NSArray *)array;
 
-/*!
- @abstract Creates proxied for a set of objects.
- @discussion For each object in the array, calls BLObjectProxy's proxyWithObject: and returns these proxy objects.
- */
-+ (NSArray *)proxiesForObjects:(NSArray *)array;
-
 @end
 
 @interface BLObject (BLObjectKeyNumbers)

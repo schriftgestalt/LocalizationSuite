@@ -32,7 +32,7 @@ NSString *TXTFileCreatorExtension = @"txt";
 
 	// Read in
 	BLFileObject *fileObject = [BLFileObject fileObjectWithPathExtension:TXTFileCreatorExtension];
-	BOOL result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:TXTFileCreatorTestLanguage referenceLanguage:TXTFileCreatorTestLanguage];
+	BOOL result = [interpreter interpretFile:path intoObject:fileObject withLanguage:TXTFileCreatorTestLanguage referenceLanguage:TXTFileCreatorTestLanguage];
 	XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 	// Write out
@@ -52,7 +52,7 @@ NSString *TXTFileCreatorExtension = @"txt";
 
 	// Read in
 	fileObject = [BLFileObject fileObjectWithPathExtension:TXTFileCreatorExtension];
-	result = [interpreter interpreteFile:path intoObject:fileObject withLanguage:TXTFileCreatorTestLanguage referenceLanguage:TXTFileCreatorTestLanguage];
+	result = [interpreter interpretFile:path intoObject:fileObject withLanguage:TXTFileCreatorTestLanguage referenceLanguage:TXTFileCreatorTestLanguage];
 	XCTAssertTrue(result, @"Interpreter failed with no result for file %@", path);
 
 	// Write out

@@ -55,9 +55,9 @@ enum {
 
 /*!
  @abstract The primitive abstract superclass for all file interpretations.
- @discussion Basically, a file interpreter is a one-shot object. You have it created, set it up and use it - afterwards it is gone. Subclasses should override the _interpreteFile: method to actually do the heavy lifting.
+ @discussion Basically, a file interpreter is a one-shot object. You have it created, set it up and use it - afterwards it is gone. Subclasses should override the _interpretFile: method to actually do the heavy lifting.
 
- A technique sometimes needed is <b>interpreter forwarding</b>: If an interpreter needs to use a different one, it can just instantiate it and have it's contents forwarded. A reason for this might be that the data has only been converted to a different format, which is then to be interpreted. The procedure is simple as follows: In the overridden _interpreteFile: you should instantiate the different interpreter of the needed type and then send it a _setForwardsToInterpreter: message with self as argument. After that the others _interpreteFile: should be called directly.
+ A technique sometimes needed is <b>interpreter forwarding</b>: If an interpreter needs to use a different one, it can just instantiate it and have it's contents forwarded. A reason for this might be that the data has only been converted to a different format, which is then to be interpreted. The procedure is simple as follows: In the overridden _interpretFile: you should instantiate the different interpreter of the needed type and then send it a _setForwardsToInterpreter: message with self as argument. After that the others _interpretFile: should be called directly.
  */
 @interface BLFileInterpreter : NSObject {
 	BOOL _asReference;
@@ -148,13 +148,13 @@ enum {
 
 /*!
  @abstract Return the subpath of a path to be used for hash generation.
- @discussion This allows subclasses to specify a different path for hash generation. This is especially needed if the file path is a bundle, because hash values can only be calsulated for files. The default implementation returns the given path, which should be fine for most implementations.
+ @discussion This allows subclasses to specify a different path for hash generation. This is especially needed if the file path is a bundle, because hash values can only be calculated for files. The default implementation returns the given path, which should be fine for most implementations.
  */
 - (NSString *)actualPathForHashValueGeneration:(NSString *)path;
 
 /*!
- @abstract In an document context, this importes a localized version of a file object.
- @discussion The documents path creator is consulted for the full path of the given file object, then this method forwards to interpreteFile:intoObject:withLanguage:.
+ @abstract In an document context, this imports a localized version of a file object.
+ @discussion The documents path creator is consulted for the full path of the given file object, then this method forwards to interpretFile:intoObject:withLanguage:.
  @return YES if the file was imported, NO if no import is required or an error happened.
  */
 - (BOOL)interpreteFileObject:(BLFileObject *)object inDocument:(NSDocument<BLDocumentProtocol> *)document withLanguage:(NSString *)language;
@@ -164,23 +164,23 @@ enum {
  @discussion The default implementation compares the change date with the last import and also checks whether the file hash, which is computed using hashValueForFile:, has changed. If a date and a hash change is detected, YES is returned, NO otherwise.
  @return YES if the file will be imported, NO if an import call will have no change.
  */
-- (BOOL)willInterpreteFile:(NSString *)path intoObject:(BLFileObject *)object;
+- (BOOL)willInterpretFile:(NSString *)path intoObject:(BLFileObject *)object;
 
 /*!
  @abstract Determines whether an import is needed or not.
- @discussion As a convenience method, this consults the document's path creator and then returns the result of willInterpreteFile:intoObject:.
+ @discussion As a convenience method, this consults the document's path creator and then returns the result of willInterpretFile:intoObject:.
  */
-- (BOOL)willInterpreteFileObject:(BLFileObject *)object inDocument:(NSDocument<BLDocumentProtocol> *)document withLanguage:(NSString *)language;
+- (BOOL)willInterpretFileObject:(BLFileObject *)object inDocument:(NSDocument<BLDocumentProtocol> *)document withLanguage:(NSString *)language;
 
 /*!
- @abstract Primitive. Interpretes a file for a given language into a given file object.
- @discussion This method first checks whether the file will be imported and then sets up the import environment, calling _interpreteFile: in the subclass'es implementation. This is the central method that is called by the methods above and might be an major entry point for external callers. However, it should not be overridden by subclassers as a lot of setup and teardown happens here. _interpreteFile: is the way to do this. If you need to internally use a different interpreter, see the class description on how to do interpreter forwarding.
+ @abstract Primitive. Interprets a file for a given language into a given file object.
+ @discussion This method first checks whether the file will be imported and then sets up the import environment, calling _interpretFile: in the subclass'es implementation. This is the central method that is called by the methods above and might be an major entry point for external callers. However, it should not be overridden by subclassers as a lot of setup and teardown happens here. _interpretFile: is the way to do this. If you need to internally use a different interpreter, see the class description on how to do interpreter forwarding.
  The parameter reference determines whether the given language is the reference language of the containing document or not. Reference language imports will result in a slightly different behavior, namely a changed value of BLObjectReferenceChangedKey!
  */
-- (BOOL)interpreteFile:(NSString *)path intoObject:(BLFileObject *)object withLanguage:(NSString *)language referenceLanguage:(NSString *)reference;
+- (BOOL)interpretFile:(NSString *)path intoObject:(BLFileObject *)object withLanguage:(NSString *)language referenceLanguage:(NSString *)reference;
 
 /*!
- @abstract Autotranslate the given key object.
+ @abstract Auto-translate the given key object.
  @discussion By running through the given objects, which must be an array of BLKeyObjects, the file's object's value for the import language is compared. If a exact match is found, all localized values that keyObject has not a value for, will be copied. The result might be a key object merged from multiple key objects. This method is for internal use only.
  */
 - (void)autotranslateUsingObjects:(NSArray *)objects;
@@ -197,7 +197,7 @@ enum {
  @discussion This is the primary method to be overridden by subclasses. Whenever a key/value pair is found, _emitKey:value:comment: should be called. The default implementation just throws.
  @return YES on success, NO on error.
  */
-- (BOOL)_interpreteFile:(NSString *)path;
+- (BOOL)_interpretFile:(NSString *)path;
 
 /*!
  @abstract Notify the interpreter that is should forward it's emitted keys

@@ -18,7 +18,7 @@ extern NSString *BLBackupAttachmentKey;
 
 /*!
  @abstract Represents a file in a localization context.
- @discussion Some behaviours depend on the type of the file, especially the extension. This class represents a class cluster. If you want to subclass it, call +registerClass:forPathExtension: registerung your class to be recognized in the process of creating objects.
+ @discussion Some behaviors depend on the type of the file, especially the extension. This class represents a class cluster. If you want to subclass it, call +registerClass:forPathExtension: registering your class to be recognized in the process of creating objects.
  */
 @interface BLFileObject : BLObject {
 	NSDictionary *_attachments;

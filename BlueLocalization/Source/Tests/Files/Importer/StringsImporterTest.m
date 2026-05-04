@@ -27,9 +27,9 @@ NSString *StringsImporterTestExtension = @"strings";
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects];
 
 	// Import english
-	BOOL result = [interpreter interpreteFile:enPath intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
+	BOOL result = [interpreter interpretFile:enPath intoObject:fileObject withLanguage:@"en" referenceLanguage:nil];
 	XCTAssertTrue(result, @"Interpreter failed with no result for file %@", enPath);
-	result = [interpreter interpreteFile:dePath intoObject:fileObject withLanguage:@"de" referenceLanguage:nil];
+	result = [interpreter interpretFile:dePath intoObject:fileObject withLanguage:@"de" referenceLanguage:nil];
 	XCTAssertTrue(result, @"Interpreter failed with no result for file %@", dePath);
 	XCTAssertTrue([[fileObject objects] count] > 0, @"Nothing imported");
 

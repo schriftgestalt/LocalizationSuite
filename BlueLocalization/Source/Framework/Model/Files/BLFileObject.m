@@ -202,7 +202,7 @@ NSMutableDictionary *__fileObjectClasses = nil;
 		if (noBackups && [key isEqual:BLBackupAttachmentKey])
 			continue;
 
-		// Encapsultate file wrappers
+		// Encapsulate file wrappers
 		if ([object isKindOfClass:[NSFileWrapper class]]) {
 			NSString *prefPath = [[self bundleObject] name];
 			prefPath = [prefPath stringByAppendingPathComponent:[[self name] stringByDeletingPathExtension]];
@@ -221,8 +221,8 @@ NSMutableDictionary *__fileObjectClasses = nil;
 	[dict secureSetObject:archivedObjects forKey:BLFileObjectsKey];
 
 	if (!activeOnly) {
-		id oldObjects = [self oldObjects];
-		if (oldObjects) {
+		NSArray *oldObjects = [self oldObjects];
+		if ([oldObjects count] > 0) {
 			[dict secureSetObject:oldObjects forKey:BLFileOldObjectsKey];
 		}
 	}
@@ -281,6 +281,9 @@ NSMutableDictionary *__fileObjectClasses = nil;
 }
 
 - (NSArray *)oldObjects {
+	if (!_oldObjects) {
+		_oldObjects = @[];
+	}
 	return _oldObjects;
 }
 

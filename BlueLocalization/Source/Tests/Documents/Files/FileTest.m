@@ -17,7 +17,7 @@
 
 	BLFileInterpreter *interpreter = [BLFileInterpreter interpreterForFileObject:file];
 	[interpreter activateOptions:BLFileInterpreterAllowChangesToKeyObjects];
-	[interpreter interpreteFile:path intoObject:file withLanguage:@"en" referenceLanguage:nil];
+	[interpreter interpretFile:path intoObject:file withLanguage:@"en" referenceLanguage:nil];
 
 	tmpPath = @"/tmp/loc.test";
 }

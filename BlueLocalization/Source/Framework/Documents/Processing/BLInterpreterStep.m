@@ -27,7 +27,7 @@ enum {
 	NSUInteger _type;
 }
 
-- (id)initForInterpertingObjects:(NSArray *)objects withOptions:(NSUInteger)options parameters:(NSDictionary *)parameters andLanguages:(NSArray *)languages;
+- (id)initForInterpretingObjects:(NSArray *)objects withOptions:(NSUInteger)options parameters:(NSDictionary *)parameters andLanguages:(NSArray *)languages;
 - (id)initForInterpretingFiles:(NSArray *)files withOptions:(NSUInteger)options parameters:(NSDictionary *)parameters;
 
 - (NSMutableArray *)getPathDictsFromObjects;
@@ -39,17 +39,15 @@ enum {
 
 #pragma mark - Initialization
 
-+ (id)stepForInterpertingObjects:(NSArray *)objects withOptions:(NSUInteger)options parameters:(NSDictionary *)parameters andLanguages:(NSArray *)languages {
-	return [[self alloc] initForInterpertingObjects:objects withOptions:options parameters:parameters andLanguages:languages];
++ (id)stepForInterpretingObjects:(NSArray *)objects withOptions:(NSUInteger)options parameters:(NSDictionary *)parameters andLanguages:(NSArray *)languages {
+	return [[self alloc] initForInterpretingObjects:objects withOptions:options parameters:parameters andLanguages:languages];
 }
 
-- (id)initForInterpertingObjects:(NSArray *)objects withOptions:(NSUInteger)options parameters:(NSDictionary *)parameters andLanguages:(NSArray *)languages {
+- (id)initForInterpretingObjects:(NSArray *)objects withOptions:(NSUInteger)options parameters:(NSDictionary *)parameters andLanguages:(NSArray *)languages {
 	self = [super init];
 
 	if (self) {
 		objects = [BLObject fileObjectsFromArray:objects];
-		objects = [BLObject proxiesForObjects:objects];
-
 		_languages = languages;
 		_options = options;
 		_parameters = parameters;
@@ -158,7 +156,7 @@ enum {
 
 			// Check import
 			language = [_languages objectAtIndex:l];
-			if (![interpreter willInterpreteFileObject:file inDocument:[[self manager] document] withLanguage:language])
+			if (![interpreter willInterpretFileObject:file inDocument:[[self manager] document] withLanguage:language])
 				continue;
 
 			// Get path and add it

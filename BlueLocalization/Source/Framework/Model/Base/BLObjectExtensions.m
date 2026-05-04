@@ -89,15 +89,6 @@
 	return objects;
 }
 
-+ (NSArray *)proxiesForObjects:(NSArray *)array {
-	NSMutableArray *proxies = [NSMutableArray array];
-
-	for (BLObject *object in array)
-		[proxies addObject:[BLObjectProxy proxyWithObject:object]];
-
-	return proxies;
-}
-
 @end
 
 @implementation BLObject (BLObjectKeyNumbers)
